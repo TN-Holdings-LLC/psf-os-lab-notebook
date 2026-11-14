@@ -1,0 +1,4 @@
+first run (12:30 CET) theta 0785: 8: far +0.001 mid -0.007 near +0.041 | 16: far -0.021 mid +0.015 near +0.092 | 32: far +0.019 mid +0.036 near +0.167 | 48: far +0.006 mid +0.066 near +0.175 | 64: far -0.015 mid +0.159 near +0.163
+first run (12:30 CET) theta 1571: 8: far +0.002 mid -0.001 near +0.009 | 16: far +0.014 mid -0.004 near +0.057 | 32: far +0.007 mid +0.040 near +0.087 | 48: far +0.048 mid +0.086 near +0.138 | 64: far +0.084 mid +0.092 near +0.138
+repeat (13:04 CET) theta 0785: 8: far +0.019 mid -0.014 near +0.025 | 16: far +0.010 mid +0.002 near +0.108 | 32: far +0.021 mid +0.058 near +0.189 | 48: far +0.061 mid +0.116 near +0.222 | 64: far +0.007 mid +0.201 near +0.200
+repeat (13:04 CET) theta 1571: 8: far -0.005 mid -0.007 near +0.028 | 16: far +0.007 mid +0.017 near +0.080 | 32: far +0.002 mid +0.057 near +0.111 | 48: far +0.045 mid +0.096 near +0.134 | 64: far +0.108 mid +0.082 near +0.124

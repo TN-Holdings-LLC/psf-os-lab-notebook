@@ -1,9 +1,9 @@
-% Paper 9 (TN Holdings), DRAFT 1, home, 2026-11-14 (owner 21:19 JST "進めて"; scope 21:2x JST: the yardstick in paper
-% 9, the light-cone work in paper 10). Built from notes/paper9/part_a_from_paper8.tex, part_a_depth_draft.tex,
+% Paper 9 (TN Holdings), DRAFT 2, home, 2026-11-14 (owner: release 16 November; the light-cone work in paper 9,
+% reframed as "what sets r"; the post-hoc rescaling as a problem statement only). Built from notes/paper9/part_a_from_paper8.tex, part_a_depth_draft.tex,
 % part_b_draft.tex (workplace, numbers checked there against each record's scores.json), the r-thread
 % (notes/paper9/r_thread_2026-11-13), the twin test (results/twin-2026-11-13), the yardstick
 % (notes/paper9_yardstick) and the XX size test (notes/xxsize_2026-11-14). Every number is quoted from the committed
-% record named beside it. Figures: still those of paper 8 (fig3) and the r-thread; to be regenerated for this paper.
+% record named beside it. Figures: notes/paper9/figures.py; rescaling: notes/paper9_posthoc/rescale.py.
 \documentclass[10pt,a4paper]{article}
 \usepackage[margin=2.2cm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -16,10 +16,10 @@
 \sloppy
 \newcommand{\pending}[1]{\textbf{[PENDING: #1]}}
 
-\title{Reading Raw Quantum Dynamics by the Share Kept:\\ IBM's 2023 Utility Observables, the 1D Fermi--Hubbard Model
-to 120 Qubits, and One Yardstick for Every Result}
+\title{Readable Raw Quantum Dynamics and the Share of Signal Kept:\\ One Yardstick Across Utility, Fermi--Hubbard
+and XX-Chain Circuits on IBM Heron, and What Sets It}
 \author{TN Holdings\\ \small contact: \texttt{love.os.architect@proton.me}}
-\date{\pending{date of release} (draft 1: 14 November 2026)}
+\date{16 November 2026}
 
 \begin{document}
 \maketitle
@@ -28,19 +28,20 @@ to 120 Qubits, and One Yardstick for Every Result}
 Papers 7 and 8 of this series ran user-written circuits on IBM Heron devices through an operating layer (psf-os) that
 places a circuit from the coupling graph and the failed elements only, adds its own controls to each job and applies
 no error mitigation; a result \emph{reads} when its mean squared error is at most half the mean square of the exact
-answer. This paper carries the policy to two targets named in the literature and asks what sets where reading stops.
-Four of the observables of IBM's 2023 utility experiment, run raw on the published circuit embedded in ibm\_fez,
-read up to 8 steps for $\langle Z_{106}\rangle$ and 6 for the weight-10 product, and not for the weight-17 product. The
-one-dimensional Fermi--Hubbard model at $U = 4$, with a free-fermion ruler of equal gate count in the same job, read
-at every size from 40 to 120 qubits at 2 and 4 Trotter steps and at neither size run at 6. Across both, and across
-every other result of the series with an exact answer (179 results in all), we split the error exactly as
+answer. This paper asks what decides whether a raw result reads. We split the error exactly as
 $\mathrm{MSE}/\overline{e^2} = (1-r)^2 + \text{rest}$, with $r = \sum ze/\sum e^2$ the share of the exact pattern the
 device keeps. Since the rest is never negative, $r < 1 - 1/\sqrt2 \approx 0.293$ means ``does not read'' by
-construction; the measured statement is the converse: of the 166 results with $r \ge 0.293$, 160 read. The six that
-did not are Hubbard at 6 steps, where the error that is not a shrink (a wrong shape) is as large as the shrink, and
-three XX-chain circuits at the line itself. A Clifford twin of the compiled circuit, with the same pulses and an exact
-answer at any size, tracked $r$ within 0.051 on a device. A declared test of whether $r$ depends on CZ layers alone
-failed: at equal layers, $r$ was lower in an 81-qubit chain than in a 33-qubit one on two devices. No quantum
+construction; the measured statement is the converse. Across every result of the series with an exact answer (179),
+including four of IBM's 2023 utility observables run raw (reading to 8 steps for $\langle Z_{106}\rangle$) and the 1D
+Fermi--Hubbard model at $U = 4$ (reading at every size from 40 to 120 qubits at 4 Trotter steps, at none at 6), 160 of
+the 166 results with $r \ge 0.293$ read; the six that did not have a wrong shape as large as the shrink, or sit at the
+line. So whether a result reads is mostly whether $r$ stays above 0.293, and the question becomes what sets $r$.
+A declared test on two devices found that it is not the CZ depth alone: at equal depth an 81-qubit XX chain kept less
+than a 33-qubit one, by up to 0.18. Where the 33-qubit chain is the first 33 qubits of the 81-qubit one, the extra loss
+on the same qubits opens next to where the longer chain continues and moves inward with depth; a repeat in a new job
+gave the same order, while a simulation with uniform local noise gives no gap. Finally, we state a problem rather than a
+method: dividing raw values by a measured share (of a full-signal circuit, or of a Clifford twin with the same pulses)
+cannot undo what is not a shrink, and on our records it changed few verdicts and made some results worse. No quantum
 advantage is claimed: every answer is computed exactly on a classical machine.
 \end{abstract}
 
@@ -49,17 +50,22 @@ Paper 7 (doi:10.5281/zenodo.24046673) and paper 8 (doi:10.5281/zenodo.24136512) 
 one policy: placement from the coupling graph and the failed elements only, the device chosen by its queue, the job's
 own controls (floor, mirror, ring sentinel) in the same submission, no mitigation, dynamical decoupling and twirling
 off, answers sealed by hash before each run, every declaration pushed to git before the device record of its run was
-fetched. This paper keeps that policy and asks two questions.
+fetched. Within one family the boundary of reading lies along depth, but different families stop at very different
+depths. This paper asks three questions.
 \begin{itemize}
-\item Does it carry to two targets the field uses as references: IBM's 2023 utility observables (Kim et al.\ 2023), and
-an interacting fermion model, the 1D Fermi--Hubbard model, at sizes past exact diagonalisation but inside an exact
-classical check?
-\item What sets where reading stops? Within a family the boundary lies along depth (Hubbard: every size read at 4
-steps, none at 6), but different families stop at very different depths. We look for one quantity that tells, for
-every result with an exact answer, whether it reads.
+\item Is there one quantity that tells, for every result with an exact answer, whether it reads? We find the kept
+share $r$, with a line at 0.293 that comes from an identity, and test how often being above the line is enough
+(sections~\ref{sec:measures}--\ref{sec:yardstick}), on all results so far, including two targets the field uses as
+references: IBM's 2023 utility observables (Kim et al.\ 2023) and the 1D Fermi--Hubbard model past exact
+diagonalisation (sections~\ref{sec:utility}, \ref{sec:hubbard}).
+\item What sets $r$? Depth, the size of the signal, the size of the circuit, the qubits used
+(sections~\ref{sec:size}, \ref{sec:cone}).
+\item If the loss were a pure shrink, dividing by $r$ would undo it. What remains when a user divides by a share they
+can measure (section~\ref{sec:posthoc})?
 \end{itemize}
-Not claimed: quantum advantage; that any mitigation does or does not work (none is used); anything about devices,
-days or families not run. Most results are one device and one day; each section says which.
+Not claimed: quantum advantage; that any mitigation does or does not work (none is used, and section~\ref{sec:posthoc}
+is not a mitigation method); anything about devices, days or families not run. Most results are one device and one
+day; each section says which.
 
 \section{Measures}\label{sec:measures}
 For a circuit with exact values $e_i$ and raw device values $z_i$ (expectation values over its measured qubits or
@@ -72,7 +78,8 @@ The split is an identity ($r$ is the least-squares scale, so the cross term vani
 pattern the device keeps; the rest is everything that is not a uniform shrink (a wrong shape, offsets, shot noise).
 Two consequences follow without data. If the device only shrank the signal ($z = re$), \textsc{reads} would hold exactly
 when $r \ge 1 - 1/\sqrt2 \approx 0.293$, whatever the size of the signal. Because the rest is never negative,
-$r < 0.293$ always means ``does not read''. What a device record can show is how often $r \ge 0.293$ is enough.
+$r < 0.293$ always means ``does not read''. What a device record can show is how often $r \ge 0.293$ is enough, and how
+far above the floor $(1-r)^2$ each result sits (figure~\ref{fig:yardstick}).
 
 \section{IBM's 2023 utility observables, raw}\label{sec:utility}
 \subsection{The run of 10 November}
@@ -170,9 +177,10 @@ than the 1-step one by 0.0172 (17 standard errors), the 1-step circuit's Trotter
 \subsection{The table}
 \texttt{notes/paper9\_yardstick/line\_all.py} collects every recorded result of the series with an exact answer and a
 declared verdict (written after all were scored): XX chains (75 circuits: the 91-qubit depth scan of 11-12, the size
-test and its repeat of 11-14, the twin test of 11-13), Hubbard (31: sections~\ref{sec:hubbard}, the twin test),
-IBM 2023 utility (11 observable-depth units, per $\theta_h$ points), 3D kicked Ising (48 arms of 11-10, paper 8), the
-daily record (11 problems, 2026-11-05 to 11-14) and the dual-unitary curves at 51, 71 and 91 qubits (3, papers 7 and 8).
+test and its repeat of 11-14, the twin test of 11-13), Hubbard (31: section~\ref{sec:hubbard} with both arms, the twin
+test), IBM 2023 utility (11 observable-depth units, over their $\theta_h$ points), 3D kicked Ising (48 arms of 11-10,
+paper 8), the daily record (11 problems, 2026-11-05 to 11-14) and the dual-unitary curves at 51, 71 and 91 qubits (3,
+papers 7 and 8).
 
 \begin{center}\small
 \begin{tabular}{lrrr}
@@ -189,20 +197,40 @@ dual-unitary curves & 3 & 3 & 3 \\
 all & 179 & 160 & 173 \\
 \bottomrule
 \end{tabular}
+\qquad
+\begin{tabular}{lrr}
+\toprule
+ & reads & does not read \\
+\midrule
+$r \ge 0.293$ & 160 & 6 \\
+$r < 0.293$ & 0 & 13 \\
+\bottomrule
+\end{tabular}
 \end{center}
 
-Of the 13 results with $r < 0.293$, none read (the identity). Of the 166 with $r \ge 0.293$, 160 read. The six that do
-not:
+Of the 13 results with $r < 0.293$, none read (the identity). Of the 166 with $r \ge 0.293$, 160 read (96\%). Every
+result that read has $r \ge 0.293$; of the 19 that did not, $r$ alone flags 13. The six it misses:
 \begin{itemize}
 \item Hubbard at 6 steps, three times ($L = 20$ and 30 on 11-11; $L = 20$ on 11-13): $r$ = 0.38--0.51, but the rest is
 0.27--0.32, as large as the shrink. The device keeps much of the pattern and gets its shape wrong.
 \item The XX chain at the line itself, three times (MSE / mean square 0.504--0.518, rest 0.03--0.06).
 \end{itemize}
 Where the error is mostly a shrink (the XX chain, the utility products of weight 10 and 17, the 3D Ising arms), $r$ alone
-tells the verdict. Where half the error is rest at every depth (Hubbard at $U = 4$: rest 0.49--0.52 of the ratio, from
-the r-thread notes), the line in $r$ sits higher than 0.293 and the boundary comes earlier than $r$ says.
+tells the verdict. Where half the error is rest at every depth (Hubbard at $U = 4$: rest 0.49--0.52 of the ratio), the
+line in $r$ sits higher than 0.293 and the boundary comes earlier than $r$ says. Only the 20 cells of
+section~\ref{sec:size} tested the line under a declaration (20 of 20); the rest of the table is an after-the-fact
+collection.
 
-\subsection{Seeing $r$ before the verdict: the Clifford twin}
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.55\linewidth]{fig_yardstick.pdf}
+\caption{MSE / mean square against the kept share $r$ for the 179 results. No point can lie below the floor
+$(1-r)^2$ (rest = 0); a result reads below the dashed line. Left of $r = 0.293$ nothing reads; right of it, the six
+that do not are Hubbard at 6 steps (well above the floor: a wrong shape) and three XX circuits at the line.}
+\label{fig:yardstick}
+\end{figure}
+
+\subsection{Seeing $r$ before the verdict: the Clifford twin}\label{sec:twin}
 \texttt{results/twin-2026-11-13}, ibm\_marrakesh, prereg/twin\_2026-11-13.md. On Heron, $R_Z$ is a frame change with no
 pulse; rounding every $R_Z$ of a compiled circuit to a multiple of $\pi/2$ gives a circuit with the same pulses (same
 CZ, same $\sqrt X$, same timing) whose exact answer a stabilizer simulation gives at any size (psf-os, \texttt{twin}).
@@ -212,11 +240,12 @@ steps): $r_{\text{twin}} - r$ = +0.017, +0.018, +0.007 and $-0.051$, $-0.047$, +
 narrowly (Hubbard at 2 steps). ``$r_{\text{twin}} \ge 0.293$'' matched the user circuit's verdict in 5 of 6; the miss is
 Hubbard at 6 steps, the same shape error as above, which a twin cannot see.
 
-\section{A limit: $r$ is not set by CZ layers alone}\label{sec:size}
-\texttt{notes/xxsize\_2026-11-14}, prereg/xxsize\_2026-11-14.md. On 11-12 (ibm\_fez, 91 qubits) $r$ was nearly the same at
-$\theta = \pi/4$ and $\pi/2$ at every depth, which suggested that $r$ depends on the CZ layers a qubit goes through and
-not on the circuit's size or signal. A declared test on ibm\_fez and ibm\_marrakesh, XX chains of 33 and 81 qubits,
-both angles, 8 to 64 CZ layers, failed on that point and held on the yardstick:
+\section{What sets $r$: depth, angle and size}\label{sec:size}
+\texttt{notes/xxsize\_2026-11-14}, prereg/xxsize\_2026-11-14.md, results \texttt{xxsize-2026-11-14-marrakesh} and
+\texttt{-fez}. On 11-12 (ibm\_fez, 91 qubits) $r$ was nearly the same at $\theta = \pi/4$ and $\pi/2$ at every depth,
+which suggested that $r$ depends on the CZ layers a qubit goes through and not on the circuit's size or signal. A
+declared test on ibm\_fez and ibm\_marrakesh: XX+YY brickwork chains of 33 and 81 qubits, N\'eel start, both angles,
+8 to 64 CZ layers (the same layers at both angles), one job per size and device, free-fermion answers sealed by hash.
 \begin{itemize}
 \item angle: $|r(\pi/4) - r(\pi/2)| \le 0.05$ in 12 of 20 pairs (largest 0.074) --- failed;
 \item size: $|r(81) - r(33)| \le 0.05$ in 7 of 20 pairs; $r$ lower at 81 qubits in all 20, by up to 0.18 on ibm\_fez ---
@@ -224,20 +253,101 @@ failed;
 \item ``$r \ge 0.293$'' matched the verdict in 20 of 20 --- held. Readable depth at $\pi/4$: ibm\_marrakesh 64 layers at both
 sizes; ibm\_fez 64 at 33 qubits and 32 at 81.
 \end{itemize}
-On ibm\_marrakesh the 33-qubit chain was exactly the first 33 qubits of the 81-qubit chain, so the same qubits can be
-compared inside the two circuits: they keep less inside the longer one, and the difference opens next to where the
-longer chain continues and moves inward with depth; a repeat of the same two jobs gave the same order. A stabilizer
-simulation of the recorded $\theta = \pi/2$ circuits with uniform local noise gives no such difference ($\pm0.004$), so
-the difference needs elements that differ along the paths the dynamics takes. That work, with more devices and days, is
-left to paper 10; here it bounds what $r$ is: the share kept on \emph{this} circuit, on \emph{these} qubits, today ---
-not a property of the depth alone.
+Beside (not judged): fits $r = A\,e^{-L/\lambda}$ over the CZ layers $L$ give $\lambda$ = 78 layers on ibm\_marrakesh
+and 43 on ibm\_fez with both sizes pooled, equal to the 91-qubit values of 11-13 and 11-12, but 88 and 71 (marrakesh)
+and 57 and 35 (fez) per size: the pooled agreement is not by itself evidence that a device's decay length is the same
+from day to day. So $r$ is the share kept by \emph{this} circuit on \emph{these} qubits today, not a property of depth
+alone (figure~\ref{fig:size}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_size.pdf}
+\caption{Kept share $r$ of the XX chain against CZ layers, 33 and 81 qubits, $\theta = \pi/4$ (filled) and $\pi/2$
+(open), 14 November 2026. At equal layers the 81-qubit chain keeps less on both devices. Dotted: $r = 0.293$.}
+\label{fig:size}
+\end{figure}
+
+\section{Where the extra loss appears: along the chain}\label{sec:cone}
+\subsection{The same qubits inside a shorter and a longer circuit}
+On ibm\_marrakesh the 33-qubit chain was exactly the first 33 qubits of the 81-qubit chain, in the same order, so the
+same qubits can be compared inside the two circuits. After the verdicts (exploratory, \texttt{split.py}): at $\pi/4$,
+on the 33 shared qubits $r$ = 0.617 in the short circuit and 0.558 in the long one at 32 layers, 0.411 and 0.343 at 64;
+in the long circuit, its 48 other qubits kept about as much as the shared ones (0.527 and 0.347). The added qubits are
+not simply worse; the shared ones lose more when the chain goes on. Split by position (blocks of 11 qubits: \emph{far}
+from where the long chain continues, \emph{mid}, \emph{near}), the gap $g = r_{33} - r_{81}$ opened in the near block
+first and moved inward with depth; at $\pi/2$, the fastest-spreading case, it reached the far block only at 48--64
+layers.
+
+\subsection{A repeat in a new job (declared after seeing the first run)}
+\texttt{prereg/xxcone\_2026-11-14.md}, \texttt{results/xxcone-2026-11-14}. The same two jobs were run again on
+ibm\_marrakesh 34 minutes later (13:04 CET), with three predictions chosen after seeing the first run and holding on
+it; this tests whether the pattern comes back, not a first test. The analysis (\texttt{cone.py}) was fixed before the
+run. (1) $\pi/4$, far block, $|g| \le 0.03$ at all five depths: failed by one cell (48 layers, +0.061; the others
++0.007 to +0.021). (2) $\pi/4$ at 16 and 32 layers, $g_{\text{near}} - g_{\text{far}} \ge 0.05$: held (+0.098,
++0.168). (3) $\pi/2$, far block, $|g| \le 0.03$ up to 32 layers and $g \ge 0.03$ at 64: held ($-0.005$, +0.007, +0.002;
++0.108). The order in which the gap opens came back: near first, mid from 32 layers, far last (figure~\ref{fig:gap}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_gap.pdf}
+\caption{Gap $r_{33} - r_{81}$ on the same 33 qubits of ibm\_marrakesh, by block of 11 qubits (near: next to where the
+81-qubit chain continues), first run (12:30 CET, filled) and repeat (13:04 CET, open), 14 November 2026.}
+\label{fig:gap}
+\end{figure}
+
+\subsection{What it is not: uniform noise}
+A first reading was a light cone: errors spread with the dynamics, so a qubit's shrink would count the errors inside
+its light cone, which the short chain cuts off at its end. A desk check does not support that form. A stabilizer
+simulation (stim) of the recorded $\theta = \pi/2$ circuits of the repeat with one uniform local noise model (CZ
+depolarising 0.003, single-qubit 0.0003, readout 0.015; nothing taken from the device) gives a gap within $\pm0.004$ in
+every block at every depth, against up to +0.13 on the device. In this circuit a measured $Z$ follows its particle's
+path, and uniform noise puts the same number of errors on a path whether the chain is 33 or 81 long. An illustration,
+not a fit: tripling the CZ error on couplers that touch the extension (positions 33--80) gives a gap that grows with
+depth and moves inward (far block +0.024 only at 64 layers), as on the device, but in a different order (mid above near
+from 16 layers; on the device near first). The device gap therefore needs elements that differ along the paths the
+dynamics takes; which elements, and how, is not measured here (the calibration is not read). Our own readout record of
+the extension qubits has a heavier tail (mean $1 - z(|0\rangle)$ 0.039 against 0.020), but readout acts at the end of a
+path and does not explain the gap alone.
+
+For the yardstick this has a plain consequence: a result's $r$ depends on where its circuit sits and how far its
+dynamics reaches on the device that day, so $r$ measured on one circuit is not $r$ for another of the same depth.
+
+\section{Undoing the shrink after the fact: a problem statement}\label{sec:posthoc}
+If the device's error were a pure shrink, $z = re$, dividing by $r$ would restore the answer. We state what that idea
+meets on our records, computed beside the results and never used for any verdict (\texttt{notes/paper9\_posthoc/rescale.py}).
+Dividing by a scale $s$ gives
+\[ \frac{\overline{(z/s - e)^2}}{\overline{e^2}} = \frac{\text{rest} + (r - s)^2}{s^2}, \]
+so even the best single scale ($s = r$) leaves $\text{rest}/r^2$: the part that is not a shrink, enlarged by $1/r^2$,
+shot noise included.
+\begin{itemize}
+\item \emph{Oracle} ($s = r$, taken from the exact answer itself, which a user does not have): of the 179 results, 170
+would read instead of 160 (11 gained, with $r$ from 0.077 to 0.327; 1 lost, an XX result that read at 0.496 and gives
+0.562 after); the ratio grows for 26. Nine still do not read, among them Hubbard at 6 steps ($\text{rest}/r^2$ = 1.0 to
+11.2): a wrong shape is not a scale.
+\item \emph{Full-signal ruler} (the $\pi/2$ circuit of the same chain, depth and job, a Clifford circuit with the same
+gates): over the 30 $\pi/4$ circuits of section~\ref{sec:size} and the repeat, 27 read before and 28 after. On
+ibm\_marrakesh the ratio fell (0.362 to 0.086 at 64 layers, 33 qubits); on ibm\_fez at 81 qubits it grew (0.539 to
+0.723 and 0.658 to 1.429 at 48 and 64 layers), because the ruler kept less than the $\pi/4$ circuit (section~\ref{sec:size}:
+$r$ depends on the angle).
+\item \emph{Clifford twin} (section~\ref{sec:twin}, same pulses, same job): no verdict changed in the 6 pairs; XX at
+91 qubits improved (0.282 to 0.095 at 12 steps), Hubbard at 4 and 6 steps got worse (0.184 to 0.238; 0.506 to 0.886).
+\end{itemize}
+So the problem is not dividing but knowing what to divide by: a scale a user can measure is the share of a
+\emph{different} circuit, and section~\ref{sec:cone} shows that circuits of the same depth on overlapping qubits can
+keep different shares; and no scale removes the rest. We leave it as a question, not a method: what can a user, without
+the exact answer, measure in the same job that tells both the scale and the size of the rest?
 
 \section{Limits}\label{sec:limits}
 \begin{itemize}
-\item Most results are one device and one day (utility and Hubbard: ibm\_fez; twin: ibm\_marrakesh).
+\item Most results are one device and one day (utility and Hubbard: ibm\_fez; twin and the light-cone runs:
+ibm\_marrakesh, both on 14 November).
 \item The yardstick table was assembled after the results; only the 20 cells of section~\ref{sec:size} tested the line
 under a declaration. Families whose verdicts are on other observables (Ohm's $M$, Schwinger, the 3D light cone) are not
 on it.
+\item The light-cone predictions were chosen after the first run; the repeat shows the pattern returns in a new job on
+the same device an hour later, not that it holds on other devices or days. The uniform-noise check and the extension
+illustration are models chosen by us, not fitted to the device.
+\item The rescaling of section~\ref{sec:posthoc} was computed after the verdicts, on records not designed for it.
 \item The utility observables at depth include a slowly changing answer ($Z_{106}$) and a small signal (weight-10 at 6
 steps); the verdicts are as declared, with that said.
 \item The Trotter error is part of each circuit's answer: the checks are of the circuits, not of the continuum models,
@@ -247,18 +357,21 @@ except where section~\ref{sec:hubbard} compares with the continuum.
 
 \section{Reproduction}\label{sec:repro}
 Every device result re-scores from its committed raw counts with \texttt{python reproduce.py} in
-\texttt{psf-os-lab-notebook} (with psf-os 0.1.1, doi:10.5281/zenodo.24211405, installed): \pending{count of entries for
-this paper; all 34 of the notebook re-scored the same from fresh clones on 2026-11-14, before the size test's entries
-were added}. The yardstick: \texttt{python notes/paper9\_yardstick/line\_all.py}; the twin: psf-os \texttt{twin}; the
-uniform-noise check: \texttt{notes/xxcone\_2026-11-14/stim\_noise.py}.
+\texttt{psf-os-lab-notebook} (with psf-os 0.1.1, doi:10.5281/zenodo.24211405, installed): all 43 entries, including those of the XX size test and the light-cone repeat, re-scored the same on 2026-11-14 (\texttt{43 of 43 reproduced}). The yardstick:
+\texttt{python notes/paper9\_yardstick/line\_all.py}; the figures: \texttt{notes/paper9/figures.py}; the block gaps:
+\texttt{notes/xxcone\_2026-11-14/cone.py}; the uniform-noise check and the illustration:
+\texttt{stim\_noise.py}, \texttt{stim\_ext.py} in the same folder; the rescaling: \texttt{notes/paper9\_posthoc/rescale.py};
+the twin: psf-os \texttt{twin}.
 
 \section{Conclusion}
-Raw, with placement from the coupling graph alone, IBM's 2023 utility observables read to 8 steps ($Z_{106}$) and
-6 (weight-10), and the 1D Fermi--Hubbard model read from 40 to 120 qubits at 4 Trotter steps. Across 179 results of
-this series, the share of the exact pattern the device keeps, $r$, told the verdict in 173; below the line
-$r = 0.293$ nothing reads by construction, and above it 160 of 166 read, the exceptions being a wrong shape (Hubbard at
-6 steps) or a result at the line itself. A Clifford twin with the same pulses reads $r$ in the same job without
-mitigation. And $r$ belongs to the circuit on its qubits, not to its depth: a longer chain of the same depth kept less.
+Whether a raw result reads is, across 179 results of this series, mostly whether the share of the exact pattern the
+device keeps stays above $r = 0.293$: below it nothing reads by construction, above it 160 of 166 read, the exceptions
+being a wrong shape (Hubbard at 6 steps) or a result at the line. On that yardstick IBM's 2023 utility observables read
+raw to 8 steps ($Z_{106}$) and the 1D Fermi--Hubbard model read from 40 to 120 qubits at 4 Trotter steps. What sets
+$r$ is not the depth alone: a longer chain of the same depth kept less on two devices, and on the same qubits the extra
+loss arrived from where the longer chain continues, moving inward with depth, in two jobs, which uniform noise does not
+produce. Dividing by a measured share does not undo what is not a shrink, and the shares a user can measure belong to
+other circuits; what to measure instead is open.
 
 \section*{Data and code}
 Records, declarations and raw counts: \url{https://github.com/TN-Holdings-LLC/psf-os-lab-notebook}; the operating
@@ -272,9 +385,11 @@ layer: \url{https://github.com/TN-Holdings-LLC/psf-os} (doi:10.5281/zenodo.24211
 Ising experiment. PRX Quantum 5, 010308 (2024); arXiv:2306.14887.
 \item Arute, F.\ et al.\ (Google Quantum AI). Observation of separated dynamics of charge and spin in the Fermi--Hubbard
 model. arXiv:2010.07965 (2020).
-\item Phasecraft and Google Quantum AI. 2D Fermi--Hubbard dynamics on a superconducting processor. arXiv:2510.26845
-\pending{check title and authors}.
-\item Phasecraft and Quantinuum. Fermi--Hubbard dynamics on H2. arXiv:2510.26300 \pending{check title and authors}.
+\item Alam, F., Bosse, J.\ L., \v{C}epait\.{e}, I.\ et al.\ (Phasecraft and Google Quantum AI). Programmable digital
+quantum simulation of 2D Fermi--Hubbard dynamics using 72 superconducting qubits. arXiv:2510.26845 (2025).
+\item Alam, F., Bosse, J.\ L., \v{C}epait\.{e}, I.\ et al.\ (Phasecraft and Quantinuum). Fermionic dynamics on a
+trapped-ion quantum computer beyond exact classical simulation. arXiv:2510.26300 (2025).
+\item Gidney, C. Stim: a fast stabilizer circuit simulator. Quantum 5, 497 (2021).
 \item TN Holdings. Papers 7 and 8 of this series: doi:10.5281/zenodo.24046673, doi:10.5281/zenodo.24136512.
 \end{itemize}
 

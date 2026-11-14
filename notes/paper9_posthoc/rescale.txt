@@ -1,0 +1,46 @@
+oracle z / r over the yardstick's 179 results: reads before 160, after 170
+  gained 11 (r 0.077 to 0.327), lost 1: [('xxsize-2026-11-14-marrakesh', 'ibm_marrakesh_n81:N81_th0785_s16')]
+  median MSE / mean square 0.124 -> 0.070; larger after in 26
+  still not reading after the oracle scale: [('Hubbard', 'hubbard-2026-11-11', 'L20_s6_U0', 0.122, 11.198), ('Hubbard', 'hubbard-2026-11-11', 'L20_s6_U4', 0.416, 1.755), ('Hubbard', 'hubbard-2026-11-11', 'L30_s6_U0', 0.213, 3.957), ('Hubbard', 'hubbard-2026-11-11', 'L30_s6_U4', 0.375, 2.277), ('XX chain', 'xx91-2026-11-12', 'N91_th0785_s16', 0.219, 0.706), ('XX chain', 'xx91-2026-11-12', 'N91_th0785_s20', 0.143, 0.921), ('XX chain', 'xxcone-2026-11-14', 'N81_th0785_s16', 0.325, 0.596), ('XX chain', 'xxsize-2026-11-14-marrakesh', 'N81_th0785_s16', 0.345, 0.562), ('Hubbard', 'twin-2026-11-13', 'L20_s6_U4', 0.514, 1.02)]
+  r <= 0 (no scale helps): 0
+
+ruler: pi/4 circuits divided by r of the pi/2 circuit of the same chain, depth and job
+  30 circuits: read before 27, after 28
+  xxsize-2026-11-14-fez        N33_th0785_s02   r 0.819 ruler 0.831 | MSE/msq 0.056 -> 0.034
+  xxsize-2026-11-14-fez        N33_th0785_s04   r 0.739 ruler 0.732 | MSE/msq 0.097 -> 0.054
+  xxsize-2026-11-14-fez        N33_th0785_s08   r 0.547 ruler 0.562 | MSE/msq 0.251 -> 0.143
+  xxsize-2026-11-14-fez        N33_th0785_s12   r 0.428 ruler 0.418 | MSE/msq 0.359 -> 0.180
+  xxsize-2026-11-14-fez        N33_th0785_s16   r 0.334 ruler 0.285 | MSE/msq 0.470 -> 0.347
+  xxsize-2026-11-14-fez        N81_th0785_s02   r 0.793 ruler 0.804 | MSE/msq 0.070 -> 0.041
+  xxsize-2026-11-14-fez        N81_th0785_s04   r 0.674 ruler 0.657 | MSE/msq 0.154 -> 0.113
+  xxsize-2026-11-14-fez        N81_th0785_s08   r 0.464 ruler 0.416 | MSE/msq 0.343 -> 0.332
+  xxsize-2026-11-14-fez        N81_th0785_s12   r 0.292 ruler 0.236 | MSE/msq 0.539 -> 0.723
+  xxsize-2026-11-14-fez        N81_th0785_s16   r 0.201 ruler 0.130 | MSE/msq 0.658 -> 1.429
+  xxsize-2026-11-14-marrakesh  N33_th0785_s02   r 0.830 ruler 0.847 | MSE/msq 0.046 -> 0.025
+  xxsize-2026-11-14-marrakesh  N33_th0785_s04   r 0.732 ruler 0.787 | MSE/msq 0.099 -> 0.049
+  xxsize-2026-11-14-marrakesh  N33_th0785_s08   r 0.617 ruler 0.657 | MSE/msq 0.172 -> 0.063
+  xxsize-2026-11-14-marrakesh  N33_th0785_s12   r 0.505 ruler 0.570 | MSE/msq 0.260 -> 0.059
+  xxsize-2026-11-14-marrakesh  N33_th0785_s16   r 0.411 ruler 0.471 | MSE/msq 0.362 -> 0.086
+  xxsize-2026-11-14-marrakesh  N81_th0785_s02   r 0.799 ruler 0.832 | MSE/msq 0.088 -> 0.070
+  xxsize-2026-11-14-marrakesh  N81_th0785_s04   r 0.693 ruler 0.752 | MSE/msq 0.159 -> 0.121
+  xxsize-2026-11-14-marrakesh  N81_th0785_s08   r 0.540 ruler 0.614 | MSE/msq 0.286 -> 0.211
+  xxsize-2026-11-14-marrakesh  N81_th0785_s12   r 0.427 ruler 0.498 | MSE/msq 0.404 -> 0.324
+  xxsize-2026-11-14-marrakesh  N81_th0785_s16   r 0.345 ruler 0.392 | MSE/msq 0.496 -> 0.450
+  xxcone-2026-11-14            N33_th0785_s02   r 0.801 ruler 0.824 | MSE/msq 0.097 -> 0.085
+  xxcone-2026-11-14            N33_th0785_s04   r 0.717 ruler 0.770 | MSE/msq 0.149 -> 0.120
+  xxcone-2026-11-14            N33_th0785_s08   r 0.582 ruler 0.653 | MSE/msq 0.242 -> 0.170
+  xxcone-2026-11-14            N33_th0785_s12   r 0.494 ruler 0.546 | MSE/msq 0.307 -> 0.178
+  xxcone-2026-11-14            N33_th0785_s16   r 0.396 ruler 0.462 | MSE/msq 0.415 -> 0.257
+  xxcone-2026-11-14            N81_th0785_s02   r 0.803 ruler 0.829 | MSE/msq 0.080 -> 0.061
+  xxcone-2026-11-14            N81_th0785_s04   r 0.695 ruler 0.747 | MSE/msq 0.149 -> 0.106
+  xxcone-2026-11-14            N81_th0785_s08   r 0.533 ruler 0.619 | MSE/msq 0.283 -> 0.188
+  xxcone-2026-11-14            N81_th0785_s12   r 0.416 ruler 0.496 | MSE/msq 0.406 -> 0.293
+  xxcone-2026-11-14            N81_th0785_s16   r 0.325 ruler 0.404 | MSE/msq 0.518 -> 0.425
+
+twin: the user circuit divided by r of its Clifford twin in the same job (11-13)
+  N91_th0785_s04   r 0.737 r_twin 0.754 | MSE/msq 0.092 -> 0.040 reads (before: READS)
+  N91_th0785_s08   r 0.599 r_twin 0.617 | MSE/msq 0.186 -> 0.068 reads (before: READS)
+  N91_th0785_s12   r 0.491 r_twin 0.499 | MSE/msq 0.282 -> 0.095 reads (before: READS)
+  L20_s2_U4        r 0.854 r_twin 0.803 | MSE/msq 0.041 -> 0.034 reads (before: READS)
+  L20_s4_U4        r 0.721 r_twin 0.674 | MSE/msq 0.184 -> 0.238 reads (before: READS)
+  L20_s6_U4        r 0.514 r_twin 0.553 | MSE/msq 0.506 -> 0.886 does not read (before: DOES NOT READ)
