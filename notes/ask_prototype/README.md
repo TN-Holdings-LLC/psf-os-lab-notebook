@@ -86,3 +86,20 @@ should be: "前回" with one date only, 一昨日, why, future, comparison), sto
 could be answered, 10 were; 4 stopped on wording the core lacked ("どうなった", "どうなってる", "いくつ", "読めてる",
 "81ビット"). Those were added (fillers and the unit ビット); the 20 are now check 8, so they are no longer unseen: the
 next fair test needs new questions.
+
+## Compile, ideal values and estimates (2026-11-15 afternoon; owner: estimates allowed, labelled, with their basis)
+
+`xxtools.py`, XX chain first, routed by "コンパイル" / "理想値" / "見積もり" ("読めそう"):
+
+- compile: the circuit built by `gpu/ffxx91.py` (the path of the declared XX runs) on the newest device record of that
+  device in the notebook: chain, CZ count, CZ depth of the compiled circuit, failed elements avoided; about 20 s;
+  "置けなかった" with psf-os's reason when no chain fits (e.g. 120 sites on marrakesh: longest 113).
+- ideal: noiseless <Z_i> by free fermions, exact at any size, no sampling (pi/2 checked at +-1).
+- estimate: r from the recorded XX series on the same device whose depths bracket the asked depth (ln r interpolated),
+  same size first, no extrapolation in depth, no estimate on a device without XX records. Printed with its own past
+  record: each of the 75 XX results estimated from the other series: recorded r inside the range 23 of 75 (the
+  ranges are narrow: one to four series), side of 0.293 right 70 of 75. The rest (shape error) is not estimated.
+
+"昨日" is read from the newest date of all records (results, daily lines, whole-device floors); with the 11-15
+records it is now 11-14. The yardstick table (`line_all.json`) stays at the 179 results of paper 9, so the daily
+lines of 11-15 carry no r in the answers.

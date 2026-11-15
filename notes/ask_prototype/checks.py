@@ -264,7 +264,8 @@ def daily_and_relative(rows):
         if want not in a or ("1 行" not in a and d["device"] is not None):
             bad.append((q, a.splitlines()[0]))
     n_rel = 0
-    top = max(r["date"] for r in rows if r["date"])
+    top = max([r["date"] for r in rows if r["date"]] + [d["date"] for d in daily] +
+              [r["date"] for r in ask.build_fullfloor()])
     yday = (datetime.date.fromisoformat(top) - datetime.timedelta(days=1)).isoformat()
     for fam in list(ask.FAMILY_JA) + [None]:
         for dev in ["ibm_fez", "ibm_marrakesh", "ibm_kingston", None]:
@@ -393,7 +394,7 @@ def shell_checks(rows):
 OWNER_20 = [    # the owner's 20 questions of 2026-11-15 13:21 CET (written without seeing the rules), kept as a regression
     # set after the fixes they showed; (question, expected start or substring, stub reply for leftover words)
     ("11月14日のフェズでやったXX鎖、81量子ビットのπ/4で8ステップって読めた？", "MSE/平均二乗 0.343", None),
-    ("昨日のfezのXX、33量子ビットでπ/2のやつはどうなった？", "合う記録はない", None),
+    ("昨日のfezのXX、33量子ビットでπ/2のやつはどうなった？", "記録は 5 件", None),   # 昨日 = 11-14 since the 11-15 records
     ("11月11日にfezで回したハバードのU=4、4ステップの結果を教えて", "記録は 4 件", None),
     ("11月7日のkingstonの双対ユニタリ曲線、51量子ビットのやつは読めた？", "MSE/平均二乗 0.058", None),
     ("11月11日のフェズでユーティリティのZ_106を8ステップやった結果", "MSE/平均二乗 0.028", None),
@@ -430,10 +431,51 @@ def owner_checks(rows):
     return not bad
 
 
+def tools_checks(rows):
+    import xxtools as X
+    bad = []
+    for q, start in [("XX 81量子ビット π/4 の見積もり", "答えない：見積もりには"),
+                     ("ハバード L=20 4ステップ U=4 fez の見積もり", "答えない：見積もりは、今は XX 鎖だけ"),
+                     ("11月14日 fez XX 81量子ビット π/4 12ステップの見積もり", "答えない：見積もりには使えない条件"),
+                     ("XX 81量子ビット π/4 12ステップ 52層 の理想値", "答えない：12ステップは CZ 48"),
+                     ("XX 81量子ビット π/4 50層 の理想値", "答えない：XX 鎖の CZ 層数は 4 の倍数"),
+                     ("kingston XX 33量子ビット π/4 4ステップの見積もり", "見積もり："),
+                     ("fez XX 33量子ビット π/4 40ステップの見積もり", "見積もり：")]:
+        a = ask.answer(q, rows)
+        if not a.startswith(start):
+            bad.append((q, a.splitlines()[0]))
+    a = ask.answer("kingston XX 33量子ビット π/4 4ステップの見積もり", rows)
+    if "見積もり：出さない（ibm_kingston の XX 鎖の記録がない）" not in a:
+        bad.append(("no record, no estimate", a.splitlines()[-1]))
+    a = ask.answer("fez XX 33量子ビット π/4 40ステップの見積もり", rows)
+    if "見積もり：出さない（記録の深さの外" not in a:
+        bad.append(("beyond the recorded depths, no estimate", a.splitlines()[-1]))
+    i1, i2 = ask.answer("XX 81量子ビット π/4 12ステップの理想値", rows), ask.answer("XX 81量子ビット π/4 12ステップの理想値", rows)
+    import ff_xx as F
+    z = F.z_exact(81, 12, X.THETA["π/4"])
+    if i1 != i2 or f"{sum(v * v for v in z) / 81:.4f}" not in i1:
+        bad.append(("ideal values not the same twice, or not free fermions", i1.splitlines()[-1]))
+    for n in (2, 4):                                             # Clifford point: every <Z> is +-1
+        if any(abs(abs(v) - 1) > 1e-9 for v in X.ideal_xx(33, "π/2", n)["z"]):
+            bad.append(("pi/2 ideal values not +-1", n))
+    comp, why = X.compile_xx("ibm_marrakesh", 33, "π/4", 2)
+    comp2, _ = X.compile_xx("ibm_marrakesh", 33, "π/4", 2)
+    if comp is None or comp["cz_depth"] != 8 or comp != comp2 or set(comp["labels"]) & set(comp["failed_qubits"]):
+        bad.append(("compile", why, comp and comp["cz_depth"]))
+    b = X.backtest(rows)
+    print(f"9 compile, ideal, estimate: 7 routing questions, ideal values twice and against free fermions, pi/2 at +-1, "
+          f"one compile twice (CZ depth 8, no failed qubit used); backtest of the estimate: {b['results']} XX results, "
+          f"recorded r inside the range {b['in_range']}, side of 0.293 right {b['side_right']} / {b['sided']}; "
+          f"wrong {len(bad)}")
+    for x in bad:
+        print("   ", x)
+    return not bad
+
+
 def main():
     rows = ask.build_index()
     ok = [round_trip(rows), spelling_checks(rows), edge_checks(rows), refusal_checks(rows), control_checks(rows),
           daily_and_relative(rows), shell_checks(rows),
-          owner_checks(rows)]
+          owner_checks(rows), tools_checks(rows)]
     print("ALL PASS" if all(ok) else "FAIL")
     return all(ok)

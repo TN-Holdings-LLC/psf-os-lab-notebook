@@ -64,6 +64,9 @@ SYNONYMS = [
     ("show", "mirror", ["ミラー", "mirror"]),
     ("show", "sentinel", ["センチネル", "sentinel"]),
     ("show", "controls", ["対照", "コントロール"]),
+    ("mode", "estimate", ["見積もり", "見積り", "見積", "読めそう"]),
+    ("mode", "compile", ["コンパイル結果", "コンパイル", "回路の中身"]),
+    ("mode", "ideal", ["理想値", "厳密値", "シミュレータ", "シミュレーション"]),
     ("rel", "latest", ["最新", "いちばん新しい"]),
     ("rel", "previous", ["前回", "ひとつ前", "一つ前"]),
     ("rel", "yesterday", ["昨日", "きのう"]),
@@ -92,7 +95,7 @@ FILLER = ["読めましたか", "読めなかった", "読めたか", "読めた
 REFUSE = {
     "理由を問う質問": ["なぜ", "どうして", "なんで", "理由", "原因", "せい", "何が効", "どういう仕組"],
     "未来や予測を問う質問": ["明日", "明後日", "あさって", "来週", "来月", "今後", "これから", "次回", "将来",
-                     "予測", "予想", "見込", "見積", "読めそう", "読めるだろう", "なら読める"],
+                     "予測", "予想", "見込", "読めるだろう", "なら読める"],
     "おおよその要約を問う質問": ["だいたい", "大体", "およそ", "くらい", "ぐらい", "程度", "傾向", "平均", "一般",
                        "普通は", "どこまで", "何層まで", "何ステップまで", "目安", "ざっくり", "全体として", "まあまあ",
                        "要するに"],
@@ -104,7 +107,7 @@ REFUSE = {
 LABEL = {"date": "日付", "device": "装置", "family": "種類", "qubits": "量子ビット数", "sites": "サイト数",
          "steps": "ステップ数", "layers": "CZ層数", "angle": "角度", "U": "U", "T": "総時間T", "run": "試験",
          "variant": "照合先", "obs": "観測量", "arm": "腕", "problem": "問題", "kind": "記録の種類",
-         "qubit": "量子ビット番号", "show": "表示", "rel": "相対日付"}
+         "qubit": "量子ビット番号", "show": "表示", "rel": "相対日付", "mode": "求めるもの"}
 KEYS = ["family", "date", "device", "run", "problem", "obs", "arm", "qubits", "sites", "U", "T", "angle", "steps",
         "layers", "variant"]
 
@@ -428,11 +431,75 @@ def answer_daily(c, rows, daily):
     return "\n".join(out + ["（AGREES：|M − M_exact| ≤ 0.05。BEATS：MSE が自明な推測より小さい。記録どおり。）"])
 
 
+_BACKTEST = {}
+
+
+def answer_tools(c, rows):
+    """Compile, ideal values and the estimate, XX chain only (notes/ask_prototype/xxtools.py)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import xxtools as X
+    mode = c["mode"]
+    name = {"estimate": "見積もり", "compile": "コンパイル", "ideal": "理想値"}[mode]
+    if c.get("family", "XX chain") != "XX chain":
+        return f"答えない：{name}は、今は XX 鎖だけ扱える。"
+    bad = [k for k in c if k not in ("mode", "family", "device", "qubits", "angle", "steps", "layers")]
+    if bad:
+        return f"答えない：{name}には使えない条件がある（{'、'.join(LABEL[k] for k in bad)}）。記録を見るなら照会の形で聞いてほしい。"
+    steps = c.get("steps")
+    if "layers" in c:
+        if c["layers"] % 4:
+            return "答えない：XX 鎖の CZ 層数は 4 の倍数（1ステップ 4 層）。"
+        if steps is not None and steps * 4 != c["layers"]:
+            return f"答えない：{steps}ステップは CZ {steps * 4} 層で、{c['layers']}層とぶつかる。"
+        steps = c["layers"] // 4
+    need = ["qubits", "angle"] + (["device"] if mode != "ideal" else [])
+    missing = [LABEL[k] for k in need if k not in c] + (["ステップ数か CZ 層数"] if steps is None else [])
+    if missing:
+        return f"答えない：{name}には {'、'.join(missing)} が要る。"
+    n, angle, dev = c["qubits"], c["angle"], c.get("device")
+    if n < 2:
+        return "答えない：量子ビット数が小さすぎる。"
+    title = f"XX鎖 {n}量子ビット、θ={angle}、{steps}ステップ（CZ {4 * steps}層）" + (f"、{dev}" if dev else "")
+    out = []
+    if mode in ("compile", "estimate"):
+        comp, why = X.compile_xx(dev, n, angle, steps)
+        if comp is None:
+            return f"{name}：{title}\n・コンパイル：{why}"
+        lab = comp["labels"]
+        out.append(f"・コンパイル（{dev} のノートブック内で最新の装置記録 {comp['fetched'].split('(')[-1].rstrip(')')}、"
+                   f"校正 {comp['calibration']}）：鎖 {len(lab)}量子ビット（{lab[0]}〜{lab[-1]}）、CZ {comp['cz']}、"
+                   f"CZ の深さ {comp['cz_depth']}、記録の故障量子ビット {comp['failed_qubits']} と故障結合 "
+                   f"{comp['failed_couplers']} を避けて配置、1ジョブのモデル時間 {comp['model_seconds']} 秒　根拠 {comp['record']}")
+    if mode in ("ideal", "estimate"):
+        ide = X.ideal_xx(n, angle, steps)
+        head = "、".join(f"{v:+.4f}" for v in ide["z"][:8])
+        out.append(f"・理想値（自由フェルミオンの厳密計算、雑音なし、標本化なし）：⟨Z⟩ の平均二乗 {ide['mean_square']:.4f}、"
+                   f"平均 {ide['mean']:+.4f}、鎖の先頭から {head} …")
+    if mode == "estimate":
+        est, why = X.estimate_xx(rows, dev, n, angle, 4 * steps)
+        if est is None:
+            out.append(f"・残存率 r の見積もり：出さない（{why}）")
+        else:
+            if "bt" not in _BACKTEST:
+                _BACKTEST["bt"] = X.backtest(rows)
+            b = _BACKTEST["bt"]
+            ser = "、".join(f"{d} {RUN_JA.get(run, '') or '記録'} {q}量子ビット θ={a}" for d, run, q, a in est["series"])
+            out.append(f"・残存率 r の見積もり（測った値ではない）：{est['lo']:.3f}〜{est['hi']:.3f}、{est['side']}"
+                       f"（{est['basis']}の記録 {est['n_series']} 系列を CZ 層で補間：{ser}）")
+            out.append(f"・この見積もり方の過去の当たり方（XX の記録 {b['results']} 件を、それぞれ自分の系列を除いた記録で見積もった"
+                       f"場合）：実際の r が幅に入った {b['in_range']} 件、0.293 のどちら側かが当たった {b['side_right']} / {b['sided']} 件")
+            notes = ["形のずれ（rest）は見積もっていない", "装置の日ごとの違いは記録の系列の分しか入っていない"]
+            if est["beyond_size"]:
+                notes.append("記録より大きい（小さい）鎖：大きさの試験では大きい鎖ほど r が低く、下に外れうる")
+            out.append(f"・見積もりに入っていないもの：{'、'.join(notes)}")
+    return "\n".join([f"{name}：{title}"] + out)
+
+
 def answer(q, rows, ff=None, daily=None):
     t = norm(q)
     for kind, words in REFUSE.items():
         if any(w in t for w in words):
-            return f"答えない：{kind}は扱えない。扱えるのは、記録された結果の照会だけ。"
+            return f"答えない：{kind}は扱えない。扱えるのは、記録された結果の照会と、XX 鎖のコンパイル・理想値・見積もりだけ。"
     c, unknown, conflicts = parse(q)
     if unknown:
         return f"答えない：解釈できない語が含まれている（{'、'.join('「' + u + '」' for u in unknown)}）。"
@@ -442,19 +509,20 @@ def answer(q, rows, ff=None, daily=None):
         return ("答えない：条件が読み取れなかった。日付（11月14日）、装置（fez / marrakesh / kingston）、種類（XX、ハバード、"
                 "ユーティリティ、イジング、デイリー、双対ユニタリ）、大きさ（81量子ビット、L=20）、深さ（16ステップ、64層）、"
                 "角度（π/4）のどれかを入れてほしい。")
+    if "mode" in c:
+        return answer_tools(c, rows)
     pre = ""
     daily = build_daily() if daily is None else daily
     if "rel" in c:
+        ff = build_fullfloor() if ff is None else ff
+        # "昨日": the day before the newest date of all records the answerer reads (results, daily lines, floors)
+        dates_all = [r["date"] for r in rows if r["date"]] + [d["date"] for d in daily] + [r["date"] for r in ff]
         if c.get("kind") == "fullfloor":
-            ff = build_fullfloor() if ff is None else ff
             pool = [r for r in ff if all(r[k] == c[k] for k in ("device",) if k in c)]
-            dates_all = [r["date"] for r in ff]
         elif c.get("family") == "daily (P4 chain)":
             pool = [d for d in daily if all(d[k] == c[k] for k in ("device", "problem") if k in c)]
-            dates_all = [d["date"] for d in daily]
         else:
             pool = select(rows, {k: v for k, v in c.items() if k != "rel"})
-            dates_all = [r["date"] for r in rows if r["date"]]
         d, pre = resolve_rel(c, dates_all, [r["date"] for r in pool if r["date"]])
         if d is None:
             return pre
