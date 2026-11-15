@@ -61,9 +61,17 @@ every question a person may write. What covers the rest is the closed entrance.
   core-readable questions never reach the model. What no check can do: tell whether the model's reading of its words
   is right; that reading is printed with the answer.
 
+Live run 1 (owner's PC, qwen2.5:7b on Ollama, first form: the model wrote a whole card): 8 paraphrases, answered 0,
+stopped 8 (4 changed a condition the core had read, e.g. フェズ as ibm_marrakesh; 2 called a lookup "other"; 2 gave
+evidence that took another condition's words). No wrong answer, no use. Second form (same day): the model is asked
+only what the words the core could not read mean, one word at a time ({"key", "value"}, {"part_of": key} or null);
+4 of the 8 paraphrases now need no model at all (their leftover words are listed fillers). Rules added with it: the
+model may not add a display, a date, an arm or a problem; a word with a number must be read as that number; a word
+"part of" a condition is at most six characters and touches that condition's words directly or across の / を.
+
 Checks 6 and 7: 18 daily lines and 81 relative-date questions against dates computed independently; 8 paraphrases
-with honest stub cards answered, 94 wrong cards all stopped, and a stub model that wants to answer anything gets 0
-of the 116 refusal questions through (these are questions written by the same hand; in principle such a model can
+with honest stub replies answered (4 without the model), 14 wrong replies all stopped, and stub models that want to
+answer anything get 0 of the 116 refusal questions through (before the part-of rule: 9, then 2) (these are questions written by the same hand; in principle such a model can
 map an unknown word to a condition, and the printed reading is then the only guard). The live run against a real
 local model is `python notes/ask_prototype/shell.py --live-suite` on a machine with Ollama.
 

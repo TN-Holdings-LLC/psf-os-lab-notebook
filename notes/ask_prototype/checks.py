@@ -300,118 +300,90 @@ def daily_and_relative(rows):
     return not bad
 
 
-STUB_CARDS = {    # question: (conditions, evidence), as an honest model would give them
-    "フェズでやったXXの81量子ビットのやつ、π/4 はどうなってた？":
-        ({"device": "ibm_fez", "family": "XX chain", "qubits": 81, "angle": "π/4"}, {}),
-    "マラケシュで光円錐をもう一回やったときの 81量子ビット 16ステップ π/4":
-        ({"device": "ibm_marrakesh", "run": "xxcone", "qubits": 81, "steps": 16, "angle": "π/4"},
-         {"run": "光円錐をもう一回やった"}),
-    "kingston で走らせた双対ユニタリの曲線、51量子ビットのほうはどうだった":
-        ({"device": "ibm_kingston", "family": "dual-unitary (curve)", "qubits": 51}, {"family": "双対ユニタリの曲線"}),
-    "11月11日にフェズで回したハバードの120量子ビット、4ステップは":
-        ({"date": "2026-11-11", "device": "ibm_fez", "family": "Hubbard", "qubits": 120, "steps": 4}, {}),
-    "いちばん最近のデイリーの結果を全部": ({"rel": "latest", "family": "daily (P4 chain)"}, {"rel": "いちばん最近"}),
-    "全面フロアの102番の量子ビット、最新の夜の値":
-        ({"kind": "fullfloor", "qubit": 102, "rel": "latest"}, {"qubit": "102番の量子ビット", "rel": "最新の夜"}),
-    "ユーティリティの Z_106 を8ステップまでやったやつ": ({"family": "IBM 2023 utility", "obs": "z106", "steps": 8}, {}),
-    "11/14 の fez の XX、33量子ビットの π/2 で 64層のところ":
-        ({"date": "2026-11-14", "device": "ibm_fez", "family": "XX chain", "qubits": 33, "angle": "π/2", "layers": 64},
-         {}),
+STUB_REPLIES = {    # question: what an honest model says about its residue words
+    "マラケシュで光円錐をもう一回やったときの 81量子ビット 16ステップ π/4": {"もう一回": {"part_of": "run"}},
+    "kingston で走らせた双対ユニタリの曲線、51量子ビットのほうはどうだった": {"曲線": {"part_of": "family"}},
+    "いちばん最近のデイリーの結果を全部": {"いちばん最近": {"key": "rel", "value": "latest"}},
+    "全面フロアの102番の量子ビット、最新の夜の値": {"量子ビット": {"part_of": "qubit"}, "夜": {"part_of": "rel"}},
 }
-
-
-def liars(cond):
-    """Wrong cards made from a right one: each must be stopped."""
-    out = []
-    other = {"ibm_fez": "ibm_marrakesh", "ibm_marrakesh": "ibm_fez", "ibm_kingston": "ibm_fez"}
-    if "device" in cond:
-        out.append(("device swapped", {**cond, "device": other[cond["device"]]}))
-    for k in ("qubits", "steps", "layers", "qubit"):
-        if k in cond:
-            out.append((f"{k} + 1", {**cond, k: cond[k] + 1}))
-    out.append(("number added", {**cond, "layers": 999}))
-    out.append(("key invented", {**cond, "colour": "blue"}))
-    out.append(("value invented", {**cond, "family": "XXX"}))
-    out.append(("show invented", {**cond, "show": ["everything"]}))
-    out.append(("date invented", {**cond, "date": "2026-11-09"} if "date" not in cond else {**cond, "date": "2026-11-09"}))
-    for k in cond:
-        out.append((f"{k} dropped", {kk: vv for kk, vv in cond.items() if kk != k}))
-    return out
-
-
-def card(cond, ev):
-    return {"intent": "lookup", "conditions": dict(cond), "evidence": dict(ev)}
+WRONG_REPLIES = [    # (name, question, reply): each must stop
+    ("null", "マラケシュで光円錐をもう一回やったときの 81量子ビット 16ステップ π/4", {"もう一回": None}),
+    ("word missing", "全面フロアの102番の量子ビット、最新の夜の値", {"量子ビット": {"part_of": "qubit"}}),
+    ("part of a condition not read", "いちばん最近のデイリーの結果を全部", {"いちばん最近": {"part_of": "rel"}}),
+    ("part of a far condition", "kingston で走らせた双対ユニタリの曲線、51量子ビットのほうはどうだった",
+     {"曲線": {"part_of": "device"}}),
+    ("changes a condition read", "kingston で走らせた双対ユニタリの曲線、51量子ビットのほうはどうだった",
+     {"曲線": {"key": "family", "value": "Hubbard"}}),
+    ("number not in the word", "いちばん最近のデイリーの結果を全部", {"いちばん最近": {"key": "steps", "value": 4}}),
+    ("key invented", "いちばん最近のデイリーの結果を全部", {"いちばん最近": {"key": "colour", "value": "blue"}}),
+    ("value invented", "いちばん最近のデイリーの結果を全部", {"いちばん最近": {"key": "rel", "value": "soon"}}),
+    ("date added", "いちばん最近のデイリーの結果を全部", {"いちばん最近": {"key": "date", "value": "2026-11-14"}}),
+    ("problem added", "いちばん最近のデイリーの結果を全部", {"いちばん最近": {"key": "problem", "value": "D05"}}),
+    ("two values for one key", "全面フロアの102番の量子ビット、最新の夜の値",
+     {"量子ビット": {"part_of": "qubit"}, "夜": {"key": "rel", "value": "previous"}}),
+    ("display added", "いちばん最近のデイリーの結果を全部", {"いちばん最近": {"key": "show", "value": "floor"}}),
+    ("not a dict", "いちばん最近のデイリーの結果を全部", ["rel"]),
+    ("answer not a dict", "いちばん最近のデイリーの結果を全部", {"いちばん最近": "latest"}),
+]
 
 
 def shell_checks(rows):
     import shell
-    bad, n_ok, n_dead, n_liars = [], 0, 0, 0
-    for q, (cond, ev) in STUB_CARDS.items():
-        a = shell.answer(q, lambda _q, x=card(cond, ev): x, rows)
-        mq = shell.mirror_question(shell.normal_card(card(cond, ev))[0])
+    bad, n_ok, n_nomodel = [], 0, 0
+    asked = []
+
+    def stub_for(reply):
+        def m(words, anchor):
+            asked.append(words)
+            return reply
+        return m
+    for q in shell.PARAPHRASES:
+        reply = STUB_REPLIES.get(q, {})
+        a = shell.answer(q, stub_for(reply), rows)
+        card, mq, _ = shell.check(q, reply) if not a.startswith("DEAD") else ({}, "", [])
         if a.startswith("DEAD") or not a.endswith(ask.answer(mq, rows)):
-            bad.append(("honest card stopped or wrong", q, a.splitlines()[0]))
+            bad.append(("honest reply stopped or wrong", q, a.splitlines()[0]))
         else:
             n_ok += 1
-        anchor = ask.parse(q)[0]
-        wrong = liars(cond) + [("evidence not in the text", {**cond, "obs": "w10"})]
-        for name, cc in wrong:
-            ev2 = {k: v for k, v in ev.items() if k in cc}
-            if name == "evidence not in the text":
-                ev2["obs"] = "重み10"
-            elif name in ("number added", "date invented"):
-                ev2["layers" if name == "number added" else "date"] = q[:4]
-            a = shell.answer(q, lambda _q, x=card(cc, ev2): x, rows)
-            survived = not a.startswith("DEAD")
-            dropped = name.endswith("dropped") and name.split()[0] not in anchor
-            n_liars += 1
-            if survived and not dropped:
-                bad.append((f"liar passed: {name}", q, a.splitlines()[0]))
-            n_dead += not survived
-        for k in [k for k in cond if k not in anchor]:           # an added condition without its evidence
-            if not shell.answer(q, lambda _q, x=card(cond, {kk: v for kk, v in ev.items() if kk != k}): x,
-                                rows).startswith("DEAD"):
-                bad.append(("added condition without evidence passed", q, k))
-        if not shell.answer(q, lambda _q: {"intent": "other", "conditions": {}}, rows).startswith("DEAD"):
-            bad.append(("intent other passed", q))
-        if not shell.answer(q, lambda _q: (_ for _ in ()).throw(RuntimeError("down")), rows).startswith("DEAD"):
+            n_nomodel += a.startswith("モデルには聞いていない")
+    for name, q, reply in WRONG_REPLIES:
+        if not shell.answer(q, stub_for(reply), rows).startswith("DEAD"):
+            bad.append((f"wrong reply passed: {name}", q))
+    for q in STUB_REPLIES:
+        if not shell.answer(q, lambda w, a: (_ for _ in ()).throw(RuntimeError("down")), rows).startswith("DEAD"):
             bad.append(("model failure passed", q))
     calls = []
 
-    def spy(qq):
-        calls.append(qq)
-        return {"intent": "other", "conditions": {}}
+    def honest_none(words, anchor):
+        calls.append(words)
+        return {w: None for w in words}
     for i, r in enumerate(rows):                                 # the core reads these alone: the model is not asked
-        if shell.answer(question(r, i), spy, rows) != ask.answer(question(r, i), rows):
+        if shell.answer(question(r, i), honest_none, rows) != ask.answer(question(r, i), rows):
             bad.append(("core-readable question changed", question(r, i)))
+    if calls:
+        bad.append(("model asked about a core-readable question", calls[:3]))
     negs = [ctx + stem for stem in NEG_STEMS for ctx in NEG_CONTEXT]
-    for q in negs:                                               # an honest model says "other"
-        a = shell.answer(q, spy, rows)
+    for q in negs:                                               # a model that knows no meaning for the words
+        a = shell.answer(q, honest_none, rows)
         if not (a.startswith("答えない") or a.startswith("DEAD")):
             bad.append(("refusal answered through the shell", q, a.splitlines()[0]))
-    refusal_calls = [c for c in calls if any(w in ask.norm(c) for ws in ask.REFUSE.values() for w in ws)]
-    core_calls = [c for c in calls if not ask.parse(c)[1] and ask.parse(c)[0]]
-    if refusal_calls or core_calls:
-        bad.append(("model asked about a refused or core-readable question", (refusal_calls + core_calls)[:3]))
 
-    def adversary(qq):
-        """A model that wants to answer anything: the core's own reading, plus one condition whose evidence is the
-        longest run of words nobody took."""
-        c, _, _, left, _ = ask.parse(qq, leftover=True)
-        words = left.split()
-        if not words:
-            return {"intent": "lookup", "conditions": c}
-        w = max(words, key=len)
-        extra = ("show", ["floor"]) if "show" not in c else ("variant", "circuit")
-        return {"intent": "lookup", "conditions": {**c, extra[0]: extra[1]}, "evidence": {extra[0]: w}}
-    through = [q for q in negs if not (lambda a: a.startswith("答えない") or a.startswith("DEAD"))(
-        shell.answer(q, adversary, rows))]
-    print(f"7 outer shell (stub models): {len(STUB_CARDS)} paraphrases with honest cards answered {n_ok}; "
-          f"{n_liars} wrong cards, stopped {n_dead} (the rest drop a condition the question does not name); "
-          f"refused and core-readable questions never sent to the model; with an honest model the {len(negs)} "
-          f"refusal questions all stop; a model that wants to answer anything gets {len(through)} of them through "
-          f"(as a lookup of real records, its reading printed); wrong {len(bad)}")
-    for q in through[:8]:
+    def adversary(words, anchor):
+        """A model that wants to answer anything: every word is part of the first condition read, or else a request
+        to show the floor."""
+        k = next(iter(anchor), None)
+        return {w: ({"part_of": k} if k else {"key": "show", "value": "floor"}) for w in words}
+
+    def adversary2(words, anchor):
+        return {w: {"key": "show", "value": "floor"} for w in words}
+    through = sorted({q for q in negs for m in (adversary, adversary2)
+                      if not (lambda a: a.startswith("答えない") or a.startswith("DEAD"))(shell.answer(q, m, rows))})
+    print(f"7 outer shell (stub models): {len(shell.PARAPHRASES)} paraphrases answered {n_ok} ({n_nomodel} without the "
+          f"model); {len(WRONG_REPLIES)} wrong replies all stopped unless listed below; core-readable questions never "
+          f"sent to the model; {len(negs)} refusal questions stop when the model knows no meaning; models that want to "
+          f"answer anything get {len(through)} through (a lookup of real records with the reading printed); "
+          f"wrong {len(bad)}")
+    for q in through[:12]:
         print("    through an adversary:", q)
     for b in bad[:10]:
         print("   ", b)

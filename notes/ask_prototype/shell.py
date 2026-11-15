@@ -1,31 +1,34 @@
-"""An outer shell for questions the closed entrance cannot read (prototype, 2026-11-15).
+"""An outer shell for questions the closed entrance cannot read (prototype, 2026-11-15, second form).
 
-The deterministic core (ask.py) stays as it is and has the last word. A local language model only proposes a
-condition card; the card is checked by the core, and any failed check stops the answer (DEAD), so a model error
-becomes a refusal, never a wrong answer.
+The deterministic core (ask.py) stays as it is and has the last word. The first form asked a local model for a whole
+condition card; on the owner's PC qwen2.5:7b answered 0 of 8 paraphrases (8 stopped: it changed the device the core
+had read, dropped conditions, called lookups "other", gave whole sentences as evidence). The second form asks the
+model much less: only what the words the core could not read mean, one word at a time.
 
   0. refusals first, on the raw question (ask.REFUSE): refused, no model;
   1. the core next: if the closed entrance reads the question fully, the core answers, no model;
-  2. otherwise the model proposes a card {"intent": "lookup" | "other", "conditions": {...}, "evidence": {...}},
-     where evidence gives, for each condition, the exact words of the question it was read from;
-  3. checks, each one able to stop the answer (DEAD):
-     a. schema   - intent "lookup"; keys and values from the core's dictionary only;
-     b. anchor   - every condition the core can read in the raw question is in the card with the same value;
-     c. residual - every number written in the raw question is used by the card, and every number, arm and
-                   problem in the card is written in the raw question (a model may not add a number);
-     d. coverage - every character of the question is taken by the core, by a listed filler, or by the evidence of
-                   a condition the model added; nothing is silently ignored;
-     e. mirror   - the card, written back as a question in the core's own spellings, is read by the closed entrance
-                   to exactly the same card, with no unknown word;
-  4. the core answers the mirrored question; the reply shows the card and which conditions the model added.
+  2. the residue: the runs of characters no pattern or dictionary spelling took, with the listed fillers
+     (ask.FILLER, SHELL_FILLER) and edge particles removed. Empty residue: the core answers from what it read, no
+     model;
+  3. otherwise the model is shown the residue words and the conditions the core read, and says for each word either
+     a new condition {"key", "value"}, or {"part_of": key} (the word belongs to a condition the core read), or null;
+  4. checks, each one able to stop the answer (DEAD):
+     a. every residue word has an answer, none null;
+     b. keys and values from the core's dictionary only; a number in a value must be written in its word, and a word
+        with a number must be read as that number; the model may not add a date, an arm, a problem or a display;
+     c. a new condition never changes one the core read, and two words never give one key two values;
+     d. "part_of" names a condition the core read; the word is at most six characters and follows or precedes that
+        condition's words directly or across one の or を;
+     e. mirror: the card (the core's reading plus the new conditions), written back as a question in the core's own
+        spellings, is read by the closed entrance to the same card with no unknown word;
+  5. the core answers the mirrored question; the reply prints every word and how the model read it.
 
-What the checks cannot do: tell whether the model's reading of its evidence is right ("もう一回やった" read as the
-light-cone repeat). That reading is printed with the answer, word for word, so the reader sees it; a model can only
-point at recorded results, never add a number, an arm or a problem the question does not write.
+What no check can do: tell whether the model read a word right ("もう一回" as the light-cone repeat). That reading is
+printed with the answer, word by word.
 
-Backends: "ollama" (local, PSF_ASK_URL or http://localhost:11434, model from PSF_ASK_MODEL, default qwen2.5:7b, temperature 0,
-seed 0, JSON output) or any callable question -> card (the checks use stubs).
-usage: python notes/ask_prototype/shell.py "フェズでやったXXの81量子ビットのやつ、π/4 は？"
+Backends: "ollama" (local, PSF_ASK_URL or http://localhost:11434, model PSF_ASK_MODEL or qwen2.5:7b, temperature 0,
+seed 0, JSON output) or any callable (words, conditions) -> {word: answer} (the checks use stubs).
+usage: python notes/ask_prototype/shell.py "フェズでやったXXの81量子ビットのやつ、π/4 はどうなってた？"
        python notes/ask_prototype/shell.py --live-suite      (the paraphrase list against the local model)"""
 import json
 import os
@@ -42,77 +45,90 @@ for _k, _v, _ss in ask.SYNONYMS:
     CHOICES.setdefault(_k, set()).add(_v)
 CHOICES["show"].discard("controls")
 ALLOWED = set(NUMERIC) | set(CHOICES) | {"date", "arm", "problem"}
-
-PROMPT = """You turn a Japanese question about recorded quantum-device results into a JSON condition card.
-Answer with JSON only: {"intent": "lookup" or "other", "conditions": {...}}.
-intent is "lookup" only when the question asks what a recorded result was; anything else (why, future, advice,
-comparison, approximation) is "other" with no conditions.
-Allowed condition keys and values (use nothing else, leave out what the question does not say):
-  date: "YYYY-MM-DD" (year 2026)        rel: "latest" | "previous" | "yesterday"   (最新 / 前回 / 昨日)
-  device: "ibm_fez" | "ibm_marrakesh" | "ibm_kingston"
-  family: "XX chain" | "Hubbard" | "IBM 2023 utility" | "Ising 3D (isingL)" | "daily (P4 chain)" |
-          "dual-unitary (curve)"
-  kind: "fullfloor" (whole-device floor)    qubits, sites, steps, layers, U, qubit (a qubit's number): integers
-  T: number    angle: "π/4" | "π/2"    run: "xxsize" | "xxcone"    variant: "circuit" | "continuum"
-  obs: "z106" | "w10" | "w17" | "w17b"    arm: like "q22f0"    problem: like "FX-A", "D05"
-  show: list of "floor" | "mirror" | "sentinel"
-Also give "evidence": for every condition, the exact words copied from the question that it was read from, e.g.
-{"intent": "lookup", "conditions": {"device": "ibm_fez", "qubits": 81},
- "evidence": {"device": "フェズでやった", "qubits": "81量子ビット"}}
-Question: """
-# Words the shell lets stand without evidence (they name no condition).
+# Words that name no condition; the shell lets them stand without asking the model.
 SHELL_FILLER = ["やったやつ", "やつ", "ところ", "とき", "ほう", "どうなってた", "どうなって", "どうだった", "全部", "値", "まで",
                 "について", "って", "やった", "走らせた", "回した", "流した"]
+EDGE = "のではをがにと、。?!・,()「」: "
+
+PROMPT = """You read Japanese words from a question about recorded quantum-device results.
+Conditions already read from the question: {anchor}
+For each word below say what it means, as JSON {{"<word>": answer, ...}} where answer is one of:
+  {{"key": K, "value": V}}   the word names a condition not read yet
+  {{"part_of": K}}           the word belongs to a condition already read (K is its key)
+  null                     the word names no condition you know
+Keys and values (use nothing else):
+  rel: "latest" | "previous" | "yesterday"     device: "ibm_fez" | "ibm_marrakesh" | "ibm_kingston"
+  family: "XX chain" | "Hubbard" | "IBM 2023 utility" | "Ising 3D (isingL)" | "daily (P4 chain)" | "dual-unitary (curve)"
+  kind: "fullfloor"    angle: "π/4" | "π/2"    run: "xxsize" (size test) | "xxcone" (light-cone repeat)
+  variant: "circuit" | "continuum"    obs: "z106" | "w10" | "w17" | "w17b"
+  qubits, sites, steps, layers, U, qubit: integers written in the word
+Example: conditions {{"run": "xxcone", "qubits": 81}}, words ["もう一回", "いちばん最近"] ->
+  {{"もう一回": {{"part_of": "run"}}, "いちばん最近": {{"key": "rel", "value": "latest"}}}}
+Words: {words}
+JSON only."""
 
 
 # ---------------------------------------------------------------- backends
-def ollama(question, model=None, url=None):
+def ollama(words, anchor, model=None, url=None):
     url = url or os.environ.get("PSF_ASK_URL", "http://localhost:11434") + "/api/generate"
-    body = json.dumps({"model": model or os.environ.get("PSF_ASK_MODEL", "qwen2.5:7b"), "prompt": PROMPT + question,
+    prompt = PROMPT.format(anchor=json.dumps(anchor, ensure_ascii=False), words=json.dumps(words, ensure_ascii=False))
+    body = json.dumps({"model": model or os.environ.get("PSF_ASK_MODEL", "qwen2.5:7b"), "prompt": prompt,
                        "format": "json", "stream": False, "options": {"temperature": 0, "seed": 0}}).encode()
     req = urllib.request.Request(url, body, {"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as r:
         return json.loads(json.loads(r.read())["response"])
 
 
-# ---------------------------------------------------------------- the card, checked by the core
-def normal_card(card):
-    """The card in the core's form (show as a sorted tuple), or a reason it is not a card."""
-    if not isinstance(card, dict) or card.get("intent") != "lookup":
-        return None, "モデルが照会ではないと読んだ（intent が lookup でない）"
-    cond = card.get("conditions")
-    if not isinstance(cond, dict) or not cond:
-        return None, "条件カードが空"
-    out = {}
-    for k, v in cond.items():
-        if k not in ALLOWED:
-            return None, f"辞書にない条件「{k}」"
-        if k in NUMERIC:
-            if isinstance(v, bool) or not isinstance(v, (int, float)) or (NUMERIC[k] is int and v != int(v)):
-                return None, f"{k} が数でない（{v!r}）"
-            out[k] = NUMERIC[k](v)
-        elif k == "show":
-            vals = v if isinstance(v, list) else [v]
-            if not vals or any(x not in CHOICES["show"] for x in vals):
-                return None, f"show に辞書にない値（{v!r}）"
-            out[k] = tuple(sorted(set(vals)))
-        elif k == "date":
-            if not (isinstance(v, str) and re.fullmatch(r"2026-\d\d-\d\d", v)):
-                return None, f"日付の形でない（{v!r}）"
-            out[k] = v
-        elif k == "arm":
-            if not (isinstance(v, str) and re.fullmatch(r"q\d\d[fl]\d", v)):
-                return None, f"腕の形でない（{v!r}）"
-            out[k] = v
-        elif k == "problem":
-            if not (isinstance(v, str) and re.fullmatch(r"FX-A|D0\d|user", v)):
-                return None, f"問題の形でない（{v!r}）"
-            out[k] = v
-        else:
-            if v not in CHOICES[k]:
-                return None, f"{k} に辞書にない値（{v!r}）"
-            out[k] = v
-    return out, None
+# ---------------------------------------------------------------- the residue
+def residue(question):
+    """(core reading, conflicts, residue words with their positions, character spans of each core condition)."""
+    c, _, conflicts, _, spans = ask.parse(question, leftover=True)
+    raw = ask.norm(question)
+    taken = {i for ss in spans.values() for a, b in ss for i in range(a, b)}
+    text = "".join(" " if i in taken else ch for i, ch in enumerate(raw))
+    for w in sorted(SHELL_FILLER + [f for f in ask.FILLER if len(f) > 1], key=len, reverse=True):
+        text = text.replace(w, " " * len(w))
+    words = []
+    for m in re.finditer(r"\S+", text):
+        a, b = m.span()
+        while a < b and text[a] in EDGE:
+            a += 1
+        while b > a and text[b - 1] in EDGE:
+            b -= 1
+        if a < b:
+            words.append((text[a:b], a, b))
+    return c, conflicts, words, spans
+
+
+# ---------------------------------------------------------------- the card
+def normal_value(k, v):
+    """The value in the core's form, or raise ValueError."""
+    if k not in ALLOWED:
+        raise ValueError(f"辞書にない条件「{k}」")
+    if k in NUMERIC:
+        if isinstance(v, bool) or not isinstance(v, (int, float)) or (NUMERIC[k] is int and v != int(v)):
+            raise ValueError(f"{k} が数でない（{v!r}）")
+        return NUMERIC[k](v)
+    if k == "show":
+        vals = v if isinstance(v, list) else [v]
+        if not vals or any(x not in CHOICES["show"] for x in vals):
+            raise ValueError(f"show に辞書にない値（{v!r}）")
+        return tuple(sorted(set(vals)))
+    if k == "date":
+        if not (isinstance(v, str) and re.fullmatch(r"2026-\d\d-\d\d", v)):
+            raise ValueError(f"日付の形でない（{v!r}）")
+        return v
+    if k == "arm":
+        if not (isinstance(v, str) and re.fullmatch(r"q\d\d[fl]\d", v)):
+            raise ValueError(f"腕の形でない（{v!r}）")
+        return v
+    if k == "problem":
+        if not (isinstance(v, str) and re.fullmatch(r"FX-A|D0\d|user", v)):
+            raise ValueError(f"問題の形でない（{v!r}）")
+        return v
+    if v not in CHOICES[k]:
+        raise ValueError(f"{k} に辞書にない値（{v!r}）")
+    return v
 
 
 def mirror_question(card):
@@ -150,87 +166,66 @@ def mirror_question(card):
     return " ".join(parts)
 
 
-ANGLE_NUMBERS = {"π/4": {"4", "0.25", "45"}, "π/2": {"2", "0.5", "90"}}
+PART_MAX = 6          # a word that is part of a condition is a short qualifier ("曲線", "もう一回", "夜")
 
 
-def numbers_used(card, mq):
-    """Digits a card accounts for: those of its mirrored question, plus the other ways to write its angle."""
-    nums = set(re.findall(r"\d+(?:\.\d+)?", mq))
-    nums |= {str(int(x)) for x in list(nums) if re.fullmatch(r"\d+", x)}
-    nums |= ANGLE_NUMBERS.get(card.get("angle"), set())
-    if "date" in card:
-        y, m, d = card["date"].split("-")
-        nums |= {y, str(int(m)), str(int(d)), m, d}
-    if "T" in card:
-        nums |= {f"{card['T']:g}", str(card["T"])}
-    return nums
+def touches(a, b, spans, raw):
+    """True when [a, b) follows or precedes one of the spans directly, or across one の or を (no space)."""
+    for x, y in spans:
+        between = raw[y:a] if y <= a else raw[b:x] if b <= x else None
+        if between is not None and between in ("", "の", "を"):
+            return True
+    return False
 
 
-def check(question, card):
-    """Return (card in the core's form, mirrored question, conditions the model added, evidence) or raise
-    ValueError(reason)."""
-    c, why = normal_card(card)
-    if c is None:
-        raise ValueError(why)
-    anchor, _, conflicts, left, spans = ask.parse(question, leftover=True)
+def check(question, reply):
+    """Return (card, mirrored question, readings) or raise ValueError(reason)."""
+    c, conflicts, words, spans = residue(question)
     if conflicts:
         raise ValueError("元の文の中で条件がぶつかっている")
-    for k, v in anchor.items():
-        if c.get(k) != v:
-            raise ValueError(f"元の文から読める {ask.LABEL[k]} {ask.show(k, v)} がカードと違う（カード：{c.get(k)!r}）")
-    mq = mirror_question(c)
-    used = numbers_used(c, mq)
-    raw_nums = re.findall(r"\d+(?:\.\d+)?", ask.norm(question))
-    loose = [n for n in raw_nums if n not in used and str(int(float(n))) not in used]
-    if loose:
-        raise ValueError(f"元の文の数がカードで使われていない（{'、'.join(loose)}）")
-    raw_set = {str(int(float(n))) if float(n) == int(float(n)) else n for n in raw_nums}
-    card_nums = [str(c[k]) if NUMERIC[k] is int else f"{c[k]:g}" for k in NUMERIC if k in c]
-    if "date" in c:
-        card_nums += [str(int(x)) for x in c["date"].split("-")[1:]]
-    added_nums = [n for n in card_nums if n not in raw_set]
-    if added_nums:
-        raise ValueError(f"カードの数が元の文にない（{'、'.join(added_nums)}）")
-    for k in ("arm", "problem"):
-        if k in c and c[k].lower() not in ask.norm(question):
-            raise ValueError(f"カードの{ask.LABEL[k]} {c[k]} が元の文にない")
-    added = [k for k in c if k not in anchor]
-    ev = card.get("evidence") if isinstance(card.get("evidence"), dict) else {}
     raw = ask.norm(question)
-    mask = [ch == " " for ch in left]                           # True where the core or a filler took the character
-    owner = {}                                                  # character -> condition that took it
-    for k, ss in spans.items():
-        for a, b in ss:
-            for i in range(a, b):
-                owner[i] = k
-    for k in added:
-        if not isinstance(ev.get(k), str) or not ev[k].strip():
-            raise ValueError(f"モデルが補った {ask.LABEL[k]} に根拠の語がない")
-    for k, e in ev.items():
-        if k not in c or not isinstance(e, str) or not e.strip():
-            raise ValueError(f"根拠「{e}」の条件「{k}」がカードにない")
-        e = ask.norm(e)
-        if e not in raw:
-            raise ValueError(f"{ask.LABEL[k]} の根拠「{e}」が元の文にない")
-        if k in NUMERIC and k in added and str(c[k] if NUMERIC[k] is int else f"{c[k]:g}") not in e:
-            raise ValueError(f"{ask.LABEL[k]} の根拠「{e}」にその数がない")
-        for m in re.finditer(re.escape(e), raw):
-            for i in range(*m.span()):
-                if owner.get(i, k) != k:
-                    raise ValueError(f"{ask.LABEL[k]} の根拠「{e}」が別の条件（{ask.LABEL[owner[i]]}）の語を含む")
-                owner[i] = k
-                mask[i] = True
-    for w in SHELL_FILLER:
-        for m in re.finditer(re.escape(w), raw):
-            for i in range(*m.span()):
-                mask[i] = True
-    rest = "".join(ch if not ok else " " for ch, ok in zip(raw, mask)).split()
-    if rest:
-        raise ValueError(f"モデルが説明していない語がある（{'、'.join('「' + r + '」' for r in rest)}）")
+    if not isinstance(reply, dict):
+        raise ValueError("モデルの返事が辞書でない")
+    card, readings = dict(c), []
+    for w, a, b in words:
+        ans = reply.get(w)
+        if ans is None:
+            raise ValueError(f"「{w}」をモデルが条件として読めなかった")
+        if not isinstance(ans, dict):
+            raise ValueError(f"「{w}」への返事の形が違う（{ans!r}）")
+        if "part_of" in ans:
+            k = ans["part_of"]
+            if re.search(r"\d", w):
+                raise ValueError(f"数を含む「{w}」を、読めた条件の一部とした")
+            if k not in c:
+                raise ValueError(f"「{w}」を、読めていない条件「{k}」の一部とした")
+            if len(w) > PART_MAX:
+                raise ValueError(f"「{w}」は、読めた条件の一部としては長すぎる（{PART_MAX}文字まで）")
+            if not touches(a, b, spans.get(k, []), raw):
+                raise ValueError(f"「{w}」が {ask.LABEL.get(k, k)} の語から離れている")
+            readings.append(f"「{w}」→ {ask.LABEL[k]}（{ask.show(k, c[k])}）の一部")
+            continue
+        k, v = ans.get("key"), ans.get("value")
+        if k == "show":
+            raise ValueError("表示（フロア・ミラー・センチネル）はモデルが補えない（元の文の語でだけ読む）")
+        v = normal_value(k, v)
+        if re.search(r"\d", w) and k not in NUMERIC:
+            raise ValueError(f"数を含む「{w}」を数でない条件として読んだ")
+        if k in NUMERIC and str(v if NUMERIC[k] is int else f"{v:g}") not in w:
+            raise ValueError(f"「{w}」に {ask.LABEL[k]} {v} の数が書かれていない")
+        if k in ("date", "arm", "problem"):
+            raise ValueError(f"{ask.LABEL[k]} はモデルが補えない（元の文に書かれた形でだけ読む）")
+        if k in card and card[k] != v:
+            raise ValueError(f"「{w}」→ {ask.LABEL[k]} {ask.show(k, v)} が、すでにある {ask.show(k, card[k])} とぶつかる")
+        card[k] = v
+        readings.append(f"「{w}」→ {ask.LABEL[k]} {ask.show(k, v)}")
+    if not [k for k in card if k != "show"]:
+        raise ValueError("条件が一つもない")
+    mq = mirror_question(card)
     back, unknown, conf = ask.parse(mq)
-    if unknown or conf or back != c:
-        raise ValueError(f"鏡の照合が合わない（カード {c} → 文「{mq}」→ {back}）")
-    return c, mq, added, {k: ask.norm(ev[k]) for k in ev}
+    if unknown or conf or back != card:
+        raise ValueError(f"鏡の照合が合わない（カード {card} → 文「{mq}」→ {back}）")
+    return card, mq, readings
 
 
 def answer(question, model, rows=None):
@@ -241,20 +236,21 @@ def answer(question, model, rows=None):
     c, unknown, conflicts = ask.parse(question)
     if not unknown and not conflicts and c:
         return ask.answer(question, rows)                       # the core reads it alone
+    c, conflicts, words, _ = residue(question)
+    if conflicts:
+        return f"答えない：条件がぶつかっている（{'；'.join(conflicts)}）。"
+    reply = {}
+    if words:
+        try:
+            reply = model([w for w, _, _ in words], c)
+        except Exception as e:                                  # noqa: BLE001 - any model failure is a stop
+            return f"DEAD：モデルに聞けなかった（{type(e).__name__}）。答えない。"
     try:
-        card = model(question)
-    except Exception as e:                                      # noqa: BLE001 - any model failure is a stop
-        return f"DEAD：モデルに聞けなかった（{type(e).__name__}）。答えない。"
-    try:
-        cc, mq, added, ev = check(question, card)
+        card, mq, readings = check(question, reply)
     except ValueError as e:
-        return f"DEAD：モデルの読みを検証で止めた（{e}）。答えない。"
-    head = [f"モデルの条件カード（検証済み）：{ask.cond_text(cc) or 'なし'}" +
-            (f"、表示 {'・'.join(cc['show'])}" if "show" in cc else "") +
-            (f"、相対日付 {ask.show('rel', cc['rel'])}" if "rel" in cc else ""),
-            "モデルが補った条件：" + ("、".join(f"{ask.LABEL[k]} {ask.show(k, cc[k])}" for k in added) if added else "なし"),
-            "モデルの読み（検証で確かめられるのは、語が元の文にあることまで）：" +
-            ("、".join(f"「{e}」→ {ask.LABEL[k]} {ask.show(k, cc[k])}" for k, e in ev.items()) if ev else "なし"),
+        return f"DEAD：検証で止めた（{e}）。答えない。"
+    head = [("モデルの読み（検証で確かめられるのは、語が元の文にあり辞書の値であることまで）：" + "、".join(readings))
+            if readings else "モデルには聞いていない（読めなかった語は決まった言い回しだけ）",
             f"照合した質問文：{mq}"]
     return "\n".join(head + [ask.answer(mq, rows)])
 
@@ -274,14 +270,16 @@ PARAPHRASES = [
 
 def live_suite():
     rows = ask.build_index()
-    n_dead = 0
+    n_dead = n_nomodel = 0
     for q in PARAPHRASES:
         a = answer(q, ollama, rows)
         n_dead += a.startswith("DEAD")
+        n_nomodel += a.startswith("モデルには聞いていない")
         print("Q:", q)
         print(a)
         print()
-    print(f"{len(PARAPHRASES)} paraphrases: answered {len(PARAPHRASES) - n_dead}, stopped (DEAD) {n_dead}")
+    print(f"{len(PARAPHRASES)} paraphrases: answered {len(PARAPHRASES) - n_dead} "
+          f"({n_nomodel} without the model), stopped (DEAD) {n_dead}")
 
 
 if __name__ == "__main__":
