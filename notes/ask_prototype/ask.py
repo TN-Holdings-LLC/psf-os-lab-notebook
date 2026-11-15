@@ -74,7 +74,7 @@ PATTERNS = [
      lambda g: f"2026-{int(g[1]):02d}-{int(g[2]):02d}"),
     ("arm", r"q(\d\d)([fl]\d)", lambda g: f"q{g[1]}{g[2]}"),
     ("problem", r"(?<![a-z0-9])(fx-a|d0\d|user)(?![a-z0-9])", lambda g: g[1].upper() if g[1] != "user" else "user"),
-    ("qubits", r"(\d+)\s*(?:量子ビット|qubits?)", lambda g: int(g[1])),
+    ("qubits", r"(\d+)\s*(?:量子ビット|qubits?|ビット)", lambda g: int(g[1])),
     ("qubits", r"(?<![a-z])n\s*=\s*(\d+)", lambda g: int(g[1])),
     ("sites", r"(\d+)\s*サイト", lambda g: int(g[1])),
     ("sites", r"(?<![a-z])l\s*=\s*(\d+)", lambda g: int(g[1])),
@@ -85,8 +85,8 @@ PATTERNS = [
     ("qubit", r"(\d+)\s*番", lambda g: int(g[1])),
 ]
 # Words that carry no condition. Removed after every pattern; anything left is an unknown word.
-FILLER = ["読めましたか", "読めなかった", "読めたか", "読めた", "読める", "結果", "判定", "教えて", "ください",
-          "どうだった", "ですか", "でした", "記録", "装置", "角度", "腕", "問題", "の", "で", "は", "を", "が", "に",
+FILLER = ["読めましたか", "読めなかった", "読めたか", "読めた", "読めている", "読めてる", "読める", "結果", "判定", "教えて",
+          "ください", "どうだった", "どうなった", "どうなってた", "どうなってる", "いくつ", "ですか", "でした", "記録", "装置", "角度", "腕", "問題", "の", "で", "は", "を", "が", "に",
           "と", "も", "か", "、", "。", "?", "!", "・", ",", "(", ")", "「", "」", ":"]
 # Question types this prototype does not answer, by kind. Checked before anything else.
 REFUSE = {

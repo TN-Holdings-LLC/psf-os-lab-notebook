@@ -77,3 +77,12 @@ local model is `python notes/ask_prototype/shell.py --live-suite` on a machine w
 
 Not yet: records outside the yardstick table (stage tests, flows, the Ohm and Schwinger families); relative dates;
 numbers in kanji.
+
+## The owner's 20 questions (2026-11-15 13:21 CET, written without seeing the rules; e372bceb, qwen2.5:7b)
+
+Answered with records 8 (2 of them used the model's reading: "やり直した" as the light-cone repeat, "見せて" as part
+of the display), answered "no record" 2 (both right: no Hubbard on 11-14 fez, no 999-qubit chain), refused 5 (all
+should be: "前回" with one date only, 一昨日, why, future, comparison), stopped 5. Wrong answers: 0. Of the 14 that
+could be answered, 10 were; 4 stopped on wording the core lacked ("どうなった", "どうなってる", "いくつ", "読めてる",
+"81ビット"). Those were added (fillers and the unit ビット); the 20 are now check 8, so they are no longer unseen: the
+next fair test needs new questions.

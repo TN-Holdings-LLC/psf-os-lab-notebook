@@ -390,9 +390,50 @@ def shell_checks(rows):
     return not bad
 
 
+OWNER_20 = [    # the owner's 20 questions of 2026-11-15 13:21 CET (written without seeing the rules), kept as a regression
+    # set after the fixes they showed; (question, expected start or substring, stub reply for leftover words)
+    ("11月14日のフェズでやったXX鎖、81量子ビットのπ/4で8ステップって読めた？", "MSE/平均二乗 0.343", None),
+    ("昨日のfezのXX、33量子ビットでπ/2のやつはどうなった？", "合う記録はない", None),
+    ("11月11日にfezで回したハバードのU=4、4ステップの結果を教えて", "記録は 4 件", None),
+    ("11月7日のkingstonの双対ユニタリ曲線、51量子ビットのやつは読めた？", "MSE/平均二乗 0.058", None),
+    ("11月11日のフェズでユーティリティのZ_106を8ステップやった結果", "MSE/平均二乗 0.028", None),
+    ("最新のデイリー記録で、マラケシュのD05はどうだった？", "問題 D05：実行 yes、READS", None),
+    ("前回のfezのXX 81量子ビット π/4 12ステップの対照は？", "答えない", None),
+    ("11月14日のマラケシュで光円錐をやり直したやつ、81量子ビットの16ステップ π/4", "MSE/平均二乗 0.518",
+     {"やり直した": {"part_of": "run"}}),
+    ("11月13日のmarrakeshの全面フロア、102番の値はいくつ？", "1 − z(|0⟩) 0.0510", None),
+    ("11月6日のデイリー記録のFX-Aの結果を教えて", "問題 FX-A：実行 yes (alone)", None),
+    ("11/14のfezでXXの81ビット、π/4の64層のやつって読めてる？", "MSE/平均二乗 0.658", None),
+    ("最新のfezの全面フロアで102番はどうなってる？", "答えない", None),
+    ("11月14日のibm_fez、XX鎖の81量子ビットでπ/4の2ステップの対照を見せて", "フロア +0.973",
+     {"見せて": {"part_of": "show"}}),
+    ("一昨日のfezでXXの81量子ビットは読めた？", "答えない", None),
+    ("11月14日のfezでXXの81量子ビット π/4 が12ステップで読めなくなった理由は？", "答えない", None),
+    ("明日のマラケシュで光円錐を回したら読めるかな？", "答えない", None),
+    ("11月14日のfezでXXの81量子ビット、4ステップと8ステップはどっちが良かった？", "答えない", None),
+    ("11月14日のフェズでハバードの120量子ビット、4ステップの結果", "合う記録はない", None),
+    ("11月14日のfezでXXの999量子ビット π/4 は読めた？", "合う記録はない", None),
+    ("11月14日のfezでXXの81量子ビット π/4 8ステップ、たぶん読めたよね？", "DEAD", {}),
+]
+
+
+def owner_checks(rows):
+    import shell
+    bad = []
+    for q, want, reply in OWNER_20:
+        a = shell.answer(q, lambda w, an, r=reply: {x: (r or {}).get(x) for x in w}, rows)
+        if (want in ("答えない", "DEAD") and not a.startswith(want)) or (want not in ("答えない", "DEAD") and want not in a):
+            bad.append((q, want, a.splitlines()[0]))
+    print(f"8 the owner's 20 questions (regression after the fixes they showed): wrong {len(bad)}")
+    for b in bad:
+        print("   ", b)
+    return not bad
+
+
 def main():
     rows = ask.build_index()
     ok = [round_trip(rows), spelling_checks(rows), edge_checks(rows), refusal_checks(rows), control_checks(rows),
-          daily_and_relative(rows), shell_checks(rows)]
+          daily_and_relative(rows), shell_checks(rows),
+          owner_checks(rows)]
     print("ALL PASS" if all(ok) else "FAIL")
     return all(ok)
