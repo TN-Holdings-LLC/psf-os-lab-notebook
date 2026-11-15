@@ -8,6 +8,9 @@
 3. edges: rows near the line (MSE / mean square 0.45-0.55 or r 0.27-0.32) print their stored verdict, and the stored
    verdict agrees with MSE <= mean square / 2; two runs on the same day are both listed and can be told apart;
    missing values (NaN, None) print as such; the answers do not depend on the order of the index;
+6. the daily record and relative dates: every line of results/daily/RECORD.md (days not run and refused problems
+   included) answers with its own line; "最新" / "前回" / "昨日" give the same answer as the date they stand for,
+   computed here independently, for every family and device;
 5. controls: every row's question with "対照" prints its floor, mirror and sentinel or says "記録になし"; every
    qubit of every whole-device floor night answers with the value read again from its file;
 4. refusals: 100 questions that must not be answered (why, the future, approximations, comparisons, words outside
@@ -23,8 +26,14 @@ def spellings(key, val):
     return [ss for k, v, ss in ask.SYNONYMS if k == key and v == val][0]
 
 
-def question(row, i):
+def question(row, i, reverse=False):
     """A question written from the row's fields; spellings and date forms rotate with i."""
+    parts = question_parts(row, i)
+    end = " は読めた？" if i % 2 == 0 else " の結果を教えて"
+    return (end.strip() + " " + " ".join(reversed(parts))) if reverse else " ".join(parts) + end
+
+
+def question_parts(row, i):
     parts = []
     for k in ask.KEYS:
         v = row[k]
@@ -53,11 +62,17 @@ def question(row, i):
             parts.append(f"腕 {v}")
         elif k == "problem":
             parts.append(f"問題 {v}")
-    return " ".join(parts) + (" は読めた？" if i % 2 == 0 else " の結果を教えて")
+    return parts
 
 
 def same(a, b):
     return all(a[k] == b[k] for k in ask.KEYS)
+
+
+def daily_line(row, a):
+    """The daily answer lists the row when one line names its date, device, problem and r."""
+    return any(row["date"] in ln and row["device"] in ln and f"問題 {row['problem']}：" in ln
+               and f"残存率 r {ask.num(row['r'])}" in ln for ln in a.splitlines())
 
 
 def round_trip(rows):
@@ -70,8 +85,8 @@ def round_trip(rows):
             a = ask.answer(q, rows)
             c, unk, conf = ask.parse(q)
             hit = ask.select(rows, c)
-            if (a.startswith("答えない") or ask.describe(row) not in a or unk or conf
-                    or any(not same(h, row) for h in hit)):
+            listed = daily_line(row, a) if row["family"].startswith("daily") else ask.describe(row) in a
+            if a.startswith("答えない") or not listed or unk or conf or any(not same(h, row) for h in hit):
                 bad.append((q, a.splitlines()[0]))
     print(f"1 round trip: {2 * len(rows)} questions from {len(rows)} rows, missed or not unique {len(bad)}; "
           f"rows no question can tell apart {twins}")
@@ -165,14 +180,18 @@ def edge_checks(rows):
             break
     if [ask.answer(q, rows) for q in qs] != ref:
         bad.append(("twice", "answers changed on a second call"))
+    for i, r in enumerate(rows):                                 # phrase order does not change the answer
+        if ask.answer(question(r, i, reverse=True), rows) != ref[i]:
+            bad.append(("word order", question(r, i, reverse=True)))
     print(f"3 edges: {len(near)} rows near the line, same-day runs, 2 rows with missing values, "
-          f"{len(qs)} questions over 10 orders of the index; wrong {len(bad)}")
+          f"{len(qs)} questions over 10 orders of the index, the row questions also in reversed phrase order; wrong {len(bad)}")
     for b in bad[:10]:
         print("   ", b)
     return not bad
 
 
 NEG_STEMS = [
+    "先週のfezは？", "おとといのデイリーは？", "最新の明日の予定は？", "前回より良くなった？",
     "なぜ12ステップで読めなくなった？", "どうして81量子ビットの方が悪いの？", "読めなかった理由は？", "原因は何？",
     "明日のfezは読める？", "来週のmarrakeshは読める？", "次回は読めそう？", "今後どうなる？",
     "だいたい何層までいける？", "およそ何ステップまで読める？", "平均の r は？", "全体として傾向は？",
@@ -186,7 +205,8 @@ NEG_CONTEXT = ["", "fez の XX ", "11月14日の marrakesh で ", "ハバード 
 def refusal_checks(rows):
     qs = [ctx + stem for stem in NEG_STEMS for ctx in NEG_CONTEXT]
     bad = [(q, ask.answer(q, rows).splitlines()[0]) for q in qs if not ask.answer(q, rows).startswith("答えない")]
-    print(f"4 refusals: {len(qs)} questions that must not be answered; answered {len(bad)}")
+    print(f"4 refusals: {len(qs)} questions ({len(NEG_STEMS)} stems x {len(NEG_CONTEXT)} contexts) that must not be "
+          f"answered; answered {len(bad)}")
     for b in bad[:10]:
         print("   ", b)
     return not bad
@@ -199,7 +219,10 @@ def control_checks(rows):
         q = question(row, i).replace(" は読めた？", " の対照").replace(" の結果を教えて", " の対照")
         a = ask.answer(q, rows)
         line = ask.describe(row, ("floor", "mirror", "sentinel"))
-        if line not in a or "［" not in line:
+        if row["family"].startswith("daily"):
+            if not daily_line(row, a) or "センチネル" not in a:
+                bad.append((q, a.splitlines()[0]))
+        elif line not in a or "［" not in line:
             bad.append((q, a.splitlines()[0]))
         for part in ask.control_text(row, ("floor", "mirror", "sentinel")).split("、"):
             if "記録になし" in part:
@@ -226,8 +249,178 @@ def control_checks(rows):
     return not bad
 
 
+def daily_and_relative(rows):
+    import datetime
+    bad = []
+    daily = ask.build_daily()
+    for d in daily:
+        if d["device"] is None:
+            q, want = f"{d['date']} のデイリー", f"・{d['date']}：走らせていない"
+        else:
+            q = f"{d['date']} の {d['device']} のデイリー 問題 {d['problem']}"
+            want = (f"問題 {d['problem']}：送らなかった（REFUSED）" if d["runs"] == "REFUSED"
+                    else f"問題 {d['problem']}：実行 {d['runs']}、{d['reads']}、{d['agrees']}、{d['beats']}")
+        a = ask.answer(q, rows, daily=daily)
+        if want not in a or ("1 行" not in a and d["device"] is not None):
+            bad.append((q, a.splitlines()[0]))
+    n_rel = 0
+    top = max(r["date"] for r in rows if r["date"])
+    yday = (datetime.date.fromisoformat(top) - datetime.timedelta(days=1)).isoformat()
+    for fam in list(ask.FAMILY_JA) + [None]:
+        for dev in ["ibm_fez", "ibm_marrakesh", "ibm_kingston", None]:
+            cond = " ".join(x for x in (spellings("family", fam)[0] if fam else "",
+                                        spellings("device", dev)[0] if dev else "") if x)
+            if not cond:
+                continue
+            if fam == "daily (P4 chain)":
+                pool = [d["date"] for d in daily if d["device"] is not None and (dev is None or d["device"] == dev)]
+                pool += [] if dev else [d["date"] for d in daily if d["device"] is None]
+            else:
+                pool = [r["date"] for r in rows if r["date"] and (fam is None or r["family"] == fam)
+                        and (dev is None or r["device"] == dev)]
+            ds = sorted(set(pool), reverse=True)
+            for word, k in (("最新", 0), ("前回", 1), ("昨日", None)):
+                n_rel += 1
+                a = ask.answer(f"{word}の {cond}", rows, daily=daily)
+                date = yday if k is None else (ds[k] if len(ds) > k else None)
+                if date is None:
+                    if not a.startswith("答えない"):
+                        bad.append((word, cond, "should not resolve", a.splitlines()[0]))
+                    continue
+                ref = ask.answer(f"{date} の {cond}", rows, daily=daily)
+                body = [ln for ln in a.splitlines() if not ln.startswith("（「")]
+                if body != ref.splitlines() or f"{date} と読んだ" not in a:
+                    bad.append((word, cond, a.splitlines()[0], ref.splitlines()[0]))
+    if not ask.answer("最新 11月14日 XX", rows).startswith("答えない：日付"):
+        bad.append(("date and relative date", ask.answer("最新 11月14日 XX", rows)))
+    print(f"6 daily and relative dates: {len(daily)} lines of the daily record, {n_rel} relative-date questions; "
+          f"wrong {len(bad)}")
+    for b in bad[:10]:
+        print("   ", b)
+    return not bad
+
+
+STUB_CARDS = {    # question: (conditions, evidence), as an honest model would give them
+    "フェズでやったXXの81量子ビットのやつ、π/4 はどうなってた？":
+        ({"device": "ibm_fez", "family": "XX chain", "qubits": 81, "angle": "π/4"}, {}),
+    "マラケシュで光円錐をもう一回やったときの 81量子ビット 16ステップ π/4":
+        ({"device": "ibm_marrakesh", "run": "xxcone", "qubits": 81, "steps": 16, "angle": "π/4"},
+         {"run": "光円錐をもう一回やった"}),
+    "kingston で走らせた双対ユニタリの曲線、51量子ビットのほうはどうだった":
+        ({"device": "ibm_kingston", "family": "dual-unitary (curve)", "qubits": 51}, {"family": "双対ユニタリの曲線"}),
+    "11月11日にフェズで回したハバードの120量子ビット、4ステップは":
+        ({"date": "2026-11-11", "device": "ibm_fez", "family": "Hubbard", "qubits": 120, "steps": 4}, {}),
+    "いちばん最近のデイリーの結果を全部": ({"rel": "latest", "family": "daily (P4 chain)"}, {"rel": "いちばん最近"}),
+    "全面フロアの102番の量子ビット、最新の夜の値":
+        ({"kind": "fullfloor", "qubit": 102, "rel": "latest"}, {"qubit": "102番の量子ビット", "rel": "最新の夜"}),
+    "ユーティリティの Z_106 を8ステップまでやったやつ": ({"family": "IBM 2023 utility", "obs": "z106", "steps": 8}, {}),
+    "11/14 の fez の XX、33量子ビットの π/2 で 64層のところ":
+        ({"date": "2026-11-14", "device": "ibm_fez", "family": "XX chain", "qubits": 33, "angle": "π/2", "layers": 64},
+         {}),
+}
+
+
+def liars(cond):
+    """Wrong cards made from a right one: each must be stopped."""
+    out = []
+    other = {"ibm_fez": "ibm_marrakesh", "ibm_marrakesh": "ibm_fez", "ibm_kingston": "ibm_fez"}
+    if "device" in cond:
+        out.append(("device swapped", {**cond, "device": other[cond["device"]]}))
+    for k in ("qubits", "steps", "layers", "qubit"):
+        if k in cond:
+            out.append((f"{k} + 1", {**cond, k: cond[k] + 1}))
+    out.append(("number added", {**cond, "layers": 999}))
+    out.append(("key invented", {**cond, "colour": "blue"}))
+    out.append(("value invented", {**cond, "family": "XXX"}))
+    out.append(("show invented", {**cond, "show": ["everything"]}))
+    out.append(("date invented", {**cond, "date": "2026-11-09"} if "date" not in cond else {**cond, "date": "2026-11-09"}))
+    for k in cond:
+        out.append((f"{k} dropped", {kk: vv for kk, vv in cond.items() if kk != k}))
+    return out
+
+
+def card(cond, ev):
+    return {"intent": "lookup", "conditions": dict(cond), "evidence": dict(ev)}
+
+
+def shell_checks(rows):
+    import shell
+    bad, n_ok, n_dead, n_liars = [], 0, 0, 0
+    for q, (cond, ev) in STUB_CARDS.items():
+        a = shell.answer(q, lambda _q, x=card(cond, ev): x, rows)
+        mq = shell.mirror_question(shell.normal_card(card(cond, ev))[0])
+        if a.startswith("DEAD") or not a.endswith(ask.answer(mq, rows)):
+            bad.append(("honest card stopped or wrong", q, a.splitlines()[0]))
+        else:
+            n_ok += 1
+        anchor = ask.parse(q)[0]
+        wrong = liars(cond) + [("evidence not in the text", {**cond, "obs": "w10"})]
+        for name, cc in wrong:
+            ev2 = {k: v for k, v in ev.items() if k in cc}
+            if name == "evidence not in the text":
+                ev2["obs"] = "重み10"
+            elif name in ("number added", "date invented"):
+                ev2["layers" if name == "number added" else "date"] = q[:4]
+            a = shell.answer(q, lambda _q, x=card(cc, ev2): x, rows)
+            survived = not a.startswith("DEAD")
+            dropped = name.endswith("dropped") and name.split()[0] not in anchor
+            n_liars += 1
+            if survived and not dropped:
+                bad.append((f"liar passed: {name}", q, a.splitlines()[0]))
+            n_dead += not survived
+        for k in [k for k in cond if k not in anchor]:           # an added condition without its evidence
+            if not shell.answer(q, lambda _q, x=card(cond, {kk: v for kk, v in ev.items() if kk != k}): x,
+                                rows).startswith("DEAD"):
+                bad.append(("added condition without evidence passed", q, k))
+        if not shell.answer(q, lambda _q: {"intent": "other", "conditions": {}}, rows).startswith("DEAD"):
+            bad.append(("intent other passed", q))
+        if not shell.answer(q, lambda _q: (_ for _ in ()).throw(RuntimeError("down")), rows).startswith("DEAD"):
+            bad.append(("model failure passed", q))
+    calls = []
+
+    def spy(qq):
+        calls.append(qq)
+        return {"intent": "other", "conditions": {}}
+    for i, r in enumerate(rows):                                 # the core reads these alone: the model is not asked
+        if shell.answer(question(r, i), spy, rows) != ask.answer(question(r, i), rows):
+            bad.append(("core-readable question changed", question(r, i)))
+    negs = [ctx + stem for stem in NEG_STEMS for ctx in NEG_CONTEXT]
+    for q in negs:                                               # an honest model says "other"
+        a = shell.answer(q, spy, rows)
+        if not (a.startswith("答えない") or a.startswith("DEAD")):
+            bad.append(("refusal answered through the shell", q, a.splitlines()[0]))
+    refusal_calls = [c for c in calls if any(w in ask.norm(c) for ws in ask.REFUSE.values() for w in ws)]
+    core_calls = [c for c in calls if not ask.parse(c)[1] and ask.parse(c)[0]]
+    if refusal_calls or core_calls:
+        bad.append(("model asked about a refused or core-readable question", (refusal_calls + core_calls)[:3]))
+
+    def adversary(qq):
+        """A model that wants to answer anything: the core's own reading, plus one condition whose evidence is the
+        longest run of words nobody took."""
+        c, _, _, left, _ = ask.parse(qq, leftover=True)
+        words = left.split()
+        if not words:
+            return {"intent": "lookup", "conditions": c}
+        w = max(words, key=len)
+        extra = ("show", ["floor"]) if "show" not in c else ("variant", "circuit")
+        return {"intent": "lookup", "conditions": {**c, extra[0]: extra[1]}, "evidence": {extra[0]: w}}
+    through = [q for q in negs if not (lambda a: a.startswith("答えない") or a.startswith("DEAD"))(
+        shell.answer(q, adversary, rows))]
+    print(f"7 outer shell (stub models): {len(STUB_CARDS)} paraphrases with honest cards answered {n_ok}; "
+          f"{n_liars} wrong cards, stopped {n_dead} (the rest drop a condition the question does not name); "
+          f"refused and core-readable questions never sent to the model; with an honest model the {len(negs)} "
+          f"refusal questions all stop; a model that wants to answer anything gets {len(through)} of them through "
+          f"(as a lookup of real records, its reading printed); wrong {len(bad)}")
+    for q in through[:8]:
+        print("    through an adversary:", q)
+    for b in bad[:10]:
+        print("   ", b)
+    return not bad
+
+
 def main():
     rows = ask.build_index()
-    ok = [round_trip(rows), spelling_checks(rows), edge_checks(rows), refusal_checks(rows), control_checks(rows)]
+    ok = [round_trip(rows), spelling_checks(rows), edge_checks(rows), refusal_checks(rows), control_checks(rows),
+          daily_and_relative(rows), shell_checks(rows)]
     print("ALL PASS" if all(ok) else "FAIL")
     return all(ok)

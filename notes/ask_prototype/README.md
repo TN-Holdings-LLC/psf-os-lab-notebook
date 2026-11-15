@@ -47,5 +47,25 @@ over the curve and the range of the mirror over depth); the whole-device floor i
 The checks are written by the same hand as the rules: they show the rules do what they say, not that they cover
 every question a person may write. What covers the rest is the closed entrance.
 
+## Added the same day
+
+- Relative dates: "最新" / "前回" are the newest / second newest date among the records that match the other
+  conditions; "昨日" is the day before the newest date of all records. The answer prints how it read them. Other
+  relative words (先週, 一昨日, ...) are refused.
+- The daily record: every line of `results/daily/RECORD.md` (days not run and refused problems included), with r
+  joined from the yardstick table (the 11-06 "user" tag is FX-A run alone, `results/daily/2026-11-06/README.md`).
+- Conditions are printed in one fixed order, so the order of words in a question does not change the answer.
+- `shell.py`: an outer shell for questions the closed entrance cannot read. A local model (Ollama) only proposes a
+  condition card with the words it read each condition from; the core checks it (schema, the core's own reading,
+  numbers both ways, every character accounted for, mirror) and any failure stops the answer ("DEAD"). Refused and
+  core-readable questions never reach the model. What no check can do: tell whether the model's reading of its words
+  is right; that reading is printed with the answer.
+
+Checks 6 and 7: 18 daily lines and 81 relative-date questions against dates computed independently; 8 paraphrases
+with honest stub cards answered, 94 wrong cards all stopped, and a stub model that wants to answer anything gets 0
+of the 116 refusal questions through (these are questions written by the same hand; in principle such a model can
+map an unknown word to a condition, and the printed reading is then the only guard). The live run against a real
+local model is `python notes/ask_prototype/shell.py --live-suite` on a machine with Ollama.
+
 Not yet: records outside the yardstick table (stage tests, flows, the Ohm and Schwinger families); relative dates;
 numbers in kanji.

@@ -10,7 +10,9 @@ does not answer (why, the future, approximations, comparisons) are refused befor
 
 Scope: the 179 results with an exact answer and a declared verdict in notes/paper9_yardstick/line_all.json
 (2026-11-05 to 2026-11-14), each with the controls of its job as recorded (floor, mirror, sentinel), and the
-whole-device floor nights (results/full-floor-*). The verdict printed is the declared one stored in the record, never
+whole-device floor nights (results/full-floor-*), and every line of the daily record (results/daily/RECORD.md),
+days not run and problems refused included. Relative dates ("最新", "前回", "昨日") are resolved from the records'
+own dates and the resolution is printed. The verdict printed is the declared one stored in the record, never
 recomputed from r; control values are printed as recorded, under the record's own definition.
 
 usage: python notes/ask_prototype/ask.py "11月14日の marrakesh で XX 81量子ビット 16ステップ π/4 は読めた？"
@@ -62,6 +64,9 @@ SYNONYMS = [
     ("show", "mirror", ["ミラー", "mirror"]),
     ("show", "sentinel", ["センチネル", "sentinel"]),
     ("show", "controls", ["対照", "コントロール"]),
+    ("rel", "latest", ["最新", "いちばん新しい"]),
+    ("rel", "previous", ["前回", "ひとつ前", "一つ前"]),
+    ("rel", "yesterday", ["昨日", "きのう"]),
 ]
 # Patterns with a number: (condition, regex, converter).
 PATTERNS = [
@@ -89,13 +94,17 @@ REFUSE = {
     "未来や予測を問う質問": ["明日", "明後日", "あさって", "来週", "来月", "今後", "これから", "次回", "将来",
                      "予測", "予想", "見込", "見積", "読めそう", "読めるだろう", "なら読める"],
     "おおよその要約を問う質問": ["だいたい", "大体", "およそ", "くらい", "ぐらい", "程度", "傾向", "平均", "一般",
-                       "普通は", "どこまで", "何層まで", "何ステップまで", "目安", "ざっくり", "全体として"],
-    "比較や評価を問う質問": ["どっち", "どちら", "比べ", "比較", "一番", "最も", "良い", "悪い", "おすすめ", "勝"],
+                       "普通は", "どこまで", "何層まで", "何ステップまで", "目安", "ざっくり", "全体として", "まあまあ",
+                       "要するに"],
+    "比較や評価を問う質問": ["どっち", "どちら", "比べ", "比較", "一番", "最も", "良い", "悪い", "良く", "悪く", "おすすめ",
+                   "勝", "より"],
+    "扱えない相対日付": ["先週", "先月", "去年", "おととい", "一昨日", "さっき", "この前"],
+    "操作を頼む文": ["して", "させて", "走らせて", "回して", "やって", "書いて", "作って", "直して", "消して"],
 }
 LABEL = {"date": "日付", "device": "装置", "family": "種類", "qubits": "量子ビット数", "sites": "サイト数",
          "steps": "ステップ数", "layers": "CZ層数", "angle": "角度", "U": "U", "T": "総時間T", "run": "試験",
          "variant": "照合先", "obs": "観測量", "arm": "腕", "problem": "問題", "kind": "記録の種類",
-         "qubit": "量子ビット番号", "show": "表示"}
+         "qubit": "量子ビット番号", "show": "表示", "rel": "相対日付"}
 KEYS = ["family", "date", "device", "run", "problem", "obs", "arm", "qubits", "sites", "U", "T", "angle", "steps",
         "layers", "variant"]
 
@@ -168,6 +177,25 @@ def build_fullfloor():
     return rows
 
 
+def build_daily():
+    """Every line of the daily record, as written (days not run and refused problems included)."""
+    head, rows = None, []
+    for line in open("results/daily/RECORD.md"):
+        cells = [x.strip() for x in line.strip().strip("|").split("|")]
+        if line.startswith("| date (CET) | device | problem | RUNS"):
+            head = cells
+        elif head and not line.startswith("|"):
+            break                                       # the judged table ends; later tables are reported beside
+        elif head and line.startswith("| 2026-"):
+            d = dict(zip(head, cells))
+            prob = d["problem"].split(" ")[0]
+            rows.append(dict(date=d["date (CET)"], device=d["device"] if d["device"] != "-" else None,
+                             problem=prob if prob != "-" else None, runs=d["RUNS"], reads=d["READS"],
+                             agrees=d["AGREES"], beats=d["BEATS"], diff=d["M - M_exact"],
+                             mse=d["MSE / trivial guess"], floor=d["floor"], sentinel=d["sentinel"], job=d["job"]))
+    return rows
+
+
 # ---------------------------------------------------------------- the index (one row per recorded result)
 def build_index():
     layers = {(u["result"], u["unit"]): u["cz_layers"] for u in json.load(open(RTHREAD))["units"]}
@@ -200,7 +228,8 @@ def build_index():
         elif (g := re.fullmatch(r"q(\d\d)([fl]\d)_t(\d+)", unit)):
             row.update(arm=f"q{g[1]}{g[2]}", steps=int(g[3]))
         elif x["family"].startswith("daily"):
-            row["problem"] = unit
+            # results/daily/2026-11-06/README.md: FX-A run alone is run2d's single-circuit form, tag "user"
+            row["problem"] = "FX-A" if unit == "user" else unit
         if (g := re.match(r"du(\d+)-", base)):
             row["qubits"] = int(g[1])
         row["layers"] = row["layers"] or layers.get((base, unit))
@@ -210,15 +239,19 @@ def build_index():
 
 
 # ---------------------------------------------------------------- reading the question (fixed rules, closed)
-def parse(q):
-    """Return (conditions, unknown words, conflicts). Every character is taken by a rule or reported."""
+def parse(q, leftover=False):
+    """Return (conditions, unknown words, conflicts). Every character is taken by a rule or reported.
+    With leftover=True also the normalised question with every taken character blanked (same length) and the
+    character spans each condition was read from."""
     t = norm(q)
     c, conflicts = {}, []
 
     shows = set()
+    spans = {}
 
     def take(key, val, span):
         nonlocal t
+        spans.setdefault(key, []).append(span)
         if key == "show":
             shows.add(val)
             t = t[:span[0]] + " " * (span[1] - span[0]) + t[span[1]:]
@@ -238,11 +271,11 @@ def parse(q):
         for g in list(re.finditer(rx, t)):
             take(k, v, g.span())
     for w in sorted(FILLER, key=len, reverse=True):
-        t = t.replace(w, " ")
+        t = t.replace(w, " " * len(w))
     unknown = t.split()
     if shows:
         c["show"] = tuple(sorted({"floor", "mirror", "sentinel"} if "controls" in shows else shows))
-    return c, unknown, conflicts
+    return (c, unknown, conflicts, t, spans) if leftover else (c, unknown, conflicts)
 
 
 def select(rows, c):
@@ -256,7 +289,18 @@ def num(v):
 
 def show(k, v):
     return {"family": FAMILY_JA.get(v, v), "obs": OBS_JA.get(v, v), "run": RUN_JA.get(v, v),
-            "variant": {"continuum": "連続極限の答え", "circuit": "回路の答え"}.get(v, v), "T": f"{v:g}" if isinstance(v, float) else v}.get(k, v)
+            "variant": {"continuum": "連続極限の答え", "circuit": "回路の答え"}.get(v, v),
+            "kind": {"fullfloor": "全面フロア"}.get(v, v), "rel": {"latest": "最新", "previous": "前回",
+                                                              "yesterday": "昨日"}.get(v, v), "T": f"{v:g}" if isinstance(v, float) else v}.get(k, v)
+
+
+ORDER = ["kind", "date", "device", "family", "run", "problem", "obs", "arm", "qubits", "sites", "U", "T", "angle",
+         "steps", "layers", "variant", "qubit"]
+
+
+def cond_text(c, skip=("show",)):
+    """The conditions in one fixed order, whatever the order of the words in the question."""
+    return "、".join(f"{LABEL[k]} {show(k, c[k])}" for k in ORDER if k in c and k not in skip)
 
 
 def signed(v):
@@ -324,7 +368,7 @@ def answer_fullfloor(c, ff):
     if extra:
         return f"答えない：全面フロアには使えない条件がある（{'、'.join(LABEL[k] for k in extra)}）。"
     hit = [r for r in ff if all(r[k] == c[k] for k in ("date", "device") if k in c)]
-    shown = "、".join(f"{LABEL[k]} {v}" for k, v in c.items() if k not in ("kind", "show"))
+    shown = cond_text(c, skip=("kind", "show"))
     if not hit:
         return f"全面フロアの記録で条件（{shown or 'なし'}）に合うものはない。記録がある夜：" + \
             " / ".join(f"{r['date']} {r['device']}" for r in ff) + "。"
@@ -340,7 +384,51 @@ def answer_fullfloor(c, ff):
     return "\n".join(out + [FF_NOTE])
 
 
-def answer(q, rows, ff=None):
+def resolve_rel(c, dates_all, dates_hit):
+    """Turn "最新" / "前回" / "昨日" into a date. Returns (date or None, sentence saying how it was read)."""
+    rel = c.pop("rel")
+    if "date" in c:
+        return None, f"答えない：日付 {c['date']} と相対日付が両方ある。"
+    if rel == "yesterday":
+        import datetime
+        top = max(dates_all)
+        d = (datetime.date.fromisoformat(top) - datetime.timedelta(days=1)).isoformat()
+        return d, f"（「昨日」は、記録の最も新しい日 {top} の前日 {d} と読んだ。）"
+    ds = sorted(set(dates_hit), reverse=True)
+    k = 0 if rel == "latest" else 1
+    if len(ds) <= k:
+        return None, f"答えない：条件に合う記録の日付が {len(ds)} 日分しかなく、「{'最新' if k == 0 else '前回'}」が決まらない。"
+    return ds[k], f"（「{'最新' if k == 0 else '前回'}」は、条件に合う記録の日付のうち{'最も新しい' if k == 0 else '2番目に新しい'}日 {ds[k]} と読んだ。）"
+
+
+def answer_daily(c, rows, daily):
+    extra = [k for k in c if k not in ("family", "date", "device", "problem", "show")]
+    if extra:
+        return f"答えない：デイリー記録には使えない条件がある（{'、'.join(LABEL[k] for k in extra)}）。"
+    sel = [d for d in daily if all(d[k] == c[k] for k in ("date", "device", "problem") if k in c)
+           or (d["device"] is None and "date" in c and d["date"] == c["date"] and set(c) <= {"family", "date", "show"})]
+    shown = cond_text(c)
+    if not sel:
+        return f"デイリー記録で条件（{shown}）に合う行はない。"
+    rmap = {(r["date"], r["device"], r["problem"]): r for r in rows if r["family"].startswith("daily")}
+    out = [f"デイリー記録で条件（{shown}）に合う行は {len(sel)} 行。"]
+    for d in sel:
+        if d["device"] is None:
+            out.append(f"・{d['date']}：走らせていない　{d['job']}　根拠 results/daily/RECORD.md")
+            continue
+        if d["runs"] == "REFUSED":
+            out.append(f"・{d['date']}、{d['device']}、デイリー記録、問題 {d['problem']}：送らなかった（REFUSED）　{d['job']}"
+                       f"　根拠 results/daily/RECORD.md")
+            continue
+        r = rmap.get((d["date"], d["device"], d["problem"]))
+        rtxt = f"、残存率 r {num(r['r'])}" if r else ""
+        out.append(f"・{d['date']}、{d['device']}、デイリー記録、問題 {d['problem']}：実行 {d['runs']}、{d['reads']}、"
+                   f"{d['agrees']}、{d['beats']}、M − M_exact {d['diff']}、MSE / 自明な推測 {d['mse']}、"
+                   f"フロア {d['floor']}、センチネル {d['sentinel']}{rtxt}　根拠 results/daily/RECORD.md（ジョブ {d['job']}）")
+    return "\n".join(out + ["（AGREES：|M − M_exact| ≤ 0.05。BEATS：MSE が自明な推測より小さい。記録どおり。）"])
+
+
+def answer(q, rows, ff=None, daily=None):
     t = norm(q)
     for kind, words in REFUSE.items():
         if any(w in t for w in words):
@@ -354,19 +442,38 @@ def answer(q, rows, ff=None):
         return ("答えない：条件が読み取れなかった。日付（11月14日）、装置（fez / marrakesh / kingston）、種類（XX、ハバード、"
                 "ユーティリティ、イジング、デイリー、双対ユニタリ）、大きさ（81量子ビット、L=20）、深さ（16ステップ、64層）、"
                 "角度（π/4）のどれかを入れてほしい。")
+    pre = ""
+    daily = build_daily() if daily is None else daily
+    if "rel" in c:
+        if c.get("kind") == "fullfloor":
+            ff = build_fullfloor() if ff is None else ff
+            pool = [r for r in ff if all(r[k] == c[k] for k in ("device",) if k in c)]
+            dates_all = [r["date"] for r in ff]
+        elif c.get("family") == "daily (P4 chain)":
+            pool = [d for d in daily if all(d[k] == c[k] for k in ("device", "problem") if k in c)]
+            dates_all = [d["date"] for d in daily]
+        else:
+            pool = select(rows, {k: v for k, v in c.items() if k != "rel"})
+            dates_all = [r["date"] for r in rows if r["date"]]
+        d, pre = resolve_rel(c, dates_all, [r["date"] for r in pool if r["date"]])
+        if d is None:
+            return pre
+        c["date"] = d
     if c.get("kind") == "fullfloor":
-        return answer_fullfloor(c, build_fullfloor() if ff is None else ff)
+        return "\n".join(x for x in (answer_fullfloor(c, build_fullfloor() if ff is None else ff), pre) if x)
+    if c.get("family") == "daily (P4 chain)":
+        return "\n".join(x for x in (answer_daily(c, rows, daily), pre) if x)
     if "qubit" in c:
         return "答えない：量子ビット番号（〜番）は全面フロアの照会でだけ使える。"
     want = c.get("show", ())
     if not [k for k in c if k != "show"]:
         return "答えない：表示だけで条件がない。日付・装置・種類などの条件を入れてほしい。"
-    shown = "、".join(f"{LABEL[k]} {show(k, v)}" for k, v in c.items() if k != "show")
+    shown = cond_text(c)
     hit = select(rows, c)
     if not hit:
         lines = [f"条件（{shown}）に合う記録はない。条件ごとの件数："]
-        lines += [f"・{LABEL[k]} {show(k, v)} だけなら {len(select(rows, {k: v}))} 件" for k, v in c.items()]
-        return "\n".join(lines)
+        lines += [f"・{LABEL[k]} {show(k, c[k])} だけなら {len(select(rows, {k: c[k]}))} 件" for k in ORDER if k in c]
+        return "\n".join(lines + ([pre] if pre else []))
     n_ok = sum(r["reads"] is True for r in hit)
     n_no = sum(r["reads"] is False for r in hit)
     head = f"条件（{shown}）に合う記録は {len(hit)} 件。読めた {n_ok}、読めなかった {n_no}。"
@@ -381,9 +488,9 @@ def answer(q, rows, ff=None):
             vals = sorted({r[k] for r in hit if r[k] is not None}, key=lambda v: (str(type(v)), v))
             if 1 < len(vals) <= 12:
                 out.append(f"・{LABEL[k]}で絞れる：{' / '.join(str(show(k, v)) for v in vals)}")
-        return "\n".join(out + ["条件を足せば一件ずつ答える。"] + note)  # controls are shown per line only
+        return "\n".join(out + ["条件を足せば一件ずつ答える。"] + note + ([pre] if pre else []))
     return "\n".join([head] + [describe(r, want) for r in sorted(hit, key=sort_key)] + note +
-                     ([CONTROL_NOTE] if want else []))
+                     ([CONTROL_NOTE] if want else []) + ([pre] if pre else []))
 
 
 if __name__ == "__main__":
