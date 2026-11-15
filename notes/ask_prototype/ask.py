@@ -9,12 +9,15 @@ no rule takes stops the answer ("解釈できない語"), so nothing is silently
 does not answer (why, the future, approximations, comparisons) are refused before any lookup.
 
 Scope: the 179 results with an exact answer and a declared verdict in notes/paper9_yardstick/line_all.json
-(2026-11-05 to 2026-11-14). The verdict printed is the declared one stored in the record, never recomputed from r.
+(2026-11-05 to 2026-11-14), each with the controls of its job as recorded (floor, mirror, sentinel), and the
+whole-device floor nights (results/full-floor-*). The verdict printed is the declared one stored in the record, never
+recomputed from r; control values are printed as recorded, under the record's own definition.
 
 usage: python notes/ask_prototype/ask.py "11月14日の marrakesh で XX 81量子ビット 16ステップ π/4 は読めた？"
        python notes/ask_prototype/ask.py --test        (all checks of notes/ask_prototype/checks.py)"""
 import json
 import math
+import os
 import re
 import sys
 import unicodedata
@@ -54,6 +57,11 @@ SYNONYMS = [
     ("obs", "w10", ["重み10", "weight-10", "w10"]),
     ("obs", "w17b", ["重み17b", "weight-17b", "w17b"]),
     ("obs", "w17", ["重み17", "weight-17", "w17"]),
+    ("kind", "fullfloor", ["全面フロア", "full-floor", "full floor"]),
+    ("show", "floor", ["フロア", "floor"]),
+    ("show", "mirror", ["ミラー", "mirror"]),
+    ("show", "sentinel", ["センチネル", "sentinel"]),
+    ("show", "controls", ["対照", "コントロール"]),
 ]
 # Patterns with a number: (condition, regex, converter).
 PATTERNS = [
@@ -69,6 +77,7 @@ PATTERNS = [
     ("U", r"(?<![a-z])u\s*=\s*(\d+)", lambda g: int(g[1])),
     ("steps", r"(\d+)\s*(?:ステップ|steps?)", lambda g: int(g[1])),
     ("layers", r"(\d+)\s*層", lambda g: int(g[1])),
+    ("qubit", r"(\d+)\s*番", lambda g: int(g[1])),
 ]
 # Words that carry no condition. Removed after every pattern; anything left is an unknown word.
 FILLER = ["読めましたか", "読めなかった", "読めたか", "読めた", "読める", "結果", "判定", "教えて", "ください",
@@ -85,13 +94,78 @@ REFUSE = {
 }
 LABEL = {"date": "日付", "device": "装置", "family": "種類", "qubits": "量子ビット数", "sites": "サイト数",
          "steps": "ステップ数", "layers": "CZ層数", "angle": "角度", "U": "U", "T": "総時間T", "run": "試験",
-         "variant": "照合先", "obs": "観測量", "arm": "腕", "problem": "問題"}
+         "variant": "照合先", "obs": "観測量", "arm": "腕", "problem": "問題", "kind": "記録の種類",
+         "qubit": "量子ビット番号", "show": "表示"}
 KEYS = ["family", "date", "device", "run", "problem", "obs", "arm", "qubits", "sites", "U", "T", "angle", "steps",
         "layers", "variant"]
 
 
 def norm(s):
     return unicodedata.normalize("NFKC", s).lower()
+
+
+# ---------------------------------------------------------------- the controls of each result's job
+def _load(path, cache={}):
+    if path not in cache:
+        try:
+            cache[path] = json.load(open(path))
+        except FileNotFoundError:
+            cache[path] = None
+    return cache[path]
+
+
+def controls(x, row):
+    """Floor, mirror and sentinel of the job of one result, as its record stores them (None where it does not)."""
+    rec, item, fam = x["record"], x["item"], x["family"]
+    base, unit = rec.split("/")[0], row["unit"]
+    out = dict(floor=None, mirror=None, sentinel=None, floor_kind="mean", mirror_range=None)
+    if fam in ("XX chain", "Hubbard") and not base.startswith("twin-"):
+        d = _load(f"results/{base}/{item.split(':')[0]}/scores.json")
+        c = d and d["circuits"].get(unit)
+        if c:
+            out.update(floor=c.get("floor"), mirror=c.get("mirror"), sentinel=c.get("sentinel"))
+    elif base.startswith("twin-"):
+        d = _load(f"results/{base}/ibm_marrakesh_{'xx' if fam == 'XX chain' else 'hub'}/twin_scores.json")
+        p = d and d["pairs"].get(unit)
+        if p:
+            out.update(floor=p.get("floor"), mirror=p.get("mirror"))
+    elif fam.startswith("daily"):
+        d = _load(f"results/{rec}/run/scores.json")
+        p = d and d["problems"].get(unit)
+        if p:
+            out.update(floor=p.get("floor_mean"), mirror=p.get("mirror_mean"), sentinel=d.get("sentinel"))
+    elif fam == "IBM 2023 utility":
+        d = _load(f"{FOLDER[base]}/ibm_fez/scores.json")
+        o = d and d["observables"].get(unit)
+        if o:
+            out.update(floor=o.get("floor"), mirror=o.get("mirror"), sentinel=d.get("sentinel"), floor_kind="parity")
+    elif fam.startswith("Ising"):
+        d = _load(f"{FOLDER[base]}/ibm_fez/scores.json")
+        a = d and d["arms"].get(unit)
+        if a:
+            out.update(floor=a.get("floor_mean"), mirror=a.get("mirror_mean"), sentinel=a.get("sentinel"))
+    elif fam.startswith("dual"):
+        d = _load(f"results/{rec}/run/scores.json")
+        if d:
+            pts = d["points"].values()
+            fl = [p["floor_mean"] for p in pts]
+            mi = [p["mirror_mean"] for p in pts]
+            out.update(floor=sum(fl) / len(fl), floor_kind="mean over the curve", mirror_range=(min(mi), max(mi)),
+                       sentinel="、".join(f"{k} {v}" for k, v in sorted(d["sentinels"].items())))
+    return out
+
+
+def build_fullfloor():
+    """One row per whole-device floor night: medians and the per-qubit values of 1 - z(|0>) and 1 + z(|1>)."""
+    import glob
+    rows = []
+    for f in sorted(glob.glob("results/full-floor-2026-*/*_floor/full_floor.json")):
+        d = json.load(open(f))
+        dev = f.split("/")[2].rsplit("_floor", 1)[0]
+        rows.append(dict(kind="fullfloor", date=re.search(r"2026-\d\d-\d\d", f).group(0), device=dev,
+                         m0=d["floor0_median"], m1=d["floor1_median"], n=d["qubits_measured"],
+                         qubits={int(q): v for q, v in d["qubits"].items()}, folder=os.path.dirname(f)))
+    return rows
 
 
 # ---------------------------------------------------------------- the index (one row per recorded result)
@@ -130,6 +204,7 @@ def build_index():
         if (g := re.match(r"du(\d+)-", base)):
             row["qubits"] = int(g[1])
         row["layers"] = row["layers"] or layers.get((base, unit))
+        row["controls"] = controls(x, row)
         rows.append(row)
     return rows
 
@@ -140,8 +215,14 @@ def parse(q):
     t = norm(q)
     c, conflicts = {}, []
 
+    shows = set()
+
     def take(key, val, span):
         nonlocal t
+        if key == "show":
+            shows.add(val)
+            t = t[:span[0]] + " " * (span[1] - span[0]) + t[span[1]:]
+            return
         if key in c and c[key] != val:
             conflicts.append(f"{LABEL[key]} {c[key]} と {val}")
         c[key] = val
@@ -159,11 +240,13 @@ def parse(q):
     for w in sorted(FILLER, key=len, reverse=True):
         t = t.replace(w, " ")
     unknown = t.split()
+    if shows:
+        c["show"] = tuple(sorted({"floor", "mirror", "sentinel"} if "controls" in shows else shows))
     return c, unknown, conflicts
 
 
 def select(rows, c):
-    return [r for r in rows if all(r.get(k) == v for k, v in c.items())]
+    return [r for r in rows if all(r.get(k) == v for k, v in c.items() if k != "show")]
 
 
 # ---------------------------------------------------------------- writing the answer (fixed templates)
@@ -176,7 +259,26 @@ def show(k, v):
             "variant": {"continuum": "連続極限の答え", "circuit": "回路の答え"}.get(v, v), "T": f"{v:g}" if isinstance(v, float) else v}.get(k, v)
 
 
-def describe(r):
+def signed(v):
+    return "記録になし" if v is None else f"{v:+.3f}"
+
+
+def control_text(r, show):
+    k = r["controls"]
+    out = []
+    if "floor" in show:
+        out.append({"mean": "フロア ", "parity": "フロア（偶奇） ", "mean over the curve": "フロア（曲線の平均） "}
+                   [k["floor_kind"]] + signed(k["floor"]))
+    if "mirror" in show:
+        out.append(f"ミラー {signed(k['mirror_range'][0])}〜{signed(k['mirror_range'][1])}（深さで変わる）"
+                   if k["mirror_range"] else ("ミラー（偶奇） " if k["floor_kind"] == "parity" else "ミラー ")
+                   + signed(k["mirror"]))
+    if "sentinel" in show:
+        out.append(f"センチネル {k['sentinel'] or '記録になし'}")
+    return "、".join(out)
+
+
+def describe(r, show=()):
     p = [r["date"] or "日付なし", r["device"] or "装置不明", FAMILY_JA[r["family"]]]
     if r["run"]:
         p.append(RUN_JA[r["run"]])
@@ -201,7 +303,9 @@ def describe(r):
     if r["variant"]:
         p.append({"continuum": "連続極限の答えと照合", "circuit": "回路の答えと照合"}[r["variant"]])
     verdict = {True: "読めた", False: "読めなかった"}.get(r["reads"], "判定なし")
-    return f"・{'、'.join(p)}：{verdict}（MSE/平均二乗 {num(r['ratio'])}、残存率 r {num(r['r'])}）　根拠 {r['folder']}"
+    ctl = f"［{control_text(r, show)}］" if show else ""
+    return (f"・{'、'.join(p)}：{verdict}（MSE/平均二乗 {num(r['ratio'])}、残存率 r {num(r['r'])}）{ctl}"
+            f"　根拠 {r['folder']}")
 
 
 def sort_key(r):
@@ -209,7 +313,34 @@ def sort_key(r):
                  for k in KEYS) + (r["unit"], r["folder"])
 
 
-def answer(q, rows):
+FF_NOTE = "（全面フロア：何もしない回路で、1 − z(|0⟩) と 1 + z(|1⟩) を量子ビットごとに測った値。理想は 0。）"
+CONTROL_NOTE = ("（フロア：同じ回路から非対角の1量子ビットゲートを外した回路、ミラー：回路のあとに逆回路を続けた回路。"
+                "値は測った量子ビットの ⟨Z⟩ の平均で、ユーティリティでは観測量の量子ビットの偶奇。どちらも理想は +1。"
+                "センチネル：同じジョブの見張り回路の、記録どおりの判定。）")
+
+
+def answer_fullfloor(c, ff):
+    extra = [k for k in c if k not in ("kind", "date", "device", "qubit", "show")]
+    if extra:
+        return f"答えない：全面フロアには使えない条件がある（{'、'.join(LABEL[k] for k in extra)}）。"
+    hit = [r for r in ff if all(r[k] == c[k] for k in ("date", "device") if k in c)]
+    shown = "、".join(f"{LABEL[k]} {v}" for k, v in c.items() if k not in ("kind", "show"))
+    if not hit:
+        return f"全面フロアの記録で条件（{shown or 'なし'}）に合うものはない。記録がある夜：" + \
+            " / ".join(f"{r['date']} {r['device']}" for r in ff) + "。"
+    out = [f"全面フロアの記録で条件（{shown or 'なし'}）に合うものは {len(hit)} 件。"]
+    for r in sorted(hit, key=lambda r: (r["date"], r["device"])):
+        if "qubit" in c:
+            v = r["qubits"].get(c["qubit"])
+            body = ("その量子ビットは測っていない" if v is None else
+                    f"量子ビット {c['qubit']}：1 − z(|0⟩) {v['floor0']:.4f}、1 + z(|1⟩) {v['floor1']:.4f}")
+        else:
+            body = f"{r['n']}量子ビット、1 − z(|0⟩) 中央値 {r['m0']:.4f}、1 + z(|1⟩) 中央値 {r['m1']:.4f}"
+        out.append(f"・{r['date']}、{r['device']}、全面フロア：{body}　根拠 {r['folder']}")
+    return "\n".join(out + [FF_NOTE])
+
+
+def answer(q, rows, ff=None):
     t = norm(q)
     for kind, words in REFUSE.items():
         if any(w in t for w in words):
@@ -223,7 +354,14 @@ def answer(q, rows):
         return ("答えない：条件が読み取れなかった。日付（11月14日）、装置（fez / marrakesh / kingston）、種類（XX、ハバード、"
                 "ユーティリティ、イジング、デイリー、双対ユニタリ）、大きさ（81量子ビット、L=20）、深さ（16ステップ、64層）、"
                 "角度（π/4）のどれかを入れてほしい。")
-    shown = "、".join(f"{LABEL[k]} {show(k, v)}" for k, v in c.items())
+    if c.get("kind") == "fullfloor":
+        return answer_fullfloor(c, build_fullfloor() if ff is None else ff)
+    if "qubit" in c:
+        return "答えない：量子ビット番号（〜番）は全面フロアの照会でだけ使える。"
+    want = c.get("show", ())
+    if not [k for k in c if k != "show"]:
+        return "答えない：表示だけで条件がない。日付・装置・種類などの条件を入れてほしい。"
+    shown = "、".join(f"{LABEL[k]} {show(k, v)}" for k, v in c.items() if k != "show")
     hit = select(rows, c)
     if not hit:
         lines = [f"条件（{shown}）に合う記録はない。条件ごとの件数："]
@@ -243,8 +381,9 @@ def answer(q, rows):
             vals = sorted({r[k] for r in hit if r[k] is not None}, key=lambda v: (str(type(v)), v))
             if 1 < len(vals) <= 12:
                 out.append(f"・{LABEL[k]}で絞れる：{' / '.join(str(show(k, v)) for v in vals)}")
-        return "\n".join(out + ["条件を足せば一件ずつ答える。"] + note)
-    return "\n".join([head] + [describe(r) for r in sorted(hit, key=sort_key)] + note)
+        return "\n".join(out + ["条件を足せば一件ずつ答える。"] + note)  # controls are shown per line only
+    return "\n".join([head] + [describe(r, want) for r in sorted(hit, key=sort_key)] + note +
+                     ([CONTROL_NOTE] if want else []))
 
 
 if __name__ == "__main__":

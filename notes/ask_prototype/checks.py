@@ -8,6 +8,8 @@
 3. edges: rows near the line (MSE / mean square 0.45-0.55 or r 0.27-0.32) print their stored verdict, and the stored
    verdict agrees with MSE <= mean square / 2; two runs on the same day are both listed and can be told apart;
    missing values (NaN, None) print as such; the answers do not depend on the order of the index;
+5. controls: every row's question with "対照" prints its floor, mirror and sentinel or says "記録になし"; every
+   qubit of every whole-device floor night answers with the value read again from its file;
 4. refusals: 100 questions that must not be answered (why, the future, approximations, comparisons, words outside
    the rules) all start with "答えない".
 Written by the same hand as the rules, so 2 and 4 show the rules do what they say, not that they cover every
@@ -78,13 +80,19 @@ def round_trip(rows):
     return not bad and twins == 0
 
 
+def expect(k, v):
+    if k == "show":
+        return {"show": ("floor", "mirror", "sentinel") if v == "controls" else (v,)}
+    return {k: v}
+
+
 def spelling_checks(rows):
     bad = []
     entries = [(k, v, s) for k, v, ss in ask.SYNONYMS for s in ss]
     for k, v, s in entries:
         for q in (s, f"11月14日の{s}の結果は？", f"{s.upper()} は読めた？"):
             c, unk, conf = ask.parse(q)
-            want = {k: v} if q == s or q.startswith(s.upper()) else {k: v, "date": "2026-11-14"}
+            want = dict(expect(k, v)) if q == s or q.startswith(s.upper()) else {**expect(k, v), "date": "2026-11-14"}
             if c != want or unk or conf:
                 bad.append((q, c, unk, conf))
     for k1, v1, s1 in entries:                                   # every pair from different entries
@@ -92,7 +100,7 @@ def spelling_checks(rows):
             if k1 == k2:
                 continue
             c, unk, conf = ask.parse(f"{s1} の {s2}")
-            if c != {k1: v1, k2: v2} or unk or conf:
+            if c != {**expect(k1, v1), **expect(k2, v2)} or unk or conf:
                 bad.append((f"{s1} の {s2}", c, unk, conf))
     refuse_words = [w for ws in ask.REFUSE.values() for w in ws]
     for k, v, sp in entries:                                     # a spelling must never trip a refusal
@@ -184,8 +192,42 @@ def refusal_checks(rows):
     return not bad
 
 
+def control_checks(rows):
+    import json
+    bad, missing = [], {}
+    for i, row in enumerate(rows):
+        q = question(row, i).replace(" は読めた？", " の対照").replace(" の結果を教えて", " の対照")
+        a = ask.answer(q, rows)
+        line = ask.describe(row, ("floor", "mirror", "sentinel"))
+        if line not in a or "［" not in line:
+            bad.append((q, a.splitlines()[0]))
+        for part in ask.control_text(row, ("floor", "mirror", "sentinel")).split("、"):
+            if "記録になし" in part:
+                missing[(row["folder"], part.split(" ")[0])] = missing.get((row["folder"], part.split(" ")[0]), 0) + 1
+    ff = ask.build_fullfloor()
+    nq = 0
+    for night in ff:
+        d = json.load(open(night["folder"] + "/full_floor.json"))
+        for qb, v in d["qubits"].items():
+            nq += 1
+            a = ask.answer(f"{night['date']} の {night['device']} 全面フロア {qb}番", rows, ff)
+            want = f"量子ビット {qb}：1 − z(|0⟩) {v['floor0']:.4f}、1 + z(|1⟩) {v['floor1']:.4f}　根拠 {night['folder']}"
+            if want not in a or "1 件" not in a:
+                bad.append((qb, a.splitlines()[0]))
+    for q, start in [("全面フロア XX", "答えない：全面フロアには使えない条件"), ("XX 27番", "答えない：量子ビット番号"),
+                     ("フロア", "答えない：表示だけ"), ("12月1日の全面フロア", "全面フロアの記録で条件")]:
+        if not ask.answer(q, rows).startswith(start):
+            bad.append((q, ask.answer(q, rows).splitlines()[0]))
+    print(f"5 controls: {len(rows)} rows with their job's controls, {nq} qubits of {len(ff)} whole-device floor "
+          f"nights, 4 edge questions; wrong {len(bad)}; not in the record: " +
+          ("; ".join(f"{k[0]} {k[1]} x{n}" for k, n in sorted(missing.items())) or "none"))
+    for b in bad[:10]:
+        print("   ", b)
+    return not bad
+
+
 def main():
     rows = ask.build_index()
-    ok = [round_trip(rows), spelling_checks(rows), edge_checks(rows), refusal_checks(rows)]
+    ok = [round_trip(rows), spelling_checks(rows), edge_checks(rows), refusal_checks(rows), control_checks(rows)]
     print("ALL PASS" if all(ok) else "FAIL")
     return all(ok)

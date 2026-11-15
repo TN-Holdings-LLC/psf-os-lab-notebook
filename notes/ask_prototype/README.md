@@ -9,14 +9,19 @@ language model and no probability:
    ("解釈できない語"), and two values for one condition stop it ("条件がぶつかっている");
 2. refusals before any lookup: why, the future, approximations, comparisons;
 3. core: the conditions select rows of the records (the 179 results of `notes/paper9_yardstick/line_all.json`,
-   2026-11-05 to 2026-11-14);
+   2026-11-05 to 2026-11-14, each with its job's floor, mirror and sentinel as stored in its score file; and the
+   whole-device floor nights, `results/full-floor-*`, per qubit);
 4. answer card: fixed sentence templates, each line with its stored verdict (never recomputed), MSE / mean square, r
    and record folder.
 
     python notes/ask_prototype/ask.py "11月14日の marrakesh で XX 81量子ビット 16ステップ π/4 は読めた？"
+    python notes/ask_prototype/ask.py "11月14日の fez で XX 81量子ビット π/4 の対照"       # floor, mirror, sentinel
+    python notes/ask_prototype/ask.py "marrakesh 全面フロア 102番"
     python notes/ask_prototype/ask.py --test
 
 ## Checks (`checks.py`, 2026-11-15: ALL PASS)
+
+2 now covers 78 spellings and 6006 pairs (with the control words).
 
 1. round trip: 358 questions written mechanically from the 179 rows (two spellings each): every one lists its row and
    only rows equal to it; rows no question can tell apart: 0. It found that the Hubbard time-step records (circuit
@@ -29,9 +34,18 @@ language model and no probability:
    and the light-cone repeat (same day, same circuits) are both listed and can be asked one by one; NaN and missing
    values print as "値なし" / "判定なし"; 183 questions give the same answers over 10 fixed orders of the index.
 4. refusals: 100 questions (25 stems x 4 contexts) that must not be answered: answered 0.
+5. controls: all 179 rows asked with "対照" print their job's floor, mirror and sentinel; the only values not in a
+   score file are the sentinels of the twin test (6 rows; the job ran a sentinel, `twin_scores.json` does not store its
+   verdict), printed as "記録になし"; all 302 qubits of the two whole-device floor nights answer with the value read
+   again from `full_floor.json`.
+
+Control values are printed as recorded, under each record's definition: floor and mirror are the mean <Z> of the
+measured qubits (the utility observables: the parity of the observable's qubits; the dual-unitary curves: the mean
+over the curve and the range of the mirror over depth); the whole-device floor is 1 - z(|0>) and 1 + z(|1>) per qubit
+(ideal 0). The prototype does not compute a verdict a record does not store.
 
 The checks are written by the same hand as the rules: they show the rules do what they say, not that they cover
 every question a person may write. What covers the rest is the closed entrance.
 
-Not yet: floors, sentinels, mirrors and the full-floor nights (their counts sit in each run folder in more than one
-format, so they need their own collector and answer template); relative dates; numbers in kanji.
+Not yet: records outside the yardstick table (stage tests, flows, the Ohm and Schwinger families); relative dates;
+numbers in kanji.
