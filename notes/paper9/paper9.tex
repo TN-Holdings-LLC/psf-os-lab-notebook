@@ -32,7 +32,7 @@ $\mathrm{MSE}/\overline{e^2} = (1-r)^2 + \text{rest}$, with $r = \sum ze/\sum e^
 device keeps. Since the rest is never negative, $r < 1 - 1/\sqrt2 \approx 0.293$ means ``does not read'' by
 construction; the measured statement is the converse. Across every result of the series with an exact answer (179),
 including four of IBM's 2023 utility observables run raw (reading to 8 steps for $\langle Z_{106}\rangle$) and the 1D
-Fermi--Hubbard model at $U = 4$ (reading at every size from 40 to 120 qubits at 4 Trotter steps, at none at 6), 160 of
+Fermi--Hubbard model at $U = 4$ (reading at every size from 40 to 120 qubits at 4 Trotter steps, and at neither of the two sizes run at 6), 160 of
 the 166 results with $r \ge 0.293$ read; the six that did not have a wrong shape as large as the shrink, or sit at the
 line. So whether a result reads is mostly whether $r$ stays above 0.293, and the question becomes what sets $r$.
 A declared test on two devices found that it is not the CZ depth alone: at equal depth an 81-qubit XX chain kept less
@@ -88,7 +88,8 @@ published graph. Eagle's graph embeds in Heron r2's in two ways. All $R_{ZZ}$ co
 observable depends only on the gates within $t$ edges of its support; per observable, the first embedding whose light
 cone holds no failed element was used, the gates on failed elements (outside the cone) were left out, and the
 observable's exact value is the published circuit's. Exact values came from a tensor-network contraction of the
-light-cone network, computed twice independently (agreement $2\times10^{-15}$) and checked against the stabilizer
+light-cone network (Tindall et al.\ 2024 simulated the same circuits with tensor networks), computed twice
+independently (agreement $2\times10^{-15}$) and checked against the stabilizer
 method on all 127 qubits at $\theta_h = 0$ and $\pi/2$; they were sealed before the run.
 
 On ibm\_fez (ibm\_marrakesh had no clear cone for any observable), 17 values of $\theta_h$, 4000 shots:
@@ -126,6 +127,10 @@ signal (mean square 0.0038): the verdict is given as declared. Against 11-10 on 
 $Z_{106}$ at 4 steps had MSE 0.0198 (0.0207) and weight-10 at 5 steps 0.0238 (0.0226).
 
 \section{The one-dimensional Fermi--Hubbard model, raw}\label{sec:hubbard}
+The Fermi--Hubbard model has been run on superconducting and trapped-ion devices before (Arute et al.\ 2020; Alam et
+al.\ 2025a, 2025b); the two 2025 runs (on 72 superconducting qubits, and on a trapped-ion device beyond exact classical
+simulation) mitigate errors with a map learned from free-fermion ($U = 0$) circuits. Here the model is run raw in one dimension, where exact answers
+exist, and the $U = 0$ circuit stays beside the verdicts.
 \subsection{Circuit, ruler and classical check}
 $L$ sites on $2L$ qubits in the interleaved Jordan--Wigner order, N\'eel start, $J = 1$, first-order Trotter steps of
 $dt = 0.25$: onsite $R_{ZZ}(U\,dt/2)$ and $R_Z(-U\,dt/2)$, then even and odd bonds by fermionic swaps and $XX+YY$
@@ -163,7 +168,7 @@ read. The predictions that $U = 4$ would read at 6 steps and that the ruler woul
 $r(U4)/r(U0)$ within 0.9--1.1) failed: the ratio held at 2 steps (0.90--0.94) and not at 4 or 6 (1.00--3.40). The
 ruler's exact pattern spreads ballistically while the $U = 4$ N\'eel pattern decays slowly, so the two arms carry
 different signals; the ruler stayed beside the verdicts and corrected nothing. The exactly-zero site charge
-$\langle Z_{i\uparrow}\rangle + \langle Z_{i\downarrow}\rangle$ read 0.05--0.10 on average.
+$\langle Z_{i\uparrow}\rangle + \langle Z_{i\downarrow}\rangle$ read 0.05--0.11 on average.
 
 \subsection{One time, two step sizes}
 \texttt{results/hub-dt-2026-11-12}, ibm\_fez. At $L = 20$, the same time in two step sizes, each arm against its own
@@ -212,10 +217,11 @@ result that read has $r \ge 0.293$; of the 19 that did not, $r$ alone flags 13. 
 \begin{itemize}
 \item Hubbard at 6 steps, three times ($L = 20$ and 30 on 11-11; $L = 20$ on 11-13): $r$ = 0.38--0.51, but the rest is
 0.27--0.32, as large as the shrink. The device keeps much of the pattern and gets its shape wrong.
-\item The XX chain at the line itself, three times (MSE / mean square 0.504--0.518, rest 0.03--0.06).
+\item The XX chain at the line itself, three times (MSE / mean square 0.504--0.518, rest 0.025--0.063).
 \end{itemize}
 Where the error is mostly a shrink (the XX chain, the utility products of weight 10 and 17, the 3D Ising arms), $r$ alone
-tells the verdict. Where half the error is rest at every depth (Hubbard at $U = 4$: rest 0.49--0.52 of the ratio), the
+tells the verdict. Where half the error is rest at every depth (Hubbard at $U = 4$: rest on average 0.49--0.52 of the
+ratio, 0.41--0.65 for single results), the
 line in $r$ sits higher than 0.293 and the boundary comes earlier than $r$ says. Only the 20 cells of
 section~\ref{sec:size} tested the line under a declaration (20 of 20); the rest of the table is an after-the-fact
 collection.
@@ -240,7 +246,7 @@ narrowly (Hubbard at 2 steps). ``$r_{\text{twin}} \ge 0.293$'' matched the user 
 Hubbard at 6 steps, the same shape error as above, which a twin cannot see.
 
 \section{What sets $r$: depth, angle and size}\label{sec:size}
-\texttt{notes/xxsize\_2026-11-14}, prereg/xxsize\_2026-11-14.md, results \texttt{xxsize-2026-11-14-marrakesh} and
+\texttt{notes/xxsize\_2026-11-14}, prereg/xxsize\_2026-11-14.md, \texttt{results/xxsize-2026-11-14-marrakesh} and
 \texttt{-fez}. On 11-12 (ibm\_fez, 91 qubits) $r$ was nearly the same at $\theta = \pi/4$ and $\pi/2$ at every depth,
 which suggested that $r$ depends on the CZ layers a qubit goes through and not on the circuit's size or signal. A
 declared test on ibm\_fez and ibm\_marrakesh: XX+YY brickwork chains of 33 and 81 qubits, N\'eel start, both angles,
@@ -253,7 +259,7 @@ failed;
 sizes; ibm\_fez 64 at 33 qubits and 32 at 81.
 \end{itemize}
 Beside (not judged): fits $r = A\,e^{-L/\lambda}$ over the CZ layers $L$ give $\lambda$ = 78 layers on ibm\_marrakesh
-and 43 on ibm\_fez with both sizes pooled, equal to the 91-qubit values of 11-13 and 11-12, but 88 and 71 (marrakesh)
+and 43 on ibm\_fez with both sizes pooled, close to the 91-qubit values of 11-13 (79) and 11-12 (43), but 88 and 71 (marrakesh)
 and 57 and 35 (fez) per size: the pooled agreement is not by itself evidence that a device's decay length is the same
 from day to day. So $r$ is the share kept by \emph{this} circuit on \emph{these} qubits today, not a property of depth
 alone (figure~\ref{fig:size}).
@@ -297,7 +303,7 @@ run. (1) $\pi/4$, far block, $|g| \le 0.03$ at all five depths: failed by one ce
 \subsection{What it is not: uniform noise}
 A first reading was a light cone: errors spread with the dynamics, so a qubit's shrink would count the errors inside
 its light cone, which the short chain cuts off at its end. A desk check does not support that form. A stabilizer
-simulation (stim) of the recorded $\theta = \pi/2$ circuits of the repeat with one uniform local noise model (CZ
+simulation (stim; Gidney 2021) of the recorded $\theta = \pi/2$ circuits of the repeat with one uniform local noise model (CZ
 depolarising 0.003, single-qubit 0.0003, readout 0.015; nothing taken from the device) gives a gap within $\pm0.004$ in
 every block at every depth, against up to +0.13 on the device. In this circuit a measured $Z$ follows its particle's
 path, and uniform noise puts the same number of errors on a path whether the chain is 33 or 81 long. An illustration,
@@ -305,7 +311,7 @@ not a fit: tripling the CZ error on couplers that touch the extension (positions
 depth and moves inward (far block +0.024 only at 64 layers), as on the device, but in a different order (mid above near
 from 16 layers; on the device near first). The device gap therefore needs elements that differ along the paths the
 dynamics takes; which elements, and how, is not measured here (the calibration is not read). Our own readout record of
-the extension qubits has a heavier tail (mean $1 - z(|0\rangle)$ 0.039 against 0.020), but readout acts at the end of a
+the extension qubits has a heavier tail (mean $1 - z(|0\rangle)$ 0.039 against 0.020 on the floor night of 14 November), but readout acts at the end of a
 path and does not explain the gap alone.
 
 For the yardstick this has a plain consequence: a result's $r$ depends on where its circuit sits and how far its
@@ -331,15 +337,16 @@ $r$ depends on the angle).
 \item \emph{Clifford twin} (section~\ref{sec:twin}, same pulses, same job): no verdict changed in the 6 pairs; XX at
 91 qubits improved (0.282 to 0.095 at 12 steps), Hubbard at 4 and 6 steps got worse (0.184 to 0.238; 0.506 to 0.886).
 \end{itemize}
-So the problem is not dividing but knowing what to divide by: a scale a user can measure is the share of a
+The 2025 Fermi--Hubbard runs (Alam et al.\ 2025a, 2025b) answer this with a richer map, learned from many free-fermion
+circuits; the limits below apply to a single scale. So the problem is not dividing but knowing what to divide by: a scale a user can measure is the share of a
 \emph{different} circuit, and section~\ref{sec:cone} shows that circuits of the same depth on overlapping qubits can
 keep different shares; and no scale removes the rest. We leave it as a question, not a method: what can a user, without
 the exact answer, measure in the same job that tells both the scale and the size of the rest?
 
 \section{Limits}\label{sec:limits}
 \begin{itemize}
-\item Most results are one device and one day (utility and Hubbard: ibm\_fez; twin and the light-cone runs:
-ibm\_marrakesh, both on 14 November).
+\item Most results are one device and one day (utility and Hubbard: ibm\_fez; the twin test: ibm\_marrakesh on 13
+November; the size test and the light-cone repeat: 14 November, the repeat on ibm\_marrakesh only).
 \item The yardstick table was assembled after the results; only the 20 cells of section~\ref{sec:size} tested the line
 under a declaration. Families whose verdicts are on other observables (Ohm's $M$, Schwinger, the 3D light cone) are not
 on it.
@@ -384,9 +391,9 @@ layer: \url{https://github.com/TN-Holdings-LLC/psf-os} (doi:10.5281/zenodo.24211
 Ising experiment. PRX Quantum 5, 010308 (2024); arXiv:2306.14887.
 \item Arute, F.\ et al.\ (Google Quantum AI). Observation of separated dynamics of charge and spin in the Fermi--Hubbard
 model. arXiv:2010.07965 (2020).
-\item Alam, F., Bosse, J.\ L., \v{C}epait\.{e}, I.\ et al.\ (Phasecraft and Google Quantum AI). Programmable digital
+\item Alam, F., Bosse, J.\ L., \v{C}epait\.{e}, I.\ et al.\ (Phasecraft and Google Quantum AI). (2025a) Programmable digital
 quantum simulation of 2D Fermi--Hubbard dynamics using 72 superconducting qubits. arXiv:2510.26845 (2025).
-\item Alam, F., Bosse, J.\ L., \v{C}epait\.{e}, I.\ et al.\ (Phasecraft and Quantinuum). Fermionic dynamics on a
+\item Alam, F., Bosse, J.\ L., \v{C}epait\.{e}, I.\ et al.\ (Phasecraft and Quantinuum). (2025b) Fermionic dynamics on a
 trapped-ion quantum computer beyond exact classical simulation. arXiv:2510.26300 (2025).
 \item Gidney, C. Stim: a fast stabilizer circuit simulator. Quantum 5, 497 (2021).
 \item TN Holdings. Papers 7 and 8 of this series: doi:10.5281/zenodo.24046673, doi:10.5281/zenodo.24136512.
