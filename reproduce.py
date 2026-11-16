@@ -159,6 +159,9 @@ RESULTS = {
     # needs psf-os at the branch feedforward-2026-11-16 (--psf-os PATH to that checkout): psf_os.feedforward
     "feedforward-2026-11-16": ("results/feedforward-2026-11-16", ["job", "runs", "build.json"],
         ["gpu/ff_night.py", "score", "{T}"], "ff_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16 (--psf-os PATH to that checkout): psf_os.feedforward
+    "rus-neuron-2026-11-16": ("results/rus-neuron-2026-11-16", ["job", "runs", "build.json"],
+        ["gpu/rus_night.py", "score", "{T}"], "rus_scores.json"),
 }
 
 
