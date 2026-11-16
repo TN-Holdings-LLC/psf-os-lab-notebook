@@ -1,0 +1,200 @@
+{
+ "L1 one angle": {
+  "circuits": 7,
+  "seconds": 10.8,
+  "items": {
+   "rus_L1_t11": {
+    "chain": [
+     0,
+     1
+    ],
+    "cz": 3,
+    "cz_in_blocks": 2,
+    "off_cz": 1,
+    "depth": 14,
+    "mid": 2,
+    "conditionals": 2
+   }
+  }
+ },
+ "L2 one angle": {
+  "circuits": 7,
+  "seconds": 10.8,
+  "items": {
+   "rus_L2_t11": {
+    "chain": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "cz": 18,
+    "cz_in_blocks": 12,
+    "off_cz": 6,
+    "depth": 41,
+    "mid": 5,
+    "conditionals": 4
+   }
+  }
+ },
+ "L3 one angle": {
+  "circuits": 7,
+  "seconds": 10.8,
+  "items": {
+   "rus_L3_t11": {
+    "chain": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "cz": 33,
+    "cz_in_blocks": 22,
+    "off_cz": 11,
+    "depth": 68,
+    "mid": 8,
+    "conditionals": 6
+   }
+  }
+ },
+ "L1-3 x 0.8, 1.1": {
+  "circuits": 22,
+  "seconds": 27.6,
+  "items": {
+   "rus_L1_t08": {
+    "chain": [
+     0,
+     1
+    ],
+    "cz": 3,
+    "cz_in_blocks": 2,
+    "off_cz": 1,
+    "depth": 14,
+    "mid": 2,
+    "conditionals": 2
+   },
+   "rus_L1_t11": {
+    "chain": [
+     0,
+     1
+    ],
+    "cz": 3,
+    "cz_in_blocks": 2,
+    "off_cz": 1,
+    "depth": 14,
+    "mid": 2,
+    "conditionals": 2
+   },
+   "rus_L2_t08": {
+    "chain": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "cz": 18,
+    "cz_in_blocks": 12,
+    "off_cz": 6,
+    "depth": 41,
+    "mid": 5,
+    "conditionals": 4
+   },
+   "rus_L2_t11": {
+    "chain": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "cz": 18,
+    "cz_in_blocks": 12,
+    "off_cz": 6,
+    "depth": 41,
+    "mid": 5,
+    "conditionals": 4
+   },
+   "rus_L3_t08": {
+    "chain": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "cz": 33,
+    "cz_in_blocks": 22,
+    "off_cz": 11,
+    "depth": 68,
+    "mid": 8,
+    "conditionals": 6
+   },
+   "rus_L3_t11": {
+    "chain": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "cz": 33,
+    "cz_in_blocks": 22,
+    "off_cz": 11,
+    "depth": 68,
+    "mid": 8,
+    "conditionals": 6
+   }
+  }
+ },
+ "L1-3 x 1.1": {
+  "circuits": 13,
+  "seconds": 17.5,
+  "items": {
+   "rus_L1_t11": {
+    "chain": [
+     0,
+     1
+    ],
+    "cz": 3,
+    "cz_in_blocks": 2,
+    "off_cz": 1,
+    "depth": 14,
+    "mid": 2,
+    "conditionals": 2
+   },
+   "rus_L2_t11": {
+    "chain": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "cz": 18,
+    "cz_in_blocks": 12,
+    "off_cz": 6,
+    "depth": 41,
+    "mid": 5,
+    "conditionals": 4
+   },
+   "rus_L3_t11": {
+    "chain": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "cz": 33,
+    "cz_in_blocks": 22,
+    "off_cz": 11,
+    "depth": 68,
+    "mid": 8,
+    "conditionals": 6
+   }
+  }
+ }
+}

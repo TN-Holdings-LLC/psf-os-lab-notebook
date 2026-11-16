@@ -4,6 +4,7 @@ feedforward-2026-11-16, commit 1ab062b or later, importable).
   python gpu/ff_night.py build DEVDIR OUT --k 1 2 4        one job: per k the ff, off and floor arms, one sentinel
   python gpu/ff_night.py check OUT                         noiseless Aer of every arm but the sentinel; PASS / FAIL
   python gpu/ff_night.py score OUT                         answer cards from the job's raw counts and the verdicts
+  dry run of the whole chain: build ... --dry-clifford-sentinel, then psf_os.feedforward.run_local(OUT), then score
 
 The verdict (declared): for k = 1 and 2, ABOVE THE BOUND when the success share of the ff arm, every shot counted, is
 at least the bound plus two standard errors at the bound: 0.75 + 2 sqrt(0.75 x 0.25 / shots) (0.7637 at 4000 shots).
@@ -28,7 +29,8 @@ def build(a):
     from psf_os.device import Device
     dev = Device.load(a.devdir)
     items = [(f"tp{k}", FF.teleport_test(k), dict(success={k: 0}, bound=BOUND)) for k in a.k]
-    rep = FF.build(dev, items, a.out, shots=4000)
+    spec = dict(kind="echo_clifford", D=24) if a.dry_clifford_sentinel else None   # dry runs only, never a device
+    rep = FF.build(dev, items, a.out, shots=4000, sentinel_spec=spec)
     print(json.dumps({k: rep[k] for k in ("device", "circuits", "qpu_seconds_model", "shots") if k in rep}))
 
 
@@ -95,6 +97,9 @@ if __name__ == "__main__":
     b.add_argument("devdir")
     b.add_argument("out")
     b.add_argument("--k", type=int, nargs="+", default=[1, 2, 4])
+    b.add_argument("--dry-clifford-sentinel", action="store_true",
+                   help="dry runs only (2026-11-16, workplace): the ring sentinel at its Clifford point so that "
+                        "psf_os.feedforward.run_local can simulate the whole job; never for the device job")
     c = sub.add_parser("check")
     c.add_argument("out")
     s = sub.add_parser("score")
