@@ -1,0 +1,349 @@
+{
+ "cards": {
+  "rus_L1_t08": {
+   "tag": "rus_L1_t08",
+   "chain": [
+    0,
+    1
+   ],
+   "L": 1,
+   "theta": 0.8,
+   "m": 3,
+   "exact": 0.5291746476436181,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.52975,
+    "two_se": 0.015783375351932805,
+    "still_failed_after_m": 0.12675,
+    "minus_exact": 0.0005753523563819529,
+    "in_se": 0.07290612350690834
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.50825,
+    "two_se": 0.015809235829096862,
+    "minus_exact": -0.02092464764361812,
+    "in_se": -2.6471421983732264
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1967,
+    "discarded": 2033,
+    "kept_share": 0.49175,
+    "p1": 0.5353329944077275,
+    "two_se": 0.022491102212010422,
+    "minus_exact": 0.006158346764109424,
+    "in_se": 0.5476251635920999
+   },
+   "floor": {
+    "all_zero": 1.0,
+    "ones_per_bit": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sentinel": "CLEAN"
+  },
+  "rus_L1_t11": {
+   "tag": "rus_L1_t11",
+   "chain": [
+    0,
+    1
+   ],
+   "L": 1,
+   "theta": 1.1,
+   "m": 3,
+   "exact": 0.937113901450291,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.91775,
+    "two_se": 0.008688206805779893,
+    "still_failed_after_m": 0.034,
+    "minus_exact": -0.0193639014502911,
+    "in_se": -4.457513934269871
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.7915,
+    "two_se": 0.012846312700537847,
+    "minus_exact": -0.14561390145029107,
+    "in_se": -22.67014743369816
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 2672,
+    "discarded": 1328,
+    "kept_share": 0.668,
+    "p1": 0.9330089820359282,
+    "two_se": 0.009673039688777902,
+    "minus_exact": -0.004104919414362862,
+    "in_se": -0.8487341200770944
+   },
+   "floor": {
+    "all_zero": 1.0,
+    "ones_per_bit": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sentinel": "CLEAN"
+  },
+  "rus_L2_t08": {
+   "tag": "rus_L2_t08",
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "L": 2,
+   "theta": 0.8,
+   "m": 3,
+   "exact": 0.2800258077087473,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.2775,
+    "two_se": 0.01415958156161403,
+    "still_failed_after_m": 0.17575,
+    "minus_exact": -0.002525807708747274,
+    "in_se": -0.35676304384511215
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.27225,
+    "two_se": 0.01407586365023475,
+    "minus_exact": -0.0077758077087473065,
+    "in_se": -1.1048427154404306
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1455,
+    "discarded": 2545,
+    "kept_share": 0.36375,
+    "p1": 0.19518900343642612,
+    "two_se": 0.0207813196829113,
+    "minus_exact": -0.08483680427232118,
+    "in_se": -8.16471769519848
+   },
+   "floor": {
+    "all_zero": 1.0,
+    "ones_per_bit": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sentinel": "CLEAN"
+  },
+  "rus_L2_t11": {
+   "tag": "rus_L2_t11",
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "L": 2,
+   "theta": 1.1,
+   "m": 3,
+   "exact": 0.8781824642913858,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.85025,
+    "two_se": 0.011283835230097967,
+    "still_failed_after_m": 0.0645,
+    "minus_exact": -0.02793246429138585,
+    "in_se": -4.950881277826553
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.64275,
+    "two_se": 0.015153297908376249,
+    "minus_exact": -0.23543246429138576,
+    "in_se": -31.073429126110742
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1878,
+    "discarded": 2122,
+    "kept_share": 0.4695,
+    "p1": 0.8722044728434505,
+    "two_se": 0.015408103368173576,
+    "minus_exact": -0.005977991447935316,
+    "in_se": -0.7759542242276541
+   },
+   "floor": {
+    "all_zero": 1.0,
+    "ones_per_bit": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sentinel": "CLEAN"
+  },
+  "rus_L3_t08": {
+   "tag": "rus_L3_t08",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "L": 3,
+   "theta": 0.8,
+   "m": 3,
+   "exact": 0.1481825581253959,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.1525,
+    "two_se": 0.01136854212289333,
+    "still_failed_after_m": 0.20675,
+    "minus_exact": 0.004317441874604089,
+    "in_se": 0.7595418705288284
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.1395,
+    "two_se": 0.010956265330850656,
+    "minus_exact": -0.008682558125395895,
+    "in_se": -1.5849484953504265
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1340,
+    "discarded": 2660,
+    "kept_share": 0.335,
+    "p1": 0.05522388059701493,
+    "two_se": 0.01247973923484047,
+    "minus_exact": -0.09295867752838098,
+    "in_se": -14.897535241579794
+   },
+   "floor": {
+    "all_zero": 1.0,
+    "ones_per_bit": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sentinel": "CLEAN"
+  },
+  "rus_L3_t11": {
+   "tag": "rus_L3_t11",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "L": 3,
+   "theta": 1.1,
+   "m": 3,
+   "exact": 0.8229569952973316,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.78925,
+    "two_se": 0.01289707088838392,
+    "still_failed_after_m": 0.094,
+    "minus_exact": -0.033706995297331566,
+    "in_se": -5.227077619258593
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.4915,
+    "two_se": 0.015809103390135696,
+    "minus_exact": -0.3314569952973316,
+    "in_se": -41.93242173419508
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1347,
+    "discarded": 2653,
+    "kept_share": 0.33675,
+    "p1": 0.7297698589458055,
+    "two_se": 0.024199481052435818,
+    "minus_exact": -0.09318713635152609,
+    "in_se": -7.701581380989677
+   },
+   "floor": {
+    "all_zero": 1.0,
+    "ones_per_bit": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sentinel": "CLEAN"
+  }
+ },
+ "circuits": 22,
+ "seconds": 27.6,
+ "note": "noiseless Aer, 4000 shots, the 11-15 ibm_marrakesh record, sentinel at its Clifford point for the local run"
+}
