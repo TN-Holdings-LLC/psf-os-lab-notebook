@@ -28,3 +28,28 @@ an answer card per shot (success share, 2 SE, the 0.75 bound). Instructions for 
 
 `noise_desk.py` and `NOISE_DESK.md`: the success with feed-forward per k under an illustrative uniform noise model (not
 fitted to any device), and the margin above 0.75 in units of 2 SE of a 4000-shot job.
+
+## Next: a quantum neuron by repeat-until-success (desk, 2026-11-16 afternoon)
+
+`rus_neuron_desk.py` (output `rus_neuron_desk.txt`): the repeat-until-success circuit of Cao, Guerreschi and
+Aspuru-Guzik (arXiv:1711.11240) turns an output qubit by RY(2 q(theta)), tan q = tan^2 theta, when its ancilla reads 0;
+when it reads 1 the output was turned by a known RY(-pi/2) (checked numerically), which is undone before a retry. L
+neurons in a row, neuron j+1's angle switched on by neuron j's output (the state is carried forward). Noiseless Aer,
+P(final output 1) against the exact value:
+
+| L | theta | exact | real time, 3 tries (still failed) | one try, keep only all-success shots (kept) | no control, nothing discarded |
+|---|---|---|---|---|---|
+| 1 | 1.1 | 0.937 | 0.919 (0.034) | 0.935 (0.673) | 0.793 |
+| 2 | 0.8 | 0.280 | 0.271 (0.181) | 0.188 (0.372) | 0.263 |
+| 2 | 1.1 | 0.878 | 0.849 (0.064) | 0.851 (0.473) | 0.634 |
+| 3 | 0.8 | 0.148 | 0.144 (0.206) | 0.052 (0.336) | 0.136 |
+| 3 | 1.1 | 0.823 | 0.781 (0.091) | 0.741 (0.343) | 0.502 |
+
+Two things the chain shows that a single step does not:
+- discarding shots is not only costly (kept 0.34 at L = 3) but biased: whether a neuron's attempt succeeds depends on
+  the state the previous neuron left, so keeping only the all-success shots over-weights some branches (L = 3,
+  theta 0.8: 0.052 against 0.148). Real-time retries keep every branch and land within the share still failing after
+  three tries;
+- without control the error grows with the chain (L = 3, theta 1.1: 0.502 against 0.823).
+What psf-os needs for it (instructions to the workplace): conditional blocks holding a fixed sub-circuit (RY, the
+controlled-Y written with CZ, a reset by conditional X, a measurement), nested to a fixed number of tries.
