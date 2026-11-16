@@ -30,3 +30,9 @@ with P_exact 0.002-0.003): MODE asks for the whole 81-bit answer in one shot, r 
 - Beside: P_exact with its binomial 2 SE, pass1, pass2; the floor's P_exact as the readout reference.
 - Predictions to choose from these records (the owner's call): e.g. MODE holds at 33 qubits to 48 layers on fez and 64
   on marrakesh, and at 81 qubits only at 8 layers.
+
+## Declaration draft (workplace VS Claude, 2026-11-16; not declared)
+
+`DRAFT_paper10_mode.md`: MODE on paper 10's pi/2 arms (strict tie rule, whole string and first 33 sites), with
+candidate predictions from the 11-14 records; `mode_margin.py` / `mode_margin.txt`: ideal count against the largest
+other count per circuit.

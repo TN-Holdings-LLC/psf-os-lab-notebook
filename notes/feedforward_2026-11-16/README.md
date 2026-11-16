@@ -23,3 +23,8 @@ mid-circuit measurements and if_test blocks, places the line by the chain rule, 
 circuit with the conditionals removed: the 0.75 arm; the floor without the non-diagonal gates, ideal all zeros), and
 an answer card per shot (success share, 2 SE, the 0.75 bound). Instructions for the workplace:
 `職場への指示書_2026-11-16.md` in the handover package.
+
+## Noise desk (workplace VS Claude, 2026-11-16)
+
+`noise_desk.py` and `NOISE_DESK.md`: the success with feed-forward per k under an illustrative uniform noise model (not
+fitted to any device), and the margin above 0.75 in units of 2 SE of a 4000-shot job.
