@@ -25,6 +25,10 @@ device is a line, failures included.
 | 2026-11-14 | ibm_fez | D05 | yes (copy drow 4) | READS | AGREES | BEATS | -0.020 | 0.0017 / 0.0052 | 0.965 | DEAD | dbs3c9ejjaos73ajnvu0 |
 | 2026-11-15 | ibm_marrakesh | FX-A (fixed) | yes | READS | AGREES | BEATS | -0.004 | 0.0073 / 0.0264 | 0.975 | DEAD | dbsqfm8k09pc73b0glq0 |
 | 2026-11-15 | ibm_marrakesh | D06 | yes | READS | AGREES | BEATS | -0.050 | 0.0170 / 0.2229 | 0.974 | DEAD | dbsqfm8k09pc73b0glq0 |
+| 2026-11-16 | ibm_marrakesh | FX-A (fixed) | yes | READS | AGREES | BEATS | -0.014 | 0.0044 / 0.0264 | 0.982 | DEAD | dbtddunq0h0s73bkkok0 |
+| 2026-11-16 | ibm_marrakesh | D07 | yes | READS | DIFFERS | BEATS | -0.056 | 0.0140 / 0.1582 | 0.936 | DEAD | dbtddunq0h0s73bkkok0 |
+| 2026-11-16 | ibm_kingston | FX-A (fixed) | yes | READS | AGREES | BEATS | -0.007 | 0.0012 / 0.0264 | 0.978 | CLEAN | dbtde0nq0h0s73bkkomg |
+| 2026-11-16 | ibm_kingston | D07 | yes | READS | AGREES | BEATS | -0.014 | 0.0008 / 0.1582 | 0.986 | CLEAN | dbtde0nq0h0s73bkkomg |
 
 FX-A before the record (the same circuit as the practice test's p4_b0.485_t12, 2026-11-04 13:32 / 13:57 CET):
 marrakesh -0.022, fez -0.041.
@@ -49,3 +53,7 @@ decay per CZ layer = -ln(slope) / (CZ layers of the compiled circuit).
 | 2026-11-14 | ibm_fez | D05 | None (exact below 0.1) | 0.610 | 0.0017 -> 0.0009 | 21 | 0.0235 |
 | 2026-11-15 | ibm_marrakesh | FX-A | 0.973 | 0.958 | 0.0073 -> 0.0072 | 25 | 0.0017 |
 | 2026-11-15 | ibm_marrakesh | D06 | 0.891 | 0.882 | 0.0170 -> 0.0139 | 46 | 0.0027 |
+| 2026-11-16 | ibm_marrakesh | FX-A | 0.915 | 0.917 | 0.0044 -> 0.0042 | 25 | 0.0035 |
+| 2026-11-16 | ibm_marrakesh | D07 | 0.907 | 0.912 | 0.0140 -> 0.0111 | 31 | 0.0030 |
+| 2026-11-16 | ibm_kingston | FX-A | 0.956 | 0.939 | 0.0012 -> 0.0011 | 25 | 0.0025 |
+| 2026-11-16 | ibm_kingston | D07 | 0.977 | 0.979 | 0.0008 -> 0.0006 | 31 | 0.0007 |

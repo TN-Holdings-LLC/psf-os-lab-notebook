@@ -1,0 +1,65 @@
+{
+ "kind": "psfos",
+ "psfos_role": "floor",
+ "psfos_job": {
+  "kind": "feedforward_floor"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1,
+  "2": 2
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_tp2_floor.qpy",
+  "circuits": 1,
+  "sha256": "326d9f19acc485f4607682c050f322d1d9f215d2ebf169ccc46c7df1fa0f7803"
+ },
+ "tag": "tp2",
+ "chain": [
+  0,
+  1,
+  2
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ]
+ },
+ "success": {
+  "2": 0
+ },
+ "bound": 0.75,
+ "clbits": 3,
+ "mid": 2,
+ "conditionals": 2,
+ "logical_cz": 2,
+ "ff_arm": "floor",
+ "cz": 2,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "tp1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 1,
+   "off_cz": 1,
+   "floor_cz": 1,
+   "depth": 15,
+   "mid": 1,
+   "conditionals": 1,
+   "success": {
+    "1": 0
+   },
+   "bound": 0.75
+  },
+  "tp2": {
+   "n": 3,
+   "chain": [
+    0,
+    1,
+    2
+   ],
+   "cz": 2,
+   "off_cz": 2,
+   "floor_cz": 2,
+   "depth": 19,
+   "mid": 2,
+   "conditionals": 2,
+   "success": {
+    "2": 0
+   },
+   "bound": 0.75
+  },
+  "tp4": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 4,
+   "off_cz": 4,
+   "floor_cz": 4,
+   "depth": 31,
+   "mid": 4,
+   "conditionals": 4,
+   "success": {
+    "4": 0
+   },
+   "bound": 0.75
+  }
+ },
+ "circuits": 13,
+ "qpu_seconds_model": 17.5,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

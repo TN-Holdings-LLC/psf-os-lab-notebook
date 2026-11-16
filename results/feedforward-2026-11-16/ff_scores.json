@@ -1,0 +1,118 @@
+{
+ "tp1": {
+  "tag": "tp1",
+  "chain": [
+   0,
+   1
+  ],
+  "ff": {
+   "shots": 4000,
+   "counted": 4000,
+   "discarded": 0,
+   "success": 3807,
+   "share": 0.95175,
+   "two_se": 0.0067765726956921235
+  },
+  "off": {
+   "shots": 4000,
+   "counted": 4000,
+   "discarded": 0,
+   "success": 3174,
+   "share": 0.7935,
+   "two_se": 0.012800693340596829
+  },
+  "floor": {
+   "all_zero": 0.999,
+   "ones_per_bit": [
+    0.0005,
+    0.0005
+   ]
+  },
+  "bound": 0.75,
+  "sentinel": "DEAD",
+  "above_bound_in_se": 59.543373637311596,
+  "off_best_fixed_rule_after_the_fact": 0.7935,
+  "threshold": 0.7636930639376291,
+  "verdict": "ABOVE THE BOUND"
+ },
+ "tp2": {
+  "tag": "tp2",
+  "chain": [
+   0,
+   1,
+   2
+  ],
+  "ff": {
+   "shots": 4000,
+   "counted": 4000,
+   "discarded": 0,
+   "success": 3559,
+   "share": 0.88975,
+   "two_se": 0.009904288843728255
+  },
+  "off": {
+   "shots": 4000,
+   "counted": 4000,
+   "discarded": 0,
+   "success": 2070,
+   "share": 0.5175,
+   "two_se": 0.01580170085781907
+  },
+  "floor": {
+   "all_zero": 0.9915,
+   "ones_per_bit": [
+    0.00075,
+    0.001,
+    0.00675
+   ]
+  },
+  "bound": 0.75,
+  "sentinel": "DEAD",
+  "above_bound_in_se": 28.220097819238113,
+  "off_best_fixed_rule_after_the_fact": 0.7455,
+  "threshold": 0.7636930639376291,
+  "verdict": "ABOVE THE BOUND"
+ },
+ "tp4": {
+  "tag": "tp4",
+  "chain": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "ff": {
+   "shots": 4000,
+   "counted": 4000,
+   "discarded": 0,
+   "success": 3266,
+   "share": 0.8165,
+   "two_se": 0.012240414617160647
+  },
+  "off": {
+   "shots": 4000,
+   "counted": 4000,
+   "discarded": 0,
+   "success": 2038,
+   "share": 0.5095,
+   "two_se": 0.0158085340876376
+  },
+  "floor": {
+   "all_zero": 0.96275,
+   "ones_per_bit": [
+    0.0015,
+    0.00025,
+    0.008,
+    0.0055,
+    0.02275
+   ]
+  },
+  "bound": 0.75,
+  "sentinel": "DEAD",
+  "above_bound_in_se": 10.865645009568427,
+  "off_best_fixed_rule_after_the_fact": 0.73,
+  "threshold": 0.7636930639376291,
+  "verdict": null
+ }
+}

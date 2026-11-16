@@ -55,6 +55,10 @@ RESULTS = {
                              ["gpu/daily_score.py", "{T}/ibm_fez/run", "{T}/answers.json"], "ibm_fez/run/scores.json"),
     "daily-2026-11-15-marrakesh": ("results/daily/2026-11-15", ["ibm_marrakesh", "answers.json"],
                              ["gpu/daily_score.py", "{T}/ibm_marrakesh/run", "{T}/answers.json"], "ibm_marrakesh/run/scores.json"),
+    "daily-2026-11-16-marrakesh": ("results/daily/2026-11-16", ["ibm_marrakesh", "answers.json"],
+                             ["gpu/daily_score.py", "{T}/ibm_marrakesh/run", "{T}/answers.json"], "ibm_marrakesh/run/scores.json"),
+    "daily-2026-11-16-kingston": ("results/daily/2026-11-16", ["ibm_kingston", "answers.json"],
+                             ["gpu/daily_score.py", "{T}/ibm_kingston/run", "{T}/answers.json"], "ibm_kingston/run/scores.json"),
     "du51-kingston-2026-11-07": ("results/du51-2026-11-07", ["ibm_kingston", "answers"],
                                  ["gpu/du51_score.py", "{T}/ibm_kingston/run", "{T}/answers/answers.json"],
                                  "ibm_kingston/run/scores.json"),
@@ -149,6 +153,12 @@ RESULTS = {
     "full-floor-2026-11-15-floor": ("results/full-floor-2026-11-15", ["ibm_marrakesh_floor", "answers"],
         ["gpu/full_floor.py", "score", "{T}/ibm_marrakesh_floor", "{T}/answers/floor_floor_ans.json"],
         "ibm_marrakesh_floor/full_floor.json"),
+    "full-floor-2026-11-16-floor": ("results/full-floor-2026-11-16", ["ibm_marrakesh_floor", "answers"],
+        ["gpu/full_floor.py", "score", "{T}/ibm_marrakesh_floor", "{T}/answers/floor_floor_ans.json"],
+        "ibm_marrakesh_floor/full_floor.json"),
+    # needs psf-os at the branch feedforward-2026-11-16 (--psf-os PATH to that checkout): psf_os.feedforward
+    "feedforward-2026-11-16": ("results/feedforward-2026-11-16", ["job", "runs", "build.json"],
+        ["gpu/ff_night.py", "score", "{T}"], "ff_scores.json"),
 }
 
 
