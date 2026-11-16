@@ -16,7 +16,8 @@ above is to discard shots. Does the device, with real-time control, get above 3/
 ## Circuits and job
 
 psf-os branch `feedforward-2026-11-16` (commit 1ab062b; `psf_os/feedforward.py`): `teleport_test(k)` for k = 1, 2, 4,
-built by `python gpu/ff_night.py build DEVDIR OUT --k 1 2 4`. One job: per k the arms ff (the circuit), off (the same
+built by `python gpu/ff_night.py build DEVDIR OUT --k 1 2 4` (without the flag `--dry-clifford-sentinel`, which is
+for dry runs only). One job: per k the arms ff (the circuit), off (the same
 circuit without the conditional blocks) and floor (the compiled circuit without sx and x, ideal every bit 0); one ring
 sentinel. Placement by rule C (coupling graph and failed marks only). 4000 shots, no mitigation, dynamical decoupling
 and twirling off. 13 circuits, 17.5 s by the model (which leaves out the mid-circuit latency, microseconds per shot).
@@ -30,14 +31,15 @@ with at most 10 pending jobs, else the fewest); when several qualify, the first 
 
 `python gpu/ff_night.py check OUT`: noiseless Aer of every arm but the sentinel: ff last bit 0 in every shot, off within
 0.03 of 0.75 (k = 1) or 0.50 (k >= 2), floor all zeros in every shot. FAIL: the job is not run. On the 2026-11-15
-marrakesh record (try-build): PASS (ff 1.000; off 0.741, 0.488, 0.488; floor 1.000).
+marrakesh record (try-build): PASS (ff 1.000; off 0.741, 0.488, 0.488; floor 1.000). The whole chain build, check, noiseless run, score was run end
+to end at the workplace on the same record (with the dry-run sentinel): tp1 and tp2 ABOVE THE BOUND, off 0.755 / 0.504.
 
 ## Answers
 
 The ideal outcome is public (last bit 0 in every shot); the test does not rest on a sealed answer but on the bound,
 which comes from the circuit, not from data.
 
-## Verdict (`python gpu/ff_night.py score OUT`, unchanged after this commit)
+## Verdict (`python gpu/ff_night.py score OUT` as of the commit that carries this sentence; unchanged after it)
 
 Per k in {1, 2}: from the job's raw counts, every shot counted, none discarded, no corrected value used:
 **ABOVE THE BOUND** when the ff arm's share of shots with the last bit 0 is at least
