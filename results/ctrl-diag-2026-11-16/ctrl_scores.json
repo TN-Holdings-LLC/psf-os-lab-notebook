@@ -1,0 +1,204 @@
+{
+ "positions": {
+  "A": {
+   "shares": {
+    "now": {
+     "target": {
+      "share": 0.984,
+      "counted": 4000,
+      "two_se": 0.00396787096564392
+     },
+     "control": {
+      "share": 0.783,
+      "counted": 4000,
+      "two_se": 0.013034991369387246
+     }
+    },
+    "now_repeat": {
+     "target": {
+      "share": 0.98725,
+      "counted": 4000,
+      "two_se": 0.003547877886850115
+     },
+     "control": {
+      "share": 0.761,
+      "counted": 4000,
+      "two_se": 0.01348625225924534
+     }
+    },
+    "far": {
+     "target": {
+      "share": 0.4595,
+      "counted": 4000,
+      "two_se": 0.015759433682718423
+     },
+     "control": {
+      "share": 0.34925,
+      "counted": 4000,
+      "two_se": 0.015075623950603172
+     }
+    },
+    "far_repeat": {
+     "target": {
+      "share": 0.45,
+      "counted": 4000,
+      "two_se": 0.015732132722552274
+     },
+     "control": {
+      "share": 0.35125,
+      "counted": 4000,
+      "two_se": 0.015095477385627788
+     }
+    },
+    "nb": {
+     "target": {
+      "share": 0.449,
+      "counted": 4000,
+      "two_se": 0.015728922404284407
+     },
+     "control": {
+      "share": 0.342,
+      "counted": 4000,
+      "two_se": 0.01500119995200384
+     }
+    },
+    "nb_repeat": {
+     "target": {
+      "share": 0.44625,
+      "counted": 4000,
+      "two_se": 0.015719762641337814
+     },
+     "control": {
+      "share": 0.35325,
+      "counted": 4000,
+      "two_se": 0.015115040109109867
+     }
+    }
+   },
+   "differences": {
+    "late_far": {
+     "d": 0.5245,
+     "two_se": 0.01625126918120551,
+     "beyond_2se": true
+    },
+    "late_nb": {
+     "d": 0.5349999999999999,
+     "two_se": 0.016221683019958192,
+     "beyond_2se": true
+    },
+    "nb_beyond_time": {
+     "d": 0.01050000000000001,
+     "two_se": 0.022265640570169994,
+     "beyond_2se": false
+    }
+   },
+   "reading": "time"
+  },
+  "B": {
+   "shares": {
+    "now": {
+     "target": {
+      "share": 0.96125,
+      "counted": 4000,
+      "two_se": 0.006103149801536904
+     },
+     "control": {
+      "share": 0.9865,
+      "counted": 4000,
+      "two_se": 0.0036493492570593947
+     }
+    },
+    "now_repeat": {
+     "target": {
+      "share": 0.9615,
+      "counted": 4000,
+      "two_se": 0.006084221396366176
+     },
+     "control": {
+      "share": 0.98875,
+      "counted": 4000,
+      "two_se": 0.003335181779153871
+     }
+    },
+    "far": {
+     "target": {
+      "share": 0.71975,
+      "counted": 4000,
+      "two_se": 0.0142024623745321
+     },
+     "control": {
+      "share": 0.73275,
+      "counted": 4000,
+      "two_se": 0.013993835696477218
+     }
+    },
+    "far_repeat": {
+     "target": {
+      "share": 0.727,
+      "counted": 4000,
+      "two_se": 0.014087973594523805
+     },
+     "control": {
+      "share": 0.735,
+      "counted": 4000,
+      "two_se": 0.013956181426163821
+     }
+    },
+    "nb": {
+     "target": {
+      "share": 0.71825,
+      "counted": 4000,
+      "two_se": 0.014225573362785768
+     },
+     "control": {
+      "share": 0.73025,
+      "counted": 4000,
+      "two_se": 0.014035132258015955
+     }
+    },
+    "nb_repeat": {
+     "target": {
+      "share": 0.71525,
+      "counted": 4000,
+      "two_se": 0.014271210092350262
+     },
+     "control": {
+      "share": 0.7285,
+      "counted": 4000,
+      "two_se": 0.014063703281852899
+     }
+    }
+   },
+   "differences": {
+    "late_far": {
+     "d": 0.24150000000000005,
+     "two_se": 0.015458278526407783,
+     "beyond_2se": true
+    },
+    "late_nb": {
+     "d": 0.243,
+     "two_se": 0.015479514688774967,
+     "beyond_2se": true
+    },
+    "nb_beyond_time": {
+     "d": 0.0014999999999999458,
+     "two_se": 0.020101663488378267,
+     "beyond_2se": false
+    }
+   },
+   "reading": "time"
+  }
+ },
+ "sentinel": "DEAD",
+ "floor": {
+  "Afar": 0.9875,
+  "Anb": 0.984,
+  "Anow": 0.992,
+  "Bfar": 0.9755,
+  "Bnb": 0.93775,
+  "Bnow": 0.9735
+ },
+ "predictions": {
+  "1 position A: D_late_nb >= 2 SE": "held"
+ }
+}

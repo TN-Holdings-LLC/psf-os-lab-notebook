@@ -165,6 +165,9 @@ RESULTS = {
     # needs psf-os at the branch feedforward-2026-11-16 (--psf-os PATH to that checkout): psf_os.feedforward
     "wait-diag-2026-11-16": ("results/wait-diag-2026-11-16", ["job", "runs", "build.json"],
         ["gpu/wait_night.py", "score", "{T}"], "wait_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16 (--psf-os PATH to that checkout): psf_os.feedforward
+    "ctrl-diag-2026-11-16": ("results/ctrl-diag-2026-11-16", ["job", "runs", "build.json"],
+        ["gpu/ctrl_night.py", "score", "{T}"], "ctrl_scores.json"),
 }
 
 
