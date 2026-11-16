@@ -7,6 +7,11 @@ Quantum Benchmark, a compiler benchmark: layers 1-3 and standard runs 1-2, kept 
 URL github.com/TN-Holdings-LLC/TOQB redirects here, and the papers' commit hashes are unchanged.
 The readable-depth metric now lives in [TN-Holdings-LLC/readable-depth](https://github.com/TN-Holdings-LLC/readable-depth).
 
+Papers: 7 [doi:10.5281/zenodo.24046673](https://doi.org/10.5281/zenodo.24046673) (2026-11-08), 8
+[doi:10.5281/zenodo.24136512](https://doi.org/10.5281/zenodo.24136512) (2026-11-11), 9
+[doi:10.5281/zenodo.24278888](https://doi.org/10.5281/zenodo.24278888) (2026-11-16); records in `notes/paper7/`,
+`notes/paper8/`, `notes/paper9/` (`ZENODO.md`).
+
 ## The original TOQB (kept as it was)
 
 TOQB compares quantum compilers on the quality of what they return within a time budget, from the circuit's
