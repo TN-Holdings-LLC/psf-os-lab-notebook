@@ -1,0 +1,46 @@
+{
+ "tp1": {
+  "ff": 1.0,
+  "ff_2se": 3.1622776601683796e-152,
+  "off": 0.755,
+  "off_2se": 0.013600551459407815,
+  "off_best_rule": 0.755,
+  "floor_all_zero": 1.0,
+  "counted": 4000,
+  "discarded": 0,
+  "sentinel": "CLEAN"
+ },
+ "tp2": {
+  "ff": 1.0,
+  "ff_2se": 3.1622776601683796e-152,
+  "off": 0.50375,
+  "off_2se": 0.01581094359929223,
+  "off_best_rule": 0.7575,
+  "floor_all_zero": 1.0,
+  "counted": 4000,
+  "discarded": 0,
+  "sentinel": "CLEAN"
+ },
+ "tp4": {
+  "ff": 1.0,
+  "ff_2se": 3.1622776601683796e-152,
+  "off": 0.5005,
+  "off_2se": 0.01581138039514577,
+  "off_best_rule": 0.76125,
+  "floor_all_zero": 1.0,
+  "counted": 4000,
+  "discarded": 0,
+  "sentinel": "CLEAN"
+ },
+ "tp8": {
+  "ff": 1.0,
+  "ff_2se": 3.1622776601683796e-152,
+  "off": 0.48925,
+  "off_2se": 0.015807733471310807,
+  "off_best_rule": 0.7995,
+  "floor_all_zero": 1.0,
+  "counted": 4000,
+  "discarded": 0,
+  "sentinel": "CLEAN"
+ }
+}
