@@ -53,3 +53,10 @@ Two things the chain shows that a single step does not:
 - without control the error grows with the chain (L = 3, theta 1.1: 0.502 against 0.823).
 What psf-os needs for it (instructions to the workplace): conditional blocks holding a fixed sub-circuit (RY, the
 controlled-Y written with CZ, a reset by conditional X, a measurement), nested to a fixed number of tries.
+
+## Noise desk for the quantum neuron (workplace VS Claude, 2026-11-16)
+
+`rus_noise_desk.py` and `RUS_NOISE_DESK.md`: ff, post and off of `rus_neuron_desk.py` under the same illustrative
+uniform noise model as `NOISE_DESK.md` (not fitted to any device), exact by density matrix for L = 1-4, m = 1-5,
+theta 0.5 / 0.8 / 1.1. Where ff's error is smaller than off's by at least 2 SE (4000 shots per arm), and whether
+post's bias survives noise.
