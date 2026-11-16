@@ -1,0 +1,4 @@
+k = 1: success with feed-forward 1.000; without 0.751; without + the best classical fix from the recorded bits 0.751
+k = 2: success with feed-forward 1.000; without 0.501; without + the best classical fix from the recorded bits 0.752
+k = 3: success with feed-forward 1.000; without 0.501; without + the best classical fix from the recorded bits 0.750
+k = 4: success with feed-forward 1.000; without 0.501; without + the best classical fix from the recorded bits 0.757
