@@ -6,7 +6,7 @@ mirror (circuit then its inverse) and the floor (the circuit without its non-dia
 circuit have the all-zero string as ideal output. Per circuit, from the raw counts of the job (bit k = label k, as
 psf-os reads them):
   P_exact  share of shots equal to the ideal string;
-  MODE     whether the ideal string is the most frequent string of the shots;
+  MODE     whether the ideal string is strictly more frequent than every other string of the shots (a tie is not);
   hamming  mean number of wrong bits per shot (this one is linear in the <Z_k>, so a scale can reach it: beside only);
   pass_k   share of shots with at most k wrong bits (k = 1, 2).
 Records: the XX size test and the light-cone repeat of 2026-11-14 (ibm_fez, ibm_marrakesh; 33 and 81 qubits).
@@ -26,16 +26,18 @@ def per_shot(counts, n, ideal):
     hist = collections.Counter()
     exact = 0
     ham = 0.0
-    top = max(counts.items(), key=lambda kv: kv[1])[0].replace(" ", "")
-    top_bits = "".join(top[-1 - k] for k in range(n))
+    per = collections.Counter()
     for key, c in counts.items():
         b = key.replace(" ", "")
         bits = "".join(b[-1 - k] for k in range(n))
+        per[bits] += c
         h = sum(x != y for x, y in zip(bits, want))
         hist[h] += c
         exact += c * (h == 0)
         ham += c * h
-    return dict(P_exact=exact / tot, MODE=top_bits == want, hamming=ham / tot,
+    other = max((c for s, c in per.items() if s != want), default=0)
+    # strict: the ideal string must be more frequent than every other string (a tie is not MODE; workplace VS 11-16)
+    return dict(P_exact=exact / tot, MODE=per[want] > other, hamming=ham / tot,
                 pass1=(hist[0] + hist[1]) / tot, pass2=(hist[0] + hist[1] + hist[2]) / tot)
 
 
