@@ -1,0 +1,220 @@
+{
+ "device": "ibm_kingston",
+ "kind": "feedforward",
+ "items": {
+  "rd1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 2,
+   "off_cz": 1,
+   "floor_cz": 2,
+   "depth": 15,
+   "mid": 2,
+   "conditionals": 1,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 1,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 2,
+    "tries": [
+     [
+      0,
+      1
+     ]
+    ],
+    "exact": 0.937113901450291
+   },
+   "cz_in_blocks": 1
+  },
+  "rd2": {
+   "n": 4,
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "cz": 12,
+   "off_cz": 6,
+   "floor_cz": 12,
+   "depth": 44,
+   "mid": 4,
+   "conditionals": 2,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "cz_in_blocks": 6
+  },
+  "rd3": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 73,
+   "mid": 6,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11
+  },
+  "flip1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 2,
+   "off_cz": 1,
+   "floor_cz": 2,
+   "depth": 16,
+   "mid": 2,
+   "conditionals": 1,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 1,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 2,
+    "tries": [
+     [
+      0,
+      1
+     ]
+    ],
+    "exact": 0.937113901450291
+   },
+   "cz_in_blocks": 1
+  },
+  "flip2": {
+   "n": 4,
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "cz": 12,
+   "off_cz": 6,
+   "floor_cz": 12,
+   "depth": 45,
+   "mid": 4,
+   "conditionals": 2,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "cz_in_blocks": 6
+  },
+  "flip3": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 74,
+   "mid": 6,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11
+  }
+ },
+ "circuits": 22,
+ "qpu_seconds_model": 27.6,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}
