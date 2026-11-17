@@ -1,0 +1,44 @@
+Tonight's T2 and T3-A under the ILLUSTRATIVE decay model of RUS_DECAY_DESK (not fitted to any device; no calibration or error number read). Exact density matrices; SE for 4000 shots per circuit.
+
+Check 1, noiseless: T2 ff / off against compound ideal.json (L 1-5) largest difference 5.9e-15; T3-A ff, off and the decoder ceiling against apps.ipe_ideal (n 2, 3) largest difference 3.0e-15: PASS
+Check 2, T3-A with decay against a Monte Carlo over Kraus trajectories: PASS (largest 0.8 SE)
+  ipe n 2 j 1 gamma 0.1: exact 0.913, MC 0.912 (-0.5 SE, 20000 shots)
+  ipe n 3 j 5 gamma 0.1: exact 0.782, MC 0.782 (+0.1 SE, 20000 shots)
+  ipe n 3 j 3 gamma 0.05: exact 0.858, MC 0.856 (-0.8 SE, 20000 shots)
+
+T2 (third design, m 2): per L exact, noiseless ff, ceiling c, model ff, loss (ff - noiseless ff), g = c - |ff - exact|, 2 SE, verdict, share of the noiseless margin kept
+ gamma 0.0:
+  L 1: exact 0.937  ff0 0.890  c 0.143  ff 0.867  loss -0.023  g +0.073 (2 SE 0.011)  BEYOND THE CORRECTION CEILING  kept 0.76
+  L 2: exact 0.878  ff0 0.793  c 0.247  ff 0.761  loss -0.032  g +0.130 (2 SE 0.013)  BEYOND THE CORRECTION CEILING  kept 0.80
+  L 3: exact 0.823  ff0 0.706  c 0.322  ff 0.670  loss -0.036  g +0.169 (2 SE 0.015)  BEYOND THE CORRECTION CEILING  kept 0.82
+  L 4: exact 0.771  ff0 0.629  c 0.373  ff 0.592  loss -0.037  g +0.194 (2 SE 0.016)  BEYOND THE CORRECTION CEILING  kept 0.84
+  L 5: exact 0.723  ff0 0.560  c 0.407  ff 0.525  loss -0.035  g +0.209 (2 SE 0.016)  BEYOND THE CORRECTION CEILING  kept 0.86
+  slope of g +0.035 per step (2 SE 0.004) -> COMPOUNDS
+ gamma 0.05:
+  L 1: exact 0.937  ff0 0.890  c 0.143  ff 0.873  loss -0.017  g +0.079 (2 SE 0.011)  BEYOND THE CORRECTION CEILING  kept 0.82
+  L 2: exact 0.878  ff0 0.793  c 0.247  ff 0.782  loss -0.010  g +0.152 (2 SE 0.013)  BEYOND THE CORRECTION CEILING  kept 0.94
+  L 3: exact 0.823  ff0 0.706  c 0.322  ff 0.712  loss +0.007  g +0.211 (2 SE 0.014)  BEYOND THE CORRECTION CEILING  kept 1.03
+  L 4: exact 0.771  ff0 0.629  c 0.373  ff 0.659  loss +0.030  g +0.261 (2 SE 0.015)  OVERSHOOT  kept 1.13
+  L 5: exact 0.723  ff0 0.560  c 0.407  ff 0.617  loss +0.058  g +0.301 (2 SE 0.015)  OVERSHOOT  kept 1.24
+  slope of g +0.057 per step (2 SE 0.004) -> NOT SHOWN (overshoot at L [4, 5])
+ gamma 0.1:
+  L 1: exact 0.937  ff0 0.890  c 0.143  ff 0.879  loss -0.011  g +0.085 (2 SE 0.010)  BEYOND THE CORRECTION CEILING  kept 0.88
+  L 2: exact 0.878  ff0 0.793  c 0.247  ff 0.802  loss +0.009  g +0.171 (2 SE 0.013)  BEYOND THE CORRECTION CEILING  kept 1.06
+  L 3: exact 0.823  ff0 0.706  c 0.322  ff 0.749  loss +0.043  g +0.248 (2 SE 0.014)  OVERSHOOT  kept 1.21
+  L 4: exact 0.771  ff0 0.629  c 0.373  ff 0.713  loss +0.084  g +0.315 (2 SE 0.014)  OVERSHOOT  kept 1.37
+  L 5: exact 0.723  ff0 0.560  c 0.407  ff 0.688  loss +0.128  g +0.372 (2 SE 0.015)  OVERSHOOT  kept 1.53
+  slope of g +0.073 per step (2 SE 0.004) -> NOT SHOWN (overshoot at L [3, 4, 5])
+
+T3-A (iterative phase estimation): per n the ff success pooled over the phases (4000 shots each) against the declared noiseless ceiling; off as read and the best decoder of the modelled off bits beside
+ gamma 0.0:
+  n 2: ff 0.960 (lowest phase 0.959; 2 SE 0.003) ceiling 0.750 margin +0.210 -> BEYOND THE CEILING; off as read 0.725; best decoder of the modelled off bits 0.725
+  n 3: ff 0.939 (lowest phase 0.938; 2 SE 0.003) ceiling 0.588 margin +0.351 -> BEYOND THE CEILING; off as read 0.478; best decoder of the modelled off bits 0.558
+  margin(3) - margin(2) +0.141 (2 SE 0.004) -> GROWS
+ gamma 0.05:
+  n 2: ff 0.937 (lowest phase 0.912; 2 SE 0.004) ceiling 0.750 margin +0.187 -> BEYOND THE CEILING; off as read 0.713; best decoder of the modelled off bits 0.713
+  n 3: ff 0.883 (lowest phase 0.849; 2 SE 0.004) ceiling 0.588 margin +0.295 -> BEYOND THE CEILING; off as read 0.461; best decoder of the modelled off bits 0.533
+  margin(3) - margin(2) +0.108 (2 SE 0.005) -> GROWS
+ gamma 0.1:
+  n 2: ff 0.913 (lowest phase 0.865; 2 SE 0.004) ceiling 0.750 margin +0.163 -> BEYOND THE CEILING; off as read 0.702; best decoder of the modelled off bits 0.702
+  n 3: ff 0.829 (lowest phase 0.764; 2 SE 0.004) ceiling 0.588 margin +0.240 -> BEYOND THE CEILING; off as read 0.444; best decoder of the modelled off bits 0.509
+  margin(3) - margin(2) +0.077 (2 SE 0.006) -> GROWS
