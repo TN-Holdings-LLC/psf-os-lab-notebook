@@ -1,0 +1,99 @@
+{
+ "rows": {
+  "1": {
+   "p_ff": 0.869,
+   "e": 0.06811390145029106,
+   "c": 0.14286334282261803,
+   "g": 0.07474944137232697,
+   "se": 0.005334768036194264,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.79175,
+   "post": 0.9454676778620441,
+   "kept": 0.69225,
+   "sentinel": "DEAD",
+   "floor": 0.97375,
+   "ff_noiseless": 0.8904214154535403,
+   "overshoot": false,
+   "retained_of_noiseless_margin": 0.7772566850233312,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "2": {
+   "p_ff": 0.7382500000000001,
+   "e": 0.13993246429138573,
+   "c": 0.24734851441101446,
+   "g": 0.10741605011962874,
+   "se": 0.006950484470524338,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.63025,
+   "post": 0.8465189873417721,
+   "kept": 0.474,
+   "sentinel": "DEAD",
+   "floor": 0.966,
+   "ff_noiseless": 0.7928502970982866,
+   "overshoot": false,
+   "retained_of_noiseless_margin": 0.6629951357633806,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "3": {
+   "p_ff": 0.6527499999999999,
+   "e": 0.17020699529733163,
+   "c": 0.3219167782035437,
+   "g": 0.15170978290621207,
+   "se": 0.007527739326982571,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.5117499999999999,
+   "post": 0.7289512555391433,
+   "kept": 0.3385,
+   "sentinel": "DEAD",
+   "floor": 0.98375,
+   "ff_noiseless": 0.7059708837850173,
+   "overshoot": false,
+   "retained_of_noiseless_margin": 0.7402980986481362,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "4": {
+   "p_ff": 0.5615,
+   "e": 0.20970444058889115,
+   "c": 0.37325296826721743,
+   "g": 0.16354852767832628,
+   "se": 0.007845663611193128,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.42625,
+   "post": 0.6062075654704171,
+   "kept": 0.25775,
+   "sentinel": "DEAD",
+   "floor": 0.97475,
+   "ff_noiseless": 0.6286115936088438,
+   "overshoot": false,
+   "retained_of_noiseless_margin": 0.7090455288311829,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "5": {
+   "p_ff": 0.47424999999999995,
+   "e": 0.24845640213604514,
+   "c": 0.4066332229378482,
+   "g": 0.15817682080180306,
+   "se": 0.00789520325102527,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.373,
+   "post": 0.48518518518518516,
+   "kept": 0.2025,
+   "sentinel": "DEAD",
+   "floor": 0.9735,
+   "ff_noiseless": 0.5597292249516941,
+   "overshoot": false,
+   "retained_of_noiseless_margin": 0.649180775763832,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  }
+ },
+ "slope": {
+  "slope": 0.02398754400886764,
+  "se": 0.00211065900480376,
+  "verdict": "COMPOUNDS",
+  "overshoot_at": []
+ },
+ "predictions": {
+  "T2-1 BEYOND at every L = 1 .. 5": "held",
+  "T2-2 COMPOUNDS": "held"
+ }
+}

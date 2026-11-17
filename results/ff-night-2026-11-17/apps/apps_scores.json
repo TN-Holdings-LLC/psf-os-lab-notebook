@@ -1,0 +1,62 @@
+{
+ "groups": {
+  "ipe2": {
+   "ff": 0.860875,
+   "se": 0.0027359782799644995,
+   "two_se": 0.005471956559928999,
+   "N": 16000,
+   "off_as_read": 0.68975,
+   "ceiling": 0.7499999999999987,
+   "margin": 0.11087500000000128,
+   "verdict": "BEYOND THE CEILING",
+   "circuits": 4,
+   "sentinel": "DEAD"
+  },
+  "ipe3": {
+   "ff": 0.77221875,
+   "se": 0.0023445212207695355,
+   "two_se": 0.004689042441539071,
+   "N": 32000,
+   "off_as_read": 0.46046875,
+   "ceiling": 0.5883883476483168,
+   "margin": 0.18383040235168313,
+   "verdict": "BEYOND THE CEILING",
+   "circuits": 8,
+   "sentinel": "DEAD"
+  },
+  "lr2": {
+   "ff": 0.84875,
+   "se": 0.005665100120474483,
+   "two_se": 0.011330200240948966,
+   "N": 4000,
+   "off_as_read": 0.498,
+   "ceiling": 0.7499999999999981,
+   "margin": 0.09875000000000189,
+   "verdict": "BEYOND THE CEILING",
+   "circuits": 1,
+   "sentinel": "DEAD"
+  },
+  "lr4": {
+   "ff": 0.7335,
+   "se": 0.006990667886547035,
+   "two_se": 0.01398133577309407,
+   "N": 4000,
+   "off_as_read": 0.5085,
+   "ceiling": 0.7499999999999988,
+   "margin": -0.016499999999998738,
+   "verdict": "NOT BEYOND",
+   "circuits": 1,
+   "sentinel": "DEAD"
+  }
+ },
+ "A_growth": {
+  "d": 0.07295540235168185,
+  "two_se": 0.007206207574883247,
+  "verdict": "GROWS"
+ },
+ "predictions": {
+  "T3-1 A BEYOND at n = 2 and n = 3": "held",
+  "T3-2 A GROWS from n = 2 to n = 3": "held",
+  "T3-3 B BEYOND at k = 2 and k = 4": "failed"
+ }
+}

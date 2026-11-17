@@ -177,6 +177,18 @@ RESULTS = {
     # needs psf-os at the branch feedforward-2026-11-16 (--psf-os PATH to that checkout): psf_os.feedforward
     "rus-neuron3-kingston-2026-11-16": ("results/rus-neuron3-kingston-2026-11-16", ["job", "runs", "build.json"],
         ["gpu/rus3_night.py", "score", "{T}"], "rus3_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
+    "ff-night-2026-11-17-coh": ("results/ff-night-2026-11-17/coh", ["job", "runs", "build.json"],
+        ["gpu/coh_night.py", "score", "{T}"], "coh_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
+    "ff-night-2026-11-17-compound": ("results/ff-night-2026-11-17/compound", ["job", "runs", "build.json"],
+        ["gpu/compound_night.py", "score", "{T}"], "compound_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
+    "ff-night-2026-11-17-apps": ("results/ff-night-2026-11-17/apps", ["job", "runs", "build.json"],
+        ["gpu/apps_night.py", "score", "{T}"], "apps_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
+    "ff-night-2026-11-17-early": ("results/ff-night-2026-11-17/early", ["job", "runs", "build.json"],
+        ["gpu/early_night.py", "score", "{T}", "--rd", "results/ff-night-2026-11-17/compound"], "early_scores.json"),
 }
 
 

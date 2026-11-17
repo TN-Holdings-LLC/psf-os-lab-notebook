@@ -1,0 +1,278 @@
+{
+ "device": "ibm_fez",
+ "kind": "feedforward",
+ "items": {
+  "ipe2_0": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 10,
+   "mid": 1,
+   "conditionals": 2,
+   "success": {
+    "0": 0,
+    "1": 0
+   },
+   "bound": null
+  },
+  "ipe2_1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 4,
+   "off_cz": 4,
+   "floor_cz": 4,
+   "depth": 28,
+   "mid": 1,
+   "conditionals": 2,
+   "success": {
+    "0": 0,
+    "1": 1
+   },
+   "bound": null
+  },
+  "ipe2_2": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 4,
+   "off_cz": 4,
+   "floor_cz": 4,
+   "depth": 24,
+   "mid": 1,
+   "conditionals": 2,
+   "success": {
+    "0": 1,
+    "1": 0
+   },
+   "bound": null
+  },
+  "ipe2_3": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 4,
+   "off_cz": 4,
+   "floor_cz": 4,
+   "depth": 26,
+   "mid": 1,
+   "conditionals": 2,
+   "success": {
+    "0": 1,
+    "1": 1
+   },
+   "bound": null
+  },
+  "ipe3_0": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 20,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "bound": null
+  },
+  "ipe3_1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 45,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 1
+   },
+   "bound": null
+  },
+  "ipe3_2": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 41,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 0
+   },
+   "bound": null
+  },
+  "ipe3_3": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 1
+   },
+   "bound": null
+  },
+  "ipe3_4": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 4,
+   "off_cz": 4,
+   "floor_cz": 4,
+   "depth": 28,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 0
+   },
+   "bound": null
+  },
+  "ipe3_5": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 45,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 1
+   },
+   "bound": null
+  },
+  "ipe3_6": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 38,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 0
+   },
+   "bound": null
+  },
+  "ipe3_7": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 1
+   },
+   "bound": null
+  },
+  "lr2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 4,
+   "off_cz": 4,
+   "floor_cz": 4,
+   "depth": 20,
+   "mid": 4,
+   "conditionals": 4,
+   "success": {
+    "4": 1
+   },
+   "bound": 0.75
+  },
+  "lr4": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 24,
+   "mid": 8,
+   "conditionals": 8,
+   "success": {
+    "8": 1
+   },
+   "bound": 0.75
+  }
+ },
+ "circuits": 46,
+ "qpu_seconds_model": 54.3,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

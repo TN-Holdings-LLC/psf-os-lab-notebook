@@ -1,0 +1,137 @@
+{
+ "rows": {
+  "1": {
+   "p_ff": 0.86675,
+   "e": 0.07036390145029103,
+   "c": 0.14286334282261803,
+   "g": 0.072499441372327,
+   "se": 0.005373416918032696,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.78625,
+   "post": 0.9420237666546634,
+   "kept": 0.69425,
+   "sentinel": "DEAD",
+   "floor": 0.974,
+   "ff_noiseless": 0.8904214154535403,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "2": {
+   "p_ff": 0.74875,
+   "e": 0.12943246429138577,
+   "c": 0.24734851441101446,
+   "g": 0.11791605011962869,
+   "se": 0.0068579048823237555,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.626,
+   "post": 0.8441771459814106,
+   "kept": 0.45725,
+   "sentinel": "DEAD",
+   "floor": 0.95525,
+   "ff_noiseless": 0.7928502970982866,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "3": {
+   "p_ff": 0.6427499999999999,
+   "e": 0.18020699529733164,
+   "c": 0.3219167782035437,
+   "g": 0.14170978290621206,
+   "se": 0.007576648954188125,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.50225,
+   "post": 0.748898678414097,
+   "kept": 0.3405,
+   "sentinel": "DEAD",
+   "floor": 0.94975,
+   "ff_noiseless": 0.7059708837850173,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "4": {
+   "p_ff": 0.55825,
+   "e": 0.21295444058889113,
+   "c": 0.37325296826721743,
+   "g": 0.1602985276783263,
+   "se": 0.007851861841308722,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.41100000000000003,
+   "post": 0.5852390852390852,
+   "kept": 0.2405,
+   "sentinel": "DEAD",
+   "floor": 0.934,
+   "ff_noiseless": 0.6286115936088438,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "5": {
+   "p_ff": 0.479,
+   "e": 0.2437064021360451,
+   "c": 0.4066332229378482,
+   "g": 0.1629268208018031,
+   "se": 0.007898718250450512,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.35975,
+   "post": 0.4660691421254801,
+   "kept": 0.19525,
+   "sentinel": "DEAD",
+   "floor": 0.9325,
+   "ff_noiseless": 0.5597292249516941,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  }
+ },
+ "slope": {
+  "slope": 0.024086144323715458,
+  "se": 0.002116581809686517,
+  "verdict": "COMPOUNDS",
+  "overshoot_at": []
+ },
+ "comparison": {
+  "1": {
+   "rd_ff": 0.869,
+   "early_ff": 0.86675,
+   "d": -0.0022499999999999742,
+   "two_se": 0.015143759028061692,
+   "rd_overshoot": false,
+   "verdict": "NOT SHOWN"
+  },
+  "2": {
+   "rd_ff": 0.7382500000000001,
+   "early_ff": 0.74875,
+   "d": 0.010499999999999954,
+   "two_se": 0.019528450399353248,
+   "rd_overshoot": false,
+   "verdict": "NOT SHOWN"
+  },
+  "3": {
+   "rd_ff": 0.6527499999999999,
+   "early_ff": 0.6427499999999999,
+   "d": -0.010000000000000009,
+   "two_se": 0.02136094274604939,
+   "rd_overshoot": false,
+   "verdict": "NOT SHOWN"
+  },
+  "4": {
+   "rd_ff": 0.5615,
+   "early_ff": 0.55825,
+   "d": -0.003249999999999975,
+   "two_se": 0.022199655121195015,
+   "rd_overshoot": false,
+   "verdict": "NOT SHOWN"
+  },
+  "5": {
+   "rd_ff": 0.47424999999999995,
+   "early_ff": 0.479,
+   "d": 0.004750000000000032,
+   "two_se": 0.022335978543596428,
+   "rd_overshoot": false,
+   "verdict": "NOT SHOWN"
+  }
+ },
+ "predictions": {
+  "T4-1 BEYOND at every L = 1 .. 5": "held",
+  "T4-2 COMPOUNDS": "held",
+  "T4-3 EARLY KEEPS MORE at L = 4 and 5": "failed"
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "device": "ibm_fez",
+ "kind": "feedforward",
+ "items": {
+  "coh1": {
+   "n": 3,
+   "chain": [
+    0,
+    1,
+    2
+   ],
+   "cz": 8,
+   "off_cz": 3,
+   "floor_cz": 8,
+   "depth": 41,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 1,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 2,
+    "tries": [
+     [
+      0,
+      1
+     ]
+    ],
+    "exact": 0.937113901450291
+   },
+   "cz_in_blocks": 5
+  },
+  "rd1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 2,
+   "off_cz": 1,
+   "floor_cz": 2,
+   "depth": 15,
+   "mid": 2,
+   "conditionals": 1,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 1,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 2,
+    "tries": [
+     [
+      0,
+      1
+     ]
+    ],
+    "exact": 0.937113901450291
+   },
+   "cz_in_blocks": 1
+  }
+ },
+ "circuits": 10,
+ "qpu_seconds_model": 14.2,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

@@ -1,0 +1,64 @@
+{
+ "kind": "psfos",
+ "psfos_role": "off",
+ "psfos_job": {
+  "kind": "feedforward_off"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_fez",
+ "masked": [],
+ "labels": [
+  0,
+  1
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_ipe2_1_off.qpy",
+  "circuits": 1,
+  "sha256": "87e453001f8d04f212410752bf0bf598263112bbcd0430620bc2180ea6b94cbe"
+ },
+ "tag": "ipe2_1",
+ "chain": [
+  0,
+  1
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ]
+ },
+ "success": {
+  "0": 0,
+  "1": 1
+ },
+ "bound": null,
+ "clbits": 2,
+ "mid": 1,
+ "conditionals": 2,
+ "logical_cz": 4,
+ "off_explicit": true,
+ "ff_arm": "off",
+ "cz": 4,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}
