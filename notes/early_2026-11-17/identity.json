@@ -1,20 +1,50 @@
 [
  {
   "L": 1,
+  "form": "early",
+  "qubits": 2,
+  "tvd": 0.0,
+  "conditionals": 1,
+  "ok": true
+ },
+ {
+  "L": 1,
+  "form": "reuse",
+  "qubits": 2,
   "tvd": 0.0,
   "conditionals": 1,
   "ok": true
  },
  {
   "L": 2,
+  "form": "early",
+  "qubits": 4,
   "tvd": 1.1081088303888098e-15,
   "conditionals": 3,
   "ok": true
  },
  {
+  "L": 2,
+  "form": "reuse",
+  "qubits": 2,
+  "tvd": 1.1081088303888098e-15,
+  "conditionals": 5,
+  "ok": true
+ },
+ {
   "L": 3,
+  "form": "early",
+  "qubits": 6,
   "tvd": 2.19287682088308e-15,
   "conditionals": 5,
+  "ok": true
+ },
+ {
+  "L": 3,
+  "form": "reuse",
+  "qubits": 2,
+  "tvd": 2.19287682088308e-15,
+  "conditionals": 9,
   "ok": true
  }
 ]

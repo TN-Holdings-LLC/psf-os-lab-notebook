@@ -53,14 +53,36 @@ g = +0.094 / +0.163 / +0.202 / +0.224 / +0.232, every L beyond the ceiling, slop
 - The off arm keeps the controlled rotations (a fair "without control" for the ceiling); the early chain's own reads
   are real-time decisions, so it stays on the real-time side of the ceiling argument.
 - The decision latency is not in our records; the comparison is given at 0 and at a hypothetical 1 us.
-- Next: reuse the two qubits for every neuron (a conditional X resets each read qubit), so the chain needs 2 qubits
-  for any L, as iterative phase estimation does.
+- The two-qubit form (next section) was built the same morning.
+
+## Two qubits for any L (`chain_reuse`, items eb{L}, `build --reuse`)
+
+After neuron j has been read, each read qubit is set back to |0> by an X conditioned on its own bit (the output on
+e_j, the ancilla on its last try's bit; two single-bit conditionals, gates only), and neuron j + 1 runs on the same two
+qubits, as iterative phase estimation does. Identity against the third design: total variation 0, 1.1e-15, 2.2e-15 at
+L = 1, 2, 3; IBM's rules pass.
+
+| L | qubits | CZ | conditionals | wait JIT, latency 0 / 1 us (q.us) | T JIT, latency 0 / 1 us |
+|---|---|---|---|---|---|
+| 1 | 2 | 2 | 1 | 5.2 / 7.2 | 8.2 / 9.2 |
+| 3 | 2 | 6 | 9 | 10.3 / 24.3 | 19.7 / 26.7 |
+| 5 | 2 | 10 | 17 | 15.5 / 41.5 | 31.2 / 44.2 |
+
+(third design at L = 5: 10 qubits, 42 CZ, 5 conditionals, wait 46.5 / 60.5, T 34.7 / 39.7; the early chain: 10
+qubits, 10 CZ, 9 conditionals, wait 15.5 / 33.5.) At latency 0 the two-qubit chain waits as little as the early chain;
+its price is two resets per neuron, which a decision latency makes visible. What it buys: the chain sits on one pair of
+qubits (the best pair by rule C, a floor arm of two qubits), so its length no longer asks for a longer line, and
+several chains can share a device side by side (the workplace VS's packing estimate). The off arm here is the default
+(conditionals removed): it is beside only and reads nothing meaningful (0.21 / 0.79 alternating in the dry run); the
+margin g uses the ceiling c(L), a noiseless number of the third design's off circuit, as before. Dry run: the same g as
+the early chain (+0.094 .. +0.232, slope +0.037, 2 SE 0.004). A possible saving: the output's reset and the next first
+try conditioned on the same bit (one if / else; the exact simulator here handles no else yet).
 
 ## Reproduce
 
 ```
 python notes/early_2026-11-17/early.py identity
-python notes/early_2026-11-17/early.py build DEV OUT [--dry-clifford-sentinel]
+python notes/early_2026-11-17/early.py build DEV OUT [--reuse] [--dry-clifford-sentinel]
 python gpu/compound_night.py build DEV RD_OUT
 python notes/early_2026-11-17/early.py ledger OUT RD_OUT
 python -c "from psf_os import feedforward as F; F.run_local('OUT')"; python notes/early_2026-11-17/early.py score OUT
