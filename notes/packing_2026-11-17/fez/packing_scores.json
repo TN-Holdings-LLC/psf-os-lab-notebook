@@ -1,0 +1,139 @@
+{
+ "rows": {
+  "rd1": {
+   "L": 1,
+   "single": 0.8885,
+   "packed": 0.88875,
+   "noiseless": 0.8904214154535403,
+   "d": 0.0002500000000000835,
+   "two_se": 0.014069157313073162,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "rd2": {
+   "L": 2,
+   "single": 0.802,
+   "packed": 0.80225,
+   "noiseless": 0.7928502970982866,
+   "d": -0.00024999999999997247,
+   "two_se": 0.01781687227040706,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "rd3": {
+   "L": 3,
+   "single": 0.69675,
+   "packed": 0.6965,
+   "noiseless": 0.7059708837850173,
+   "d": -0.00024999999999997247,
+   "two_se": 0.020559114462933466,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "rd4": {
+   "L": 4,
+   "single": 0.6325000000000001,
+   "packed": 0.63175,
+   "noiseless": 0.6286115936088438,
+   "d": 0.0007500000000000284,
+   "two_se": 0.02156584539265734,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "rd5": {
+   "L": 5,
+   "single": 0.552,
+   "packed": 0.55375,
+   "noiseless": 0.5597292249516941,
+   "d": 0.0017499999999999183,
+   "two_se": 0.022235263378246727,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "ea1": {
+   "L": 1,
+   "single": 0.88875,
+   "packed": 0.8885,
+   "noiseless": 0.8904214154535403,
+   "d": -0.0002500000000000835,
+   "two_se": 0.014069157313073162,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "ea2": {
+   "L": 2,
+   "single": 0.79375,
+   "packed": 0.79375,
+   "noiseless": 0.7928502970982866,
+   "d": 0.0,
+   "two_se": 0.018094802430532367,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "ea3": {
+   "L": 3,
+   "single": 0.7030000000000001,
+   "packed": 0.7032499999999999,
+   "noiseless": 0.7059708837850173,
+   "d": 0.00024999999999986144,
+   "two_se": 0.02043233803312778,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "ea4": {
+   "L": 4,
+   "single": 0.622,
+   "packed": 0.622,
+   "noiseless": 0.6286115936088438,
+   "d": 0.0,
+   "two_se": 0.02168483340955148,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  },
+  "ea5": {
+   "L": 5,
+   "single": 0.548,
+   "packed": 0.54775,
+   "noiseless": 0.5597292249516941,
+   "d": -0.0002500000000000835,
+   "two_se": 0.022257940998663826,
+   "floor_single": 1.0,
+   "floor_packed": 1.0,
+   "sentinel_single": "CLEAN",
+   "sentinel_packed": "CLEAN"
+  }
+ },
+ "mean_d": 0.00019999999999997797,
+ "mean_two_se": 0.006169313880003189,
+ "sentinels": {
+  "packed": "CLEAN",
+  "single": {
+   "single1": "CLEAN"
+  }
+ },
+ "s_model": {
+  "packed": 10.8,
+  "single": [
+   40.9
+  ]
+ },
+ "note": "numbers only; the verdict words and thresholds are the owner's ([OWNER] in the draft)"
+}

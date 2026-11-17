@@ -1,0 +1,11 @@
+rd1: single 0.8885  packed 0.8888  noiseless 0.8904  d +0.0003 (2 SE 0.0141);  floor 1.000 / 1.000
+rd2: single 0.8020  packed 0.8023  noiseless 0.7929  d -0.0002 (2 SE 0.0178);  floor 1.000 / 1.000
+rd3: single 0.6967  packed 0.6965  noiseless 0.7060  d -0.0002 (2 SE 0.0206);  floor 1.000 / 1.000
+rd4: single 0.6325  packed 0.6318  noiseless 0.6286  d +0.0008 (2 SE 0.0216);  floor 1.000 / 1.000
+rd5: single 0.5520  packed 0.5537  noiseless 0.5597  d +0.0017 (2 SE 0.0222);  floor 1.000 / 1.000
+ea1: single 0.8888  packed 0.8885  noiseless 0.8904  d -0.0003 (2 SE 0.0141);  floor 1.000 / 1.000
+ea2: single 0.7937  packed 0.7937  noiseless 0.7929  d +0.0000 (2 SE 0.0181);  floor 1.000 / 1.000
+ea3: single 0.7030  packed 0.7032  noiseless 0.7060  d +0.0002 (2 SE 0.0204);  floor 1.000 / 1.000
+ea4: single 0.6220  packed 0.6220  noiseless 0.6286  d +0.0000 (2 SE 0.0217);  floor 1.000 / 1.000
+ea5: single 0.5480  packed 0.5477  noiseless 0.5597  d -0.0003 (2 SE 0.0223);  floor 1.000 / 1.000
+mean d over 10 items +0.0002 (2 SE 0.0062); sentinels {'packed': 'CLEAN', 'single': {'single1': 'CLEAN'}}; seconds by the model packed 10.8, single [40.9]

@@ -15,24 +15,30 @@ each item in its own circuit (single), on the same device on the same night?
 - Items: the third design rd1..rd5 (T2 of 2026-11-17, `notes/compound_2026-11-17/compound.items`) and the early chain
   ea1..ea5 (T4, `notes/early_2026-11-17/early.items`, off arm the third design's), theta 1.1, m = 2, read flipped and
   relabelled as declared there.
-- Single job(s): exactly as T2 and T4 were built (`gpu/compound_night.py`, `gpu/early_night.py`): per item ff, off
-  and floor circuits, one ring sentinel per job. 38 circuits in 2 jobs, about 48 s by the time model.
+- Single job(s) (owner, 2026-11-17 evening: the same physical qubits as packed, so that the effect of packing is not
+  mixed with the quality of the qubits): each item built as T2 and T4 build it (`gpu/compound_night.py`,
+  `gpu/early_night.py`: per item ff, off and floor circuits) but placed on the qubits the packed job gives it
+  (psf-os `feedforward.build(..., chains=...)`, a given chain checked as rule C's are: a joined line of usable qubits
+  on working couplers); one ring sentinel per job; as many items per job as fit in 60 s by the time model. On the
+  2026-11-17 fez and marrakesh records: one job, 34 circuits, about 41 s.
 - Packed job: one rule-C chain of N sites; the ten items laid on it in the order above, each on consecutive sites,
   one site skipped after each item and further sites skipped until no coupler joins the next item to an earlier one
-  (`notes/next_2026-11-17/packing.py`; on the 2026-11-17 fez record N = 69, the ten items on physical qubits 0-124).
+  (psf-os `feedforward.build_bundle`; on the 2026-11-17 fez record N = 69, the ten items on physical qubits 0-124;
+  on the marrakesh record N = 69, qubits 0-92).
   One ff, one off and one floor circuit hold all ten items; one ring sentinel. 7 circuits in 1 job, about 11 s.
 - Both jobs submitted back to back on the same device, the single job(s) first [OWNER: order, or alternating].
-- Needs before the night: a psf-os entrance that builds and scores a packed item (see the design in
-  `notes/next_2026-11-17/README.md`, "Bundled items"); the packed job's per-item cards read each item's own bits.
+- Tool: `gpu/packing_night.py` (build: the packed job, then the single job(s) on the packed qubits; check: the checks
+  below; score: the numbers of "What is measured", no verdict line until the owner sets the words).
 
 ## Checks before submission (each must pass; otherwise nothing is submitted)
 
 1. Independence: no instruction (blocks included) acts on qubits of two items or reads or writes bits of another item.
 2. Per item, the packed compiled circuit restricted to the item has the same instructions on every qubit and bit as
-   the item compiled alone, and the same exact distribution (total variation below 1e-12).
+   the item's circuit in the single job, and the same exact distribution (total variation below 1e-12).
 3. Ledger: per item, the start of its last measurement and its wait are the same packed as alone (ASAP as built and
    JIT); no barrier spans two items.
 4. The usual feed-forward checks of each item (acceptance, conditionals kept, floor and off arms as declared).
+5. Per item, the same physical qubits in the single and the packed job.
 
 ## What is measured
 

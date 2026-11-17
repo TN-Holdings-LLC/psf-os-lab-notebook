@@ -1,0 +1,345 @@
+{
+ "rows": {
+  "rd1": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 5.664000000000001,
+    "last_single_us": 5.664000000000001,
+    "wait_packed": 5.168,
+    "wait_single": 5.168
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 5.664000000000001,
+    "last_single_us": 5.664000000000001,
+    "wait_packed": 5.168,
+    "wait_single": 5.168
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 6.664000000000001,
+    "last_single_us": 6.664000000000001,
+    "wait_packed": 7.168,
+    "wait_single": 7.168
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 6.664000000000001,
+    "last_single_us": 6.664000000000001,
+    "wait_packed": 7.168,
+    "wait_single": 7.168
+   }
+  },
+  "rd2": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 12.268000000000002,
+    "last_single_us": 12.268000000000002,
+    "wait_packed": 25.84,
+    "wait_single": 25.84
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 12.268000000000002,
+    "last_single_us": 12.268000000000002,
+    "wait_packed": 15.504000000000003,
+    "wait_single": 15.504000000000003
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 14.267999999999999,
+    "last_single_us": 14.267999999999999,
+    "wait_packed": 30.839999999999996,
+    "wait_single": 30.839999999999996
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 14.267999999999999,
+    "last_single_us": 14.267999999999999,
+    "wait_packed": 20.504,
+    "wait_single": 20.504
+   }
+  },
+  "rd3": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 18.872,
+    "last_single_us": 18.872,
+    "wait_packed": 56.848000000000006,
+    "wait_single": 56.848000000000006
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 18.872,
+    "last_single_us": 18.872,
+    "wait_packed": 25.840000000000003,
+    "wait_single": 25.840000000000003
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 21.871999999999996,
+    "last_single_us": 21.871999999999996,
+    "wait_packed": 64.848,
+    "wait_single": 64.848
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 21.871999999999996,
+    "last_single_us": 21.871999999999996,
+    "wait_packed": 33.84,
+    "wait_single": 33.84
+   }
+  },
+  "rd4": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 25.476000000000013,
+    "last_single_us": 25.476000000000013,
+    "wait_packed": 98.19200000000002,
+    "wait_single": 98.19200000000002
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 25.476000000000013,
+    "last_single_us": 25.476000000000013,
+    "wait_packed": 36.17600000000001,
+    "wait_single": 36.176
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 29.47600000000001,
+    "last_single_us": 29.47600000000001,
+    "wait_packed": 109.19200000000001,
+    "wait_single": 109.19200000000001
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 29.47600000000001,
+    "last_single_us": 29.47600000000001,
+    "wait_packed": 47.176,
+    "wait_single": 47.176
+   }
+  },
+  "rd5": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 32.08000000000003,
+    "last_single_us": 32.08000000000003,
+    "wait_packed": 149.87200000000004,
+    "wait_single": 149.87200000000004
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 32.08000000000003,
+    "last_single_us": 32.08000000000003,
+    "wait_packed": 46.512000000000015,
+    "wait_single": 46.51200000000002
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 37.08000000000002,
+    "last_single_us": 37.08000000000002,
+    "wait_packed": 163.872,
+    "wait_single": 163.872
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 37.08000000000002,
+    "last_single_us": 37.08000000000002,
+    "wait_packed": 60.51199999999999,
+    "wait_single": 60.512
+   }
+  },
+  "ea1": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 5.664000000000001,
+    "last_single_us": 5.664000000000001,
+    "wait_packed": 5.168,
+    "wait_single": 5.168
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 5.664000000000001,
+    "last_single_us": 5.664000000000001,
+    "wait_packed": 5.168,
+    "wait_single": 5.168
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 6.664000000000001,
+    "last_single_us": 6.664000000000001,
+    "wait_packed": 7.168,
+    "wait_single": 7.168
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 6.664000000000001,
+    "last_single_us": 6.664000000000001,
+    "wait_packed": 7.168,
+    "wait_single": 7.168
+   }
+  },
+  "ea2": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 11.364,
+    "last_single_us": 11.364,
+    "wait_packed": 7.752000000000003,
+    "wait_single": 7.752000000000003
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 11.364,
+    "last_single_us": 11.364,
+    "wait_packed": 7.752000000000003,
+    "wait_single": 7.752000000000003
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 14.363999999999997,
+    "last_single_us": 14.363999999999997,
+    "wait_packed": 13.751999999999997,
+    "wait_single": 13.751999999999997
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 14.363999999999997,
+    "last_single_us": 14.363999999999997,
+    "wait_packed": 13.751999999999997,
+    "wait_single": 13.751999999999997
+   }
+  },
+  "ea3": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 17.064,
+    "last_single_us": 17.064,
+    "wait_packed": 10.336,
+    "wait_single": 10.336
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 17.064,
+    "last_single_us": 17.064,
+    "wait_packed": 10.336,
+    "wait_single": 10.336
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 22.064000000000004,
+    "last_single_us": 22.064000000000004,
+    "wait_packed": 20.336000000000006,
+    "wait_single": 20.336000000000006
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 22.064000000000004,
+    "last_single_us": 22.064000000000004,
+    "wait_packed": 20.336000000000006,
+    "wait_single": 20.336000000000006
+   }
+  },
+  "ea4": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 22.764000000000006,
+    "last_single_us": 22.764000000000006,
+    "wait_packed": 12.920000000000002,
+    "wait_single": 12.920000000000002
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 22.764000000000006,
+    "last_single_us": 22.764000000000006,
+    "wait_packed": 12.920000000000002,
+    "wait_single": 12.920000000000002
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 29.764000000000014,
+    "last_single_us": 29.764000000000014,
+    "wait_packed": 26.92000000000001,
+    "wait_single": 26.920000000000012
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 29.764000000000014,
+    "last_single_us": 29.764000000000014,
+    "wait_packed": 26.92000000000001,
+    "wait_single": 26.920000000000012
+   }
+  },
+  "ea5": {
+   "ff": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "off": {
+    "same": true,
+    "tvd": 0.0
+   },
+   "asap_lat0.0": {
+    "last_packed_us": 28.464000000000013,
+    "last_single_us": 28.464000000000013,
+    "wait_packed": 15.504000000000003,
+    "wait_single": 15.504000000000003
+   },
+   "jit_lat0.0": {
+    "last_packed_us": 28.464000000000013,
+    "last_single_us": 28.464000000000013,
+    "wait_packed": 15.504000000000003,
+    "wait_single": 15.504000000000003
+   },
+   "asap_lat1.0": {
+    "last_packed_us": 37.464000000000006,
+    "last_single_us": 37.464000000000006,
+    "wait_packed": 33.504000000000005,
+    "wait_single": 33.504000000000005
+   },
+   "jit_lat1.0": {
+    "last_packed_us": 37.464000000000006,
+    "last_single_us": 37.464000000000006,
+    "wait_packed": 33.504000000000005,
+    "wait_single": 33.504000000000005
+   }
+  }
+ },
+ "bad": []
+}

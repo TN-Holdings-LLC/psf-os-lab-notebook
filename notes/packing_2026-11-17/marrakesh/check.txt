@@ -1,0 +1,17 @@
+1. independence: no instruction or barrier spans two items (ff, off, floor): ok
+4. feed-forward checks (acceptance, conditionals kept, floor without sx/x, off without conditionals): ok
+5. the same physical qubits single and packed: ok
+2. per item, packed restricted against single (ff / off): same instructions per wire, exact distribution TV
+3. ledger: last measurement start and wait, packed against single (ASAP and JIT, latency 0 and 1 us)
+   rd1: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 5.66 us, wait 5.17 q.us)
+   rd2: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 12.27 us, wait 15.50 q.us)
+   rd3: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 18.87 us, wait 25.84 q.us)
+   rd4: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 25.48 us, wait 36.18 q.us)
+   rd5: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 32.08 us, wait 46.51 q.us)
+   ea1: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 5.66 us, wait 5.17 q.us)
+   ea2: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 11.36 us, wait 7.75 q.us)
+   ea3: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 17.06 us, wait 10.34 q.us)
+   ea4: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 22.76 us, wait 12.92 q.us)
+   ea5: True / True; TV 0.0e+00 / 0.0e+00; ledger True (JIT lat 0: last measurement 28.46 us, wait 15.50 q.us)
+   packed ff length: asap lat 0 us 34.7 us, jit lat 0 us 34.7 us, asap lat 1 us 40.0 us, jit lat 1 us 40.0 us
+PASS
