@@ -68,6 +68,12 @@ def rule(a):
     cond = {p: w["positions"][p]["differences"]["cond"] for p in ("A", "B")}
     cond_loss = {p: bool(v["d"] > 0 and v["d"] >= v["two_se"]) for p, v in cond.items()}
     # Dr per output chain qubit: (item tag, job counts, clbit of the qubit in that item, build, chain index)
+    import wait_night as WN
+    if bw["device"] != bc["device"]:
+        raise SystemExit(f"REFUSED: the diagnostics ran on different devices ({bw['device']}, {bc['device']})")
+    # the bit and chain positions read below must be the diagnostic tools' own (ctrl_night.POS, wait_night.POS)
+    assert CN.POS["A"]["c"] == OUT_CHAIN_QUBIT[1] and CN.POS["B"]["c"] == OUT_CHAIN_QUBIT[2]
+    assert WN.POS["B"][2] == OUT_CHAIN_QUBIT[3]
     src = {1: ("Anow", gc, 1, bc), 2: ("Bnow", gc, 1, bc), 3: ("Bref", gw, 0, bw)}
     dr = {}
     for L, (tag, g, bit, b) in src.items():
@@ -90,7 +96,8 @@ def rule(a):
     else:
         pick = {L: "P0" for L in LS}
         why = "rule 4 (no prescription)"
-    out = dict(pick=pick, why=why, late_nb=late, late_loss=late_loss, cond=cond, cond_loss=cond_loss, dr=dr)
+    out = dict(pick=pick, why=why, device=bc["device"], late_nb=late, late_loss=late_loss, cond=cond,
+               cond_loss=cond_loss, dr=dr)
     json.dump(out, open(a.rule_json, "w"), indent=1)
     for p in ("A", "B"):
         print(f"Dc {p}: D_late_nb {late[p]['d']:+.4f} (2 SE {late[p]['two_se']:.4f}) loss {late_loss[p]};  "
@@ -129,8 +136,12 @@ def build(a):
     from psf_os import feedforward as FF
     from psf_os.device import Device
     R = json.load(open(a.rule_json))
+    dev = Device.load(a.devdir)
+    if dev.name != R["device"]:
+        print(f"REFUSED: the rule was made from diagnostics on {R['device']}, the record is {dev.name}")
+        return False
     spec = dict(kind="echo_clifford", D=24) if a.dry_clifford_sentinel else None   # dry runs only, never a device
-    rep = FF.build(Device.load(a.devdir), items(R["pick"]), a.out, shots=4000, sentinel_spec=spec)
+    rep = FF.build(dev, items(R["pick"]), a.out, shots=4000, sentinel_spec=spec)
     bad = []
     for t, v in rep["items"].items():
         L = int(t[-1])
@@ -141,7 +152,8 @@ def build(a):
     print(json.dumps({k: rep[k] for k in ("device", "circuits", "qpu_seconds_model", "shots") if k in rep}))
     print(json.dumps({t: (v["chain"], v["cz"], v["mid"]) for t, v in rep["items"].items()}))
     if bad:
-        print(f"REFUSED: the last output is not on the qubit Dr measured: {bad}")
+        os.rename(os.path.join(a.out, "job"), os.path.join(a.out, "job_REFUSED"))   # nothing left to submit
+        print(f"REFUSED: the last output is not on the qubit Dr measured: {bad} (job moved to job_REFUSED)")
         return False
 
 
