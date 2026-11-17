@@ -60,3 +60,10 @@ controlled-Y written with CZ, a reset by conditional X, a measurement), nested t
 uniform noise model as `NOISE_DESK.md` (not fitted to any device), exact by density matrix for L = 1-4, m = 1-5,
 theta 0.5 / 0.8 / 1.1. Where ff's error is smaller than off's by at least 2 SE (4000 shots per arm), and whether
 post's bias survives noise.
+
+## Decay during the waits: three designs and the form without mid-circuit measurements (workplace VS, 2026-11-17)
+
+`rus_decay_desk.py` and `RUS_DECAY_DESK.md`: the model of `RUS_NOISE_DESK.md` with amplitude damping on every waiting
+qubit during each mid-circuit measurement (uniform examples, not fitted; the control test of 2026-11-16 beside), for D1,
+D2, D3 as compiled on 2026-11-16 and the workplace form without mid-circuit measurements (zipper+). Error against the
+exact value and loss against each circuit's own noiseless value, side by side.
