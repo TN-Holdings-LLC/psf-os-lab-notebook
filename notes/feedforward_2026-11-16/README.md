@@ -67,3 +67,8 @@ post's bias survives noise.
 qubit during each mid-circuit measurement (uniform examples, not fitted; the control test of 2026-11-16 beside), for D1,
 D2, D3 as compiled on 2026-11-16 and the workplace form without mid-circuit measurements (zipper+). Error against the
 exact value and loss against each circuit's own noiseless value, side by side.
+
+## Tonight's T2 and T3-A under the decay model (workplace VS Claude, 2026-11-17; illustrative)
+
+`NIGHT17_DECAY_DESK.md` (`night17_decay_desk.py`, `.txt`, `.json`): the RUS_DECAY_DESK model at gamma 0.05 / 0.1 on the
+declared T2 (third design, L = 1 .. 5, with the overshoot guard) and T3-A (iterative phase estimation, n = 2, 3).

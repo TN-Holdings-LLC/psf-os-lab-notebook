@@ -1,0 +1,376 @@
+{
+ "model": {
+  "gammas": [
+   0.0,
+   0.05,
+   0.1
+  ],
+  "p1": "3.000e-04",
+  "p2": "3.000e-03",
+  "readout": "1.500e-02",
+  "pz": "2.439e-02",
+  "illustrative": true,
+  "fitted_to_device": false
+ },
+ "checks": {
+  "noiseless": {
+   "t2": "5.884e-15",
+   "t3a": "2.998e-15",
+   "passed": true
+  },
+  "monte_carlo_t3a": {
+   "largest_se": "8.439e-01",
+   "passed": true
+  }
+ },
+ "T2": {
+  "0.0": {
+   "rows": {
+    "1": {
+     "p_ff": "8.674e-01",
+     "ff_noiseless": "8.904e-01",
+     "exact": "9.371e-01",
+     "c": "1.429e-01",
+     "e": "6.973e-02",
+     "g": "7.314e-02",
+     "se": "5.363e-03",
+     "loss": "-2.303e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "7.605e-01"
+    },
+    "2": {
+     "p_ff": "7.611e-01",
+     "ff_noiseless": "7.929e-01",
+     "exact": "8.782e-01",
+     "c": "2.473e-01",
+     "e": "1.170e-01",
+     "g": "1.303e-01",
+     "se": "6.742e-03",
+     "loss": "-3.171e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "8.043e-01"
+    },
+    "3": {
+     "p_ff": "6.700e-01",
+     "ff_noiseless": "7.060e-01",
+     "exact": "8.230e-01",
+     "c": "3.219e-01",
+     "e": "1.530e-01",
+     "g": "1.689e-01",
+     "se": "7.435e-03",
+     "loss": "-3.601e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "8.243e-01"
+    },
+    "4": {
+     "p_ff": "5.917e-01",
+     "ff_noiseless": "6.286e-01",
+     "exact": "7.712e-01",
+     "c": "3.733e-01",
+     "e": "1.795e-01",
+     "g": "1.938e-01",
+     "se": "7.772e-03",
+     "loss": "-3.688e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "8.401e-01"
+    },
+    "5": {
+     "p_ff": "5.246e-01",
+     "ff_noiseless": "5.597e-01",
+     "exact": "7.227e-01",
+     "c": "4.066e-01",
+     "e": "1.981e-01",
+     "g": "2.085e-01",
+     "se": "7.896e-03",
+     "loss": "-3.513e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "8.558e-01"
+    }
+   },
+   "slope": {
+    "slope": "3.535e-02",
+    "se": "2.110e-03",
+    "overshoot_at": [],
+    "verdict": "COMPOUNDS"
+   }
+  },
+  "0.05": {
+   "rows": {
+    "1": {
+     "p_ff": "8.732e-01",
+     "ff_noiseless": "8.904e-01",
+     "exact": "9.371e-01",
+     "c": "1.429e-01",
+     "e": "6.388e-02",
+     "g": "7.899e-02",
+     "se": "5.261e-03",
+     "loss": "-1.718e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "8.213e-01"
+    },
+    "2": {
+     "p_ff": "7.824e-01",
+     "ff_noiseless": "7.929e-01",
+     "exact": "8.782e-01",
+     "c": "2.473e-01",
+     "e": "9.581e-02",
+     "g": "1.515e-01",
+     "se": "6.524e-03",
+     "loss": "-1.048e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "9.353e-01"
+    },
+    "3": {
+     "p_ff": "7.125e-01",
+     "ff_noiseless": "7.060e-01",
+     "exact": "8.230e-01",
+     "c": "3.219e-01",
+     "e": "1.105e-01",
+     "g": "2.114e-01",
+     "se": "7.156e-03",
+     "loss": "6.513e-03",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "1.032e+00"
+    },
+    "4": {
+     "p_ff": "6.587e-01",
+     "ff_noiseless": "6.286e-01",
+     "exact": "7.712e-01",
+     "c": "3.733e-01",
+     "e": "1.125e-01",
+     "g": "2.608e-01",
+     "se": "7.497e-03",
+     "loss": "3.012e-02",
+     "verdict": "OVERSHOOT",
+     "kept": "1.131e+00"
+    },
+    "5": {
+     "p_ff": "6.174e-01",
+     "ff_noiseless": "5.597e-01",
+     "exact": "7.227e-01",
+     "c": "4.066e-01",
+     "e": "1.053e-01",
+     "g": "3.013e-01",
+     "se": "7.685e-03",
+     "loss": "5.766e-02",
+     "verdict": "OVERSHOOT",
+     "kept": "1.237e+00"
+    }
+   },
+   "slope": {
+    "slope": "5.680e-02",
+    "se": "2.056e-03",
+    "overshoot_at": [
+     4,
+     5
+    ],
+    "verdict": "NOT SHOWN"
+   }
+  },
+  "0.1": {
+   "rows": {
+    "1": {
+     "p_ff": "8.790e-01",
+     "ff_noiseless": "8.904e-01",
+     "exact": "9.371e-01",
+     "c": "1.429e-01",
+     "e": "5.808e-02",
+     "g": "8.479e-02",
+     "se": "5.156e-03",
+     "loss": "-1.139e-02",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "8.816e-01"
+    },
+    "2": {
+     "p_ff": "8.020e-01",
+     "ff_noiseless": "7.929e-01",
+     "exact": "8.782e-01",
+     "c": "2.473e-01",
+     "e": "7.623e-02",
+     "g": "1.711e-01",
+     "se": "6.301e-03",
+     "loss": "9.106e-03",
+     "verdict": "BEYOND THE CORRECTION CEILING",
+     "kept": "1.056e+00"
+    },
+    "3": {
+     "p_ff": "7.492e-01",
+     "ff_noiseless": "7.060e-01",
+     "exact": "8.230e-01",
+     "c": "3.219e-01",
+     "e": "7.380e-02",
+     "g": "2.481e-01",
+     "se": "6.854e-03",
+     "loss": "4.319e-02",
+     "verdict": "OVERSHOOT",
+     "kept": "1.211e+00"
+    },
+    "4": {
+     "p_ff": "7.130e-01",
+     "ff_noiseless": "6.286e-01",
+     "exact": "7.712e-01",
+     "c": "3.733e-01",
+     "e": "5.821e-02",
+     "g": "3.150e-01",
+     "se": "7.152e-03",
+     "loss": "8.439e-02",
+     "verdict": "OVERSHOOT",
+     "kept": "1.366e+00"
+    },
+    "5": {
+     "p_ff": "6.882e-01",
+     "ff_noiseless": "5.597e-01",
+     "exact": "7.227e-01",
+     "c": "4.066e-01",
+     "e": "3.448e-02",
+     "g": "3.722e-01",
+     "se": "7.324e-03",
+     "loss": "1.285e-01",
+     "verdict": "OVERSHOOT",
+     "kept": "1.527e+00"
+    }
+   },
+   "slope": {
+    "slope": "7.304e-02",
+    "se": "1.983e-03",
+    "overshoot_at": [
+     3,
+     4,
+     5
+    ],
+    "verdict": "NOT SHOWN"
+   }
+  }
+ },
+ "T3A": {
+  "0.0": {
+   "2": {
+    "ff": "9.600e-01",
+    "ff_min": "9.589e-01",
+    "se": "1.549e-03",
+    "ceiling": "7.500e-01",
+    "margin": "2.100e-01",
+    "verdict": "BEYOND THE CEILING",
+    "off_as_read": "7.252e-01",
+    "decoder_of_off": "7.252e-01",
+    "per_phase": [
+     "9.618e-01",
+     "9.597e-01",
+     "9.589e-01",
+     "9.597e-01"
+    ]
+   },
+   "3": {
+    "ff": "9.394e-01",
+    "ff_min": "9.376e-01",
+    "se": "1.334e-03",
+    "ceiling": "5.884e-01",
+    "margin": "3.510e-01",
+    "verdict": "BEYOND THE CEILING",
+    "off_as_read": "4.776e-01",
+    "decoder_of_off": "5.578e-01",
+    "per_phase": [
+     "9.432e-01",
+     "9.404e-01",
+     "9.388e-01",
+     "9.376e-01",
+     "9.381e-01",
+     "9.380e-01",
+     "9.388e-01",
+     "9.401e-01"
+    ]
+   },
+   "growth": {
+    "diff": "1.410e-01",
+    "se": "2.044e-03",
+    "verdict": "GROWS"
+   }
+  },
+  "0.05": {
+   "2": {
+    "ff": "9.365e-01",
+    "ff_min": "9.119e-01",
+    "se": "1.927e-03",
+    "ceiling": "7.500e-01",
+    "margin": "1.865e-01",
+    "verdict": "BEYOND THE CEILING",
+    "off_as_read": "7.135e-01",
+    "decoder_of_off": "7.135e-01",
+    "per_phase": [
+     "9.618e-01",
+     "9.362e-01",
+     "9.119e-01",
+     "9.362e-01"
+    ]
+   },
+   "3": {
+    "ff": "8.829e-01",
+    "ff_min": "8.486e-01",
+    "se": "1.797e-03",
+    "ceiling": "5.884e-01",
+    "margin": "2.945e-01",
+    "verdict": "BEYOND THE CEILING",
+    "off_as_read": "4.605e-01",
+    "decoder_of_off": "5.329e-01",
+    "per_phase": [
+     "9.432e-01",
+     "9.074e-01",
+     "8.706e-01",
+     "8.578e-01",
+     "8.486e-01",
+     "8.581e-01",
+     "8.706e-01",
+     "9.070e-01"
+    ]
+   },
+   "growth": {
+    "diff": "1.080e-01",
+    "se": "2.635e-03",
+    "verdict": "GROWS"
+   }
+  },
+  "0.1": {
+   "2": {
+    "ff": "9.131e-01",
+    "ff_min": "8.649e-01",
+    "se": "2.227e-03",
+    "ceiling": "7.500e-01",
+    "margin": "1.631e-01",
+    "verdict": "BEYOND THE CEILING",
+    "off_as_read": "7.017e-01",
+    "decoder_of_off": "7.017e-01",
+    "per_phase": [
+     "9.618e-01",
+     "9.127e-01",
+     "8.649e-01",
+     "9.127e-01"
+    ]
+   },
+   "3": {
+    "ff": "8.288e-01",
+    "ff_min": "7.637e-01",
+    "se": "2.106e-03",
+    "ceiling": "5.884e-01",
+    "margin": "2.404e-01",
+    "verdict": "BEYOND THE CEILING",
+    "off_as_read": "4.440e-01",
+    "decoder_of_off": "5.090e-01",
+    "per_phase": [
+     "9.432e-01",
+     "8.750e-01",
+     "8.047e-01",
+     "7.819e-01",
+     "7.637e-01",
+     "7.822e-01",
+     "8.047e-01",
+     "8.747e-01"
+    ]
+   },
+   "growth": {
+    "diff": "7.730e-02",
+    "se": "3.065e-03",
+    "verdict": "GROWS"
+   }
+  }
+ }
+}

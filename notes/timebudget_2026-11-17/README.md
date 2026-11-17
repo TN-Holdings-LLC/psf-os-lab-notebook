@@ -101,3 +101,85 @@ time, read as early as possible). JIT is the smallest or within 0.1 q.us of it i
 - Iterative phase estimation: JIT 5.2 (ASAP 5.1, ALAP 7.7).
 
 The device's own schedule is not known to us; that it matters this much is the reason to pin one (the schedule pass).
+
+## Schedule pass (workplace VS Claude, 2026-11-17; the request 17e; desk only, not declared)
+
+Tool: `schedule_pass.py` (reads the same build outputs; psf-os unchanged, at 301ac01). Recorded:
+`schedule_pass_latency0us.txt / .json` and `schedule_pass_latency1us.txt / .json`, over the 58 ff and off circuits of
+the four builds above (coh_night, compound_night, apps_night, seqcmp; 11-16 13:11 CET marrakesh record). The lengths
+are the ledger's FakeMarrakesh medians, which are illustrative. No device error number is used.
+
+### What it does
+
+1. **Four ledger cells.** It computes ASAP and ALAP, each as built and with the barriers removed.
+   - A barrier-free cell is a candidate only when the barriers pin a schedule and nothing else.
+   - Barriers that stand between two one-qubit gates on one qubit belong to the design. In the third neuron design
+     they are the outputs' X before and after each ancilla measurement: the outputs are held flipped during it, and
+     the X pairs are kept from cancelling in the off arm. Once compiled, those X are partly fused into the
+     neighbouring gates.
+   - The rd items keep their barriers. No other circuit here has barriers.
+2. **The choice.** It chooses the smallest wait.
+3. **Pinning.** It writes the chosen schedule into the circuit: the instructions in start order, with barriers that
+   hold each instruction at the edge of another instruction. An as-soon-as-possible executor cannot then start it
+   earlier, and an as-late-as-possible executor cannot end it later.
+4. **The checks:**
+   - Identity, noiselessly: `coherent.branch_distribution` gives a total variation of at most 1e-12 where qubits plus
+     measurements are at most 24. That covers 50 of 58 circuits. The sequential teleport at distance 12 and 16 and lr6
+     / lr8 do not fit in memory.
+   - Structural identity for every circuit: barriers left out, the same operations in the same order on every qubit
+     and clbit.
+   - The pinned circuit's ledger, recounted under both executors.
+5. **Beside:** the smallest wait that a pinned circuit guarantees under either executor. This comes from every allowed
+   cell, pinned exactly or "snapped": an instruction that no edge can hold is held at the next edge after it instead.
+
+### Results (latency 0; wait in qubit-microseconds)
+
+- **Identity:** OK for all 58 (TVD at most 9e-16 where simulated; the same DAG everywhere).
+
+| item | as built ASAP | as built ALAP | chosen | pinned (both executors) | guaranteed |
+|---|---|---|---|---|---|
+| coh1 (T1) | 0.036 | 0.000 | ALAP 0.000 | yes | 0.000 |
+| rd1 (T1, T2) | 5.168 | 5.168 | ASAP 5.168 | yes | 5.168 |
+| rd2 (T2) | 25.840 | 18.052 | ALAP 18.052 | no (ASAP executor 20.672) | 18.088 (snapped) |
+| rd3 | 56.848 | 36.104 | ALAP 36.104 | no (41.344) | 36.176 |
+| rd4 | 98.192 | 59.324 | ALAP 59.324 | no (67.184) | 59.432 |
+| rd5 | 149.872 | 87.712 | ALAP 87.712 | no (98.192) | 87.856 |
+| ipe n 2 (T3-A, phases 1-3) | 2.548-2.584 | 5.132 | ASAP | phase 2 yes; 1, 3 snapped | 2.548-2.584 |
+| ipe n 3 (phases 1-7) | 5.096-5.132 | 5.132-7.716 | ASAP | snapped | 5.096-5.132 |
+| lr2 / lr4 (T3-B) | 2.584 | 2.620 / 2.872 | ASAP 2.584 | yes | 2.584 |
+| seq4 / 8 / 12 / 16 | 25.8 / 93.0 / 201.6 / 351.4 | 10.3 / 20.7 / 31.0 / 41.3 | ALAP | yes | as chosen |
+
+The off arms follow their ff arms. At latency 0, 32 of 58 circuits are pinned exactly, and 50 of 58 are guaranteed
+at the chosen value. At latency 1 us it is 28 and 50. There the sequential teleport is held by snapping at its ALAP
+value, and the decision intervals give the phase-estimation items their edges.
+
+### What could not be pinned, and why
+
+- **rd2 to rd5 (ff and off arms):** they cannot be pinned exactly.
+  - ALAP starts parts of each later neuron's preparation before the previous measurement ends, at a time where no
+    other instruction starts or ends (4 / 7 / 9 / 11 such instructions for L = 2 / 3 / 4 / 5). A barrier only holds an instruction at another instruction's edge, so an
+    ASAP executor moves the preparation into the measurement (+2.6 q.us per neuron).
+  - Snapping holds it at the measurement's end instead. That guarantees the ALAP value plus 0.036 to 0.144 q.us (at
+    most 0.2 %), at a T longer by 0.1 to 0.25 us.
+- **Phase estimation (before the zero-length-first order):** an ALAP executor pushed the target's last one-qubit gate
+  (the target is never measured) under the final measurement, doubling its wait.
+  - Emitting zero-length instructions first at equal times, plus snapping, holds it.
+  - All 28 apps circuits are now guaranteed at the chosen value.
+- **The barrier-free cells of rd are not used.** Without the barriers, rd5's ALAP wait would be 74.0 (ff) and 22.6
+  (off), but the outputs would no longer be held flipped during the waits. That is a design change, not a schedule.
+
+### What this adds to the proposal "a schedule pass in the OS"
+
+- **A pass needs both executors.** ASAP pinned in the circuit is exact only when the device starts instructions as soon
+  as possible. What the device's own scheduler does is not in any record we keep.
+- **Barriers fix order, not time.** Sub-gate offsets need snapping, which costs a little time and almost no wait, or
+  explicit delays. Delays would count as busy time in the ledger, so they need a ledger change, and they are not
+  proposed here.
+- **Using the pass on a device is a declared condition** (as in the README above).
+
+### Note on merging (workplace Claude, 2026-11-17)
+
+The schedule pass above was written against the ledger of 7ace8059 (ASAP and ALAP); the JIT schedule of the
+correction section came on the other line (733578cf). JIT is not yet one of the pass's cells: for rd5 JIT counts 46.5
+q.us as built, against the pass's chosen ALAP 87.7. Whether a JIT schedule can be pinned by barriers alone (its pushed
+gates end at another instruction's start, so the edges exist) is the next check for the pass.
