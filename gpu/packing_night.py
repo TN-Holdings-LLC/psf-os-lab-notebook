@@ -25,8 +25,9 @@ check: the draft's checks 1-4 and the same physical qubits per item; prints PASS
   5. per item, the same physical qubits in the single and the packed job.
 score: per item s = ff(single), p = ff(packed) (P(last output 1), relabelled), v = the noiseless value
 (notes/compound_2026-11-17/ideal.json, the same for rd and ea at the same L); d = |s - v| - |p - v| with 2 SE from the
-two binomial errors; the mean of d over the ten items with its 2 SE. Numbers only: the verdict words and thresholds
-are the owner's ([OWNER] in the draft) and are added at declaration."""
+two binomial errors; the mean of d over the ten items with its 2 SE. Verdict (declared, prereg/packing_night_2026-11-17.md):
+on the mean, PACKING KEEPS LESS (mean <= -2 SE) / PACKING KEEPS MORE (mean >= 2 SE) / SAME WITHIN ERROR; the same words
+per item are printed beside, never judged; charged seconds read from each returned job."""
 import argparse
 import json
 import math
@@ -202,6 +203,24 @@ def check(a):
     return not bad
 
 
+def word(d, two_se, overall=False):
+    # declared 2026-11-17 (owner): neutral words; the overall verdict is read from the mean of d over the ten items
+    pre = "PACKING" if overall else "PACKED"
+    if d <= -two_se:
+        return f"{pre} KEEPS LESS"
+    if d >= two_se:
+        return f"{pre} KEEPS MORE"
+    return "SAME WITHIN ERROR"
+
+
+def charged(folder):
+    """Charged device seconds of a returned job (raw_counts.json metrics), None before the data."""
+    f = os.path.join(folder, "job", "raw_counts.json")
+    if not os.path.exists(f):
+        return None
+    return json.load(open(f)).get("metrics", {}).get("usage", {}).get("qpu_charge_time_seconds")
+
+
 def score(a):
     import rus3_night as R3
     from psf_os import feedforward as FF
@@ -224,17 +243,22 @@ def score(a):
                        sentinel_packed=p_c["sentinel"])
         ds.append(d)
         ses.append(se)
-        print(f"{t}: single {s:.4f}  packed {p:.4f}  noiseless {v:.4f}  d {d:+.4f} (2 SE {2 * se:.4f});  floor "
-              f"{rows[t]['floor_single']:.3f} / {rows[t]['floor_packed']:.3f}")
+        rows[t]["beside"] = word(d, 2 * se)
+        print(f"{t}: single {s:.4f}  packed {p:.4f}  noiseless {v:.4f}  d {d:+.4f} (2 SE {2 * se:.4f}) -> beside: "
+              f"{rows[t]['beside']};  floor {rows[t]['floor_single']:.3f} / {rows[t]['floor_packed']:.3f}")
     m = sum(ds) / len(ds)
     mse_mean = math.sqrt(sum(x * x for x in ses)) / len(ses)
     out = dict(rows=rows, mean_d=m, mean_two_se=2 * mse_mean, sentinels=dict(
         packed=next(iter(pc.values()))["sentinel"], single={s["folder"]: sc[s["items"][0]]["sentinel"]
                                                             for s in plan["singles"]}),
         s_model=dict(packed=plan["packed"]["s_model"], single=[s["s_model"] for s in plan["singles"]]),
-        note="numbers only; the verdict words and thresholds are the owner's ([OWNER] in the draft)")
-    print(f"mean d over {len(ds)} items {m:+.4f} (2 SE {2 * mse_mean:.4f}); sentinels {out['sentinels']}; seconds by the "
-          f"model packed {plan['packed']['s_model']:.1f}, single {[round(x, 1) for x in out['s_model']['single']]}")
+        verdict=word(m, 2 * mse_mean, overall=True),
+        charged=dict(packed=charged(os.path.join(a.out, "packed")),
+                     single=[charged(os.path.join(a.out, s["folder"])) for s in plan["singles"]]))
+    print(f"mean d over {len(ds)} items {m:+.4f} (2 SE {2 * mse_mean:.4f}) -> {out['verdict']}")
+    print(f"sentinels {out['sentinels']}; seconds by the model packed {plan['packed']['s_model']:.1f}, single "
+          f"{[round(x, 1) for x in out['s_model']['single']]}; charged packed {out['charged']['packed']}, single "
+          f"{out['charged']['single']}")
     json.dump(out, open(os.path.join(a.out, "packing_scores.json"), "w"), indent=1)
 
 
