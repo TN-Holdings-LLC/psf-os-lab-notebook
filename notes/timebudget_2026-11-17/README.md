@@ -84,6 +84,24 @@ python notes/timebudget_2026-11-17/ledger.py OUT1 OUT2 OUT3 OUT4 [--latency-us 1
 DEV = results/rus-neuron3-2026-11-16/fetch_in/ibm_marrakesh/dev. Recorded: `ledger_latency0us.json`,
 `ledger_latency1us.json`.
 
+## Correction (2026-11-17, later the same morning): a third schedule, JIT, changes two readings above
+
+ALAP pushes not only a qubit's preparation late but also its last measurement (when no later conditional reads it),
+so ALAP overstates the wait of qubits that finish early. The ledger now also computes **JIT**: ASAP, then every gate
+other than measurements and conditionals pushed as late as the next operation on its qubits allows (prepared just in
+time, read as early as possible). JIT is the smallest or within 0.1 q.us of it in every item counted here.
+
+- **Neuron chain**: under JIT the wait grows **linearly**, not as L^2: 5.2 / 15.5 / 25.8 / 36.2 / 46.5 q.us as built
+  (L = 1 .. 5), 2.5 / 8.2 / 13.9 / 19.6 / 25.3 without barriers. The L^2 growth above belongs to ASAP (fresh qubits
+  prepared at the start, waiting through every earlier step) and is partly kept by ALAP. Withdrawn: "scheduling halves
+  it at L = 5; it does not change the L^2 shape" (JIT cuts 149.9 to 46.5, a factor 3.2, and makes it linear).
+- **Constant-depth teleport with a 1 us decision latency**: JIT lr8 18.6 q.us against seq16 57.3, not "92.9 against
+  57.3". Withdrawn: that the conditional stack makes the constant-depth form wait more than the sequential one; it
+  makes it wait more than at latency 0 (2.6), still 3x less than the sequential form.
+- Iterative phase estimation: JIT 5.2 (ASAP 5.1, ALAP 7.7).
+
+The device's own schedule is not known to us; that it matters this much is the reason to pin one (the schedule pass).
+
 ## Schedule pass (workplace VS Claude, 2026-11-17; the request 17e; desk only, not declared)
 
 Tool: `schedule_pass.py` (reads the same build outputs; psf-os unchanged, at 301ac01). Recorded:

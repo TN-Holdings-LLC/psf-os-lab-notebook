@@ -14,8 +14,10 @@ the ledger counts what the circuit's shape costs in time, with no device error n
   wait_qus       the part of idle_qus that lies under another qubit's measurement or under a decision latency
                  (the exposure the 2026-11-16 diagnostics point at)
 
-each under two schedules that bound what a scheduler can choose: ASAP (every gate as early as possible) and ALAP (as
-late as possible, i.e. qubits prepared just in time); and each for the circuit as built and with its barriers removed
+each under three schedules a scheduler can choose: ASAP (every gate as early as possible), ALAP (as late as possible)
+and JIT (ASAP, then every gate other than measurements and conditionals pushed as late as the next operation on its
+qubits allows: prepared just in time, read as early as possible; added after the early-measurement prototype showed
+that ALAP also pushes a qubit's last measurement late); and each for the circuit as built and with its barriers removed
 (barriers do not change what the circuit computes; they pin the schedule). The difference between the cells is what a
 scheduling pass of the OS could save without changing the circuit.
 
@@ -105,7 +107,29 @@ def _instructions(qc, latency, drop_barriers):
 
 
 def _schedule(ins, nq, nc, alap):
-    """Start times of every instruction (ASAP, or ALAP by scheduling the reversed list)."""
+    """Start times of every instruction: ASAP (alap False), ALAP by scheduling the reversed list (alap True), or "jit":
+    ASAP, then every gate that is not a measurement, a conditional or a barrier pushed as late as the next operation on
+    each of its qubits allows (prepared just in time, while measurements and decisions stay as early as possible)."""
+    if alap == "jit":
+        start, T = _schedule(ins, nq, nc, False)
+        nxt = [None] * len(ins)
+        seen = {}
+        for i in range(len(ins) - 1, -1, -1):
+            qs = ins[i][0]
+            nxt[i] = [seen.get(q) for q in qs]
+            for q in qs:
+                seen[q] = i
+        for i in range(len(ins) - 1, -1, -1):
+            qs, cs, kind, d, _, _ = ins[i]
+            if kind in ("measure", "if_else", "barrier", "reset") or cs:
+                continue
+            lim = [start[j] for j in nxt[i] if j is not None]
+            if not lim:
+                continue
+            s = min(lim) - d
+            if s > start[i]:
+                start[i] = s
+        return start, T
     order = list(range(len(ins)))[::-1] if alap else list(range(len(ins)))
     ready_q, ready_c = [0.0] * nq, [0.0] * nc
     start = [0.0] * len(ins)
@@ -205,6 +229,7 @@ def ledger(qc, latency_us=0.0, alap=False, drop_barriers=False):
             if d > 0 and kind != "rz" and q not in first:
                 first[q] = s
     idle = wait = 0.0
+    by_q = {}
     for q in range(nq):
         if q not in first:
             continue
@@ -222,9 +247,11 @@ def ledger(qc, latency_us=0.0, alap=False, drop_barriers=False):
         idle += sum(b - a for a, b in segs)
         cover = _union([iv for p in range(nq) if p != q for iv in meas[p]] +
                        [iv for qs, iv in lat if q in qs])
-        wait += _overlap(segs, cover)
+        w = _overlap(segs, cover)
+        wait += w
+        by_q[q] = round(w / US, 4)
     return dict(mid=mid, meas_depth=max(mq + mc + [0]), dec_depth=max(dq + dc + [0]), T_us=T / US,
-                idle_qus=idle / US, wait_qus=wait / US)
+                idle_qus=idle / US, wait_qus=wait / US, wait_by_qubit_qus=by_q)
 
 
 def job_ledgers(out, latency_us=0.0, roles=("user", "off")):
@@ -242,6 +269,8 @@ def job_ledgers(out, latency_us=0.0, roles=("user", "off")):
             cc = FF.compact(c)
             res[cell["name"]] = {f"{'alap' if al else 'asap'}{'_nobar' if nb else ''}":
                                  ledger(cc, latency_us, al, nb) for al in (False, True) for nb in (False, True)}
+            for nb in (False, True):
+                res[cell["name"]]["jit" + ("_nobar" if nb else "")] = ledger(cc, latency_us, "jit", nb)
     return res
 
 
@@ -249,7 +278,8 @@ def show(name, r):
     a, b, c, d = r["asap"], r["alap"], r["asap_nobar"], r["alap_nobar"]
     print(f"{name:18s} mid {a['mid']:2d}  meas depth {a['meas_depth']:2d}  dec depth {a['dec_depth']:2d}  "
           f"T {a['T_us']:6.2f} us | wait q.us: as built ASAP {a['wait_qus']:6.2f} ALAP {b['wait_qus']:6.2f}; "
-          f"no barriers ASAP {c['wait_qus']:6.2f} ALAP {d['wait_qus']:6.2f} | idle ASAP {a['idle_qus']:6.2f} "
+          f"no barriers ASAP {c['wait_qus']:6.2f} ALAP {d['wait_qus']:6.2f}; JIT {r['jit']['wait_qus']:6.2f} "
+          f"JIT no barriers {r['jit_nobar']['wait_qus']:6.2f} | idle ASAP {a['idle_qus']:6.2f} "
           f"ALAP no barriers {d['idle_qus']:6.2f}")
 
 

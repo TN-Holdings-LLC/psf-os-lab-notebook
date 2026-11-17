@@ -1,0 +1,20 @@
+[
+ {
+  "L": 1,
+  "tvd": 0.0,
+  "conditionals": 1,
+  "ok": true
+ },
+ {
+  "L": 2,
+  "tvd": 1.1081088303888098e-15,
+  "conditionals": 3,
+  "ok": true
+ },
+ {
+  "L": 3,
+  "tvd": 2.19287682088308e-15,
+  "conditionals": 5,
+  "ok": true
+ }
+]
