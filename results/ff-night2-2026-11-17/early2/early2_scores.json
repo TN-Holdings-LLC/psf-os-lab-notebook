@@ -1,0 +1,129 @@
+{
+ "rows": {
+  "1": {
+   "p_ff": 0.903,
+   "e": 0.03411390145029103,
+   "c": 0.14286334282261803,
+   "g": 0.108749441372327,
+   "se": 0.004679503178757334,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.8452500000000001,
+   "post": 0.9488970588235294,
+   "kept": 0.68,
+   "sentinel": "DEAD",
+   "floor": 0.9975,
+   "ff_noiseless": 0.8904214154535403,
+   "overshoot": true,
+   "verdict": "OVERSHOOT"
+  },
+  "2": {
+   "p_ff": 0.77675,
+   "e": 0.10143246429138575,
+   "c": 0.24734851441101446,
+   "g": 0.14591605011962872,
+   "se": 0.006584250859057543,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.639,
+   "post": 0.8154180238870793,
+   "kept": 0.4605,
+   "sentinel": "DEAD",
+   "floor": 0.99275,
+   "ff_noiseless": 0.7928502970982866,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "3": {
+   "p_ff": 0.6952499999999999,
+   "e": 0.12770699529733165,
+   "c": 0.3219167782035437,
+   "g": 0.19420978290621205,
+   "se": 0.007278005178275157,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.534,
+   "post": 0.7395277989337395,
+   "kept": 0.32825,
+   "sentinel": "DEAD",
+   "floor": 0.9615,
+   "ff_noiseless": 0.7059708837850173,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "4": {
+   "p_ff": 0.60825,
+   "e": 0.1629544405888912,
+   "c": 0.37325296826721743,
+   "g": 0.21029852767832624,
+   "se": 0.007718191781434302,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.42600000000000005,
+   "post": 0.5473790322580645,
+   "kept": 0.248,
+   "sentinel": "DEAD",
+   "floor": 0.94975,
+   "ff_noiseless": 0.6286115936088438,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "5": {
+   "p_ff": 0.51225,
+   "e": 0.2104564021360451,
+   "c": 0.4066332229378482,
+   "g": 0.1961768208018031,
+   "se": 0.007903321097804391,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.386,
+   "post": 0.48189762796504365,
+   "kept": 0.20025,
+   "sentinel": "DEAD",
+   "floor": 0.9125,
+   "ff_noiseless": 0.5597292249516941,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "6": {
+   "p_ff": 0.48024999999999995,
+   "e": 0.19700821610881214,
+   "c": 0.42621691696341624,
+   "g": 0.2292087008546041,
+   "se": 0.007899524313210258,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.33275,
+   "post": 0.3629402756508423,
+   "kept": 0.16325,
+   "sentinel": "DEAD",
+   "floor": 0.80925,
+   "ff_noiseless": 0.4983948887521974,
+   "overshoot": false,
+   "verdict": "BEYOND THE CORRECTION CEILING"
+  },
+  "7": {
+   "p_ff": 0.48724999999999996,
+   "e": 0.1474180891869934,
+   "c": 0.4352783971021428,
+   "g": 0.2878603079151494,
+   "se": 0.007903123393633684,
+   "ceiling_verdict": "BEYOND THE CORRECTION CEILING",
+   "off": 0.399,
+   "post": 0.3871595330739299,
+   "kept": 0.1285,
+   "sentinel": "DEAD",
+   "floor": 0.7505,
+   "ff_noiseless": 0.4437814822975703,
+   "overshoot": true,
+   "verdict": "OVERSHOOT"
+  }
+ },
+ "slope": {
+  "slope": 0.026373339319878307,
+  "se": 0.0012191918963426445,
+  "verdict": "NOT SHOWN",
+  "overshoot_at": [
+   1,
+   7
+  ]
+ },
+ "predictions": {
+  "N2-1 BEYOND at every L = 1 .. 7": "failed",
+  "N2-2 COMPOUNDS over L = 1 .. 7": "failed"
+ }
+}

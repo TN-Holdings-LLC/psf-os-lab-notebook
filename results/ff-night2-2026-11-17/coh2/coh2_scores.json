@@ -1,0 +1,285 @@
+{
+ "cards": {
+  "coh2": {
+   "tag": "coh2",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "L": 2,
+   "theta": 1.1,
+   "m": 2,
+   "exact": 0.8781824642913858,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.742,
+    "two_se": 0.013836039895866157,
+    "still_failed_after_m": 0.18075,
+    "minus_exact": -0.1361824642913858,
+    "in_se": -19.685179475678375,
+    "p1_measured_bit": 0.258
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.6074999999999999,
+    "two_se": 0.01544162394309614,
+    "minus_exact": -0.27068246429138587,
+    "in_se": -35.05880797108861,
+    "p1_measured_bit": 0.3925
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1803,
+    "discarded": 2197,
+    "kept_share": 0.45075,
+    "p1": 0.8164170826400443,
+    "two_se": 0.01823493869055757,
+    "minus_exact": -0.06176538165134149,
+    "in_se": -6.774399705914546,
+    "p1_measured_bit": 0.18358291735995563
+   },
+   "floor": {
+    "all_zero": 0.97175,
+    "ones_per_bit": [
+     0.00075,
+     0.0005,
+     0.00875,
+     0.01675,
+     0.00225
+    ]
+   },
+   "sentinel": "DEAD",
+   "d": 0.13450000000000006,
+   "se_d": 0.010366770832809994,
+   "d_in_se": 12.974146160761885,
+   "verdict": "CLOSER WITH CONTROL",
+   "loss_vs_noiseless": -0.05085029709828659
+  },
+  "rd2": {
+   "tag": "rd2",
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "L": 2,
+   "theta": 1.1,
+   "m": 2,
+   "exact": 0.8781824642913858,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.75925,
+    "two_se": 0.01351996440453894,
+    "still_failed_after_m": 0.20925,
+    "minus_exact": -0.11893246429138582,
+    "in_se": -17.593606126870817,
+    "p1_measured_bit": 0.24075
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.64175,
+    "two_se": 0.015162682397913636,
+    "minus_exact": -0.23643246429138576,
+    "in_se": -31.186099937557028,
+    "p1_measured_bit": 0.35825
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1810,
+    "discarded": 2190,
+    "kept_share": 0.4525,
+    "p1": 0.8110497237569061,
+    "two_se": 0.018402982544169298,
+    "minus_exact": -0.0671327405344797,
+    "in_se": -7.29585439461819,
+    "p1_measured_bit": 0.18895027624309393
+   },
+   "floor": {
+    "all_zero": 0.98825,
+    "ones_per_bit": [
+     0.00075,
+     0.00125,
+     0.002,
+     0.00225,
+     0.00725
+    ]
+   },
+   "sentinel": "DEAD",
+   "d": 0.11749999999999994,
+   "se_d": 0.010157464927333,
+   "d_in_se": 11.567846981564857,
+   "verdict": "CLOSER WITH CONTROL",
+   "loss_vs_noiseless": -0.0336002970982866
+  },
+  "coh3": {
+   "tag": "coh3",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "L": 3,
+   "theta": 1.1,
+   "m": 2,
+   "exact": 0.8229569952973316,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.641,
+    "two_se": 0.01516967369457893,
+    "still_failed_after_m": 0.26175,
+    "minus_exact": -0.18195699529733156,
+    "in_se": -23.98957274372436,
+    "p1_measured_bit": 0.359
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.48675,
+    "two_se": 0.015805835552099103,
+    "minus_exact": -0.33620699529733156,
+    "in_se": -42.542135047416885,
+    "p1_measured_bit": 0.51325
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1342,
+    "discarded": 2658,
+    "kept_share": 0.3355,
+    "p1": 0.6825633383010432,
+    "two_se": 0.025412872543930664,
+    "minus_exact": -0.14039365699628836,
+    "in_se": -11.049019094838098,
+    "p1_measured_bit": 0.3174366616989568
+   },
+   "floor": {
+    "all_zero": 0.95475,
+    "ones_per_bit": [
+     0.00075,
+     0.0,
+     0.00775,
+     0.0155,
+     0.001,
+     0.02025,
+     0.0015
+    ]
+   },
+   "sentinel": "DEAD",
+   "d": 0.15425,
+   "se_d": 0.010953805702813976,
+   "d_in_se": 14.081863800119622,
+   "verdict": "CLOSER WITH CONTROL",
+   "loss_vs_noiseless": -0.06497088378501725
+  },
+  "rd3": {
+   "tag": "rd3",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "L": 3,
+   "theta": 1.1,
+   "m": 2,
+   "exact": 0.8229569952973316,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.65125,
+    "two_se": 0.015070615033899578,
+    "still_failed_after_m": 0.28975,
+    "minus_exact": -0.17170699529733158,
+    "in_se": -22.786992423480644,
+    "p1_measured_bit": 0.34875
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.5295000000000001,
+    "two_se": 0.01578384458869258,
+    "minus_exact": -0.2934569952973315,
+    "in_se": -37.18447601892403,
+    "p1_measured_bit": 0.4705
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1306,
+    "discarded": 2694,
+    "kept_share": 0.3265,
+    "p1": 0.6975497702909648,
+    "two_se": 0.02541984900836202,
+    "minus_exact": -0.1254072250063668,
+    "in_se": -9.86687410811239,
+    "p1_measured_bit": 0.30245022970903523
+   },
+   "floor": {
+    "all_zero": 0.97125,
+    "ones_per_bit": [
+     0.0005,
+     0.001,
+     0.003,
+     0.0025,
+     0.01325,
+     0.015,
+     0.00175
+    ]
+   },
+   "sentinel": "DEAD",
+   "d": 0.12174999999999991,
+   "se_d": 0.010911612936454445,
+   "d_in_se": 11.15783713269806,
+   "verdict": "CLOSER WITH CONTROL",
+   "loss_vs_noiseless": -0.05472088378501727
+  }
+ },
+ "beside": {
+  "2": {
+   "coh_closer_to_noiseless_by": -0.017249999999999988,
+   "two_se": 0.019344907275559632
+  },
+  "3": {
+   "coh_closer_to_noiseless_by": -0.010249999999999981,
+   "two_se": 0.021383227948558188
+  }
+ },
+ "verdicts": {
+  "coh2": "CLOSER WITH CONTROL",
+  "rd2": "CLOSER WITH CONTROL",
+  "coh3": "CLOSER WITH CONTROL",
+  "rd3": "CLOSER WITH CONTROL"
+ }
+}

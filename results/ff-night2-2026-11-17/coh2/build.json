@@ -1,0 +1,167 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "coh2": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 18,
+   "off_cz": 8,
+   "floor_cz": 18,
+   "depth": 80,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "cz_in_blocks": 10
+  },
+  "rd2": {
+   "n": 4,
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "cz": 12,
+   "off_cz": 6,
+   "floor_cz": 12,
+   "depth": 44,
+   "mid": 4,
+   "conditionals": 2,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "cz_in_blocks": 6
+  },
+  "coh3": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 28,
+   "off_cz": 13,
+   "floor_cz": 28,
+   "depth": 119,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 15
+  },
+  "rd3": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 73,
+   "mid": 6,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11
+  }
+ },
+ "circuits": 16,
+ "qpu_seconds_model": 20.9,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

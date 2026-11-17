@@ -1,0 +1,339 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "ea1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 2,
+   "off_cz": 1,
+   "floor_cz": 2,
+   "depth": 15,
+   "mid": 2,
+   "conditionals": 1,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 1,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 2,
+    "tries": [
+     [
+      0,
+      1
+     ]
+    ],
+    "exact": 0.937113901450291
+   },
+   "cz_in_blocks": 1
+  },
+  "ea2": {
+   "n": 4,
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "cz": 4,
+   "off_cz": 6,
+   "floor_cz": 4,
+   "depth": 22,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "cz_in_blocks": -2
+  },
+  "ea3": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 6,
+   "off_cz": 11,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 8,
+   "conditionals": 5,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": -5
+  },
+  "ea4": {
+   "n": 8,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "cz": 8,
+   "off_cz": 16,
+   "floor_cz": 8,
+   "depth": 36,
+   "mid": 11,
+   "conditionals": 7,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 4,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 8,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "exact": 0.7712044405888911
+   },
+   "cz_in_blocks": -8
+  },
+  "ea5": {
+   "n": 10,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "cz": 10,
+   "off_cz": 21,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 14,
+   "conditionals": 9,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 5,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 10,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      9
+     ]
+    ],
+    "exact": 0.7227064021360451
+   },
+   "cz_in_blocks": -11
+  },
+  "ea6": {
+   "n": 12,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "cz": 12,
+   "off_cz": 26,
+   "floor_cz": 12,
+   "depth": 50,
+   "mid": 17,
+   "conditionals": 11,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 6,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 12,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      9
+     ],
+     [
+      10,
+      11
+     ]
+    ],
+    "exact": 0.6772582161088121
+   },
+   "cz_in_blocks": -14
+  },
+  "ea7": {
+   "n": 14,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "cz": 14,
+   "off_cz": 31,
+   "floor_cz": 14,
+   "depth": 57,
+   "mid": 20,
+   "conditionals": 13,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 7,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 14,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      9
+     ],
+     [
+      10,
+      11
+     ],
+     [
+      12,
+      13
+     ]
+    ],
+    "exact": 0.6346680891869934
+   },
+   "cz_in_blocks": -17
+  }
+ },
+ "circuits": 25,
+ "qpu_seconds_model": 30.9,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}
