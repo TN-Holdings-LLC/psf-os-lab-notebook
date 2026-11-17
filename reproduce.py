@@ -198,6 +198,13 @@ RESULTS = {
     # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
     "ff-night2-2026-11-17-apps2": ("results/ff-night2-2026-11-17/apps2", ["job", "runs", "build.json"],
         ["gpu/apps2_night.py", "score", "{T}"], "apps2_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
+    "os-night-2026-11-17-dw": ("results/os-night-2026-11-17/dw", ["job", "runs", "build.json"],
+        ["gpu/wait_night.py", "score", "{T}"], "wait_scores.json"),
+    "os-night-2026-11-17-dc": ("results/os-night-2026-11-17/dc", ["job", "runs", "build.json"],
+        ["gpu/ctrl_night.py", "score", "{T}"], "ctrl_scores.json"),
+    "os-night-2026-11-17-main": ("results/os-night-2026-11-17/main", ["job", "runs", "build.json", "rule.json"],
+        ["gpu/os_night.py", "score", "{T}"], "os_scores.json"),
 }
 
 

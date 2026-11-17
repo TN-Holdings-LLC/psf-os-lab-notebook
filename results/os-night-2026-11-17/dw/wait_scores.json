@@ -1,0 +1,292 @@
+{
+ "cards": {
+  "Aref": {
+   "tag": "Aref",
+   "chain": [
+    0,
+    1
+   ],
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3312,
+    "share": 0.828,
+    "two_se": 0.011933817494833748
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3304,
+    "share": 0.826,
+    "two_se": 0.011988494484296184
+   },
+   "floor": {
+    "all_zero": 0.998,
+    "ones_per_bit": [
+     0.002
+    ]
+   },
+   "bound": null,
+   "sentinel": "DEAD",
+   "off_best_fixed_rule_after_the_fact": 0.826
+  },
+  "AwP": {
+   "tag": "AwP",
+   "chain": [
+    0,
+    1
+   ],
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3100,
+    "share": 0.775,
+    "two_se": 0.013205112646244256
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3087,
+    "share": 0.77175,
+    "two_se": 0.013272224286079555
+   },
+   "floor": {
+    "all_zero": 0.997,
+    "ones_per_bit": [
+     0.001,
+     0.00075,
+     0.00025,
+     0.0015
+    ]
+   },
+   "bound": null,
+   "sentinel": "DEAD",
+   "off_best_fixed_rule_after_the_fact": 0.77175
+  },
+  "AwT": {
+   "tag": "AwT",
+   "chain": [
+    0,
+    1
+   ],
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3162,
+    "share": 0.7905,
+    "two_se": 0.012868945178218766
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3141,
+    "share": 0.78525,
+    "two_se": 0.012985855285656005
+   },
+   "floor": {
+    "all_zero": 0.99825,
+    "ones_per_bit": [
+     0.0005,
+     0.00075,
+     0.0005,
+     0.0005
+    ]
+   },
+   "bound": null,
+   "sentinel": "DEAD",
+   "off_best_fixed_rule_after_the_fact": 0.78525
+  },
+  "Bref": {
+   "tag": "Bref",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3975,
+    "share": 0.99375,
+    "two_se": 0.0024921752546721064
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3976,
+    "share": 0.994,
+    "two_se": 0.002442130217658347
+   },
+   "floor": {
+    "all_zero": 0.99925,
+    "ones_per_bit": [
+     0.00075
+    ]
+   },
+   "bound": null,
+   "sentinel": "DEAD",
+   "off_best_fixed_rule_after_the_fact": 0.994
+  },
+  "BwP": {
+   "tag": "BwP",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3703,
+    "share": 0.92575,
+    "two_se": 0.008290774240081565
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3678,
+    "share": 0.9195,
+    "two_se": 0.00860347313589111
+   },
+   "floor": {
+    "all_zero": 0.9595,
+    "ones_per_bit": [
+     0.01875,
+     0.0195,
+     0.015,
+     0.00275
+    ]
+   },
+   "bound": null,
+   "sentinel": "DEAD",
+   "off_best_fixed_rule_after_the_fact": 0.9195
+  },
+  "BwT": {
+   "tag": "BwT",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3579,
+    "share": 0.89475,
+    "two_se": 0.009704248425303217
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "success": 3571,
+    "share": 0.89275,
+    "two_se": 0.009785061956881008
+   },
+   "floor": {
+    "all_zero": 0.9635,
+    "ones_per_bit": [
+     0.01825,
+     0.01375,
+     0.016,
+     0.00225
+    ]
+   },
+   "bound": null,
+   "sentinel": "DEAD",
+   "off_best_fixed_rule_after_the_fact": 0.89275
+  }
+ },
+ "positions": {
+  "A": {
+   "shares": {
+    "ref": 0.828,
+    "T_mid": 0.78525,
+    "T_ff": 0.7905,
+    "P_mid": 0.77175,
+    "P_ff": 0.775
+   },
+   "differences": {
+    "meas": {
+     "d": 0.042749999999999955,
+     "two_se": 0.017636565354399367,
+     "beyond_2se": true
+    },
+    "cond": {
+     "d": -0.005249999999999977,
+     "two_se": 0.018282291636991244,
+     "beyond_2se": false
+    },
+    "phase_mid": {
+     "d": 0.013499999999999956,
+     "two_se": 0.018568370283899446,
+     "beyond_2se": false
+    },
+    "phase_ff": {
+     "d": 0.015499999999999958,
+     "two_se": 0.018438675386263516,
+     "beyond_2se": false
+    }
+   },
+   "output_qubit": 1,
+   "reading": "phase"
+  },
+  "B": {
+   "shares": {
+    "ref": 0.99375,
+    "T_mid": 0.89275,
+    "T_ff": 0.89475,
+    "P_mid": 0.9195,
+    "P_ff": 0.92575
+   },
+   "differences": {
+    "meas": {
+     "d": 0.10099999999999998,
+     "two_se": 0.01009744398350394,
+     "beyond_2se": true
+    },
+    "cond": {
+     "d": -0.0020000000000000018,
+     "two_se": 0.013781142006379584,
+     "beyond_2se": false
+    },
+    "phase_mid": {
+     "d": -0.02674999999999994,
+     "two_se": 0.013029473799812485,
+     "beyond_2se": true
+    },
+    "phase_ff": {
+     "d": -0.030999999999999917,
+     "two_se": 0.012763595692437143,
+     "beyond_2se": true
+    }
+   },
+   "output_qubit": 5,
+   "reading": "waits"
+  }
+ },
+ "predictions": {
+  "1 position A: D_cond >= 2 SE": "failed",
+  "2 ref at A below ref at B by >= 2 SE": "held"
+ }
+}

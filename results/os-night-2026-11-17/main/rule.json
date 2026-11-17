@@ -1,0 +1,75 @@
+{
+ "pick": {
+  "1": "P2",
+  "2": "P2",
+  "3": "P2"
+ },
+ "why": "rule 1 (Dc late-use loss); rule 2 per L (Dr)",
+ "late_nb": {
+  "A": {
+   "d": 0.07275000000000009,
+   "two_se": 0.011379199774149322,
+   "beyond_2se": true
+  },
+  "B": {
+   "d": 0.07499999999999996,
+   "two_se": 0.011248422111567472,
+   "beyond_2se": true
+  }
+ },
+ "late_loss": {
+  "A": true,
+  "B": true
+ },
+ "cond": {
+  "A": {
+   "d": -0.005249999999999977,
+   "two_se": 0.018282291636991244,
+   "beyond_2se": false
+  },
+  "B": {
+   "d": -0.0020000000000000018,
+   "two_se": 0.013781142006379584,
+   "beyond_2se": false
+  }
+ },
+ "cond_loss": {
+  "A": false,
+  "B": false
+ },
+ "dr": {
+  "1": {
+   "item": "Anow",
+   "p_read1_given1": 0.82575,
+   "p_read0_given0": 0.9995,
+   "gap": {
+    "d": 0.17375000000000007,
+    "two_se": 0.012016101177170571,
+    "loss": true
+   },
+   "physical_qubit": 1
+  },
+  "2": {
+   "item": "Bnow",
+   "p_read1_given1": 0.988,
+   "p_read0_given0": 0.994,
+   "gap": {
+    "d": 0.006000000000000005,
+    "two_se": 0.004221374183841088,
+    "loss": true
+   },
+   "physical_qubit": 3
+  },
+  "3": {
+   "item": "Bref",
+   "p_read1_given1": 0.99375,
+   "p_read0_given0": 0.99925,
+   "gap": {
+    "d": 0.005499999999999949,
+    "two_se": 0.002638252262388873,
+    "loss": true
+   },
+   "physical_qubit": 5
+  }
+ }
+}

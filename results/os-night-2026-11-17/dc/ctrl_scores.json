@@ -1,0 +1,204 @@
+{
+ "positions": {
+  "A": {
+   "shares": {
+    "now": {
+     "target": {
+      "share": 0.96525,
+      "counted": 4000,
+      "two_se": 0.0057915833327338
+     },
+     "control": {
+      "share": 0.82575,
+      "counted": 4000,
+      "two_se": 0.011995288137431299
+     }
+    },
+    "now_repeat": {
+     "target": {
+      "share": 0.9625,
+      "counted": 4000,
+      "two_se": 0.006007807420348957
+     },
+     "control": {
+      "share": 0.81675,
+      "counted": 4000,
+      "two_se": 0.012233946113172151
+     }
+    },
+    "far": {
+     "target": {
+      "share": 0.88575,
+      "counted": 4000,
+      "two_se": 0.01005966885637892
+     },
+     "control": {
+      "share": 0.74725,
+      "counted": 4000,
+      "two_se": 0.013742904987665455
+     }
+    },
+    "far_repeat": {
+     "target": {
+      "share": 0.8925,
+      "counted": 4000,
+      "two_se": 0.009795088054734375
+     },
+     "control": {
+      "share": 0.77,
+      "counted": 4000,
+      "two_se": 0.013307892395116514
+     }
+    },
+    "nb": {
+     "target": {
+      "share": 0.8925,
+      "counted": 4000,
+      "two_se": 0.009795088054734375
+     },
+     "control": {
+      "share": 0.7605,
+      "counted": 4000,
+      "two_se": 0.013495916048938657
+     }
+    },
+    "nb_repeat": {
+     "target": {
+      "share": 0.8865,
+      "counted": 4000,
+      "two_se": 0.010030839944889961
+     },
+     "control": {
+      "share": 0.74475,
+      "counted": 4000,
+      "two_se": 0.013787582728672927
+     }
+    }
+   },
+   "differences": {
+    "late_far": {
+     "d": 0.07950000000000002,
+     "two_se": 0.011607729106074105,
+     "beyond_2se": true
+    },
+    "late_nb": {
+     "d": 0.07275000000000009,
+     "two_se": 0.011379199774149322,
+     "beyond_2se": true
+    },
+    "nb_beyond_time": {
+     "d": -0.006749999999999923,
+     "two_se": 0.014040679737818964,
+     "beyond_2se": false
+    }
+   },
+   "reading": "time"
+  },
+  "B": {
+   "shares": {
+    "now": {
+     "target": {
+      "share": 0.968,
+      "counted": 4000,
+      "two_se": 0.005565608681896351
+     },
+     "control": {
+      "share": 0.988,
+      "counted": 4000,
+      "two_se": 0.003443254274665176
+     }
+    },
+    "now_repeat": {
+     "target": {
+      "share": 0.9665,
+      "counted": 4000,
+      "two_se": 0.005690144989365383
+     },
+     "control": {
+      "share": 0.989,
+      "counted": 4000,
+      "two_se": 0.0032983329122452166
+     }
+    },
+    "far": {
+     "target": {
+      "share": 0.90675,
+      "counted": 4000,
+      "two_se": 0.00919534868833151
+     },
+     "control": {
+      "share": 0.92325,
+      "counted": 4000,
+      "two_se": 0.008417804791036675
+     }
+    },
+    "far_repeat": {
+     "target": {
+      "share": 0.9045,
+      "counted": 4000,
+      "two_se": 0.009294070690499402
+     },
+     "control": {
+      "share": 0.92125,
+      "counted": 4000,
+      "two_se": 0.008517537055980443
+     }
+    },
+    "nb": {
+     "target": {
+      "share": 0.893,
+      "counted": 4000,
+      "two_se": 0.009775019181566856
+     },
+     "control": {
+      "share": 0.9085,
+      "counted": 4000,
+      "two_se": 0.00911744207549464
+     }
+    },
+    "nb_repeat": {
+     "target": {
+      "share": 0.89975,
+      "counted": 4000,
+      "two_se": 0.009497364766081167
+     },
+     "control": {
+      "share": 0.91425,
+      "counted": 4000,
+      "two_se": 0.00885420450972305
+     }
+    }
+   },
+   "differences": {
+    "late_far": {
+     "d": 0.06125000000000003,
+     "two_se": 0.010748508617478057,
+     "beyond_2se": true
+    },
+    "late_nb": {
+     "d": 0.07499999999999996,
+     "two_se": 0.011248422111567472,
+     "beyond_2se": true
+    },
+    "nb_beyond_time": {
+     "d": 0.013749999999999929,
+     "two_se": 0.013420336713361555,
+     "beyond_2se": true
+    }
+   },
+   "reading": "reading the neighbours"
+  }
+ },
+ "sentinel": "DEAD",
+ "floor": {
+  "Afar": 0.99025,
+  "Anb": 0.9965,
+  "Anow": 0.998,
+  "Bfar": 0.9735,
+  "Bnb": 0.958,
+  "Bnow": 0.9755
+ },
+ "predictions": {
+  "1 position A: D_late_nb >= 2 SE": "held"
+ }
+}

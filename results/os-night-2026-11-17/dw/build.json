@@ -1,0 +1,124 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "Aref": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 2,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1
+   },
+   "bound": null
+  },
+  "AwT": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 7,
+   "mid": 2,
+   "conditionals": 2,
+   "success": {
+    "3": 1
+   },
+   "bound": null
+  },
+  "AwP": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 12,
+   "mid": 3,
+   "conditionals": 2,
+   "success": {
+    "3": 1
+   },
+   "bound": null
+  },
+  "Bref": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 2,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1
+   },
+   "bound": null
+  },
+  "BwT": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 7,
+   "mid": 2,
+   "conditionals": 2,
+   "success": {
+    "3": 1
+   },
+   "bound": null
+  },
+  "BwP": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 12,
+   "mid": 3,
+   "conditionals": 2,
+   "success": {
+    "3": 1
+   },
+   "bound": null
+  }
+ },
+ "circuits": 22,
+ "qpu_seconds_model": 27.6,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

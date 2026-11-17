@@ -1,0 +1,411 @@
+{
+ "pick": {
+  "1": "P2",
+  "2": "P2",
+  "3": "P2"
+ },
+ "cards": {
+  "p0_1": {
+   "tag": "p0_1",
+   "chain": [
+    0,
+    1
+   ],
+   "L": 1,
+   "theta": 1.1,
+   "m": 3,
+   "exact": 0.937113901450291,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.71825,
+    "two_se": 0.014225573362785768,
+    "still_failed_after_m": 0.04175,
+    "minus_exact": -0.218863901450291,
+    "in_se": -30.770485782012976
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.64375,
+    "two_se": 0.015143841570090463,
+    "minus_exact": -0.293363901450291,
+    "in_se": -38.74365696346077
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 2729,
+    "discarded": 1271,
+    "kept_share": 0.68225,
+    "p1": 0.7423964822279223,
+    "two_se": 0.016742568141898583,
+    "minus_exact": -0.19471741922236874,
+    "in_se": -23.260161472490573
+   },
+   "floor": {
+    "all_zero": 0.9995,
+    "ones_per_bit": [
+     0.0005,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "sentinel": "DEAD",
+   "prescription": "P0",
+   "d": 0.07450000000000001,
+   "se_d": 0.010388730372379484,
+   "verdict": "CLOSER WITH CONTROL"
+  },
+  "p0_2": {
+   "tag": "p0_2",
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "L": 2,
+   "theta": 1.1,
+   "m": 3,
+   "exact": 0.8781824642913858,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.6945,
+    "two_se": 0.014566047851081638,
+    "still_failed_after_m": 0.0675,
+    "minus_exact": -0.1836824642913858,
+    "in_se": -25.22063172787751
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.62025,
+    "two_se": 0.015347310432124582,
+    "minus_exact": -0.25793246429138583,
+    "in_se": -33.61272523053791
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1702,
+    "discarded": 2298,
+    "kept_share": 0.4255,
+    "p1": 0.836075205640423,
+    "two_se": 0.017947138475109748,
+    "minus_exact": -0.042107258650962764,
+    "in_se": -4.692364602787217
+   },
+   "floor": {
+    "all_zero": 0.95425,
+    "ones_per_bit": [
+     0.00025,
+     0.00025,
+     0.0005,
+     0.019,
+     0.01825,
+     0.01625,
+     0.007
+    ]
+   },
+   "sentinel": "DEAD",
+   "prescription": "P0",
+   "d": 0.07425000000000004,
+   "se_d": 0.010579575694469037,
+   "verdict": "CLOSER WITH CONTROL"
+  },
+  "p0_3": {
+   "tag": "p0_3",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "L": 3,
+   "theta": 1.1,
+   "m": 3,
+   "exact": 0.8229569952973316,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.578,
+    "two_se": 0.015617810345883958,
+    "still_failed_after_m": 0.08575,
+    "minus_exact": -0.24495699529733161,
+    "in_se": -31.36892943022445
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.4825,
+    "two_se": 0.015801700857819075,
+    "minus_exact": -0.3404569952973316,
+    "in_se": -43.09118345685743
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1229,
+    "discarded": 2771,
+    "kept_share": 0.30725,
+    "p1": 0.6598860862489829,
+    "two_se": 0.027027180329494294,
+    "minus_exact": -0.16307090904834864,
+    "in_se": -12.067178822231202
+   },
+   "floor": {
+    "all_zero": 0.92725,
+    "ones_per_bit": [
+     0.00075,
+     0.0005,
+     0.0005,
+     0.01925,
+     0.01775,
+     0.01575,
+     0.01675,
+     0.01525,
+     0.011,
+     0.0035
+    ]
+   },
+   "sentinel": "DEAD",
+   "prescription": "P0",
+   "d": 0.09549999999999997,
+   "se_d": 0.011108664973794107,
+   "verdict": "CLOSER WITH CONTROL"
+  },
+  "x1": {
+   "tag": "x1",
+   "chain": [
+    0,
+    1
+   ],
+   "L": 1,
+   "theta": 1.1,
+   "m": 2,
+   "exact": 0.937113901450291,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.9025,
+    "two_se": 0.009380498387612462,
+    "still_failed_after_m": 0.1035,
+    "minus_exact": -0.034613901450291085,
+    "in_se": -7.379970662539832,
+    "p1_measured_bit": 0.0975
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.8315,
+    "two_se": 0.011836711958985908,
+    "minus_exact": -0.10561390145029104,
+    "in_se": -17.845141761705815,
+    "p1_measured_bit": 0.1685
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 2750,
+    "discarded": 1250,
+    "kept_share": 0.6875,
+    "p1": 0.9381818181818182,
+    "two_se": 0.00918470619829021,
+    "minus_exact": 0.0010679167315271743,
+    "in_se": 0.2325423826242746,
+    "p1_measured_bit": 0.06181818181818182
+   },
+   "floor": {
+    "all_zero": 0.9985,
+    "ones_per_bit": [
+     0.00075,
+     0.00075,
+     0.00025
+    ]
+   },
+   "sentinel": "DEAD",
+   "prescription": "P2",
+   "d": 0.07099999999999995,
+   "se_d": 0.0075515147487110156,
+   "verdict": "CLOSER WITH CONTROL"
+  },
+  "x2": {
+   "tag": "x2",
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "L": 2,
+   "theta": 1.1,
+   "m": 2,
+   "exact": 0.8781824642913858,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.73725,
+    "two_se": 0.01391806155684045,
+    "still_failed_after_m": 0.2235,
+    "minus_exact": -0.14093246429138584,
+    "in_se": -20.25173745867223,
+    "p1_measured_bit": 0.26275
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.644,
+    "two_se": 0.015141466243399283,
+    "minus_exact": -0.23418246429138578,
+    "in_se": -30.932600651337115,
+    "p1_measured_bit": 0.356
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1761,
+    "discarded": 2239,
+    "kept_share": 0.44025,
+    "p1": 0.8268029528676888,
+    "two_se": 0.018035225170622247,
+    "minus_exact": -0.05137951142369701,
+    "in_se": -5.697684496602747,
+    "p1_measured_bit": 0.17319704713231118
+   },
+   "floor": {
+    "all_zero": 0.95975,
+    "ones_per_bit": [
+     0.00075,
+     0.00075,
+     0.02075,
+     0.0185,
+     0.00775
+    ]
+   },
+   "sentinel": "DEAD",
+   "prescription": "P2",
+   "d": 0.09324999999999994,
+   "se_d": 0.010283195484624417,
+   "verdict": "CLOSER WITH CONTROL"
+  },
+  "x3": {
+   "tag": "x3",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "L": 3,
+   "theta": 1.1,
+   "m": 2,
+   "exact": 0.8229569952973316,
+   "ff": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.6565,
+    "two_se": 0.01501691546223791,
+    "still_failed_after_m": 0.2875,
+    "minus_exact": -0.1664569952973316,
+    "in_se": -22.16926581439584,
+    "p1_measured_bit": 0.3435
+   },
+   "off": {
+    "shots": 4000,
+    "counted": 4000,
+    "discarded": 0,
+    "kept_share": 1.0,
+    "p1": 0.55775,
+    "two_se": 0.015705570269811918,
+    "minus_exact": -0.2652069952973316,
+    "in_se": -33.7723483759253,
+    "p1_measured_bit": 0.44225
+   },
+   "post": {
+    "shots": 4000,
+    "counted": 1258,
+    "discarded": 2742,
+    "kept_share": 0.3145,
+    "p1": 0.7400635930047694,
+    "two_se": 0.02473191531882416,
+    "minus_exact": -0.08289340229256215,
+    "in_se": -6.703354853351744,
+    "p1_measured_bit": 0.2599364069952305
+   },
+   "floor": {
+    "all_zero": 0.94675,
+    "ones_per_bit": [
+     0.00025,
+     0.00025,
+     0.02,
+     0.02025,
+     0.01375,
+     0.0115,
+     0.0015
+    ]
+   },
+   "sentinel": "DEAD",
+   "prescription": "P2",
+   "d": 0.09875,
+   "se_d": 0.010864767456094033,
+   "verdict": "CLOSER WITH CONTROL"
+  }
+ },
+ "helps": {
+  "1": {
+   "gain": 0.1842499999999999,
+   "two_se": 0.017039973224744223,
+   "x_ff": 0.9025,
+   "p0_ff": 0.71825,
+   "x_noiseless": 0.891505,
+   "overshoot": true,
+   "verdict": "OVERSHOOT"
+  },
+  "2": {
+   "gain": 0.042749999999999955,
+   "two_se": 0.020146517999396322,
+   "x_ff": 0.73725,
+   "p0_ff": 0.6945,
+   "x_noiseless": 0.792375,
+   "overshoot": false,
+   "verdict": "PRESCRIPTION HELPS"
+  },
+  "3": {
+   "gain": 0.07850000000000001,
+   "two_se": 0.021666189097300892,
+   "x_ff": 0.6565,
+   "p0_ff": 0.578,
+   "x_noiseless": 0.70771,
+   "overshoot": false,
+   "verdict": "PRESCRIPTION HELPS"
+  }
+ },
+ "predictions": {
+  "OS-1 the rule picks a prescription (not P0) for every L": "held",
+  "OS-2 PRESCRIPTION HELPS at L = 1, 2, 3": "failed"
+ }
+}
