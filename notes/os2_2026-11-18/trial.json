@@ -1,0 +1,288 @@
+{
+ "round1": {
+  "round": 1,
+  "device": "ibm_marrakesh",
+  "stacks": {
+   "1": [
+    "P2"
+   ],
+   "2": [
+    "P2"
+   ],
+   "3": [
+    "P2"
+   ]
+  },
+  "rows": {
+   "1": {
+    "stack": [
+     "P2"
+    ],
+    "p": 0.9025,
+    "se": 0.004690249193806232,
+    "noiseless": 0.891505,
+    "p0": 0.71825,
+    "g": 0.1842499999999999,
+    "g_se": 0.008519986612372112,
+    "overshoot": true,
+    "verdict": "OVERSHOOT",
+    "output_qubit": 1
+   },
+   "2": {
+    "stack": [
+     "P2"
+    ],
+    "p": 0.73725,
+    "se": 0.006959030778420226,
+    "noiseless": 0.792375,
+    "p0": 0.6945,
+    "g": 0.042749999999999955,
+    "g_se": 0.010073258999698161,
+    "overshoot": false,
+    "verdict": "PRESCRIPTION HELPS",
+    "output_qubit": 3
+   },
+   "3": {
+    "stack": [
+     "P2"
+    ],
+    "p": 0.6565,
+    "se": 0.007508457731118955,
+    "noiseless": 0.70771,
+    "p0": 0.578,
+    "g": 0.07850000000000001,
+    "g_se": 0.010833094548650446,
+    "overshoot": false,
+    "verdict": "PRESCRIPTION HELPS",
+    "output_qubit": 5
+   }
+  },
+  "dr": {
+   "1": {
+    "p11": 0.82575,
+    "p00": 0.9995,
+    "gap": 0.17375000000000007,
+    "two_se": 0.012016101177170571,
+    "sig": true
+   },
+   "3": {
+    "p11": 0.988,
+    "p00": 0.994,
+    "gap": 0.006000000000000005,
+    "two_se": 0.004221374183841088,
+    "sig": true
+   },
+   "5": {
+    "p11": 0.99375,
+    "p00": 0.99925,
+    "gap": 0.005499999999999949,
+    "two_se": 0.002638252262388873,
+    "sig": true
+   }
+  },
+  "model_seconds_so_far": 27.6
+ },
+ "rule_for_round2": {
+  "round": 2,
+  "device": "ibm_marrakesh",
+  "stacks": {
+   "1": [
+    "P2",
+    "B"
+   ],
+   "2": [
+    "P2"
+   ],
+   "3": [
+    "P2"
+   ]
+  },
+  "why": {
+   "1": "R1 overshoot -> P2 + B",
+   "2": "R4 keep",
+   "3": "R4 keep"
+  },
+  "stop": false,
+  "stop_reason": null,
+  "model_seconds_so_far": 27.6
+ },
+ "round2_as_if": {
+  "round": 2,
+  "device": "ibm_marrakesh",
+  "stacks": {
+   "1": [
+    "P2",
+    "B"
+   ],
+   "2": [
+    "P2"
+   ],
+   "3": [
+    "P2"
+   ]
+  },
+  "rows": {
+   "1": {
+    "stack": [
+     "P2",
+     "B"
+    ],
+    "p": 0.774875,
+    "se": 0.004447180901284543,
+    "noiseless": 0.8904214154535403,
+    "p0": 0.71825,
+    "g": 0.056624999999999925,
+    "g_se": 0.008388632328559287,
+    "overshoot": false,
+    "verdict": "PRESCRIPTION HELPS",
+    "p0_from": "round 1 (another job, an hour earlier)",
+    "rd": 0.90225,
+    "nf": 0.6475,
+    "rd_share": 1.013284254333028,
+    "nf_share": 0.7271837680029213,
+    "share_gap": 0.28610048633010693,
+    "share_gap_two_se": 0.019977870361616815,
+    "output_qubit_rd": 1,
+    "output_qubit_nf": 1
+   },
+   "2": {
+    "stack": [
+     "P2"
+    ],
+    "p": 0.7435,
+    "se": 0.006904848839764706,
+    "noiseless": 0.7928502970982866,
+    "p0": 0.6945,
+    "g": 0.049000000000000044,
+    "g_se": 0.010035904294083318,
+    "overshoot": false,
+    "verdict": "PRESCRIPTION HELPS",
+    "p0_from": "round 1 (another job, an hour earlier)",
+    "output_qubit": 3
+   },
+   "3": {
+    "stack": [
+     "P2"
+    ],
+    "p": 0.6605,
+    "se": 0.00748731844521121,
+    "noiseless": 0.7059708837850173,
+    "p0": 0.578,
+    "g": 0.08250000000000002,
+    "g_se": 0.010818453563240913,
+    "overshoot": false,
+    "verdict": "PRESCRIPTION HELPS",
+    "p0_from": "round 1 (another job, an hour earlier)",
+    "output_qubit": 5
+   }
+  },
+  "dr": {
+   "1": {
+    "p11": 0.82575,
+    "p00": 0.9995,
+    "gap": 0.17375000000000007,
+    "two_se": 0.012016101177170571,
+    "sig": true
+   },
+   "3": {
+    "p11": 0.988,
+    "p00": 0.994,
+    "gap": 0.006000000000000005,
+    "two_se": 0.004221374183841088,
+    "sig": true
+   },
+   "5": {
+    "p11": 0.99375,
+    "p00": 0.99925,
+    "gap": 0.005499999999999949,
+    "two_se": 0.002638252262388873,
+    "sig": true
+   }
+  },
+  "model_seconds_so_far": 68.5
+ },
+ "rule_for_round3": {
+  "round": 3,
+  "device": "ibm_marrakesh",
+  "stacks": {
+   "1": [
+    "P2",
+    "B",
+    "Q4"
+   ],
+   "2": [
+    "P2"
+   ],
+   "3": [
+    "P2"
+   ]
+  },
+  "why": {
+   "1": "R2 frames (nf share 0.727 < rd 1.013; Dr gap on q1 +0.1738) -> +Q4 (output on q5, gap +0.0055)",
+   "2": "R4 keep",
+   "3": "R4 keep"
+  },
+  "stop": false,
+  "stop_reason": null,
+  "model_seconds_so_far": 68.5
+ },
+ "os_compounding": {
+  "common_L": [
+   "2",
+   "3"
+  ],
+  "per_L": {
+   "1": [
+    [
+     1,
+     0.1842499999999999,
+     "OVERSHOOT"
+    ],
+    [
+     2,
+     0.056624999999999925,
+     "PRESCRIPTION HELPS"
+    ]
+   ],
+   "2": [
+    [
+     1,
+     0.042749999999999955,
+     "PRESCRIPTION HELPS"
+    ],
+    [
+     2,
+     0.049000000000000044,
+     "PRESCRIPTION HELPS"
+    ]
+   ],
+   "3": [
+    [
+     1,
+     0.07850000000000001,
+     "PRESCRIPTION HELPS"
+    ],
+    [
+     2,
+     0.08250000000000002,
+     "PRESCRIPTION HELPS"
+    ]
+   ]
+  },
+  "per_round": [
+   {
+    "round": 1,
+    "G": 0.060624999999999984,
+    "se": 0.007396392437786816
+   },
+   {
+    "round": 2,
+    "G": 0.06575000000000003,
+    "se": 0.007378318109501649
+   }
+  ],
+  "difference": 0.005125000000000046,
+  "two_se": 0.020894611670835138,
+  "verdict": "(two rounds: a difference, not a slope) NOT SHOWN"
+ }
+}

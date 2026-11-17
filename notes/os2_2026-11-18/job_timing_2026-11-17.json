@@ -1,0 +1,236 @@
+{
+ "ff-night-2026-11-17": {
+  "queue_before": {
+   "read": "11:14:17",
+   "pending": {
+    "ibm_marrakesh": 1170,
+    "ibm_fez": 1,
+    "ibm_kingston": 5
+   }
+  },
+  "queue_after": null,
+  "jobs": [
+   {
+    "folder": "coh",
+    "job": "dbu2k1ie8crs738avoqg",
+    "status": "DONE",
+    "created": "11:18:46",
+    "running": "11:18:48",
+    "finished": "11:19:04",
+    "wait_s": 1.188188,
+    "run_s": 16.535076,
+    "exec_s": 10.470041088,
+    "exec_share_of_run": 0.633201872673582,
+    "charged_s": 13
+   },
+   {
+    "folder": "early",
+    "job": "dbu2k6qe8crs738avovg",
+    "status": "DONE",
+    "created": "11:19:07",
+    "running": "11:19:09",
+    "finished": "11:20:38",
+    "wait_s": 1.340836,
+    "run_s": 89.659914,
+    "exec_s": 20.579449088,
+    "exec_share_of_run": 0.22952787003565495,
+    "charged_s": 23
+   },
+   {
+    "folder": "compound",
+    "job": "dbu2k38vv3fc73c0n4p0",
+    "status": "DONE",
+    "created": "11:18:53",
+    "running": "11:18:54",
+    "finished": "11:19:27",
+    "wait_s": 1.248699,
+    "run_s": 32.931828,
+    "exec_s": 20.549209088,
+    "exec_share_of_run": 0.6239923604605246,
+    "charged_s": 23
+   },
+   {
+    "folder": "apps",
+    "job": "dbu2k51jbrss73a7668g",
+    "status": "DONE",
+    "created": "11:19:00",
+    "running": "11:19:02",
+    "finished": "11:20:20",
+    "wait_s": 2.007239,
+    "run_s": 77.764141,
+    "exec_s": 48.373449216,
+    "exec_share_of_run": 0.6220534116875284,
+    "charged_s": 51
+   }
+  ]
+ },
+ "ff-night2-2026-11-17": {
+  "queue_before": {
+   "read": "11:26:45",
+   "pending": {
+    "ibm_marrakesh": 2,
+    "ibm_fez": 3,
+    "ibm_kingston": 4
+   }
+  },
+  "queue_after": null,
+  "jobs": [
+   {
+    "folder": "apps2",
+    "job": "dbu2r6k9po4c73cefjr0",
+    "status": "DONE",
+    "created": "11:34:02",
+    "running": "11:34:04",
+    "finished": "11:35:47",
+    "wait_s": 1.910937,
+    "run_s": 102.788488,
+    "exec_s": 56.972877056,
+    "exec_share_of_run": 0.5542729362455453,
+    "charged_s": 59
+   },
+   {
+    "folder": "coh2",
+    "job": "dbu2r38vv3fc73c0nfjg",
+    "status": "DONE",
+    "created": "11:33:49",
+    "running": "11:33:51",
+    "finished": "11:34:16",
+    "wait_s": 1.974663,
+    "run_s": 24.938415,
+    "exec_s": 17.482172928,
+    "exec_share_of_run": 0.7010137945013747,
+    "charged_s": 20
+   },
+   {
+    "folder": "early2",
+    "job": "dbu2r4ovv3fc73c0nfo0",
+    "status": "DONE",
+    "created": "11:33:55",
+    "running": "11:33:57",
+    "finished": "11:34:47",
+    "wait_s": 1.777386,
+    "run_s": 49.468486,
+    "exec_s": 28.676589056,
+    "exec_share_of_run": 0.5796940916283551,
+    "charged_s": 31
+   }
+  ]
+ },
+ "os-night-2026-11-17": {
+  "queue_before": {
+   "read": "11:59:50",
+   "pending": {
+    "ibm_marrakesh": 1,
+    "ibm_fez": 0,
+    "ibm_kingston": 2
+   }
+  },
+  "queue_after": null,
+  "jobs": [
+   {
+    "folder": "dc",
+    "job": "dbu38cc9po4c73ceg5ug",
+    "status": "DONE",
+    "created": "12:02:09",
+    "running": "12:02:10",
+    "finished": "12:03:03",
+    "wait_s": 1.335618,
+    "run_s": 53.225937,
+    "exec_s": 24.039229184,
+    "exec_share_of_run": 0.4516450163009812,
+    "charged_s": 26
+   },
+   {
+    "folder": "dw",
+    "job": "dbu38a0vv3fc73c0o1f0",
+    "status": "DONE",
+    "created": "12:02:00",
+    "running": "12:02:03",
+    "finished": "12:02:38",
+    "wait_s": 2.604995,
+    "run_s": 34.858771,
+    "exec_s": 23.774445056,
+    "exec_share_of_run": 0.6820218950346816,
+    "charged_s": 26
+   },
+   {
+    "folder": "main",
+    "job": "dbu3acae8crs738b0p6g",
+    "status": "DONE",
+    "created": "12:06:25",
+    "running": "12:06:27",
+    "finished": "12:07:00",
+    "wait_s": 1.902117,
+    "run_s": 32.511827,
+    "exec_s": 24.268717056,
+    "exec_share_of_run": 0.7464581137196628,
+    "charged_s": 27
+   }
+  ]
+ },
+ "balanced-night-2026-11-17": {
+  "queue_before": {
+   "read": "12:51:18",
+   "pending": {
+    "ibm_marrakesh": 3,
+    "ibm_fez": 0,
+    "ibm_kingston": 10
+   }
+  },
+  "queue_after": null,
+  "jobs": [
+   {
+    "folder": ".",
+    "job": "dbu40l49po4c73ceh8h0",
+    "status": "DONE",
+    "created": "12:53:56",
+    "running": "12:58:25",
+    "finished": "12:59:15",
+    "wait_s": 269.262964,
+    "run_s": 49.498772,
+    "exec_s": 38.339773184,
+    "exec_share_of_run": 0.7745600877532881,
+    "charged_s": 41
+   }
+  ]
+ },
+ "packing-night-2026-11-17": {
+  "queue_before": {
+   "read": "15:21:38",
+   "pending": {
+    "ibm_marrakesh": 0,
+    "ibm_fez": 0,
+    "ibm_kingston": 37
+   }
+  },
+  "queue_after": null,
+  "jobs": [
+   {
+    "folder": "packed",
+    "job": "dbu66rae8crs738b4i5g",
+    "status": "DONE",
+    "created": "15:23:41",
+    "running": "15:23:43",
+    "finished": "15:33:25",
+    "wait_s": 1.678371,
+    "run_s": 581.632784,
+    "exec_s": 9.082333184,
+    "exec_share_of_run": 0.015615235993987573,
+    "charged_s": 11
+   },
+   {
+    "folder": "single1",
+    "job": "dbu66povv3fc73c0rtc0",
+    "status": "DONE",
+    "created": "15:23:35",
+    "running": "15:23:36",
+    "finished": "15:32:58",
+    "wait_s": 1.453372,
+    "run_s": 561.662013,
+    "exec_s": 38.601245184,
+    "exec_share_of_run": 0.06872682198644614,
+    "charged_s": 41
+   }
+  ]
+ }
+}

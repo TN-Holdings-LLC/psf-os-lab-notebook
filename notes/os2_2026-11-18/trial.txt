@@ -1,0 +1,11 @@
+round 1 (os-night main, recorded):
+  L 1 [P2]: P 0.9025 (noiseless 0.8915) P0 0.7183 g +0.1842 (2 SE 0.0170) -> OVERSHOOT
+  L 2 [P2]: P 0.7372 (noiseless 0.7924) P0 0.6945 g +0.0427 (2 SE 0.0201) -> PRESCRIPTION HELPS
+  L 3 [P2]: P 0.6565 (noiseless 0.7077) P0 0.5780 g +0.0785 (2 SE 0.0217) -> PRESCRIPTION HELPS
+rule -> round 2: {1: ('P2+B', 'R1 overshoot -> P2 + B'), 2: ('P2', 'R4 keep'), 3: ('P2', 'R4 keep')} 
+round 2 as if (balanced job; P0 from round 1):
+  L 1 [P2+B]: P 0.7749 (noiseless 0.8904) g +0.0566 (2 SE 0.0168) -> PRESCRIPTION HELPS; rd 0.9022 nf 0.6475 (shares 1.013 / 0.727)
+  L 2 [P2]: P 0.7435 (noiseless 0.7929) g +0.0490 (2 SE 0.0201) -> PRESCRIPTION HELPS
+  L 3 [P2]: P 0.6605 (noiseless 0.7060) g +0.0825 (2 SE 0.0216) -> PRESCRIPTION HELPS
+rule -> round 3: {1: ('P2+B+Q4', 'R2 frames (nf share 0.727 < rd 1.013; Dr gap on q1 +0.1738) -> +Q4 (output on q5, gap +0.0055)'), 2: ('P2', 'R4 keep'), 3: ('P2', 'R4 keep')} 
+OS compounding (G per round): {'common_L': ['2', '3'], 'per_L': {'1': [(1, 0.1842499999999999, 'OVERSHOOT'), (2, 0.056624999999999925, 'PRESCRIPTION HELPS')], '2': [(1, 0.042749999999999955, 'PRESCRIPTION HELPS'), (2, 0.049000000000000044, 'PRESCRIPTION HELPS')], '3': [(1, 0.07850000000000001, 'PRESCRIPTION HELPS'), (2, 0.08250000000000002, 'PRESCRIPTION HELPS')]}, 'per_round': [{'round': 1, 'G': 0.060624999999999984, 'se': 0.007396392437786816}, {'round': 2, 'G': 0.06575000000000003, 'se': 0.007378318109501649}], 'difference': 0.005125000000000046, 'two_se': 0.020894611670835138, 'verdict': '(two rounds: a difference, not a slope) NOT SHOWN'}
