@@ -1,0 +1,16 @@
+device record ibm_marrakesh; lengths FakeMarrakesh medians (illustrative); decision latency 1.0 us
+== coh: 2 items in 1 group(s); circuits 10 -> 7 (sentinel 4 kept); model seconds 14.2 -> 10.8
+  group 1: coh1 0..2 (3), rd1 15..14 (2)
+  group1_user        5 qubits; identity ok (structural True, simulated (whole) max TVD 8.1e-16, acceptance True); asap: T   9.25 us (single max   9.25), wait    8.188 (single sum   7.204); jit: T   9.25 us (single max   9.25), wait    7.944 (single sum   7.204)
+  group1_off         5 qubits; identity ok (structural True, simulated (whole) max TVD 4.3e-16, acceptance True); asap: T   8.04 us (single max   8.04), wait    5.240 (single sum   5.168); jit: T   8.04 us (single max   8.04), wait    5.240 (single sum   5.168)
+  group1_floor       5 qubits; identity ok (structural True, simulated (whole) max TVD 0.0e+00, acceptance True); asap: T   8.89 us (single max   8.89), wait    7.440 (single sum   7.168); jit: T   8.89 us (single max   8.89), wait    7.440 (single sum   7.168)
+== compound: 5 items in 1 group(s); circuits 19 -> 7 (sentinel 4 kept); model seconds 24.2 -> 10.8
+  group 1: rd1 0..1 (2), rd2 15..12 (4), rd3 20..25 (6), rd4 35..28 (8), rd5 40..49 (10)
+  group1_user       30 qubits; identity ok (structural True, simulated (first two items) max TVD 7.8e-16, acceptance True); asap: T  39.66 us (single max  39.66), wait  398.360 (single sum 375.920); jit: T  39.66 us (single max  39.66), wait  175.200 (single sum 169.200)
+  group1_off        30 qubits; identity ok (structural True, simulated (first two items) max TVD 6.6e-16, acceptance True); asap: T  31.65 us (single max  31.65), wait  358.360 (single sum 335.920); jit: T  31.65 us (single max  31.65), wait  135.200 (single sum 129.200)
+  group1_floor      30 qubits; identity ok (structural True, simulated (first two items) max TVD 0.0e+00, acceptance True); asap: T  36.28 us (single max  36.28), wait  145.400 (single sum 143.360); jit: T  36.28 us (single max  36.28), wait  145.400 (single sum 143.360)
+== apps: 14 items in 1 group(s); circuits 46 -> 7 (sentinel 4 kept); model seconds 54.3 -> 10.8
+  group 1: ipe2_0 0..1 (2), ipe2_1 15..14 (2), ipe2_2 20..21 (2), ipe2_3 35..34 (2), ipe3_0 40..41 (2), ipe3_1 55..54 (2), ipe3_2 60..61 (2), ipe3_3 75..74 (2), ipe3_4 80..81 (2), ipe3_5 95..99 (2), ipe3_6 100..101 (2), ipe3_7 120..121 (2), lr2 135..131 (5), lr4 140..148 (9)
+  group1_user       38 qubits; identity ok (structural True, simulated (first two items) max TVD 0.0e+00, acceptance True); asap: T  13.63 us (single max  13.63), wait  120.612 (single sum 108.844); jit: T  13.63 us (single max  13.63), wait  117.684 (single sum 106.440)
+  group1_off        38 qubits; identity ok (structural True, simulated (first two items) max TVD 3.3e-16, acceptance True); asap: T  10.63 us (single max  10.63), wait   71.756 (single sum  63.460); jit: T  10.63 us (single max  10.63), wait   68.720 (single sum  61.344)
+  group1_floor      38 qubits; identity ok (structural True, simulated (first two items) max TVD 0.0e+00, acceptance True); asap: T  13.30 us (single max  13.30), wait  115.416 (single sum 106.512); jit: T  13.30 us (single max  13.30), wait  115.416 (single sum 106.512)
