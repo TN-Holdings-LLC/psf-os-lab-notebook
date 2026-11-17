@@ -205,6 +205,9 @@ RESULTS = {
         ["gpu/ctrl_night.py", "score", "{T}"], "ctrl_scores.json"),
     "os-night-2026-11-17-main": ("results/os-night-2026-11-17/main", ["job", "runs", "build.json", "rule.json"],
         ["gpu/os_night.py", "score", "{T}"], "os_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
+    "balanced-night-2026-11-17": ("results/balanced-night-2026-11-17", ["job", "runs", "build.json"],
+        ["gpu/balanced_night.py", "score", "{T}"], "balanced_scores.json"),
 }
 
 

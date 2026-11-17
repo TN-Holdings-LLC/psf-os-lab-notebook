@@ -27,9 +27,10 @@ declared before the data". Author TN Holdings. Which paper number it takes is th
 | 11-17 fez | T1-T4 (`results/ff-night-2026-11-17`) | beyond the off arm's correction ceiling at L = 1 .. 5, margin growing (slope +0.024 / step); phase estimation beyond its ceiling at n = 2, 3, margin growing; long-range teleport k = 2 beyond, k = 4 not |
 | 11-17 marrakesh | N1-N3 (`results/ff-night2-2026-11-17`) | phase estimation n = 4: 0.903 against the ceiling 0.471; early chain beyond at L = 2 .. 6, overshoot at L = 1, 7 |
 | 11-17 marrakesh | the prescription loop (`results/os-night-2026-11-17`) | diagnostics -> fixed rule -> P2 picked; HELPS at L = 2, 3, overshoot at L = 1 |
+| 11-17 marrakesh | the frame-balanced chain (`results/balanced-night-2026-11-17`) | no overshoot by construction; beyond the ceiling at L = 2 .. 5, margin growing (slope +0.031 / step); L = 1 not beyond (the nf frame reads its 1 on a qubit with a large readout gap) |
 
-Predictions over the two nights: 32 declared; 23 held, 9 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
-T3-3, T4-3, N2-1, N2-2, OS-2). Each failure is reported as such in its folder.
+Predictions over the two nights: 35 declared; 25 held, 10 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
+T3-3, T4-3, N2-1, N2-2, OS-2, B-2). Each failure is reported as such in its folder.
 
 ## Two numbers side by side (to carry into the text)
 
@@ -40,7 +41,8 @@ T3-3, T4-3, N2-1, N2-2, OS-2). Each failure is reported as such in its folder.
 
 - Decay toward \|0> is one-sided: any design that holds the likely value as \|0> leans toward success and can overshoot
   its noiseless value (observed: N2 L = 1, 7; OS L = 1). The guard set before the data took those cases out; the
-  frame-balanced pair (`notes/next_2026-11-17/BALANCED.md`) removes the lean by construction and has not run yet.
+  frame-balanced pair removes the lean by construction; it ran on 11-17 (marrakesh): no overshoot, beyond at L = 2 .. 5,
+  COMPOUNDS, but the pool keeps only 0.77-0.87 of its noiseless value (the two frames 0.92-1.01 and 0.60-0.80).
 - Different devices on different nights; no same-device repeat of the 11-17 tests yet.
 - The sentinel was DEAD on marrakesh and fez on these nights (beside, never judged).
 - Every noise model in the notes is illustrative and not fitted; none is used for a verdict.
@@ -49,6 +51,6 @@ T3-3, T4-3, N2-1, N2-2, OS-2). Each failure is reported as such in its folder.
 
 ## Still to run before writing (proposal)
 
-1. The frame-balanced chain, L = 1 .. 5, on one device (40.9 s).
+1. (done 11-17, marrakesh) The frame-balanced chain, L = 1 .. 5.
 2. A same-device repeat of T2 or the balanced chain on a second night.
 3. Optionally the packed form (home VS, task B) as a declared single-against-packed test.
