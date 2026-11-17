@@ -208,6 +208,9 @@ RESULTS = {
     # needs psf-os at the branch feedforward-2026-11-16, 301ac01 or later (--psf-os PATH)
     "balanced-night-2026-11-17": ("results/balanced-night-2026-11-17", ["job", "runs", "build.json"],
         ["gpu/balanced_night.py", "score", "{T}"], "balanced_scores.json"),
+    # needs psf-os at the branch feedforward-2026-11-16, 0f57c76 or later (bundled items) (--psf-os PATH)
+    "packing-night-2026-11-17": ("results/packing-night-2026-11-17", ["packed", "single1", "plan.json"],
+        ["gpu/packing_night.py", "score", "{T}"], "packing_scores.json"),
 }
 
 

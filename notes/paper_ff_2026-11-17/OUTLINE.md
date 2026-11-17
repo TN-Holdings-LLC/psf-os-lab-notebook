@@ -28,9 +28,10 @@ declared before the data". Author TN Holdings. Which paper number it takes is th
 | 11-17 marrakesh | N1-N3 (`results/ff-night2-2026-11-17`) | phase estimation n = 4: 0.903 against the ceiling 0.471; early chain beyond at L = 2 .. 6, overshoot at L = 1, 7 |
 | 11-17 marrakesh | the prescription loop (`results/os-night-2026-11-17`) | diagnostics -> fixed rule -> P2 picked; HELPS at L = 2, 3, overshoot at L = 1 |
 | 11-17 marrakesh | the frame-balanced chain (`results/balanced-night-2026-11-17`) | no overshoot by construction; beyond the ceiling at L = 2 .. 5, margin growing (slope +0.031 / step); L = 1 not beyond (the nf frame reads its 1 on a qubit with a large readout gap) |
+| 11-17 marrakesh | single against packed (`results/packing-night-2026-11-17`) | ten items in one circuit: 11 s against 41 s charged, but the control arm keeps 0.20 less on average (off arm unchanged): side-by-side conditionals cost |
 
-Predictions over the two nights: 35 declared; 25 held, 10 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
-T3-3, T4-3, N2-1, N2-2, OS-2, B-2). Each failure is reported as such in its folder.
+Predictions over the two nights: 37 declared; 26 held, 11 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
+T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1). Each failure is reported as such in its folder.
 
 ## Two numbers side by side (to carry into the text)
 
