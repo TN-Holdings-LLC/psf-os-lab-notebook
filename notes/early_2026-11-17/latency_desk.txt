@@ -1,0 +1,215 @@
+== clean
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.887 (noiseless 0.890; e 0.050)  g +0.093 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; retained 0.97 of the noiseless margin; off 0.796; post 0.941 (kept 0.679); floor 1.000; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.797 (noiseless 0.793; e 0.081)  g +0.166 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; retained 1.02 of the noiseless margin; off 0.632; post 0.855 (kept 0.471); floor 1.000; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.707 (noiseless 0.706; e 0.116)  g +0.206 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 1.01 of the noiseless margin; off 0.502; post 0.749 (kept 0.339); floor 1.000; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.636 (noiseless 0.629; e 0.135)  g +0.238 (2 SE 0.008) -> OVERSHOOT; retained 1.03 of the noiseless margin; off 0.396; post 0.622 (kept 0.260); floor 1.000; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.562 (noiseless 0.560; e 0.161)  g +0.246 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 1.01 of the noiseless margin; off 0.320; post 0.504 (kept 0.204); floor 1.000; sentinel DEAD
+slope of g over L +0.0409 per step (2 SE 0.0020) -> NOT SHOWN (overshoot at L [4])
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'failed', 'T2-2 COMPOUNDS': 'failed'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.887 (noiseless 0.890; e 0.050)  g +0.093 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; off 0.796; post 0.941 (kept 0.679); floor 1.000; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.791 (noiseless 0.793; e 0.087)  g +0.160 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; off 0.635; post 0.853 (kept 0.471); floor 1.000; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.702 (noiseless 0.706; e 0.121)  g +0.201 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.498; post 0.737 (kept 0.339); floor 1.000; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.626 (noiseless 0.629; e 0.145)  g +0.228 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.401; post 0.619 (kept 0.264); floor 1.000; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.563 (noiseless 0.560; e 0.160)  g +0.247 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.326; post 0.497 (kept 0.201); floor 1.000; sentinel DEAD
+slope of g over L +0.0401 per step (2 SE 0.0020) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0071) -> NOT SHOWN  (rd 0.887, early 0.887, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = +0.0019 (2 SE 0.0090) -> NOT SHOWN  (rd 0.797, early 0.791, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = -0.0023 (2 SE 0.0102) -> NOT SHOWN  (rd 0.707, early 0.702, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0051 (2 SE 0.0108) -> OVERSHOOT  (rd 0.636, early 0.626, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = -0.0007 (2 SE 0.0111) -> NOT SHOWN  (rd 0.562, early 0.563, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 50 us, latency 0.0 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.868 (noiseless 0.890; e 0.069)  g +0.074 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; retained 0.77 of the noiseless margin; off 0.804; post 0.920 (kept 0.664); floor 0.952; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.749 (noiseless 0.793; e 0.129)  g +0.118 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.73 of the noiseless margin; off 0.673; post 0.822 (kept 0.468); floor 0.913; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.659 (noiseless 0.706; e 0.164)  g +0.158 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.77 of the noiseless margin; off 0.597; post 0.711 (kept 0.339); floor 0.884; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.597 (noiseless 0.629; e 0.175)  g +0.199 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.86 of the noiseless margin; off 0.558; post 0.623 (kept 0.259); floor 0.850; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.562 (noiseless 0.560; e 0.160)  g +0.246 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 1.01 of the noiseless margin; off 0.535; post 0.565 (kept 0.202); floor 0.814; sentinel DEAD
+slope of g over L +0.0425 per step (2 SE 0.0021) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.868 (noiseless 0.890; e 0.069)  g +0.074 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; off 0.804; post 0.920 (kept 0.664); floor 0.952; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.766 (noiseless 0.793; e 0.112)  g +0.136 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.672; post 0.821 (kept 0.471); floor 0.909; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.681 (noiseless 0.706; e 0.142)  g +0.180 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.592; post 0.700 (kept 0.344); floor 0.866; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.610 (noiseless 0.629; e 0.161)  g +0.212 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.557; post 0.615 (kept 0.255); floor 0.826; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.562 (noiseless 0.560; e 0.161)  g +0.246 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.538; post 0.562 (kept 0.207); floor 0.789; sentinel DEAD
+slope of g over L +0.0435 per step (2 SE 0.0021) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0076) -> NOT SHOWN  (rd 0.868, early 0.868, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = +0.0178 (2 SE 0.0096) -> EARLY KEEPS MORE  (rd 0.749, early 0.766, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0221 (2 SE 0.0105) -> EARLY KEEPS MORE  (rd 0.659, early 0.681, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0138 (2 SE 0.0109) -> EARLY KEEPS MORE  (rd 0.597, early 0.610, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = +0.0006 (2 SE 0.0111) -> NOT SHOWN  (rd 0.562, early 0.562, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 50 us, latency 0.5 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.862 (noiseless 0.890; e 0.075)  g +0.068 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; retained 0.70 of the noiseless margin; off 0.806; post 0.927 (kept 0.667); floor 0.952; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.732 (noiseless 0.793; e 0.147)  g +0.101 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.62 of the noiseless margin; off 0.678; post 0.828 (kept 0.459); floor 0.917; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.637 (noiseless 0.706; e 0.186)  g +0.136 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.66 of the noiseless margin; off 0.593; post 0.709 (kept 0.334); floor 0.886; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.586 (noiseless 0.629; e 0.185)  g +0.188 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.82 of the noiseless margin; off 0.555; post 0.616 (kept 0.256); floor 0.852; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.553 (noiseless 0.560; e 0.170)  g +0.237 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.97 of the noiseless margin; off 0.546; post 0.586 (kept 0.201); floor 0.816; sentinel DEAD
+slope of g over L +0.0418 per step (2 SE 0.0021) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.862 (noiseless 0.890; e 0.075)  g +0.068 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; off 0.806; post 0.927 (kept 0.667); floor 0.952; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.754 (noiseless 0.793; e 0.124)  g +0.124 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.669; post 0.819 (kept 0.460); floor 0.902; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.663 (noiseless 0.706; e 0.160)  g +0.162 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.594; post 0.702 (kept 0.328); floor 0.866; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.598 (noiseless 0.629; e 0.174)  g +0.200 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.558; post 0.623 (kept 0.251); floor 0.830; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.542 (noiseless 0.560; e 0.181)  g +0.226 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.538; post 0.553 (kept 0.203); floor 0.792; sentinel DEAD
+slope of g over L +0.0404 per step (2 SE 0.0021) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0077) -> NOT SHOWN  (rd 0.862, early 0.862, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = +0.0229 (2 SE 0.0098) -> EARLY KEEPS MORE  (rd 0.732, early 0.754, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0259 (2 SE 0.0107) -> EARLY KEEPS MORE  (rd 0.637, early 0.663, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0115 (2 SE 0.0110) -> EARLY KEEPS MORE  (rd 0.586, early 0.598, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = -0.0115 (2 SE 0.0111) -> NOT SHOWN  (rd 0.553, early 0.542, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 50 us, latency 1.0 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.853 (noiseless 0.890; e 0.084)  g +0.059 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; retained 0.61 of the noiseless margin; off 0.803; post 0.923 (kept 0.665); floor 0.953; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.717 (noiseless 0.793; e 0.162)  g +0.086 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.53 of the noiseless margin; off 0.674; post 0.823 (kept 0.469); floor 0.916; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.617 (noiseless 0.706; e 0.206)  g +0.115 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.56 of the noiseless margin; off 0.584; post 0.705 (kept 0.335); floor 0.882; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.567 (noiseless 0.629; e 0.204)  g +0.169 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.73 of the noiseless margin; off 0.553; post 0.615 (kept 0.255); floor 0.842; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.544 (noiseless 0.560; e 0.179)  g +0.228 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.94 of the noiseless margin; off 0.545; post 0.573 (kept 0.205); floor 0.817; sentinel DEAD
+slope of g over L +0.0407 per step (2 SE 0.0022) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.853 (noiseless 0.890; e 0.084)  g +0.059 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; off 0.803; post 0.923 (kept 0.665); floor 0.953; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.738 (noiseless 0.793; e 0.140)  g +0.107 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.682; post 0.828 (kept 0.464); floor 0.906; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.647 (noiseless 0.706; e 0.176)  g +0.146 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.595; post 0.708 (kept 0.340); floor 0.870; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.579 (noiseless 0.629; e 0.192)  g +0.181 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.562; post 0.618 (kept 0.256); floor 0.825; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.531 (noiseless 0.560; e 0.191)  g +0.215 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.536; post 0.551 (kept 0.205); floor 0.791; sentinel DEAD
+slope of g over L +0.0392 per step (2 SE 0.0021) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0079) -> NOT SHOWN  (rd 0.853, early 0.853, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = +0.0214 (2 SE 0.0100) -> EARLY KEEPS MORE  (rd 0.717, early 0.738, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0302 (2 SE 0.0108) -> EARLY KEEPS MORE  (rd 0.617, early 0.647, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0119 (2 SE 0.0111) -> EARLY KEEPS MORE  (rd 0.567, early 0.579, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = -0.0124 (2 SE 0.0111) -> NOT SHOWN  (rd 0.544, early 0.531, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 50 us, latency 2.0 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.838 (noiseless 0.890; e 0.099)  g +0.044 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; retained 0.46 of the noiseless margin; off 0.802; post 0.927 (kept 0.667); floor 0.956; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.695 (noiseless 0.793; e 0.183)  g +0.064 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.40 of the noiseless margin; off 0.677; post 0.825 (kept 0.468); floor 0.919; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.600 (noiseless 0.706; e 0.223)  g +0.099 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.48 of the noiseless margin; off 0.595; post 0.716 (kept 0.332); floor 0.883; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.537 (noiseless 0.629; e 0.235)  g +0.139 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.60 of the noiseless margin; off 0.555; post 0.630 (kept 0.257); floor 0.848; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.523 (noiseless 0.560; e 0.200)  g +0.207 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.85 of the noiseless margin; off 0.540; post 0.554 (kept 0.208); floor 0.814; sentinel DEAD
+slope of g over L +0.0386 per step (2 SE 0.0022) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.838 (noiseless 0.890; e 0.099)  g +0.044 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; off 0.802; post 0.927 (kept 0.667); floor 0.956; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.714 (noiseless 0.793; e 0.165)  g +0.083 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.677; post 0.828 (kept 0.462); floor 0.909; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.614 (noiseless 0.706; e 0.209)  g +0.113 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.592; post 0.716 (kept 0.335); floor 0.870; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.543 (noiseless 0.629; e 0.228)  g +0.145 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.549; post 0.613 (kept 0.259); floor 0.825; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.488 (noiseless 0.560; e 0.235)  g +0.172 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.544; post 0.567 (kept 0.207); floor 0.789; sentinel DEAD
+slope of g over L +0.0321 per step (2 SE 0.0022) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0082) -> NOT SHOWN  (rd 0.838, early 0.838, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = +0.0183 (2 SE 0.0102) -> EARLY KEEPS MORE  (rd 0.695, early 0.714, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0137 (2 SE 0.0109) -> EARLY KEEPS MORE  (rd 0.600, early 0.614, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0062 (2 SE 0.0111) -> NOT SHOWN  (rd 0.537, early 0.543, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = -0.0354 (2 SE 0.0112) -> NOT SHOWN  (rd 0.523, early 0.488, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 150 us, latency 0.0 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.871 (noiseless 0.890; e 0.066)  g +0.077 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; retained 0.80 of the noiseless margin; off 0.797; post 0.924 (kept 0.669); floor 0.951; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.764 (noiseless 0.793; e 0.114)  g +0.133 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.82 of the noiseless margin; off 0.642; post 0.829 (kept 0.457); floor 0.919; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.662 (noiseless 0.706; e 0.161)  g +0.161 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.79 of the noiseless margin; off 0.538; post 0.724 (kept 0.330); floor 0.887; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.589 (noiseless 0.629; e 0.182)  g +0.191 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.83 of the noiseless margin; off 0.465; post 0.593 (kept 0.251); floor 0.851; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.541 (noiseless 0.560; e 0.182)  g +0.225 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.92 of the noiseless margin; off 0.422; post 0.508 (kept 0.197); floor 0.819; sentinel DEAD
+slope of g over L +0.0365 per step (2 SE 0.0021) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.871 (noiseless 0.890; e 0.066)  g +0.077 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; off 0.797; post 0.924 (kept 0.669); floor 0.951; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.762 (noiseless 0.793; e 0.116)  g +0.131 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.635; post 0.824 (kept 0.454); floor 0.904; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.665 (noiseless 0.706; e 0.158)  g +0.164 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.536; post 0.710 (kept 0.328); floor 0.864; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.595 (noiseless 0.629; e 0.177)  g +0.197 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.463; post 0.603 (kept 0.249); floor 0.823; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.539 (noiseless 0.560; e 0.184)  g +0.223 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.421; post 0.503 (kept 0.196); floor 0.782; sentinel DEAD
+slope of g over L +0.0370 per step (2 SE 0.0021) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0075) -> NOT SHOWN  (rd 0.871, early 0.871, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = -0.0018 (2 SE 0.0095) -> NOT SHOWN  (rd 0.764, early 0.762, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0032 (2 SE 0.0106) -> NOT SHOWN  (rd 0.662, early 0.665, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0053 (2 SE 0.0110) -> NOT SHOWN  (rd 0.589, early 0.595, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = -0.0019 (2 SE 0.0111) -> NOT SHOWN  (rd 0.541, early 0.539, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 150 us, latency 0.5 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.863 (noiseless 0.890; e 0.074)  g +0.069 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; retained 0.71 of the noiseless margin; off 0.792; post 0.925 (kept 0.664); floor 0.951; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.760 (noiseless 0.793; e 0.118)  g +0.129 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.80 of the noiseless margin; off 0.641; post 0.828 (kept 0.460); floor 0.911; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.661 (noiseless 0.706; e 0.162)  g +0.160 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.78 of the noiseless margin; off 0.537; post 0.713 (kept 0.332); floor 0.882; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.592 (noiseless 0.629; e 0.179)  g +0.194 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.84 of the noiseless margin; off 0.463; post 0.594 (kept 0.253); floor 0.850; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.546 (noiseless 0.560; e 0.177)  g +0.229 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.94 of the noiseless margin; off 0.429; post 0.513 (kept 0.196); floor 0.816; sentinel DEAD
+slope of g over L +0.0398 per step (2 SE 0.0021) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.863 (noiseless 0.890; e 0.074)  g +0.069 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; off 0.792; post 0.925 (kept 0.664); floor 0.951; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.754 (noiseless 0.793; e 0.124)  g +0.123 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.643; post 0.827 (kept 0.461); floor 0.905; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.669 (noiseless 0.706; e 0.154)  g +0.168 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.533; post 0.709 (kept 0.328); floor 0.867; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.594 (noiseless 0.629; e 0.178)  g +0.196 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.466; post 0.598 (kept 0.250); floor 0.825; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.528 (noiseless 0.560; e 0.195)  g +0.212 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.427; post 0.509 (kept 0.199); floor 0.784; sentinel DEAD
+slope of g over L +0.0375 per step (2 SE 0.0021) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0077) -> NOT SHOWN  (rd 0.863, early 0.863, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = -0.0059 (2 SE 0.0096) -> NOT SHOWN  (rd 0.760, early 0.754, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0088 (2 SE 0.0106) -> NOT SHOWN  (rd 0.661, early 0.669, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0017 (2 SE 0.0110) -> NOT SHOWN  (rd 0.592, early 0.594, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = -0.0179 (2 SE 0.0111) -> NOT SHOWN  (rd 0.546, early 0.528, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 150 us, latency 1.0 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.865 (noiseless 0.890; e 0.072)  g +0.071 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; retained 0.74 of the noiseless margin; off 0.794; post 0.922 (kept 0.665); floor 0.952; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.749 (noiseless 0.793; e 0.129)  g +0.118 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.73 of the noiseless margin; off 0.643; post 0.828 (kept 0.462); floor 0.920; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.652 (noiseless 0.706; e 0.171)  g +0.151 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.74 of the noiseless margin; off 0.532; post 0.717 (kept 0.327); floor 0.882; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.585 (noiseless 0.629; e 0.186)  g +0.187 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.81 of the noiseless margin; off 0.470; post 0.612 (kept 0.245); floor 0.852; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.524 (noiseless 0.560; e 0.199)  g +0.208 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.85 of the noiseless margin; off 0.423; post 0.498 (kept 0.200); floor 0.819; sentinel DEAD
+slope of g over L +0.0352 per step (2 SE 0.0021) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.865 (noiseless 0.890; e 0.072)  g +0.071 (2 SE 0.005) -> BEYOND THE CORRECTION CEILING; off 0.794; post 0.922 (kept 0.665); floor 0.952; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.750 (noiseless 0.793; e 0.128)  g +0.119 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.650; post 0.829 (kept 0.461); floor 0.907; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.660 (noiseless 0.706; e 0.163)  g +0.159 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.539; post 0.713 (kept 0.332); floor 0.867; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.584 (noiseless 0.629; e 0.187)  g +0.186 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.466; post 0.599 (kept 0.247); floor 0.829; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.521 (noiseless 0.560; e 0.202)  g +0.205 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.418; post 0.500 (kept 0.199); floor 0.786; sentinel DEAD
+slope of g over L +0.0347 per step (2 SE 0.0021) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0076) -> NOT SHOWN  (rd 0.865, early 0.865, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = +0.0009 (2 SE 0.0097) -> NOT SHOWN  (rd 0.749, early 0.750, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0085 (2 SE 0.0106) -> NOT SHOWN  (rd 0.652, early 0.660, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = -0.0008 (2 SE 0.0110) -> NOT SHOWN  (rd 0.585, early 0.584, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = -0.0033 (2 SE 0.0112) -> NOT SHOWN  (rd 0.524, early 0.521, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}
+
+== T1 150 us, latency 2.0 us
+-- T2 (third design) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.856 (noiseless 0.890; e 0.081)  g +0.062 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; retained 0.64 of the noiseless margin; off 0.793; post 0.921 (kept 0.662); floor 0.951; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.742 (noiseless 0.793; e 0.136)  g +0.112 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; retained 0.69 of the noiseless margin; off 0.640; post 0.821 (kept 0.451); floor 0.920; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.632 (noiseless 0.706; e 0.191)  g +0.131 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.64 of the noiseless margin; off 0.539; post 0.725 (kept 0.326); floor 0.882; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.569 (noiseless 0.629; e 0.202)  g +0.171 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.74 of the noiseless margin; off 0.459; post 0.606 (kept 0.245); floor 0.850; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.510 (noiseless 0.560; e 0.213)  g +0.194 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; retained 0.80 of the noiseless margin; off 0.424; post 0.517 (kept 0.193); floor 0.822; sentinel DEAD
+slope of g over L +0.0332 per step (2 SE 0.0021) -> COMPOUNDS
+predictions: {'T2-1 BEYOND at every L = 1 .. 5': 'held', 'T2-2 COMPOUNDS': 'held'}
+
+-- T4 (early chain) scorer:
+L 1: exact 0.937  off noiseless 0.794 (c 0.143)  ff 0.856 (noiseless 0.890; e 0.081)  g +0.062 (2 SE 0.006) -> BEYOND THE CORRECTION CEILING; off 0.793; post 0.921 (kept 0.662); floor 0.951; sentinel DEAD
+L 2: exact 0.878  off noiseless 0.631 (c 0.247)  ff 0.746 (noiseless 0.793; e 0.132)  g +0.116 (2 SE 0.007) -> BEYOND THE CORRECTION CEILING; off 0.639; post 0.820 (kept 0.456); floor 0.911; sentinel DEAD
+L 3: exact 0.823  off noiseless 0.501 (c 0.322)  ff 0.655 (noiseless 0.706; e 0.168)  g +0.154 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.538; post 0.717 (kept 0.339); floor 0.867; sentinel DEAD
+L 4: exact 0.771  off noiseless 0.398 (c 0.373)  ff 0.571 (noiseless 0.629; e 0.200)  g +0.173 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.469; post 0.602 (kept 0.253); floor 0.825; sentinel DEAD
+L 5: exact 0.723  off noiseless 0.316 (c 0.407)  ff 0.511 (noiseless 0.560; e 0.212)  g +0.195 (2 SE 0.008) -> BEYOND THE CORRECTION CEILING; off 0.425; post 0.505 (kept 0.198); floor 0.791; sentinel DEAD
+slope of g over L +0.0340 per step (2 SE 0.0021) -> COMPOUNDS
+L 1: |rd - noiseless| - |early - noiseless| = +0.0000 (2 SE 0.0079) -> NOT SHOWN  (rd 0.856, early 0.856, noiseless 0.890)
+L 2: |rd - noiseless| - |early - noiseless| = +0.0040 (2 SE 0.0098) -> NOT SHOWN  (rd 0.742, early 0.746, noiseless 0.793)
+L 3: |rd - noiseless| - |early - noiseless| = +0.0222 (2 SE 0.0107) -> EARLY KEEPS MORE  (rd 0.632, early 0.655, noiseless 0.706)
+L 4: |rd - noiseless| - |early - noiseless| = +0.0023 (2 SE 0.0111) -> NOT SHOWN  (rd 0.569, early 0.571, noiseless 0.629)
+L 5: |rd - noiseless| - |early - noiseless| = +0.0008 (2 SE 0.0112) -> NOT SHOWN  (rd 0.510, early 0.511, noiseless 0.560)
+predictions: {'T4-1 BEYOND at every L = 1 .. 5': 'held', 'T4-2 COMPOUNDS': 'held', 'T4-3 EARLY KEEPS MORE at L = 4 and 5': 'failed'}

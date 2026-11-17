@@ -1,0 +1,157 @@
+{
+ "rd1": {
+  "chain": [
+   0,
+   1
+  ],
+  "delays_ff": 2,
+  "delays_off": 2,
+  "analyse": {
+   "n": 2,
+   "clbits": 3,
+   "mid": 1,
+   "conditionals": 1,
+   "cz": 1,
+   "cz_in_blocks": 1
+  },
+  "exact_max_diff": 0.0,
+  "wait_jit_original": 5.168,
+  "wait_asap_original": 5.168,
+  "rebuilt_delays_ff": 2,
+  "rebuilt_delays_off": 2,
+  "rebuilt_delays_floor": 2,
+  "structure_ff": true,
+  "structure_off": true,
+  "wait_asap_rebuilt": 5.168,
+  "cz": 2,
+  "cz_original": 2
+ },
+ "rd2": {
+  "chain": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "delays_ff": 8,
+  "delays_off": 8,
+  "analyse": {
+   "n": 4,
+   "clbits": 5,
+   "mid": 4,
+   "conditionals": 2,
+   "cz": 6,
+   "cz_in_blocks": 6
+  },
+  "exact_max_diff": 0.0,
+  "wait_jit_original": 15.504000000000003,
+  "wait_asap_original": 25.84,
+  "rebuilt_delays_ff": 8,
+  "rebuilt_delays_off": 8,
+  "rebuilt_delays_floor": 8,
+  "structure_ff": true,
+  "structure_off": true,
+  "wait_asap_rebuilt": 15.520000000000005,
+  "cz": 12,
+  "cz_original": 12
+ },
+ "rd3": {
+  "chain": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "delays_ff": 14,
+  "delays_off": 14,
+  "analyse": {
+   "n": 6,
+   "clbits": 7,
+   "mid": 6,
+   "conditionals": 3,
+   "cz": 11,
+   "cz_in_blocks": 11
+  },
+  "exact_max_diff": 0.0,
+  "wait_jit_original": 25.840000000000003,
+  "wait_asap_original": 56.848000000000006,
+  "rebuilt_delays_ff": 14,
+  "rebuilt_delays_off": 14,
+  "rebuilt_delays_floor": 14,
+  "structure_ff": true,
+  "structure_off": true,
+  "wait_asap_rebuilt": 25.856000000000005,
+  "cz": 22,
+  "cz_original": 22
+ },
+ "rd4": {
+  "chain": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "delays_ff": 20,
+  "delays_off": 20,
+  "analyse": {
+   "n": 8,
+   "clbits": 9,
+   "mid": 8,
+   "conditionals": 4,
+   "cz": 16,
+   "cz_in_blocks": 16
+  },
+  "exact_max_diff": 0.0,
+  "wait_jit_original": 36.17600000000001,
+  "wait_asap_original": 98.19200000000002,
+  "rebuilt_delays_ff": 20,
+  "rebuilt_delays_off": 20,
+  "rebuilt_delays_floor": 20,
+  "structure_ff": true,
+  "structure_off": true,
+  "wait_asap_rebuilt": 36.19200000000001,
+  "cz": 32,
+  "cz_original": 32
+ },
+ "rd5": {
+  "chain": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "delays_ff": 26,
+  "delays_off": 26,
+  "analyse": {
+   "n": 10,
+   "clbits": 11,
+   "mid": 10,
+   "conditionals": 5,
+   "cz": 21,
+   "cz_in_blocks": 21
+  },
+  "exact_max_diff": 0.0,
+  "wait_jit_original": 46.512000000000015,
+  "wait_asap_original": 149.87200000000004,
+  "rebuilt_delays_ff": 26,
+  "rebuilt_delays_off": 26,
+  "rebuilt_delays_floor": 26,
+  "structure_ff": true,
+  "structure_off": true,
+  "wait_asap_rebuilt": 46.52800000000001,
+  "cz": 42,
+  "cz_original": 42
+ }
+}

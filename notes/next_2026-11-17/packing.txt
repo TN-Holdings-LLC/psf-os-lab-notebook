@@ -1,0 +1,22 @@
+device ibm_fez; items ['rd1', 'rd2', 'rd3', 'rd4', 'rd5', 'ea1', 'ea2', 'ea3', 'ea4', 'ea5']; sizes [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]; rule-C chain of N = 69 sites from start [1, 0, 0]; segments (chain positions) [(0, 1), (3, 6), (8, 13), (15, 22), (24, 33), (35, 36), (38, 41), (43, 48), (50, 57), (59, 68)]
+physical qubits per item: rd1 [0, 1]; rd2 [3, 4, 5, 6]; rd3 [8, 9, 10, 11, 18, 31]; rd4 [29, 28, 27, 26, 25, 24, 23, 22]; rd5 [36, 41, 42, 43, 44, 45, 46, 47, 48, 49]; ea1 [51, 52]; ea2 [54, 55, 59, 75]; ea3 [73, 79, 93, 94, 95, 99]; ea4 [114, 113, 112, 111, 110, 109, 108, 107]; ea5 [105, 104, 103, 102, 101, 116, 121, 122, 123, 124]
+1. entrance: analyse REFUSES: one classical register holding every measured bit (got 10)
+   build as one item: REFUSED: pk: one classical register holding every measured bit (got 10)
+   with one classical register: analyse ACCEPTS (n 69, clbits 80, conditionals 40); build as one item ACCEPTED (7 circuits, 10.8 s by the model, chain = the packing chain: True); but its card reads one success spec, so the ten items are not scored apart
+   compiled packed arms: acceptance {'ff': {'on_chain': True, 'qubits_ok': True, 'couplers_on_chain': True, 'couplers_working': True, 'measures': True}, 'off': {'on_chain': True, 'qubits_ok': True, 'couplers_on_chain': True, 'couplers_working': True, 'measures': True}, 'floor': {'on_chain': True, 'qubits_ok': True, 'couplers_on_chain': True, 'couplers_working': True, 'measures': True}}; CZ ff 140, off 110, floor 140
+2. independence: instructions touching more than one item (qubits or bits, blocks included): 0
+   barriers spanning two items in the packed ff arm: 0
+3-4. per item: same instructions as alone (ff / off), exact distribution total variation (ff / off), ledger wait packed = alone (ASAP / JIT, latency 0 and 1 us), last measurement start packed = alone
+   rd1: True / True; tvd 0.0e+00 / 0.0e+00; wait True (JIT lat 0: 5.17 q.us, lat 1: 7.17); last measurement True (ASAP lat 0 at 5.66 us) -> ok
+   rd2: True / True; tvd 0.0e+00 / 0.0e+00; wait True (JIT lat 0: 15.50 q.us, lat 1: 20.50); last measurement True (ASAP lat 0 at 12.27 us) -> ok
+   rd3: True / True; tvd 0.0e+00 / 0.0e+00; wait True (JIT lat 0: 25.84 q.us, lat 1: 33.84); last measurement True (ASAP lat 0 at 18.87 us) -> ok
+   rd4: True / True; tvd 4.8e-16 / 5.1e-16; wait True (JIT lat 0: 36.18 q.us, lat 1: 47.18); last measurement True (ASAP lat 0 at 25.48 us) -> ok
+   rd5: True / True; tvd 0.0e+00 / 0.0e+00; wait True (JIT lat 0: 46.51 q.us, lat 1: 60.51); last measurement True (ASAP lat 0 at 32.08 us) -> ok
+   ea1: True / True; tvd 0.0e+00 / 0.0e+00; wait True (JIT lat 0: 5.17 q.us, lat 1: 7.17); last measurement True (ASAP lat 0 at 5.66 us) -> ok
+   ea2: True / True; tvd 0.0e+00 / 0.0e+00; wait True (JIT lat 0: 7.75 q.us, lat 1: 13.75); last measurement True (ASAP lat 0 at 11.36 us) -> ok
+   ea3: True / True; tvd 0.0e+00 / 0.0e+00; wait True (JIT lat 0: 10.34 q.us, lat 1: 20.34); last measurement True (ASAP lat 0 at 17.06 us) -> ok
+   ea4: True / True; tvd 3.3e-16 / 5.8e-16; wait True (JIT lat 0: 12.92 q.us, lat 1: 26.92); last measurement True (ASAP lat 0 at 22.76 us) -> ok
+   ea5: True / True; tvd 4.0e-16 / 4.7e-16; wait True (JIT lat 0: 15.50 q.us, lat 1: 33.50); last measurement True (ASAP lat 0 at 28.46 us) -> ok
+   packed circuit length (ff, us): asap_lat0.0 34.7, jit_lat0.0 34.7, asap_lat1.0 40.0, jit_lat1.0 40.0
+time model (0.036 s per circuit + 0.00027 s per shot at 4000 shots + 3 s per job): T2 + T4 now 38 circuits in 2 jobs 48.4 s; packed 3 arms + 4 sentinel circuits in 1 job 10.8 s
+ALL CHECKS PASS
