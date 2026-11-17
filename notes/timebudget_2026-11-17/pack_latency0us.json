@@ -1,0 +1,702 @@
+{
+ "latency_us": "0",
+ "jobs": {
+  "coh": {
+   "items": 2,
+   "groups": [
+    [
+     {
+      "tag": "coh1",
+      "chain": [
+       0,
+       1,
+       2
+      ]
+     },
+     {
+      "tag": "rd1",
+      "chain": [
+       15,
+       14
+      ]
+     }
+    ]
+   ],
+   "circuits_single": 10,
+   "seconds_single": "1.416e+01",
+   "circuits_packed": 7,
+   "sentinel_circuits": 4,
+   "arms": {
+    "group1_user": {
+     "items": [
+      "coh1",
+      "rd1"
+     ],
+     "qubits": 5,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "coh1": true,
+      "rd1": true
+     },
+     "tvd": {
+      "coh1": "4.016e-16",
+      "rd1": "8.066e-16"
+     },
+     "simulated": "whole",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "8.248e+00",
+       "wait_qus": "6.296e+00"
+      },
+      "jit": {
+       "T_us": "8.248e+00",
+       "wait_qus": "6.052e+00"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "8.248e+00",
+       "wait_qus_sum": "5.204e+00"
+      },
+      "jit": {
+       "T_us_max": "8.248e+00",
+       "wait_qus_sum": "5.204e+00"
+      }
+     }
+    },
+    "group1_off": {
+     "items": [
+      "coh1",
+      "rd1"
+     ],
+     "qubits": 5,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "coh1": true,
+      "rd1": true
+     },
+     "tvd": {
+      "coh1": "2.151e-16",
+      "rd1": "4.337e-16"
+     },
+     "simulated": "whole",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "8.036e+00",
+       "wait_qus": "5.240e+00"
+      },
+      "jit": {
+       "T_us": "8.036e+00",
+       "wait_qus": "5.240e+00"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "8.036e+00",
+       "wait_qus_sum": "5.168e+00"
+      },
+      "jit": {
+       "T_us_max": "8.036e+00",
+       "wait_qus_sum": "5.168e+00"
+      }
+     }
+    },
+    "group1_floor": {
+     "items": [
+      "coh1",
+      "rd1"
+     ],
+     "qubits": 5,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "coh1": true,
+      "rd1": true
+     },
+     "tvd": {
+      "coh1": "0",
+      "rd1": "0"
+     },
+     "simulated": "whole",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "7.888e+00",
+       "wait_qus": "5.440e+00"
+      },
+      "jit": {
+       "T_us": "7.888e+00",
+       "wait_qus": "5.440e+00"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "7.888e+00",
+       "wait_qus_sum": "5.168e+00"
+      },
+      "jit": {
+       "T_us_max": "7.888e+00",
+       "wait_qus_sum": "5.168e+00"
+      }
+     }
+    }
+   },
+   "seconds_packed": "1.081e+01"
+  },
+  "compound": {
+   "items": 5,
+   "groups": [
+    [
+     {
+      "tag": "rd1",
+      "chain": [
+       0,
+       1
+      ]
+     },
+     {
+      "tag": "rd2",
+      "chain": [
+       15,
+       14,
+       13,
+       12
+      ]
+     },
+     {
+      "tag": "rd3",
+      "chain": [
+       20,
+       21,
+       22,
+       23,
+       24,
+       25
+      ]
+     },
+     {
+      "tag": "rd4",
+      "chain": [
+       35,
+       34,
+       33,
+       32,
+       31,
+       30,
+       29,
+       28
+      ]
+     },
+     {
+      "tag": "rd5",
+      "chain": [
+       40,
+       41,
+       42,
+       43,
+       44,
+       45,
+       46,
+       47,
+       48,
+       49
+      ]
+     }
+    ]
+   ],
+   "circuits_single": 19,
+   "seconds_single": "2.420e+01",
+   "circuits_packed": 7,
+   "sentinel_circuits": 4,
+   "arms": {
+    "group1_user": {
+     "items": [
+      "rd1",
+      "rd2",
+      "rd3",
+      "rd4",
+      "rd5"
+     ],
+     "qubits": 30,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "rd1": true,
+      "rd2": true,
+      "rd3": true,
+      "rd4": true,
+      "rd5": true
+     },
+     "tvd": {
+      "rd1": "7.798e-16",
+      "rd2": "4.063e-16"
+     },
+     "simulated": "first two items",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "3.466e+01",
+       "wait_qus": "3.584e+02"
+      },
+      "jit": {
+       "T_us": "3.466e+01",
+       "wait_qus": "1.352e+02"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "3.466e+01",
+       "wait_qus_sum": "3.359e+02"
+      },
+      "jit": {
+       "T_us_max": "3.466e+01",
+       "wait_qus_sum": "1.292e+02"
+      }
+     }
+    },
+    "group1_off": {
+     "items": [
+      "rd1",
+      "rd2",
+      "rd3",
+      "rd4",
+      "rd5"
+     ],
+     "qubits": 30,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "rd1": true,
+      "rd2": true,
+      "rd3": true,
+      "rd4": true,
+      "rd5": true
+     },
+     "tvd": {
+      "rd1": "6.557e-16",
+      "rd2": "3.244e-16"
+     },
+     "simulated": "first two items",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "3.165e+01",
+       "wait_qus": "3.584e+02"
+      },
+      "jit": {
+       "T_us": "3.165e+01",
+       "wait_qus": "1.352e+02"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "3.165e+01",
+       "wait_qus_sum": "3.359e+02"
+      },
+      "jit": {
+       "T_us_max": "3.165e+01",
+       "wait_qus_sum": "1.292e+02"
+      }
+     }
+    },
+    "group1_floor": {
+     "items": [
+      "rd1",
+      "rd2",
+      "rd3",
+      "rd4",
+      "rd5"
+     ],
+     "qubits": 30,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "rd1": true,
+      "rd2": true,
+      "rd3": true,
+      "rd4": true,
+      "rd5": true
+     },
+     "tvd": {
+      "rd1": "0",
+      "rd2": "0"
+     },
+     "simulated": "first two items",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "3.128e+01",
+       "wait_qus": "1.054e+02"
+      },
+      "jit": {
+       "T_us": "3.128e+01",
+       "wait_qus": "1.054e+02"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "3.128e+01",
+       "wait_qus_sum": "1.034e+02"
+      },
+      "jit": {
+       "T_us_max": "3.128e+01",
+       "wait_qus_sum": "1.034e+02"
+      }
+     }
+    }
+   },
+   "seconds_packed": "1.081e+01"
+  },
+  "apps": {
+   "items": 14,
+   "groups": [
+    [
+     {
+      "tag": "ipe2_0",
+      "chain": [
+       0,
+       1
+      ]
+     },
+     {
+      "tag": "ipe2_1",
+      "chain": [
+       15,
+       14
+      ]
+     },
+     {
+      "tag": "ipe2_2",
+      "chain": [
+       20,
+       21
+      ]
+     },
+     {
+      "tag": "ipe2_3",
+      "chain": [
+       35,
+       34
+      ]
+     },
+     {
+      "tag": "ipe3_0",
+      "chain": [
+       40,
+       41
+      ]
+     },
+     {
+      "tag": "ipe3_1",
+      "chain": [
+       55,
+       54
+      ]
+     },
+     {
+      "tag": "ipe3_2",
+      "chain": [
+       60,
+       61
+      ]
+     },
+     {
+      "tag": "ipe3_3",
+      "chain": [
+       75,
+       74
+      ]
+     },
+     {
+      "tag": "ipe3_4",
+      "chain": [
+       80,
+       81
+      ]
+     },
+     {
+      "tag": "ipe3_5",
+      "chain": [
+       95,
+       99
+      ]
+     },
+     {
+      "tag": "ipe3_6",
+      "chain": [
+       100,
+       101
+      ]
+     },
+     {
+      "tag": "ipe3_7",
+      "chain": [
+       120,
+       121
+      ]
+     },
+     {
+      "tag": "lr2",
+      "chain": [
+       135,
+       134,
+       133,
+       132,
+       131
+      ]
+     },
+     {
+      "tag": "lr4",
+      "chain": [
+       140,
+       141,
+       142,
+       143,
+       144,
+       145,
+       146,
+       147,
+       148
+      ]
+     }
+    ]
+   ],
+   "circuits_single": 46,
+   "seconds_single": "5.434e+01",
+   "circuits_packed": 7,
+   "sentinel_circuits": 4,
+   "arms": {
+    "group1_user": {
+     "items": [
+      "ipe2_0",
+      "ipe2_1",
+      "ipe2_2",
+      "ipe2_3",
+      "ipe3_0",
+      "ipe3_1",
+      "ipe3_2",
+      "ipe3_3",
+      "ipe3_4",
+      "ipe3_5",
+      "ipe3_6",
+      "ipe3_7",
+      "lr2",
+      "lr4"
+     ],
+     "qubits": 38,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "ipe2_0": true,
+      "ipe2_1": true,
+      "ipe2_2": true,
+      "ipe2_3": true,
+      "ipe3_0": true,
+      "ipe3_1": true,
+      "ipe3_2": true,
+      "ipe3_3": true,
+      "ipe3_4": true,
+      "ipe3_5": true,
+      "ipe3_6": true,
+      "ipe3_7": true,
+      "lr2": true,
+      "lr4": true
+     },
+     "tvd": {
+      "ipe2_0": "0",
+      "ipe2_1": "0"
+     },
+     "simulated": "first two items",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "8.628e+00",
+       "wait_qus": "5.164e+01"
+      },
+      "jit": {
+       "T_us": "8.628e+00",
+       "wait_qus": "4.881e+01"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "8.628e+00",
+       "wait_qus_sum": "4.863e+01"
+      },
+      "jit": {
+       "T_us_max": "8.628e+00",
+       "wait_qus_sum": "4.644e+01"
+      }
+     }
+    },
+    "group1_off": {
+     "items": [
+      "ipe2_0",
+      "ipe2_1",
+      "ipe2_2",
+      "ipe2_3",
+      "ipe3_0",
+      "ipe3_1",
+      "ipe3_2",
+      "ipe3_3",
+      "ipe3_4",
+      "ipe3_5",
+      "ipe3_6",
+      "ipe3_7",
+      "lr2",
+      "lr4"
+     ],
+     "qubits": 38,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "ipe2_0": true,
+      "ipe2_1": true,
+      "ipe2_2": true,
+      "ipe2_3": true,
+      "ipe3_0": true,
+      "ipe3_1": true,
+      "ipe3_2": true,
+      "ipe3_3": true,
+      "ipe3_4": true,
+      "ipe3_5": true,
+      "ipe3_6": true,
+      "ipe3_7": true,
+      "lr2": true,
+      "lr4": true
+     },
+     "tvd": {
+      "ipe2_0": "3.331e-16",
+      "ipe2_1": "0"
+     },
+     "simulated": "first two items",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "8.628e+00",
+       "wait_qus": "4.626e+01"
+      },
+      "jit": {
+       "T_us": "8.628e+00",
+       "wait_qus": "4.343e+01"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "8.628e+00",
+       "wait_qus_sum": "4.346e+01"
+      },
+      "jit": {
+       "T_us_max": "8.628e+00",
+       "wait_qus_sum": "4.134e+01"
+      }
+     }
+    },
+    "group1_floor": {
+     "items": [
+      "ipe2_0",
+      "ipe2_1",
+      "ipe2_2",
+      "ipe2_3",
+      "ipe3_0",
+      "ipe3_1",
+      "ipe3_2",
+      "ipe3_3",
+      "ipe3_4",
+      "ipe3_5",
+      "ipe3_6",
+      "ipe3_7",
+      "lr2",
+      "lr4"
+     ],
+     "qubits": 38,
+     "acceptance": {
+      "one_item_per_instruction": true,
+      "couplers_on_own_chain": true,
+      "no_coupler_between_items": true,
+      "qubits_ok": true
+     },
+     "same_dag": {
+      "ipe2_0": true,
+      "ipe2_1": true,
+      "ipe2_2": true,
+      "ipe2_3": true,
+      "ipe3_0": true,
+      "ipe3_1": true,
+      "ipe3_2": true,
+      "ipe3_3": true,
+      "ipe3_4": true,
+      "ipe3_5": true,
+      "ipe3_6": true,
+      "ipe3_7": true,
+      "lr2": true,
+      "lr4": true
+     },
+     "tvd": {
+      "ipe2_0": "0",
+      "ipe2_1": "0"
+     },
+     "simulated": "first two items",
+     "identity": true,
+     "ledger": {
+      "asap": {
+       "T_us": "8.160e+00",
+       "wait_qus": "4.665e+01"
+      },
+      "jit": {
+       "T_us": "8.160e+00",
+       "wait_qus": "4.665e+01"
+      }
+     },
+     "single": {
+      "asap": {
+       "T_us_max": "8.160e+00",
+       "wait_qus_sum": "4.651e+01"
+      },
+      "jit": {
+       "T_us_max": "8.160e+00",
+       "wait_qus_sum": "4.651e+01"
+      }
+     }
+    }
+   },
+   "seconds_packed": "1.081e+01"
+  }
+ }
+}

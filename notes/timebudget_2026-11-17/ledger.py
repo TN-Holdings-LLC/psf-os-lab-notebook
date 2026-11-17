@@ -21,6 +21,10 @@ that ALAP also pushes a qubit's last measurement late); and each for the circuit
 (barriers do not change what the circuit computes; they pin the schedule). The difference between the cells is what a
 scheduling pass of the OS could save without changing the circuit.
 
+A delay instruction (written by the schedule pass to pin a schedule) takes its length in the schedule but counts as
+idle, not as busy, and does not start a qubit's information-carrying time (2026-11-17f; circuits without delays are
+counted exactly as before).
+
 Lengths (illustrative, never fitted): the medians of Qiskit's FakeMarrakesh snapshot (the psf-os device record keeps no
 gate lengths): sx / x 36 ns, rz 0, cz 68 ns, measure 2.584 us, reset 2.72 us. The decision latency of a conditional is
 a free parameter (--latency-us, default 0; the device's value is not in any record we keep): with 0 the ledger is a
@@ -224,9 +228,9 @@ def ledger(qc, latency_us=0.0, alap=False, drop_barriers=False):
             if kind == "if_else":
                 b = body.get(q, 0.0)
                 busy[q].append((s + d - b, s + d))     # body at the end of the conditional's interval
-            elif d > 0:
+            elif d > 0 and kind != "delay":            # a delay is idle time, not work (schedule pass, 17f)
                 busy[q].append((s, s + d))
-            if d > 0 and kind != "rz" and q not in first:
+            if d > 0 and kind not in ("rz", "delay") and q not in first:
                 first[q] = s
     idle = wait = 0.0
     by_q = {}

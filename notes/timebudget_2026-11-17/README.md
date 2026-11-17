@@ -176,3 +176,28 @@ value, and the decision intervals give the phase-estimation items their edges.
   explicit delays. Delays would count as busy time in the ledger, so they need a ledger change, and they are not
   proposed here.
 - **Using the pass on a device is a declared condition** (as in the README above).
+
+## Schedule pass by delays, and the packing estimate (workplace VS Claude, 2026-11-17; the request 17f; desk only, not declared)
+
+`schedule_pass.py --jit` pins ledger's JIT schedule with per-qubit delays (ledger.py now counts a delay as idle). Records
+`schedule_pass_jit_latency{0,1}us.{txt,json}`: 68 items (tonight's three jobs, seqcmp, early.py), ff and off.
+
+- Every item: the pinned circuit recounted under ASAP equals the JIT value (latency 0 and 1 us). Identity: structural
+  for all 68; exact branching simulation for 58 (TVD <= 1.9e-15; with the delays removed, TVD 0); 10 too large.
+- rd5 149.9 (as built, ASAP) -> 46.5 pinned; seq16 351.4 -> 41.3; early ea5 15.5 (unchanged). An ALAP executor still
+  moves the pinned circuits (it pushes the last measurements late), e.g. rd5 87.7.
+- Barriers alone reach JIT for 55 of 68 at latency 0 (46 exact, 9 snapped); not for lr (2.584 against 2.548), the
+  seq off arms, and early ea3-5 off.
+- IBM (qiskit-ibm-runtime 0.51 scheduling module, installed; and its public API page "transpiler passes scheduling"):
+  delay is in the target and IBM's own dynamic-circuit passes insert delays (PadDelay). But control flow ends a
+  "quantum block" and the next block starts after a nondeterministic period at a relative t = 0, and measurements on
+  disjoint qubits in one block run simultaneously. So a delay pins time within a block only. Whether the device's
+  side reschedules user delays is not known to us.
+
+`pack.py` (records `pack_latency{0,1}us.{txt,json}`): items placed by rule C with a one-qubit gap, ff / off / floor of a
+group side by side, sentinel kept. Each job fits one group: 10 / 19 / 46 circuits -> 7 / 7 / 7, model seconds 14.2 /
+24.2 / 54.3 -> 10.8 each. Identity: structural for every item, exact simulation of the whole pack (coh) or its first
+two items, TVD <= 8.1e-16. T unchanged (the longest item); the ledger's wait grows 1-7 % (other items' measurements
+now overlap idle time; e.g. compound JIT 129.2 -> 135.2). Not modelled: block synchronisation across items (above),
+crosstalk between items, items moved off the single build's qubits. A device run would be a declared condition:
+single and packed compared on the same night. Lengths are FakeMarrakesh medians, illustrative; no error number.
