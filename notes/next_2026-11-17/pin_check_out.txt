@@ -1,0 +1,7 @@
+rd1: chain [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; delays ff 2 -> rebuilt 2 (floor 2), off 2 -> 2; structure ff True off True; CZ 2 -> 2; exact max |diff| 0.0e+00; wait q.us: original ASAP 5.17 JIT 5.17, rebuilt (ASAP executor) 5.17  ok
+rd2: chain [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; delays ff 8 -> rebuilt 8 (floor 8), off 8 -> 8; structure ff True off True; CZ 12 -> 12; exact max |diff| 0.0e+00; wait q.us: original ASAP 25.84 JIT 15.50, rebuilt (ASAP executor) 15.52  ok
+rd3: chain [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; delays ff 14 -> rebuilt 14 (floor 14), off 14 -> 14; structure ff True off True; CZ 22 -> 22; exact max |diff| 0.0e+00; wait q.us: original ASAP 56.85 JIT 25.84, rebuilt (ASAP executor) 25.86  ok
+rd4: chain [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; delays ff 20 -> rebuilt 20 (floor 20), off 20 -> 20; structure ff True off True; CZ 32 -> 32; exact max |diff| 0.0e+00; wait q.us: original ASAP 98.19 JIT 36.18, rebuilt (ASAP executor) 36.19  ok
+rd5: chain [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; delays ff 26 -> rebuilt 26 (floor 26), off 26 -> 26; structure ff True off True; CZ 42 -> 42; exact max |diff| 0.0e+00; wait q.us: original ASAP 149.87 JIT 46.51, rebuilt (ASAP executor) 46.53  ok
+entrance build: 19 circuits, 24.2 s model (unpinned: 19, 24.2 s)
+PASS

@@ -1,0 +1,12 @@
+ff_rd2_floor   floor  P(out 1, relabelled) 1.000 all zero 1.000 ok
+ff_rd2_off     off    P(out 1, relabelled) 0.633 all zero 0.400 ok
+ff_rd3         user   P(out 1, relabelled) 0.697 all zero 0.254 ok
+ff_rd3_floor   floor  P(out 1, relabelled) 1.000 all zero 1.000 ok
+ff_rd3_off     off    P(out 1, relabelled) 0.505 all zero 0.253 ok
+ff_rd4         user   P(out 1, relabelled) 0.632 all zero 0.163 ok
+ff_rd4_floor   floor  P(out 1, relabelled) 1.000 all zero 1.000 ok
+ff_rd4_off     off    P(out 1, relabelled) 0.399 all zero 0.157 ok
+ff_rd5         user   P(out 1, relabelled) 0.554 all zero 0.105 ok
+ff_rd5_floor   floor  P(out 1, relabelled) 1.000 all zero 1.000 ok
+ff_rd5_off     off    P(out 1, relabelled) 0.319 all zero 0.097 ok
+PASS

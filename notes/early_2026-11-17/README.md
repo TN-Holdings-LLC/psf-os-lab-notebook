@@ -88,3 +88,64 @@ python notes/early_2026-11-17/early.py ledger OUT RD_OUT
 python -c "from psf_os import feedforward as F; F.run_local('OUT')"; python notes/early_2026-11-17/early.py score OUT
 ```
 DEV = results/rus-neuron3-2026-11-16/fetch_in/ibm_marrakesh/dev.
+
+## Why the early chain did not pay on fez: a decision latency in an illustrative model (home VS Claude, 2026-11-17 evening)
+
+**An illustration, not a prediction for any device.** The noise model is uniform and was not fitted; no calibration
+or error number was read. Tools: `latency_desk.py` (grid), `latency_gate_only.py`, `latency_sep.py` (extra cases);
+outputs `latency_desk.txt` / `.json`, `latency_gate_only.json`, `latency_sep.json`.
+
+- Circuits: the compiled circuits that ran tonight on ibm_fez (T2 `compound/job`, T4 `early/job`), barriers kept.
+- Timing: the time-budget ledger (FakeMarrakesh medians; ASAP as built); a decision latency LAT per conditional held on
+  the conditional's qubits (0 / 0.5 / 1 / 2 us, examples).
+- Noise: sx / x depolarising 3e-4, CZ two-qubit depolarising 3e-3 (0.3 %), readout flip 0.015 (mid-circuit and
+  final), idle amplitude damping and dephasing with T1 = T2 = 150 us or an effective 50 us (the control test of
+  2026-11-16 lost |1> as if T1 were 20-45 us during measurement waits).
+- Engine: noise trajectories (16000 shots per circuit) on the state vector of the touched qubits, conditionals per
+  shot; scored by the declared T4 scorer (`gpu/early_night.py score --rd`) on copies of tonight's job folders with the
+  user cells replaced (sentinel rows as the device returned them). Check: noiseless, ff = the ideal.json values within
+  the shot error (rd 0.887 / 0.797 / 0.707 / 0.636 / 0.562 against 0.890 / 0.793 / 0.706 / 0.629 / 0.560).
+
+d = |rd - noiseless| - |early - noiseless| (positive: the early chain kept more), 2 SE 0.008-0.011; L = 1 is the same
+circuit in both (d = 0).
+
+| model | L 2 | L 3 | L 4 | L 5 |
+|---|---|---|---|---|
+| T1 150 us, LAT 0 | -0.002 | +0.003 | +0.005 | -0.002 |
+| T1 150 us, LAT 0.5 us | -0.006 | +0.009 | +0.002 | -0.018 |
+| T1 150 us, LAT 1 us | +0.001 | +0.009 | -0.001 | -0.003 |
+| T1 150 us, LAT 2 us | +0.004 | +0.022 | +0.002 | +0.001 |
+| T1 50 us, LAT 0 | +0.018 | +0.022 | +0.014 | +0.001 |
+| T1 50 us, LAT 0.5 us | +0.023 | +0.026 | +0.012 | -0.012 |
+| T1 50 us, LAT 1 us | +0.021 | +0.030 | +0.012 | -0.012 |
+| T1 50 us, LAT 2 us | +0.018 | +0.014 | +0.006 | -0.035 |
+| gates and readout only (no decay), CZ 0.3 % | -0.006 | -0.002 | -0.011 | -0.006 |
+| gates and readout only, CZ 1 % | +0.005 | +0.009 | +0.003 | +0.004 |
+| CZ 1 % only (no readout error, no decay) | +0.007 | +0.018 | +0.025 | +0.022 |
+| readout 0.015 only (no gate error, no decay) | -0.003 | -0.009 | -0.020 | -0.014 |
+| tonight on fez (device, T4-3) | between -0.010 and +0.011 at every L (2 SE 0.015-0.022) | | | |
+
+ff at L = 5 (rd / early, noiseless 0.560): T1 150 us LAT 0 0.541 / 0.539, LAT 2 us 0.510 / 0.511; T1 50 us LAT 0
+0.562 / 0.562, LAT 2 us 0.523 / 0.488; tonight on fez 0.474 / 0.479 (the device lost more than any cell of the model).
+
+Reading (in the model):
+
+- **The two effects that cancel are the CZ and the extra reads, not the latency.** Alone, the 32 CZ fewer at L = 5
+  (CZ 1 %, nothing else) let the early chain keep +0.018 to +0.025 more at L = 3-5; alone, the readout error of its
+  extra mid-circuit reads (the L - 1 early reads, and the conditionals that act on them) costs it -0.009 to -0.020.
+  Together (gates and readout, no decay) d stays within 2 SE at every L, at CZ 0.3 % and at 1 %: the reading "the
+  added conditionals offset the saving" holds, with the offsetting cost carried by the reads those conditionals need.
+- **With weak decay (T1 150 us) the latency does not change the picture:** d within 2 SE at every L for LAT 0 to
+  2 us (one cell, L = 3 at 2 us, reads +0.022). So on this model the device's "the same at every L" is met by any
+  latency from 0 to 2 us.
+- **With strong decay (T1 50 us) the early chain's shorter waits pay at L = 2-4** (+0.012 to +0.030 for LAT 0 to
+  1 us), which the device did not show; and at L = 5 the latency turns against it (-0.012 at 0.5-1 us, -0.035 at
+  2 us), because the early chain has 9 conditionals against 5. The device's equality at every L fits this branch only
+  near LAT 2 us at L = 2-4 together with a smaller loss at L = 5 than the model gives.
+- So the range asked for: in the weak-decay model, any latency from 0 to 2 us gives "no difference" (the
+  cancellation is CZ against reads); in the strong-decay model none of 0-2 us gives "no difference at every L". The
+  model's losses (about -0.02 to -0.05 at L = 5) are smaller than the device's (-0.08), so the model does not explain
+  the size of the device's loss; it only says which way each piece pushes.
+
+Not modelled: a latency that holds every qubit of the circuit (the ledger holds only the conditional's qubits),
+measurement-induced effects on neighbours beyond the uniform idle decay, leakage, crosstalk.
