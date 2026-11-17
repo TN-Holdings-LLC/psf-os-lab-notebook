@@ -1,0 +1,178 @@
+{
+ "ff_coh1": {
+  "asap": 0.035999999999999956,
+  "jit": 0.035999999999999956,
+  "pinned_asap": 0.019999999999999598,
+  "T_us": 3.76,
+  "delays": 7,
+  "structure_same": true
+ },
+ "ff_coh1_off": {
+  "asap": 0.0,
+  "jit": 0.0,
+  "pinned_asap": 0.0,
+  "T_us": 3.0200000000000005,
+  "delays": 2,
+  "structure_same": true
+ },
+ "ff_rd1": {
+  "asap": 5.168,
+  "jit": 5.168,
+  "pinned_asap": 5.168,
+  "T_us": 8.304,
+  "delays": 2,
+  "structure_same": true
+ },
+ "ff_rd1_off": {
+  "asap": 5.168,
+  "jit": 5.168,
+  "pinned_asap": 5.168,
+  "T_us": 8.092,
+  "delays": 2,
+  "structure_same": true
+ },
+ "ff_rd2": {
+  "asap": 25.84,
+  "jit": 15.504000000000003,
+  "pinned_asap": 15.520000000000005,
+  "T_us": 14.908000000000005,
+  "delays": 8,
+  "structure_same": true
+ },
+ "ff_rd2_off": {
+  "asap": 25.84,
+  "jit": 15.504,
+  "pinned_asap": 15.504000000000007,
+  "T_us": 14.004000000000005,
+  "delays": 8,
+  "structure_same": true
+ },
+ "ff_rd3": {
+  "asap": 56.848000000000006,
+  "jit": 25.840000000000003,
+  "pinned_asap": 25.856000000000005,
+  "T_us": 21.512,
+  "delays": 14,
+  "structure_same": true
+ },
+ "ff_rd3_off": {
+  "asap": 56.848000000000006,
+  "jit": 25.840000000000003,
+  "pinned_asap": 25.860000000000007,
+  "T_us": 19.907999999999998,
+  "delays": 14,
+  "structure_same": true
+ },
+ "ff_rd4": {
+  "asap": 98.19200000000002,
+  "jit": 36.17600000000001,
+  "pinned_asap": 36.19200000000001,
+  "T_us": 28.116000000000014,
+  "delays": 20,
+  "structure_same": true
+ },
+ "ff_rd4_off": {
+  "asap": 98.19200000000002,
+  "jit": 36.17600000000001,
+  "pinned_asap": 36.19600000000001,
+  "T_us": 25.812000000000012,
+  "delays": 20,
+  "structure_same": true
+ },
+ "ff_rd5": {
+  "asap": 149.87200000000004,
+  "jit": 46.512000000000015,
+  "pinned_asap": 46.52800000000001,
+  "T_us": 34.72000000000003,
+  "delays": 26,
+  "structure_same": true
+ },
+ "ff_rd5_off": {
+  "asap": 149.87200000000004,
+  "jit": 46.512000000000015,
+  "pinned_asap": 46.53200000000002,
+  "T_us": 31.716000000000022,
+  "delays": 26,
+  "structure_same": true
+ },
+ "ff_ea1": {
+  "asap": 5.168,
+  "jit": 5.168,
+  "pinned_asap": 5.168,
+  "T_us": 8.304,
+  "delays": 2,
+  "structure_same": true
+ },
+ "ff_ea1_off": {
+  "asap": 5.168,
+  "jit": 5.168,
+  "pinned_asap": 5.168,
+  "T_us": 8.092,
+  "delays": 2,
+  "structure_same": true
+ },
+ "ff_ea2": {
+  "asap": 7.752000000000003,
+  "jit": 7.752000000000003,
+  "pinned_asap": 7.8,
+  "T_us": 14.004000000000001,
+  "delays": 4,
+  "structure_same": true
+ },
+ "ff_ea2_off": {
+  "asap": 25.84,
+  "jit": 15.504,
+  "pinned_asap": 15.504000000000007,
+  "T_us": 14.040000000000001,
+  "delays": 8,
+  "structure_same": true
+ },
+ "ff_ea3": {
+  "asap": 10.336,
+  "jit": 10.336,
+  "pinned_asap": 10.44,
+  "T_us": 19.704,
+  "delays": 6,
+  "structure_same": true
+ },
+ "ff_ea3_off": {
+  "asap": 57.692,
+  "jit": 26.439999999999998,
+  "pinned_asap": 25.964,
+  "T_us": 19.944,
+  "delays": 14,
+  "structure_same": true
+ },
+ "ff_ea4": {
+  "asap": 12.920000000000002,
+  "jit": 12.920000000000002,
+  "pinned_asap": 13.087999999999997,
+  "T_us": 25.404000000000007,
+  "delays": 8,
+  "structure_same": true
+ },
+ "ff_ea4_off": {
+  "asap": 101.13600000000001,
+  "jit": 37.37600000000001,
+  "pinned_asap": 36.42000000000001,
+  "T_us": 25.848000000000013,
+  "delays": 20,
+  "structure_same": true
+ },
+ "ff_ea5": {
+  "asap": 15.504000000000003,
+  "jit": 15.504000000000003,
+  "pinned_asap": 15.744000000000009,
+  "T_us": 31.104000000000013,
+  "delays": 10,
+  "structure_same": true
+ },
+ "ff_ea5_off": {
+  "asap": 156.17200000000003,
+  "jit": 48.312000000000026,
+  "pinned_asap": 46.89200000000003,
+  "T_us": 31.752000000000024,
+  "delays": 26,
+  "structure_same": true
+ }
+}
