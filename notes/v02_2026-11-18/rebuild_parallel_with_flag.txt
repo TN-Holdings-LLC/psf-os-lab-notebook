@@ -1,0 +1,1 @@
+parallel P-A + P-B (allow_conditional_neighbours=True by the wrapper): 52 qpy files compared, all byte-identical
