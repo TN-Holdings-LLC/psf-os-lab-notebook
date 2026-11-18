@@ -43,12 +43,12 @@ python gpu/os2_run.py verify OUT [--resim]
 |---|---|---|---|---|---|---|
 | m0 | marrakesh | none | P0 / P0 / P0 | none | fixed point after round 1 | 76.1 |
 | f0 | fez | none | P0 / P0 / P0 | none | fixed point after round 1 | 76.1 |
-| s6 | marrakesh | gamma 0.01 | P1 / P1 / P1 | round 2: R3 at L 1, 2, 3 -> P0 | fixed point after round 3 || 137.9 |
-| s8 | marrakesh | gamma 0.02, P(1\|1) 0.83 on q3 | P1 / P2 / P1 | R1 L 2 -> P2 + B; R2 L 2 -> +Q2 (output q3 -> q5); R3 L 1 -> P0 | fixed point after round 3 || 151.2 |
-| s5k3 | marrakesh | gamma 0.03, q1 0.83, --k-max 3 | P2 / P1 / P1 | R1 L 1; R2 L 1 -> +Q2 | fixed point after round 3 || 154.5 |
-| s6k2 | marrakesh | gamma 0.01, --k-max 2 | P1 / P1 / P1 | R3 at round 2 | **round limit K = 2** || 117.0 |
+| s6 | marrakesh | gamma 0.01 | P1 / P1 / P1 | round 2: R3 at L 1, 2, 3 -> P0 | fixed point after round 3 | 137.9 |
+| s8 | marrakesh | gamma 0.02, P(1\|1) 0.83 on q3 | P1 / P2 / P1 | R1 L 2 -> P2 + B; R2 L 2 -> +Q2 (output q3 -> q5); R3 L 1 -> P0 | fixed point after round 3 | 151.2 |
+| s5k3 | marrakesh | gamma 0.03, q1 0.83, --k-max 3 | P2 / P1 / P1 | R1 L 1; R2 L 1 -> +Q2 | fixed point after round 3 | 154.5 |
+| s6k2 | marrakesh | gamma 0.01, --k-max 2 | P1 / P1 / P1 | R3 at round 2 | **round limit K = 2** | 117.0 |
 | s1b | marrakesh | gamma 0.08, q1 0.83, --budget 150 | P2 / P1 / P1 | R1 at L 1, 2, 3; R2 L 1 -> +Q2 | **budget** before round 3 (127.0 + 40.9 > 150; not built) | 127.0 |
-| fa | fez | gamma 0.05, q1 0.83 | P2 / P1 / P1 | R1 L 1, 3; R2 L 1 -> +Q2 | fixed point after round 3 || 161.3 |
+| fa | fez | gamma 0.05, q1 0.83 | P2 / P1 / P1 | R1 L 1, 3; R2 L 1 -> +Q2 | fixed point after round 3 | 161.3 |
 
 Every stop and branch of the declaration happened inside `go`: R1, R2 (+Q), R3, a fixed point, the round limit (with
 K 2, dry only) and the budget (150 s, dry only); with K 4 and 240 s neither can bind on these records (at most 55.2 +
