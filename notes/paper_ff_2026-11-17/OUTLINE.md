@@ -55,3 +55,23 @@ T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1). Each failure is reported as such in it
 1. (done 11-17, marrakesh) The frame-balanced chain, L = 1 .. 5.
 2. A same-device repeat of T2 or the balanced chain on a second night.
 3. Optionally the packed form (home VS, task B) as a declared single-against-packed test.
+
+## References to cite (2026-11-18; "opened" = read at home this day, the rest from a literature list not yet opened)
+
+- Scope sentence needed: Gupta et al., "Probabilistic error cancellation for dynamic quantum circuits" (IBM, arXiv
+  2310.07825; opened): PEC is extended to mid-circuit measurements and feed-forward. Our ceiling is about correcting
+  the circuit without control (the off arm), not a claim that dynamic circuits cannot be mitigated.
+- Direct precedent: Moreira et al., "Realization of a quantum neural network using repeat-until-success circuits in a
+  superconducting quantum processor", npj Quantum Information 9, 118 (2023) (opened): RUS neurons with real-time
+  feedback, a 3-neuron network, controller latency 160 ns and feedback loop 980 ns (their device). Ours: chained
+  neurons to L = 7 on cloud Heron devices, against a correction ceiling, no mitigation, declared before the data.
+- The neuron: Cao, Guerreschi, Aspuru-Guzik, "Quantum Neuron: an elementary building block for machine learning on
+  quantum computers", arXiv 1711.11240 (title checked).
+- Dynamic-circuit benchmarking: "Randomized Benchmarking Protocol for Dynamic Circuits", arXiv 2408.07677 (title
+  checked).
+- Limits of mitigation (cost, not aim): Takagi, Endo, Minagawa, Gu, npj QI 2022 (arXiv 2109.04457); Quek et al.,
+  arXiv 2210.11505. Our ceiling differs: infinite shots return only the run circuit's noiseless value.
+- Beyond break-even with real-time correction: Sivak et al., Nature 2023; Google Quantum AI, arXiv 2408.13687.
+- Dynamic circuits on IBM devices: Córcoles et al., PRL 127, 100501 (2021) (iterative phase estimation); Bäumer et
+  al., arXiv 2308.13065 (constant-depth long-range entanglement).
+- Automatic calibration that reads error numbers (the contrast to our loop): Kelly et al., arXiv 1803.03226.
