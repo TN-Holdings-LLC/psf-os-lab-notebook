@@ -1,0 +1,7 @@
+n 2: IPE 1.0000 (2 SE 0.0000, 8000 shots) against the ceiling 0.7500 -> BEYOND THE CEILING (margin +0.2500); off as read 0.7495
+     textbook 1.0000 (2 SE 0.0000); IPE - textbook +0.0000 (2 SE 0.0000) -> NOT SEPARATED; beside: replicate arm 1.0000 (+0.0000); sentinel CLEAN
+n 3: IPE 1.0000 (2 SE 0.0000, 16000 shots) against the ceiling 0.5884 -> BEYOND THE CEILING (margin +0.4116); off as read 0.4981
+     textbook 1.0000 (2 SE 0.0000); IPE - textbook +0.0000 (2 SE 0.0000) -> NOT SEPARATED; beside: replicate arm 1.0000 (+0.0000); sentinel CLEAN
+n 4: IPE 1.0000 (2 SE 0.0000, 32000 shots) against the ceiling 0.4706 -> BEYOND THE CEILING (margin +0.5294); off as read 0.3221
+     textbook 1.0000 (2 SE 0.0000); IPE - textbook +0.0000 (2 SE 0.0000) -> NOT SEPARATED; beside: replicate arm 1.0000 (+0.0000); sentinel CLEAN
+beside (across jobs, never judged): IPE margin over the ceiling by n: n 2 +0.2500, n 3 +0.4116, n 4 +0.5294; IPE - textbook by n: n 2 +0.0000, n 3 +0.0000, n 4 +0.0000
