@@ -1,0 +1,23 @@
+position A (control chain qubit 1):
+  now         target 1 0.9593 (2 SE 0.0063)  control 1 0.9673
+  now_repeat  target 1 0.9630 (2 SE 0.0060)  control 1 0.9695
+  far         target 1 0.9025 (2 SE 0.0094)  control 1 0.9080
+  far_repeat  target 1 0.8982 (2 SE 0.0096)  control 1 0.8995
+  nb          target 1 0.8932 (2 SE 0.0098)  control 1 0.8985
+  nb_repeat   target 1 0.8960 (2 SE 0.0097)  control 1 0.8988
+  D_late_far +0.0568 (2 SE 0.0113)
+  D_late_nb +0.0660 (2 SE 0.0116)
+  D_nb_beyond_time +0.0092 (2 SE 0.0135)
+position B (control chain qubit 3):
+  now         target 1 0.9665 (2 SE 0.0057)  control 1 0.9928
+  now_repeat  target 1 0.9650 (2 SE 0.0058)  control 1 0.9940
+  far         target 1 0.9032 (2 SE 0.0093)  control 1 0.9273
+  far_repeat  target 1 0.8990 (2 SE 0.0095)  control 1 0.9240
+  nb          target 1 0.8910 (2 SE 0.0099)  control 1 0.9150
+  nb_repeat   target 1 0.8855 (2 SE 0.0101)  control 1 0.9093
+  D_late_far +0.0633 (2 SE 0.0109)
+  D_late_nb +0.0755 (2 SE 0.0114)
+  D_nb_beyond_time +0.0122 (2 SE 0.0136)
+predictions: {'1 position A: D_late_nb >= 2 SE': 'held'}
+reading (declared rule): {'A': 'time', 'B': 'time'}
+floor all zero: {'Afar': 0.93, 'Anb': 0.9383, 'Anow': 0.948, 'Bfar': 0.9732, 'Bnb': 0.954, 'Bnow': 0.984} sentinel CLEAN

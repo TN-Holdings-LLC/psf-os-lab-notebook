@@ -1,0 +1,29 @@
+{
+ "bad": [],
+ "timing": {
+  "B1_lat0": {
+   "A_end_us": 14.852000000000002,
+   "B_first_us": 0.0
+  },
+  "B1_lat1": {
+   "A_end_us": 16.852,
+   "B_first_us": 0.0
+  },
+  "B2_lat0": {
+   "A_end_us": 14.852000000000002,
+   "B_first_us": 0.0
+  },
+  "B2_lat1": {
+   "A_end_us": 16.852,
+   "B_first_us": 0.0
+  },
+  "B3_lat0": {
+   "A_end_us": 14.852000000000002,
+   "B_first_us": 21.12
+  },
+  "B3_lat1": {
+   "A_end_us": 16.852,
+   "B_first_us": 21.12
+  }
+ }
+}

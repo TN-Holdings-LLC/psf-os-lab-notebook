@@ -1,0 +1,19 @@
+ff_Aref        user   P(out 1) 1.000  all zero 0.000  ok
+ff_Aref_floor  floor  P(out 1) 0.000  all zero 1.000  ok
+ff_Aref_off    off    P(out 1) 1.000  all zero 0.000  ok
+ff_AwP         user   P(out 1) 1.000  all zero 0.000  ok
+ff_AwP_floor   floor  P(out 1) 0.000  all zero 1.000  ok
+ff_AwP_off     off    P(out 1) 1.000  all zero 0.000  ok
+ff_AwT         user   P(out 1) 1.000  all zero 0.000  ok
+ff_AwT_floor   floor  P(out 1) 0.000  all zero 1.000  ok
+ff_AwT_off     off    P(out 1) 1.000  all zero 0.000  ok
+ff_Bref        user   P(out 1) 1.000  all zero 0.000  ok
+ff_Bref_floor  floor  P(out 1) 0.000  all zero 1.000  ok
+ff_Bref_off    off    P(out 1) 1.000  all zero 0.000  ok
+ff_BwP         user   P(out 1) 1.000  all zero 0.000  ok
+ff_BwP_floor   floor  P(out 1) 0.000  all zero 1.000  ok
+ff_BwP_off     off    P(out 1) 1.000  all zero 0.000  ok
+ff_BwT         user   P(out 1) 1.000  all zero 0.000  ok
+ff_BwT_floor   floor  P(out 1) 0.000  all zero 1.000  ok
+ff_BwT_off     off    P(out 1) 1.000  all zero 0.000  ok
+PASS

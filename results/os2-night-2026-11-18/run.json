@@ -1,0 +1,118 @@
+{
+ "dry": false,
+ "dry_devdir": null,
+ "noise": null,
+ "k_max": 4,
+ "budget": 240.0,
+ "zip": "/mnt/c/Users/Administrator/Desktop/psf_zero_project/res_os2_1118.zip",
+ "started": "2026-11-18T10:25:28+00:00 (2026-11-18 11:25:28 CET)",
+ "preflight": [
+  {
+   "item": "import qiskit",
+   "ok": true,
+   "detail": "2.5.2"
+  },
+  {
+   "item": "import qiskit_aer",
+   "ok": true,
+   "detail": "0.17.2"
+  },
+  {
+   "item": "import qiskit_ibm_runtime",
+   "ok": true,
+   "detail": "0.49.0"
+  },
+  {
+   "item": "import psf_os",
+   "ok": true,
+   "detail": "0.1.1"
+  },
+  {
+   "item": "psf_os at 0f57c76",
+   "ok": true,
+   "detail": "0f57c76db110ba25857a71a883e1d41574af73ee"
+  },
+  {
+   "item": "psf_os/ unchanged in its checkout",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "item": "notebook HEAD is the declaration's commit",
+   "ok": true,
+   "detail": "HEAD 16d14fc8, prereg/os2_night_2026-11-18.md last changed in 16d14fc8"
+  },
+  {
+   "item": "notebook checkout unchanged",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "item": "gpu/daily_fetch.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/wait_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/ctrl_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/os_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/os2_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/job_timing.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "Python >= 3.11",
+   "ok": true,
+   "detail": "3.12.13"
+  },
+  {
+   "item": "a saved IBM account exists (the file only, not read)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "OUT does not exist yet",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "the zip's folder is writable",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "the zip does not exist yet",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "version",
+   "ok": true,
+   "detail": "qiskit_aer 0.17.2, not the version checked at the workplace (0.18.0); not a stop"
+  },
+  {
+   "item": "version",
+   "ok": true,
+   "detail": "qiskit_ibm_runtime 0.49.0, not the version checked at the workplace (0.51.0); not a stop"
+  }
+ ],
+ "psf_os": "0f57c76db110ba25857a71a883e1d41574af73ee",
+ "device": "ibm_marrakesh"
+}

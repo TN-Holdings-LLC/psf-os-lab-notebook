@@ -1,0 +1,91 @@
+{
+ "kind": "psfos",
+ "psfos_role": "floor",
+ "psfos_job": {
+  "kind": "feedforward_floor"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "mapping": {
+  "0": 51,
+  "1": 52,
+  "2": 53,
+  "3": 54,
+  "4": 55,
+  "5": 59
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_ea3_floor.qpy",
+  "circuits": 1,
+  "sha256": "5adb26b0bc1f0bc4f6111ba4a2dce1d0f9284a1a2a617ab5e8ad13ddba3abad3"
+ },
+ "tag": "ea3",
+ "chain": [
+  51,
+  52,
+  53,
+  54,
+  55,
+  59
+ ],
+ "chain_rule": {
+  "rule": "given",
+  "start": null
+ },
+ "success": {},
+ "bound": null,
+ "clbits": 9,
+ "mid": 8,
+ "conditionals": 5,
+ "logical_cz": 1,
+ "off_explicit": true,
+ "rus": {
+  "L": 3,
+  "theta": 1.1,
+  "m": 2,
+  "out_bit": 6,
+  "tries": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    5
+   ]
+  ],
+  "exact": 0.8229569952973316
+ },
+ "logical_cz_in_blocks": 5,
+ "ff_arm": "floor",
+ "cz": 6,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}

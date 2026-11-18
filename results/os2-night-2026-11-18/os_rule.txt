@@ -1,0 +1,6 @@
+Dc A: D_late_nb +0.0660 (2 SE 0.0116) loss True;  Dw A: D_cond +0.0117 (2 SE 0.0145) loss False
+Dc B: D_late_nb +0.0755 (2 SE 0.0114) loss True;  Dw B: D_cond +0.0025 (2 SE 0.0136) loss False
+Dr L 1 (physical qubit 1): P(1|1) 0.9673, P(0|0) 0.9545, gap -0.0128 (2 SE 0.0087) loss False
+Dr L 2 (physical qubit 3): P(1|1) 0.9928, P(0|0) 0.9950, gap +0.0022 (2 SE 0.0035) loss False
+Dr L 3 (physical qubit 5): P(1|1) 0.9818, P(0|0) 0.9848, gap +0.0030 (2 SE 0.0057) loss False
+pick: {1: 'P1', 2: 'P1', 3: 'P1'}  (rule 1 (Dc late-use loss); rule 2 per L (Dr))

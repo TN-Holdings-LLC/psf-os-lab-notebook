@@ -1,0 +1,85 @@
+{
+ "dw": {
+  "jobs": [
+   {
+    "folder": ".",
+    "job": "dbunqff82tmc73dto6eg",
+    "status": "DONE",
+    "created": "11:26:05",
+    "running": "11:26:07",
+    "finished": "11:26:52",
+    "wait_s": 1.732835,
+    "run_s": 45.954853,
+    "exec_s": 23.774445056,
+    "exec_share_of_run": 0.5173435122510347,
+    "charged_s": 26
+   }
+  ],
+  "queue_after": {
+   "read": "11:26:12",
+   "pending": {
+    "ibm_marrakesh": 1,
+    "ibm_fez": 1,
+    "ibm_kingston": 0
+   }
+  }
+ },
+ "dc": {
+  "jobs": [
+   {
+    "folder": ".",
+    "job": "dbunr2v82tmc73dto75g",
+    "status": "DONE",
+    "created": "11:27:24",
+    "running": "11:27:25",
+    "finished": "11:27:59",
+    "wait_s": 1.347151,
+    "run_s": 33.82758,
+    "exec_s": 24.039228928,
+    "exec_share_of_run": 0.7106399254099762,
+    "charged_s": 26
+   }
+  ],
+  "queue_after": {
+   "read": "11:27:30",
+   "pending": {
+    "ibm_marrakesh": 1,
+    "ibm_fez": 1,
+    "ibm_kingston": 0
+   }
+  }
+ },
+ "r1": {
+  "jobs": [
+   {
+    "folder": ".",
+    "job": "dbunrf782tmc73dto7kg",
+    "status": "DONE",
+    "created": "11:28:12",
+    "running": "11:28:14",
+    "finished": "11:29:07",
+    "wait_s": 1.93853,
+    "run_s": 53.419217,
+    "exec_s": 27.434221056,
+    "exec_share_of_run": 0.5135646420276059,
+    "charged_s": 30
+   }
+  ],
+  "queue_after": {
+   "read": "11:28:18",
+   "pending": {
+    "ibm_marrakesh": 1,
+    "ibm_fez": 3,
+    "ibm_kingston": 0
+   }
+  }
+ },
+ "queue_before": {
+  "read": "11:25:34",
+  "pending": {
+   "ibm_marrakesh": 1,
+   "ibm_fez": 1,
+   "ibm_kingston": 0
+  }
+ }
+}

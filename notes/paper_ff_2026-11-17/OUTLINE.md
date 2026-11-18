@@ -29,9 +29,13 @@ declared before the data". Author TN Holdings. Which paper number it takes is th
 | 11-17 marrakesh | the prescription loop (`results/os-night-2026-11-17`) | diagnostics -> fixed rule -> P2 picked; HELPS at L = 2, 3, overshoot at L = 1 |
 | 11-17 marrakesh | the frame-balanced chain (`results/balanced-night-2026-11-17`) | no overshoot by construction; beyond the ceiling at L = 2 .. 5, margin growing (slope +0.031 / step); L = 1 not beyond (the nf frame reads its 1 on a qubit with a large readout gap) |
 | 11-17 marrakesh | single against packed (`results/packing-night-2026-11-17`) | ten items in one circuit: 11 s against 41 s charged, but the control arm keeps 0.20 less on average (off arm unchanged): side-by-side conditionals cost |
+| 11-18 marrakesh (recalibrated 10:40) | the balanced chain repeated, same device and qubits (`results/balanced-repeat-2026-11-18`) | no overshoot; COMPOUNDS (+0.053 / step) but beyond only at L = 5; the pool 0.15-0.18 lower than on 11-17 |
+| 11-18 marrakesh | packing tests (`results/parallel-night-2026-11-18`) | fixed circuits packed read as alone (mean d +0.001): production form 21 s against 41 s; one conditional neighbour costs the first item 0.06, delaying the second does not remove it |
+| 11-18 marrakesh | decision timing (`results/timing-night-2026-11-18`) | no decision latency above ~0.4 us resolved; two conditional actors (fast path and CZ) run side by side |
+| 11-18 marrakesh | the compounding OS, first night (`results/os2-night-2026-11-18`) | ran unattended, picked P1 from the night's diagnostics (P2 on 11-17), HELPS at L = 1-3, fixed point after round 1 |
 
-Predictions over the two nights: 37 declared; 26 held, 11 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
-T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1). Each failure is reported as such in its folder.
+Predictions over three nights: 49 declared; 33 held, 16 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
+T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1. 11-18: R-2, PB-3, T-1, T-3, OS2-1). Each failure is reported as such in its folder.
 
 ## Two numbers side by side (to carry into the text)
 

@@ -1,0 +1,2 @@
+{"device": "ibm_marrakesh", "circuits": 25, "qpu_seconds_model": 30.9, "shots": 4000}
+stacks {"1": ["P1"], "2": ["P1"], "3": ["P1"]} output qubits {"p0_1": 1, "p0_2": 3, "p0_3": 5, "x1": 1, "x2": 3, "x3": 5} probe qubits [1, 3, 5, 7, 9]

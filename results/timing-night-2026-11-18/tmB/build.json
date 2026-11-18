@@ -1,0 +1,285 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "R0": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 8,
+   "mid": 1,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0
+   },
+   "bound": null
+  },
+  "R1008": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 10,
+   "mid": 1,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0
+   },
+   "bound": null
+  },
+  "R2000": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 10,
+   "mid": 1,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0
+   },
+   "bound": null
+  },
+  "R4000": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 10,
+   "mid": 1,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0
+   },
+   "bound": null
+  },
+  "R6000": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 10,
+   "mid": 1,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0
+   },
+   "bound": null
+  },
+  "R8000": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 10,
+   "mid": 1,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0
+   },
+   "bound": null
+  },
+  "K2": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 4,
+   "off_cz": 0,
+   "floor_cz": 4,
+   "depth": 16,
+   "mid": 5,
+   "conditionals": 4,
+   "success": {
+    "4": 0,
+    "5": 0
+   },
+   "bound": null
+  },
+  "K4": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 8,
+   "off_cz": 0,
+   "floor_cz": 8,
+   "depth": 24,
+   "mid": 9,
+   "conditionals": 8,
+   "success": {
+    "8": 0,
+    "9": 0
+   },
+   "bound": null
+  },
+  "K8": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 16,
+   "off_cz": 0,
+   "floor_cz": 16,
+   "depth": 40,
+   "mid": 17,
+   "conditionals": 16,
+   "success": {
+    "16": 0,
+    "17": 0
+   },
+   "bound": null
+  },
+  "DK2": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 8,
+   "off_cz": 0,
+   "floor_cz": 8,
+   "depth": 16,
+   "mid": 9,
+   "conditionals": 8,
+   "success": {
+    "8": 0,
+    "9": 0
+   },
+   "bound": null
+  },
+  "DK4": {
+   "n": 9,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "cz": 16,
+   "off_cz": 0,
+   "floor_cz": 16,
+   "depth": 24,
+   "mid": 17,
+   "conditionals": 16,
+   "success": {
+    "16": 0,
+    "17": 0
+   },
+   "bound": null
+  }
+ },
+ "circuits": 37,
+ "qpu_seconds_model": 44.3,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

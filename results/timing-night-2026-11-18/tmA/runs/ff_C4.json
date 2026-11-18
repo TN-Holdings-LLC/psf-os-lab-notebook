@@ -1,0 +1,84 @@
+{
+ "kind": "psfos",
+ "psfos_role": "user",
+ "psfos_job": {
+  "kind": "feedforward"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+  "6": 6,
+  "7": 7,
+  "8": 8
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_C4.qpy",
+  "circuits": 1,
+  "sha256": "c1d9fa1e2776ebe23c398a2a222e4598ca9971cd5531bdb74e101b5fa73e5300"
+ },
+ "tag": "C4",
+ "chain": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ]
+ },
+ "success": {
+  "8": 0,
+  "9": 0
+ },
+ "bound": null,
+ "clbits": 10,
+ "mid": 9,
+ "conditionals": 8,
+ "logical_cz": 0,
+ "ff_arm": "ff",
+ "cz": 0,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}

@@ -211,6 +211,19 @@ RESULTS = {
     # needs psf-os at the branch feedforward-2026-11-16, 0f57c76 or later (bundled items) (--psf-os PATH)
     "packing-night-2026-11-17": ("results/packing-night-2026-11-17", ["packed", "single1", "plan.json"],
         ["gpu/packing_night.py", "score", "{T}"], "packing_scores.json"),
+    # 2026-11-18 (psf-os at the branch feedforward-2026-11-16, 0f57c76 or later; --psf-os PATH)
+    "balanced-repeat-2026-11-18": ("results/balanced-repeat-2026-11-18", ["job", "runs", "build.json"],
+        ["gpu/balanced_night.py", "score", "{T}"], "balanced_scores.json"),
+    "parallel-night-2026-11-18": ("results/parallel-night-2026-11-18", ["pa", "pb", "plan.json"],
+        ["gpu/parallel_night.py", "score", "{T}"], "parallel_scores.json"),
+    "timing-night-2026-11-18": ("results/timing-night-2026-11-18", ["tmA", "tmB", "dt.json"],
+        ["gpu/timing_night.py", "score", "{T}/tmA", "{T}/tmB", "--dt-file", "{T}/dt.json"], "tmA/timing_scores.json"),
+    "os2-night-2026-11-18-dw": ("results/os2-night-2026-11-18/dw", ["job", "runs", "build.json"],
+        ["gpu/wait_night.py", "score", "{T}"], "wait_scores.json"),
+    "os2-night-2026-11-18-dc": ("results/os2-night-2026-11-18/dc", ["job", "runs", "build.json"],
+        ["gpu/ctrl_night.py", "score", "{T}"], "ctrl_scores.json"),
+    "os2-night-2026-11-18-r1": ("results/os2-night-2026-11-18/r1", ["job", "runs", "build.json", "rule.json"],
+        ["gpu/os2_night.py", "score", "{T}"], "round_scores.json"),
 }
 
 

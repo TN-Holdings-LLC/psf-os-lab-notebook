@@ -1,0 +1,46 @@
+{
+ "round": 1,
+ "device": "ibm_marrakesh",
+ "stacks": {
+  "1": [
+   "P1"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P1"
+  ]
+ },
+ "why": {
+  "1": "round 1: gpu/os_night.py rule",
+  "2": "round 1: gpu/os_night.py rule",
+  "3": "round 1: gpu/os_night.py rule"
+ },
+ "dr_in": {
+  "1": {
+   "p11": 0.96725,
+   "p00": 0.9545,
+   "gap": -0.012750000000000039,
+   "two_se": 0.008666440301530954,
+   "sig": false
+  },
+  "3": {
+   "p11": 0.99275,
+   "p00": 0.995,
+   "gap": 0.0022499999999999742,
+   "two_se": 0.003488902047922811,
+   "sig": false
+  },
+  "5": {
+   "p11": 0.98175,
+   "p00": 0.98475,
+   "gap": 0.0030000000000000027,
+   "two_se": 0.005738847880890377,
+   "sig": false
+  }
+ },
+ "stop": false,
+ "stop_reason": null,
+ "model_seconds_so_far": 55.2
+}

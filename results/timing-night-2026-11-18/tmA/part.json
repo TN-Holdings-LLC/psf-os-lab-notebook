@@ -1,0 +1,13 @@
+{
+ "part": "A",
+ "dt_ns": 4.0,
+ "dt_note": "dt 4 ns from dt.json (ibm_marrakesh)",
+ "ruler_dt": [
+  0,
+  1008,
+  2000,
+  4000,
+  6000,
+  8000
+ ]
+}

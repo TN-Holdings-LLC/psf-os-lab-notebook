@@ -1,0 +1,111 @@
+{
+ "kind": "psfos",
+ "psfos_role": "off",
+ "psfos_job": {
+  "kind": "feedforward_off"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "mapping": {
+  "0": 65,
+  "1": 77,
+  "2": 85,
+  "3": 86,
+  "4": 87,
+  "5": 88,
+  "6": 89,
+  "7": 90,
+  "8": 91,
+  "9": 92
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_ea5_off.qpy",
+  "circuits": 1,
+  "sha256": "ba096c5d5bc994430e5bf22687560343a180397f6f50efed0004dffa2c06fbda"
+ },
+ "tag": "ea5",
+ "chain": [
+  65,
+  77,
+  85,
+  86,
+  87,
+  88,
+  89,
+  90,
+  91,
+  92
+ ],
+ "chain_rule": {
+  "rule": "given",
+  "start": null
+ },
+ "success": {},
+ "bound": null,
+ "clbits": 15,
+ "mid": 14,
+ "conditionals": 9,
+ "logical_cz": 1,
+ "off_explicit": true,
+ "rus": {
+  "L": 5,
+  "theta": 1.1,
+  "m": 2,
+  "out_bit": 10,
+  "tries": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    8,
+    9
+   ]
+  ],
+  "exact": 0.7227064021360451
+ },
+ "logical_cz_in_blocks": 9,
+ "ff_arm": "off",
+ "cz": 21,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}

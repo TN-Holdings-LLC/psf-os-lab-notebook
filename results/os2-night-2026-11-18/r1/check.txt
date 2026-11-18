@@ -1,0 +1,22 @@
+ff_dr          probe user   P 1.000 all zero 0.000 ok
+ff_dr_floor    probe floor  P nan all zero 1.000 ok
+ff_dr_off      probe off    P 1.000 all zero 0.000 ok
+ff_p0_1        p0    user   P 0.918 all zero 0.047 ok
+ff_p0_1_floor  p0    floor  P nan all zero 1.000 ok
+ff_p0_1_off    p0    off    P 0.801 all zero 0.040 ok
+ff_p0_2        p0    user   P 0.850 all zero 0.070 ok
+ff_p0_2_floor  p0    floor  P nan all zero 1.000 ok
+ff_p0_2_off    p0    off    P 0.635 all zero 0.064 ok
+ff_p0_3        p0    user   P 0.790 all zero 0.086 ok
+ff_p0_3_floor  p0    floor  P nan all zero 1.000 ok
+ff_p0_3_off    p0    off    P 0.496 all zero 0.079 ok
+ff_x1          x     user   P 0.896 all zero 0.041 ok
+ff_x1_floor    x     floor  P nan all zero 1.000 ok
+ff_x1_off      x     off    P 0.801 all zero 0.040 ok
+ff_x2          x     user   P 0.790 all zero 0.073 ok
+ff_x2_floor    x     floor  P nan all zero 1.000 ok
+ff_x2_off      x     off    P 0.635 all zero 0.064 ok
+ff_x3          x     user   P 0.712 all zero 0.087 ok
+ff_x3_floor    x     floor  P nan all zero 1.000 ok
+ff_x3_off      x     off    P 0.496 all zero 0.079 ok
+PASS

@@ -1,0 +1,4 @@
+L 1: P1  (R4 keep)
+L 2: P1  (R4 keep)
+L 3: P1  (R4 keep)
+STOP: 2 fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time
