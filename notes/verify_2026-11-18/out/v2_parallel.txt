@@ -1,0 +1,44 @@
+P-A: single items ['rd1', 'rd2', 'rd3', 'rd4', 'rd5', 'ea1', 'ea2', 'ea3', 'ea4', 'ea5']; other cells (the bundle) ['ff_pa', 'ff_pa_floor', 'ff_pa_off']
+  bundle off arm = ff_pa_off, repeat (its ff arm) = ff_pa; parts found 10; barriers spanning two parts 0
+  rd1: single off 0.8580 [0.8580]  packed 0.8485 [0.8485]  repeat 0.8722 [0.8722]  v 0.7943 [0.7943]  d +0.0095 [+0.0095] (2 SE 0.0158 [0.0158]); qubits [0, 1], out bit 2 (record ['ord1']: qubits True, bit True)
+  rd2: single off 0.7278 [0.7278]  packed 0.7263 [0.7263]  repeat 0.7403 [0.7403]  v 0.6308 [0.6308]  d +0.0015 [+0.0015] (2 SE 0.0199 [0.0199]); qubits [3, 4, 5, 6], out bit 7 (record ['ord2']: qubits True, bit True)
+  rd3: single off 0.5188 [0.5188]  packed 0.5040 [0.5040]  repeat 0.5228 [0.5228]  v 0.5010 [0.5010]  d +0.0148 [+0.0148] (2 SE 0.0224 [0.0224]); qubits [8, 9, 10, 11, 12, 13], out bit 14 (record ['ord3']: qubits True, bit True)
+  rd4: single off 0.4090 [0.4090]  packed 0.4353 [0.4353]  repeat 0.4065 [0.4065]  v 0.3980 [0.3980]  d -0.0262 [-0.0262] (2 SE 0.0221 [0.0221]); qubits [15, 19, 30, 31, 32, 33, 34, 35], out bit 23 (record ['ord4']: qubits True, bit True)
+  rd5: single off 0.4193 [0.4193]  packed 0.4127 [0.4127]  repeat 0.3972 [0.3972]  v 0.3161 [0.3161]  d +0.0065 [+0.0065] (2 SE 0.0220 [0.0220]); qubits [21, 22, 23, 24, 25, 26, 27, 28, 36, 41], out bit 34 (record ['ord5']: qubits True, bit True)
+  ea1: single off 0.8027 [0.8027]  packed 0.8107 [0.8107]  repeat 0.8047 [0.8047]  v 0.7943 [0.7943]  d -0.0080 [-0.0080] (2 SE 0.0177 [0.0177]); qubits [43, 44], out bit 37 (record ['oea1']: qubits True, bit True)
+  ea2: single off 0.6073 [0.6073]  packed 0.6082 [0.6082]  repeat 0.6230 [0.6230]  v 0.6308 [0.6308]  d +0.0010 [+0.0010] (2 SE 0.0218 [0.0218]); qubits [46, 47, 48, 49], out bit 42 (record ['oea2']: qubits True, bit True)
+  ea3: single off 0.5463 [0.5463]  packed 0.5380 [0.5380]  repeat 0.5417 [0.5417]  v 0.5010 [0.5010]  d +0.0082 [+0.0082] (2 SE 0.0223 [0.0223]); qubits [51, 52, 53, 54, 55, 59], out bit 50 (record ['oea3']: qubits True, bit True)
+  ea4: single off 0.4205 [0.4205]  packed 0.4183 [0.4183]  repeat 0.4265 [0.4265]  v 0.3980 [0.3980]  d +0.0022 [+0.0022] (2 SE 0.0221 [0.0221]); qubits [67, 68, 69, 70, 71, 72, 73, 74], out bit 61 (record ['oea4']: qubits True, bit True)
+  ea5: single off 0.4357 [0.4357]  packed 0.4333 [0.4333]  repeat 0.4330 [0.4330]  v 0.3161 [0.3161]  d +0.0025 [+0.0025] (2 SE 0.0222 [0.0222]); qubits [65, 77, 85, 86, 87, 88, 89, 90, 91, 92], out bit 75 (record ['oea5']: qubits True, bit True)
+  P-A mean d_off +0.0012 (2 SE 0.0066) -> SAME WITHIN ERROR
+P-B: sa on qubits [0, 1, 2, 3] (out bit 4, qubit 3) P 0.5655; sb on [5, 6, 7, 8] (out bit 4, qubit 8) P 0.6895; noiseless rd2 0.7929 (on B 0.7929)
+  B1: parts [('A', [0, 1, 2, 3], [0, 1, 2, 3, 4]), ('B', [5, 6, 7, 8], [5, 6, 7, 8, 9])]; spanning barriers 0
+     record b1a: qubits [0, 1, 2, 3] bits 0..4 -> read from the circuit: part A qubits [0, 1, 2, 3] bits 0..4, output bit 4 on qubit 3 (agree: qubits True, output bit True)
+     record b1b: qubits [5, 6, 7, 8] bits 5..9 -> read from the circuit: part B qubits [5, 6, 7, 8] bits 5..9, output bit 9 on qubit 8 (agree: qubits True, output bit True)
+     b1a: alone 0.5655  packed 0.5508  d -0.0147 (2 SE 0.0222); still failing after 2 tries: alone 0.193, packed 0.201
+     B1 mean d -0.0147 (2 SE 0.0222) -> SAME WITHIN ERROR
+     B1's B (rd2 off packed) 0.7278 against sb off 0.7323 (noiseless 0.6308): d +0.0045 (2 SE 0.0199)
+  B2: parts [('A', [0, 1, 2, 3], [0, 1, 2, 3, 4]), ('B', [5, 6, 7, 8], [5, 6, 7, 8, 9])]; spanning barriers 0
+     record b2a: qubits [0, 1, 2, 3] bits 0..4 -> read from the circuit: part A qubits [0, 1, 2, 3] bits 0..4, output bit 4 on qubit 3 (agree: qubits True, output bit True)
+     record b2b: qubits [5, 6, 7, 8] bits 5..9 -> read from the circuit: part B qubits [5, 6, 7, 8] bits 5..9, output bit 9 on qubit 8 (agree: qubits True, output bit True)
+     b2a: alone 0.5655  packed 0.5052  d -0.0603 (2 SE 0.0223); still failing after 2 tries: alone 0.193, packed 0.184
+     b2b: alone 0.6895  packed 0.7015  d +0.0120 (2 SE 0.0206); still failing after 2 tries: alone 0.220, packed 0.221
+     B2 mean d -0.0241 (2 SE 0.0152) -> PACKED KEEPS LESS
+  B3: parts [('A', [0, 1, 2, 3], [0, 1, 2, 3, 4]), ('B', [5, 6, 7, 8], [5, 6, 7, 8, 9])]; spanning barriers 0
+     record b3a: qubits [0, 1, 2, 3] bits 0..4 -> read from the circuit: part A qubits [0, 1, 2, 3] bits 0..4, output bit 4 on qubit 3 (agree: qubits True, output bit True)
+     record b3b: qubits [5, 6, 7, 8] bits 5..9 -> read from the circuit: part B qubits [5, 6, 7, 8] bits 5..9, output bit 9 on qubit 8 (agree: qubits True, output bit True)
+     b3a: alone 0.5655  packed 0.5035  d -0.0620 (2 SE 0.0223); still failing after 2 tries: alone 0.193, packed 0.180
+     b3b: alone 0.6895  packed 0.6930  d +0.0035 (2 SE 0.0207); still failing after 2 tries: alone 0.220, packed 0.211
+     B3 mean d -0.0292 (2 SE 0.0152) -> PACKED KEEPS LESS
+  B2 cross-read check: A's part read with B's bit layout would give P(A) from bit 9 = 0.7015, B from bit 4 = 0.5052 (as read: A 0.5052, B 0.7015)
+  B3 cross-read check: A's part read with B's bit layout would give P(A) from bit 9 = 0.6930, B from bit 4 = 0.5035 (as read: A 0.5035, B 0.6930)
+  per bit P(1), alone -> packed (2 SE of the difference); bits of rd2: tries of neuron 0, tries of neuron 1, output
+     B2 ff A: 0.327->0.315 (-0.012, 0.021); 0.104->0.104 (+0.000, 0.014); 0.302->0.288 (-0.015, 0.020); 0.099->0.091 (-0.009, 0.013); 0.434->0.495 (+0.060, 0.022)
+     B2 ff B: 0.329->0.326 (-0.003, 0.021); 0.101->0.102 (+0.002, 0.014); 0.349->0.348 (-0.001, 0.021); 0.143->0.142 (-0.001, 0.016); 0.310->0.298 (-0.012, 0.021)
+     B3 ff A: 0.327->0.319 (-0.009, 0.021); 0.104->0.104 (+0.001, 0.014); 0.302->0.289 (-0.014, 0.020); 0.099->0.084 (-0.015, 0.013); 0.434->0.496 (+0.062, 0.022)
+     B3 ff B: 0.329->0.325 (-0.004, 0.021); 0.101->0.104 (+0.003, 0.014); 0.349->0.344 (-0.005, 0.021); 0.143->0.134 (-0.009, 0.015); 0.310->0.307 (-0.004, 0.021)
+     B2_off A: 0.329->0.323 (-0.006, 0.021); 0.320->0.315 (-0.005, 0.021); 0.314->0.308 (-0.006, 0.021); 0.307->0.298 (-0.008, 0.021); 0.434->0.425 (-0.009, 0.022)
+     B2_off B: 0.335->0.322 (-0.013, 0.021); 0.329->0.315 (-0.014, 0.021); 0.348->0.324 (-0.025, 0.021); 0.339->0.308 (-0.031, 0.021); 0.268->0.256 (-0.012, 0.020)
+     B3_off A: 0.329->0.320 (-0.009, 0.021); 0.320->0.310 (-0.009, 0.021); 0.314->0.326 (+0.012, 0.021); 0.307->0.318 (+0.011, 0.021); 0.434->0.388 (-0.046, 0.022)
+     B3_off B: 0.335->0.327 (-0.008, 0.021); 0.329->0.322 (-0.007, 0.021); 0.348->0.333 (-0.015, 0.021); 0.339->0.318 (-0.021, 0.021); 0.268->0.271 (+0.003, 0.020)
+home P-B numbers (from parallel_scores.json): {"sub": {"b1a": {"single": 0.5655, "packed": 0.5507500000000001, "d": -0.01474999999999993, "se": 0.011103312428054972, "still_failed_packed": 0.20075, "still_failed_single": 0.1925, "off_packed": 0.5795, "off_single": 0.5660000000000001, "floor_packed": 0.84675, "floor_single": 0.8495}, "b2a": {"single": 0.5655, "packed": 0.50525, "d": -0.060250000000000026, "se": 0.011131960603370818, "still_failed_packed": 0.1845, "still_failed_single": 0.1925, "off_packed": 0.57525, "off_single": 0.5660000000000001, "floor_packed": 0.834, "floor_single": 0.8495}, "b2b": {"single": 0.6895, "packed": 0.7015,

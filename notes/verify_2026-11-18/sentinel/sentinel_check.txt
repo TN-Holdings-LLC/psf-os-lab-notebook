@@ -1,0 +1,17 @@
+environment: {'qiskit': '2.5.2', 'qiskit-aer': '0.17.2', 'qiskit-ibm-runtime': '0.49.0', 'numpy': '2.5.5', 'scipy': '1.18.1', 'rustworkx': '0.18.1', 'python': '3.12.13'}
+owner PC (results/balanced-repeat-2026-11-18/versions.txt): 3.12.13 2.5.2 0.17.2 0.49.0 2.5.3 (python qiskit aer runtime numpy)
+balanced-repeat: 31 run files rebuilt, 0 differ []; job/circuits.qpy byte-identical
+  sentinel ksent_n40_D24-fold_rule-0: sha256 518d6060daa9bfa1..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-1: sha256 79d6e912b6484091..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-2: sha256 945b0f3d581a35bc..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-3: sha256 82569727d030b69e..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+timing A: 40 run files rebuilt, 0 differ []; job/circuits.qpy byte-identical
+  sentinel ksent_n40_D24-fold_rule-0: sha256 518d6060daa9bfa1..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-1: sha256 79d6e912b6484091..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-2: sha256 945b0f3d581a35bc..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-3: sha256 82569727d030b69e..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+timing B: 34 run files rebuilt, 0 differ []; job/circuits.qpy byte-identical
+  sentinel ksent_n40_D24-fold_rule-0: sha256 518d6060daa9bfa1..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-1: sha256 79d6e912b6484091..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-2: sha256 945b0f3d581a35bc..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False
+  sentinel ksent_n40_D24-fold_rule-3: sha256 82569727d030b69e..., ops {'rz': 4880, 'sx': 2000, 'cz': 960, 'measure': 40}, Clifford False

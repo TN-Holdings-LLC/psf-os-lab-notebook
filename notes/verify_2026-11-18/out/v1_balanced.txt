@@ -1,0 +1,25 @@
+== 2026-11-18 balanced repeat, re-scored (own reading); home's numbers in brackets
+L 1: out bit rd 2 (record 2), nf 2 (record 2); output qubit 1; chain [0, 1] (record [0, 1])
+     rd 0.7530 [0.7530]  nf 0.4652 [0.4652]  pooled 0.6091 [0.6091]  exact 0.937114 (closed form 0.937114)  noiseless pool 0.8904 [0.8904] (rd 0.8904, nf 0.8904)
+     off noiseless rd 0.7943, nf 0.7943; c(L) rd 0.1429 [0.1429] (nf 0.1429)  g -0.1851 [-0.1851]  2 SE 0.0104 [0.0104]  overshoot False  -> NOT BEYOND [NOT BEYOND]
+L 2: out bit rd 4 (record 4), nf 4 (record 4); output qubit 3; chain [0, 1, 2, 3] (record [0, 1, 2, 3])
+     rd 0.5515 [0.5515]  nf 0.4675 [0.4675]  pooled 0.5095 [0.5095]  exact 0.878182 (closed form 0.878182)  noiseless pool 0.7929 [0.7929] (rd 0.7929, nf 0.7929)
+     off noiseless rd 0.6308, nf 0.6308; c(L) rd 0.2473 [0.2473] (nf 0.2473)  g -0.1213 [-0.1213]  2 SE 0.0111 [0.0111]  overshoot False  -> NOT BEYOND [NOT BEYOND]
+L 3: out bit rd 6 (record 6), nf 6 (record 6); output qubit 5; chain [0, 1, 2, 3, 4, 5] (record [0, 1, 2, 3, 4, 5])
+     rd 0.5235 [0.5235]  nf 0.3453 [0.3453]  pooled 0.4344 [0.4344]  exact 0.822957 (closed form 0.822957)  noiseless pool 0.7060 [0.7060] (rd 0.7060, nf 0.7060)
+     off noiseless rd 0.5010, nf 0.5010; c(L) rd 0.3219 [0.3219] (nf 0.3219)  g -0.0667 [-0.0667]  2 SE 0.0109 [0.0109]  overshoot False  -> NOT BEYOND [NOT BEYOND]
+L 4: out bit rd 8 (record 8), nf 8 (record 8); output qubit 7; chain [0, 1, 2, 3, 4, 5, 6, 7] (record [0, 1, 2, 3, 4, 5, 6, 7])
+     rd 0.4663 [0.4663]  nf 0.3083 [0.3083]  pooled 0.3873 [0.3873]  exact 0.771204 (closed form 0.771204)  noiseless pool 0.6286 [0.6286] (rd 0.6286, nf 0.6286)
+     off noiseless rd 0.3980, nf 0.3980; c(L) rd 0.3733 [0.3733] (nf 0.3733)  g -0.0107 [-0.0107]  2 SE 0.0107 [0.0107]  overshoot False  -> NOT BEYOND [NOT BEYOND]
+L 5: out bit rd 10 (record 10), nf 10 (record 10); output qubit 9; chain [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (record [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+     rd 0.4345 [0.4345]  nf 0.2447 [0.2447]  pooled 0.3396 [0.3396]  exact 0.722706 (closed form 0.722706)  noiseless pool 0.5597 [0.5597] (rd 0.5597, nf 0.5597)
+     off noiseless rd 0.3161, nf 0.3161; c(L) rd 0.4066 [0.4066] (nf 0.4066)  g +0.0236 [+0.0236]  2 SE 0.0104 [0.0104]  overshoot False  -> BEYOND [BEYOND THE CORRECTION CEILING]
+slope +0.0528 (2 SE 0.0033) [+0.0528 (2 SE 0.0033)] -> COMPOUNDS [COMPOUNDS]
+largest difference to home (P, g, c, noiseless): 6.4e-15
+== against 2026-11-17 (same test), differences 11-18 minus 11-17 (2 SE)
+L 1: pooled -0.1657 (0.0137)  rd -0.1492 (0.0166)  nf -0.1822 (0.0218);  same chain True
+L 2: pooled -0.1780 (0.0152)  rd -0.1920 (0.0209)  nf -0.1640 (0.0219);  same chain True
+L 3: pooled -0.1235 (0.0154)  rd -0.1370 (0.0218)  nf -0.1100 (0.0218);  same chain True
+L 4: pooled -0.0940 (0.0153)  rd -0.1138 (0.0222)  nf -0.0742 (0.0212);  same chain True
+L 5: pooled -0.0934 (0.0150)  rd -0.0935 (0.0222)  nf -0.0933 (0.0202);  same chain True
+2026-11-17 slope (own reading) +0.0311 (2 SE 0.0032)

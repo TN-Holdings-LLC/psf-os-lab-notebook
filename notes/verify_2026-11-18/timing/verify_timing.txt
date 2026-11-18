@@ -1,0 +1,45 @@
+job A: clocks read from the ruler circuits: physical qubits [0, 8]; record chain [0, 1, 2, 3, 4, 5, 6, 7, 8] (sites 0 and 8 = 0, 8)
+job B: clocks read from the ruler circuits: physical qubits [0, 8]; record chain [0, 1, 2, 3, 4, 5, 6, 7, 8] (sites 0 and 8 = 0, 8)
+job A ruler, clock 0 (us, loss): 0.0 0.003, 8.1 0.127, 16.0 0.214, 32.0 0.358, 48.0 0.418, 64.0 0.455
+job A ruler, clock 1 (us, loss): 0.0 0.001, 8.1 0.068, 16.0 0.117, 32.0 0.181, 48.0 0.242, 64.0 0.297
+job B ruler, clock 0 (us, loss): 0.0 0.009, 8.1 0.138, 16.0 0.246, 32.0 0.362, 48.0 0.432, 64.0 0.456
+job B ruler, clock 1 (us, loss): 0.0 0.004, 8.1 0.058, 16.0 0.104, 32.0 0.182, 48.0 0.252, 64.0 0.297
+
+== declared: piecewise linear on tau
+  s_M 2.780 (SE 0.142)   s_C 3.098 (SE 0.153)   s_F 3.070 (SE 0.279)   s_D 2.978 (SE 0.258)   s_MK 2.609 (SE 0.122)   s_K 2.874 (SE 0.161)   s_DK 2.882 (SE 0.274)
+  T-1 s_C - s_M +0.317 us (2 SE 0.417) -> NOT RESOLVED
+  T-2 s_D / s_C 0.961 (2 SE 0.192) -> IN PARALLEL
+  T-3 s_DK / s_K 1.003 (2 SE 0.221) -> IN PARALLEL
+
+== one straight line of tau
+  s_M 2.697 (SE 0.116)   s_C 2.999 (SE 0.129)   s_F 2.794 (SE 0.226)   s_D 3.006 (SE 0.232)   s_MK 2.665 (SE 0.114)   s_K 2.921 (SE 0.132)   s_DK 2.841 (SE 0.239)
+  T-1 s_C - s_M +0.302 us (2 SE 0.348) -> NOT RESOLVED
+  T-2 s_D / s_C 1.002 (2 SE 0.177) -> IN PARALLEL
+  T-3 s_DK / s_K 0.973 (2 SE 0.186) -> IN PARALLEL
+
+== saturating exponential (decay times, us: job A 29 / 47, job B 25 / 69)
+  s_M 2.703 (SE 0.121)   s_C 3.010 (SE 0.137)   s_F 2.911 (SE 0.247)   s_D 2.932 (SE 0.223)   s_MK 2.669 (SE 0.121)   s_K 2.961 (SE 0.142)   s_DK 2.838 (SE 0.241)
+  T-1 s_C - s_M +0.307 us (2 SE 0.365) -> NOT RESOLVED
+  T-2 s_D / s_C 0.974 (2 SE 0.173) -> IN PARALLEL
+  T-3 s_DK / s_K 0.958 (2 SE 0.187) -> IN PARALLEL
+
+== piecewise linear on raw loss
+  s_M 2.843 (SE 0.135)   s_C 3.168 (SE 0.165)   s_F 2.908 (SE 0.276)   s_D 3.201 (SE 0.251)   s_MK 2.677 (SE 0.117)   s_K 2.887 (SE 0.148)   s_DK 3.024 (SE 0.264)
+  T-1 s_C - s_M +0.325 us (2 SE 0.426) -> NOT RESOLVED
+  T-2 s_D / s_C 1.010 (2 SE 0.190) -> IN PARALLEL
+  T-3 s_DK / s_K 1.048 (2 SE 0.212) -> IN PARALLEL
+
+== against home's tmA/timing_scores.json (declared form)
+  s_M: home 2.780229 (SE 0.142477)  mine 2.780229 (SE 0.142477)
+  s_C: home 3.097509 (SE 0.152508)  mine 3.097509 (SE 0.152508)
+  s_F: home 3.069545 (SE 0.279483)  mine 3.069545 (SE 0.279483)
+  s_D: home 2.977537 (SE 0.258324)  mine 2.977537 (SE 0.258324)
+  s_MK: home 2.608580 (SE 0.121629)  mine 2.608580 (SE 0.121629)
+  s_K: home 2.873921 (SE 0.161187)  mine 2.873921 (SE 0.161187)
+  s_DK: home 2.881597 (SE 0.273560)  mine 2.881597 (SE 0.273560)
+  T1: home NOT RESOLVED  mine NOT RESOLVED
+  T2: home IN PARALLEL  mine IN PARALLEL
+  T3: home IN PARALLEL  mine IN PARALLEL
+  largest difference in slopes and SEs: 4.44e-16 us
+
+verdicts the same in all four reading forms: True

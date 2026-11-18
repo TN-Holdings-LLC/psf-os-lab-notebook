@@ -1,0 +1,14 @@
+Dc A: control q1 (bit 1), target q2 (bit 0); now target 1 0.9593, nb target 1 0.8932; D_late_nb +0.0660 (2 SE 0.0116) loss True
+Dc B: control q3 (bit 1), target q4 (bit 0); now target 1 0.9665, nb target 1 0.8910; D_late_nb +0.0755 (2 SE 0.0114) loss True
+Dw A: output q1 (bit 3); T_mid 0.8855, T_ff 0.8738; D_cond +0.0117 (2 SE 0.0145) loss False
+Dw B: output q5 (bit 3); T_mid 0.8985, T_ff 0.8960; D_cond +0.0025 (2 SE 0.0136) loss False
+Dr L 1 (q1, Anow bit 1): P(1|1) 0.9673, P(0|0) 0.9545, gap -0.0128 (2 SE 0.0087) loss False
+Dr L 2 (q3, Bnow bit 1): P(1|1) 0.9928, P(0|0) 0.9950, gap +0.0022 (2 SE 0.0035) loss False
+Dr L 3 (q5, Bref bit 0): P(1|1) 0.9818, P(0|0) 0.9848, gap +0.0030 (2 SE 0.0057) loss False
+pick by hand: {1: 'P1', 2: 'P1', 3: 'P1'} (rule 1, rule 2 per L); recorded RULE1 stacks: {'1': ['P1'], '2': ['P1'], '3': ['P1']}
+L 1 [P1]: P 0.8403 (noiseless 0.8904) P0 0.8080 (noiseless 0.9219) exact 0.9371  g +0.0323 (2 SE 0.0170) -> PRESCRIPTION HELPS;  out bits p0 3 (record 3), x 2 (record 2), output qubit 1
+L 2 [P1]: P 0.7288 (noiseless 0.7929) P0 0.7033 (noiseless 0.8498) exact 0.8782  g +0.0255 (2 SE 0.0202) -> PRESCRIPTION HELPS;  out bits p0 6 (record 6), x 4 (record 4), output qubit 3
+L 3 [P1]: P 0.6400 (noiseless 0.7060) P0 0.5847 (noiseless 0.7834) exact 0.8230  g +0.0553 (2 SE 0.0218) -> PRESCRIPTION HELPS;  out bits p0 9 (record 9), x 6 (record 6), output qubit 5
+round 2 rule by hand: L 1: ['P1'] (R4 keep); L 2: ['P1'] (R4 keep); L 3: ['P1'] (R4 keep) -> STOP: fixed point after round 1
+recorded round 1 scores: {"round": 1, "device": "ibm_marrakesh", "stacks": {"1": ["P1"], "2": ["P1"], "3": ["P1"]}, "rows": {"1": {"stack": ["P1"], "p0": 0.808, "p0_n": 4000, "exact": 0.937113901450291, "output_qubit_p0": 1, "output_qubit": 1, "p": 0.84025, "se": 0.005792882216565428, "noiseless": 0.8904214154535403, "overshoot": false, "g": 0.03225, "g_se": 0.008505379731381778, "verdict": "PRESCRIPTION HELPS"}, "2": {"stack": ["P1"], "p0": 0.70325, "p0_n": 4000, "exact": 0.8781824642913858, "output_qubit_p0": 3, "output_qubit": 3, "p": 0.72875, "se": 0.007029819298886708, "noiseless": 0.7928502970982866, "overshoot": false, "g": 0.025499999999999967, "g_se": 0.010079222130204294, "verdict": "PRESCRIPTION HELPS"}, 
+G_1 = mean g over credited L = 0.0377

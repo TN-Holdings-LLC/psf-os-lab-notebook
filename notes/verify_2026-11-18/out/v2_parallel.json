@@ -1,0 +1,200 @@
+{
+ "pa": {
+  "rows": {
+   "rd1": {
+    "single": 0.858,
+    "packed": 0.8485,
+    "repeat": 0.87225,
+    "v": 0.7942505586276729,
+    "d": 0.009499999999999953,
+    "two_se": 0.015823518888034988,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "rd2": {
+    "single": 0.72775,
+    "packed": 0.7262500000000001,
+    "repeat": 0.7402500000000001,
+    "v": 0.6308339498803702,
+    "d": 0.0014999999999999458,
+    "two_se": 0.019923375090581414,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "rd3": {
+    "single": 0.51875,
+    "packed": 0.504,
+    "repeat": 0.52275,
+    "v": 0.5010402170937853,
+    "d": 0.01475000000000004,
+    "two_se": 0.022352459316594228,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "rd4": {
+    "single": 0.40900000000000003,
+    "packed": 0.43525,
+    "repeat": 0.4065,
+    "v": 0.39795147232166916,
+    "d": -0.026249999999999996,
+    "two_se": 0.022080000849184767,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "rd5": {
+    "single": 0.41925,
+    "packed": 0.41274999999999995,
+    "repeat": 0.39725,
+    "v": 0.3160731791981911,
+    "d": 0.006500000000000061,
+    "two_se": 0.022042388141941427,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "ea1": {
+    "single": 0.80275,
+    "packed": 0.81075,
+    "repeat": 0.80475,
+    "v": 0.7942505586276729,
+    "d": -0.008000000000000007,
+    "two_se": 0.017657204620210983,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "ea2": {
+    "single": 0.6072500000000001,
+    "packed": 0.60825,
+    "repeat": 0.623,
+    "v": 0.6308339498803702,
+    "d": 0.0009999999999998899,
+    "two_se": 0.021835278221263865,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "ea3": {
+    "single": 0.54625,
+    "packed": 0.538,
+    "repeat": 0.54175,
+    "v": 0.5010402170937853,
+    "d": 0.00824999999999998,
+    "two_se": 0.022280416008234674,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "ea4": {
+    "single": 0.4205,
+    "packed": 0.41825,
+    "repeat": 0.4265,
+    "v": 0.3979514723216697,
+    "d": 0.0022499999999999742,
+    "two_se": 0.022068001438734774,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   },
+   "ea5": {
+    "single": 0.43574999999999997,
+    "packed": 0.43325,
+    "repeat": 0.43300000000000005,
+    "v": 0.31607317919819045,
+    "d": 0.0024999999999999467,
+    "two_se": 0.02216791318550305,
+    "record_qubits_match": true,
+    "record_out_bit_match": true
+   }
+  },
+  "mean": 0.0011999999999999789,
+  "two_se": 0.0066209792515911125
+ },
+ "pb": {
+  "b1a": {
+   "alone": 0.5655,
+   "packed": 0.5507500000000001,
+   "d": -0.01474999999999993,
+   "two_se": 0.022206624856109945,
+   "still_alone": 0.1925,
+   "still_packed": 0.20075,
+   "qubits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "out_bit": 4
+  },
+  "B1": {
+   "mean": -0.01474999999999993,
+   "two_se": 0.022206624856109945,
+   "verdict": "SAME WITHIN ERROR"
+  },
+  "b2a": {
+   "alone": 0.5655,
+   "packed": 0.50525,
+   "d": -0.060250000000000026,
+   "two_se": 0.022263921206741637,
+   "still_alone": 0.1925,
+   "still_packed": 0.1845,
+   "qubits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "out_bit": 4
+  },
+  "b2b": {
+   "alone": 0.6895,
+   "packed": 0.7015,
+   "d": 0.01200000000000001,
+   "two_se": 0.020578811919058883,
+   "still_alone": 0.2195,
+   "still_packed": 0.22125,
+   "qubits": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "out_bit": 9
+  },
+  "B2": {
+   "mean": -0.024125000000000008,
+   "two_se": 0.015158905695168104,
+   "verdict": "PACKED KEEPS LESS"
+  },
+  "b3a": {
+   "alone": 0.5655,
+   "packed": 0.5035000000000001,
+   "d": -0.061999999999999944,
+   "two_se": 0.02226426509004957,
+   "still_alone": 0.1925,
+   "still_packed": 0.1805,
+   "qubits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "out_bit": 4
+  },
+  "b3b": {
+   "alone": 0.6895,
+   "packed": 0.6930000000000001,
+   "d": 0.0035000000000000586,
+   "two_se": 0.02066012463660372,
+   "still_alone": 0.2195,
+   "still_packed": 0.2115,
+   "qubits": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "out_bit": 9
+  },
+  "B3": {
+   "mean": -0.029249999999999943,
+   "two_se": 0.015186657384032867,
+   "verdict": "PACKED KEEPS LESS"
+  }
+ }
+}

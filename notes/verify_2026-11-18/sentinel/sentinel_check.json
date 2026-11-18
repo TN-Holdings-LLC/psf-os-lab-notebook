@@ -1,0 +1,178 @@
+{
+ "environment": {
+  "qiskit": "2.5.2",
+  "qiskit-aer": "0.17.2",
+  "qiskit-ibm-runtime": "0.49.0",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "rustworkx": "0.18.1",
+  "python": "3.12.13"
+ },
+ "jobs": {
+  "balanced-repeat": {
+   "run_files": 31,
+   "differ": [],
+   "job_circuits_same": true,
+   "sentinel": [
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-0",
+     "sha256": "518d6060daa9bfa147da17ad32c85e2c0b99a1aef4533ba52027f9e04be2fdd1",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-1",
+     "sha256": "79d6e912b648409193d1288c7cf7d3f336bcc639eda3b427256618989ec949a5",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-2",
+     "sha256": "945b0f3d581a35bce0b073508bcfb2759fd2a70952f945e9c956a859fec78da6",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-3",
+     "sha256": "82569727d030b69e402c85c77a367fc535acb6296770094976857329ec83e6f1",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    }
+   ]
+  },
+  "timing A": {
+   "run_files": 40,
+   "differ": [],
+   "job_circuits_same": true,
+   "sentinel": [
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-0",
+     "sha256": "518d6060daa9bfa147da17ad32c85e2c0b99a1aef4533ba52027f9e04be2fdd1",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-1",
+     "sha256": "79d6e912b648409193d1288c7cf7d3f336bcc639eda3b427256618989ec949a5",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-2",
+     "sha256": "945b0f3d581a35bce0b073508bcfb2759fd2a70952f945e9c956a859fec78da6",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-3",
+     "sha256": "82569727d030b69e402c85c77a367fc535acb6296770094976857329ec83e6f1",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    }
+   ]
+  },
+  "timing B": {
+   "run_files": 34,
+   "differ": [],
+   "job_circuits_same": true,
+   "sentinel": [
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-0",
+     "sha256": "518d6060daa9bfa147da17ad32c85e2c0b99a1aef4533ba52027f9e04be2fdd1",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-1",
+     "sha256": "79d6e912b648409193d1288c7cf7d3f336bcc639eda3b427256618989ec949a5",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-2",
+     "sha256": "945b0f3d581a35bce0b073508bcfb2759fd2a70952f945e9c956a859fec78da6",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    },
+    {
+     "file": "ksent_n40_D24-fold_rule.qpy",
+     "circuit": "ksent_n40_D24-fold_rule-3",
+     "sha256": "82569727d030b69e402c85c77a367fc535acb6296770094976857329ec83e6f1",
+     "ops": {
+      "rz": 4880,
+      "sx": 2000,
+      "cz": 960,
+      "measure": 40
+     },
+     "clifford": false
+    }
+   ]
+  }
+ }
+}
