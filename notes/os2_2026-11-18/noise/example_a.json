@@ -1,1 +1,1 @@
-{"example": "illustrative only, never fitted to a device", "wait_gamma": 0.05, "readout": {"1": 0.17}}
+{"example": "illustrative only, never fitted to a device", "gamma": 0.05, "p11": {"1": 0.83}}

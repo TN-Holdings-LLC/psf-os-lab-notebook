@@ -16,9 +16,10 @@ Order (each step is skipped when its output already exists, so resume continues 
   2. diagnostics: Dw (gpu/wait_night.py items) and Dc (gpu/ctrl_night.py items): build, check, budget, submit, queue
      after, collect, score.
   3. the rule of 2026-11-17 (gpu/os_night.py rule) -> OUT/os_rule.json; round 1 -> OUT/RULE1.json.
-  4. round k: build OUT/r{k} from RULE{k}.json, check, budget (diagnostics + rounds run + this round's model seconds
-     <= 240; otherwise the job is moved to job_NOT_SENT and the night stops), submit, queue after, collect, score, the
-     rule -> RULE{k+1}.json; stop when the rule says so (fixed point, K_MAX).
+  4. round k: the budget first (the diagnostics + the rounds built + this round's model seconds, estimated by a build
+     in a temporary folder, <= 240; otherwise the round is not built and the night stops), then build OUT/r{k} from
+     RULE{k}.json, check, submit, queue after, collect, score, the rule -> RULE{k+1}.json; stop when the rule says so
+     (fixed point, K_MAX).
   5. compound, job timing, stop.json; the whole OUT zipped (Python zipfile) to ZIPFILE (device runs).
 Stops: a check FAIL, a refused build, the budget, K_MAX, a fixed point; a collect that times out (60 min per job)
 stops with resumable = true. The reason is written to OUT/stop.json.
@@ -53,14 +54,21 @@ EXPECTED = {"qiskit": "2.5.2", "qiskit_aer": "0.18.0", "qiskit_ibm_runtime": "0.
 DRY_SEED0 = 20261118
 
 
+def _bn():
+    sys.path.insert(0, os.path.join(NB, "notes", "os2_2026-11-18"))
+    import branch_noise as BN
+    return BN
+
+
 def dry_seed(tag):
-    """Dry runs only: the simulator's seed per job, fixed here (declared): dw 20261116, dc 20261117, round k
-    20261118 + k; recorded in the job's submission.json, and used again by verify --resim."""
-    if tag == "dw":
-        return DRY_SEED0 - 2
-    if tag == "dc":
-        return DRY_SEED0 - 1
-    return DRY_SEED0 + int(tag[1:])
+    """Dry runs only: the simulator's seed per job, the workplace VS's "wide" formula (declared): Dw B, Dc B + 500000,
+    round k B + 1000000 k, B = 20261118; circuit i of a job at that seed + 10000 i. Aer seeds shot j at seed + j, so
+    these ranges never overlap (4000 shots, fewer than 100 circuits per job). Recorded in each job's submission.json;
+    verify --resim uses the same seeds."""
+    BN = _bn()
+    if tag in ("dw", "dc"):
+        return BN.job_seed(tag, 0, "wide")
+    return BN.job_seed("round", int(tag[1:]), "wide")
 
 
 def now():
@@ -125,7 +133,7 @@ class Night:
         if os.path.exists(os.path.join(job, "raw_counts.json")):
             return "DONE"
         if self.cfg()["dry"]:
-            return "MISSING"
+            return "WAIT"           # a dry job is simulated at submission; a missing result stands for a pending job
         r = subprocess.run([sys.executable, "-m", "psf_os", "collect", "--job", job, "--wait-min", str(COLLECT_WAIT_MIN)],
                            capture_output=True, text=True)
         self.log(f"{os.path.basename(folder)}: collect -> {r.stdout.strip()} {r.stderr.strip()}")
@@ -248,6 +256,18 @@ class Night:
                 return self.stop(f"the rule: {R['stop_reason']} (after round {k - 1})", rounds=k - 1)
             folder = os.path.join(self.out, f"r{k}")
             if not os.path.exists(folder):
+                # the budget before the round is built into OUT: its model seconds from a build in a temporary
+                # folder (psf-os's own time model), added to the diagnostics and the rounds already built
+                try:
+                    est = round_estimate(self.device_dir(), rule_k, c["dry"])
+                except (Exception, SystemExit) as exc:  # noqa: BLE001
+                    return self.stop(f"r{k}: build refused ({type(exc).__name__}: {exc})", rounds=k - 1)
+                spent = self.spent()
+                json.dump(dict(round=k, spent_s=spent, estimate_s=est, budget_s=c["budget"]),
+                          open(os.path.join(self.out, f"budget_r{k}.json"), "w"), indent=1)
+                if spent + est > c["budget"] + 1e-9:
+                    return self.stop(budget_text(spent, est, c["budget"], k), rounds=k - 1, spent_s=spent,
+                                     estimate_s=est, budget_s=c["budget"])
                 try:
                     ok = _quiet(O.build, types.SimpleNamespace(devdir=self.device_dir(), out=folder, rule_json=rule_k,
                                                                dry_clifford_sentinel=c["dry"]),
@@ -325,6 +345,26 @@ class Night:
 
 # ------------------------------------------------------------------------------------------------ helpers
 
+def budget_text(spent, est, budget, k):
+    return (f"budget: the diagnostics and rounds built take {spent:.1f} s by the model, round {k} would add {est:.1f} s "
+            f"({spent + est:.1f} s > {budget:.0f} s); round {k} not built, nothing more sent")
+
+
+def round_estimate(devdir, rule_json, dry):
+    """The model seconds of the round RULE file describes, from a build in a temporary folder (removed after)."""
+    import os2_night as O
+    tmp = tempfile.mkdtemp(prefix="os2_est_")
+    try:
+        d = os.path.join(tmp, "r")
+        ok = _quiet(O.build, types.SimpleNamespace(devdir=devdir, out=d, rule_json=rule_json,
+                                                   dry_clifford_sentinel=dry), os.path.join(tmp, "x.txt"))
+        if ok is False or not os.path.exists(os.path.join(d, "build.json")):
+            raise SystemExit("the round's build was refused: " + open(os.path.join(tmp, "x.txt")).read()[-300:])
+        return float(json.load(open(os.path.join(d, "build.json")))["qpu_seconds_model"])
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def _quiet(fn, ns, log_file):
     """Run a tool's function with its printout captured into log_file; returns its return value."""
     buf = io.StringIO()
@@ -345,89 +385,11 @@ def build_diag(mod, devdir, folder, dry):
 
 
 def simulate(folder, noise, seed):
-    """Dry runs only: noiseless (psf_os.feedforward.run_local) or under an EXAMPLE noise: this file's run_noisy for
-    noise with `wait_gamma` / `readout`, the workplace VS's notes/os2_2026-11-18/branch_noise.noisy_run_local for noise
-    with `gamma` / `p11` / `p00` (the same model written independently)."""
-    from psf_os import feedforward as FF
-    if not noise:
-        FF.run_local(folder, seed=seed)
-    elif any(k in noise for k in ("gamma", "p11", "p00")):
-        sys.path.insert(0, os.path.join(NB, "notes", "os2_2026-11-18"))
-        import branch_noise as BN
-        BN.noisy_run_local(folder, noise, seed=seed)
-    else:
-        run_noisy(folder, noise, seed=seed)
-
-
-def run_noisy(folder, noise, seed=20261118):
-    """Dry runs only: Aer with an EXAMPLE noise (never fitted to a device): `wait_gamma`, amplitude damping on every
-    touched qubit not measured in a layer of top-level measurements, once per layer that is followed by more gates (the
-    waits); `readout`, {physical qubit: P(read 0 | |1>)}.
-    The sentinel runs noiselessly (it is beside, and too large for a noisy simulation). Writes raw_counts.json and
-    submission.json as FF.run_local does."""
-    from qiskit import QuantumCircuit, qpy
-    from qiskit_aer import AerSimulator
-    from qiskit_aer.noise import NoiseModel, ReadoutError, amplitude_damping_error
-    from psf_os import feedforward as FF
-    from psf_os.ibm import _stamp
-    from psf_os.sim import to_clifford_gates
-    job = os.path.join(folder, "job")
-    sub = os.path.join(job, "submission.json")
-    if os.path.exists(sub):
-        raise SystemExit(f"{sub} exists")
-    man = json.load(open(os.path.join(job, "manifest.json")))
-    circs = qpy.load(open(os.path.join(job, "circuits.qpy"), "rb"))
-    roles = [man["cells"][p["cell"]]["role"] for p in man["pubs"]]
-    gamma = float(noise.get("wait_gamma", 0.0))
-    ro = {int(k): float(v) for k, v in noise.get("readout", {}).items()}
-    rows = []
-    for k, c in enumerate(circs):
-        act = sorted({q for _, qs in FF.walk(c) for q in qs})
-        cc = FF.compact(c)
-        if roles[k] == "sentinel":
-            cl = None if cc.has_control_flow_op() else to_clifford_gates(cc)
-            res = AerSimulator(method="stabilizer" if cl is not None else "statevector").run(
-                cl if cl is not None else cc, shots=man["shots"], seed_simulator=seed + k).result()
-            rows.append(dict(pub=k, counts={key.replace(" ", ""): v for key, v in res.get_counts(0).items()}))
-            continue
-        nm = NoiseModel()
-        if gamma > 0:
-            nm.add_all_qubit_quantum_error(amplitude_damping_error(gamma), ["id"])
-        for i, q in enumerate(act):
-            if q in ro:
-                p = ro[q]
-                nm.add_readout_error(ReadoutError([[1.0, 0.0], [p, 1 - p]]), [i])
-        if gamma > 0:
-            # one wait per layer of measurements: after the last of consecutive top-level measurements (barriers in
-            # between do not split a layer), if anything but measurements and barriers follows; every qubit not
-            # measured in that layer decays
-            w = QuantumCircuit(*cc.qregs, *cc.cregs)
-            data = list(cc.data)
-            layer = set()
-            for j, ins in enumerate(data):
-                w.append(ins.operation, ins.qubits, ins.clbits)
-                if ins.operation.name == "measure":
-                    layer.add(cc.find_bit(ins.qubits[0]).index)
-                if not layer or ins.operation.name not in ("measure", "barrier"):
-                    continue
-                rest = [x.operation.name for x in data[j + 1:]]
-                nxt = next((x for x in rest if x != "barrier"), None)
-                if nxt == "measure":
-                    continue
-                if any(x not in ("measure", "barrier") for x in rest):
-                    for i in range(cc.num_qubits):
-                        if i not in layer:
-                            w.id(i)
-                layer = set()
-            cc = w
-        sim = AerSimulator(method="density_matrix" if cc.num_qubits <= 10 else "statevector", noise_model=nm)
-        res = sim.run(cc, shots=man["shots"], seed_simulator=seed + k, basis_gates=None).result()
-        rows.append(dict(pub=k, counts={key.replace(" ", ""): v for key, v in res.get_counts(0).items()}))
-    t = _stamp()
-    json.dump(dict(job_id=f"local-example-noise-{seed}", submitted=t, local=True, backend=man["fetch"]["backend"],
-                   simulator="aer, EXAMPLE noise (dry runs only)", noise=noise), open(sub, "w"), indent=1)
-    json.dump(dict(fetched=t, job_id=f"local-example-noise-{seed}", status="DONE (local, example noise)", rows=rows),
-              open(os.path.join(job, "raw_counts.json"), "w"))
+    """Dry runs only: every job through the workplace VS's branch_noise.noisy_run_local (the same files as
+    psf_os.feedforward.run_local writes), noiseless with noise None or {}, else under an EXAMPLE noise (gamma: damping on
+    the qubits not read in a layer of mid-circuit reads; p11 / p00 per physical qubit); circuit stride 10000."""
+    BN = _bn()
+    BN.noisy_run_local(folder, dict(noise or {}), seed=seed, stride=BN.WIDE_CIRCUIT)
 
 
 def predictions(out):
@@ -450,7 +412,8 @@ def predictions(out):
         "OS2-2 no L overshoots in the last round run":
             ("held" if not over else "failed") if last else "failed (no round ran)",
         "last_round": last["round"] if last else None, "overshoot_in_last_round": over,
-        "beside_os_compounding (not a prediction)": {k: v for k, v in comp.items() if k != "per_L"},
+        "beside_os_compounding (numbers only, not a prediction)": {k: v for k, v in comp.items()
+                                                                   if k not in ("per_L", "verdict")},
     }
 
 
@@ -634,10 +597,14 @@ def verify(out, resim=False):
                 shutil.copytree(os.path.join(rec, "job"), os.path.join(cp, "job"),
                                 ignore=shutil.ignore_patterns("raw_counts.json", "submission.json"))
                 shutil.copytree(os.path.join(rec, "runs"), os.path.join(cp, "runs"))
-                simulate(cp, cfg.get("noise"), dry_seed(d))
-                a_ = json.load(open(os.path.join(rec, "job", "raw_counts.json")))["rows"]
-                b_ = json.load(open(os.path.join(cp, "job", "raw_counts.json")))["rows"]
-                note(f"{d} re-simulated (dry, seed {dry_seed(d)})", _first_difference(a_, b_))
+                try:
+                    simulate(cp, cfg.get("noise"), dry_seed(d))
+                    a_ = json.load(open(os.path.join(rec, "job", "raw_counts.json")))["rows"]
+                    b_ = json.load(open(os.path.join(cp, "job", "raw_counts.json")))["rows"]
+                    diff = _first_difference(a_, b_)
+                except (Exception, SystemExit) as exc:  # noqa: BLE001 - a damaged record is a difference
+                    diff = f"re-simulation failed ({type(exc).__name__})"
+                note(f"{d} re-simulated (dry, seed {dry_seed(d)})", diff)
         pp = os.path.join(out, "predictions.json")
         if os.path.exists(pp):
             note("predictions re-read", _first_difference(json.load(open(pp)), predictions(out)))
@@ -667,6 +634,16 @@ def _stop_reason(out, cfg):
     if R.get("stop"):
         return f"the rule: {R['stop_reason']} (after round {k - 1})"
     rec = os.path.join(out, f"r{k}")
+    bf = os.path.join(out, f"budget_r{k}.json")
+    if not os.path.isdir(rec) and os.path.exists(bf):
+        spent = 0.0
+        for d in sorted(os.listdir(out)):
+            p = os.path.join(out, d)
+            if os.path.isdir(os.path.join(p, "job")) and os.path.exists(os.path.join(p, "build.json")):
+                spent += json.load(open(os.path.join(p, "build.json")))["qpu_seconds_model"]
+        est = round_estimate(os.path.join(out, "fetch_in", cfg["device"], "dev"), os.path.join(out, f"RULE{k}.json"),
+                             cfg["dry"])
+        return budget_text(spent, est, cfg["budget"], k)
     if os.path.isdir(os.path.join(rec, "job_NOT_SENT")):
         if os.path.exists(os.path.join(rec, "check_ok")):
             tot = 0.0
@@ -694,7 +671,7 @@ def main():
     g.add_argument("out")
     g.add_argument("--zip", help="the zip file the night's OUT is written to (device runs; required there)")
     g.add_argument("--dry", metavar="DEVDIR", help="a dry run on this device record: local simulation, no IBM")
-    g.add_argument("--noise", help="dry only: an EXAMPLE noise JSON (wait_gamma, readout {physical qubit: P(0|1)})")
+    g.add_argument("--noise", help="dry only: an EXAMPLE noise JSON (gamma, p11 / p00 {physical qubit: P}; branch_noise.py)")
     g.add_argument("--k-max", type=int, help="dry only")
     g.add_argument("--budget", type=float, help="dry only")
     r = sub.add_parser("resume")

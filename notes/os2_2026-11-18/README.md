@@ -60,3 +60,11 @@ once; P(0|0) from the probe's floor arm).
   does not fire and +B stays; whether +B is worth its double cost when it does not overshoot is not in the rule.
 - Within a night the device record is fixed and the device may drift; P0 is rerun in every round so g sees the drift
   on both sides.
+
+## 2026-11-18, later: the night to run (`RUN.md`)
+
+The draft above became the declared-to-be tools: `gpu/os2_night.py` with the owner's values (2 SE, K_MAX 4, 240 s with
+the diagnostics, the last round primary, nothing from earlier nights), `gpu/os2_run.py` (preflight / go / resume /
+verify), and the READY declaration text with two predictions (OS2-1, OS2-2; the OS's own compounding beside as
+numbers). The dry runs, the stops and the tests: `RUN.md`. `prereg/drafts-2026-11-18/os2_DRAFT.md` is superseded by
+`os2_night_2026-11-18_READY.md`.

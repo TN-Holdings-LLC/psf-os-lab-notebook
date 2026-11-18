@@ -58,12 +58,14 @@ this round's probe; ties: the smaller offset; offset 0 means no change).
 - after round k when every L keeps its stack, none overshoots in round k and none is NOT SHOWN for the first time (a
   fixed point);
 - after round K_MAX = 4;
-- when the diagnostics + the rounds run + the next round's model seconds (from its build, before it is submitted)
-  would pass 240 s; that round is then not submitted;
-- at a check FAIL or a refused build or submission.
-The reason is written to `OUT/stop.json`. (On the 2026-11-17 records a night takes 76.1 s at least, every L at P0 and a
-fixed point after round 1, and 218.8 s at most, four rounds of +B everywhere; the 240 s budget cannot bind with K_MAX
-4 on those records.)
+- before round k is built, when the diagnostics + the rounds built + round k's model seconds would pass 240 s (round
+  k's seconds: psf-os's time model on a build of RULE{k}.json in a temporary folder); round k is then not built and
+  nothing more is sent;
+- at a check FAIL (that job is not sent) or a refused build or submission.
+K_MAX and the budget are fixed for the device run (os2_run.py accepts overrides only with --dry). The reason is
+written to `OUT/stop.json`. (On the 2026-11-17 records of marrakesh, fez and kingston a night takes 76.1 s at least,
+every L at P0 and a fixed point after round 1, and 218.8 s at most, four rounds with +B at every L; the 240 s budget
+cannot bind with K_MAX 4 on those records.)
 
 ## Verdicts (`gpu/os2_night.py score`, per round, per L with a stack other than P0)
 
@@ -72,31 +74,36 @@ P(stack) > its noiseless value + 2 SE (one-sided decay toward |0> read through a
 **PRESCRIPTION HELPS** when g > 0 and g >= 2 SE; otherwise **NOT SHOWN**. P0 alone: **NO PRESCRIPTION**. The primary
 verdicts are those of the last round run.
 
-**The OS's own compounding (`compound`):** G_k = the mean of g over the L credited (no overshoot) in every round run;
-weighted least-squares slope of G_k over k. **OS COMPOUNDS** when the slope >= 2 SE and no L overshoots in the last
-round; otherwise **NOT SHOWN**. With fewer than three rounds, or with no L credited in every round, it is recorded as
-**NOT JUDGEABLE** (判定できない) and the per-L g of every round is reported beside.
+**The OS's own compounding, beside (not a prediction; the owner, 2026-11-18 09:3x JST):** G_k = the mean of g over
+the L credited (no overshoot) in every round run, its SE, and with three rounds or more the weighted least-squares
+slope of G_k over k (with two rounds their difference), reported as numbers only.
 
 ## Predictions (written before the data)
 
 1. OS2-1 Between round 1 and round 2 the rule changes the stack of at least one L. (Fails also when the night stops
-   after round 1.)
+   before round 2 has run.)
 2. OS2-2 In the last round run, no L overshoots.
-3. OS2-3 OS COMPOUNDS. (When the night runs fewer than three rounds, or no L is credited in every round, OS2-3 is
-   recorded as NOT JUDGEABLE, neither held nor failed.)
 
 Each prediction holds or fails as a whole and names its round(s); a prediction about "any round" or "the best round" is
-not made. Basis: the desk trial on 2026-11-17's records (round 1 = the loop's main job: L 1 OVERSHOOT, L 2, 3 HELPS;
-the rule changes L 1 to P2 + B; the frame-balanced job an hour later, read as round 2: L 1 HELPS, then +Q4) and the
-dry runs under an example noise (`notes/os2_2026-11-18/README.md`).
+not made. `os2_run.py` writes them, read from the records only, to `OUT/predictions.json`. Basis: the desk trial on
+2026-11-17's records (round 1 = the loop's main job: L 1 OVERSHOOT, L 2, 3 HELPS; the rule changes L 1 to P2 + B; the
+frame-balanced job an hour later, read as round 2: L 1 HELPS, then +Q4) and dry runs under example noises
+(`notes/os2_2026-11-18/README.md`).
 
 ## Records and reproduction
 
 `OUT` holds: run.json, run_log.txt, fetch_in/ (queue.json, the device records), dw/, dc/, os_rule.json, RULE{k}.json,
 r{k}/ (build.json, rule.json, job/, runs/, round_scores.json, queue_after.json), queue_after_*.json, compound.json,
-job_timing.json, stop.json; zipped to ZIPFILE. `python gpu/os2_run.py verify OUT` rebuilds every job from the
+budget_r{k}.json, predictions.json, job_timing.json, stop.json; zipped to ZIPFILE. `python gpu/os2_run.py verify OUT` rebuilds every job from the
 recorded device record and rule files (circuits.qpy byte for byte; manifest.json but for its write time), re-scores
-every job from its recorded counts, re-applies every rule, recomputes the stop reason: SAME / DIFFERENT.
+every job from its recorded counts, re-applies every rule, re-reads the predictions, recomputes the stop reason: SAME
+/ DIFFERENT.
+
+Dry runs (`go OUT --dry DEVDIR [--noise NOISE.json]`, never the device) simulate every job locally (the workplace VS's
+`notes/os2_2026-11-18/branch_noise.noisy_run_local`) with a fixed seed per job, the "wide" formula: Dw 20261118, Dc
+20261118 + 500000, round k 20261118 + 1000000 k, circuit i of a job at that seed + 10000 i (Aer seeds shot j at seed +
+j, so no two circuits of a night share a shot's seed); recorded in each job's submission.json; `verify --resim`
+simulates again with the same seeds. An example noise is an illustration only, never fitted to a device.
 
 Suggested entry for `reproduce.py` (the folder name at home's choice):
 
