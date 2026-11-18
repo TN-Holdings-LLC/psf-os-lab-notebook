@@ -1,0 +1,23 @@
+{
+ "note": "the marrakesh coupling graph of 2026-11-17 with every failed mark removed (reference only)",
+ "counts": {
+  "3": {
+   "max": 23,
+   "status": "optimal",
+   "fixed_order": 20,
+   "blocks_possible": 428
+  },
+  "5": {
+   "max": 13,
+   "status": "optimal",
+   "fixed_order": 12,
+   "blocks_possible": 1331
+  },
+  "7": {
+   "max": 10,
+   "status": "optimal",
+   "fixed_order": 8,
+   "blocks_possible": 3895
+  }
+ }
+}
