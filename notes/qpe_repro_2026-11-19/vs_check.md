@@ -153,3 +153,23 @@ Time zone of the VS machine: Windows is set to Tokyo Standard Time. Git Bash has
 `TZ=Europe/Zurich date` falls back to GMT. Windows' own zone data gives the CET time:
 `[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::Now, "W. Europe Standard Time")` in PowerShell.
 It agrees with the machine clock minus 8 h used above.
+
+## Addendum 2 (about 05:55 CET): `digest` with a555554e on the earlier builds
+
+`python gpu/qpe_repro_night.py digest OUT` on the builds made at the start (not rebuilt):
+
+| build | tests | sentinel | all |
+|---|---|---|---|
+| marrakesh A | `8e38b7a3…` (agrees) | `c86add13…` (workplace `69c40889…`) | `7502a200…` |
+| marrakesh B | `494c495e…` (agrees) | `c86add13…` | `59732a15…` |
+| fez A | `8e38b7a3…` (agrees) | `acb441a7…` (workplace `5fd46d15…`) | `dd80501d…` |
+| fez B | `494c495e…` (agrees) | `acb441a7…` | `308e3eba…` |
+| kingston A / B | as marrakesh | as marrakesh | as marrakesh |
+
+- **tests agree** for all six: the circuits that are judged are the same on the two machines.
+- **The sentinel still differs.** Here `_wrap` works as meant: the 4880 RZ of point #0 take 6 values after it, and
+  the 3800 at +-pi all become +pi. No wrapped angle lies near a 1e-10 rounding midpoint.
+- So the workplace's angles, or their order, must differ in some other way. As asked, the RZ angles of point #0 are
+  in `vs_out/sentinel0_rz_{marrakesh,fez}_A.json` (`vs/vs_sentinel_rz.py`). Each row holds the physical qubit, the
+  raw angle and the angle after `_wrap`, both exactly as `float.hex()`. The four points' digests are beside.
+- numpy 2.4.6, qiskit 2.5.2, qiskit-aer 0.18.0, Python 3.11.9, Windows.
