@@ -1,0 +1,6 @@
+seed 0: measurement 2.29 (planted 2.6); latency +1.29 (2 SE 0.52; planted 0.9); fired - unfired -0.12 (2 SE 0.93; planted 0.3); two actors / one 1.92 (planted 2.0)
+seed 1: measurement 2.74 (planted 2.6); latency +0.99 (2 SE 0.50; planted 0.9); fired - unfired +0.09 (2 SE 0.81; planted 0.3); two actors / one 2.16 (planted 2.0)
+seed 2: measurement 3.05 (planted 2.6); latency +0.37 (2 SE 0.44; planted 0.9); fired - unfired -0.17 (2 SE 0.64; planted 0.3); two actors / one 1.95 (planted 2.0)
+seed 3: measurement 2.37 (planted 2.6); latency +1.22 (2 SE 0.50; planted 0.9); fired - unfired -0.36 (2 SE 0.82; planted 0.3); two actors / one 2.29 (planted 2.0)
+seed 4: measurement 2.79 (planted 2.6); latency +0.62 (2 SE 0.55; planted 0.9); fired - unfired +0.72 (2 SE 0.91; planted 0.3); two actors / one 2.22 (planted 2.0)
+seed 5: measurement 2.36 (planted 2.6); latency +0.90 (2 SE 0.54; planted 0.9); fired - unfired +0.91 (2 SE 1.00; planted 0.3); two actors / one 2.23 (planted 2.0)
