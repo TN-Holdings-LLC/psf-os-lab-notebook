@@ -1,0 +1,7 @@
+balanced-repeat: 32 qpy files compared, all byte-identical
+timing A: 41 qpy files compared, all byte-identical
+timing B: 35 qpy files compared, all byte-identical
+os2 Dw: 20 qpy files compared, all byte-identical
+os2 Dc: 20 qpy files compared, all byte-identical
+os2 round 1: 23 qpy files compared, all byte-identical
+parallel P-A + P-B: BUILD REFUSED / FAILED: psf_os.feedforward.Refused: B2: sub-items ['b2a', 'b2b'] hold conditional operations; two or more items with conditional operations in one circuit lose what each keeps alone: 2026-11-17 (results/packing-night-2026-11-17: ten items packed, the control arm kept 0.20 less, mean d -0.197, 2 SE 0.007) and 2026-11-18 (results/parallel-night-2026-11-18, P-B: two items, the first lost 0.06 in B2 and B3, a
