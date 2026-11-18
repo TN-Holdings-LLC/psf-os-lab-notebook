@@ -56,3 +56,48 @@ before the night. Noiselessly the os_night rule picks P0 (or, from a recorded pi
 - These are `gpu/os2_run.py`'s stops. They are to be run through `go --dry` once it exists.
 - The rule's own refusal of a +Q offset off the probe's chain never happened on the three 11-17 records (see the
   review).
+
+## Seeds per round (home addendum, 2026-11-18)
+
+**The ask:** round k at 20261118 + k; Dw at 20261118 and Dc at 20261118 + 100; the seed recorded per job.
+`branch_noise.loop --seed-scheme` now writes `seed.json` into every job folder (and the seed into submission.json),
+so verify can rebuild the counts. The same seeds can be passed to `FF.run_local(out, seed=...)`.
+
+**What was found: these formulas barely change the counts.**
+- Aer gives shot j of a run the seed seed_simulator + j. This was checked with qiskit-aer 0.18.0 on a circuit with a
+  mid-circuit read, at 4000 shots:
+  - seeds 0, 1, 10 and 100 apart gave 2730 / 2730 / 2728 / 2730 counts of the same outcome;
+  - 10000 apart gave 2699.
+- So 20261118 + k, + 10 k and the earlier + 100 k share almost all the per-shot seeds from round to round.
+- The circuits within one job (seed + i, as in run_local) share them too. P0 and the pick then move together, and g
+  hardly moves (about 1e-4 between rounds, against about 7e-3 of shot noise).
+- **The "wide" formulas keep the seed ranges apart:**
+  - Dw at B; Dc at B + 500000; round k at B + 1000000 k; circuit i at seed + 10000 i.
+  - B = 20261118 ("wide") or B + 70000000 ("wide_alt", the chance check).
+  - `wide` is the loop's default now.
+
+**Branches by formula** (event@round and L; the same settings as the table above; `seed_compare.json`):
+
+| run | same / + k / + 10 k (all three alike) | wide | wide_alt |
+|---|---|---|---|
+| s0 (none) | fixed point at round 1 | same | same |
+| s6 (gamma 0.01) | R3@r2 for L1-3; fixed point at r3 | same | R1@r1 L2; R3@r2 L1, L3; R3@r3 L2; fixed point at r4 |
+| s8 (gamma 0.02, q3 0.83) | R1@r1 L2; R3@r2 L1; R2@r2 L2; fixed point at r3 | same | same |
+| s5 (gamma 0.03, q1 0.83) | R1@r1 L1, L3; R2@r2 L1; R3@r3 L3; fixed point at r4 | R1@r1 L1; R2@r2 L1; **no R3**; fixed point at r3 | R1@r1 L1, L2; R2@r2 L1; R1@r2 L3; R3@r3 L2; R3@r4 L3; **round limit K = 4** |
+| s5k3 (K 3, dry only) | as s5 to r3; round limit | fixed point at r3 | round limit at r3 |
+| s1b (budget 150, dry only) | R1@r1 L1, L3; R2@r2 L1; budget before r3 | R1@r1 L1-3; R2@r2 L1; budget before r3 | as wide |
+
+**Reading:**
+- With the overlapping formulas, the branch history is the same under all three. What a dry run shows is then one
+  draw, repeated.
+- With independent seeds:
+  - R3 at a clear NOT SHOWN (s6, g near 0) happens every time.
+  - Where g lies near its 2 SE line (s5 L3, s6 L2), R3 and R1 appear or vanish with the seed: wide removes s5's R3,
+    and wide_alt adds two.
+- So the overlap did not make R3 more likely in general. It froze one draw. Whether R3 happens near the line is
+  chance, in a dry run as on the device.
+- The round limit at K = 4 does happen (s5, wide_alt). "K_MAX 4 rarely binds" above is to be read as: it depends on
+  the draw.
+- **For noiseless dry runs:** `FF.run_local` (psf-os, unchanged) seeds circuit i at seed + i, so the circuits of one
+  job overlap in it whatever the job seed. `noisy_run_local(out, {}, seed, 10000)` writes the same files, noiselessly,
+  with the wide spacing.

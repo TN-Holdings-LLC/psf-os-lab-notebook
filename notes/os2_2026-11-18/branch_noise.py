@@ -16,7 +16,7 @@ inside a run, so the tools are exercised on every path before the night.
                                          A Clifford sentinel runs noiselessly (the stabilizer method has no damping;
                                          the sentinel is not scored by the rule).
   python branch_noise.py run OUT NOISE.json [--seed S]
-  python branch_noise.py loop DEVDIR OUT NOISE.json [--budget S] [--k-max K]
+  python branch_noise.py loop DEVDIR OUT NOISE.json [--budget S] [--k-max K] [--seed-scheme wide|wide_alt|plus_k|plus_10k|same]
                                          the night's order (Dw, Dc, os_night rule, rounds of os2_night) with this noise,
                                          every job through noisy_run_local; stops as gpu/os2_night.py says, with the
                                          budget counted as the home instruction says (diagnostics + rounds run + the
@@ -33,6 +33,46 @@ from types import SimpleNamespace as NS
 HERE = os.path.dirname(os.path.abspath(__file__))
 NB = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, os.path.join(NB, "gpu"))
+
+
+SEED0 = 20261118
+SCHEMES = {"plus_k": 1, "plus_10k": 10, "same": 0}     # round k's seed = SEED0 + step * k, circuit i at seed + i
+# Aer seeds shot j of a run with seed_simulator + j (checked with qiskit-aer 0.18.0 on a circuit with a mid-circuit
+# read: seeds 1, 10, 100 apart give almost the same counts; 10000 apart, more than the shots, independent ones). So the
+# formulas above barely change the counts from round to round, and neighbouring circuits of one job share almost all
+# their per-shot seeds. The "wide" formulas keep every run's seed range [seed, seed + shots) apart: round k at
+# base + WIDE_ROUND k, Dc at base + WIDE_ROUND / 2, circuit i at seed + WIDE_CIRCUIT i (shots <= 4000 < 10000,
+# circuits per job < 100).
+WIDE = {"wide": SEED0, "wide_alt": SEED0 + 70_000_000}
+WIDE_ROUND, WIDE_CIRCUIT = 1_000_000, 10_000
+
+
+def job_seed(stage, k=0, scheme="plus_k"):
+    """The seed of one job (home instruction 2026-11-18, addendum): the diagnostics at k = 0, Dw SEED0 and Dc
+    SEED0 + 100; round k (k >= 1) SEED0 + step k, step 1 by default ("plus_k"), 10 ("plus_10k") or 0 ("same": every
+    round alike, as before the addendum, for the comparison only). Inside a job, circuit i is simulated with seed + i,
+    as psf_os.feedforward.run_local does, so the same formula can be passed to run_local(out, seed=...) for noiseless
+    dry runs. The seed is written to OUT/seed.json, so that verify can rebuild the counts with it."""
+    if scheme in WIDE:
+        base = WIDE[scheme]
+        return base if stage == "dw" else base + WIDE_ROUND // 2 if stage == "dc" else base + WIDE_ROUND * k
+    if stage == "dw":
+        return SEED0
+    if stage == "dc":
+        return SEED0 + 100
+    return SEED0 + SCHEMES[scheme] * k
+
+
+def circuit_stride(scheme):
+    return WIDE_CIRCUIT if scheme in WIDE else 1
+
+
+def record_seed(out, stage, k, scheme, seed):
+    f = ("Dw B, Dc B + 500000, round k B + 1000000 k; circuit i at seed + 10000 i; B = %d" % WIDE[scheme]
+         if scheme in WIDE else "Dw 20261118, Dc 20261118 + 100, round k 20261118 + step k (step %d); circuit i at "
+         "seed + i" % SCHEMES[scheme])
+    json.dump(dict(stage=stage, round=k, scheme=scheme, seed=seed, circuit_stride=circuit_stride(scheme), formula=f),
+              open(os.path.join(out, "seed.json"), "w"), indent=1)
 
 
 def noisy_circuit(cc, gamma):
@@ -73,7 +113,7 @@ def readout_model(phys, noise):
     return nm
 
 
-def noisy_run_local(out, noise, seed=20261118):
+def noisy_run_local(out, noise, seed=20261118, stride=1):
     from qiskit import qpy
     from qiskit_aer import AerSimulator
     from psf_os import feedforward as FF
@@ -90,7 +130,7 @@ def noisy_run_local(out, noise, seed=20261118):
         cc = FF.compact(c)
         cl = None if cc.has_control_flow_op() else to_clifford_gates(cc)
         if cl is not None and cc.num_qubits > FF.LOCAL_MAX_QUBITS:
-            res = AerSimulator(method="stabilizer").run(cl, shots=man["shots"], seed_simulator=seed + k).result()
+            res = AerSimulator(method="stabilizer").run(cl, shots=man["shots"], seed_simulator=seed + stride * k).result()
         else:
             if cc.num_qubits > FF.LOCAL_MAX_QUBITS:
                 raise SystemExit(f"circuit {k} ({c.name}) touches {cc.num_qubits} qubits and is not Clifford: build "
@@ -98,13 +138,13 @@ def noisy_run_local(out, noise, seed=20261118):
             sim = AerSimulator(method="density_matrix" if cc.num_qubits <= 10 else "statevector",
                                noise_model=readout_model(phys, noise))
             res = sim.run(noisy_circuit(cc, noise.get("gamma", 0.0)), shots=man["shots"],
-                          seed_simulator=seed + k).result()
+                          seed_simulator=seed + stride * k).result()
         rows.append(dict(pub=k, counts={key.replace(" ", ""): v for key, v in res.get_counts(0).items()}))
     from psf_os.ibm import _stamp
     t = _stamp()
     jid = f"local-illustrative-noise-{seed}"
     json.dump(dict(job_id=jid, submitted=t, local=True, backend=man["fetch"]["backend"],
-                   simulator="aer, ILLUSTRATIVE noise (not fitted to any device)", noise=noise),
+                   simulator="aer, ILLUSTRATIVE noise (not fitted to any device)", noise=noise, seed=seed, circuit_stride=stride),
               open(sub, "w"), indent=1)
     json.dump(dict(fetched=t, job_id=jid, status="DONE (local, illustrative noise)", rows=rows),
               open(os.path.join(job, "raw_counts.json"), "w"))
@@ -120,7 +160,7 @@ def _quiet(fn, *a):
     return r, buf.getvalue()
 
 
-def loop(devdir, out, noise, budget=240.0, k_max=4, seed=20261118):
+def loop(devdir, out, noise, budget=240.0, k_max=4, scheme="plus_k"):
     """The night's order with the illustrative noise. Returns the loop record (also OUT/loop.json)."""
     import ctrl_night as CN
     import os2_night as O2
@@ -131,13 +171,15 @@ def loop(devdir, out, noise, budget=240.0, k_max=4, seed=20261118):
     dev = Device.load(devdir)
     os.makedirs(out, exist_ok=False)
     cliff = dict(kind="echo_clifford", D=24)
-    rec = dict(noise=noise, illustrative=True, budget_s=budget, k_max=k_max, rounds=[], log=[])
+    rec = dict(noise=noise, illustrative=True, budget_s=budget, k_max=k_max, seed_scheme=scheme, rounds=[], log=[])
     spent = 0.0
     for nm, mod in (("dw", WN), ("dc", CN)):
         d = os.path.join(out, nm)
         rep = FF.build(dev, mod.items(), d, shots=4000, sentinel_spec=cliff)
         spent += rep["qpu_seconds_model"]
-        noisy_run_local(d, noise, seed)
+        sd = job_seed(nm, 0, scheme)
+        noisy_run_local(d, noise, sd, circuit_stride(scheme))
+        record_seed(d, nm, 0, scheme, sd)
         _quiet(mod.score, NS(out=d))
         rec["log"].append(f"{nm}: {rep['circuits']} circuits, {rep['qpu_seconds_model']} s")
     rule0 = os.path.join(out, "os_rule.json")
@@ -167,7 +209,9 @@ def loop(devdir, out, noise, budget=240.0, k_max=4, seed=20261118):
         if spent + cost > budget:
             rec["stop"] = f"budget before round {k}: {spent:.1f} + {cost:.1f} > {budget:.0f} s (not run)"
             break
-        noisy_run_local(d, noise, seed + 100 * k)
+        sd = job_seed("round", k, scheme)
+        noisy_run_local(d, noise, sd, circuit_stride(scheme))
+        record_seed(d, "round", k, scheme, sd)
         spent += cost
         sc, _ = _quiet(O2.score, NS(out=d))
         rounds.append(d)
@@ -219,11 +263,12 @@ def main():
     lp.add_argument("noise")
     lp.add_argument("--budget", type=float, default=240.0)
     lp.add_argument("--k-max", type=int, default=4)
+    lp.add_argument("--seed-scheme", choices=sorted(SCHEMES) + sorted(WIDE), default="wide")
     a = ap.parse_args()
     if a.cmd == "run":
         print(noisy_run_local(a.out, json.load(open(a.noise)), a.seed))
     else:
-        show(loop(a.devdir, a.out, json.load(open(a.noise)), a.budget, a.k_max))
+        show(loop(a.devdir, a.out, json.load(open(a.noise)), a.budget, a.k_max, a.seed_scheme))
 
 
 if __name__ == "__main__":
