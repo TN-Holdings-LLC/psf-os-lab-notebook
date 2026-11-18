@@ -48,6 +48,11 @@ two actors with a CZ s_DK / s_K 1.00 (2 SE 0.22) -> IN PARALLEL
   first item 0.06 in success, while the clocks see no waiting between two conditional actors. The packing loss is not
   explained by the decisions waiting for each other at this resolution.
 
+## Independent check
+
+The home VS fitted the ruler with its own code (`notes/verify_2026-11-18/`): every slope equal (4e-16 us); T-1 to T-3
+the same under four fit forms.
+
 ## Reproduce
 
 `python reproduce.py --psf-os PATH_TO_PSF_OS_AT_0f57c76 timing-night-2026-11-18` (SAME, 2026-11-18).

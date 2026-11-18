@@ -9,7 +9,8 @@
   2.5.2, qiskit-aer 0.17.2, qiskit-ibm-runtime 0.49.0, numpy 2.5.3; psf-os 0f57c76). Pre-run check PASS. Rebuilt at
   home from the same record: every user, off and floor circuit byte-identical; the four ring-sentinel circuits differ
   in their compiled bytes (the sentinel's one-qubit synthesis differs between environments, as the workplace found on
-  2026-11-18; the sentinel is never judged).
+  2026-11-18; the sentinel is never judged). The home VS's rebuild matches the owner's machine byte for byte, sentinels
+  included: the difference is on home Claude's side (qiskit-aer 0.18.0 there).
 - Job dbunml7f8rhs73bmk5eg (created 11:17:56, finished 11:18:46 CET; 34 circuits, 40.9 s by the model, 41 s charged;
   DD and twirling off, no mitigation, 4000 shots). Sentinel DEAD (beside).
 
@@ -43,11 +44,18 @@ slope of the pooled g over L +0.0528 (2 SE 0.0033) -> COMPOUNDS
 ## Beside, never judged
 
 - Against 2026-11-17 on the same device and qubits (pooled): -0.166 / -0.178 / -0.124 / -0.094 / -0.093; rd -0.149 /
-  -0.193 / -0.136 / -0.114 / -0.094; nf -0.183 / -0.164 / -0.110 / -0.075 / -0.093 (2 SE about 0.02 each).
+  -0.192 / -0.137 / -0.114 / -0.094; nf -0.182 / -0.164 / -0.110 / -0.074 / -0.093 (2 SE about 0.02 each).
 - The device was recalibrated at 10:40 CET today. The readout of qubit 1 (the L = 1 output) changed: the
   compounding OS's diagnostics 9 minutes later read P(1 | |1>) 0.967 and P(0 | |0>) 0.955 (2026-11-17: 0.826 and
   0.9995), so tonight the frame holding logical 1 as |0> (rd) is the one that loses on readout.
 - Execution 38.3 s of 49.4 s from creation to finish.
+
+## Independent check
+
+The home VS re-read every number from the raw counts with qiskit and numpy only, computing the noiseless values and
+ceilings from the recorded circuits (`notes/verify_2026-11-18/`): every number and verdict equal (largest difference
+6e-15). The differences from 2026-11-17 above were corrected after its check (they had been rounded from shortened
+numbers in four places).
 
 ## Reproduce
 

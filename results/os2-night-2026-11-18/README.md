@@ -56,6 +56,12 @@ The OS's own compounding (beside, numbers only): one round, G 0.038 (SE 0.006); 
 - Dr in round 1's probes: qubit 9 shows a readout gap (+0.017, 2 SE 0.007); not an output qubit tonight.
 - Diagnostics' own 2026-11-16 predictions printed by their scorers are not judged here.
 
+## Independent check
+
+The home VS applied the declared rules by hand to the raw diagnostic counts (`notes/verify_2026-11-18/`): P1 at L = 1,
+2, 3; round 1's g and verdicts equal; R4 keeps every L and the loop stops at the fixed point. Its rebuild of the
+sentinels matches the owner's machine byte for byte.
+
 ## Reproduce
 
 `python reproduce.py --psf-os PATH_TO_PSF_OS_AT_0f57c76 os2-night-2026-11-18-dw os2-night-2026-11-18-dc

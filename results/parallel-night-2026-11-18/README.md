@@ -61,6 +61,14 @@ ended (B3), keeps what it keeps alone.
   alone and packed alike: the decay lean of the read-flipped frame, the same in both.
 - Sentinels: P-A DEAD, P-B CLEAN.
 
+## Independent check
+
+The home VS re-read P-A and P-B from the raw counts with qiskit and numpy only (`notes/verify_2026-11-18/`): every number
+and verdict equal. P-B's loss on A alone is not a misreading: A sits on physical qubits [0, 1, 2, 3] with its output
+in bit 4, B on [5, 6, 7, 8] with its output in bit 9, as recorded; swapping the two readings moves the loss to B; the
+loss sits wholly on A's output bit (qubit 3), while A's try bits and B's bits stay within 2 SE. Beside: in B3's off arm
+A's output moved the other way (-0.046).
+
 ## Reproduce
 
 `python reproduce.py --psf-os PATH_TO_PSF_OS_AT_0f57c76 parallel-night-2026-11-18` (SAME, 2026-11-18).
