@@ -1,0 +1,2 @@
+ledger 2026-11-17 (ibm_marrakesh, calibration 2026-11-13 18:22:56+01:00) -> night on the 2026-11-18 record (ibm_marrakesh, calibration 2026-11-18 11:05:21+01:00): used False (other calibration (2026-11-13 18:22:56+01:00 -> 2026-11-18 11:05:21+01:00): start from tonight's diagnostics); round 1 stacks {'1': ['P1'], '2': ['P1'], '3': ['P1']}
+ledger = simulated night 1 on the 2026-11-18 record -> a night on the 2026-11-17 record: used False (other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-13 18:22:56+01:00): start from tonight's diagnostics)

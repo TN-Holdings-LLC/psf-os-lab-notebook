@@ -1,0 +1,142 @@
+[
+ {
+  "night": "night1_same_record",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-18 11:05:21+01:00",
+  "ladder": "B",
+  "last_stacks": {
+   "1": [
+    "P2",
+    "B",
+    "Q2",
+    "M"
+   ],
+   "2": [
+    "P1",
+    "M"
+   ],
+   "3": [
+    "P2",
+    "B"
+   ]
+  },
+  "rounds_run": 4,
+  "last_g": {
+   "1": 0.17737500000000006,
+   "2": 0.14650000000000007,
+   "3": 0.05400000000000016
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "PRESCRIPTION HELPS",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "ledger_used": false,
+  "ledger_why": "no ledger"
+ },
+ {
+  "night": "night2_same_record",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-18 11:05:21+01:00",
+  "ladder": "B",
+  "last_stacks": {
+   "1": [
+    "P2",
+    "B",
+    "Q2",
+    "M"
+   ],
+   "2": [
+    "P1",
+    "M"
+   ],
+   "3": [
+    "P2",
+    "B"
+   ]
+  },
+  "rounds_run": 1,
+  "last_g": {
+   "1": 0.16949999999999987,
+   "2": 0.16699999999999993,
+   "3": 0.035499999999999976
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "PRESCRIPTION HELPS",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "ledger_used": true,
+  "ledger_why": "same device and calibration time"
+ },
+ {
+  "night": "night3_changed_calibration",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-19 10:40:00+01:00",
+  "ladder": "B",
+  "last_stacks": {
+   "1": [
+    "P2",
+    "B",
+    "Q2",
+    "M"
+   ],
+   "2": [
+    "P1",
+    "M"
+   ],
+   "3": [
+    "P2",
+    "B"
+   ]
+  },
+  "rounds_run": 4,
+  "last_g": {
+   "1": 0.14837500000000003,
+   "2": 0.1519999999999999,
+   "3": 0.054625000000000035
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "PRESCRIPTION HELPS",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "ledger_used": false,
+  "ledger_why": "other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:40:00+01:00): start from tonight's diagnostics"
+ },
+ {
+  "night": "night4_2026-11-17_record",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-13 18:22:56+01:00",
+  "ladder": "B",
+  "last_stacks": {
+   "1": [
+    "P2",
+    "B",
+    "Q2",
+    "M"
+   ],
+   "2": [
+    "P2",
+    "B"
+   ],
+   "3": [
+    "P2",
+    "B"
+   ]
+  },
+  "rounds_run": 4,
+  "last_g": {
+   "1": 0.16012499999999996,
+   "2": 0.03325,
+   "3": 0.049875
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "PRESCRIPTION HELPS",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "ledger_used": false,
+  "ledger_why": "other calibration (2026-11-19 10:40:00+01:00 -> 2026-11-13 18:22:56+01:00): start from tonight's diagnostics"
+ }
+]

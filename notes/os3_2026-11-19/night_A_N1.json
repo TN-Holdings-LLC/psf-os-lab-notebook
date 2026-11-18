@@ -1,0 +1,318 @@
+{
+ "night": "A_N1",
+ "device": "ibm_marrakesh",
+ "calibration_time": "2026-11-18 11:05:21+01:00",
+ "ladder": "A",
+ "noise": {
+  "gamma": 0.05,
+  "p11": {
+   "1": 0.83
+  }
+ },
+ "illustrative": true,
+ "seed_base": 20261119,
+ "rounds": [
+  {
+   "round": 1,
+   "cost_s": 30.9,
+   "stacks": {
+    "1": [
+     "P2"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P1"
+    ]
+   },
+   "rows": {
+    "1": {
+     "verdict": "OVERSHOOT",
+     "p": 0.911,
+     "noiseless": 0.8904214154535403,
+     "g": 0.21600000000000008,
+     "g_two_se": 0.017118820052795695
+    },
+    "2": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.80225,
+     "noiseless": 0.7928502970982835,
+     "g": 0.10850000000000004,
+     "g_two_se": 0.019264108466264408
+    },
+    "3": {
+     "verdict": "OVERSHOOT",
+     "p": 0.723,
+     "noiseless": 0.7059708837850116,
+     "g": 0.14525,
+     "g_two_se": 0.021076668083451898
+    }
+   },
+   "next_stacks": {
+    "1": [
+     "P2",
+     "B"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "why_next": {
+    "1": "R1 overshoot -> P2 + B",
+    "2": "R4 keep",
+    "3": "R1 overshoot -> P2 + B"
+   }
+  },
+  {
+   "round": 2,
+   "cost_s": 37.6,
+   "stacks": {
+    "1": [
+     "P2",
+     "B"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rows": {
+    "1": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.79425,
+     "noiseless": 0.89042141545354,
+     "g": 0.10150000000000003,
+     "g_two_se": 0.016967197212562835
+    },
+    "2": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.80125,
+     "noiseless": 0.7928502970982835,
+     "g": 0.10525000000000007,
+     "g_two_se": 0.01925701008723836
+    },
+    "3": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.618625,
+     "noiseless": 0.7059708837850145,
+     "g": 0.05537499999999995,
+     "g_two_se": 0.018943346044851737
+    }
+   },
+   "next_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "why_next": {
+    "1": "R2 frames -> +Q2",
+    "2": "R4 keep",
+    "3": "R4 keep"
+   }
+  },
+  {
+   "round": 3,
+   "cost_s": 37.6,
+   "stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rows": {
+    "1": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.84425,
+     "noiseless": 0.89042141545354,
+     "g": 0.14174999999999993,
+     "g_two_se": 0.016540123563625515
+    },
+    "2": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.798,
+     "noiseless": 0.7928502970982835,
+     "g": 0.1080000000000001,
+     "g_two_se": 0.01936739528176156
+    },
+    "3": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.61825,
+     "noiseless": 0.7059708837850145,
+     "g": 0.059249999999999914,
+     "g_two_se": 0.01895855924773821
+    }
+   },
+   "next_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "why_next": {
+    "1": "R4 keep",
+    "2": "R4 keep",
+    "3": "R4 keep"
+   }
+  }
+ ],
+ "diagnostics_pick": {
+  "1": "P2",
+  "2": "P1",
+  "3": "P1"
+ },
+ "ledger": {
+  "used": false,
+  "per_L": {},
+  "last_night": null,
+  "why": "no ledger"
+ },
+ "round1_stacks": {
+  "1": [
+   "P2"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P1"
+  ]
+ },
+ "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+ "rounds_run": 3,
+ "model_seconds": 161.29999999999998,
+ "compound": {
+  "common_L": [
+   "2"
+  ],
+  "per_L": {
+   "1": [
+    [
+     1,
+     0.21600000000000008,
+     "OVERSHOOT"
+    ],
+    [
+     2,
+     0.10150000000000003,
+     "PRESCRIPTION HELPS"
+    ],
+    [
+     3,
+     0.14174999999999993,
+     "PRESCRIPTION HELPS"
+    ]
+   ],
+   "2": [
+    [
+     1,
+     0.10850000000000004,
+     "PRESCRIPTION HELPS"
+    ],
+    [
+     2,
+     0.10525000000000007,
+     "PRESCRIPTION HELPS"
+    ],
+    [
+     3,
+     0.1080000000000001,
+     "PRESCRIPTION HELPS"
+    ]
+   ],
+   "3": [
+    [
+     1,
+     0.14525,
+     "OVERSHOOT"
+    ],
+    [
+     2,
+     0.05537499999999995,
+     "PRESCRIPTION HELPS"
+    ],
+    [
+     3,
+     0.059249999999999914,
+     "PRESCRIPTION HELPS"
+    ]
+   ]
+  },
+  "per_round": [
+   {
+    "round": 1,
+    "G": 0.10850000000000004,
+    "se": 0.009632054233132204
+   },
+   {
+    "round": 2,
+    "G": 0.10525000000000007,
+    "se": 0.00962850504361918
+   },
+   {
+    "round": 3,
+    "G": 0.1080000000000001,
+    "se": 0.00968369764088078
+   }
+  ],
+  "slope": -0.0002553690088383199,
+  "se": 0.006829141298483911,
+  "verdict": "NOT SHOWN"
+ },
+ "last_stacks": {
+  "1": [
+   "P2",
+   "B",
+   "Q2"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P2",
+   "B"
+  ]
+ },
+ "last_g": {
+  "1": 0.14174999999999993,
+  "2": 0.1080000000000001,
+  "3": 0.059249999999999914
+ },
+ "last_verdict": {
+  "1": "PRESCRIPTION HELPS",
+  "2": "PRESCRIPTION HELPS",
+  "3": "PRESCRIPTION HELPS"
+ }
+}

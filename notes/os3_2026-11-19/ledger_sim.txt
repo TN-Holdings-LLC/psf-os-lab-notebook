@@ -1,0 +1,43 @@
+night night1_same_record: ibm_marrakesh calibration 2026-11-18 11:05:21+01:00 ladder B noise (ILLUSTRATIVE) {"gamma": 0.05, "p11": {"1": 0.83}}
+  diagnostics pick {'1': 'P2', '2': 'P1', '3': 'P1'}; ledger: used False (no ledger) {}; round 1 stacks {'1': ['P2'], '2': ['P1'], '3': ['P1']}
+  round 1: L1 [P2] OVERSHOOT g +0.2160 (0.0171); L2 [P1] PRESCRIPTION HELPS g +0.1085 (0.0193); L3 [P1] OVERSHOOT g +0.1452 (0.0211)
+     next: L1 R1 overshoot -> P2 + B; L2 RB helps -> one more try (m 3) + M; L3 R1 overshoot -> P2 + B
+  round 2: L1 [P2+B] PRESCRIPTION HELPS g +0.1015 (0.0170); L2 [P1+M] PRESCRIPTION HELPS g +0.1492 (0.0185); L3 [P2+B] PRESCRIPTION HELPS g +0.0554 (0.0189)
+     next: L1 R2 frames -> +Q2; L2 R4 keep; L3 R4 keep
+  round 3: L1 [P2+B+Q2] PRESCRIPTION HELPS g +0.1417 (0.0165); L2 [P1+M] PRESCRIPTION HELPS g +0.1480 (0.0187); L3 [P2+B] PRESCRIPTION HELPS g +0.0592 (0.0190)
+     next: L1 RB helps -> one more try (m 3) + M; L2 R4 keep; L3 R4 keep
+  round 4: L1 [P2+B+Q2+M] PRESCRIPTION HELPS g +0.1774 (0.0163); L2 [P1+M] PRESCRIPTION HELPS g +0.1465 (0.0186); L3 [P2+B] PRESCRIPTION HELPS g +0.0540 (0.0189)
+     next: L1 R4 keep; L2 R4 keep; L3 R4 keep
+  STOP: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time; rounds 4; model seconds 198.9; G per round [0.1085, 0.1492, 0.148, 0.1465]; slope 0.010987451566392348; OS COMPOUNDS
+
+night night2_same_record: ibm_marrakesh calibration 2026-11-18 11:05:21+01:00 ladder B noise (ILLUSTRATIVE) {"gamma": 0.05, "p11": {"1": 0.83}}
+  diagnostics pick {'1': 'P2', '2': 'P1', '3': 'P1'}; ledger: used True (same device and calibration time) {'1': 'ledger used: start from P2+B+Q2+M (same device and calibration time; family agrees)', '2': 'ledger used: start from P1+M (same device and calibration time; family agrees)', '3': 'ledger used: start from P2+B (same device and calibration time; family agrees)'}; round 1 stacks {'1': ['P2', 'B', 'Q2', 'M'], '2': ['P1', 'M'], '3': ['P2', 'B']}
+  round 1: L1 [P2+B+Q2+M] PRESCRIPTION HELPS g +0.1695 (0.0163); L2 [P1+M] PRESCRIPTION HELPS g +0.1670 (0.0186); L3 [P2+B] PRESCRIPTION HELPS g +0.0355 (0.0189)
+     next: L1 R4 keep; L2 R4 keep; L3 R4 keep
+  STOP: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time; rounds 1; model seconds 92.8; G per round [0.124]; slope None; NOT JUDGEABLE
+
+night night3_changed_calibration: ibm_marrakesh calibration 2026-11-19 10:40:00+01:00 ladder B noise (ILLUSTRATIVE) {"gamma": 0.05, "p11": {"1": 0.83}}
+  diagnostics pick {'1': 'P2', '2': 'P1', '3': 'P1'}; ledger: used False (other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:40:00+01:00): start from tonight's diagnostics) {}; round 1 stacks {'1': ['P2'], '2': ['P1'], '3': ['P1']}
+  round 1: L1 [P2] OVERSHOOT g +0.1957 (0.0172); L2 [P1] PRESCRIPTION HELPS g +0.0995 (0.0194); L3 [P1] OVERSHOOT g +0.1517 (0.0211)
+     next: L1 R1 overshoot -> P2 + B; L2 RB helps -> one more try (m 3) + M; L3 R1 overshoot -> P2 + B
+  round 2: L1 [P2+B] PRESCRIPTION HELPS g +0.0902 (0.0167); L2 [P1+M] PRESCRIPTION HELPS g +0.1548 (0.0185); L3 [P2+B] PRESCRIPTION HELPS g +0.0601 (0.0189)
+     next: L1 R2 frames -> +Q2; L2 R4 keep; L3 R4 keep
+  round 3: L1 [P2+B+Q2] PRESCRIPTION HELPS g +0.1610 (0.0165); L2 [P1+M] PRESCRIPTION HELPS g +0.1502 (0.0187); L3 [P2+B] PRESCRIPTION HELPS g +0.0649 (0.0190)
+     next: L1 RB helps -> one more try (m 3) + M; L2 R4 keep; L3 R4 keep
+  round 4: L1 [P2+B+Q2+M] PRESCRIPTION HELPS g +0.1484 (0.0163); L2 [P1+M] PRESCRIPTION HELPS g +0.1520 (0.0184); L3 [P2+B] PRESCRIPTION HELPS g +0.0546 (0.0190)
+     next: L1 R4 keep; L2 R4 keep; L3 R4 keep
+  STOP: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time; rounds 4; model seconds 198.9; G per round [0.0995, 0.1548, 0.1502, 0.152]; slope 0.014745442688398584; OS COMPOUNDS
+
+night night4_2026-11-17_record: ibm_marrakesh calibration 2026-11-13 18:22:56+01:00 ladder B noise (ILLUSTRATIVE) {"gamma": 0.05, "p11": {"1": 0.83}}
+  diagnostics pick {'1': 'P2', '2': 'P1', '3': 'P1'}; ledger: used False (other calibration (2026-11-19 10:40:00+01:00 -> 2026-11-13 18:22:56+01:00): start from tonight's diagnostics) {}; round 1 stacks {'1': ['P2'], '2': ['P1'], '3': ['P1']}
+  round 1: L1 [P2] OVERSHOOT g +0.2097 (0.0172); L2 [P1] OVERSHOOT g +0.1198 (0.0193); L3 [P1] OVERSHOOT g +0.1475 (0.0211)
+     next: L1 R1 overshoot -> P2 + B; L2 R1 overshoot -> P2 + B; L3 R1 overshoot -> P2 + B
+  round 2: L1 [P2+B] PRESCRIPTION HELPS g +0.0895 (0.0168); L2 [P2+B] PRESCRIPTION HELPS g +0.0183 (0.0175); L3 [P2+B] PRESCRIPTION HELPS g +0.0565 (0.0190)
+     next: L1 R2 frames -> +Q2; L2 R4 keep; L3 R4 keep
+  round 3: L1 [P2+B+Q2] PRESCRIPTION HELPS g +0.1558 (0.0166); L2 [P2+B] PRESCRIPTION HELPS g +0.0270 (0.0175); L3 [P2+B] PRESCRIPTION HELPS g +0.0369 (0.0189)
+     next: L1 RB helps -> one more try (m 3) + M; L2 R4 keep; L3 R4 keep
+  round 4: L1 [P2+B+Q2+M] PRESCRIPTION HELPS g +0.1601 (0.0162); L2 [P2+B] PRESCRIPTION HELPS g +0.0333 (0.0176); L3 [P2+B] PRESCRIPTION HELPS g +0.0499 (0.0189)
+     next: L1 R4 keep; L2 R4 keep; L3 R4 keep
+  STOP: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time; rounds 4; model seconds 208.8; G per round []; slope None; NOT JUDGEABLE
+
+rounds: night 1 4, night 2 1 (ledger used True), night 3 4 (ledger used False), night 4 4 (ledger used False)

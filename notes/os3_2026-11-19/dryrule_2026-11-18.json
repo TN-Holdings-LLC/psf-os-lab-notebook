@@ -1,0 +1,95 @@
+{
+ "round1_dr": {
+  "1": {
+   "p11": 0.95975,
+   "p00": 0.94925,
+   "gap": -0.010499999999999954,
+   "two_se": 0.009316886550774351,
+   "sig": false
+  },
+  "3": {
+   "p11": 0.996,
+   "p00": 0.9945,
+   "gap": -0.0014999999999999458,
+   "two_se": 0.0030746951068357903,
+   "sig": false
+  },
+  "5": {
+   "p11": 0.9915,
+   "p00": 0.99275,
+   "gap": 0.0012499999999999734,
+   "two_se": 0.003952870792221766,
+   "sig": false
+  },
+  "7": {
+   "p11": 0.9785,
+   "p00": 0.97925,
+   "gap": 0.0007499999999999174,
+   "two_se": 0.006430955411134491,
+   "sig": false
+  },
+  "9": {
+   "p11": 0.96975,
+   "p00": 0.98675,
+   "gap": 0.017000000000000015,
+   "two_se": 0.006512248075741585,
+   "sig": true
+  }
+ },
+ "round1_verdicts": {
+  "1": "PRESCRIPTION HELPS",
+  "2": "PRESCRIPTION HELPS",
+  "3": "PRESCRIPTION HELPS"
+ },
+ "A": {
+  "round": 2,
+  "device": "ibm_marrakesh",
+  "ladder": "A",
+  "stacks": {
+   "1": [
+    "P1"
+   ],
+   "2": [
+    "P1"
+   ],
+   "3": [
+    "P1"
+   ]
+  },
+  "why": {
+   "1": "R4 keep",
+   "2": "R4 keep",
+   "3": "R4 keep"
+  },
+  "stop": true,
+  "stop_reason": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+  "model_seconds_so_far": 86.1
+ },
+ "B": {
+  "round": 2,
+  "device": "ibm_marrakesh",
+  "ladder": "B",
+  "stacks": {
+   "1": [
+    "P1",
+    "M"
+   ],
+   "2": [
+    "P1",
+    "M"
+   ],
+   "3": [
+    "P1",
+    "M"
+   ]
+  },
+  "why": {
+   "1": "RB helps -> one more try (m 3) + M",
+   "2": "RB helps -> one more try (m 3) + M",
+   "3": "RB helps -> one more try (m 3) + M"
+  },
+  "stop": false,
+  "stop_reason": null,
+  "model_seconds_so_far": 86.1
+ }
+}

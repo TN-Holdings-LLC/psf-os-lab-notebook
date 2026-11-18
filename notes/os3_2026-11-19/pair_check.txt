@@ -1,0 +1,4 @@
+11-17 -> 11-18: used False (other calibration (2026-11-13 18:22:56+01:00 -> 2026-11-18 11:05:21+01:00): start from tonight's diagnostics); round 1 {'1': ['P2'], '2': ['P1'], '3': ['P1']}; OK
+11-18 -> 11-17: used False (other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-13 18:22:56+01:00): start from tonight's diagnostics); round 1 {'1': ['P2'], '2': ['P1'], '3': ['P1']}; OK
+disagreement on L1 (ledger P0, tonight P2): round 1 {'1': ['P2'], '2': ['P1', 'M'], '3': ['P2', 'B']}; per L {'1': 'diagnostics disagree (tonight P2, ledger P0): the diagnostics win, ledger not used', '2': 'ledger used: start from P1+M (same device and calibration time; family agrees)', '3': 'ledger used: start from P2+B (same device and calibration time; family agrees)'}; OK
+PASS

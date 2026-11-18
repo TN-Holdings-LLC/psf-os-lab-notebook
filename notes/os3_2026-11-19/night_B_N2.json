@@ -1,0 +1,238 @@
+{
+ "night": "B_N2",
+ "device": "ibm_marrakesh",
+ "calibration_time": "2026-11-18 11:05:21+01:00",
+ "ladder": "B",
+ "noise": {
+  "gamma": 0.1
+ },
+ "illustrative": true,
+ "seed_base": 20261119,
+ "rounds": [
+  {
+   "round": 1,
+   "cost_s": 30.9,
+   "stacks": {
+    "1": [
+     "P1"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P1"
+    ]
+   },
+   "rows": {
+    "1": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.89775,
+     "noiseless": 0.8904214154535398,
+     "g": 0.11875000000000002,
+     "g_two_se": 0.016246659271985733
+    },
+    "2": {
+     "verdict": "OVERSHOOT",
+     "p": 0.81075,
+     "noiseless": 0.7928502970982835,
+     "g": 0.237,
+     "g_two_se": 0.01994982142777223
+    },
+    "3": {
+     "verdict": "OVERSHOOT",
+     "p": 0.742,
+     "noiseless": 0.7059708837850116,
+     "g": 0.312,
+     "g_two_se": 0.020893443947803337
+    }
+   },
+   "next_stacks": {
+    "1": [
+     "P1",
+     "M"
+    ],
+    "2": [
+     "P2",
+     "B"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "why_next": {
+    "1": "RB helps -> one more try (m 3) + M",
+    "2": "R1 overshoot -> P2 + B",
+    "3": "R1 overshoot -> P2 + B"
+   }
+  },
+  {
+   "round": 2,
+   "cost_s": 37.6,
+   "stacks": {
+    "1": [
+     "P1",
+     "M"
+    ],
+    "2": [
+     "P2",
+     "B"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rows": {
+    "1": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.92525,
+     "noiseless": 0.9218532460191509,
+     "g": 0.16049999999999998,
+     "g_two_se": 0.01578194775685181
+    },
+    "2": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.66325,
+     "noiseless": 0.792850297098285,
+     "g": 0.09775,
+     "g_two_se": 0.018608706799506516
+    },
+    "3": {
+     "verdict": "PRESCRIPTION HELPS",
+     "p": 0.56,
+     "noiseless": 0.7059708837850145,
+     "g": 0.13925000000000004,
+     "g_two_se": 0.018735872177456803
+    }
+   },
+   "next_stacks": {
+    "1": [
+     "P1",
+     "M"
+    ],
+    "2": [
+     "P2",
+     "B"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "why_next": {
+    "1": "R4 keep",
+    "2": "R4 keep",
+    "3": "R4 keep"
+   }
+  }
+ ],
+ "diagnostics_pick": {
+  "1": "P1",
+  "2": "P1",
+  "3": "P1"
+ },
+ "ledger": {
+  "used": false,
+  "per_L": {},
+  "last_night": null,
+  "why": "no ledger"
+ },
+ "round1_stacks": {
+  "1": [
+   "P1"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P1"
+  ]
+ },
+ "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+ "rounds_run": 2,
+ "model_seconds": 123.69999999999999,
+ "compound": {
+  "common_L": [
+   "1"
+  ],
+  "per_L": {
+   "1": [
+    [
+     1,
+     0.11875000000000002,
+     "PRESCRIPTION HELPS"
+    ],
+    [
+     2,
+     0.16049999999999998,
+     "PRESCRIPTION HELPS"
+    ]
+   ],
+   "2": [
+    [
+     1,
+     0.237,
+     "OVERSHOOT"
+    ],
+    [
+     2,
+     0.09775,
+     "PRESCRIPTION HELPS"
+    ]
+   ],
+   "3": [
+    [
+     1,
+     0.312,
+     "OVERSHOOT"
+    ],
+    [
+     2,
+     0.13925000000000004,
+     "PRESCRIPTION HELPS"
+    ]
+   ]
+  },
+  "per_round": [
+   {
+    "round": 1,
+    "G": 0.11875000000000002,
+    "se": 0.008123329635992866
+   },
+   {
+    "round": 2,
+    "G": 0.16049999999999998,
+    "se": 0.007890973878425906
+   }
+  ],
+  "verdict": "NOT JUDGEABLE",
+  "why": "2 round(s): a slope needs three",
+  "difference_beside": 0.041749999999999954,
+  "two_se_beside": 0.022650028973491398
+ },
+ "last_stacks": {
+  "1": [
+   "P1",
+   "M"
+  ],
+  "2": [
+   "P2",
+   "B"
+  ],
+  "3": [
+   "P2",
+   "B"
+  ]
+ },
+ "last_g": {
+  "1": 0.16049999999999998,
+  "2": 0.09775,
+  "3": 0.13925000000000004
+ },
+ "last_verdict": {
+  "1": "PRESCRIPTION HELPS",
+  "2": "PRESCRIPTION HELPS",
+  "3": "PRESCRIPTION HELPS"
+ }
+}

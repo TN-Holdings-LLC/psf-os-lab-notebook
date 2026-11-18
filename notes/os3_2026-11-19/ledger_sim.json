@@ -1,0 +1,391 @@
+{
+ "ladder": "B",
+ "noise": {
+  "gamma": 0.05,
+  "p11": {
+   "1": 0.83
+  }
+ },
+ "illustrative": true,
+ "nights": {
+  "night1_same_record": {
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-18 11:05:21+01:00",
+   "ledger": {
+    "used": false,
+    "per_L": {},
+    "last_night": null,
+    "why": "no ledger"
+   },
+   "diagnostics_pick": {
+    "1": "P2",
+    "2": "P1",
+    "3": "P1"
+   },
+   "round1_stacks": {
+    "1": [
+     "P2"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P1"
+    ]
+   },
+   "rounds_run": 4,
+   "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P1",
+     "M"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "last_g": {
+    "1": 0.17737500000000006,
+    "2": 0.14650000000000007,
+    "3": 0.05400000000000016
+   },
+   "model_seconds": 198.89999999999998,
+   "G": [
+    0.10850000000000004,
+    0.14925,
+    0.14800000000000002,
+    0.14650000000000007
+   ]
+  },
+  "night2_same_record": {
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-18 11:05:21+01:00",
+   "ledger": {
+    "used": true,
+    "per_L": {
+     "1": "ledger used: start from P2+B+Q2+M (same device and calibration time; family agrees)",
+     "2": "ledger used: start from P1+M (same device and calibration time; family agrees)",
+     "3": "ledger used: start from P2+B (same device and calibration time; family agrees)"
+    },
+    "last_night": {
+     "night": "night1_same_record",
+     "device": "ibm_marrakesh",
+     "calibration_time": "2026-11-18 11:05:21+01:00"
+    },
+    "why": "same device and calibration time"
+   },
+   "diagnostics_pick": {
+    "1": "P2",
+    "2": "P1",
+    "3": "P1"
+   },
+   "round1_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P1",
+     "M"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rounds_run": 1,
+   "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P1",
+     "M"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "last_g": {
+    "1": 0.16949999999999987,
+    "2": 0.16699999999999993,
+    "3": 0.035499999999999976
+   },
+   "model_seconds": 92.80000000000001,
+   "G": [
+    0.12399999999999993
+   ]
+  },
+  "night3_changed_calibration": {
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-19 10:40:00+01:00",
+   "ledger": {
+    "used": false,
+    "per_L": {},
+    "last_night": {
+     "night": "night2_same_record",
+     "device": "ibm_marrakesh",
+     "calibration_time": "2026-11-18 11:05:21+01:00"
+    },
+    "why": "other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:40:00+01:00): start from tonight's diagnostics"
+   },
+   "diagnostics_pick": {
+    "1": "P2",
+    "2": "P1",
+    "3": "P1"
+   },
+   "round1_stacks": {
+    "1": [
+     "P2"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P1"
+    ]
+   },
+   "rounds_run": 4,
+   "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P1",
+     "M"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "last_g": {
+    "1": 0.14837500000000003,
+    "2": 0.1519999999999999,
+    "3": 0.054625000000000035
+   },
+   "model_seconds": 198.89999999999998,
+   "G": [
+    0.09950000000000003,
+    0.15475000000000005,
+    0.15025,
+    0.1519999999999999
+   ]
+  },
+  "night4_2026-11-17_record": {
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-13 18:22:56+01:00",
+   "ledger": {
+    "used": false,
+    "per_L": {},
+    "last_night": {
+     "night": "night3_changed_calibration",
+     "device": "ibm_marrakesh",
+     "calibration_time": "2026-11-19 10:40:00+01:00"
+    },
+    "why": "other calibration (2026-11-19 10:40:00+01:00 -> 2026-11-13 18:22:56+01:00): start from tonight's diagnostics"
+   },
+   "diagnostics_pick": {
+    "1": "P2",
+    "2": "P1",
+    "3": "P1"
+   },
+   "round1_stacks": {
+    "1": [
+     "P2"
+    ],
+    "2": [
+     "P1"
+    ],
+    "3": [
+     "P1"
+    ]
+   },
+   "rounds_run": 4,
+   "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P2",
+     "B"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "last_g": {
+    "1": 0.16012499999999996,
+    "2": 0.03325,
+    "3": 0.049875
+   },
+   "model_seconds": 208.8,
+   "G": []
+  }
+ },
+ "ledger": [
+  {
+   "night": "night1_same_record",
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-18 11:05:21+01:00",
+   "ladder": "B",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P1",
+     "M"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rounds_run": 4,
+   "last_g": {
+    "1": 0.17737500000000006,
+    "2": 0.14650000000000007,
+    "3": 0.05400000000000016
+   },
+   "last_verdict": {
+    "1": "PRESCRIPTION HELPS",
+    "2": "PRESCRIPTION HELPS",
+    "3": "PRESCRIPTION HELPS"
+   },
+   "ledger_used": false,
+   "ledger_why": "no ledger"
+  },
+  {
+   "night": "night2_same_record",
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-18 11:05:21+01:00",
+   "ladder": "B",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P1",
+     "M"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rounds_run": 1,
+   "last_g": {
+    "1": 0.16949999999999987,
+    "2": 0.16699999999999993,
+    "3": 0.035499999999999976
+   },
+   "last_verdict": {
+    "1": "PRESCRIPTION HELPS",
+    "2": "PRESCRIPTION HELPS",
+    "3": "PRESCRIPTION HELPS"
+   },
+   "ledger_used": true,
+   "ledger_why": "same device and calibration time"
+  },
+  {
+   "night": "night3_changed_calibration",
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-19 10:40:00+01:00",
+   "ladder": "B",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P1",
+     "M"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rounds_run": 4,
+   "last_g": {
+    "1": 0.14837500000000003,
+    "2": 0.1519999999999999,
+    "3": 0.054625000000000035
+   },
+   "last_verdict": {
+    "1": "PRESCRIPTION HELPS",
+    "2": "PRESCRIPTION HELPS",
+    "3": "PRESCRIPTION HELPS"
+   },
+   "ledger_used": false,
+   "ledger_why": "other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:40:00+01:00): start from tonight's diagnostics"
+  },
+  {
+   "night": "night4_2026-11-17_record",
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-13 18:22:56+01:00",
+   "ladder": "B",
+   "last_stacks": {
+    "1": [
+     "P2",
+     "B",
+     "Q2",
+     "M"
+    ],
+    "2": [
+     "P2",
+     "B"
+    ],
+    "3": [
+     "P2",
+     "B"
+    ]
+   },
+   "rounds_run": 4,
+   "last_g": {
+    "1": 0.16012499999999996,
+    "2": 0.03325,
+    "3": 0.049875
+   },
+   "last_verdict": {
+    "1": "PRESCRIPTION HELPS",
+    "2": "PRESCRIPTION HELPS",
+    "3": "PRESCRIPTION HELPS"
+   },
+   "ledger_used": false,
+   "ledger_why": "other calibration (2026-11-19 10:40:00+01:00 -> 2026-11-13 18:22:56+01:00): start from tonight's diagnostics"
+  }
+ ]
+}
