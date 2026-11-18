@@ -2,7 +2,7 @@
 
 Workplace Claude, 2026-11-18 (owner: the third missing piece, the time specification; home instruction 18d with the
 owner's choices of 11:1x JST). READY text: moved to `prereg/timing_night_2026-11-18.md` and committed at home on top of
-ecf9f73d (the night's other declarations, 16d14fc8, unchanged); declared when that commit is pushed, before the device
+d40c8556 (after ecf9f73d; the night's other declarations, 16d14fc8, unchanged); declared when that commit is pushed, before the device
 records of the night are fetched. Tool: `gpu/timing_night.py` as of that commit. Design and planted checks:
 `notes/timing_2026-11-18/README.md`.
 
