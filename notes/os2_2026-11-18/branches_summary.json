@@ -1,0 +1,466 @@
+{
+ "s0": {
+  "noise": {
+   "gamma": 0.0
+  },
+  "os_night_pick": {
+   "1": "P0",
+   "2": "P0",
+   "3": "P0"
+  },
+  "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+  "model_seconds": 76.1,
+  "rounds": [
+   {
+    "round": 1,
+    "stacks": {
+     "1": "P0",
+     "2": "P0",
+     "3": "P0"
+    },
+    "verdicts": {
+     "1": "NO PRESCRIPTION",
+     "2": "NO PRESCRIPTION",
+     "3": "NO PRESCRIPTION"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   }
+  ],
+  "compound": "no L credited in every round"
+ },
+ "s6": {
+  "noise": {
+   "gamma": 0.01
+  },
+  "os_night_pick": {
+   "1": "P1",
+   "2": "P1",
+   "3": "P1"
+  },
+  "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+  "model_seconds": 137.9,
+  "rounds": [
+   {
+    "round": 1,
+    "stacks": {
+     "1": "P1",
+     "2": "P1",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "NOT SHOWN",
+     "2": "NOT SHOWN",
+     "3": "NOT SHOWN"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   },
+   {
+    "round": 2,
+    "stacks": {
+     "1": "P1",
+     "2": "P1",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "NOT SHOWN",
+     "2": "NOT SHOWN",
+     "3": "NOT SHOWN"
+    },
+    "next": {
+     "1": "R3 stop-loss",
+     "2": "R3 stop-loss",
+     "3": "R3 stop-loss"
+    }
+   },
+   {
+    "round": 3,
+    "stacks": {
+     "1": "P0",
+     "2": "P0",
+     "3": "P0"
+    },
+    "verdicts": {
+     "1": "NO PRESCRIPTION",
+     "2": "NO PRESCRIPTION",
+     "3": "NO PRESCRIPTION"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   }
+  ],
+  "compound": "no L credited in every round"
+ },
+ "s8": {
+  "noise": {
+   "gamma": 0.02,
+   "p11": {
+    "3": 0.83
+   }
+  },
+  "os_night_pick": {
+   "1": "P1",
+   "2": "P2",
+   "3": "P1"
+  },
+  "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+  "model_seconds": 151.2,
+  "rounds": [
+   {
+    "round": 1,
+    "stacks": {
+     "1": "P1",
+     "2": "P2",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "NOT SHOWN",
+     "2": "OVERSHOOT",
+     "3": "PRESCRIPTION HELPS"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R1 overshoot -> P2 + B",
+     "3": "R4 keep"
+    }
+   },
+   {
+    "round": 2,
+    "stacks": {
+     "1": "P1",
+     "2": "P2+B",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "NOT SHOWN",
+     "2": "PRESCRIPTION HELPS",
+     "3": "PRESCRIPTION HELPS"
+    },
+    "next": {
+     "1": "R3 stop-loss",
+     "2": "R2 frames",
+     "3": "R4 keep"
+    }
+   },
+   {
+    "round": 3,
+    "stacks": {
+     "1": "P0",
+     "2": "P2+B+Q2",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "NO PRESCRIPTION",
+     "2": "PRESCRIPTION HELPS",
+     "3": "PRESCRIPTION HELPS"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   }
+  ],
+  "compound": "NOT SHOWN"
+ },
+ "s5": {
+  "noise": {
+   "gamma": 0.03,
+   "p11": {
+    "1": 0.83
+   }
+  },
+  "os_night_pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  },
+  "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+  "model_seconds": 195.5,
+  "rounds": [
+   {
+    "round": 1,
+    "stacks": {
+     "1": "P2",
+     "2": "P1",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "OVERSHOOT",
+     "2": "PRESCRIPTION HELPS",
+     "3": "OVERSHOOT"
+    },
+    "next": {
+     "1": "R1 overshoot -> P2 + B",
+     "2": "R4 keep",
+     "3": "R1 overshoot -> P2 + B"
+    }
+   },
+   {
+    "round": 2,
+    "stacks": {
+     "1": "P2+B",
+     "2": "P1",
+     "3": "P2+B"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "NOT SHOWN"
+    },
+    "next": {
+     "1": "R2 frames",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   },
+   {
+    "round": 3,
+    "stacks": {
+     "1": "P2+B+Q2",
+     "2": "P1",
+     "3": "P2+B"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "NOT SHOWN"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R3 stop-loss"
+    }
+   },
+   {
+    "round": 4,
+    "stacks": {
+     "1": "P2+B+Q2",
+     "2": "P1",
+     "3": "P2"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "PRESCRIPTION HELPS"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   }
+  ],
+  "compound": "NOT SHOWN"
+ },
+ "s5k3": {
+  "noise": {
+   "gamma": 0.03,
+   "p11": {
+    "1": 0.83
+   }
+  },
+  "k_max": 3,
+  "os_night_pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  },
+  "stop": "round limit K = 3",
+  "model_seconds": 161.3,
+  "rounds": [
+   {
+    "round": 1,
+    "stacks": {
+     "1": "P2",
+     "2": "P1",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "OVERSHOOT",
+     "2": "PRESCRIPTION HELPS",
+     "3": "OVERSHOOT"
+    },
+    "next": {
+     "1": "R1 overshoot -> P2 + B",
+     "2": "R4 keep",
+     "3": "R1 overshoot -> P2 + B"
+    }
+   },
+   {
+    "round": 2,
+    "stacks": {
+     "1": "P2+B",
+     "2": "P1",
+     "3": "P2+B"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "NOT SHOWN"
+    },
+    "next": {
+     "1": "R2 frames",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   },
+   {
+    "round": 3,
+    "stacks": {
+     "1": "P2+B+Q2",
+     "2": "P1",
+     "3": "P2+B"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "NOT SHOWN"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R3 stop-loss"
+    }
+   }
+  ],
+  "compound": "NOT SHOWN"
+ },
+ "s1b": {
+  "noise": {
+   "gamma": 0.08,
+   "p11": {
+    "1": 0.83
+   }
+  },
+  "budget_s": 150,
+  "os_night_pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  },
+  "stop": "budget before round 3: 123.7 + 37.6 > 150 s (not run)",
+  "model_seconds": 123.7,
+  "rounds": [
+   {
+    "round": 1,
+    "stacks": {
+     "1": "P2",
+     "2": "P1",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "OVERSHOOT",
+     "2": "PRESCRIPTION HELPS",
+     "3": "OVERSHOOT"
+    },
+    "next": {
+     "1": "R1 overshoot -> P2 + B",
+     "2": "R4 keep",
+     "3": "R1 overshoot -> P2 + B"
+    }
+   },
+   {
+    "round": 2,
+    "stacks": {
+     "1": "P2+B",
+     "2": "P1",
+     "3": "P2+B"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "PRESCRIPTION HELPS"
+    },
+    "next": {
+     "1": "R2 frames",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   }
+  ],
+  "compound": "(two rounds: a difference, not a slope) NOT SHOWN"
+ },
+ "s1": {
+  "noise": {
+   "gamma": 0.08,
+   "p11": {
+    "1": 0.83
+   }
+  },
+  "os_night_pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  },
+  "stop": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+  "model_seconds": 161.3,
+  "rounds": [
+   {
+    "round": 1,
+    "stacks": {
+     "1": "P2",
+     "2": "P1",
+     "3": "P1"
+    },
+    "verdicts": {
+     "1": "OVERSHOOT",
+     "2": "PRESCRIPTION HELPS",
+     "3": "OVERSHOOT"
+    },
+    "next": {
+     "1": "R1 overshoot -> P2 + B",
+     "2": "R4 keep",
+     "3": "R1 overshoot -> P2 + B"
+    }
+   },
+   {
+    "round": 2,
+    "stacks": {
+     "1": "P2+B",
+     "2": "P1",
+     "3": "P2+B"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "PRESCRIPTION HELPS"
+    },
+    "next": {
+     "1": "R2 frames",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   },
+   {
+    "round": 3,
+    "stacks": {
+     "1": "P2+B+Q2",
+     "2": "P1",
+     "3": "P2+B"
+    },
+    "verdicts": {
+     "1": "PRESCRIPTION HELPS",
+     "2": "PRESCRIPTION HELPS",
+     "3": "PRESCRIPTION HELPS"
+    },
+    "next": {
+     "1": "R4 keep",
+     "2": "R4 keep",
+     "3": "R4 keep"
+    }
+   }
+  ],
+  "compound": "NOT SHOWN"
+ }
+}
