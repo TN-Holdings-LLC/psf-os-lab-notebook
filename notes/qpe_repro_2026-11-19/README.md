@@ -51,13 +51,14 @@ arm is the same circuit (no conditionals): a same-job replicate, beside. One rin
 
 | noise | n 2: IPE / textbook | n 3 | n 4 | ceiling | per shot |
 |---|---|---|---|---|---|
-| none | 1 / 1 | 1 / 1 | 1 / 1 | BEYOND x3 | NOT SEPARATED x3 |
+| none (made with `psf_os.feedforward.run_local(OUT, seed=20261119)`, not `dry`) | 1 / 1 | 1 / 1 | 1 / 1 | BEYOND x3 | NOT SEPARATED x3 |
 | a: CZ 1 %, damping 2 % per read | 0.982 / 0.918 | 0.964 / 0.781 | 0.947 / 0.591 | BEYOND x3 | IPE x3 |
 | b: CZ 0.3 %, damping 5 % | 0.990 / 0.976 | 0.976 / 0.926 | 0.960 / 0.851 | BEYOND x3 | IPE x3 |
 | c: CZ 0.2 %, dephasing 12 % per conditional | 0.950 / 0.984 | 0.858 / 0.950 | 0.731 / 0.897 | BEYOND x3 | TEXTBOOK x3 |
 | d: as c with 60 % | 0.754 / - | 0.473 / - | 0.268 / - | NOT BEYOND x3 | - |
 
-Every verdict word is reached. Which way the per-shot comparison goes on the device depends on what a conditional
+Rows a to d: `qpe_repro_night.py dry OUT noise/illus_X.json` (seed 20261119, circuit i at seed + 10000 i). Every
+verdict word is reached. Which way the per-shot comparison goes on the device depends on what a conditional
 costs against what a CZ costs: that is what the test measures, and tonight's timing test reads the first half.
 
 ## What it cannot say
@@ -66,3 +67,13 @@ costs against what a CZ costs: that is what the test measures, and tonight's tim
   no feed-forward) would be the paper's comparison and is a candidate for later.
 - Exact phases j / 2^n only (the paper drew random phases); success = all n bits right, not a phase error.
 - The textbook circuit is routed on a line by a fixed rule (no search); a better routing would lower its CZ count.
+
+## Independent check by the workplace VS (2026-11-18, `vs_check.md`, `vs/`, `vs_out/`)
+
+V1 the builds (circuits, seconds, check) agree on all three records; V2 C(n) by two other methods and the bit order on
+every built circuit agree; V3 an independent scorer reads the dry runs a to d as the workplace did (the noiseless row
+via run_local); V4 every mutation that changes a noiseless output (a textbook read swapped, the feedback's sign, an X
+left in a floor) makes check FAIL. `circuits_sha256` differed (QPY bytes: VS qiskit 2.5.2, workplace 2.6.1), and so
+did psf-os's gate hash, which writes a conditional block as a text drawing. Since then `build` writes into part.json
+`circuits_digest` (every gate, conditional blocks opened; `digest OUT` prints it) and the versions, so two machines
+compare the digest.

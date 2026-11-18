@@ -23,6 +23,9 @@ Two yardsticks with their own words (home's supplement 1):
   python gpu/qpe_repro_night.py check OUT
   python gpu/qpe_repro_night.py dry OUT NOISE.json [--seed S]     dry runs only (illustrative noise, never fitted)
   python gpu/qpe_repro_night.py score OUT [OUT2]
+  python gpu/qpe_repro_night.py digest OUT       the circuits' digest, comparable across qiskit versions (part.json
+                                                  also keeps circuits_sha256, the digest and the versions)
+  The noiseless dry run is psf_os.feedforward.run_local(OUT, seed=20261119), not `dry`.
 
 Placement: rule C chains (psf-os feedforward.place: coupling graph and failed marks only); no calibration error number
 is read. The textbook circuit is routed on a line by the fixed rule of notes/rus_coherent_2026-11-17 (no search).
@@ -102,14 +105,68 @@ def textbook_ideal(n):
     return worst
 
 
+def _gates(circuit, qmap=None, cmap=None):
+    """Gate list that also opens conditional blocks (psf_os.gatehash writes a block's parameters as str() of the block,
+    a text drawing that changes with the qiskit version; the workplace VS's check of 2026-11-18, item 2)."""
+    from psf_os.gatehash import _param
+    qmap = qmap or {q: circuit.find_bit(q).index for q in circuit.qubits}
+    cmap = cmap or {c: circuit.find_bit(c).index for c in circuit.clbits}
+    out = []
+    for ins in circuit.data:
+        op = ins.operation
+        qs = [qmap[q] for q in ins.qubits]
+        cs = [cmap[c] for c in ins.clbits]
+        if op.name == "if_else":
+            cond = op.condition
+            bit = cmap[cond[0]] if cond[0] in cmap else str(cond[0])
+            blocks = []
+            for blk in op.blocks:
+                if blk is None:
+                    blocks.append(None)
+                    continue
+                qm = {bq: qs[i] for i, bq in enumerate(blk.qubits)}
+                cm = {bc: cs[i] for i, bc in enumerate(blk.clbits)}
+                blocks.append(_gates(blk, qm, cm))
+            out.append(["if_else", qs, cs, [bit, int(cond[1])], blocks])
+        else:
+            out.append([op.name, qs, cs, [_param(p) for p in op.params]])
+    return out
+
+
+def circuits_digest(path):
+    """SHA-256 of the canonical JSON of every circuit's gate list, conditional blocks opened: comparable across
+    qiskit versions, where circuits_sha256 (the QPY bytes) is not."""
+    import hashlib
+    from qiskit import qpy
+    cs = qpy.load(open(path, "rb"))
+    doc = [dict(num_qubits=c.num_qubits, num_clbits=c.num_clbits, gates=_gates(c)) for c in cs]
+    return hashlib.sha256(json.dumps(doc, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def _versions():
+    import subprocess
+    import qiskit
+    import qiskit_aer
+    import psf_os
+    try:
+        head = subprocess.run(["git", "-C", os.path.dirname(os.path.dirname(psf_os.__file__)), "rev-parse",
+                               "--short=7", "HEAD"], capture_output=True, text=True).stdout.strip() or None
+    except OSError:
+        head = None
+    return dict(qiskit=qiskit.__version__, qiskit_aer=qiskit_aer.__version__, psf_os=head,
+                python=sys.version.split()[0])
+
+
 def build(a):
     from psf_os import feedforward as FF
     from psf_os.device import Device
     spec = dict(kind="echo_clifford", D=24) if a.dry_clifford_sentinel else None   # dry runs only, never a device
     rep = FF.build(Device.load(a.devdir), items(a.part), a.out, shots=a.shots, max_seconds=a.max_seconds,
                    sentinel_spec=spec)
+    man = json.load(open(os.path.join(a.out, "job", "manifest.json")))
     info = dict(part=a.part, ns=list(PARTS[a.part]), shots=a.shots, device=rep["device"], circuits=rep["circuits"],
-                qpu_seconds_model=rep["qpu_seconds_model"])
+                qpu_seconds_model=rep["qpu_seconds_model"], circuits_sha256=man["circuits_sha256"],
+                circuits_digest=circuits_digest(os.path.join(a.out, "job", "circuits.qpy")), versions=_versions())
     json.dump(info, open(os.path.join(a.out, "part.json"), "w"), indent=1)
     print(json.dumps(info))
     for n in PARTS[a.part]:
@@ -309,6 +366,7 @@ if __name__ == "__main__":
     d.add_argument("out")
     d.add_argument("noise")
     d.add_argument("--seed", type=int, default=SEED)
+    sub.add_parser("digest").add_argument("out")
     s = sub.add_parser("score")
     s.add_argument("out")
     s.add_argument("out2", nargs="?")
@@ -318,6 +376,9 @@ if __name__ == "__main__":
             print(f"n {n}: IPE ff {r['ipe_ff']:.4f} (min {r['ipe_ff_min']:.4f}); off as read {r['ipe_off']:.4f}; "
                   f"ceiling {r['ceiling']:.4f}; margin {r['ipe_ff'] - r['ceiling']:+.4f}; textbook as built: worst "
                   f"phase {textbook_ideal(n):.6f}")
+        sys.exit(0)
+    if a.cmd == "digest":
+        print(circuits_digest(os.path.join(a.out, "job", "circuits.qpy")))
         sys.exit(0)
     r = {"build": build, "check": check, "dry": dry, "score": score}[a.cmd](a)
     sys.exit(0 if r is not False else 1)
