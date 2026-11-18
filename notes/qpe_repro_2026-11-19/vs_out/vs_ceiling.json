@@ -1,0 +1,17 @@
+{
+ "2": {
+  "analytic": "7.500e-01",
+  "statevector": "7.500e-01",
+  "max_abs_diff_of_distributions": "6.661e-16"
+ },
+ "3": {
+  "analytic": "5.884e-01",
+  "statevector": "5.884e-01",
+  "max_abs_diff_of_distributions": "8.882e-16"
+ },
+ "4": {
+  "analytic": "4.706e-01",
+  "statevector": "4.706e-01",
+  "max_abs_diff_of_distributions": "1.332e-15"
+ }
+}

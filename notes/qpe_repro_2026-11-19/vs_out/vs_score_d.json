@@ -1,0 +1,47 @@
+{
+ "2": {
+  "ipe": "7.535e-01",
+  "ipe_2se": "9.637e-03",
+  "shots": 8000,
+  "ceiling": "7.500e-01",
+  "margin": "3.500e-03",
+  "ceiling_verdict": "NOT BEYOND",
+  "off_as_read": "7.034e-01",
+  "textbook": "9.841e-01",
+  "textbook_2se": "2.795e-03",
+  "d": "-2.306e-01",
+  "d_2se": "1.003e-02",
+  "per_shot_verdict": "TEXTBOOK RIGHT MORE OFTEN",
+  "replicate": "9.836e-01"
+ },
+ "3": {
+  "ipe": "4.734e-01",
+  "ipe_2se": "7.894e-03",
+  "shots": 16000,
+  "ceiling": "5.884e-01",
+  "margin": "-1.150e-01",
+  "ceiling_verdict": "NOT BEYOND",
+  "off_as_read": "4.421e-01",
+  "textbook": "9.501e-01",
+  "textbook_2se": "3.444e-03",
+  "d": "-4.767e-01",
+  "d_2se": "8.613e-03",
+  "per_shot_verdict": "TEXTBOOK RIGHT MORE OFTEN",
+  "replicate": "9.524e-01"
+ },
+ "4": {
+  "ipe": "2.682e-01",
+  "ipe_2se": "4.953e-03",
+  "shots": 32000,
+  "ceiling": "4.706e-01",
+  "margin": "-2.024e-01",
+  "ceiling_verdict": "NOT BEYOND",
+  "off_as_read": "2.722e-01",
+  "textbook": "8.972e-01",
+  "textbook_2se": "3.395e-03",
+  "d": "-6.290e-01",
+  "d_2se": "6.005e-03",
+  "per_shot_verdict": "TEXTBOOK RIGHT MORE OFTEN",
+  "replicate": "8.968e-01"
+ }
+}

@@ -1,0 +1,84 @@
+[
+ {
+  "kind": "swap",
+  "damaged": [
+   "ff_tqpe4_0",
+   "ff_tqpe4_1",
+   "ff_tqpe4_10",
+   "ff_tqpe4_11",
+   "ff_tqpe4_12",
+   "ff_tqpe4_13",
+   "ff_tqpe4_14",
+   "ff_tqpe4_15",
+   "ff_tqpe4_2",
+   "ff_tqpe4_3",
+   "ff_tqpe4_4",
+   "ff_tqpe4_5",
+   "ff_tqpe4_6",
+   "ff_tqpe4_7",
+   "ff_tqpe4_8",
+   "ff_tqpe4_9"
+  ],
+  "failed": [
+   "ff_tqpe4_1",
+   "ff_tqpe4_10",
+   "ff_tqpe4_13",
+   "ff_tqpe4_14",
+   "ff_tqpe4_2",
+   "ff_tqpe4_5",
+   "ff_tqpe4_6",
+   "ff_tqpe4_9"
+  ],
+  "exit": 1
+ },
+ {
+  "kind": "sign",
+  "damaged": [
+   "ff_ipe4_0",
+   "ff_ipe4_1",
+   "ff_ipe4_10",
+   "ff_ipe4_11",
+   "ff_ipe4_12",
+   "ff_ipe4_13",
+   "ff_ipe4_14",
+   "ff_ipe4_15",
+   "ff_ipe4_2",
+   "ff_ipe4_3",
+   "ff_ipe4_4",
+   "ff_ipe4_5",
+   "ff_ipe4_6",
+   "ff_ipe4_7",
+   "ff_ipe4_8",
+   "ff_ipe4_9"
+  ],
+  "failed": [
+   "ff_ipe4_1",
+   "ff_ipe4_10",
+   "ff_ipe4_11",
+   "ff_ipe4_12",
+   "ff_ipe4_13",
+   "ff_ipe4_14",
+   "ff_ipe4_15",
+   "ff_ipe4_2",
+   "ff_ipe4_3",
+   "ff_ipe4_4",
+   "ff_ipe4_5",
+   "ff_ipe4_6",
+   "ff_ipe4_7",
+   "ff_ipe4_9"
+  ],
+  "exit": 1
+ },
+ {
+  "kind": "floor_x",
+  "damaged": [
+   "ff_ipe4_3_floor",
+   "ff_tqpe4_3_floor"
+  ],
+  "failed": [
+   "ff_ipe4_3_floor",
+   "ff_tqpe4_3_floor"
+  ],
+  "exit": 1
+ }
+]

@@ -1,0 +1,68 @@
+[
+ {
+  "kind": "swap",
+  "damaged": [
+   "ff_tqpe2_0",
+   "ff_tqpe2_1",
+   "ff_tqpe2_2",
+   "ff_tqpe2_3",
+   "ff_tqpe3_0",
+   "ff_tqpe3_1",
+   "ff_tqpe3_2",
+   "ff_tqpe3_3",
+   "ff_tqpe3_4",
+   "ff_tqpe3_5",
+   "ff_tqpe3_6",
+   "ff_tqpe3_7"
+  ],
+  "failed": [
+   "ff_tqpe2_1",
+   "ff_tqpe2_2",
+   "ff_tqpe3_1",
+   "ff_tqpe3_2",
+   "ff_tqpe3_5",
+   "ff_tqpe3_6"
+  ],
+  "exit": 1
+ },
+ {
+  "kind": "sign",
+  "damaged": [
+   "ff_ipe2_0",
+   "ff_ipe2_1",
+   "ff_ipe2_2",
+   "ff_ipe2_3",
+   "ff_ipe3_0",
+   "ff_ipe3_1",
+   "ff_ipe3_2",
+   "ff_ipe3_3",
+   "ff_ipe3_4",
+   "ff_ipe3_5",
+   "ff_ipe3_6",
+   "ff_ipe3_7"
+  ],
+  "failed": [
+   "ff_ipe2_1",
+   "ff_ipe2_3",
+   "ff_ipe3_1",
+   "ff_ipe3_2",
+   "ff_ipe3_3",
+   "ff_ipe3_5",
+   "ff_ipe3_6",
+   "ff_ipe3_7"
+  ],
+  "exit": 1
+ },
+ {
+  "kind": "floor_x",
+  "damaged": [
+   "ff_ipe2_3_floor",
+   "ff_tqpe2_3_floor"
+  ],
+  "failed": [
+   "ff_ipe2_3_floor",
+   "ff_tqpe2_3_floor"
+  ],
+  "exit": 1
+ }
+]
