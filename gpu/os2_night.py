@@ -1,6 +1,8 @@
-"""The prescription loop with compounding (DRAFT tool, workplace Claude, 2026-11-18; home handover 2026-11-17 night,
-section 3; prereg/drafts-2026-11-18/os2_DRAFT.md). Not declared: thresholds, verdict words and predictions are the
-owner's ([OWNER] in the draft).
+"""The prescription loop with compounding (workplace Claude, 2026-11-18; home handover 2026-11-17 night, section 3;
+the owner's choices of 2026-11-18 08:5x JST: every threshold 2 SE, K_MAX 4, a budget of 240 s by the model for the
+whole night including the diagnostics, the primary verdict the last round, nothing read from an earlier night).
+Declaration text: prereg/drafts-2026-11-18/os2_night_2026-11-18_READY.md (declared when pushed at home). The night is
+run end to end by gpu/os2_run.py.
 
 gpu/os_night.py (2026-11-17) is "simple interest": one diagnosis, one fixed pick per L, one main job, and the result is
 not used again. Here a night runs in rounds k = 1 .. K; each round's main job is scored, and its scores are the next
@@ -14,7 +16,7 @@ round's rule input; the picks are *stacks* of prescriptions from a fixed list, b
     +Q    output-qubit choice: the item placed on the rule-C chain shifted by an offset o in {0, 2, 4} (its last output
           then on chain position o + 2L - 1), o the candidate whose readout gap (Dr) is smallest; ties: the smaller o
 
-  the rule for round k + 1, per L, first match wins (each threshold: the quantity >= 2 SE of itself [OWNER]):
+  the rule for round k + 1, per L, first match wins (each threshold: the quantity >= 2 SE of itself):
     R1 overshoot: round k's pick OVERSHOOT (P > its noiseless value + 2 SE) and no +B  -> stack = P2 + B
     R2 frames:    +B in the stack, no +Q, the nf frame keeps a smaller share of its noiseless value than rd (by
                   >= 2 SE), and the Dr gap on nf's output qubit >= 2 SE                  -> add +Q (offset by Dr)
@@ -22,21 +24,23 @@ round's rule input; the picks are *stacks* of prescriptions from a fixed list, b
                   (a bare base other than P0 goes to P0)
     R4 otherwise: keep the stack
   stop after round k when (a) every L keeps its stack, none overshoots in round k and none is NOT SHOWN for the first
-  time (a fixed point), or (b) k = K_MAX,
-  or (c) the next round would take the night's model seconds past BUDGET_S, or (d) a check FAILs or a build refuses.
+  time (a fixed point), or (b) k = K_MAX (the rule's own stops, written into RULE{k+1}.json); and, in gpu/os2_run.py,
+  (c) when the diagnostics + the rounds run + the next round's model seconds (from its build) would pass BUDGET_S (the
+  next round is then not sent), or (d) a check FAILs or a build refuses.
 
   Dr (readout gap) is measured in every round's own job by a probe item: X on chain positions 1, 3, .., 2 LMAX + 3 and
   read at once (P(1|1) per qubit); P(0|0) from the probe's floor arm. Round 1 has the os_night diagnostics' Dr.
 
-  per round, per L (verdict words as gpu/os_night.py; [OWNER]): g = |P_ff(P0) - exact| - |P(pick) - exact| with the
+  per round, per L (verdict words as gpu/os_night.py): g = |P_ff(P0) - exact| - |P(pick) - exact| with the
   two-SE of the difference; OVERSHOOT when P(pick) > noiseless(pick) + 2 SE; PRESCRIPTION HELPS when g >= 2 SE;
   otherwise NOT SHOWN. P0 runs again in every round (the same circuits), so drift within the night is in both terms.
 
   the OS's own compounding (compound): per round G_k = the mean of g over the L credited in every round compared (no
-  overshoot in any; SE from the per-L SEs); weighted least-squares slope of G_k over k; OS COMPOUNDS [OWNER] when the slope >= 2 SE and no L
-  overshoots in the last round; otherwise NOT SHOWN.
+  overshoot in any; SE from the per-L SEs); weighted least-squares slope of G_k over k; OS COMPOUNDS when the slope >= 2 SE and no L
+  overshoots in the last round; otherwise NOT SHOWN; NOT JUDGEABLE with fewer than three rounds or no L credited in
+  every round.
 
-  python gpu/os2_night.py round1 RULE1.json OS_RULE.json      round 1 stacks from os_night's rule.json
+  python gpu/os2_night.py round1 OS_RULE.json RULE1.json [--diag DW DC]   round 1 stacks from os_night's rule.json
   python gpu/os2_night.py build DEVDIR OUT RULE.json [--dry-clifford-sentinel]
   python gpu/os2_night.py check OUT
   python gpu/os2_night.py score OUT                           -> OUT/round_scores.json
@@ -60,8 +64,8 @@ LMAX = max(LS)
 OFFSETS = (0, 2, 4)
 PROBE_POS = tuple(range(1, 2 * LMAX + 4, 2))          # chain positions 1, 3, .., 2 LMAX + 3 (5 qubits for LMAX 3)
 PROBE_N = 2 * LMAX + 4
-K_MAX = 4                                              # [OWNER]
-BUDGET_S = 240.0                                       # [OWNER] model seconds per night, all rounds
+K_MAX = 4                                              # rounds per night (owner, 2026-11-18)
+BUDGET_S = 240.0                                       # model seconds per night: diagnostics + every round (owner)
 TOL = 0.03
 
 
@@ -155,6 +159,11 @@ def chains_for(dev, meta):
 
 # ------------------------------------------------------------------------------------------------ round 1
 
+def _diag_seconds(dirs):
+    """The diagnostics' model seconds (their build.json), counted in the night's budget."""
+    return float(sum(json.load(open(os.path.join(d, "build.json")))["qpu_seconds_model"] for d in (dirs or [])))
+
+
 def round1(a):
     """Round 1 stacks = os_night's pick per L (its rule, unchanged; its Dr carried as round 0's readout)."""
     R = json.load(open(a.os_rule))
@@ -166,7 +175,7 @@ def round1(a):
     if not dev:
         raise SystemExit("the os_night rule.json names no device (made before that field): give --device")
     out = dict(round=1, device=dev, stacks=stacks, why={str(L): "round 1: gpu/os_night.py rule" for L in LS},
-               dr_in=dr, stop=False, model_seconds_so_far=0.0)
+               dr_in=dr, stop=False, stop_reason=None, model_seconds_so_far=_diag_seconds(a.diag))
     json.dump(out, open(a.out_rule, "w"), indent=1)
     print(json.dumps(out["stacks"]))
 
@@ -394,7 +403,7 @@ def rule(a):
     last_rule = json.load(open(os.path.join(a.rounds[-1], "rule.json")))
     b = json.load(open(os.path.join(a.rounds[-1], "build.json")))
     chain_full = _probe_chain(b, last_rule)
-    R = next_stacks(rounds, chain_full, next_cost=last_rule["qpu_seconds_model"])
+    R = next_stacks(rounds, chain_full, k_max=a.k_max)
     json.dump(R, open(a.out_rule, "w"), indent=1)
     for L in LS:
         print(f"L {L}: {stack_name(R['stacks'][str(L)])}  ({R['why'][str(L)]})")
@@ -426,7 +435,7 @@ def compound_rows(rounds):
              for L in LS}
     res = dict(common_L=common, per_L=per_L)
     if not common:
-        res.update(verdict="no L credited in every round")
+        res.update(verdict="NOT JUDGEABLE", why="no L credited in every round")
         return res
     G = []
     for r in rounds:
@@ -438,11 +447,12 @@ def compound_rows(rounds):
         b, sb = _slope([x["round"] for x in G], [x["G"] for x in G], [x["se"] for x in G])
         last_over = any(v.get("overshoot") for v in rounds[-1]["rows"].values())
         res.update(slope=b, se=sb, verdict="OS COMPOUNDS" if (b >= 2 * sb and not last_over) else "NOT SHOWN")
-    elif len(G) == 2:
-        d = G[1]["G"] - G[0]["G"]
-        sd = math.sqrt(G[0]["se"] ** 2 + G[1]["se"] ** 2)
-        res.update(difference=d, two_se=2 * sd, verdict="(two rounds: a difference, not a slope) " +
-                   ("UP" if d >= 2 * sd else "NOT SHOWN"))
+    else:
+        res.update(verdict="NOT JUDGEABLE", why=f"{len(G)} round(s): a slope needs three")
+        if len(G) == 2:
+            d = G[1]["G"] - G[0]["G"]
+            sd = math.sqrt(G[0]["se"] ** 2 + G[1]["se"] ** 2)
+            res.update(difference_beside=d, two_se_beside=2 * sd)
     return res
 
 
@@ -542,6 +552,8 @@ if __name__ == "__main__":
     r1.add_argument("os_rule")
     r1.add_argument("out_rule")
     r1.add_argument("--device", help="only for an os_night rule.json written before it recorded the device")
+    r1.add_argument("--diag", nargs="*", default=[], help="the diagnostic job folders (Dw, Dc): their model seconds "
+                    "start the night's budget")
     b = sub.add_parser("build")
     b.add_argument("devdir")
     b.add_argument("out")
@@ -553,6 +565,7 @@ if __name__ == "__main__":
     r = sub.add_parser("rule")
     r.add_argument("out_rule")
     r.add_argument("rounds", nargs="+")
+    r.add_argument("--k-max", type=int, default=K_MAX, help="dry runs only (gpu/os2_run.py refuses it on a device)")
     c = sub.add_parser("compound")
     c.add_argument("rounds", nargs="+")
     t = sub.add_parser("trial")
