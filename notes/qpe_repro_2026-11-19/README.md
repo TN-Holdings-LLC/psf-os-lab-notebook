@@ -77,3 +77,25 @@ left in a floor) makes check FAIL. `circuits_sha256` differed (QPY bytes: VS qis
 did psf-os's gate hash, which writes a conditional block as a text drawing. Since then `build` writes into part.json
 `circuits_digest` (every gate, conditional blocks opened; `digest OUT` prints it) and the versions, so two machines
 compare the digest.
+
+## The digest across machines (2026-11-18, later; `vs_check.md` part 2, `vs_out/digest_cells_*.json`)
+
+The VS's `digest` (qiskit 2.5.2, numpy on Windows) differed from the workplace's. Per circuit (`vs/vs_digest_cells.py`
+on both machines): every one of the 168 test circuits (IPE and textbook, every arm) has the same digest on both; the
+only circuits that differ are the four of the ring sentinel, and only in RZ angles (same gates without angles). A
+build with qiskit 2.5.2 at the workplace gives the workplace's digest, so the qiskit version is not the cause; the
+sentinel's angles come out as pi or -pi, 0 or 2 pi depending on the machine. The digest now writes RZ angles in
+(-pi, pi] (the same pulse) and part.json keeps three digests: all, tests (the circuits that are judged) and sentinel.
+Workplace values: tests A 8e38b7a3..., B 494c495e... (all three records); sentinel marrakesh and kingston 69c40889...,
+fez 5fd46d15....
+
+### The sentinel, settled (after the VS's a8e3f3fc)
+
+With the angles in (-pi, pi] the tests digests agree on all six builds; the sentinel's still differ. The VS wrote the
+first sentinel point's 4880 RZ angles exactly (`vs_out/sentinel0_rz_*.json`). Line by line against the workplace's:
+80 differ, in 40 pairs, one pair per ring qubit, on either side of the echo's midpoint, both shifted by the same
+1.698 rad (mod 2 pi). Between the two of a pair there are only CZs (diagonal, an RZ passes through them) and
+single-qubit gates M; `sentinel_equiv.py` checks RZ(d2) M RZ(d1) against M: equal up to a global phase on every one
+of the 40 pairs on both records (1 - |overlap| = 0). So the sentinel point is the same operation on both machines,
+written with another split of a free angle across the echo (the compiler's single-qubit synthesis). Only point #0
+was compared. The sentinel is beside, never judged.

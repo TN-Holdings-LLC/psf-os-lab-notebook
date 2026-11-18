@@ -128,19 +128,37 @@ def _gates(circuit, qmap=None, cmap=None):
                 cm = {bc: cs[i] for i, bc in enumerate(blk.clbits)}
                 blocks.append(_gates(blk, qm, cm))
             out.append(["if_else", qs, cs, [bit, int(cond[1])], blocks])
+        elif op.name == "rz":
+            out.append([op.name, qs, cs, [_param(_wrap(float(op.params[0])))]])
         else:
             out.append([op.name, qs, cs, [_param(p) for p in op.params]])
     return out
 
 
-def circuits_digest(path):
-    """SHA-256 of the canonical JSON of every circuit's gate list, conditional blocks opened: comparable across
-    qiskit versions, where circuits_sha256 (the QPY bytes) is not."""
+def _wrap(t):
+    """An RZ angle in (-pi, pi]: RZ(t) and RZ(t + 2 pi) are the same pulse (a global phase apart). The workplace VS's
+    builds of 2026-11-18 differed from the workplace's only in the ring sentinel's RZ angles (pi against -pi, 2 pi)."""
+    t = math.remainder(t, 2 * math.pi)
+    return math.pi if abs(t + math.pi) < 1e-9 else t
+
+
+def circuits_digest(path, parts=False):
+    """SHA-256 of the canonical JSON of every circuit's gate list, conditional blocks opened, RZ angles in (-pi, pi]:
+    comparable across machines and qiskit versions, where circuits_sha256 (the QPY bytes) is not. parts=True also
+    gives the digest of the test circuits alone and of the sentinel alone (by the manifest's roles)."""
     import hashlib
     from qiskit import qpy
     cs = qpy.load(open(path, "rb"))
-    doc = [dict(num_qubits=c.num_qubits, num_clbits=c.num_clbits, gates=_gates(c)) for c in cs]
-    return hashlib.sha256(json.dumps(doc, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    docs = [dict(num_qubits=c.num_qubits, num_clbits=c.num_clbits, gates=_gates(c)) for c in cs]
+
+    def h(d):
+        return hashlib.sha256(json.dumps(d, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    if not parts:
+        return h(docs)
+    man = json.load(open(os.path.join(os.path.dirname(path), "manifest.json")))
+    roles = [cell["role"] for cell in man["cells"] for _ in range(cell["points"])]
+    return dict(all=h(docs), tests=h([d for d, r in zip(docs, roles) if r != "sentinel"]),
+                sentinel=h([d for d, r in zip(docs, roles) if r == "sentinel"]))
 
 
 def _versions():
@@ -166,7 +184,8 @@ def build(a):
     man = json.load(open(os.path.join(a.out, "job", "manifest.json")))
     info = dict(part=a.part, ns=list(PARTS[a.part]), shots=a.shots, device=rep["device"], circuits=rep["circuits"],
                 qpu_seconds_model=rep["qpu_seconds_model"], circuits_sha256=man["circuits_sha256"],
-                circuits_digest=circuits_digest(os.path.join(a.out, "job", "circuits.qpy")), versions=_versions())
+                circuits_digest=circuits_digest(os.path.join(a.out, "job", "circuits.qpy"), parts=True),
+                versions=_versions())
     json.dump(info, open(os.path.join(a.out, "part.json"), "w"), indent=1)
     print(json.dumps(info))
     for n in PARTS[a.part]:
@@ -378,7 +397,7 @@ if __name__ == "__main__":
                   f"phase {textbook_ideal(n):.6f}")
         sys.exit(0)
     if a.cmd == "digest":
-        print(circuits_digest(os.path.join(a.out, "job", "circuits.qpy")))
+        print(json.dumps(circuits_digest(os.path.join(a.out, "job", "circuits.qpy"), parts=True), indent=1))
         sys.exit(0)
     r = {"build": build, "check": check, "dry": dry, "score": score}[a.cmd](a)
     sys.exit(0 if r is not False else 1)

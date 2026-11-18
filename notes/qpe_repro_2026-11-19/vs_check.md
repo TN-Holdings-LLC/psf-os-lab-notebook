@@ -120,3 +120,56 @@ Commands as in the instruction: marrakesh, `--dry-clifford-sentinel`, `dry OUT n
 
 Time: `TZ=Europe/Zurich date` printed GMT on this machine (no zone data in Git Bash). Times here are the machine
 clock minus 8 h (CET).
+
+## Addendum (about 05:45 CET): `digest` on the VS machine (9b431db0)
+
+`python gpu/qpe_repro_night.py digest OUT`, both on the earlier builds and on fresh builds with 9b431db0 (part.json
+records qiskit 2.5.2, qiskit-aer 0.18.0, psf-os 0f57c76, Python 3.11.9). check PASS x6 again.
+
+| build | workplace (qiskit 2.6.1, commit message) | VS (qiskit 2.5.2) |
+|---|---|---|
+| marrakesh A | `935b935b…` | `ed5fafaa35aa3dc3…` |
+| marrakesh B | `07022fa2…` | `6929c4942933d19e…` |
+| fez A | `069e07e9…` | `ee9b578de779e38a…` |
+| fez B | `01c262c7…` | `6ab32350ca7a4d3d…` |
+| kingston A / B | equal to marrakesh | equal to marrakesh |
+
+- **The digests do not agree.** So the digest does not yet show "the same circuits on two versions".
+- The digest's gate list holds no text drawing or object repr: every parameter is a number, and every condition bit
+  is an index.
+- What is left is a real difference in the gate lists. The likely place is the textbook circuit:
+  `textbook_logical` calls qiskit's `transpile(..., optimization_level=1)`, whose output can change between versions.
+  Equivalent circuits would explain why the dry runs a to d still agree character for character.
+- That was not tested here. Installing qiskit 2.6.1 stopped on this machine's pip certificate setting, which was
+  left as it is.
+- To find the circuits, `vs/vs_digest_cells.py OUT OUT.json` writes per circuit the digest, the digest without the
+  rz angles, and the CZ count. The VS outputs are in `vs_out/digest_cells_{marrakesh,fez}_{A,B}.json`. The same run
+  at the workplace and a line-by-line diff show which circuits differ, and whether only in angles.
+- If the textbook circuits differ by version, building on another qiskit version tonight would send another
+  (equivalent) circuit. Whether to pin qiskit, or to store the transpiled textbook circuits, is for the workplace
+  and the owner.
+
+Time zone of the VS machine: Windows is set to Tokyo Standard Time. Git Bash has no `/usr/share/zoneinfo`, so
+`TZ=Europe/Zurich date` falls back to GMT. Windows' own zone data gives the CET time:
+`[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::Now, "W. Europe Standard Time")` in PowerShell.
+It agrees with the machine clock minus 8 h used above.
+
+## Addendum 2 (about 05:55 CET): `digest` with a555554e on the earlier builds
+
+`python gpu/qpe_repro_night.py digest OUT` on the builds made at the start (not rebuilt):
+
+| build | tests | sentinel | all |
+|---|---|---|---|
+| marrakesh A | `8e38b7a3…` (agrees) | `c86add13…` (workplace `69c40889…`) | `7502a200…` |
+| marrakesh B | `494c495e…` (agrees) | `c86add13…` | `59732a15…` |
+| fez A | `8e38b7a3…` (agrees) | `acb441a7…` (workplace `5fd46d15…`) | `dd80501d…` |
+| fez B | `494c495e…` (agrees) | `acb441a7…` | `308e3eba…` |
+| kingston A / B | as marrakesh | as marrakesh | as marrakesh |
+
+- **tests agree** for all six: the circuits that are judged are the same on the two machines.
+- **The sentinel still differs.** Here `_wrap` works as meant: the 4880 RZ of point #0 take 6 values after it, and
+  the 3800 at +-pi all become +pi. No wrapped angle lies near a 1e-10 rounding midpoint.
+- So the workplace's angles, or their order, must differ in some other way. As asked, the RZ angles of point #0 are
+  in `vs_out/sentinel0_rz_{marrakesh,fez}_A.json` (`vs/vs_sentinel_rz.py`). Each row holds the physical qubit, the
+  raw angle and the angle after `_wrap`, both exactly as `float.hex()`. The four points' digests are beside.
+- numpy 2.4.6, qiskit 2.5.2, qiskit-aer 0.18.0, Python 3.11.9, Windows.
