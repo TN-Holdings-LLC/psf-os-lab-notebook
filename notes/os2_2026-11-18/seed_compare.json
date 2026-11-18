@@ -1,0 +1,663 @@
+{
+ "s0|same": {
+  "rounds": 1,
+  "events": [],
+  "stop": "fixed point",
+  "not_shown": [],
+  "g_L1": [
+   "-"
+  ],
+  "pick": {
+   "1": "P0",
+   "2": "P0",
+   "3": "P0"
+  }
+ },
+ "s0|plus_k": {
+  "rounds": 1,
+  "events": [],
+  "stop": "fixed point",
+  "not_shown": [],
+  "g_L1": [
+   "-"
+  ],
+  "pick": {
+   "1": "P0",
+   "2": "P0",
+   "3": "P0"
+  }
+ },
+ "s0|plus_10k": {
+  "rounds": 1,
+  "events": [],
+  "stop": "fixed point",
+  "not_shown": [],
+  "g_L1": [
+   "-"
+  ],
+  "pick": {
+   "1": "P0",
+   "2": "P0",
+   "3": "P0"
+  }
+ },
+ "s0|wide": {
+  "rounds": 1,
+  "events": [],
+  "stop": "fixed point",
+  "not_shown": [],
+  "g_L1": [
+   "-"
+  ],
+  "pick": {
+   "1": "P0",
+   "2": "P0",
+   "3": "P0"
+  }
+ },
+ "s0|wide_alt": {
+  "rounds": 1,
+  "events": [],
+  "stop": "fixed point",
+  "not_shown": [],
+  "g_L1": [
+   "-"
+  ],
+  "pick": {
+   "1": "P0",
+   "2": "P0",
+   "3": "P0"
+  }
+ },
+ "s6|same": {
+  "rounds": 3,
+  "events": [
+   "R3 stop-loss@r2L1",
+   "R3 stop-loss@r2L2",
+   "R3 stop-loss@r2L3"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r1L2",
+   "r1L3",
+   "r2L1",
+   "r2L2",
+   "r2L3"
+  ],
+  "g_L1": [
+   "-0.004",
+   "-0.004",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s6|plus_k": {
+  "rounds": 3,
+  "events": [
+   "R3 stop-loss@r2L1",
+   "R3 stop-loss@r2L2",
+   "R3 stop-loss@r2L3"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r1L2",
+   "r1L3",
+   "r2L1",
+   "r2L2",
+   "r2L3"
+  ],
+  "g_L1": [
+   "-0.004",
+   "-0.004",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s6|plus_10k": {
+  "rounds": 3,
+  "events": [
+   "R3 stop-loss@r2L1",
+   "R3 stop-loss@r2L2",
+   "R3 stop-loss@r2L3"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r1L2",
+   "r1L3",
+   "r2L1",
+   "r2L2",
+   "r2L3"
+  ],
+  "g_L1": [
+   "-0.005",
+   "-0.004",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s6|wide": {
+  "rounds": 3,
+  "events": [
+   "R3 stop-loss@r2L1",
+   "R3 stop-loss@r2L2",
+   "R3 stop-loss@r2L3"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r1L2",
+   "r1L3",
+   "r2L1",
+   "r2L2",
+   "r2L3"
+  ],
+  "g_L1": [
+   "-0.017",
+   "-0.010",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s6|wide_alt": {
+  "rounds": 4,
+  "events": [
+   "R1 overshoot@r1L2",
+   "R3 stop-loss@r2L1",
+   "R3 stop-loss@r2L3",
+   "R3 stop-loss@r3L2"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r1L3",
+   "r2L1",
+   "r2L2",
+   "r2L3",
+   "r3L2",
+   "r4L2"
+  ],
+  "g_L1": [
+   "-0.023",
+   "-0.021",
+   "-",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s8|same": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L2",
+   "R3 stop-loss@r2L1",
+   "R2 frames@r2L2"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r2L1"
+  ],
+  "g_L1": [
+   "+0.012",
+   "+0.012",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P2",
+   "3": "P1"
+  }
+ },
+ "s8|plus_k": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L2",
+   "R3 stop-loss@r2L1",
+   "R2 frames@r2L2"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r2L1"
+  ],
+  "g_L1": [
+   "+0.011",
+   "+0.011",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P2",
+   "3": "P1"
+  }
+ },
+ "s8|plus_10k": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L2",
+   "R3 stop-loss@r2L1",
+   "R2 frames@r2L2"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r2L1"
+  ],
+  "g_L1": [
+   "+0.011",
+   "+0.012",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P2",
+   "3": "P1"
+  }
+ },
+ "s8|wide": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L2",
+   "R3 stop-loss@r2L1",
+   "R2 frames@r2L2"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r2L1"
+  ],
+  "g_L1": [
+   "-0.002",
+   "+0.004",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P2",
+   "3": "P1"
+  }
+ },
+ "s8|wide_alt": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L2",
+   "R3 stop-loss@r2L1",
+   "R2 frames@r2L2"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r1L1",
+   "r1L3",
+   "r2L1"
+  ],
+  "g_L1": [
+   "-0.006",
+   "-0.006",
+   "-"
+  ],
+  "pick": {
+   "1": "P1",
+   "2": "P2",
+   "3": "P1"
+  }
+ },
+ "s5|same": {
+  "rounds": 4,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1",
+   "R3 stop-loss@r3L3"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r2L3",
+   "r3L3"
+  ],
+  "g_L1": [
+   "+0.190",
+   "+0.083",
+   "+0.149",
+   "+0.149"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5|plus_k": {
+  "rounds": 4,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1",
+   "R3 stop-loss@r3L3"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r2L3",
+   "r3L3"
+  ],
+  "g_L1": [
+   "+0.190",
+   "+0.082",
+   "+0.149",
+   "+0.149"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5|plus_10k": {
+  "rounds": 4,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1",
+   "R3 stop-loss@r3L3"
+  ],
+  "stop": "fixed point",
+  "not_shown": [
+   "r2L3",
+   "r3L3"
+  ],
+  "g_L1": [
+   "+0.189",
+   "+0.082",
+   "+0.149",
+   "+0.149"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5|wide": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R2 frames@r2L1"
+  ],
+  "stop": "fixed point",
+  "not_shown": [],
+  "g_L1": [
+   "+0.192",
+   "+0.088",
+   "+0.142"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5|wide_alt": {
+  "rounds": 4,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L2",
+   "R2 frames@r2L1",
+   "R1 overshoot@r2L3",
+   "R3 stop-loss@r3L2",
+   "R3 stop-loss@r4L3"
+  ],
+  "stop": "K limit",
+  "not_shown": [
+   "r2L2",
+   "r3L2",
+   "r3L3",
+   "r4L3"
+  ],
+  "g_L1": [
+   "+0.198",
+   "+0.076",
+   "+0.150",
+   "+0.141"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5k3|same": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1",
+   "R3 stop-loss@r3L3"
+  ],
+  "stop": "K limit",
+  "not_shown": [
+   "r2L3",
+   "r3L3"
+  ],
+  "g_L1": [
+   "+0.190",
+   "+0.083",
+   "+0.149"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5k3|plus_k": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1",
+   "R3 stop-loss@r3L3"
+  ],
+  "stop": "K limit",
+  "not_shown": [
+   "r2L3",
+   "r3L3"
+  ],
+  "g_L1": [
+   "+0.190",
+   "+0.082",
+   "+0.149"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5k3|plus_10k": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1",
+   "R3 stop-loss@r3L3"
+  ],
+  "stop": "K limit",
+  "not_shown": [
+   "r2L3",
+   "r3L3"
+  ],
+  "g_L1": [
+   "+0.189",
+   "+0.082",
+   "+0.149"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5k3|wide": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R2 frames@r2L1"
+  ],
+  "stop": "fixed point",
+  "not_shown": [],
+  "g_L1": [
+   "+0.192",
+   "+0.088",
+   "+0.142"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s5k3|wide_alt": {
+  "rounds": 3,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L2",
+   "R2 frames@r2L1",
+   "R1 overshoot@r2L3",
+   "R3 stop-loss@r3L2"
+  ],
+  "stop": "K limit",
+  "not_shown": [
+   "r2L2",
+   "r3L2",
+   "r3L3"
+  ],
+  "g_L1": [
+   "+0.198",
+   "+0.076",
+   "+0.150"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s1b|same": {
+  "rounds": 2,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1"
+  ],
+  "stop": "budget",
+  "not_shown": [],
+  "g_L1": [
+   "+0.251",
+   "+0.111"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s1b|plus_k": {
+  "rounds": 2,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1"
+  ],
+  "stop": "budget",
+  "not_shown": [],
+  "g_L1": [
+   "+0.251",
+   "+0.110"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s1b|plus_10k": {
+  "rounds": 2,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1"
+  ],
+  "stop": "budget",
+  "not_shown": [],
+  "g_L1": [
+   "+0.250",
+   "+0.111"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s1b|wide": {
+  "rounds": 2,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L2",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1"
+  ],
+  "stop": "budget",
+  "not_shown": [],
+  "g_L1": [
+   "+0.249",
+   "+0.118"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ },
+ "s1b|wide_alt": {
+  "rounds": 2,
+  "events": [
+   "R1 overshoot@r1L1",
+   "R1 overshoot@r1L2",
+   "R1 overshoot@r1L3",
+   "R2 frames@r2L1"
+  ],
+  "stop": "budget",
+  "not_shown": [],
+  "g_L1": [
+   "+0.260",
+   "+0.104"
+  ],
+  "pick": {
+   "1": "P2",
+   "2": "P1",
+   "3": "P1"
+  }
+ }
+}
