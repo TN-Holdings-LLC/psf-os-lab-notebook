@@ -37,7 +37,7 @@ installed is not known.
 4. Suggested additions:
    - The saved IBM account exists. Check that the file exists only; never read or print its contents.
    - `OUT` does not exist yet (daily_fetch refuses an existing folder too).
-   - `/mnt/c/Users/Administrator/Desktop/psf_zero_project/` is writable, for `res_os2_1118.zip`.
+   - the psf_zero_project folder on the home PC is writable, for `res_os2_1118.zip`.
    - Python >= 3.11.
 
 `go` does not start unless preflight passes.
