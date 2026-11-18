@@ -16,7 +16,7 @@ device; no calibration error number is read (the ledger reads the calibration *t
 - Both keep os2's R1 (overshoot -> P2 + B), R2 (+Q), R3 (stop-loss) and stops; the new rung sits between R2 and R3.
   Noiseless values are computed exactly from each circuit (m = 3 leaves ideal.json).
 
-### Simulated nights (2026-11-18 marrakesh record, K_MAX 4, budget 240 s; `night_*.json`, `*.log`)
+### Simulated nights (2026-11-18 marrakesh record, K_MAX 4, budget 240 s; `night_*.json`)
 
 | noise (illustrative) | ladder | rounds | g per round (L1 / L2 / L3) | G_k (L credited every round) |
 |---|---|---|---|---|
@@ -53,6 +53,10 @@ device; no calibration error number is read (the ledger reads the calibration *t
   Night 2 saved three rounds (92.8 s by the model against 198.9 s). `ledger_1117_vs_1118.txt`: between the real records
   of 2026-11-17 (calibration 2026-11-13 18:22) and 2026-11-18 (calibration 2026-11-18 11:05), the ledger is not used
   in either direction.
+
+`pair_check.py` / `.txt` (PASS) calls ledger_start directly: 2026-11-17 <-> 2026-11-18 not used in either direction;
+with the same calibration time but tonight's pick P2 against the ledger's P0 on L1, the diagnostics win for L1 and the
+ledger is used for L2 and L3.
 
 ## Not done
 
