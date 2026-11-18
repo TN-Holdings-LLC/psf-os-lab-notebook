@@ -1,7 +1,0 @@
-ruler of clock 0 (us, loss): 0 0.000, 8 0.034, 16 0.077, 32 0.141, 48 0.190, 64 0.229
-ruler of clock 1 (us, loss): 0 0.000, 8 0.037, 16 0.073, 32 0.129, 48 0.185, 64 0.233
-  one mid-circuit measurement        2.662 us (SE 0.145)
-  measurement + unfired decision     3.656 us (SE 0.183)
-  measurement + fired decision       3.994 us (SE 0.380)
-  two actors side by side            6.132 us (SE 0.619)
-decision latency (unfired) +0.993 us (2 SE 0.467); fired - unfired +0.338 us (2 SE 0.844); two actors / one 1.68

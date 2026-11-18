@@ -1,31 +1,41 @@
-"""Measuring the time a feed-forward decision costs, with a clock qubit and a ruler of delays (DRAFT tool, workplace
-Claude, 2026-11-18; owner "3": the third missing piece, the time specification; prereg/drafts-2026-11-18/timing_DRAFT.md).
-Not declared. No device error number is read: the ruler is built from our own delays in the same job.
+"""The time a feed-forward decision costs, read by clock qubits on a ruler of delays (workplace Claude, 2026-11-18;
+owner "3", the time specification; with the CZ items of home's instruction 18d). Declaration text:
+prereg/drafts-2026-11-18/timing_night_2026-11-18_READY.md (declared when moved and pushed at home). No device error
+number is read: the ruler is built from our own delays in the same job.
 
-The device's records keep no decision latency and no measurement length. A time can still be read from counts: a
-"clock" qubit in |+>, with an echo (X) halfway, loses its phase while it waits; the longer the wait, the more often it
-reads 1 after the final H (ideal 0). In one job:
-  ruler  R(d): the clock waits through a delay of d on the actor qubit (both halves), d known (in dt);
-  M(n)   the actor is measured n times per half (no conditional): the measurements' time (the off arm of C(n));
-  C(n)   each measurement followed by a conditional X on the actor that never fires (the actor is |0>);
-  F(n)   the same with the conditional firing every time (the actor prepared |1>, the conditional X resets it);
-  C2(n)  two actors, each as C(n), side by side (do decisions on two qubits wait for each other?).
-The clock's loss in R(d) against the elapsed time gives the ruler (read piecewise linearly between its points, made
-non-decreasing first; no shape of the decay assumed); every other item's loss read on it gives an equivalent wait. Then, per step of a half:
-  s_M  the time of one mid-circuit measurement (the off arms of C(n), against n),
-  s_C  one measurement and one unfired decision, s_F one fired decision,
-  decision latency  = s_C - s_M (what the conditional adds; a measurement's crosstalk on the clock cancels in it),
-  fired - unfired   = s_F - s_C,
-  two actors        = s_C2 / s_C (1: in parallel; 2: one after the other).
-Placement: rule C, one chain of 7 sites, two clocks on sites 0 and 6 (the same wait read on two qubits), actors on
-sites 2 and 4 (sites 1, 3, 5 idle, so no actor is a clock's neighbour). The clock is read last; barriers fence the halves so the clock idles while the actor works.
+Two "clock" qubits in |+>, with an echo (X) halfway, lose phase while they wait; the longer the wait, the more often
+they read 1 after the final H (ideal 0). In each job a ruler R(d) of known delays on an actor (d in dt, per half)
+gives each clock's loss against time; every other item's loss read on it gives an equivalent wait. The items differ
+only in what the actors do while the clocks wait, per half:
+  C(n)   n x (measure the actor, then a conditional X on it that never fires: the actor is |0>)   IBM's fast-path shape
+  F(n)   the same with the conditional firing (the actor prepared |1>, the X resets it)               fast-path shape
+  D(n)   C(n) on two actors at once                                                                   fast-path shape
+  K(n)   n x (measure the actor, then a conditional CZ between the actor and its partner; never fires)  not fast path
+  DK(n)  K(n) on two actor / partner pairs at once                                                    not fast path
+The off arm of C, K (and of D, DK) is the measurements alone. Per step (weighted least squares of the equivalent wait
+against the number of steps): s_M (off arms of C), s_C, s_F, s_D, s_K, s_DK; read:
+  decision latency, fast path        s_C - s_M      verdict DECISION LATENCY RESOLVED (>= 2 SE) / NOT RESOLVED
+  two actors, fast path              s_D / s_C      DECISIONS WAIT FOR EACH OTHER / IN PARALLEL / NOT SHOWN
+  two actors, with a CZ              s_DK / s_K     the same words
+  beside: s_K - s_M (the CZ path's latency), s_K - s_C, s_F - s_C, s_M itself.
+  WAIT FOR EACH OTHER when ratio - 1 >= 2 SE; IN PARALLEL when |ratio - 1| < 2 SE and ratio - 2 <= -2 SE; otherwise
+  NOT SHOWN (SE of a ratio by the delta method, the two slopes taken as independent: conservative, they share a ruler).
 
-  python gpu/timing_night.py build DEVDIR OUT [--dry-clifford-sentinel]
+Two jobs (each under 60 s by the model; each with its own ruler, so every ratio is read within one job):
+  part A: R, C, F, D        part B: R, K, DK
+Layout (rule C, one chain of 9 sites): clocks on 0 and 8; actor 1 on 2 with its partner on 3; actor 2 on 5 with its
+partner on 6; sites 1, 4, 7 idle, so no clock is next to an actor or a partner. Barriers fence the halves.
+
+dt: the device's dt (dt.json, read at home: a time, not a quality number) sets the ruler's delays in dt so that it
+spans 0 .. 32 us per half on any dt (rounded to multiples of 16 dt), and converts dt to us; the same file is given to
+build and score (score refuses a different one). Without it 4 ns is assumed and the output says so. Ratios do not
+depend on dt.
+
+  python gpu/timing_night.py build DEVDIR OUT --part A|B [--dt-file dt.json] [--dry-clifford-sentinel]
   python gpu/timing_night.py check OUT
-  python gpu/timing_night.py score OUT
-  python gpu/timing_night.py planted                 the estimator on synthetic counts with a planted latency
-  python gpu/timing_night.py planted-run OUT         dry only: simulate a built job (Clifford sentinel) with planted
-                                                     lengths; then `score OUT` should read them back
+  python gpu/timing_night.py score OUT_A OUT_B [--dt-file dt.json]   the verdicts and predictions (both jobs)
+  python gpu/timing_night.py planted [--scenario cz-waits|fast-waits]  the estimator on synthetic counts
+  python gpu/timing_night.py planted-run OUT [--scenario ...]   dry only: a built job under planted timing
 """
 import argparse
 import json
@@ -36,62 +46,83 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, "..", "notes", "packing_2026-11-17"))
 
-DT_NS = 4.0                       # dt assumed 4 ns (the record keeps no dt; home can record backend.dt: a time, not a
-                                  # quality number). The ruler is in dt, so only the conversion to us depends on it.
-RULER_DT = (0, 1008, 2000, 4000, 6000, 8000)   # per half, multiples of 16 dt: 0, ~4, 8, 16, 24, 32 us (64 in all)
-NS_C = (2, 4, 8)                                # steps chosen so every item's wait stays inside the ruler's range
+DT_NS_ASSUMED = 4.0
+RULER_US = (0, 4.032, 8, 16, 24, 32)            # per half; in dt, rounded to multiples of 16 (1008 ... 8000 at 4 ns)
+
+
+def ruler_dt(dt_ns):
+    """The ruler's delays in dt for the device's dt (so the ruler spans the same microseconds on any dt)."""
+    return tuple(16 * round(us * 1000.0 / dt_ns / 16) for us in RULER_US)
+NS_C = (2, 4, 8)                                 # every item's wait stays inside the ruler's 64 us
 NS_F = (4, 8)
-NS_C2 = (2, 4)
-N_SITES = 7
-CLOCKS, A1, A2 = (0, 6), 2, 4                   # two clocks (more shots on the same wait), never an actor's neighbour
+NS_D = (2, 4)
+NS_K = (2, 4, 8)
+NS_DK = (2, 4)
+N_SITES = 9
+CLOCKS = (0, 8)
+PAIRS = ((2, 3), (5, 6))                         # (actor, partner)
 SHOTS = 4000
+PARTS = {"A": ("R", "C", "F", "D"), "B": ("R", "K", "DK")}
 
 
-def _half(qc, kind, n, d, bits, actors):
+def _half(qc, kind, n, d, bits, pairs):
     """One half's actor work; bits: an iterator of fresh clbit indices."""
     if kind == "R":
         if d:
-            qc.delay(d, A1, unit="dt")
+            qc.delay(d, PAIRS[0][0], unit="dt")
         return
     for _ in range(n):
-        for a in actors:
+        for a, p in pairs:
             b = next(bits)
             if kind == "F":
                 qc.x(a)
             qc.measure(a, b)
             with qc.if_test((qc.clbits[b], 1)):
-                qc.x(a)                       # never fires in C (the actor is |0>); fires and resets in F
+                if kind == "K":
+                    qc.cz(a, p)               # never fires (the actor is |0>): the block's shape is what matters
+                else:
+                    qc.x(a)                   # never fires in C, D; fires and resets in F
 
 
 def item(kind, n=0, d=0):
     from qiskit import ClassicalRegister, QuantumCircuit, QuantumRegister
-    actors = [A1, A2] if kind == "C2" else [A1]
-    k = "C" if kind == "C2" else kind
-    nmeas = 0 if kind == "R" else 2 * n * len(actors)
+    pairs = list(PAIRS) if kind in ("D", "DK") else [PAIRS[0]]
+    k = {"D": "C", "DK": "K"}.get(kind, kind)
+    nmeas = 0 if kind == "R" else 2 * n * len(pairs)
     qc = QuantumCircuit(QuantumRegister(N_SITES, "q"), ClassicalRegister(nmeas + len(CLOCKS), "c"))
     bits = iter(range(nmeas))
     for c in CLOCKS:
         qc.h(c)
     qc.barrier()
-    _half(qc, k, n, d, bits, actors)
+    _half(qc, k, n, d, bits, pairs)
     qc.barrier()
     for c in CLOCKS:
         qc.x(c)                               # the echo
     qc.barrier()
-    _half(qc, k, n, d, bits, actors)
+    _half(qc, k, n, d, bits, pairs)
     qc.barrier()
     for i, c in enumerate(CLOCKS):
         qc.h(c)
-        qc.measure(c, nmeas + i)              # ideal 0 (X leaves |+> as it is: H X H |0> = |0>); the loss is reading 1
-    return qc, dict(success={nmeas + i: 0 for i in range(len(CLOCKS))}, bound=None, form="pauli")
+        qc.measure(c, nmeas + i)              # ideal 0 (X leaves |+> as it is); the loss is reading 1
+    return qc, dict(success={nmeas + i: 0 for i in range(len(CLOCKS))}, bound=None,
+                    form="blocks" if k == "K" else "pauli")
 
 
-def items():
-    out = [(f"R{d}", *item("R", d=d)) for d in RULER_DT]
-    out += [(f"C{n}", *item("C", n=n)) for n in NS_C]
-    out += [(f"F{n}", *item("F", n=n)) for n in NS_F]
-    out += [(f"D{n}", *item("C2", n=n)) for n in NS_C2]   # D = two actors (C2)
+def items(part, dt_ns=DT_NS_ASSUMED):
+    kinds = PARTS[part]
+    out = [(f"R{d}", *item("R", d=d)) for d in ruler_dt(dt_ns)]
+    if "C" in kinds:
+        out += [(f"C{n}", *item("C", n=n)) for n in NS_C]
+    if "F" in kinds:
+        out += [(f"F{n}", *item("F", n=n)) for n in NS_F]
+    if "D" in kinds:
+        out += [(f"D{n}", *item("D", n=n)) for n in NS_D]
+    if "K" in kinds:
+        out += [(f"K{n}", *item("K", n=n)) for n in NS_K]
+    if "DK" in kinds:
+        out += [(f"DK{n}", *item("DK", n=n)) for n in NS_DK]
     return out
 
 
@@ -99,16 +130,26 @@ def build(a):
     from psf_os import feedforward as FF
     from psf_os.device import Device
     spec = dict(kind="echo_clifford", D=24) if a.dry_clifford_sentinel else None   # dry runs only, never a device
-    rep = FF.build(Device.load(a.devdir), items(), a.out, shots=SHOTS, max_seconds=60, sentinel_spec=spec)
+    dt_ns, note = read_dt(a.dt_file)
+    rep = FF.build(Device.load(a.devdir), items(a.part, dt_ns), a.out, shots=SHOTS, max_seconds=60, sentinel_spec=spec)
+    json.dump(dict(part=a.part, dt_ns=dt_ns, dt_note=note, ruler_dt=list(ruler_dt(dt_ns))),
+              open(os.path.join(a.out, "part.json"), "w"), indent=1)
+    print(note)
     print(json.dumps({k: rep[k] for k in ("device", "circuits", "qpu_seconds_model", "shots") if k in rep}))
-    print(json.dumps({t: v["chain"] for t, v in list(rep["items"].items())[:1]}))
+    print("chain", rep["items"]["R0"]["chain"])
+
+
+def _tag(cell):
+    return cell["name"][3:].replace("_floor", "").replace("_off", "")
 
 
 def check(a):
-    """Noiseless Aer of every arm: both clocks read 0 in every shot (their loss 0) in ff and off; floors all zero."""
+    """Noiseless Aer of every arm: both clocks read 0 in every shot of ff and off; floors all zero. Shapes: every
+    conditional of C, F, D takes IBM's fast-path shape and none of K, DK does (notes/packing_2026-11-17/fastpath.py)."""
     from qiskit import qpy
     from qiskit_aer import AerSimulator
     from psf_os import feedforward as FF
+    import fastpath as FP
     m = json.load(open(os.path.join(a.out, "job", "manifest.json")))
     cs = qpy.load(open(os.path.join(a.out, "job", "circuits.qpy"), "rb"))
     i, bad = 0, []
@@ -122,10 +163,21 @@ def check(a):
             n = cc.num_clbits
             cnt = AerSimulator().run(cc, shots=SHOTS, seed_simulator=20261118).result().get_counts()
             tot = sum(cnt.values())
-            clock0 = sum(v for k, v in cnt.items() if all(FF._bits(k, n)[n - 1 - i] == 0 for i in range(len(CLOCKS)))) / tot
+            clock0 = sum(v for k, v in cnt.items() if all(FF._bits(k, n)[n - 1 - j] == 0
+                                                          for j in range(len(CLOCKS)))) / tot
             allz = sum(v for k, v in cnt.items() if set(FF._bits(k, n)) == {0}) / tot
             ok = allz == 1.0 if cell["role"] == "floor" else clock0 == 1.0
-            print(f"{cell['name']:12s} {cell['role']:6s} clocks read 0 {clock0:.3f}  all zero {allz:.3f} "
+            shape = ""
+            if cell["role"] == "user":
+                rows = FP.classify(cc)
+                tag = _tag(cell)
+                nf = sum(FP.fast(r) for _, r in rows)
+                want_fast = tag[0] in "CFD" and not tag.startswith("DK")
+                if rows:
+                    sok = (nf == len(rows)) if want_fast else (nf == 0)
+                    shape = f"  conditionals {len(rows)}, fast-path shape {nf} ({'ok' if sok else 'WRONG SHAPE'})"
+                    ok = ok and sok
+            print(f"{cell['name']:12s} {cell['role']:6s} clocks read 0 {clock0:.3f}  all zero {allz:.3f}{shape} "
                   f"{'ok' if ok else 'FAIL'}")
             bad += [] if ok else [cell["name"]]
     print("PASS" if not bad else f"FAIL {bad}")
@@ -202,25 +254,24 @@ def _clock_teq(ruler_pts, p, n):
     return t, math.sqrt(var), bool(y < R[0][1] or y > R[-1][1])
 
 
-def estimate(losses):
-    """losses: {clock index: {tag: (loss share, shots)}} with ff tags as items() and off arms as tag + "_off". Per
-    clock the ruler (made non-decreasing) is read piecewise linearly on the tau scale; the clocks' equivalent waits for
-    an item are averaged with inverse-variance weights. Per-step times in us with SEs (delta method)."""
+def estimate(losses, dt_ns, kinds, ruler=None):
+    """losses: {clock index: {tag: (loss share, shots)}} of ONE job, ff tags as items() and off arms as tag + "_off".
+    Per clock the ruler (made non-decreasing) is read piecewise linearly on the tau scale; the clocks' equivalent waits
+    for an item are averaged with inverse-variance weights. Returns per-step times (us) with SEs."""
     rulers = {}
     for ci, L in losses.items():
-        pts = sorted((2 * d * DT_NS / 1000.0, *L[f"R{d}"]) for d in RULER_DT)
+        pts = sorted((2 * d * dt_ns / 1000.0, *L[f"R{d}"]) for d in (ruler or ruler_dt(dt_ns)))
         mono = _pava([t for t, _, _ in pts], [p for _, p, _ in pts], [n for _, _, n in pts])
         if len(mono) >= 2 and mono[-1][1] > mono[0][1]:
             rulers[ci] = dict(points=pts, monotone=mono)
     if not rulers:
-        return dict(ruler={str(c): None for c in losses}, error="every ruler is flat: no time can be read")
+        return dict(error="every ruler is flat: no time can be read")
 
     def t_eq(tag):
         vals = [_clock_teq(rulers[ci]["monotone"], *losses[ci][tag]) for ci in rulers]
         vals = [v for v in vals if math.isfinite(v[0]) and math.isfinite(v[1]) and v[1] > 0]
         w = [1 / v[1] ** 2 for v in vals]
-        t = sum(wi * v[0] for wi, v in zip(w, vals)) / sum(w)
-        return t, math.sqrt(1 / sum(w)), any(v[2] for v in vals)
+        return sum(wi * v[0] for wi, v in zip(w, vals)) / sum(w), math.sqrt(1 / sum(w)), any(v[2] for v in vals)
 
     def slope(tags, steps):
         pts_ = [(s_, *t_eq(tg)) for tg, s_ in zip(tags, steps)]
@@ -228,104 +279,212 @@ def estimate(losses):
         return dict(us_per_step=f["b"], se=math.sqrt(f["var_b"]), intercept_us=f["a"],
                     points=[dict(steps=q[0], us=q[1], se=q[2], outside_ruler=q[3]) for q in pts_])
 
-    steps_c = [2 * n for n in NS_C]                   # measurement + decision steps per circuit (two halves)
-    sM = slope([f"C{n}_off" for n in NS_C], steps_c)
-    sC = slope([f"C{n}" for n in NS_C], steps_c)
-    sF = slope([f"F{n}" for n in NS_F], [2 * n for n in NS_F])
-    sD = slope([f"D{n}" for n in NS_C2], [2 * n for n in NS_C2])
-    lat = sC["us_per_step"] - sM["us_per_step"]
-    lat_se = math.hypot(sC["se"], sM["se"])            # the two slopes share the ruler: conservative
-    fire = sF["us_per_step"] - sC["us_per_step"]
-    fire_se = math.hypot(sF["se"], sC["se"])
-    ratio = sD["us_per_step"] / sC["us_per_step"] if sC["us_per_step"] > 0 else None
-    return dict(rulers={str(c): r for c, r in rulers.items()}, measurement=sM, measure_and_decide=sC, fired=sF,
-                two_actors=sD, decision_latency_us=lat, decision_latency_se=lat_se, fired_minus_unfired_us=fire,
-                fired_minus_unfired_se=fire_se, two_actors_ratio=ratio, dt_ns_assumed=DT_NS)
+    out = dict(rulers={str(c): r for c, r in rulers.items()}, dt_ns=dt_ns)
+    if "C" in kinds:
+        out["s_M"] = slope([f"C{n}_off" for n in NS_C], [2 * n for n in NS_C])
+        out["s_C"] = slope([f"C{n}" for n in NS_C], [2 * n for n in NS_C])
+    if "F" in kinds:
+        out["s_F"] = slope([f"F{n}" for n in NS_F], [2 * n for n in NS_F])
+    if "D" in kinds:
+        out["s_D"] = slope([f"D{n}" for n in NS_D], [2 * n for n in NS_D])
+    if "K" in kinds:
+        out["s_MK"] = slope([f"K{n}_off" for n in NS_K], [2 * n for n in NS_K])
+        out["s_K"] = slope([f"K{n}" for n in NS_K], [2 * n for n in NS_K])
+    if "DK" in kinds:
+        out["s_DK"] = slope([f"DK{n}" for n in NS_DK], [2 * n for n in NS_DK])
+    return out
 
 
-def show(e):
-    if "error" in e:
-        print("ruler:", e["error"])
-        return
-    for c, r in e["rulers"].items():
-        print(f"ruler of clock {c} (us, loss): " + ", ".join(f"{t:.0f} {p:.3f}" for t, p, _ in r["points"]))
-    for k, nm in (("measurement", "one mid-circuit measurement"), ("measure_and_decide", "measurement + unfired decision"),
-                  ("fired", "measurement + fired decision"), ("two_actors", "two actors side by side")):
-        print(f"  {nm:34s} {e[k]['us_per_step']:.3f} us (SE {e[k]['se']:.3f})")
-    print(f"decision latency (unfired) {e['decision_latency_us']:+.3f} us (2 SE {2 * e['decision_latency_se']:.3f}); "
-          f"fired - unfired {e['fired_minus_unfired_us']:+.3f} us (2 SE {2 * e['fired_minus_unfired_se']:.3f}); two "
-          f"actors / one {e['two_actors_ratio']:.2f}" if e["two_actors_ratio"] is not None else "")
+def difference(a, b):
+    return dict(us=a["us_per_step"] - b["us_per_step"], se=math.hypot(a["se"], b["se"]))
 
 
-def score(a):
+def ratio(a, b):
+    r = a["us_per_step"] / b["us_per_step"]
+    se = abs(r) * math.hypot(a["se"] / a["us_per_step"], b["se"] / b["us_per_step"])
+    return dict(ratio=r, se=se)
+
+
+def latency_verdict(d):
+    return "DECISION LATENCY RESOLVED" if d["us"] >= 2 * d["se"] else "NOT RESOLVED"
+
+
+def pair_verdict(r):
+    if r["ratio"] - 1 >= 2 * r["se"]:
+        return "DECISIONS WAIT FOR EACH OTHER"
+    if abs(r["ratio"] - 1) < 2 * r["se"] and r["ratio"] - 2 <= -2 * r["se"]:
+        return "IN PARALLEL"
+    return "NOT SHOWN"
+
+
+def judge(eA, eB):
+    """The declared verdicts and predictions from the two jobs' estimates."""
+    res = {}
+    if "error" not in eA:
+        lat = difference(eA["s_C"], eA["s_M"])
+        rD = ratio(eA["s_D"], eA["s_C"])
+        res.update(fast_latency=dict(lat, verdict=latency_verdict(lat)), fast_pair=dict(rD, verdict=pair_verdict(rD)),
+                   beside_fired_minus_unfired=difference(eA["s_F"], eA["s_C"]),
+                   beside_measurement_us=eA["s_M"]["us_per_step"])
+    if "error" not in eB:
+        rK = ratio(eB["s_DK"], eB["s_K"])
+        res.update(cz_pair=dict(rK, verdict=pair_verdict(rK)),
+                   beside_cz_latency=difference(eB["s_K"], eB["s_MK"]))
+    if "error" not in eA and "error" not in eB:
+        res["beside_cz_minus_fast_us"] = difference(eB["s_K"], eA["s_C"])   # two jobs: beside only
+    res["predictions"] = {
+        "T-1 fast-path decision latency (s_C - s_M) RESOLVED":
+            ("held" if res["fast_latency"]["verdict"] == "DECISION LATENCY RESOLVED" else "failed")
+            if "fast_latency" in res else "failed (no time could be read)",
+        "T-2 two fast-path actors (s_D / s_C) IN PARALLEL":
+            ("held" if res["fast_pair"]["verdict"] == "IN PARALLEL" else "failed")
+            if "fast_pair" in res else "failed (no time could be read)",
+        "T-3 two actors with a CZ (s_DK / s_K) WAIT FOR EACH OTHER":
+            ("held" if res["cz_pair"]["verdict"] == "DECISIONS WAIT FOR EACH OTHER" else "failed")
+            if "cz_pair" in res else "failed (no time could be read)",
+    }
+    return res
+
+
+def show(eA, eB, res, dt_note):
+    print(dt_note)
+    for nm, e in (("A", eA), ("B", eB)):
+        if "error" in e:
+            print(f"job {nm}: {e['error']}")
+            continue
+        for c, r in e["rulers"].items():
+            print(f"job {nm} ruler, clock {c} (us, loss): " + ", ".join(f"{t:.1f} {p:.3f}" for t, p, _ in r["points"]))
+        for k in ("s_M", "s_C", "s_F", "s_D", "s_MK", "s_K", "s_DK"):
+            if k in e:
+                print(f"  {k:5s} {e[k]['us_per_step']:7.3f} us per step (SE {e[k]['se']:.3f})")
+    if "fast_latency" in res:
+        x = res["fast_latency"]
+        print(f"fast-path decision latency s_C - s_M {x['us']:+.3f} us (2 SE {2 * x['se']:.3f}) -> {x['verdict']}")
+        x = res["fast_pair"]
+        print(f"two fast-path actors s_D / s_C {x['ratio']:.2f} (2 SE {2 * x['se']:.2f}) -> {x['verdict']}")
+    if "cz_pair" in res:
+        x = res["cz_pair"]
+        print(f"two actors with a CZ s_DK / s_K {x['ratio']:.2f} (2 SE {2 * x['se']:.2f}) -> {x['verdict']}")
+        x = res["beside_cz_latency"]
+        print(f"beside: CZ-path latency s_K - s_M {x['us']:+.3f} us (2 SE {2 * x['se']:.3f})")
+    if "beside_cz_minus_fast_us" in res:
+        x = res["beside_cz_minus_fast_us"]
+        print(f"beside (two jobs): s_K - s_C {x['us']:+.3f} us (2 SE {2 * x['se']:.3f})")
+    print("predictions:", res["predictions"])
+
+
+def losses_of(out):
     from psf_os import feedforward as FF
     import ctrl_night as CN
-    g = CN._counts(a.out)
+    g = CN._counts(out)
     losses = {i: {} for i in range(len(CLOCKS))}
     floor = {}
     for (tag, arm), (n, cnt) in g.items():
         tot = sum(cnt.values())
         for i in range(len(CLOCKS)):
             b = n - len(CLOCKS) + i
+            share1 = sum(v for k, v in cnt.items() if FF._bits(k, n)[b] == 1) / tot     # loss: the clock reads 1
             if arm == "floor":
-                floor[f"{tag} clock {i}"] = sum(v for k, v in cnt.items() if FF._bits(k, n)[b] == 1) / tot
+                floor[f"{tag} clock {i}"] = share1
             else:
-                p0 = sum(v for k, v in cnt.items() if FF._bits(k, n)[b] == 1) / tot     # loss: the clock reads 1
-                losses[i][tag + ("" if arm == "ff" else "_off")] = (p0, tot)
-    e = estimate(losses)
-    e["losses"] = {str(i): v for i, v in losses.items()}
-    e["clock_floor_reads_1"] = floor
-    show(e)
-    json.dump(e, open(os.path.join(a.out, "timing_scores.json"), "w"), indent=1)
-    return e
+                losses[i][tag + ("" if arm == "ff" else "_off")] = (share1, tot)
+    return losses, floor
+
+
+def read_dt(path):
+    if path:
+        d = json.load(open(path))
+        return float(d["dt"]) * 1e9, f"dt {float(d['dt']) * 1e9:.4g} ns from {os.path.basename(path)} ({d.get('device')})"
+    return DT_NS_ASSUMED, f"dt ASSUMED {DT_NS_ASSUMED} ns (no dt file given): the us values scale with it, the ratios do not"
+
+
+def score(a):
+    dt_ns, note = read_dt(a.dt_file)
+    est = {}
+    for out in (a.out_a, a.out_b):
+        pj = json.load(open(os.path.join(out, "part.json")))
+        part = pj["part"]
+        if abs(pj["dt_ns"] - dt_ns) > 1e-9:
+            raise SystemExit(f"{out} was built with dt {pj['dt_ns']} ns, scored with {dt_ns} ns: give the same dt file")
+        losses, floor = losses_of(out)
+        e = estimate(losses, dt_ns, PARTS[part], pj["ruler_dt"])
+        e.update(losses={str(i): v for i, v in losses.items()}, clock_floor_reads_1=floor)
+        est[part] = e
+    res = judge(est["A"], est["B"])
+    show(est["A"], est["B"], res, note)
+    res.update(dt_note=note, estimates=est)
+    for out in (a.out_a, a.out_b):
+        json.dump(res, open(os.path.join(out, "timing_scores.json"), "w"), indent=1)
+    return res
+
+
+# ------------------------------------------------------------------------------------------------ planted checks
+
+SCENARIOS = {   # planted lengths in us (illustrative, never fitted): measurement, latency fast / CZ path, fired extra,
+                # whether two fast-path actors / two CZ actors wait for each other
+    "cz-waits": dict(MEAS=2.6, LAT=0.9, LATK=1.6, FIRE=0.3, D_SERIAL=False, DK_SERIAL=True),
+    "fast-waits": dict(MEAS=2.6, LAT=0.9, LATK=1.6, FIRE=0.3, D_SERIAL=True, DK_SERIAL=False),
+}
+
+
+def planted_time(tag, arm, P, dt_ns):
+    """The elapsed time of one half (us) of an item under the planted lengths."""
+    if arm == "floor":
+        return 0.0
+    if tag.startswith("R"):
+        return int(tag[1:]) * dt_ns / 1000.0
+    kind = tag.rstrip("0123456789")
+    n = int(tag[len(kind):])
+    if arm == "off":
+        per = P["MEAS"]
+        two = kind in ("D", "DK")
+        return n * per * (2 if two and (P["D_SERIAL"] if kind == "D" else P["DK_SERIAL"]) else 1)
+    per = P["MEAS"] + (P["LATK"] if kind in ("K", "DK") else P["LAT"]) + (P["FIRE"] if kind == "F" else 0.0)
+    if kind == "D":
+        return n * per * (2 if P["D_SERIAL"] else 1)
+    if kind == "DK":
+        return n * per * (2 if P["DK_SERIAL"] else 1)
+    return n * per
 
 
 def planted(a):
-    """The estimator on synthetic counts (no circuit): each clock's loss 0.5 (1 - exp(-t / T)) + r with T 100 and
-    160 us and r 0.01 (illustrative), elapsed times from planted lengths: measurement 2.6 us, decision latency 0.9 us, a fired
-    conditional 0.3 us more, two actors waiting for each other (factor 2); binomial counts, 4000 shots, fixed seeds.
-    The estimator should give the planted numbers back within its errors."""
-    Ts, r, MEAS, LAT, FIRE = (100.0, 160.0), 0.01, 2.6, 0.9, 0.3
-    res = []
+    """The estimator on synthetic counts (no circuit): each clock's loss 0.5 (1 - exp(-t / T)) + 0.01 with T 100 and
+    160 us; six seeds per scenario. It should give the planted numbers and the scenario's verdicts back."""
+    P = SCENARIOS[a.scenario]
+    Ts = (100.0, 160.0)
     for seed in range(6):
         rng = random.Random(20261118 + seed)
 
         def draw(t, T):
-            p = 0.5 * (1 - math.exp(-t / T)) + r
+            p = 0.5 * (1 - math.exp(-t / T)) + 0.01
             return sum(rng.random() < p for _ in range(SHOTS)) / SHOTS, SHOTS
-        L = {i: {} for i in range(len(Ts))}
-        for i, T in enumerate(Ts):
-            for d in RULER_DT:
-                L[i][f"R{d}"] = draw(2 * d * DT_NS / 1000.0, T)
-            for n in NS_C:
-                L[i][f"C{n}"] = draw(2 * n * (MEAS + LAT), T)
-                L[i][f"C{n}_off"] = draw(2 * n * MEAS, T)
-            for n in NS_F:
-                L[i][f"F{n}"] = draw(2 * n * (MEAS + LAT + FIRE), T)
-            for n in NS_C2:
-                L[i][f"D{n}"] = draw(2 * n * 2 * (MEAS + LAT), T)
-        e = estimate(L)
-        res.append(e)
-        print(f"seed {seed}: measurement {e['measurement']['us_per_step']:.2f} (planted {MEAS}); latency "
-              f"{e['decision_latency_us']:+.2f} (2 SE {2 * e['decision_latency_se']:.2f}; planted {LAT}); fired - "
-              f"unfired {e['fired_minus_unfired_us']:+.2f} (2 SE {2 * e['fired_minus_unfired_se']:.2f}; planted {FIRE}); "
-              f"two actors / one {e['two_actors_ratio']:.2f} (planted 2.0)")
-    return res
+        est = {}
+        for part in ("A", "B"):
+            L = {i: {} for i in range(len(Ts))}
+            for i, T in enumerate(Ts):
+                for tag, _, _ in items(part, DT_NS_ASSUMED):
+                    L[i][tag] = draw(2 * planted_time(tag, "user", P, DT_NS_ASSUMED), T)
+                    L[i][tag + "_off"] = draw(2 * planted_time(tag, "off", P, DT_NS_ASSUMED), T)
+            est[part] = estimate(L, DT_NS_ASSUMED, PARTS[part])
+        r = judge(est["A"], est["B"])
+        print(f"{a.scenario} seed {seed}: s_M {est['A']['s_M']['us_per_step']:.2f} (planted {P['MEAS']}); fast latency "
+              f"{r['fast_latency']['us']:+.2f} ({P['LAT']}) {r['fast_latency']['verdict']}; D/C "
+              f"{r['fast_pair']['ratio']:.2f} {r['fast_pair']['verdict']}; DK/K {r['cz_pair']['ratio']:.2f} "
+              f"{r['cz_pair']['verdict']}; CZ latency {r['beside_cz_latency']['us']:+.2f} ({P['LATK']})")
 
 
 def planted_run(a):
-    """Dry runs only: simulate the built job with a PLANTED timing (illustrative, never fitted): each half the clocks
-    dephase by exp(-t / T) for the half's elapsed time t (T 100 us), t from planted lengths (a delay d dt; a measurement
-    2.6 us; an unfired decision 0.9 us more, a fired one 0.3 us more again; two actors one after the other); writes
-    raw_counts.json and submission.json as run_local does. Then `score` should read the planted lengths back from the
-    real circuits: a check of the circuits, the bits and the arms, not of any device."""
+    """Dry runs only: simulate a built job with PLANTED timing (illustrative, never fitted): per half the clocks
+    dephase by exp(-t / T) (T 100 us) for the half's planted elapsed time; writes raw_counts.json and submission.json
+    as run_local does. Then `score` should read the planted lengths and verdicts back from the real circuits."""
     from qiskit import QuantumCircuit, qpy
     from qiskit_aer import AerSimulator
     from qiskit_aer.noise import phase_damping_error
     from psf_os import feedforward as FF
     from psf_os.ibm import _stamp
     from psf_os.sim import to_clifford_gates
-    T, MEAS, LAT, FIRE = 100.0, 2.6, 0.9, 0.3
+    P, T = SCENARIOS[a.scenario], 100.0
+    dt_ns = json.load(open(os.path.join(a.out, "part.json")))["dt_ns"]
     job = os.path.join(a.out, "job")
     man = json.load(open(os.path.join(job, "manifest.json")))
     b = json.load(open(os.path.join(a.out, "build.json")))
@@ -334,21 +493,13 @@ def planted_run(a):
     for k, c in enumerate(circs):
         cell = man["cells"][man["pubs"][k]["cell"]]
         cc = FF.compact(c)
+        seed = 20261118 + 10000 * k
         if cell["role"] == "sentinel":
-            cl = to_clifford_gates(cc)
-            res = AerSimulator(method="stabilizer").run(cl, shots=SHOTS, seed_simulator=20261118 + 10000 * k).result()
+            res = AerSimulator(method="stabilizer").run(to_clifford_gates(cc), shots=SHOTS, seed_simulator=seed).result()
             rows.append(dict(pub=k, counts={key.replace(" ", ""): v for key, v in res.get_counts(0).items()}))
             continue
-        tag = cell["name"][3:].replace("_floor", "").replace("_off", "")
-        arm = cell["role"]
-        if arm == "floor":
-            t = 0.0
-        elif tag.startswith("R"):
-            t = int(tag[1:]) * DT_NS / 1000.0
-        else:
-            n = int(tag[1:])
-            per = MEAS + (0.0 if arm == "off" else LAT + (FIRE if tag.startswith("F") else 0.0))
-            t = n * per * (2 if tag.startswith("D") else 1)
+        tag = _tag(cell)
+        t = planted_time(tag, cell["role"] if cell["role"] != "user" else "user", P, dt_ns)
         act = sorted({q for _, qs in FF.walk(c) for q in qs})
         chain = b["items"][tag]["chain"]
         clocks = [act.index(chain[p]) for p in CLOCKS if chain[p] in act]
@@ -362,14 +513,15 @@ def planted_run(a):
                 if err is not None and nbar in (2, 4):     # the end of each half: that half's dephasing
                     for q in clocks:
                         w.append(err, [w.qubits[q]])
-        res = AerSimulator(method="density_matrix").run(w, shots=SHOTS, seed_simulator=20261118 + 10000 * k).result()
+        res = AerSimulator(method="density_matrix").run(w, shots=SHOTS, seed_simulator=seed).result()
         rows.append(dict(pub=k, counts={key.replace(" ", ""): v for key, v in res.get_counts(0).items()}))
     t_ = _stamp()
     json.dump(dict(job_id="local-planted-timing", submitted=t_, local=True, backend=man["fetch"]["backend"],
-                   simulator="aer, PLANTED timing (dry runs only)"), open(os.path.join(job, "submission.json"), "w"))
+                   simulator=f"aer, PLANTED timing {a.scenario} (dry runs only)"),
+              open(os.path.join(job, "submission.json"), "w"))
     json.dump(dict(fetched=t_, job_id="local-planted-timing", status="DONE (local, planted timing)", rows=rows),
               open(os.path.join(job, "raw_counts.json"), "w"))
-    print(f"planted: T {T} us, measurement {MEAS}, decision {LAT}, fired +{FIRE}, two actors in series")
+    print(f"planted {a.scenario}: {P}, T {T} us, dt {dt_ns} ns")
 
 
 if __name__ == "__main__":
@@ -378,11 +530,19 @@ if __name__ == "__main__":
     b = sub.add_parser("build")
     b.add_argument("devdir")
     b.add_argument("out")
+    b.add_argument("--part", choices=sorted(PARTS), required=True)
+    b.add_argument("--dt-file", help="dt.json (the device's dt, read at home); without it 4 ns is assumed")
     b.add_argument("--dry-clifford-sentinel", action="store_true")
-    for nm in ("check", "score"):
-        sub.add_parser(nm).add_argument("out")
-    sub.add_parser("planted")
-    sub.add_parser("planted-run").add_argument("out")
+    sub.add_parser("check").add_argument("out")
+    s = sub.add_parser("score")
+    s.add_argument("out_a")
+    s.add_argument("out_b")
+    s.add_argument("--dt-file")
+    p = sub.add_parser("planted")
+    p.add_argument("--scenario", choices=sorted(SCENARIOS), default="cz-waits")
+    pr = sub.add_parser("planted-run")
+    pr.add_argument("out")
+    pr.add_argument("--scenario", choices=sorted(SCENARIOS), default="cz-waits")
     a = ap.parse_args()
     r = {"build": build, "check": check, "score": score, "planted": planted, "planted-run": planted_run}[a.cmd](a)
     sys.exit(0 if r is not False else 1)

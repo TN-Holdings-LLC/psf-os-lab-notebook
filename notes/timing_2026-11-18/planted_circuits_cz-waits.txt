@@ -1,0 +1,18 @@
+dt ASSUMED 4.0 ns (no dt file given): the us values scale with it, the ratios do not
+job A ruler, clock 0 (us, loss): 0.0 0.000, 8.1 0.034, 16.0 0.077, 32.0 0.141, 48.0 0.190, 64.0 0.229
+job A ruler, clock 1 (us, loss): 0.0 0.000, 8.1 0.037, 16.0 0.073, 32.0 0.129, 48.0 0.185, 64.0 0.233
+  s_M     2.662 us per step (SE 0.145)
+  s_C     3.656 us per step (SE 0.183)
+  s_F     3.994 us per step (SE 0.380)
+  s_D     3.112 us per step (SE 0.368)
+job B ruler, clock 0 (us, loss): 0.0 0.000, 8.1 0.039, 16.0 0.073, 32.0 0.139, 48.0 0.194, 64.0 0.238
+job B ruler, clock 1 (us, loss): 0.0 0.000, 8.1 0.041, 16.0 0.071, 32.0 0.131, 48.0 0.194, 64.0 0.231
+  s_MK    2.614 us per step (SE 0.132)
+  s_K     4.010 us per step (SE 0.227)
+  s_DK    9.604 us per step (SE 1.009)
+fast-path decision latency s_C - s_M +0.993 us (2 SE 0.467) -> DECISION LATENCY RESOLVED
+two fast-path actors s_D / s_C 0.85 (2 SE 0.22) -> IN PARALLEL
+two actors with a CZ s_DK / s_K 2.39 (2 SE 0.57) -> DECISIONS WAIT FOR EACH OTHER
+beside: CZ-path latency s_K - s_M +1.396 us (2 SE 0.525)
+beside (two jobs): s_K - s_C +0.355 us (2 SE 0.583)
+predictions: {'T-1 fast-path decision latency (s_C - s_M) RESOLVED': 'held', 'T-2 two fast-path actors (s_D / s_C) IN PARALLEL': 'held', 'T-3 two actors with a CZ (s_DK / s_K) WAIT FOR EACH OTHER': 'held'}

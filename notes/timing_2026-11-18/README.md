@@ -68,3 +68,28 @@ piecewise ruler and the step counts chosen so every item stays inside the ruler'
 - **The fast path**: the conditionals here are a measurement followed at once by a single-qubit X on the measured qubit,
   with no barrier between: the shape the workplace VS's FASTPATH note lists for IBM's fast path; the neuron chains'
   conditionals are not. A follow-up item with a CZ in the block (the neuron's shape) would show the difference.
+
+## 2026-11-18, later: the CZ items and the night's form (home instruction 18d)
+
+- **Added**: K(n) (measure the actor, then a conditional CZ with its partner; never fires; not the fast-path shape)
+  and DK(n) (two pairs at once). The chain grew to 9 sites: clocks 0 and 8, pairs (2, 3) and (5, 6), sites 1, 4, 7
+  idle. `check` now also requires the fast-path shape for every conditional of C, F, D and for none of K, DK
+  (fastpath.py's three conditions): PASS on the marrakesh, fez and kingston records of 2026-11-17.
+- **Two jobs**, each with its own ruler so every ratio is read within one job: A = R, C, F, D (43 circuits, 51.0 s),
+  B = R, K, DK (37 circuits, 44.3 s); together 95.3 s by the model.
+- **Verdicts** (the owner's words, 2 SE): DECISION LATENCY RESOLVED / NOT RESOLVED for s_C - s_M; DECISIONS WAIT FOR
+  EACH OTHER / IN PARALLEL / NOT SHOWN for s_D / s_C and s_DK / s_K. Predictions T-1 .. T-3 in
+  `prereg/drafts-2026-11-18/timing_night_2026-11-18_READY.md`.
+- **dt**: `--dt-file dt.json` (read at home) sets the ruler's delays in dt (0 .. 32 us per half on any dt) and the
+  conversion; without it 4 ns is assumed and said. Checked with a 2 ns dt: the ruler still spans 64 us and the
+  planted values read back.
+- **Planted checks** (`planted_synthetic_*.txt`, `planted_circuits_*.txt`): scenario cz-waits (fast path in parallel,
+  CZ actors in series): every one of six synthetic seeds and the real circuits read IN PARALLEL / WAIT FOR EACH OTHER
+  (circuits: s_D / s_C 0.85, 2 SE 0.22; s_DK / s_K 2.39, 2 SE 0.57); scenario fast-waits: the reverse (1.68 WAIT,
+  1.18 PARALLEL). Fast-path latency +0.99 (2 SE 0.47; planted 0.9); CZ-path latency +1.40 (planted 1.6).
+
+### The dt line (home, VPN OFF, after the device record is fetched; saved account, no key, no quality number)
+
+```bash
+python -c "import json,os,datetime as d; from qiskit_ibm_runtime import QiskitRuntimeService as S; q=json.load(open(os.path.expanduser('~/n1118/fetch_in/queue.json'))); b=S().backend(q['chosen'][0]); json.dump(dict(device=b.name, dt=b.dt, read=d.datetime.now(d.timezone.utc).isoformat()), open(os.path.expanduser('~/n1118/dt.json'), 'w'), indent=1); print(b.name, b.dt)"
+```

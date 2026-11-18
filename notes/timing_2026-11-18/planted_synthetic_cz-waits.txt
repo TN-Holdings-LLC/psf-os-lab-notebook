@@ -1,0 +1,6 @@
+cz-waits seed 0: s_M 2.97 (planted 2.6); fast latency +0.67 (0.9) DECISION LATENCY RESOLVED; D/C 1.09 IN PARALLEL; DK/K 2.32 DECISIONS WAIT FOR EACH OTHER; CZ latency +1.65 (1.6)
+cz-waits seed 1: s_M 3.05 (planted 2.6); fast latency +0.05 (0.9) NOT RESOLVED; D/C 1.12 IN PARALLEL; DK/K 2.00 DECISIONS WAIT FOR EACH OTHER; CZ latency +1.61 (1.6)
+cz-waits seed 2: s_M 2.66 (planted 2.6); fast latency +0.76 (0.9) DECISION LATENCY RESOLVED; D/C 1.00 IN PARALLEL; DK/K 1.76 DECISIONS WAIT FOR EACH OTHER; CZ latency +1.49 (1.6)
+cz-waits seed 3: s_M 2.53 (planted 2.6); fast latency +0.96 (0.9) DECISION LATENCY RESOLVED; D/C 0.96 IN PARALLEL; DK/K 2.04 DECISIONS WAIT FOR EACH OTHER; CZ latency +1.13 (1.6)
+cz-waits seed 4: s_M 2.47 (planted 2.6); fast latency +0.96 (0.9) DECISION LATENCY RESOLVED; D/C 0.80 IN PARALLEL; DK/K 2.24 DECISIONS WAIT FOR EACH OTHER; CZ latency +1.35 (1.6)
+cz-waits seed 5: s_M 2.63 (planted 2.6); fast latency +1.11 (0.9) DECISION LATENCY RESOLVED; D/C 1.16 IN PARALLEL; DK/K 1.95 DECISIONS WAIT FOR EACH OTHER; CZ latency +1.47 (1.6)
