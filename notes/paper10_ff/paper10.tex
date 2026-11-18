@@ -11,6 +11,9 @@
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{url}
+\usepackage{float}
+\input{glyphtounicode}
+\pdfgentounicode=1
 \setlength{\parskip}{4pt}
 \setlength{\parindent}{0pt}
 \sloppy
@@ -248,7 +251,8 @@ fast-path actors and two actors whose blocks hold a CZ each ran side by side, ra
 loss is not explained by decisions waiting for each other at this resolution; its mechanism is open.
 
 \section{What did not hold}\label{sec:failed}
-\begin{table}[h]
+Each failed prediction is reported as failed in its folder; table~\ref{tab:failed} lists them.
+\begin{table}[H]
 \centering\small
 \begin{tabular}{@{}lll@{}}
 \toprule
@@ -271,6 +275,7 @@ night & prediction & what happened \\
 \bottomrule
 \end{tabular}
 \caption{The 16 failed predictions of 49 (the early-chain row counts two; the 11-16 neuron row counts two).}
+\label{tab:failed}
 \end{table}
 
 \section{Limits}\label{sec:limits}
