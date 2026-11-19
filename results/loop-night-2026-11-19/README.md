@@ -36,9 +36,9 @@ pick: P1 / P1 / P1
 
 | round | L = 1 | L = 2 | L = 3 | rule after the round |
 |---|---|---|---|---|
-| r1 | P1, g +0.0062 (SE 0.0056) NOT SHOWN | P1, g -0.0282 NOT SHOWN | P1, g -0.0270 NOT SHOWN | R4 keep, keep, keep |
-| r2 | P1, g +0.0182 (SE 0.0055) PRESCRIPTION HELPS | P1, g -0.0175 NOT SHOWN | P1, g -0.0255 NOT SHOWN | L1 RM: one more try (m 3) + M; L2, L3 R3 stop-loss -> P0 |
-| r3 | P1 + M, g +0.0470 (SE 0.0049) PRESCRIPTION HELPS | P0 (no prescription) | P0 (no prescription) | R4 keep, keep, keep |
+| r1 | P1, g +0.0062 (SE 0.0080) NOT SHOWN | P1, g -0.0282 NOT SHOWN | P1, g -0.0270 NOT SHOWN | R4 keep, keep, keep |
+| r2 | P1, g +0.0182 (SE 0.0080) PRESCRIPTION HELPS | P1, g -0.0175 NOT SHOWN | P1, g -0.0255 NOT SHOWN | L1 RM: one more try (m 3) + M; L2, L3 R3 stop-loss -> P0 |
+| r3 | P1 + M, g +0.0470 (SE 0.0075) PRESCRIPTION HELPS | P0 (no prescription) | P0 (no prescription) | R4 keep, keep, keep |
 
 Stop: "the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round
 3)" (not resumable). No L overshot in any round. RF never fired (no Dr gap). Rungs climbed: M.
@@ -66,3 +66,11 @@ a rung (+M).
 `python reproduce.py loop-night-2026-11-19-dw loop-night-2026-11-19-dc loop-night-2026-11-19-r1
 loop-night-2026-11-19-r2 loop-night-2026-11-19-r3`; the whole night: `python gpu/os_loop.py verify
 results/loop-night-2026-11-19` (rebuilds every job, re-scores, re-rules).
+
+## Independent check (home VS, 2026-11-19)
+
+Re-counted from `job/raw_counts.json` with qiskit, aer and numpy only (no psf-os, no notebook scorer): g, the
+diagnostics, RULE2-4 re-ruled from the declared rungs, the ledger gate (other calibration: not used) and the budget
+(135 s charged, 141.2 s model, within 240 s) all agree; reproduce 5 of 5 SAME, `os_loop.py verify` SAME. One wording
+error found and corrected here: the table first gave the SE of P (0.0056 / 0.0055 / 0.0049) beside g; the SE of g is
+0.0080 / 0.0080 / 0.0075 (the verdicts and `score.txt` always used the SE of g).

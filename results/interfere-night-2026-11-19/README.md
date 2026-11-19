@@ -46,3 +46,9 @@ the register's bit order in serving conditionals is not in IBM's public document
 ## Reproduce
 
 `python reproduce.py interfere-night-2026-11-19`
+
+## Independent check (home VS, 2026-11-19)
+
+Re-counted from the raw counts with qiskit, aer and numpy only: the six sub-items and three bundles (alone, packed, d,
+2 SE) agree, and the words applied by home are right (PACKED KEEPS LESS only for E3's B); IF-1 failed, IF-2 failed,
+IF-3 held; reproduce SAME.

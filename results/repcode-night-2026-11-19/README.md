@@ -35,3 +35,9 @@ per error: n: lut3 0.765 lut1 0.786 lut5 0.747 off 0.774; 0: lut3 0.847 lut1 0.8
 ## Reproduce
 
 `python reproduce.py repcode-night-2026-11-19`
+
+## Independent check (home VS, 2026-11-19)
+
+Re-counted from the raw counts with qiskit, aer and numpy only; the ceiling C = 0.875 recomputed by another method
+agrees; lut3 0.8121 NOT BEYOND, (b0) and (b1) SAME WITHIN ERROR agree ((b1) sits 0.0005 inside its threshold);
+reproduce SAME.

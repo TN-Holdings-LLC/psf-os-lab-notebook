@@ -41,3 +41,10 @@ n 4: IPE 0.8799 (2 SE 0.0037, 31200 shots) against the ceiling 0.4706 -> BEYOND 
 ## Reproduce
 
 `python reproduce.py qpe-repro-night-2026-11-19`
+
+## Independent check (home VS, 2026-11-19)
+
+Re-counted from the raw counts with qiskit, aer and numpy only: BEYOND THE CEILING at n = 2, 3, 4 and the per-shot
+differences +0.029 / +0.070 / +0.169 agree; reproduce SAME. Job B's ring sentinel read DEAD on physical qubits 70-74,
+which do not overlap the test circuits' qubits 0-4; the qubits 0-2 that carried the iterative circuits lay outside the
+sentinel's ring in both jobs (so the sentinel says nothing about them either way).
