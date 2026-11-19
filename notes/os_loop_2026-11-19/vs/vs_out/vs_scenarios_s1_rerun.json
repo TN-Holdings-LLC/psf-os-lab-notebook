@@ -1,0 +1,14 @@
+[
+ {
+  "section": "S1",
+  "name": "result missing: resume stops resumable, r2 not sent again",
+  "ok": true,
+  "note": "r2: not finished after 60 min; run resume; submission unchanged True, r2 local runs 1 -> 1"
+ },
+ {
+  "section": "S1",
+  "name": "result back: resume finishes the same as the uninterrupted night; r2 run once in all",
+  "ok": true,
+  "note": "differ: -; r2 local runs 1"
+ }
+]

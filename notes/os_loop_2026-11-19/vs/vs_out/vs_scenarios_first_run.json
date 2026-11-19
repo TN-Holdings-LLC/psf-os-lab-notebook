@@ -1,0 +1,74 @@
+[
+ {
+  "section": "S1",
+  "name": "result missing: resume stops resumable, r2 not sent again",
+  "ok": false,
+  "note": "r2: not finished after 60 min; run resume"
+ },
+ {
+  "section": "S1",
+  "name": "result back: resume finishes the same as the uninterrupted night; r2 run once in all",
+  "ok": true,
+  "note": "differ: -; r2 local runs 1"
+ },
+ {
+  "section": "S2",
+  "name": "check FAIL (ff_p0_1 without its conditionals): stopped, job_NOT_SENT, nothing after",
+  "ok": true,
+  "note": "r2: check FAIL (check.txt); not sent"
+ },
+ {
+  "section": "S3",
+  "name": "build refused (L1 stack P9): stopped, no r2 job",
+  "ok": true,
+  "note": "r2: build refused (ValueError: P9)"
+ },
+ {
+  "section": "S4",
+  "name": "--k-max 1: stops after round 1 by the round limit, no r2",
+  "ok": true,
+  "note": "the rule: round limit K = 1 (after round 1)"
+ },
+ {
+  "section": "S5",
+  "name": "--budget 90: stops before the round that would pass it, nothing built past it",
+  "ok": true,
+  "note": "budget: the diagnostics and rounds built take 86.1 s by the model, round 2 would add 37.6 ; rounds built ['r1']"
+ },
+ {
+  "section": "S5",
+  "name": "the estimate before each round equals the round's build",
+  "ok": true,
+  "note": "[('1', 30.9, 30.9), ('2', 37.6, 37.6), ('3', 37.6, 37.6)]"
+ },
+ {
+  "section": "S6",
+  "name": "ledger with another calibration: not used there, reason in RULE1.json",
+  "ok": true,
+  "note": "other calibration (2026-11-17 10:40:00+01:00 -> 2026-11-18 11:05:21+01:00): start from ton"
+ },
+ {
+  "section": "S6",
+  "name": "ledger with another device: not used there, reason in RULE1.json",
+  "ok": true,
+  "note": "other device (ibm_fez -> ibm_marrakesh): start from tonight's diagnostics"
+ },
+ {
+  "section": "S6",
+  "name": "ledger with another family: not used there, reason in RULE1.json",
+  "ok": true,
+  "note": "diagnostics disagree (tonight P1, ledger P0): the diagnostics win, ledger not used"
+ },
+ {
+  "section": "S7",
+  "name": "verify on the finished night: SAME",
+  "ok": true,
+  "note": "SAME"
+ },
+ {
+  "section": "S7",
+  "name": "verify with 50 counts moved in r1: DIFFERENT",
+  "ok": true,
+  "note": "DIFFERENT r1 re-scored: /rows/1/g: 0.216 != 0.229"
+ }
+]

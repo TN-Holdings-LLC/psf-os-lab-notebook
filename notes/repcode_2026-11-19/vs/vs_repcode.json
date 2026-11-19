@@ -1,0 +1,62 @@
+{
+ "results": [
+  {
+   "section": "V1",
+   "name": "compiled arms: ff c = 000, floors zero, off c[0] as derived, register tests on s[0], s[1]",
+   "ok": true,
+   "note": "off c[0] right expected [np.float64(1.0), np.float64(0.5), np.float64(1.0), np.float64(1.0)]"
+  },
+  {
+   "section": "V1",
+   "name": "lut3: three tests (values 1, 3, 2), each an X on its own qubit, the same in every lut3 item",
+   "ok": true,
+   "note": "[(1, (0,)), (2, (4,)), (3, (2,))]"
+  },
+  {
+   "section": "V1",
+   "name": "lut1: one test, the value of the injected error (s == 1 for no error)",
+   "ok": true,
+   "note": "{'n': [(1, (0,))], '0': [(1, (0,))], '1': [(3, (2,))], '2': [(2, (4,))]}"
+  },
+  {
+   "section": "V2",
+   "name": "ceiling, a rule per item (the tool's definition)",
+   "ok": true,
+   "note": "per error [np.float64(1.0), np.float64(0.5), np.float64(1.0), np.float64(1.0)], mean 0.875"
+  },
+  {
+   "section": "V2",
+   "name": "ceiling, one rule for all four items",
+   "ok": true,
+   "note": "0.875 (per-key maximum 0.875)"
+  },
+  {
+   "section": "V3",
+   "name": "broadcast record equals the hand count (conditionals, bits, IBM broadcasts, bits)",
+   "ok": true,
+   "note": "record (144, 216, 48, 72), hand (144, 216, 48, 72)"
+  },
+  {
+   "section": "V4",
+   "name": "damage 'value' in 4 lut3 ff arms: the tool's check fails",
+   "ok": true,
+   "note": "40 circuits; FAIL ['ff_lut3_0', 'ff_lut3_2']"
+  },
+  {
+   "section": "V4",
+   "name": "damage 'swap' in 4 lut3 ff arms: the tool's check fails",
+   "ok": true,
+   "note": "40 circuits; FAIL ['ff_lut3_0', 'ff_lut3_1']"
+  }
+ ],
+ "ceiling": {
+  "per_item": {
+   "n": "1.000e+00",
+   "0": "5.000e-01",
+   "1": "1.000e+00",
+   "2": "1.000e+00"
+  },
+  "C_item": "8.750e-01",
+  "C_one": "8.750e-01"
+ }
+}

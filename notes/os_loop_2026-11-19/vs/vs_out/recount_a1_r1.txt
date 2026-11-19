@@ -1,0 +1,9 @@
+L 1 [P2]: p 0.911 p0 0.695 g +0.216 (2 SE 0.017) -> OVERSHOOT; noiseless recorded 0.890, Aer 0.891 (SE 0.001); record: OVERSHOOT g +0.216 -> SAME
+L 2 [P1]: p 0.802 p0 0.694 g +0.108 (2 SE 0.019) -> PRESCRIPTION HELPS; noiseless recorded 0.793, Aer 0.792 (SE 0.001); record: PRESCRIPTION HELPS g +0.108 -> SAME
+L 3 [P1]: p 0.723 p0 0.578 g +0.145 (2 SE 0.021) -> OVERSHOOT; noiseless recorded 0.706, Aer 0.708 (SE 0.001); record: OVERSHOOT g +0.145 -> SAME
+Dr q1: P(1|1) 0.840 P(0|0) 1.000 gap +0.160; record 0.840 / 1.000 -> SAME
+Dr q3: P(1|1) 1.000 P(0|0) 1.000 gap +0.000; record 1.000 / 1.000 -> SAME
+Dr q5: P(1|1) 1.000 P(0|0) 1.000 gap +0.000; record 1.000 / 1.000 -> SAME
+Dr q7: P(1|1) 1.000 P(0|0) 1.000 gap +0.000; record 1.000 / 1.000 -> SAME
+Dr q9: P(1|1) 1.000 P(0|0) 1.000 gap +0.000; record 1.000 / 1.000 -> SAME
+ALL SAME
