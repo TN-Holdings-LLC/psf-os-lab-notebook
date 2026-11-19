@@ -22,7 +22,7 @@
 \title{Decisions No Correction of the Uncontrolled Circuit Can Reach:\\ Real-Time Control on IBM Heron, Declared
 Before the Data}
 \author{TN Holdings\\ \small contact: \texttt{love.os.architect@proton.me}}
-\date{DRAFT, 18 November 2026}
+\date{DRAFT 1c, 19 November 2026}
 
 \begin{document}
 \maketitle
@@ -36,7 +36,8 @@ than $c$, with every shot counted, no mitigation, and every test declared in git
 was fetched. Over three nights on three IBM Heron devices (49 declared predictions, 33 held, 16 failed and reported as
 failed), chains of repeat-until-success (RUS) neurons crossed the ceiling and the margin grew with the chain length
 (slope $+0.024$ per neuron on ibm\_fez; $+0.031$ and, after a recalibration, $+0.053$ for a frame-balanced pair on
-ibm\_marrakesh); iterative phase estimation crossed its ceiling at $n=2,3,4$ (0.903 against 0.471 at $n=4$). Getting
+ibm\_marrakesh); iterative phase estimation crossed its ceiling at $n=2,3$ on ibm\_fez and $n=4$ on ibm\_marrakesh
+(0.903 against 0.471 at $n=4$). Getting
 there needed a diagnosis on the device: the first neuron design lost its value not to the conditionals, which cost
 nothing measurable when they did not fire, but to time spent in $|1\rangle$ during mid-circuit measurement waits;
 holding the likely value as $|0\rangle$ recovered 0.11--0.22. That one-sided decay can also push a design above its own
@@ -105,7 +106,7 @@ COMPOUNDS: the slope of $g$ over the chain length is at least 2 SE and no point 
 \paragraph{The neuron chain.} A RUS neuron at $\theta = 1.1$ maps its input to $P_1 = \sin^2 q$ with $\tan q = \tan^2
 \theta$; a chain of $L$ neurons gives $(\sin^2 q)^L$ exactly (0.937, 0.878, 0.823, \dots, $L = 1, 2, 3$). Each neuron
 tries up to $m$ times; after a failed try the conditional block undoes the rotation on the output. With $m = 2$ the
-noiseless value of the chain lies below the exact value by the share of shots still failing after two tries (0.892,
+noiseless value of the chain lies below the exact value by the share of shots still failing after two tries (0.890,
 0.793, 0.706, 0.629, 0.560 against 0.937, 0.878, 0.823, 0.771, 0.723 for $L = 1..5$): this is the design's own cost and
 is reported separately. The off arm's noiseless values give the ceiling $c(L) = 0.143, 0.247, 0.322, 0.373, 0.407,
 0.426, 0.435$ for $L = 1..7$.
@@ -129,8 +130,9 @@ which decoupling does not undo; every retry adds waits, and the off arm, making 
 measurement, with barriers so the compiler keeps the flips, moved ff toward the exact value by $+0.113$, $+0.179$,
 $+0.182$ at $L = 1, 2, 3$ (2 SE 0.021--0.022; \texttt{rus-neuron2-2026-11-16}). Reading the last output flipped as
 well (the third design) added $+0.217$ at $L = 1$, where the output qubit read $|1\rangle$ as 1 in only about 0.8 of the
-shots; ff then stood at 0.883, 0.740, 0.631 against the design's noiseless 0.892, 0.792, 0.708, CLOSER at every $L$
-(\texttt{rus-neuron3-2026-11-16}). The same circuits on ibm\_kingston gave 0.853, 0.749, 0.646, CLOSER at every $L$
+shots (\texttt{rus-neuron-2026-11-16}, \texttt{ctrl-diag-2026-11-16}); ff then stood at 0.883, 0.740, 0.631 against the design's noiseless 0.892, 0.792, 0.708 as sampled in that night's check (exact 0.890, 0.793,
+0.706), CLOSER at every $L$
+(\texttt{rus-neuron3-2026-11-16}). The same circuits on ibm\_kingston gave 0.8525 (3410 of 4000), 0.749, 0.646, CLOSER at every $L$
 (\texttt{rus-neuron3-kingston-2026-11-16}).
 
 \section{Beyond the correction ceiling, and a margin that grows}\label{sec:beyond}
@@ -242,7 +244,7 @@ conditionals cost the first item 0.060 and left the second unchanged ($+0.012$);
 whole duration, as written, left the same loss on the first ($-0.062$; the prediction that the delay would remove it
 failed). An independent re-reading confirmed that the loss sits on the first item's output bit
 (\texttt{parallel-night-2026-11-18}). None of the blocks qualifies for the controller's low-latency path (each holds a
-CZ).
+CZ; stated in \texttt{prereg/parallel\_night\_2026-11-18.md}).
 
 \paragraph{Timing.} Clock qubits on a ruler of delays read a mid-circuit measurement step as 2.78\,$\mu$s; a fast-path
 decision added $+0.32\,\mu$s (2 SE 0.42), NOT RESOLVED (the prediction that it would be resolved failed); two
@@ -286,7 +288,7 @@ kept much less. What the device keeps varies by night more than by design.
 \item The ceiling is defined against correction of the uncontrolled circuit, as declared; post-selection (discarding
 shots) is not a correction in this sense and is reported only beside.
 \item The neuron's exact value is that of the intended neuron (unbounded tries); with $m = 2$ the noiseless design lies
-0.04--0.19 below it ($L = 1..7$), which the device can never recover.
+0.05--0.19 below it ($L = 1..7$), which the device can never recover.
 \item Every noise model in the notes is illustrative and not fitted; none is used for a verdict.
 \item A sentinel's compiled bytes depend on the qiskit-aer version; user, off and floor circuits rebuilt byte-identical
 across machines.
@@ -300,8 +302,9 @@ package, the frame chosen from each output qubit's readout; and its declared dev
 
 \section{Reproduction}\label{sec:repro}
 Every device result re-scores from its committed raw counts with \texttt{python reproduce.py} in
-\texttt{psf-os-lab-notebook} with psf-os at the commit named in each folder (\texttt{feedforward-2026-11-16}); the
-entries of 11-16 to 11-18 re-scored the same on 2026-11-18, and an independent re-reading with qiskit and numpy only
+\texttt{psf-os-lab-notebook} with psf-os at the commit named in each folder (\texttt{feedforward-2026-11-16}). Each folder's README records the
+re-score SAME on its own night at that commit; all 28 verdicts of 11-16 to 11-18 were re-scored together on 2026-11-18
+with the psf-os v0.2 prototype branch, 28 of 28 SAME (\texttt{notes/v02\_2026-11-18}); an independent re-reading with qiskit and numpy only
 (\texttt{notes/verify\_2026-11-18}) gave the same numbers and verdicts for 11-18. Figures:
 \texttt{notes/paper10\_ff/figures.py}.
 
