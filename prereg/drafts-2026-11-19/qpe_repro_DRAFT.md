@@ -6,7 +6,8 @@ build / check / dry / score). Design, size and dry runs: `notes/qpe_repro_2026-1
 
 ## Common
 
-- psf-os branch feedforward-2026-11-16 at 0f57c76. Device by the standing rule [OWNER: order, e.g. ibm_marrakesh,
+- psf-os [OWNER: feedforward-2026-11-16 at 0f57c76, or the v0.2 branch of tonight; the tool's circuits are byte for
+  byte the same with both (the workplace's rebuild of 2026-11-18 / 19)]. Device by the standing rule [OWNER: order, e.g. ibm_marrakesh,
   ibm_fez, ibm_kingston, the first qualifying]; one device record for both jobs.
 - Rule C placement (coupling graph and failed marks only); no mitigation; dynamical decoupling and twirling off;
   [OWNER: 2000] shots per circuit; every shot counted. No device error number is read. Conditional items are not
@@ -21,7 +22,8 @@ build / check / dry / score). Design, size and dry runs: `notes/qpe_repro_2026-1
 - Textbook item `tqpe{n}_{j}`: n counting qubits and the target, controlled phases and the coherent inverse QFT, routed
   on a line by the fixed rule of notes/rus_coherent_2026-11-17, final measurements only; ff, off (the same circuit: a
   replicate, beside) and floor arms.
-- One ring sentinel per job. Size at 2000 shots: A 76 circuits 46.8 s, B 100 circuits 60.6 s by the model.
+- One ring sentinel per job. Size at 2000 shots: A 76 circuits 46.8 s, B 100 circuits 60.6 s by the model (B is
+  0.6 s over a 60 s job limit if one is set; 1950 shots give B 59.3 s and A 45.6 s) [OWNER: shots].
 
 ## What is read (`score OUT_A OUT_B`), per n, within one job
 

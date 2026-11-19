@@ -1,0 +1,5 @@
+night n0: noise None; ledger no
+RULE1: L1 P0; L2 P0; L3 P0 | ledger: no ledger (used False)
+  r1: L1 NO PRESCRIPTION g +nan; L2 NO PRESCRIPTION g +nan; L3 NO PRESCRIPTION g +nan
+RULE2: L1 P0; L2 P0; L3 P0 | L1 R4 keep; L2 R4 keep; L3 R4 keep
+STOP: the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 1)

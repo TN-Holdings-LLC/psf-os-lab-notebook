@@ -1,0 +1,9 @@
+night n1: noise {'gamma': 0.05, 'p11': {'1': 0.83}}; ledger yes
+RULE1: L1 P2; L2 P1; L3 P1 | ledger: no ledger (used False)
+  r1: L1 OVERSHOOT g +0.2160; L2 PRESCRIPTION HELPS g +0.1083; L3 OVERSHOOT g +0.1450
+RULE2: L1 P2+B; L2 P1+M; L3 P2+B | L1 R1 overshoot -> P2 + B; L2 RM helps -> one more try (m 3) + M; L3 R1 overshoot -> P2 + B
+  r2: L1 PRESCRIPTION HELPS g +0.1015; L2 PRESCRIPTION HELPS g +0.1492; L3 PRESCRIPTION HELPS g +0.0556
+RULE3: L1 P2+B+Q2; L2 P1+M; L3 P2+B | L1 R2 frames -> +Q2; L2 R4 keep; L3 R4 keep
+  r3: L1 PRESCRIPTION HELPS g +0.1415; L2 PRESCRIPTION HELPS g +0.1480; L3 PRESCRIPTION HELPS g +0.0590
+RULE4: L1 P2+B+Q2; L2 P1+M; L3 P2+B | L1 R4 keep; L2 R4 keep; L3 R4 keep
+STOP: the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 3)

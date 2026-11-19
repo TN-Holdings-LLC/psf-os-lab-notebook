@@ -1,0 +1,4 @@
+ceiling: lut3 c[0] right 1.0000 (2 SE 0.0000, 16000 shots) against C 0.8750 -> BEYOND THE CEILING (margin +0.1250); off as read 0.8737
+within: lut3 1.0000 - lut1 1.0000 = +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+padded: lut5 1.0000 - lut3 1.0000 = +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+per error: n: lut3 1.000 lut1 1.000 lut5 1.000 off 1.000; 0: lut3 1.000 lut1 1.000 lut5 1.000 off 0.495; 1: lut3 1.000 lut1 1.000 lut5 1.000 off 1.000; 2: lut3 1.000 lut1 1.000 lut5 1.000 off 1.000; sentinel CLEAN

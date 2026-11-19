@@ -1,0 +1,9 @@
+night n3: noise {'gamma': 0.05, 'p11': {'1': 0.83, '3': 0.8}, 'note': 'ILLUSTRATIVE, written by hand, never fitted to a device: qubit 3 reads |1> badly, so the P1 frame at L = 2 loses (rung F)'}; ledger no
+RULE1: L1 P2; L2 P2; L3 P1 | ledger: no ledger (used False)
+  r1: L1 OVERSHOOT g +0.2160; L2 OVERSHOOT g +0.2920; L3 OVERSHOOT g +0.1450
+RULE2: L1 P2+B; L2 P2+B; L3 P2+B | L1 R1 overshoot -> P2 + B; L2 R1 overshoot -> P2 + B; L3 R1 overshoot -> P2 + B
+  r2: L1 PRESCRIPTION HELPS g +0.1015; L2 PRESCRIPTION HELPS g +0.1001; L3 PRESCRIPTION HELPS g +0.0536
+RULE3: L1 P2+B+Q4; L2 P2+B+Q2; L3 P2+B | L1 R2 frames -> +Q4; L2 R2 frames -> +Q2; L3 R4 keep
+  r3: L1 PRESCRIPTION HELPS g +0.1579; L2 PRESCRIPTION HELPS g +0.1623; L3 PRESCRIPTION HELPS g +0.0573
+RULE4: L1 P2+B+Q4; L2 P2+B+Q2; L3 P2+B | L1 R4 keep; L2 R4 keep; L3 R4 keep
+STOP: the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 3)

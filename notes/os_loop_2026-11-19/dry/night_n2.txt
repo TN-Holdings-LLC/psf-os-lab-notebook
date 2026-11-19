@@ -1,0 +1,5 @@
+night n2: noise {'gamma': 0.05, 'p11': {'1': 0.83}}; ledger yes
+RULE1: L1 P2+B+Q2; L2 P1+M; L3 P2+B | ledger: same device and calibration time (used True)
+  r1: L1 PRESCRIPTION HELPS g +0.1615; L2 PRESCRIPTION HELPS g +0.1493; L3 PRESCRIPTION HELPS g +0.0344
+RULE2: L1 P2+B+Q2; L2 P1+M; L3 P2+B | L1 R4 keep; L2 R4 keep; L3 R4 keep
+STOP: the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 1)

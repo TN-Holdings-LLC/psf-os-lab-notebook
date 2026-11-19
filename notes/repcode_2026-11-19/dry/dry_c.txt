@@ -1,0 +1,4 @@
+ceiling: lut3 c[0] right 0.8131 (2 SE 0.0062, 16000 shots) against C 0.8750 -> NOT BEYOND (margin -0.0619); off as read 0.7944
+within: lut3 0.8131 - lut1 0.8806 = -0.0676 (2 SE 0.0080) -> MORE TESTS KEEP LESS
+padded: lut5 0.7640 - lut3 0.8131 = -0.0491 (2 SE 0.0091) -> MORE TESTS KEEP LESS
+per error: n: lut3 0.822 lut1 0.884 lut5 0.765 off 0.894; 0: lut3 0.807 lut1 0.887 lut5 0.766 off 0.498; 1: lut3 0.815 lut1 0.888 lut5 0.760 off 0.894; 2: lut3 0.808 lut1 0.863 lut5 0.765 off 0.891; sentinel CLEAN
