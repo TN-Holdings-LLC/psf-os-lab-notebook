@@ -1,0 +1,11 @@
+noiseless ff of rd2 (exact, read flipped): 0.7929; singles sa 0.7345, sb 0.7340, sc 0.5787
+  e1b against sb: alone 0.7340  packed 0.7243  d -0.0097 (2 SE 0.0199)
+E1: mean d over its conditional sub-items -0.0097 (2 SE 0.0199)
+  e2a against sa: alone 0.7345  packed 0.7163  d -0.0182 (2 SE 0.0200)
+  e2b against sc: alone 0.5787  packed 0.5762  d -0.0025 (2 SE 0.0221)
+E2: mean d over its conditional sub-items -0.0104 (2 SE 0.0149)
+  e3a against sa: alone 0.7345  packed 0.7488  d +0.0143 (2 SE 0.0196)
+  e3b against sb: alone 0.7340  packed 0.6975  d -0.0365 (2 SE 0.0202)
+E3: mean d over its conditional sub-items -0.0111 (2 SE 0.0140)
+beside: E1's A (fixed, rd2's off arm) packed 0.6420 against sa's off arm 0.6110 (noiseless 0.6308): d +0.0087 (2 SE 0.0216)
+numbers only: the verdict words and the reading table are [OWNER] in prereg/drafts-2026-11-19/interfere_DRAFT.md

@@ -1,0 +1,19 @@
+ff_Afar        user   target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Afar_floor  floor  target 1 0.000  control 1 0.000  all zero 1.000  ok
+ff_Afar_off    off    target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Anb         user   target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Anb_floor   floor  target 1 0.000  control 1 0.000  all zero 1.000  ok
+ff_Anb_off     off    target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Anow        user   target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Anow_floor  floor  target 1 0.000  control 1 0.000  all zero 1.000  ok
+ff_Anow_off    off    target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Bfar        user   target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Bfar_floor  floor  target 1 0.000  control 1 0.000  all zero 1.000  ok
+ff_Bfar_off    off    target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Bnb         user   target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Bnb_floor   floor  target 1 0.000  control 1 0.000  all zero 1.000  ok
+ff_Bnb_off     off    target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Bnow        user   target 1 1.000  control 1 1.000  all zero 0.000  ok
+ff_Bnow_floor  floor  target 1 0.000  control 1 0.000  all zero 1.000  ok
+ff_Bnow_off    off    target 1 1.000  control 1 1.000  all zero 0.000  ok
+PASS

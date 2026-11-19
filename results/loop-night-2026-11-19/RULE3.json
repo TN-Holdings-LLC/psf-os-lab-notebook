@@ -1,0 +1,28 @@
+{
+ "round": 3,
+ "device": "ibm_marrakesh",
+ "rungs": [
+  "M",
+  "F"
+ ],
+ "stacks": {
+  "1": [
+   "P1",
+   "M"
+  ],
+  "2": [
+   "P0"
+  ],
+  "3": [
+   "P0"
+  ]
+ },
+ "why": {
+  "1": "RM helps -> one more try (m 3) + M",
+  "2": "R3 stop-loss: NOT SHOWN twice with the same stack -> P0",
+  "3": "R3 stop-loss: NOT SHOWN twice with the same stack -> P0"
+ },
+ "stop": false,
+ "stop_reason": null,
+ "model_seconds_so_far": 117.0
+}

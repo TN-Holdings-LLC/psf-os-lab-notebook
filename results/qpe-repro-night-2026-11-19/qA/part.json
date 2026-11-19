@@ -1,0 +1,23 @@
+{
+ "part": "A",
+ "ns": [
+  2,
+  3
+ ],
+ "shots": 1950,
+ "device": "ibm_marrakesh",
+ "circuits": 76,
+ "qpu_seconds_model": 45.8,
+ "circuits_sha256": "d6c5de9f7ed2e87ebeecdf97297d1661b013d6c9d63f1c8f1aeab3872ad600fb",
+ "circuits_digest": {
+  "all": "45c60fd462d0629a9e02bf3a24fca71814caaa8e2a662e7dfb2ce389122580c1",
+  "tests": "8e38b7a30526faad8bb3c9a7926c61856c1f579807ceb3dbf3547984e87c73bc",
+  "sentinel": "5c67eddf626b62aafc7a606c7fa5faac216fe9d0a790af05b8ab53363f1ae5cd"
+ },
+ "versions": {
+  "qiskit": "2.5.2",
+  "qiskit_aer": "0.17.2",
+  "psf_os": "5e4a936",
+  "python": "3.12.13"
+ }
+}

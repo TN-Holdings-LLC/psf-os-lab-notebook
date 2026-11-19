@@ -1,0 +1,127 @@
+{
+ "build_env": {
+  "python": "3.12.13",
+  "qiskit": "2.5.2",
+  "qiskit-aer": "0.17.2",
+  "qiskit-ibm-runtime": "0.49.0",
+  "numpy": "2.5.3"
+ },
+ "dry": false,
+ "dry_devdir": null,
+ "noise": null,
+ "k_max": 4,
+ "budget": 240.0,
+ "rungs": [
+  "M",
+  "F"
+ ],
+ "ledger": "/home/psf/n1119/os-ledger.json",
+ "zip": "/mnt/c/Users/Administrator/Desktop/psf_zero_project/res_loop1119.zip",
+ "started": "2026-11-19T10:17:44+00:00 (2026-11-19 11:17:44 CET)",
+ "device": "ibm_marrakesh",
+ "experiment": "rus-chain loop (os3 rungs +M, +F; ledger)",
+ "preflight": [
+  {
+   "item": "import qiskit",
+   "ok": true,
+   "detail": "2.5.2"
+  },
+  {
+   "item": "import qiskit_aer",
+   "ok": true,
+   "detail": "0.17.2"
+  },
+  {
+   "item": "import psf_os",
+   "ok": true,
+   "detail": "0.1.1"
+  },
+  {
+   "item": "psf_os.loop (psf-os v0.2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "psf-os at 5e4a936",
+   "ok": true,
+   "detail": "5e4a936f3755"
+  },
+  {
+   "item": "psf_os/ unchanged in its checkout",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "item": "gpu/daily_fetch.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/wait_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/ctrl_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/os_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/os2_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "gpu/os3_night.py",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "the declaration prereg/os_loop_night_2026-11-19.md exists",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "the declaration is directly in prereg/ (not a draft)",
+   "ok": true,
+   "detail": "prereg/os_loop_night_2026-11-19.md"
+  },
+  {
+   "item": "notebook HEAD is the declaration's commit",
+   "ok": true,
+   "detail": "HEAD be3147c7, the declaration last changed in be3147c7"
+  },
+  {
+   "item": "notebook checkout unchanged",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "item": "a saved IBM account exists (the file only, not read)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "OUT does not exist yet",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "the zip's folder is writable",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "item": "the zip does not exist yet",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "expect_psf_os": "5e4a936",
+ "declaration": "prereg/os_loop_night_2026-11-19.md"
+}

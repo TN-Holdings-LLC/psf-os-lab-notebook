@@ -1,0 +1,14 @@
+{
+ "shots": 4000,
+ "device": "ibm_marrakesh",
+ "circuits": 40,
+ "qpu_seconds_model": 47.6,
+ "broadcast": {
+  "conditionals": 144,
+  "condition_bits": 216,
+  "broadcasts": 48,
+  "broadcast_bits": 72,
+  "max_conditionals_per_circuit": 7
+ },
+ "build_env": null
+}

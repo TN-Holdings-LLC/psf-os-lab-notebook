@@ -224,6 +224,22 @@ RESULTS = {
         ["gpu/ctrl_night.py", "score", "{T}"], "ctrl_scores.json"),
     "os2-night-2026-11-18-r1": ("results/os2-night-2026-11-18/r1", ["job", "runs", "build.json", "rule.json"],
         ["gpu/os2_night.py", "score", "{T}"], "round_scores.json"),
+    "loop-night-2026-11-19-dw": ("results/loop-night-2026-11-19/dw", ["job", "runs", "build.json"],
+        ["gpu/wait_night.py", "score", "{T}"], "wait_scores.json"),
+    "loop-night-2026-11-19-dc": ("results/loop-night-2026-11-19/dc", ["job", "runs", "build.json"],
+        ["gpu/ctrl_night.py", "score", "{T}"], "ctrl_scores.json"),
+    "loop-night-2026-11-19-r1": ("results/loop-night-2026-11-19/r1", ["job", "runs", "build.json", "rule.json"],
+        ["gpu/os3_night.py", "score", "{T}"], "round_scores.json"),
+    "loop-night-2026-11-19-r2": ("results/loop-night-2026-11-19/r2", ["job", "runs", "build.json", "rule.json"],
+        ["gpu/os3_night.py", "score", "{T}"], "round_scores.json"),
+    "loop-night-2026-11-19-r3": ("results/loop-night-2026-11-19/r3", ["job", "runs", "build.json", "rule.json"],
+        ["gpu/os3_night.py", "score", "{T}"], "round_scores.json"),
+    "interfere-night-2026-11-19": ("results/interfere-night-2026-11-19", ["job", "runs", "plan.json"],
+        ["gpu/interfere_night.py", "score", "{T}"], "interfere_scores.json"),
+    "repcode-night-2026-11-19": ("results/repcode-night-2026-11-19", ["job", "runs", "build.json", "part.json"],
+        ["gpu/repcode_night.py", "score", "{T}"], "repcode_scores.json"),
+    "qpe-repro-night-2026-11-19": ("results/qpe-repro-night-2026-11-19", ["qA", "qB"],
+        ["gpu/qpe_repro_night.py", "score", "{T}/qA", "{T}/qB"], "qA/qpe_scores.json"),
 }
 
 

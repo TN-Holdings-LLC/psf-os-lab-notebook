@@ -1,0 +1,76 @@
+{
+ "pick": {
+  "1": "P1",
+  "2": "P1",
+  "3": "P1"
+ },
+ "why": "rule 1 (Dc late-use loss); rule 2 per L (Dr)",
+ "device": "ibm_marrakesh",
+ "late_nb": {
+  "A": {
+   "d": 0.060250000000000026,
+   "two_se": 0.010545375171135452,
+   "beyond_2se": true
+  },
+  "B": {
+   "d": 0.044499999999999984,
+   "two_se": 0.009879366123390715,
+   "beyond_2se": true
+  }
+ },
+ "late_loss": {
+  "A": true,
+  "B": true
+ },
+ "cond": {
+  "A": {
+   "d": 0.003249999999999975,
+   "two_se": 0.010713178216570467,
+   "beyond_2se": false
+  },
+  "B": {
+   "d": 0.00924999999999998,
+   "two_se": 0.010670353204088422,
+   "beyond_2se": false
+  }
+ },
+ "cond_loss": {
+  "A": false,
+  "B": false
+ },
+ "dr": {
+  "1": {
+   "item": "Anow",
+   "p_read1_given1": 0.97325,
+   "p_read0_given0": 0.9795,
+   "gap": {
+    "d": 0.006250000000000089,
+    "two_se": 0.00679074277969649,
+    "loss": false
+   },
+   "physical_qubit": 1
+  },
+  "2": {
+   "item": "Bnow",
+   "p_read1_given1": 0.99275,
+   "p_read0_given0": 0.9955,
+   "gap": {
+    "d": 0.00275000000000003,
+    "two_se": 0.003417190000570634,
+    "loss": false
+   },
+   "physical_qubit": 3
+  },
+  "3": {
+   "item": "Bref",
+   "p_read1_given1": 0.98275,
+   "p_read0_given0": 0.9825,
+   "gap": {
+    "d": -0.00024999999999997247,
+    "two_se": 0.005843473923959955,
+    "loss": false
+   },
+   "physical_qubit": 5
+  }
+ }
+}

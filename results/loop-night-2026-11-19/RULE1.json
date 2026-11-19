@@ -1,0 +1,108 @@
+{
+ "round": 1,
+ "device": "ibm_marrakesh",
+ "stacks": {
+  "1": [
+   "P1"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P1"
+  ]
+ },
+ "why": {
+  "1": "round 1: gpu/os_night.py rule",
+  "2": "round 1: gpu/os_night.py rule",
+  "3": "round 1: gpu/os_night.py rule"
+ },
+ "dr_in": {
+  "1": {
+   "p11": 0.97325,
+   "p00": 0.9795,
+   "gap": 0.006250000000000089,
+   "two_se": 0.00679074277969649,
+   "sig": false
+  },
+  "3": {
+   "p11": 0.99275,
+   "p00": 0.9955,
+   "gap": 0.00275000000000003,
+   "two_se": 0.003417190000570634,
+   "sig": false
+  },
+  "5": {
+   "p11": 0.98275,
+   "p00": 0.9825,
+   "gap": -0.00024999999999997247,
+   "two_se": 0.005843473923959955,
+   "sig": false
+  }
+ },
+ "stop": false,
+ "stop_reason": null,
+ "model_seconds_so_far": 55.2,
+ "pick": {
+  "1": "P1",
+  "2": "P1",
+  "3": "P1"
+ },
+ "diagnostics_stacks": {
+  "1": [
+   "P1"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P1"
+  ]
+ },
+ "ledger": {
+  "used": false,
+  "per_key": {},
+  "last_night": {
+   "night": "os2-night-2026-11-18",
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-18 11:05:21+01:00"
+  },
+  "why": "other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:59:49+01:00): start from tonight's diagnostics"
+ },
+ "ledger_last": {
+  "night": "os2-night-2026-11-18",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-18 11:05:21+01:00",
+  "rungs": [],
+  "rounds_run": 1,
+  "ledger_used": false,
+  "ledger_why": "os2",
+  "last_stacks": {
+   "1": [
+    "P1"
+   ],
+   "2": [
+    "P1"
+   ],
+   "3": [
+    "P1"
+   ]
+  },
+  "last_g": {
+   "1": 0.03225,
+   "2": 0.025499999999999967,
+   "3": 0.05525000000000002
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "PRESCRIPTION HELPS",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "seeded_from_records": true
+ },
+ "calibration_time": "2026-11-19 10:59:49+01:00",
+ "rungs": [
+  "M",
+  "F"
+ ]
+}

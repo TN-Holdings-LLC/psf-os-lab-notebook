@@ -1,0 +1,455 @@
+{
+ "device": "ibm_marrakesh",
+ "dry_clifford_sentinel": false,
+ "chain_A": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "chain_B": [
+  5,
+  6,
+  7,
+  8
+ ],
+ "chain_C": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "gap_wide": 3,
+ "circuits": 22,
+ "s_model": 27.6,
+ "bundles": {
+  "E1": {
+   "gap": 1,
+   "bit_order": null,
+   "items": [
+    "e1a",
+    "e1b"
+   ],
+   "chains": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ]
+  },
+  "E2": {
+   "gap": 3,
+   "bit_order": null,
+   "items": [
+    "e2a",
+    "e2b"
+   ],
+   "chains": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     7,
+     8,
+     9,
+     10
+    ]
+   ]
+  },
+  "E3": {
+   "gap": 1,
+   "bit_order": [
+    "e3b",
+    "e3a"
+   ],
+   "items": [
+    "e3a",
+    "e3b"
+   ],
+   "chains": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ]
+  }
+ },
+ "manifest_bundles": {
+  "E1": {
+   "conditional_neighbours": {
+    "items": [
+     "e1b"
+    ],
+    "allowed": true,
+    "used": false
+   },
+   "conditionals_per_item": {
+    "e1a": 0,
+    "e1b": 2
+   }
+  },
+  "E2": {
+   "conditional_neighbours": {
+    "items": [
+     "e2a",
+     "e2b"
+    ],
+    "allowed": true,
+    "used": true
+   },
+   "conditionals_per_item": {
+    "e2a": 2,
+    "e2b": 2
+   },
+   "bundle_gap": 3
+  },
+  "E3": {
+   "conditional_neighbours": {
+    "items": [
+     "e3a",
+     "e3b"
+    ],
+    "allowed": true,
+    "used": true
+   },
+   "conditionals_per_item": {
+    "e3a": 2,
+    "e3b": 2
+   },
+   "bit_order": [
+    "e3b",
+    "e3a"
+   ]
+  }
+ },
+ "build_single": {
+  "device": "ibm_marrakesh",
+  "kind": "feedforward",
+  "items": {
+   "sa": {
+    "n": 4,
+    "chain": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "cz": 12,
+    "off_cz": 6,
+    "floor_cz": 12,
+    "depth": 44,
+    "mid": 4,
+    "conditionals": 2,
+    "success": {},
+    "bound": null,
+    "rus": {
+     "L": 2,
+     "theta": 1.1,
+     "m": 2,
+     "out_bit": 4,
+     "tries": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "exact": 0.8781824642913858
+    },
+    "cz_in_blocks": 6
+   },
+   "sb": {
+    "n": 4,
+    "chain": [
+     5,
+     6,
+     7,
+     8
+    ],
+    "cz": 12,
+    "off_cz": 6,
+    "floor_cz": 12,
+    "depth": 44,
+    "mid": 4,
+    "conditionals": 2,
+    "success": {},
+    "bound": null,
+    "rus": {
+     "L": 2,
+     "theta": 1.1,
+     "m": 2,
+     "out_bit": 4,
+     "tries": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "exact": 0.8781824642913858
+    },
+    "cz_in_blocks": 6
+   },
+   "sc": {
+    "n": 4,
+    "chain": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "cz": 12,
+    "off_cz": 6,
+    "floor_cz": 12,
+    "depth": 44,
+    "mid": 4,
+    "conditionals": 2,
+    "success": {},
+    "bound": null,
+    "rus": {
+     "L": 2,
+     "theta": 1.1,
+     "m": 2,
+     "out_bit": 4,
+     "tries": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "exact": 0.8781824642913858
+    },
+    "cz_in_blocks": 6
+   }
+  },
+  "circuits": 13,
+  "qpu_seconds_model": 17.5,
+  "shots": 4000,
+  "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+ },
+ "build_bundles": {
+  "E1": {
+   "device": "ibm_marrakesh",
+   "kind": "feedforward",
+   "bundle": "E1",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "segments": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "items": {
+    "e1a": {
+     "n": 4,
+     "chain": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "bit_offset": 0,
+     "clbits": 5,
+     "cz": 6
+    },
+    "e1b": {
+     "n": 4,
+     "chain": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "bit_offset": 5,
+     "clbits": 5,
+     "cz": 12
+    }
+   },
+   "circuits": 7,
+   "qpu_seconds_model": 10.8,
+   "shots": 4000,
+   "cz": {
+    "ff": 18,
+    "off": 12,
+    "floor": 18
+   }
+  },
+  "E2": {
+   "device": "ibm_marrakesh",
+   "kind": "feedforward",
+   "bundle": "E2",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "segments": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     7,
+     8,
+     9,
+     10
+    ]
+   ],
+   "items": {
+    "e2a": {
+     "n": 4,
+     "chain": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "bit_offset": 0,
+     "clbits": 5,
+     "cz": 12
+    },
+    "e2b": {
+     "n": 4,
+     "chain": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "bit_offset": 5,
+     "clbits": 5,
+     "cz": 12
+    }
+   },
+   "circuits": 7,
+   "qpu_seconds_model": 10.8,
+   "shots": 4000,
+   "cz": {
+    "ff": 24,
+    "off": 12,
+    "floor": 24
+   }
+  },
+  "E3": {
+   "device": "ibm_marrakesh",
+   "kind": "feedforward",
+   "bundle": "E3",
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "segments": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "items": {
+    "e3a": {
+     "n": 4,
+     "chain": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "bit_offset": 5,
+     "clbits": 5,
+     "cz": 12
+    },
+    "e3b": {
+     "n": 4,
+     "chain": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "bit_offset": 0,
+     "clbits": 5,
+     "cz": 12
+    }
+   },
+   "circuits": 7,
+   "qpu_seconds_model": 10.8,
+   "shots": 4000,
+   "cz": {
+    "ff": 24,
+    "off": 12,
+    "floor": 24
+   }
+  }
+ }
+}

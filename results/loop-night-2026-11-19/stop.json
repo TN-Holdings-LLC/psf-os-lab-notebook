@@ -1,0 +1,6 @@
+{
+ "reason": "the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 3)",
+ "resumable": false,
+ "written": "2026-11-19T10:22:22+00:00 (2026-11-19 11:22:22 CET)",
+ "rounds": 3
+}

@@ -1,0 +1,28 @@
+{
+ "round": 4,
+ "device": "ibm_marrakesh",
+ "rungs": [
+  "M",
+  "F"
+ ],
+ "stacks": {
+  "1": [
+   "P1",
+   "M"
+  ],
+  "2": [
+   "P0"
+  ],
+  "3": [
+   "P0"
+  ]
+ },
+ "why": {
+  "1": "R4 keep",
+  "2": "R4 keep",
+  "3": "R4 keep"
+ },
+ "stop": true,
+ "stop_reason": "fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time",
+ "model_seconds_so_far": 141.2
+}

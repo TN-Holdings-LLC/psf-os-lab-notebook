@@ -1,0 +1,698 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "ipe4_0": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 0,
+   "off_cz": 0,
+   "floor_cz": 0,
+   "depth": 31,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_1": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 63,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "ipe4_2": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 59,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_3": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 61,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  },
+  "ipe4_4": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 46,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_5": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 63,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "ipe4_6": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 56,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_7": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 61,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  },
+  "ipe4_8": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 4,
+   "off_cz": 4,
+   "floor_cz": 4,
+   "depth": 39,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_9": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 63,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "ipe4_10": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 59,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_11": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 61,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  },
+  "ipe4_12": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 43,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_13": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 63,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "ipe4_14": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 56,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "ipe4_15": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 61,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 36,
+   "off_cz": 36,
+   "floor_cz": 36,
+   "depth": 102,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 164,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 160,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_3": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 162,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_4": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 60,
+   "off_cz": 60,
+   "floor_cz": 60,
+   "depth": 148,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_5": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 164,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_6": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 158,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_7": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 162,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null
+  },
+  "tqpe4_8": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 64,
+   "off_cz": 64,
+   "floor_cz": 64,
+   "depth": 157,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_9": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 164,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_10": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 160,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_11": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 162,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_12": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 60,
+   "off_cz": 60,
+   "floor_cz": 60,
+   "depth": 148,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_13": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 164,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_14": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 158,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  },
+  "tqpe4_15": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 80,
+   "off_cz": 80,
+   "floor_cz": 80,
+   "depth": 162,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1
+   },
+   "bound": null
+  }
+ },
+ "circuits": 100,
+ "qpu_seconds_model": 59.2,
+ "shots": 1950,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

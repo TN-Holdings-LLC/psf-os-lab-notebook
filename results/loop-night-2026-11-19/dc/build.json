@@ -1,0 +1,136 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "Anow": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 1,
+   "off_cz": 1,
+   "floor_cz": 1,
+   "depth": 8,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1
+   },
+   "bound": null
+  },
+  "Afar": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 1,
+   "off_cz": 1,
+   "floor_cz": 1,
+   "depth": 14,
+   "mid": 5,
+   "conditionals": 0,
+   "success": {
+    "5": 1
+   },
+   "bound": null
+  },
+  "Anb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 1,
+   "off_cz": 1,
+   "floor_cz": 1,
+   "depth": 14,
+   "mid": 5,
+   "conditionals": 0,
+   "success": {
+    "5": 1
+   },
+   "bound": null
+  },
+  "Bnow": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 1,
+   "off_cz": 1,
+   "floor_cz": 1,
+   "depth": 8,
+   "mid": 0,
+   "conditionals": 0,
+   "success": {
+    "0": 1
+   },
+   "bound": null
+  },
+  "Bfar": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 1,
+   "off_cz": 1,
+   "floor_cz": 1,
+   "depth": 14,
+   "mid": 5,
+   "conditionals": 0,
+   "success": {
+    "5": 1
+   },
+   "bound": null
+  },
+  "Bnb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 1,
+   "off_cz": 1,
+   "floor_cz": 1,
+   "depth": 14,
+   "mid": 5,
+   "conditionals": 0,
+   "success": {
+    "5": 1
+   },
+   "bound": null
+  }
+ },
+ "circuits": 22,
+ "qpu_seconds_model": 27.6,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

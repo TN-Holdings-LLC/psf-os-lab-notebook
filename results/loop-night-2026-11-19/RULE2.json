@@ -1,0 +1,27 @@
+{
+ "round": 2,
+ "device": "ibm_marrakesh",
+ "rungs": [
+  "M",
+  "F"
+ ],
+ "stacks": {
+  "1": [
+   "P1"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P1"
+  ]
+ },
+ "why": {
+  "1": "R4 keep",
+  "2": "R4 keep",
+  "3": "R4 keep"
+ },
+ "stop": false,
+ "stop_reason": null,
+ "model_seconds_so_far": 86.1
+}
