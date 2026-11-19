@@ -37,9 +37,13 @@ broadcast bits).
 1. Ceiling: **BEYOND THE CEILING** when p3 >= C + 2 SE, otherwise **NOT BEYOND** (the words of the earlier ceiling
    tests).
 2. More tests inside one item [OWNER: which comparison is judged]:
-   - (a) lut3 against lut1 (the control of the handover): d = p3 - p1. Note: under noise a syndrome can be wrong, and
-     lut3 corrects what it reads while lut1 acts on one value only, so (a) mixes the number of tests with the decoder.
-   - (b) lut5 against lut3 (the same decoder, two more tests): d = p5 - p3. The clean comparison.
+   - (a) lut3 against lut1 (the control of the handover): d = p3 - p1. lut1 is a decoder told where the error is: under
+     noise it never acts on a wrong syndrome and never corrects an error elsewhere, so (a) mixes the number of tests
+     with the decoder.
+   - (b) lut5 against lut3 (the same decoder, two more tests): d = p5 - p3. The added tests (s == 0) fire noiselessly
+     for e = none only and never for e = d0, d1, d2 (the workplace VS's check), and on 2026-11-16 an unfired
+     conditional cost nothing measurable; so (b) is also scored per group: (b0) e = d0, d1, d2 pooled (the added tests
+     never fire) and (b1) e = none (they fire). [OWNER: judge (b) pooled, (b0), or (b0) and (b1) apart.]
    Words [OWNER]: **MORE TESTS KEEP LESS** (d <= -2 SE), **SAME WITHIN ERROR**, **MORE TESTS KEEP MORE** (d >= 2 SE).
    This separates a loss with more conditionals inside one item from the loss between items side by side of
    2026-11-17 / 18.

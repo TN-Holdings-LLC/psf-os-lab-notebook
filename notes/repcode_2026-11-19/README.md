@@ -48,3 +48,11 @@ noise a it reads -0.0031 (2 SE 0.0061), SAME. Both are scored; which one is judg
 | d: dephasing 60 % per conditional | 0.501 NOT BEYOND | -0.012 LESS | -0.002 SAME |
 
 Every verdict word is reached.
+
+## After the workplace VS's check (2026-11-19, `vs/VS_CHECK.md`; every check passed)
+
+lut5's two added tests (s == 0) fire noiselessly for e = none only and never for e = d0, d1, d2; on 2026-11-16 an
+unfired conditional cost nothing measurable, while the dry noise here costs every test, fired or not. `score` now gives
+lut5 - lut3 per group beside the pooled d: added tests never fire (e = d0, d1, d2) and fire (e = none). Dry runs: noise
+a -0.003 / -0.003 (SAME / SAME); noise c -0.047 / -0.057 (KEEP LESS / KEEP LESS). The circuits are unchanged (the
+same build and check). lut1 is a decoder told where the error is (the VS's wording, now in the draft).

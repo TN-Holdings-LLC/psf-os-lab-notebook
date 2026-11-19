@@ -1,4 +1,6 @@
 ceiling: lut3 c[0] right 0.5006 (2 SE 0.0079, 16000 shots) against C 0.8750 -> NOT BEYOND (margin -0.3744); off as read 0.5334
 within: lut3 0.5006 - lut1 0.5126 = -0.0121 (2 SE 0.0112) -> MORE TESTS KEEP LESS
 padded: lut5 0.4986 - lut3 0.5006 = -0.0019 (2 SE 0.0112) -> SAME WITHIN ERROR
+   added_tests_never_fire (e = 0, 1, 2): -0.0013 (2 SE 0.0129) -> SAME WITHIN ERROR
+   added_tests_fire (e = n): -0.0037 (2 SE 0.0224) -> SAME WITHIN ERROR
 per error: n: lut3 0.498 lut1 0.511 lut5 0.494 off 0.543; 0: lut3 0.498 lut1 0.516 lut5 0.496 off 0.498; 1: lut3 0.505 lut1 0.518 lut5 0.496 off 0.545; 2: lut3 0.501 lut1 0.505 lut5 0.508 off 0.547; sentinel CLEAN

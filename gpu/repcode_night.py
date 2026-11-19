@@ -15,7 +15,10 @@ and no rule on the recorded bits can repair it afterwards.
 
 Items (4000 shots each, ff / off / floor arms, one ring sentinel; one job):
   lut3_e   the full table, three tests on register s (s == 1 -> X d0, s == 3 -> X d1, s == 2 -> X d2)
-  lut1_e   one test only, the one that fires for error e (for no error: the test of s == 1, which never fires)
+  lut1_e   one test only, the one that fires for error e (for no error: the test of s == 1, which never fires): a
+           decoder told where the error is
+  lut5_e   lut3 and two tests of s == 0 with a Z on an ancilla holding its measured value (they change nothing; they
+           fire for e = none only, so lut5 - lut3 is also scored per group: added tests never fire / fire)
   for e in none, 0, 1, 2. The off arm (given explicitly): no look-up, the ancilla resets kept (the same for lut1 and
   lut3). Both versions hold the two reset conditionals.
 
@@ -366,6 +369,15 @@ def score(a):
     p1, s1, N1 = _pool(l1, "ff")
     p5, s5, N5 = _pool(l5, "ff")
     d5, sd5 = p5 - p3, math.sqrt(s5 ** 2 + s3 ** 2)
+
+    def group(es):
+        a5, b5, _ = _pool([cards[f"lut5_{e}"] for e in es], "ff")
+        a3, b3, _ = _pool([cards[f"lut3_{e}"] for e in es], "ff")
+        dd, ss = a5 - a3, math.sqrt(b5 ** 2 + b3 ** 2)
+        return dict(errors=list(es), lut5=a5, lut3=a3, d=dd, two_se=2 * ss, verdict=within_verdict(dd, ss))
+    # 2026-11-19, after the workplace VS's check: lut5's two added tests (s == 0) fire noiselessly for e = none only,
+    # never for e = d0, d1, d2; the two groups are scored apart, beside the pooled d
+    groups = dict(added_tests_never_fire=group(("0", "1", "2")), added_tests_fire=group(("n",)))
     po, so, _ = _pool(l3, "off")
     d, sd = p3 - p1, math.sqrt(s3 ** 2 + s1 ** 2)
     per = {}
@@ -377,13 +389,15 @@ def score(a):
     out = dict(ceiling=dict(p=p3, two_se=2 * s3, N=N3, C=I["ceiling"], margin=p3 - I["ceiling"],
                             verdict=ceiling_verdict(p3, s3, I["ceiling"])),
                within=dict(lut3=p3, lut1=p1, d=d, two_se=2 * sd, verdict=within_verdict(d, sd)),
-               padded=dict(lut5=p5, lut3=p3, d=d5, two_se=2 * sd5, verdict=within_verdict(d5, sd5)),
+               padded=dict(lut5=p5, lut3=p3, d=d5, two_se=2 * sd5, verdict=within_verdict(d5, sd5), groups=groups),
                beside=dict(off_c0=po, per_error=per, sentinel=l3[0]["sentinel"]))
     json.dump(out, open(os.path.join(a.out, "repcode_scores.json"), "w"), indent=1)
     print(f"ceiling: lut3 c[0] right {p3:.4f} (2 SE {2 * s3:.4f}, {N3} shots) against C {I['ceiling']:.4f} -> "
           f"{out['ceiling']['verdict']} (margin {p3 - I['ceiling']:+.4f}); off as read {po:.4f}")
     print(f"within: lut3 {p3:.4f} - lut1 {p1:.4f} = {d:+.4f} (2 SE {2 * sd:.4f}) -> {out['within']['verdict']}")
     print(f"padded: lut5 {p5:.4f} - lut3 {p3:.4f} = {d5:+.4f} (2 SE {2 * sd5:.4f}) -> {out['padded']['verdict']}")
+    for nm, g in groups.items():
+        print(f"   {nm} (e = {', '.join(g['errors'])}): {g['d']:+.4f} (2 SE {g['two_se']:.4f}) -> {g['verdict']}")
     print("per error: " + "; ".join(f"{e}: lut3 {v['lut3']:.3f} lut1 {v['lut1']:.3f} lut5 {v['lut5']:.3f} off {v['off']:.3f}"
                                     for e, v in per.items()) + f"; sentinel {l3[0]['sentinel']}")
     return out
