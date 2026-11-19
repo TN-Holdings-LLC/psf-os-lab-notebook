@@ -235,9 +235,9 @@ RESULTS = {
     "loop-night-2026-11-19-r3": ("results/loop-night-2026-11-19/r3", ["job", "runs", "build.json", "rule.json"],
         ["gpu/os3_night.py", "score", "{T}"], "round_scores.json"),
     "interfere-night-2026-11-19": ("results/interfere-night-2026-11-19", ["job", "runs", "plan.json"],
-        ["gpu/interfere_night.py", "score", "{T}"], "interfere_scores.json"),
+        ["gpu/interfere_night.py", "score", "{T}"], "interfere_scores.json", "404daf9f"),
     "repcode-night-2026-11-19": ("results/repcode-night-2026-11-19", ["job", "runs", "build.json", "part.json"],
-        ["gpu/repcode_night.py", "score", "{T}"], "repcode_scores.json"),
+        ["gpu/repcode_night.py", "score", "{T}"], "repcode_scores.json", "404daf9f"),
     "qpe-repro-night-2026-11-19": ("results/qpe-repro-night-2026-11-19", ["qA", "qB"],
         ["gpu/qpe_repro_night.py", "score", "{T}/qA", "{T}/qB"], "qA/qpe_scores.json"),
 }
@@ -332,10 +332,14 @@ def main():
         with tempfile.TemporaryDirectory() as t:
             copy_result(src, parts, t)
             if rev:  # the scorer as it was when the committed scores were made
-                arc = subprocess.run(["git", "archive", rev[0], "gpu"], cwd=ROOT, capture_output=True, check=True)
-                subprocess.run(["tar", "-x", "-C", t], input=arc.stdout, check=True)
-                os.rename(os.path.join(t, "gpu"), os.path.join(t, "_gpu_at_rev"))
-                cmd = [os.path.join(t, "_gpu_at_rev", cmd[0][len("gpu/"):])] + cmd[1:]
+                # gpu/ and the notes' Python modules at rev, laid out as in the notebook (scorers that add notes/
+                # folders to sys.path relative to their own file find them)
+                rt = os.path.join(t, "_at_rev")
+                os.makedirs(rt)
+                arc = subprocess.run(["git", "archive", rev[0], "gpu", ":(glob)notes/**/*.py"], cwd=ROOT,
+                                     capture_output=True, check=True)
+                subprocess.run(["tar", "-x", "-C", rt], input=arc.stdout, check=True)
+                cmd = [os.path.join(rt, cmd[0])] + cmd[1:]
             run = subprocess.run([sys.executable] + [c.replace("{T}", t) for c in cmd], cwd=ROOT, env=env,
                                  capture_output=True, text=True)
             if run.returncode != 0:

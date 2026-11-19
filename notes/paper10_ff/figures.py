@@ -97,8 +97,8 @@ def fig_packing():
 
 # --- 11-19 (the score files written by the declared tools; nothing is re-scored here) ---
 
-NIGHT19 = dict(loop="os-loop-night-2026-11-19", interfere="interfere-night-2026-11-19",
-               repcode="repcode-night-2026-11-19", qpe=("qpe-repro-night-2026-11-19/A", "qpe-repro-night-2026-11-19/B"))
+NIGHT19 = dict(loop="loop-night-2026-11-19", interfere="interfere-night-2026-11-19",
+               repcode="repcode-night-2026-11-19", qpe=("qpe-repro-night-2026-11-19/qA", "qpe-repro-night-2026-11-19/qB"))
 
 
 def _res(d):
@@ -122,7 +122,8 @@ def fig_loop19(folder):
     ax.axhline(0, color=MUTED, lw=1)
     for i, L in enumerate(Ls):
         off = (i - (len(Ls) - 1) / 2) * 0.08
-        pts = [(k, r["rows"][L]) for k, r in zip(ks, rounds) if L in r["rows"]]
+        # rows without g (stack P0: no prescription, nothing to score) are left out
+        pts = [(k, r["rows"][L]) for k, r in zip(ks, rounds) if L in r["rows"] and "g" in r["rows"][L]]
         x = [k + off for k, _ in pts]
         g = [row["g"] for _, row in pts]
         ax.plot(x, g, color=C[i % 4], lw=2, label=f"L = {L}", zorder=2)
