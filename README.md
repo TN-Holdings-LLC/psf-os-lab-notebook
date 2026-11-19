@@ -9,8 +9,10 @@ The readable-depth metric now lives in [TN-Holdings-LLC/readable-depth](https://
 
 Papers: 7 [doi:10.5281/zenodo.24046673](https://doi.org/10.5281/zenodo.24046673) (2026-11-08), 8
 [doi:10.5281/zenodo.24136512](https://doi.org/10.5281/zenodo.24136512) (2026-11-11), 9
-[doi:10.5281/zenodo.24278888](https://doi.org/10.5281/zenodo.24278888) (2026-11-16); records in `notes/paper7/`,
-`notes/paper8/`, `notes/paper9/` (`ZENODO.md`).
+[doi:10.5281/zenodo.24278888](https://doi.org/10.5281/zenodo.24278888) (2026-11-16), 10
+[doi:10.5281/zenodo.24367001](https://doi.org/10.5281/zenodo.24367001) (2026-11-19, with psf-os 0.2.0
+[doi:10.5281/zenodo.24367846](https://doi.org/10.5281/zenodo.24367846)); records in `notes/paper7/`, `notes/paper8/`,
+`notes/paper9/`, `notes/paper10_ff/` (`ZENODO.md`).
 
 ## The original TOQB (kept as it was)
 

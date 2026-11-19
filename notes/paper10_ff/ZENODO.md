@@ -1,7 +1,9 @@
 # Paper 10, version 1: Zenodo input (home, 2026-11-19; from the workplace's draft ZENODO_DRAFT.md)
 
-DOI reserved by the owner on 2026-11-19: **10.5281/zenodo.24367001** (draft saved, not yet published at the time of
-writing). psf-os 0.2.0 was released on GitHub and archived by Zenodo the same evening: doi:10.5281/zenodo.24367846.
+Published by the owner on 2026-11-19: **doi:10.5281/zenodo.24367001** (version 1.0; all versions
+10.5281/zenodo.24367000). The description was first pasted from the PDF (first sentence lost, spaces lost at line ends)
+and replaced the same evening with the plain text below; the title was set to the PDF's full title (record page read by
+the owner, 21:06 JST). psf-os 0.2.0 was released on GitHub and archived by Zenodo the same evening: doi:10.5281/zenodo.24367846.
 
 - Upload: `TN-Holdings_Paper10_v1_Decisions-No-Correction-Can-Reach.pdf` (the same bytes as
   `notes/paper10_ff/paper10_v1.pdf`, built from `notes/paper10_ff/paper10.tex` in the commit that adds this file).
