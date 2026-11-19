@@ -199,13 +199,15 @@ def preflight(dry=False, out=None, zip_path=None, expect_psf_os=None, declaratio
         add("psf_os.loop (psf-os v0.2)", True)
         root = os.path.dirname(os.path.dirname(os.path.abspath(psf_os.__file__)))
         head = git("-C", root, "rev-parse", "HEAD")
-        dirty = git("-C", root, "status", "--porcelain", "--untracked-files=no", "--", "psf_os")
+        # untracked files count too (after 2026-11-19, the workplace VS's side point): a new module placed in psf_os/
+        # would be imported without changing any tracked file; ignored files (__pycache__, *.pyc) are not listed
+        dirty = git("-C", root, "status", "--porcelain", "--untracked-files=all", "--", "psf_os")
         if dry and not expect_psf_os:
             add("psf-os commit", True, f"not checked (dry); HEAD {head[:8]}")
         else:
             add(f"psf-os at {expect_psf_os}", bool(expect_psf_os) and bool(head) and head.startswith(expect_psf_os),
                 head[:12] or "not a git checkout")
-            add("psf_os/ unchanged in its checkout", dirty == "", dirty or "clean")
+            add("psf_os/ unchanged in its checkout (no new files)", dirty == "", dirty or "clean")
     except Exception as exc:  # noqa: BLE001
         add("psf_os.loop (psf-os v0.2)", False, type(exc).__name__)
     for f in ("daily_fetch.py", "wait_night.py", "ctrl_night.py", "os_night.py", "os2_night.py", "os3_night.py"):
