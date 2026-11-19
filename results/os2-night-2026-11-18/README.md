@@ -5,6 +5,9 @@
   PASS (`versions.txt`; notes: qiskit-aer 0.17.2 and qiskit-ibm-runtime 0.49.0, not the workplace's 0.18.0 / 0.51.0,
   not a stop). The loop fetched its own record at 11:25:50 CET (queue marrakesh 1, fez 1, kingston 0 -> ibm_marrakesh;
   calibration 2026-11-18 10:40 CET) (`fetch_in/`).
+  - Correction (2026-11-19, the workplace VS's check of 19c): the loop's own record says calibration
+    2026-11-18 11:05:21+01:00 (`fetch_in/ibm_marrakesh/dev/device.json`, fetched 11:25:39 CET); 10:40 is the stamp of
+    the record fetched at 11:17 for the other tests of the night. The scores are unchanged.
 - `verify` on the owner's machine right after the run: SAME on every line (`verify_on_owner_pc.txt`). At home (the
   same qiskit 2.5.2): every score, rule and prediction SAME; the three jobs' circuits.qpy differ only in the four
   ring-sentinel circuits of each job (rebuilt and compared circuit by circuit; the sentinel's compiled bytes differ

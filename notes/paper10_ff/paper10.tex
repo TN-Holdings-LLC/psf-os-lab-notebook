@@ -215,8 +215,8 @@ the circuit as written) and overshot at $L = 1$ (one of two predictions failed; 
 is the next round's input, prescriptions stack in a fixed order (base, +B the balanced pair, +Q move the output to a qubit
 with less readout gap), and a loss-cutting rule removes the last step after two rounds without a credited gain; a fixed
 point, four rounds or 240 s of device time by the model stop it. On 11-18 one command on the owner's machine ran it with
-nobody in between: diagnostics showed a late-use loss but no readout gap on the output qubits (the device had been
-recalibrated at 10:40), so the rule picked P1, not the previous night's P2; P1 helped at every $L$ ($+0.032, +0.026,
+nobody in between: diagnostics showed a late-use loss but no readout gap on the output qubits (the loop's own device record,
+fetched at 11:25, carried the calibration time 11:05; the other tests of the night ran on a record stamped 10:40), so the rule picked P1, not the previous night's P2; P1 helped at every $L$ ($+0.032, +0.026,
 +0.055$, 2 SE 0.017--0.022) without overshoot; the rule kept every stack and the loop stopped at a fixed point after one
 round (82 s charged). The prediction that the rule would change a stack between rounds failed; the one that the last
 round would not overshoot held. A check of the run on the owner's machine and at home gave the same scores, rules and
