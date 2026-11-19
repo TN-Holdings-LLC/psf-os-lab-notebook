@@ -7,7 +7,8 @@
   2026-11-19 10:59:49+01:00).
 - Ledger: the declared seed (11-18, calibration 11:05:21) was **not used**: "other calibration (2026-11-18
   11:05:21+01:00 -> 2026-11-19 10:59:49+01:00): start from tonight's diagnostics" (the declared gate). The night
-  appended its own line to the copy (`ledger_written`), never to the committed seed.
+  appended its own line to the copy (`ledger_written`), never to the committed seed; the copy after the night, from the
+  owner's machine, is `os-ledger_after.json` (the seed's line and the night's).
 - `verify` on the owner's machine: every step SAME (`verify_on_owner_pc.txt`). At home (qiskit-aer 0.18.0): every step
   SAME by the test circuits' gates (bytes differ with the versions; the ring sentinel differs, beside).
 

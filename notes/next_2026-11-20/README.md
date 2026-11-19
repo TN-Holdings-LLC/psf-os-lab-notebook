@@ -16,5 +16,5 @@ Proposals only; nothing below is built or declared. The owner chose 1 and 2 for 
 5. Repetition code: 0.063 under its ceiling; fewer CZ / conditionals per item (lut3 - lut1 = -0.010 beside).
 6. Phase estimation: the IPE-textbook gap grew with n (+0.03, +0.07, +0.17); n = 5, 6 would show where IPE meets its
    ceiling.
-7. Records: the loop's ledger line of the night stays outside the record (the owner's ~/n1119/os-ledger.json); copy it
-   into the record (asked of the owner 2026-11-19). Done: the loop table's SE of g (db30739b).
+7. Records: done. The loop's ledger after the night is in the record (`results/loop-night-2026-11-19/os-ledger_after.json`);
+   the loop table's SE of g corrected (db30739b).
