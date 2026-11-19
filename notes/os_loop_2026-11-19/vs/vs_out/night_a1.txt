@@ -1,0 +1,6 @@
+night a1
+RULE1 {"1": ["P2"], "2": ["P1"], "3": ["P1"]} {"1": "round 1: gpu/os_night.py rule", "2": "round 1: gpu/os_night.py rule", "3": "round 1: gpu/os_night.py rule"} 
+RULE2 {"1": ["P2", "B"], "2": ["P1", "M"], "3": ["P2", "B"]} {"1": "R1 overshoot -> P2 + B", "2": "RM helps -> one more try (m 3) + M", "3": "R1 overshoot -> P2 + B"} 
+RULE3 {"1": ["P2", "B", "Q2"], "2": ["P1", "M"], "3": ["P2", "B"]} {"1": "R2 frames -> +Q2", "2": "R4 keep", "3": "R4 keep"} 
+RULE4 {"1": ["P2", "B", "Q2"], "2": ["P1", "M"], "3": ["P2", "B"]} {"1": "R4 keep", "2": "R4 keep", "3": "R4 keep"} stop
+stop: the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 3)
