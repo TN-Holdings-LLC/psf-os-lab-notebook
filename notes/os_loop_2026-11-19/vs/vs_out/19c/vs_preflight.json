@@ -1,0 +1,47 @@
+[
+ {
+  "case": "ok: everything as declared",
+  "ok": true,
+  "note": "failing: -"
+ },
+ {
+  "case": "sha: another expected psf-os commit",
+  "ok": true,
+  "note": "['psf-os at 0000000']"
+ },
+ {
+  "case": "psfdirty: psf_os/ changed",
+  "ok": true,
+  "note": "['psf_os/ unchanged in its checkout']"
+ },
+ {
+  "case": "psfdirty (beside): an untracked new file in psf_os/ is not seen",
+  "ok": true,
+  "note": "failing: - (preflight uses --untracked-files=no)"
+ },
+ {
+  "case": "dirty: the notebook checkout changed (a staged file)",
+  "ok": true,
+  "note": "['notebook checkout unchanged']"
+ },
+ {
+  "case": "moved: a commit after the declaration",
+  "ok": true,
+  "note": "[\"notebook HEAD is the declaration's commit\"]"
+ },
+ {
+  "case": "draft: a draft given as the declaration (HEAD at its last commit) is refused",
+  "ok": false,
+  "note": "failing: none: the draft passes"
+ },
+ {
+  "case": "nodecl: go without --expect-psf-os / --declaration is refused, nothing made",
+  "ok": true,
+  "note": "a device run needs --expect-psf-os and --declaration"
+ },
+ {
+  "case": "failgo: go with a preflight FAIL starts nothing",
+  "ok": true,
+  "note": "t exist yet: \nPREFLIGHT FAIL\npreflight FAIL: nothing started"
+ }
+]

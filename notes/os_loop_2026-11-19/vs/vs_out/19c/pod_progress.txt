@@ -1,0 +1,13 @@
+2026-11-19T02:22:49Z setup start
+2026-11-19T02:23:30Z pip done rc=0
+2026-11-19T02:23:31Z setup done
+2026-11-19T02:26:36Z go_pod start
+2026-11-19T02:28:13Z go_pod done rc=0
+2026-11-19T02:28:13Z verify_pod start
+2026-11-19T02:28:38Z verify_pod done rc=0
+2026-11-19T02:28:38Z verify_win_on_pod start
+2026-11-19T02:29:04Z verify_win_on_pod done rc=1
+2026-11-19T02:29:04Z verify_win_on_pod_resim start
+2026-11-19T02:30:22Z verify_win_on_pod_resim done rc=1
+2026-11-19T02:30:23Z all done
+pod versions 3.12.3 2.5.2 0.17.2 2.5.3
