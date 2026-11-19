@@ -50,3 +50,13 @@ builds); every manifest records the build environment.
   (P1+M), RF at L1 and L2 (P2+M+F: Dr against the P1 frame), R1 (P2+B), R2 (+Q4, +Q2), stop at K = 4
   (`dry/night_n5.txt`). The rung F fires when a night starts from P1, as the workplace VS found. Tonight the ledger
   is used only if the device's calibration time is still 2026-11-18 11:05:21+01:00.
+
+## After the workplace VS's check of 19c (psf-os 5e4a936)
+
+- verify across machines also drops the manifest's per-cell byte hashes (qpy_sha256, run_sha256) when the bytes differ
+  (the VS's patch). Tried here: a dry night built with the owner's versions (qiskit 2.5.2, aer 0.17.2, numpy 2.5.3)
+  verified with qiskit 2.6.1: every job SAME by the test circuits' gates. The reverse cannot be read (qiskit 2.5.2 does
+  not read QPY format 18): verify says NOT CHECKED for those jobs (not SAME, not a crash). So verify a night with a
+  qiskit at least as new as the one that recorded it.
+- preflight: the declaration must sit directly in prereg/ (a draft below it fails).
+- only a FAILED job ends the night; UNKNOWN or a result not fetched stops it resumably.

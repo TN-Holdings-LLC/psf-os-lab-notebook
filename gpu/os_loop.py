@@ -216,6 +216,10 @@ def preflight(dry=False, out=None, zip_path=None, expect_psf_os=None, declaratio
     else:
         decl = git("-C", NB, "log", "-1", "--format=%H", "--", declaration) if declaration else ""
         add(f"the declaration {declaration} exists", bool(declaration) and os.path.exists(os.path.join(NB, declaration)))
+        # 2026-11-19 (the workplace VS): a declaration sits directly in prereg/ (drafts below it are not declarations)
+        norm = os.path.normpath(declaration or "")
+        add("the declaration is directly in prereg/ (not a draft)", os.path.dirname(norm) == "prereg"
+            and norm.endswith(".md"), norm)
         add("notebook HEAD is the declaration's commit", bool(decl) and head == decl,
             f"HEAD {head[:8]}, the declaration last changed in {decl[:8] or 'no commit'}")
         dirty = git("-C", NB, "status", "--porcelain", "--untracked-files=no")
