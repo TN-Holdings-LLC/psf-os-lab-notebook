@@ -1,0 +1,5 @@
+n 12 L  8 A      exact +0.117 raw +0.096 k_true 0.820 k_twin 0.829 k_mirror 0.811 g -0.018 | err twin -0.001 mirror +0.001  [68s]
+n 12 L  8 C0.05  exact +0.117 raw +0.146 k_true 1.249 k_twin 0.829 k_mirror 0.728 g -0.100 | err twin +0.059 mirror +0.084  [137s]
+n 12 L  8 D      exact +0.117 raw +0.093 k_true 0.798 k_twin 0.803 k_mirror 0.773 g -0.030 | err twin -0.001 mirror +0.004  [206s]
+n 12 L  8 C0.02  exact +0.117 raw +0.109 k_true 0.934 k_twin 0.829 k_mirror 0.796 g -0.032 | err twin +0.015 mirror +0.020  [279s]
+n 12 L  8 C0.1   exact +0.117 raw +0.244 k_true 2.090 k_twin 0.829 k_mirror 0.558 g -0.271 | err twin +0.178 mirror +0.321  [345s]

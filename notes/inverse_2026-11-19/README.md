@@ -62,11 +62,27 @@ illustrative values too, not any device's.)
 2. Knowing the noise exactly means fitting a noise model to the device, which this project does not do (calibration
    numbers are not read; noise is not fitted). With a model off by 20 % or missing an error, a bias remains that no
    number of shots removes, and a coherent error can be amplified.
-3. Where the inverse can be contracted exactly as a tensor (here n = 8), the noiseless answer can be computed the same
-   way without the device; this is why psf-os uses its light-cone tensor networks as answer keys.
-4. It sits under the correction ceiling of paper 10: any processing after the run, the inverse included, returns at
-   best the circuit's noiseless value; to go beyond it takes decisions inside the circuit (and, at depth, error
-   correction).
+3. (Corrected after home's reading, 2026-11-19.) The first version said that where the inverse can be contracted
+   exactly, the answer can be computed the same way. That held for this n = 8 desk test only; tensor-network error
+   mitigation (Filippov et al., arXiv:2307.11740) argues that the inverse map is near the identity and cheaper to
+   represent than the circuit, with a measurement overhead quadratically smaller than PEC's; not checked against the
+   full text here. The wall that remains for every inverse is the shot count growing exponentially.
+4. The correction ceiling of paper 10 bounds correcting the uncontrolled circuit afterwards only; mitigation applied
+   to the controlled circuit itself is another matter and could stack on decisions inside the circuit (PEC for
+   dynamic circuits, Gupta et al.), an old line with little new in it. Home's and the owner's decision: not a main
+   line.
+
+## Twin against mirror (the workplace VS, `vs_twin_mirror/`, 2026-11-19; desk, illustrative noise)
+
+The light hypothesis left: in one job, the gap g = k_mirror - k_twin between the shares kept read by the mirror and by
+the Clifford twin (psf_os.twin rules) marks a coherent error, without a noise model. The VS's answer: not in this
+form. Even with stochastic noise only (A) g moves away from 0 with depth (+0.015, -0.020, -0.100 at L = 2, 8, 20;
+2 SE 0.002-0.005 at 40 000 shots), so a nonzero g does not say "coherent", and the baseline g would need a noise
+model. A coherent ZZ of 0.05 rad moves g 6-8 times more than one-qubit noise at L >= 8, but 0.02 rad no more than it;
+the mirror's share goes down, not up (ZZ enters both ways with the same sign); with the coherent error the twin
+rescale is mostly nearer the exact value than the mirror's (L = 8: +0.033 against +0.148), but not at L = 12 (+0.20).
+In this circuit the twin stays at |0...0> (the small kicks round to nothing), so it sees neither ZZ nor Z-type error.
+Stopped here, as the owner asked (no deep chase); a circuit with larger kicks would be the next look, if any.
 
 What could be tried on a device later, if the owner wants it (a declaration would be needed, and the rule on fitted
 noise would have to be decided first): the model-free mirror rescale beside the raw value on a declared circuit with a
