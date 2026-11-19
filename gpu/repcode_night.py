@@ -285,23 +285,10 @@ def check(a):
     return not bad
 
 
-def _dephase_after_conditionals(cc, lam):
-    from qiskit_aer.noise import phase_damping_error
-    if not lam:
-        return cc
-    err = phase_damping_error(lam).to_instruction()
-    out = cc.copy_empty_like()
-    for ins in cc.data:
-        out.append(ins.operation, ins.qubits, ins.clbits)
-        if ins.operation.name == "if_else":
-            for q in out.qubits:
-                out.append(err, [q])
-    return out
-
-
 def dry(a):
     """Dry runs only, ILLUSTRATIVE noise written by hand: depolarizing p2 on every CZ, damping gamma at each
-    mid-circuit read (branch_noise.noisy_circuit), dephasing dephase_cond after every conditional, readout p00 / p11."""
+    mid-circuit read (branch_noise.noisy_circuit), dephasing dephase_cond after every conditional or
+    dephase_fired inside a conditional only when it fires (gpu/cond_noise.py), readout p00 / p11."""
     from qiskit import qpy
     from qiskit_aer import AerSimulator
     from qiskit_aer.noise import depolarizing_error
@@ -309,6 +296,7 @@ def dry(a):
     from psf_os.ibm import _stamp
     from psf_os.sim import to_clifford_gates
     import branch_noise as BN
+    import cond_noise as CN
     noise = json.load(open(a.noise))
     job = os.path.join(a.out, "job")
     if os.path.exists(os.path.join(job, "submission.json")):
@@ -326,7 +314,8 @@ def dry(a):
             nm = BN.readout_model(phys, noise)
             if noise.get("p2"):
                 nm.add_all_qubit_quantum_error(depolarizing_error(float(noise["p2"]), 2), ["cz"])
-            nc = _dephase_after_conditionals(BN.noisy_circuit(cc, noise.get("gamma", 0.0)), noise.get("dephase_cond", 0))
+            nc = CN.dephase_conditionals(BN.noisy_circuit(cc, noise.get("gamma", 0.0)), noise.get("dephase_cond", 0.0),
+                                        noise.get("dephase_fired", 0.0))
             res = AerSimulator(method="density_matrix", noise_model=nm).run(nc, shots=man["shots"],
                                                                               seed_simulator=seed).result()
         rows.append(dict(pub=k, counts={key.replace(" ", ""): v for key, v in res.get_counts(0).items()}))
@@ -378,6 +367,8 @@ def score(a):
     # 2026-11-19, after the workplace VS's check: lut5's two added tests (s == 0) fire noiselessly for e = none only,
     # never for e = d0, d1, d2; the two groups are scored apart, beside the pooled d
     groups = dict(added_tests_never_fire=group(("0", "1", "2")), added_tests_fire=group(("n",)))
+    groups["added_tests_never_fire"]["label"] = "(b0)"     # the declaration's names (labels added after 2026-11-19)
+    groups["added_tests_fire"]["label"] = "(b1)"
     po, so, _ = _pool(l3, "off")
     d, sd = p3 - p1, math.sqrt(s3 ** 2 + s1 ** 2)
     per = {}
@@ -394,10 +385,13 @@ def score(a):
     json.dump(out, open(os.path.join(a.out, "repcode_scores.json"), "w"), indent=1)
     print(f"ceiling: lut3 c[0] right {p3:.4f} (2 SE {2 * s3:.4f}, {N3} shots) against C {I['ceiling']:.4f} -> "
           f"{out['ceiling']['verdict']} (margin {p3 - I['ceiling']:+.4f}); off as read {po:.4f}")
-    print(f"within: lut3 {p3:.4f} - lut1 {p1:.4f} = {d:+.4f} (2 SE {2 * sd:.4f}) -> {out['within']['verdict']}")
-    print(f"padded: lut5 {p5:.4f} - lut3 {p3:.4f} = {d5:+.4f} (2 SE {2 * sd5:.4f}) -> {out['padded']['verdict']}")
     for nm, g in groups.items():
-        print(f"   {nm} (e = {', '.join(g['errors'])}): {g['d']:+.4f} (2 SE {g['two_se']:.4f}) -> {g['verdict']}")
+        print(f"{g['label']} {nm} (e = {', '.join(g['errors'])}): lut5 - lut3 {g['d']:+.4f} (2 SE {g['two_se']:.4f}) -> "
+              f"{g['verdict']}" + ("  [judged: RC-2]" if g["label"] == "(b0)" else "  [judged; no direction declared]"))
+    print(f"beside, not judged: (a) lut3 {p3:.4f} - lut1 {p1:.4f} = {d:+.4f} (2 SE {2 * sd:.4f}) -> "
+          f"{out['within']['verdict']}")
+    print(f"beside, not judged: (b) pooled lut5 {p5:.4f} - lut3 {p3:.4f} = {d5:+.4f} (2 SE {2 * sd5:.4f}) -> "
+          f"{out['padded']['verdict']}")
     print("per error: " + "; ".join(f"{e}: lut3 {v['lut3']:.3f} lut1 {v['lut1']:.3f} lut5 {v['lut5']:.3f} off {v['off']:.3f}"
                                     for e, v in per.items()) + f"; sentinel {l3[0]['sentinel']}")
     return out

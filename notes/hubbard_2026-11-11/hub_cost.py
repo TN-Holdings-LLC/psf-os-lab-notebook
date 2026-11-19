@@ -18,12 +18,23 @@ usage: python hub_cost.py L STEPS METHOD [CHI] REPORT.jsonl VALUES_OUT.npz [--th
 import argparse
 import json
 import os
-import resource
 import time
+
+try:                                # Unix only; on Windows the peak memory is not recorded (None)
+    import resource
+except ImportError:
+    resource = None
 
 import numpy as np
 
 J, U, DT = 1.0, 4.0, 0.25
+
+
+def _peak_rss_gb():
+    """Peak resident memory in GB (ru_maxrss is in kB on Linux); None where resource is missing (Windows)."""
+    if resource is None:
+        return None
+    return round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1e6, 2)
 
 
 def circuit(L, steps):
@@ -111,7 +122,7 @@ def main():
     sec = time.time() - t0
     up, dn = z[0::2].sum(), z[1::2].sum()
     row = dict(L=a.L, qubits=2 * a.L, steps=a.steps, Jt=a.steps * DT, method=a.method, chi=a.chi or None,
-               seconds=round(sec, 1), peak_rss_gb=round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1e6, 2),
+               seconds=round(sec, 1), peak_rss_gb=_peak_rss_gb(),
                max_bond=bond, error_estimate=err, check_sum_z=float(z.sum()), check_sz=float(up - dn),
                cx_transpiled=cx_count(logical), two_qubit_blocks=sum(1 for i in qc.data if len(i.qubits) == 2),
                kit="d")

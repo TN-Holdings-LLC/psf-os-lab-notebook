@@ -243,22 +243,6 @@ def check(a):
     return not bad
 
 
-def _dephase_after_conditionals(cc, lam):
-    """Illustrative stand-in for the wait a conditional costs: phase damping lam on every qubit after each top-level
-    conditional block (dry runs only; makes the per-shot comparison read the other way when lam is large)."""
-    from qiskit_aer.noise import phase_damping_error
-    if not lam:
-        return cc
-    err = phase_damping_error(lam).to_instruction()
-    out = cc.copy_empty_like()
-    for ins in cc.data:
-        out.append(ins.operation, ins.qubits, ins.clbits)
-        if ins.operation.name == "if_else":
-            for q in out.qubits:
-                out.append(err, [q])
-    return out
-
-
 def dry(a):
     """Dry runs only: every circuit under an ILLUSTRATIVE noise written by hand (never fitted, no calibration number):
     depolarizing p2 on every CZ, damping gamma on the other qubits at each mid-circuit read (the workplace VS's
@@ -271,6 +255,7 @@ def dry(a):
     from psf_os.ibm import _stamp
     from psf_os.sim import to_clifford_gates
     import branch_noise as BN
+    import cond_noise as CN
     noise = json.load(open(a.noise))
     job = os.path.join(a.out, "job")
     sub = os.path.join(job, "submission.json")
@@ -291,7 +276,8 @@ def dry(a):
             if noise.get("p2"):
                 nm.add_all_qubit_quantum_error(depolarizing_error(float(noise["p2"]), 2), ["cz"])
             sim = AerSimulator(method="density_matrix", noise_model=nm)
-            nc = _dephase_after_conditionals(BN.noisy_circuit(cc, noise.get("gamma", 0.0)), noise.get("dephase_cond", 0.0))
+            nc = CN.dephase_conditionals(BN.noisy_circuit(cc, noise.get("gamma", 0.0)), noise.get("dephase_cond", 0.0),
+                                        noise.get("dephase_fired", 0.0))
             res = sim.run(nc, shots=man["shots"], seed_simulator=seed).result()
         rows.append(dict(pub=k, counts={key.replace(" ", ""): v for key, v in res.get_counts(0).items()}))
     t = _stamp()

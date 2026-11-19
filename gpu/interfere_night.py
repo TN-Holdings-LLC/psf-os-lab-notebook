@@ -192,6 +192,16 @@ def check(a):
     return not bad
 
 
+def verdict(d, two_se):
+    """The words of P-B, as declared for 2026-11-19 (prereg/interfere_night_2026-11-19.md): per sub-item and per
+    bundle. Added after the night (the workplace VS: the night's score gave numbers only)."""
+    if d <= -two_se:
+        return "PACKED KEEPS LESS"
+    if d >= two_se:
+        return "PACKED KEEPS MORE"
+    return "SAME WITHIN ERROR"
+
+
 def score(a):
     import coherent as CO
     import rus3_night as R3
@@ -219,10 +229,12 @@ def score(a):
                            still_single=s.get("still_failed_after_m"), still_packed=p.get("still_failed_after_m"))
             ds.append(d)
             ses.append(se)
-            say(f"  {t} against {st}: alone {s['p1']:.4f}  packed {p['p1']:.4f}  d {d:+.4f} (2 SE {2 * se:.4f})")
+            rows[t]["verdict"] = verdict(d, 2 * se)
+            say(f"  {t} against {st}: alone {s['p1']:.4f}  packed {p['p1']:.4f}  d {d:+.4f} (2 SE {2 * se:.4f}) -> "
+                f"{rows[t]['verdict']}")
         m, ms = sum(ds) / len(ds), 2 * math.sqrt(sum(x * x for x in ses)) / len(ses)
-        rows[name] = dict(mean=m, two_se=ms)
-        say(f"{name}: mean d over its conditional sub-items {m:+.4f} (2 SE {ms:.4f})")
+        rows[name] = dict(mean=m, two_se=ms, verdict=verdict(m, ms))
+        say(f"{name}: mean d over its conditional sub-items {m:+.4f} (2 SE {ms:.4f}) -> {rows[name]['verdict']}")
     # E1's fixed A against sa's off arm (beside)
     sa_off = c["sa"]["off"]
     e1a = c["e1a"]["ff"]          # the bundle's ff arm holds A's off circuit (fixed) as its sub-item
@@ -235,7 +247,8 @@ def score(a):
                              two_se=2 * se_(sa_off, e1a))
     say(f"beside: E1's A (fixed, rd2's off arm) packed {e1a['p1']:.4f} against sa's off arm {sa_off['p1']:.4f} "
         f"(noiseless {v_off:.4f}): d {d:+.4f} (2 SE {2 * se_(sa_off, e1a):.4f})")
-    say("numbers only: the verdict words and the reading table are [OWNER] in prereg/drafts-2026-11-19/interfere_DRAFT.md")
+    say("the words as declared in prereg/interfere_night_2026-11-19.md (per sub-item and per bundle); the reading table "
+        "is read by hand from them")
     json.dump(dict(rows=rows, noiseless=v, noiseless_off=v_off), open(os.path.join(a.out, "interfere_scores.json"), "w"),
               indent=1)
     open(os.path.join(a.out, "score.txt"), "w").write("\n".join(lines) + "\n")

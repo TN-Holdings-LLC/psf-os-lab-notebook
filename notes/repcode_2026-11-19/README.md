@@ -56,3 +56,14 @@ unfired conditional cost nothing measurable, while the dry noise here costs ever
 lut5 - lut3 per group beside the pooled d: added tests never fire (e = d0, d1, d2) and fire (e = none). Dry runs: noise
 a -0.003 / -0.003 (SAME / SAME); noise c -0.047 / -0.057 (KEEP LESS / KEEP LESS). The circuits are unchanged (the
 same build and check). lut1 is a decoder told where the error is (the VS's wording, now in the draft).
+
+## After the night of 2026-11-19 (branch after-2026-11-19; not used that night)
+
+The workplace VS's item 4: a dry noise in which a conditional costs only when it fires. `gpu/cond_noise.py` holds both
+forms; `dephase_fired` widens each conditional's block to every qubit and dephases them all inside the true branch,
+so a test that never fires costs nothing (a cost on the block's own qubits alone would miss lut5's added tests, a Z on
+an ancilla holding a classical value; what a fired test costs is time, which every waiting qubit pays). Noise f
+(`noise/illus_f.json`: CZ 0.2 %, damping 2 % per read, 50 % dephasing per fired conditional; ILLUSTRATIVE, never
+fitted), `dry/dry_f.txt`: (b0) +0.001 (2 SE 0.013) SAME WITHIN ERROR, (b1) -0.419 (2 SE 0.017) MORE TESTS KEEP LESS.
+The dry runs can now tell (b0) from (b1); the earlier noises c and d cost every test and could not.
+gpu/qpe_repro_night.py's dry reads the same key.

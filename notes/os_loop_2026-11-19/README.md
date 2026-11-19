@@ -60,3 +60,10 @@ builds); every manifest records the build environment.
   qiskit at least as new as the one that recorded it.
 - preflight: the declaration must sit directly in prereg/ (a draft below it fails).
 - only a FAILED job ends the night; UNKNOWN or a result not fetched stops it resumably.
+
+## After the night of 2026-11-19 (branch after-2026-11-19; not used that night)
+
+- preflight counts untracked files under psf-os's psf_os/ too (the workplace VS's side point): a new module placed there
+  would be imported with every tracked file unchanged. Tried on a scratch clone at 5e4a936 with an empty
+  `psf_os/extra_module.py`: `FAIL psf_os/ unchanged in its checkout (no new files): ?? psf_os/extra_module.py`; without
+  it, clean. Ignored files (`__pycache__`, `*.pyc`) are not counted.

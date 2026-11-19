@@ -33,8 +33,8 @@ the actions removed. Whatever is done to that uncontrolled circuit after the run
 shot cost, returns at best its own noiseless value; the distance from that value to the exact answer is a
 \emph{correction ceiling} $c$. We ask whether real-time control on today's cloud devices gets closer to the exact answer
 than $c$, with every shot counted, no mitigation, and every test declared in git before the device record of its run
-was fetched. Over three nights on three IBM Heron devices (49 declared predictions, 33 held, 16 failed and reported as
-failed), chains of repeat-until-success (RUS) neurons crossed the ceiling and the margin grew with the chain length
+was fetched. Over four nights on IBM Heron devices (57 declared predictions: of the 49 of 11-16 to 11-18, 33 held and
+16 failed; \pending{$h$ of the 8 of 11-19 held, $8 - h$ failed}; every failed one is reported as failed), chains of repeat-until-success (RUS) neurons crossed the ceiling and the margin grew with the chain length
 (slope $+0.024$ per neuron on ibm\_fez; $+0.031$ and, after a recalibration, $+0.053$ for a frame-balanced pair on
 ibm\_marrakesh); iterative phase estimation crossed its ceiling at $n=2,3$ on ibm\_fez and $n=4$ on ibm\_marrakesh
 (0.903 against 0.471 at $n=4$). Getting
@@ -46,7 +46,10 @@ construction. Two limits are measured: fixed circuits can share a circuit with n
 items with conditionals in one circuit cost the control arm (0.20 on average with ten items; 0.06 on the first of two),
 which a delay did not remove and which is not explained by decisions waiting for each other (no decision latency above $\approx0.4\,\mu$s was resolved). Finally, a
 prescription loop that diagnoses the device, applies a fixed rule and runs the chosen circuit ran unattended on the
-device and picked a different prescription after the device was recalibrated. What the device keeps of the noiseless
+device and picked a different prescription after the device was recalibrated. \pending{11-19, one sentence each: what
+the 0.06 loss between two conditional items follows (place, bit order or nearness; E1--E3); whether two more tests inside
+one item cost anything when they do not fire (repetition code, (b0)); phase estimation run again against its ceiling
+and, as a separate yardstick, against the textbook circuit; the loop run from the package with a ledger.} What the device keeps of the noiseless
 value varies by night (0.61--0.87 for the same balanced pair on two nights); no quantum advantage is claimed.
 \end{abstract}
 
@@ -252,6 +255,102 @@ fast-path actors and two actors whose blocks hold a CZ each ran side by side, ra
 (the prediction that the CZ actors would wait for each other failed; \texttt{timing-night-2026-11-18}). So the packing
 loss is not explained by decisions waiting for each other at this resolution; its mechanism is open.
 
+\section{Where the loss sits, tests inside one item, and phase estimation again (11-19)}\label{sec:night19}
+Three single jobs, declared with the loop of section~\ref{sec:update} in one commit before the night's device record was
+fetched (\texttt{prereg/interfere\_night\_2026-11-19.md}, \texttt{repcode\_night\_2026-11-19.md},
+\texttt{qpe\_repro\_night\_2026-11-19.md}), built on the loop's device record (\pending{device}, calibration time
+\pending{time stamp}) with psf-os v0.2 (\texttt{5e4a936}); rule C placement, no mitigation, DD and twirling off, every
+shot counted, each job's \texttt{check} before submission. Table~\ref{tab:night19} puts two numbers side by side for
+each test: the share as read, given for orientation and never judged, and the number the declared verdict is taken on,
+with its 2 SE.
+
+\begin{table}[H]
+\centering\small
+\begin{tabular}{@{}lp{4.0cm}p{1.9cm}p{3.0cm}p{2.3cm}p{1.8cm}@{}}
+\toprule
+test & item & share as read & judged number (2 SE) & verdict & prediction \\
+\midrule
+E1 & B (conditional) next to a fixed A & \pending{} & $d = $ \pending{} & \pending{} & IF-3 \pending{} \\
+E2 & A, three sites between & \pending{} & $d = $ \pending{} & \pending{} & IF-2 \pending{} \\
+E2 & B & \pending{} & $d = $ \pending{} & \pending{} & --- \\
+E2 & bundle: mean of A and B & --- & $\bar d = $ \pending{} & \pending{} & --- \\
+E3 & A, bits now after B's & \pending{} & $d = $ \pending{} & \pending{} & IF-1 \pending{} \\
+E3 & B, bits now first & \pending{} & $d = $ \pending{} & \pending{} & IF-1 \pending{} \\
+E3 & bundle: mean of A and B & --- & $\bar d = $ \pending{} & \pending{} & --- \\
+\midrule
+rep.\ code & lut3, ceiling 0.875 & $p_3 = $ \pending{} & $p_3 - C = $ \pending{} & \pending{} & RC-1 \pending{} \\
+rep.\ code & (b0) lut5 $-$ lut3, added tests never fire & \pending{} & $d = $ \pending{} & \pending{} & RC-2 \pending{} \\
+rep.\ code & (b1) lut5 $-$ lut3, added tests fire & \pending{} & $d = $ \pending{} & \pending{} & none declared \\
+\midrule
+IPE & $n = 2$, ceiling 0.7500 & $p = $ \pending{} & $p - C = $ \pending{} & \pending{} & Q-1 \pending{} \\
+IPE & $n = 3$, ceiling 0.5884 & $p = $ \pending{} & $p - C = $ \pending{} & \pending{} & Q-1 \pending{} \\
+IPE & $n = 4$, ceiling 0.4706 & $p = $ \pending{} & $p - C = $ \pending{} & \pending{} & Q-1 \pending{} \\
+per shot & $n = 2$: IPE $-$ textbook & $q = $ \pending{} & $d = p - q = $ \pending{} & \pending{} & none declared \\
+per shot & $n = 3$: IPE $-$ textbook & $q = $ \pending{} & $d = p - q = $ \pending{} & \pending{} & none declared \\
+per shot & $n = 4$: IPE $-$ textbook & $q = $ \pending{} & $d = p - q = $ \pending{} & \pending{} & none declared \\
+\bottomrule
+\end{tabular}
+\caption{11-19. Share as read: E1--E3 the packed item's share right; the repetition code and IPE the share of shots
+right. Judged number: E1--E3 $d = |s - v| - |p - v|$ (positive: packed kept more); the repetition code and IPE the
+margin over the ceiling, and $d$ between two designs. Verdicts in the declared words only. \pending{fill from
+\texttt{interfere\_scores.json}, \texttt{repcode\_scores.json}, \texttt{qpe\_scores.json}.}}
+\label{tab:night19}
+\end{table}
+
+\IfFileExists{fig_night19.pdf}{\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_night19.pdf}
+\caption{11-19. (a) E1--E3: $d$ per conditional sub-item, 2 SE bars. (b) Repetition code: $p_3$ against the ceiling
+0.875, and (b0), (b1) lut5 $-$ lut3. (c) Phase estimation: IPE $p$ against $C(n)$, and the textbook circuit's $q$
+(a separate yardstick; no ceiling).}
+\label{fig:night19}
+\end{figure}}{\pending{figure fig\_night19.pdf from figures.py}}
+
+\paragraph{What the packing loss follows (E1--E3).} On 11-18 (P-B) the first of two conditional items, A on qubits 0--3
+with its bits first in the register, lost 0.06 on its output bit while B did not move; three things went together in
+A: its qubits, its bits' place in the register, and B one site away. E1 reverses B1 (a conditional item on B's qubits
+next to a fixed A); E2 puts three sites between A and B; E3 swaps the bit order (B's bits first, A's after). Each
+conditional sub-item is judged against its own single circuit on the same qubits, $d = |s - v| - |p - v|$, per sub-item
+and per bundle: PACKED KEEPS LESS ($d \le -2$ SE), PACKED KEEPS MORE ($d \ge 2$ SE), or SAME WITHIN ERROR, the words of
+P-B (below, ``lost'' is PACKED KEEPS LESS and ``did not lose'' either of the other two). In E3, A \pending{lost / did not lose} ($d = $ \pending{}) and B \pending{lost / did not lose} ($d = $ \pending{});
+in E2, A \pending{lost / did not lose} ($d = $ \pending{}). By the reading table fixed before the data, the loss
+\pending{follows the place (qubits 0--3 or their readout) / follows the bit order / needs both A's place and A's bits
+first, or was 11-18's / follows nearness}. In E1, B read \pending{SAME WITHIN ERROR / PACKED KEEPS LESS / PACKED KEEPS MORE} next to a fixed A; per bundle,
+E2 read \pending{} and E3 \pending{} (the mean $d$ over their two conditional sub-items).
+IF-1 (E3: A loses, B does not) \pending{held / failed}, IF-2 (E2: A's loss remains) \pending{held / failed}, IF-3 (E1:
+SAME WITHIN ERROR for B) \pending{held / failed}. These three bundles cannot tell the place from the qubits' readout
+(\texttt{\pending{results folder}}).
+
+\paragraph{More tests inside one item (repetition code).} A distance-3 bit-flip repetition code with one injected error
+(none, or on d0, d1, d2) is read by a look-up on its syndrome register before a final measurement. The ceiling is the
+best fixed rule on the uncontrolled circuit's other recorded bits, noiseless and exact, $C = 0.875$ pooled over the four
+errors; only the error on d0 makes the margin, the other three check that nothing else is lost. lut3 holds the three
+tests of the full look-up; lut5 adds two tests that change nothing ($s = 0$, a $Z$ on an ancilla holding its measured
+value). Noiselessly the added tests fire only when there is no error, so (b) is judged in two groups: (b0) the three
+errors pooled, where the added tests never fire, and (b1) no error, where they fire; the words for each are MORE TESTS
+KEEP LESS, SAME WITHIN ERROR, MORE TESTS KEEP MORE. lut3 was \pending{BEYOND THE CEILING / NOT BEYOND} ($p_3 = $
+\pending{}, margin \pending{}, 2 SE \pending{}); RC-1 \pending{held / failed}. In (b0) the two tests that never fired
+read \pending{SAME WITHIN ERROR / MORE TESTS KEEP LESS / MORE TESTS KEEP MORE} ($d = $ \pending{}), so RC-2 \pending{held / failed};
+in (b1), where they fired, $d = $ \pending{} (\pending{verdict}; no direction declared, not counted as a prediction).
+\pending{One sentence: what (b0) and (b1) together say about a conditional's cost inside one item, beside the loss
+between items side by side of 11-17 and 11-18.} Beside, never judged: lut3 against lut1, a decoder told where the error
+is, which mixes the number of tests with the decoder.
+
+\paragraph{Phase estimation, run again: two yardsticks.} Iterative phase estimation (IPE; C\'orcoles et al.\ 2021) at
+$n = 2, 3$ (job A) and $n = 4$ (job B), every phase $j/2^n$, 1950 shots per circuit, was run again on one device record
+with the textbook circuit beside it (the controlled phases and the coherent inverse QFT on $n$ counting qubits, final
+measurements only). The two comparisons are separate and are not added together. The first is the ceiling of
+section~\ref{sec:method}: the share of shots with all $n$ bits right, every phase pooled, against the best fixed decoder
+of the uncontrolled circuit's bits, $C(n) = 0.7500, 0.5884, 0.4706$; BEYOND THE CEILING when $p \ge C(n) + 2$ SE,
+otherwise NOT BEYOND. The second is a per-shot yardstick: the textbook circuit reads every phase exactly without noise
+and has no ceiling, so $d = p - q$ only says which circuit returned the right answer more often on this device, without
+correction: IPE RIGHT MORE OFTEN, TEXTBOOK RIGHT MORE OFTEN, or NOT SEPARATED (2 SE). IPE was \pending{BEYOND THE CEILING
+/ NOT BEYOND} at $n = 2$, \pending{} at $n = 3$, \pending{} at $n = 4$ (margins \pending{}); Q-1 (beyond at each $n$)
+\pending{held / failed}. Per shot, IPE against the textbook circuit read \pending{IPE RIGHT MORE OFTEN / TEXTBOOK RIGHT MORE OFTEN / NOT
+SEPARATED} at $n = 2$, \pending{} at $n = 3$ and \pending{} at $n = 4$ ($d = $ \pending{} per $n$); no direction was declared. \pending{One sentence: whether 11-17 and 11-18's margins (fez $n = 2,
+3$; marrakesh $n = 4$) were reproduced on this night's device, and what the textbook comparison adds.}
+(\texttt{\pending{results folders}}).
+
 \section{What did not hold}\label{sec:failed}
 Each failed prediction is reported as failed in its folder; table~\ref{tab:failed} lists them.
 \begin{table}[H]
@@ -274,15 +373,40 @@ night & prediction & what happened \\
 11-18 & fast-path decision latency resolved & $+0.32 \pm 0.42\,\mu$s (2 SE) \\
 11-18 & CZ actors wait for each other & ratio 1.00 \\
 11-18 & compounding loop changes a stack & fixed point after round 1 \\
+11-19 & \pending{one row per failed one of table~\ref{tab:pred19}} & \pending{} \\
 \bottomrule
 \end{tabular}
-\caption{The 16 failed predictions of 49 (the early-chain row counts two; the 11-16 neuron row counts two).}
+\caption{The \pending{$16 + f$} failed predictions of 57: 16 of the 49 of 11-16 to 11-18 (the early-chain row counts two;
+the 11-16 neuron row counts two) and \pending{$f$} of the 8 of 11-19.}
 \label{tab:failed}
+\end{table}
+
+The night of 11-19 declared eight predictions (table~\ref{tab:pred19}). Two further readings were declared without a
+direction, RC-2 (b1) (the added tests fire) and Q-2 (IPE against the textbook circuit per shot); they are read and
+reported and are not counted as predictions, so the total is $49 + 8 = 57$.
+\begin{table}[H]
+\centering\small
+\begin{tabular}{@{}lp{8.6cm}l@{}}
+\toprule
+prediction & declared & what happened \\
+\midrule
+LOOP-1 & the rule changes at least one stack between rounds 1 and 2 & \pending{held / failed} \\
+LOOP-2 & no $L$ overshoots in the last round run & \pending{held / failed} \\
+IF-1 & E3: A loses and B does not (the loss follows the place) & \pending{held / failed} \\
+IF-2 & E2: A's loss remains with three sites between & \pending{held / failed} \\
+IF-3 & E1: SAME WITHIN ERROR for B & \pending{held / failed} \\
+RC-1 & lut3 is BEYOND THE CEILING & \pending{held / failed} \\
+RC-2 (b0) & the added tests never fire: SAME WITHIN ERROR & \pending{held / failed} \\
+Q-1 & IPE is BEYOND THE CEILING at each $n = 2, 3, 4$ & \pending{held / failed} \\
+\bottomrule
+\end{tabular}
+\caption{The eight predictions of 11-19, each held or failed as a whole.}
+\label{tab:pred19}
 \end{table}
 
 \section{Limits}\label{sec:limits}
 \begin{itemize}
-\item Three devices, three nights, mostly one device per test; the same-device repeat on 11-18 followed a recalibration and
+\item Three devices, four nights, mostly one device per test; the same-device repeat on 11-18 followed a recalibration and
 kept much less. What the device keeps varies by night more than by design.
 \item The ring sentinel was DEAD on marrakesh and fez on most of these nights; it is reported and never judged.
 \item The ceiling is defined against correction of the uncontrolled circuit, as declared; post-selection (discarding
@@ -292,21 +416,70 @@ shots) is not a correction in this sense and is reported only beside.
 \item Every noise model in the notes is illustrative and not fitted; none is used for a verdict.
 \item A sentinel's compiled bytes depend on the qiskit-aer version; user, off and floor circuits rebuilt byte-identical
 across machines.
+\item 11-19 is one night on one device record for every test. E1--E3 cannot tell the place from the qubits' readout;
+E2's B sits on other qubits (7--10) than P-B's B (5--8), with its own single on the same qubits. In the repetition code
+only the error on d0 makes the margin over the ceiling. \pending{anything the night itself adds}
 \end{itemize}
 
 \section{The updated operating layer}\label{sec:update}
-\pending{psf-os v0.2.0: real-time control entrance (explicit off arm, packed items, given placement, top-level delay,
-register conditions), build rules from sections~\ref{sec:loop}--\ref{sec:limits-pack} (fixed circuits packed
-automatically; no two conditional items in one circuit; the build environment recorded), the compounding loop in the
-package, the frame chosen from each output qubit's readout; and its declared device check of 2026-11-19.}
+\paragraph{What is in it.} psf-os \pending{v0.2.0, doi} holds what these nights used, as a package: a job kind for
+circuits with mid-circuit measurements and conditional blocks, placed on a rule-C chain, with the off arm (the
+conditionals removed, or given explicitly) and the floor in the same job; repeat-until-success chains, top-level delays
+that hold a schedule, placement given from outside, bundles of independent items on one chain; conditions on a whole
+classical register (at most 32 bits, several tests on one register, registers that partition the bits in order), with
+each job's conditionals and broadcasts recorded and never enforced. Nothing in it reads a calibration error number.
+
+\paragraph{Three build rules, from what the device did.} (1) Fixed circuits are packed into one circuit per arm
+automatically: their off arms read as they read alone (P-A, section~\ref{sec:limits-pack}), and the device time halves.
+(2) No two items with conditional operations share a circuit unless the caller says so explicitly: the control arm lost
+0.20 with ten items and 0.06 on the first of two, and a delay did not remove it. (3) Every manifest records its build
+environment (Python, qiskit, qiskit-aer, qiskit-ibm-runtime, numpy), and \texttt{verify} compares the gates, test circuits and sentinel
+apart, when another environment wrote different bytes; a record a reader's qiskit cannot read is NOT CHECKED, neither
+SAME nor DIFFERENT.
+
+\paragraph{The loop in the package.} The compounding loop of section~\ref{sec:loop} moved into the package with two
+rungs and a ledger. The rule per $L$, first match wins, each threshold 2 SE: R1 an overshoot gives P2 and the balanced
+pair; R2, with the pair, when the frame not flipped keeps less than the read one and the output qubit's readout gap is
+significant, moves the output to another qubit (+Q); RM, a credited gain without the pair or an extra try, adds one
+more try (+M); RF, without the pair or the frame step, switches P1 and P2 when the output qubit's readout gap points
+against the base's read frame (+F); R3 removes the last step after NOT SHOWN twice with the same stack (removing +F switches the base back); R4 keeps. RF reads the readout only, not the verdict, so on an $L$ NOT SHOWN
+twice it can act before R3 (declared as built). Stops: a
+fixed point, four rounds, 240 s of device time by the model with the diagnostics included, estimated before a round
+is built, a check FAIL, a refused
+build. The ledger carries a night's last stacks to the next only on the same device with the same calibration time
+stamp, and per $L$ only where the night's own diagnostics pick the same family (P1 and P2 one family). The night runner
+fetches, diagnoses, builds, checks, submits, collects, scores and rules unattended; \texttt{resume} never sends a job
+that was sent, only a failed job ends the night, and \texttt{verify} rebuilds, re-scores, re-derives round 1 and
+re-rules every round.
+
+\paragraph{Its device night (11-19).} Declared in \texttt{prereg/os\_loop\_night\_2026-11-19.md} with psf-os at
+\texttt{5e4a936}; the ledger was the 11-18 night's line (ibm\_marrakesh, calibration 11-18 11:05:21 CET, last stacks
+P1, P1, P1). The night ran on \pending{device} with calibration time \pending{}, so the ledger was \pending{used / not
+used, because \ldots}. Round 1 picked \pending{stacks per $L$}; the rule then \pending{climbed \ldots{} / kept every stack};
+the loop stopped \pending{at a fixed point / at four rounds / on the budget / \ldots} after \pending{$k$} rounds
+(\pending{} s by the model). \pending{Per round and $L$: the stack, $g$ (2 SE), the verdict (PRESCRIPTION HELPS /
+OVERSHOOT / NOT SHOWN).} \IfFileExists{fig_loop19.pdf}{Figure~\ref{fig:loop19}.}{} LOOP-1 (the rule changes a stack between rounds 1 and 2)
+\pending{held / failed}; LOOP-2 (no overshoot in the last round run) \pending{held / failed}. \pending{verify on the
+owner's machine and at home: SAME / \ldots} (\texttt{\pending{results folder}}).
+
+\IfFileExists{fig_loop19.pdf}{\begin{figure}[t]
+\centering
+\includegraphics[width=0.7\linewidth]{fig_loop19.pdf}
+\caption{The loop on 11-19: $g$ per round and $L$ (2 SE bars; open: overshoot, not credited), the stack under each
+point.}
+\label{fig:loop19}
+\end{figure}}{\pending{figure fig\_loop19.pdf from figures.py}}
 
 \section{Reproduction}\label{sec:repro}
 Every device result re-scores from its committed raw counts with \texttt{python reproduce.py} in
 \texttt{psf-os-lab-notebook} with psf-os at the commit named in each folder (\texttt{feedforward-2026-11-16}). Each folder's README records the
 re-score SAME on its own night at that commit; all 28 verdicts of 11-16 to 11-18 were re-scored together on 2026-11-18
 with the psf-os v0.2 prototype branch, 28 of 28 SAME (\texttt{notes/v02\_2026-11-18}); an independent re-reading with qiskit and numpy only
-(\texttt{notes/verify\_2026-11-18}) gave the same numbers and verdicts for 11-18. Figures:
-\texttt{notes/paper10\_ff/figures.py}.
+(\texttt{notes/verify\_2026-11-18}) gave the same numbers and verdicts for 11-18. The night of 11-19 re-scores with
+psf-os at \texttt{5e4a936}: \texttt{python gpu/os\_loop.py verify OUT} (every job rebuilt, re-scored and re-ruled), and
+\texttt{score} of \texttt{gpu/interfere\_night.py}, \texttt{gpu/repcode\_night.py} and \texttt{gpu/qpe\_repro\_night.py}
+from the recorded jobs; verify a night with a qiskit at least as new as the one that recorded it. \pending{the 11-19
+re-scores: SAME / \ldots, and on which machines.} Figures: \texttt{notes/paper10\_ff/figures.py}.
 
 \section{Conclusion}
 Real-time control on cloud IBM Heron devices got closer to the exact answer than any correction of the uncontrolled
@@ -315,12 +488,15 @@ length, on two devices and on a second night. It took a diagnosis on the device:
 were not, and where a value waits decided how much of it survived. The same one-sided decay that the fix exploits can
 fake closeness, which a declared guard and a frame-balanced pair keep out of the verdicts. Fixed circuits can share a
 circuit for free, conditional ones cannot yet, for a reason the timing does not show. And a loop that reads the night's
-own diagnostics and nothing else chose a different prescription when the device changed.
+own diagnostics and nothing else chose a different prescription when the device changed. \pending{11-19: what the
+packing loss follows; what a conditional costs inside one item when it does not fire; whether phase estimation's margins
+were reproduced; what the loop did from the package with a ledger.}
 
 \section*{Data and code}
 Records, declarations and raw counts: \url{https://github.com/TN-Holdings-LLC/psf-os-lab-notebook}; the operating
 layer: \url{https://github.com/TN-Holdings-LLC/psf-os} (doi:10.5281/zenodo.24211404; branches
-\texttt{feedforward-2026-11-16}, \texttt{register-cond-2026-11-18}).
+\texttt{feedforward-2026-11-16}, \texttt{register-cond-2026-11-18}, \texttt{v0.2-proto-2026-11-18}; \pending{v0.2.0,
+doi}).
 
 \section*{References}
 \begin{itemize}
