@@ -27,7 +27,8 @@ psf-os branch v0.2-proto-2026-11-18 (`psf_os/loop.py`). Design and dry nights: `
 3. Rounds k = 1, 2, ...: the rule per L, first match wins, each threshold 2 SE [OWNER]: R1 overshoot -> P2 + B; R2
    frames -> + Q; RM (PRESCRIPTION HELPS, no B, no M) -> + M (one more try); RF (no B, no F, Dr on the output qubit
    against the base's read frame) -> switch P1 <-> P2 + F; R3 stop-loss; R4 keep. The rungs in the order +M, +F
-   [OWNER].
+   [OWNER]. [OWNER: RF as written reads Dr only, not the verdict, so on an L NOT SHOWN twice it acts before R3's
+   stop-loss (the workplace VS, 2026-11-19); "RF only when PRESCRIPTION HELPS" would change that. Not changed here.]
 4. Stops: a fixed point, K_MAX = 4 [OWNER], the budget 240 s by the model including the diagnostics, estimated before a
    round is built [OWNER], a check FAIL, a refused build.
 5. Scores as os2 / os3 (g = |P0 - exact| - |P(stack) - exact|; OVERSHOOT / PRESCRIPTION HELPS / NOT SHOWN).
