@@ -21,10 +21,19 @@ Thresholds, words and predictions marked [OWNER] are the owner's; the workplace 
 - Between jobs: the same job submitted three times back to back (V1, V2, V3; nothing rebuilt between them).
 - Numbers per L: g per copy and job with its SE; within-job difference (a - b) and between-job differences (V1 - V2,
   V2 - V3, V1 - V3), each against its own shot-noise 2 SE (sqrt of the summed variances).
-- Pooled reading: the excess between-job variance s_b^2 = var(g across jobs) - mean(SE^2), with a bootstrap or the
-  chi-square of the three jobs per L [workplace: the formula; the owner fixes the threshold]. 4000 shots; no
-  mitigation; check as os3_night's.
-- Size: one job about 2 x 30.9 s (copies) -> about 60 s by the model; three jobs about 180 s [workplace: exact].
+- Pooled reading (workplace, proposed; the owner fixes the level): per job g_j = (g_a + g_b) / 2 with
+  SE_j = sqrt(SE_a^2 + SE_b^2) / 2; the weighted mean gbar = sum w_j g_j / sum w_j (w_j = 1 / SE_j^2);
+  chi2 = sum_j (g_j - gbar)^2 / SE_j^2 with 2 degrees of freedom, p = exp(-chi2 / 2) (closed form for 2 df); the
+  excess between-job variance s_b^2 = var(g_j, ddof 1) - mean(SE_j^2) (a moment estimate; <= 0 means none seen);
+  beside, chi2 summed over L (6 df, p = exp(-x/2)(1 + x/2 + x^2/8)). 4000 shots; no mitigation.
+- check (workplace): every circuit's noiseless value against the exact one (as os3_night's, TOL 0.03); copies a and
+  b of every item the same gates (psf_os.gatehash) on the same qubits; V1, V2, V3 byte-identical (circuits.qpy and
+  manifest); each job within 60 s by the model. The P0 and P1 circuits are gate-identical to the 2026-11-19 loop's
+  round 1 (results/loop-night-2026-11-19/r1, checked by digest, all three arms, L = 1, 2, 3). The readout probe of
+  round 1 is left out (no rule is applied).
+- Size (workplace, 2026-11-20, on the 2026-11-19 marrakesh record): 12 items (P0 and P1 at L = 1, 2, 3, two copies)
+  x 3 arms + the sentinel's 4 = 40 circuits, 47.6 s per job by the model; three jobs 142.8 s. Tool
+  `gpu/loopvar_night.py` (build makes V1-V3 from one build; check / score; dry for illustrative noise).
 
 ## Verdict words [OWNER]
 

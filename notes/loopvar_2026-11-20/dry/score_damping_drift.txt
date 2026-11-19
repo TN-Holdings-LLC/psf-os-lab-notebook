@@ -1,0 +1,17 @@
+L 1: g per job V1 +0.0130 (SE 0.0054), V2 +0.0075 (SE 0.0054), V3 +0.0817 (SE 0.0059)
+   within (a - b): V1 +0.0230 (2 SE 0.0218) MOVES, V2 +0.0000 (2 SE 0.0216) SAME WITHIN ERROR, V3 -0.0070 (2 SE 0.0236) SAME WITHIN ERROR
+   between: V1-V2 +0.0055 (2 SE 0.0154) SAME WITHIN ERROR, V2-V3 -0.0742 (2 SE 0.0160) MOVES, V1-V3 -0.0687 (2 SE 0.0160) MOVES
+   three jobs: chi2 103.91 (2 df), p 0.000 -> DRIFTS; excess between-job SD 0.0410 (variance +0.001680)
+   beside, shares P0 / P1: V1a 0.8482 / 0.8728; V1b 0.8635 / 0.8650; V2a 0.8622 / 0.8698; V2b 0.8595 / 0.8670; V3a 0.7850 / 0.8632; V3b 0.7945 / 0.8798
+L 2: g per job V1 +0.0107 (SE 0.0069), V2 +0.0292 (SE 0.0068), V3 +0.1823 (SE 0.0072)
+   within (a - b): V1 -0.0015 (2 SE 0.0275) SAME WITHIN ERROR, V2 -0.0160 (2 SE 0.0274) SAME WITHIN ERROR, V3 +0.0015 (2 SE 0.0288) SAME WITHIN ERROR
+   between: V1-V2 -0.0185 (2 SE 0.0194) SAME WITHIN ERROR, V2-V3 -0.1530 (2 SE 0.0199) MOVES, V1-V3 -0.1715 (2 SE 0.0199) MOVES
+   three jobs: chi2 352.36 (2 df), p 0.000 -> DRIFTS; excess between-job SD 0.0939 (variance +0.008812)
+   beside, shares P0 / P1: V1a 0.7418 / 0.7518; V1b 0.7405 / 0.7520; V2a 0.7388 / 0.7600; V2b 0.7322 / 0.7695; V3a 0.5877 / 0.7708; V3b 0.5988 / 0.7802
+L 3: g per job V1 +0.0393 (SE 0.0075), V2 +0.0339 (SE 0.0075), V3 +0.2446 (SE 0.0076)
+   within (a - b): V1 +0.0235 (2 SE 0.0301) SAME WITHIN ERROR, V2 -0.0198 (2 SE 0.0300) SAME WITHIN ERROR, V3 +0.0037 (2 SE 0.0303) SAME WITHIN ERROR
+   between: V1-V2 +0.0054 (2 SE 0.0212) SAME WITHIN ERROR, V2-V3 -0.2107 (2 SE 0.0213) MOVES, V1-V3 -0.2054 (2 SE 0.0213) MOVES
+   three jobs: chi2 507.41 (2 df), p 0.000 -> DRIFTS; excess between-job SD 0.1199 (variance +0.014381)
+   beside, shares P0 / P1: V1a 0.6272 / 0.6783; V1b 0.6418 / 0.6693; V2a 0.6472 / 0.6713; V2b 0.6355 / 0.6793; V3a 0.4545 / 0.7010; V3b 0.4582 / 0.7010
+beside, pooled over L: chi2 963.68 (6 df), p 0.000
+words [OWNER]: pairs MOVES at |d| >= 2 SE; three jobs DRIFTS at p < 0.05

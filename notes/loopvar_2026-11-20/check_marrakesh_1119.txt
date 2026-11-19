@@ -1,0 +1,45 @@
+ff_p01a        user   P 0.918 all zero 0.047 ok
+ff_p01a_floor  floor  P nan all zero 1.000 ok
+ff_p01a_off    off    P 0.780 all zero 0.047 ok
+ff_p01b        user   P 0.918 all zero 0.047 ok
+ff_p01b_floor  floor  P nan all zero 1.000 ok
+ff_p01b_off    off    P 0.780 all zero 0.047 ok
+ff_p02a        user   P 0.850 all zero 0.070 ok
+ff_p02a_floor  floor  P nan all zero 1.000 ok
+ff_p02a_off    off    P 0.623 all zero 0.072 ok
+ff_p02b        user   P 0.850 all zero 0.070 ok
+ff_p02b_floor  floor  P nan all zero 1.000 ok
+ff_p02b_off    off    P 0.623 all zero 0.072 ok
+ff_p03a        user   P 0.790 all zero 0.086 ok
+ff_p03a_floor  floor  P nan all zero 1.000 ok
+ff_p03a_off    off    P 0.493 all zero 0.093 ok
+ff_p03b        user   P 0.790 all zero 0.086 ok
+ff_p03b_floor  floor  P nan all zero 1.000 ok
+ff_p03b_off    off    P 0.493 all zero 0.093 ok
+ff_x1a         user   P 0.896 all zero 0.041 ok
+ff_x1a_floor   floor  P nan all zero 1.000 ok
+ff_x1a_off     off    P 0.780 all zero 0.047 ok
+ff_x1b         user   P 0.896 all zero 0.041 ok
+ff_x1b_floor   floor  P nan all zero 1.000 ok
+ff_x1b_off     off    P 0.780 all zero 0.047 ok
+ff_x2a         user   P 0.790 all zero 0.073 ok
+ff_x2a_floor   floor  P nan all zero 1.000 ok
+ff_x2a_off     off    P 0.623 all zero 0.072 ok
+ff_x2b         user   P 0.790 all zero 0.073 ok
+ff_x2b_floor   floor  P nan all zero 1.000 ok
+ff_x2b_off     off    P 0.623 all zero 0.072 ok
+ff_x3a         user   P 0.712 all zero 0.087 ok
+ff_x3a_floor   floor  P nan all zero 1.000 ok
+ff_x3a_off     off    P 0.493 all zero 0.093 ok
+ff_x3b         user   P 0.712 all zero 0.087 ok
+ff_x3b_floor   floor  P nan all zero 1.000 ok
+ff_x3b_off     off    P 0.493 all zero 0.093 ok
+copies p01a / p01b: same qubits True, same gates (ff, off, floor) True
+copies x1a / x1b: same qubits True, same gates (ff, off, floor) True
+copies p02a / p02b: same qubits True, same gates (ff, off, floor) True
+copies x2a / x2b: same qubits True, same gates (ff, off, floor) True
+copies p03a / p03b: same qubits True, same gates (ff, off, floor) True
+copies x3a / x3b: same qubits True, same gates (ff, off, floor) True
+V1, V2, V3: circuits.qpy and manifest byte-identical True (circuits.qpy sha256 f60b79548767f743...)
+40 circuits, 47.6 s per job by the model (limit 60), 142.8 s for three jobs; submitted already: none
+PASS

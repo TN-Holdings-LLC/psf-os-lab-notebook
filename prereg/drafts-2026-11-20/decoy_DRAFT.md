@@ -28,7 +28,20 @@ Thresholds, words and predictions marked [OWNER] are the owner's; the workplace 
 - psf-os v0.2 at the commit of the night (`build_bundle(..., allow_conditional_neighbours=True, bit_order=...)`);
   4000 shots; rule C placement; no mitigation, DD and twirling off; check before submission as interfere_night, plus:
   Z's bits first in D1, last in D2; Z's qubits on no coupler within two steps of B.
-- Size: about 3 x 3 arms + 3 singles x 3 + sentinel 4 = 22 circuits; seconds by the model [workplace].
+- Size (workplace, 2026-11-20, on the 2026-11-19 marrakesh record): 3 bundles x 3 arms + 3 singles x 3 arms +
+  the sentinel's 4 = 22 circuits, 27.6 s by the model. Placement: A [0, 1, 2, 3], B [5, 6, 7, 8] in every bundle
+  (as E3 / P-B), Z [11, 12, 13, 14]. Tool `gpu/decoy_night.py` (build / check / score; dry for illustrative noise).
+- Z's place [OWNER]: the check "Z's qubits on no coupler within two steps of B" is read as a coupling distance >= 3
+  (no path of one or two couplers, working or failed). With gap 1 after B (Z [10-13], as first written) the distance
+  is 2 (through qubit 9) and that check fails; the tool puts Z two sites past B (`--z-gap 2`, psf-os build_bundle
+  gap=[1, 2], added 2026-11-20 on psf-os night-2026-11-20, gap=[1, 1] byte-identical to gap=1): distance 3. A and B
+  are also two couplers apart (through qubit 4), as on 11-18 and 11-19. If the owner reads "within two steps" as
+  "no direct coupler" instead, `--z-gap 1` gives Z [10-13]; the check line is then changed to distance >= 2.
+- check (workplace): independence of every bundle arm; per packed sub-item the same instructions per wire and the
+  same exact distribution as its single (Z against sz's off arm); the same physical qubits; recorded acceptance;
+  floors without sx / x; offs without conditionals; conditionals kept; Z without conditionals; the manifest records
+  allow_conditional_neighbours; A and B on D0's qubits in D1 and D2; Z's bits first in D1 (offset 0) and last in D2;
+  Z at coupling distance >= 3 from B; one job within 30 s by the model.
 
 ## Reading table (fixed before the data) [OWNER]
 

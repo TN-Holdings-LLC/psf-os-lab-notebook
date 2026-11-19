@@ -1,0 +1,13 @@
+noiseless ff of rd2 (exact, read flipped): 0.7929; off 0.6308; singles sa 0.7913, sb 0.7830, sz 0.7833
+  d0a against sa: alone 0.7913  packed 0.7913  d +0.0000 (2 SE 0.0182) -> SAME WITHIN ERROR
+  d0b against sb: alone 0.7830  packed 0.7987  d +0.0040 (2 SE 0.0182) -> SAME WITHIN ERROR
+D0: mean d over its conditional sub-items +0.0020 (2 SE 0.0129) -> SAME WITHIN ERROR
+  d1a against sa: alone 0.7913  packed 0.7960  d -0.0015 (2 SE 0.0181) -> SAME WITHIN ERROR
+  d1b against sb: alone 0.7830  packed 0.7837  d +0.0007 (2 SE 0.0184) -> SAME WITHIN ERROR
+  beside: d1z (fixed) against sz's off arm: alone 0.6262 packed 0.6302 d +0.0040 (2 SE 0.0216)
+D1: mean d over its conditional sub-items -0.0004 (2 SE 0.0129) -> SAME WITHIN ERROR
+  d2a against sa: alone 0.7913  packed 0.7935  d +0.0010 (2 SE 0.0181) -> SAME WITHIN ERROR
+  d2b against sb: alone 0.7830  packed 0.7802  d -0.0028 (2 SE 0.0185) -> SAME WITHIN ERROR
+  beside: d2z (fixed) against sz's off arm: alone 0.6262 packed 0.6278 d +0.0015 (2 SE 0.0216)
+D2: mean d over its conditional sub-items -0.0009 (2 SE 0.0129) -> SAME WITHIN ERROR
+reading (the draft's table, [OWNER]): the control did not repeat 11-18 / 11-19 on this night; D1, D2 not read for the mechanism
