@@ -1,0 +1,33 @@
+[
+ {
+  "night": "os2-night-2026-11-18",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-18 11:05:21+01:00",
+  "rungs": [],
+  "rounds_run": 1,
+  "ledger_used": false,
+  "ledger_why": "os2",
+  "last_stacks": {
+   "1": [
+    "P1"
+   ],
+   "2": [
+    "P1"
+   ],
+   "3": [
+    "P1"
+   ]
+  },
+  "last_g": {
+   "1": 0.03225,
+   "2": 0.025499999999999967,
+   "3": 0.05525000000000002
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "PRESCRIPTION HELPS",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "seeded_from_records": true
+ }
+]

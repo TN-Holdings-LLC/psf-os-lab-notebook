@@ -25,8 +25,13 @@ the others go on.
 
 ```bash
 # the loop (device; resumable; zip at the end)
-python gpu/os_loop.py preflight --out ~/n1119/loop --zip <psf_zero_project>/res_loop1119.zip
-python gpu/os_loop.py go ~/n1119/loop --zip <psf_zero_project>/res_loop1119.zip --ledger <ledger file> [OWNER]
+# the ledger [OWNER]: e.g. a copy of notes/os_loop_2026-11-19/ledger_seed_from_2026-11-18.json (made by
+#   python gpu/os_loop.py ledger-seed results/os2-night-2026-11-18 LEDGER.json); used only if the calibration time is
+#   still 2026-11-18 11:05:21+01:00
+python gpu/os_loop.py preflight --out ~/n1119/loop --zip <psf_zero_project>/res_loop1119.zip \
+    --expect-psf-os <the declared psf-os commit> --declaration prereg/os_loop_night_2026-11-19.md
+python gpu/os_loop.py go ~/n1119/loop --zip <psf_zero_project>/res_loop1119.zip \
+    --expect-psf-os <the declared psf-os commit> --declaration prereg/os_loop_night_2026-11-19.md --ledger <ledger file>
 # the single jobs (the device record the loop fetched)
 DEV=~/n1119/loop/fetch_in/$(python -c "import json;print(json.load(open('$HOME/n1119/loop/fetch_in/queue.json'))['chosen'][0])")/dev
 python gpu/interfere_night.py build $DEV ~/n1119/if && python gpu/interfere_night.py check ~/n1119/if

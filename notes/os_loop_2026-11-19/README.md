@@ -31,3 +31,22 @@ marrakesh, fez, kingston), `python -m psf_os submit` / `collect`, the queue read
 Every round item sits on its given rule-C chain, as in os2 (the offsets of +Q and the probe's positions need it), so
 the fixed arms are not packed (pack_fixed places items itself); no conditional item shares a circuit with another (single
 builds); every manifest records the build environment.
+
+## After the review of 2026-11-19 (psf-os 069463b; this notebook's gpu/os_loop.py)
+
+- **verify across machines**: circuits.qpy byte for byte; when the bytes differ (another qiskit / numpy / Python) the
+  gates (gatehash.circuits_digest), the test circuits and the ring sentinel apart (the sentinel beside). A copy of a dry
+  night with dw's and r1's circuits rewritten in QPY format 13: `SAME dw job rebuilt (test circuits' gates (the bytes
+  differ: other versions))`, the night SAME.
+- **collect by value**: psf-os's collect writes the job's state (collect_status.json); the loop reads DONE / WAIT /
+  FAILED / UNKNOWN from it; UNKNOWN is not taken for a pending job.
+- **preflight for a device run**: `go` needs `--expect-psf-os SHA --declaration PREREG.md`; preflight fails unless
+  psf-os HEAD starts with SHA and its psf_os/ is unchanged, the notebook HEAD is the declaration's last commit and the
+  checkout unchanged, and a saved account file exists (not read). Tried with a wrong SHA and a draft: every one of
+  these lines FAIL, nothing started.
+- **ledger seed**: `ledger-seed NIGHT LEDGER` makes a ledger line from a recorded night. From
+  results/os2-night-2026-11-18 (`ledger_seed_from_2026-11-18.json`): ibm_marrakesh, calibration 2026-11-18 11:05:21+01:00,
+  last stacks P1 / P1 / P1. A dry night on that record with it (noise F3): the ledger used, then RM at L1 and L2
+  (P1+M), RF at L1 and L2 (P2+M+F: Dr against the P1 frame), R1 (P2+B), R2 (+Q4, +Q2), stop at K = 4
+  (`dry/night_n5.txt`). The rung F fires when a night starts from P1, as the workplace VS found. Tonight the ledger
+  is used only if the device's calibration time is still 2026-11-18 11:05:21+01:00.

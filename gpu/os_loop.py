@@ -6,10 +6,12 @@ predictions. Every one of those files is imported read only and unchanged; gpu/o
 not changed either.
 
   python gpu/os_loop.py preflight [--dry] [--out OUT] [--zip ZIP]
-  python gpu/os_loop.py go OUT --zip ZIP [--ledger LEDGER.json]                     the night on the device
+  python gpu/os_loop.py go OUT --zip ZIP --expect-psf-os SHA --declaration PREREG.md [--ledger LEDGER.json]
+                                                                                    the night on the device
   python gpu/os_loop.py go OUT --dry DEVDIR [--noise N.json] [--k-max K] [--budget S] [--ledger LEDGER.json]
   python gpu/os_loop.py resume OUT [--zip ZIP]
   python gpu/os_loop.py verify OUT [--resim]
+  python gpu/os_loop.py ledger-seed NIGHT LEDGER.json        a ledger line from a recorded night (e.g. 2026-11-18's)
 
 Rungs: +M then +F (psf_os.loop.RUNGS, the home handover). The ledger is used only on the same device with the same
 calibration time (the record's time stamp), per L only where tonight's diagnostics agree with the ledger's family of
@@ -34,7 +36,6 @@ for d in ("notes/rus_coherent_2026-11-17", "notes/compound_2026-11-17", "notes/o
 
 ORDER = ["ibm_marrakesh", "ibm_fez", "ibm_kingston"]
 FAMILY = {"P0": "P0", "P1": "flip", "P2": "flip", "P3": "P3"}
-DECLARATION = None            # set when declared (prereg/os_loop_night_2026-11-19.md); preflight checks it then
 PSF_OS_BRANCH = "v0.2"
 
 
@@ -173,13 +174,19 @@ class RusLoop:
         return BN.job_seed("round", int(tag[1:]), "wide")
 
 
-def preflight(dry=False, out=None, zip_path=None):
-    """The checks before a night; prints one line each. Device runs: psf-os has psf_os.loop, a saved account file
-    exists (not read), the notebook checkout is clean and (once declared) at the declaration's commit."""
+def preflight(dry=False, out=None, zip_path=None, expect_psf_os=None, declaration=None):
+    """The checks before a night; prints one line each. A device run needs the expected psf-os commit and the
+    declaration file (2026-11-19, after the review: os2_run checked both; a night must not run on another psf-os or a
+    notebook that is not the declaring commit): psf-os HEAD starts with expect_psf_os and its psf_os/ is unchanged;
+    the notebook HEAD is the last commit that touched the declaration and its checkout is unchanged; a saved account
+    file exists (not read)."""
     items = []
 
     def add(name, ok, detail=""):
         items.append(dict(item=name, ok=bool(ok), detail=str(detail)))
+
+    def git(*a):
+        return subprocess.run(["git", *a], capture_output=True, text=True).stdout.strip()
     for mod in ("qiskit", "qiskit_aer", "psf_os"):
         try:
             m = __import__(mod)
@@ -187,21 +194,33 @@ def preflight(dry=False, out=None, zip_path=None):
         except Exception as exc:  # noqa: BLE001
             add(f"import {mod}", False, type(exc).__name__)
     try:
+        import psf_os
         import psf_os.loop  # noqa: F401
         add("psf_os.loop (psf-os v0.2)", True)
+        root = os.path.dirname(os.path.dirname(os.path.abspath(psf_os.__file__)))
+        head = git("-C", root, "rev-parse", "HEAD")
+        dirty = git("-C", root, "status", "--porcelain", "--untracked-files=no", "--", "psf_os")
+        if dry and not expect_psf_os:
+            add("psf-os commit", True, f"not checked (dry); HEAD {head[:8]}")
+        else:
+            add(f"psf-os at {expect_psf_os}", bool(expect_psf_os) and bool(head) and head.startswith(expect_psf_os),
+                head[:12] or "not a git checkout")
+            add("psf_os/ unchanged in its checkout", dirty == "", dirty or "clean")
     except Exception as exc:  # noqa: BLE001
         add("psf_os.loop (psf-os v0.2)", False, type(exc).__name__)
     for f in ("daily_fetch.py", "wait_night.py", "ctrl_night.py", "os_night.py", "os2_night.py", "os3_night.py"):
         add(f"gpu/{f}", os.path.exists(os.path.join(HERE, f)))
-    if not dry:
-        dirty = subprocess.run(["git", "-C", NB, "status", "--porcelain", "--untracked-files=no"], capture_output=True,
-                               text=True).stdout.strip()
+    head = git("-C", NB, "rev-parse", "HEAD")
+    if dry and not declaration:
+        add("notebook HEAD is the declaration's commit", True, f"not checked (dry); HEAD {head[:8]}")
+    else:
+        decl = git("-C", NB, "log", "-1", "--format=%H", "--", declaration) if declaration else ""
+        add(f"the declaration {declaration} exists", bool(declaration) and os.path.exists(os.path.join(NB, declaration)))
+        add("notebook HEAD is the declaration's commit", bool(decl) and head == decl,
+            f"HEAD {head[:8]}, the declaration last changed in {decl[:8] or 'no commit'}")
+        dirty = git("-C", NB, "status", "--porcelain", "--untracked-files=no")
         add("notebook checkout unchanged", dirty == "", dirty or "clean")
-        if DECLARATION:
-            head = subprocess.run(["git", "-C", NB, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
-            decl = subprocess.run(["git", "-C", NB, "log", "-1", "--format=%H", "--", DECLARATION],
-                                  capture_output=True, text=True).stdout.strip()
-            add("notebook HEAD is the declaration's commit", bool(decl) and head == decl, f"HEAD {head[:8]}")
+    if not dry:
         acct = os.path.join(os.path.expanduser("~"), ".qiskit", "qiskit-ibm.json")
         add("a saved IBM account exists (the file only, not read)", os.path.exists(acct))
     if out is not None:
@@ -215,6 +234,32 @@ def preflight(dry=False, out=None, zip_path=None):
         print(f"{'ok  ' if x['ok'] else 'FAIL'} {x['item']}: {x['detail']}")
     print("PREFLIGHT PASS" if ok else "PREFLIGHT FAIL")
     return ok, items
+
+
+def ledger_seed(night, ledger):
+    """A ledger line from a recorded night (os2_run's or this file's): its device, the device record's calibration
+    time, the last scored round's stacks, g and verdicts. Appended to LEDGER (created when missing); refused when the
+    night is already in it. Reads the records only."""
+    from psf_os import loop as LP
+    night = os.path.abspath(night)
+    cfg = json.load(open(os.path.join(night, "run.json")))
+    dev = cfg["device"]
+    cal = RusLoop.calibration_time(os.path.join(night, "fetch_in", dev, "dev"))
+    ds = sorted([d for d in os.listdir(night) if d.startswith("r") and d[1:].isdigit() and
+                 os.path.exists(os.path.join(night, d, "round_scores.json"))], key=lambda d: int(d[1:]))
+    rounds = [json.load(open(os.path.join(night, d, "round_scores.json"))) for d in ds]
+    if not rounds:
+        raise SystemExit(f"{night}: no scored round")
+    R1 = json.load(open(os.path.join(night, "RULE1.json")))
+    name = os.path.basename(night)
+    led = LP.ledger_load(ledger)
+    if any(e.get("night") == name for e in led):
+        raise SystemExit(f"{name} is already in {ledger}")
+    e = LP.ledger_entry(name, dev, cal, cfg.get("rungs", []), rounds, R1.get("ledger", {"used": False, "why": "os2"}))
+    e["seeded_from_records"] = True
+    json.dump(led + [e], open(ledger, "w"), indent=1, default=str)
+    print(json.dumps(e, indent=1))
+    return e
 
 
 def main():
@@ -233,6 +278,13 @@ def main():
     g.add_argument("--k-max", type=int)
     g.add_argument("--budget", type=float)
     g.add_argument("--ledger")
+    g.add_argument("--expect-psf-os", help="device runs (required): the psf-os commit declared")
+    g.add_argument("--declaration", help="device runs (required): the declaration file, e.g. prereg/os_loop_night_2026-11-19.md")
+    p.add_argument("--expect-psf-os")
+    p.add_argument("--declaration")
+    sd = sub.add_parser("ledger-seed")
+    sd.add_argument("night")
+    sd.add_argument("ledger")
     r = sub.add_parser("resume")
     r.add_argument("out")
     r.add_argument("--zip")
@@ -242,20 +294,28 @@ def main():
     a = ap.parse_args()
     exp = RusLoop()
     if a.cmd == "preflight":
-        return 0 if preflight(a.dry, a.out, a.zip)[0] else 1
+        return 0 if preflight(a.dry, a.out, a.zip, a.expect_psf_os, a.declaration)[0] else 1
+    if a.cmd == "ledger-seed":
+        ledger_seed(a.night, a.ledger)
+        return 0
     if a.cmd == "verify":
         return 0 if LP.verify(a.out, exp, a.resim) else 1
     if a.cmd == "go":
-        ok, items = preflight(bool(a.dry), out=a.out, zip_path=a.zip)
+        if not a.dry and not (a.expect_psf_os and a.declaration):
+            raise SystemExit("a device run needs --expect-psf-os and --declaration")
+        ok, items = preflight(bool(a.dry), out=a.out, zip_path=a.zip, expect_psf_os=a.expect_psf_os,
+                              declaration=a.declaration)
         if not ok:
             raise SystemExit("preflight FAIL: nothing started")
         n = LP.start(a.out, exp, dry_devdir=a.dry, noise=json.load(open(a.noise)) if a.noise else None, k_max=a.k_max,
-                     budget=a.budget, ledger=a.ledger, zip_path=a.zip, extra=dict(preflight=items))
+                     budget=a.budget, ledger=a.ledger, zip_path=a.zip,
+                     extra=dict(preflight=items, expect_psf_os=a.expect_psf_os, declaration=a.declaration))
     else:
         n = LP.Night(a.out, exp)
         if a.zip:
             n.set_cfg(zip=os.path.abspath(a.zip))
-        if not preflight(n.cfg()["dry"])[0]:
+        c = n.cfg()
+        if not preflight(c["dry"], expect_psf_os=c.get("expect_psf_os"), declaration=c.get("declaration"))[0]:
             raise SystemExit("preflight FAIL: not resumed")
     print(json.dumps(n.go(), indent=1))
     return 0

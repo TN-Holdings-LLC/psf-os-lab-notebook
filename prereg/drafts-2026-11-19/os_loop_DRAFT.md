@@ -6,8 +6,8 @@ psf-os branch v0.2-proto-2026-11-18 (`psf_os/loop.py`). Design and dry nights: `
 
 ## Common
 
-- psf-os at [OWNER: the commit of the v0.2 branch tonight]; the notebook at the declaring commit (preflight checks
-  both once `DECLARATION` is set in gpu/os_loop.py).
+- psf-os at [OWNER: the commit of the v0.2 branch tonight]; the notebook at the declaring commit. `go` refuses to start
+  without `--expect-psf-os` and `--declaration`, and preflight checks both (HEADs, clean checkouts).
 - Device by the standing rule (gpu/daily_fetch.py, the first chosen in the order ibm_marrakesh, ibm_fez, ibm_kingston);
   one device record for the night. Rule C placement (coupling graph and failed marks only); no mitigation; DD and
   twirling off; 4000 shots; every shot counted. No calibration error number is read; the ledger reads the record's
@@ -18,7 +18,9 @@ psf-os branch v0.2-proto-2026-11-18 (`psf_os/loop.py`). Design and dry nights: `
 ## The night (as 2026-11-18's os2, with the rungs and the ledger)
 
 1. Diagnostics Dw and Dc (gpu/wait_night.py, gpu/ctrl_night.py), round 1 by gpu/os_night.py's rule (as os2).
-2. The ledger [OWNER: the ledger file, e.g. `results/os-ledger.json`, written by the 2026-11-18 night's entry or empty]:
+2. The ledger [OWNER: the ledger file; the 2026-11-18 night's line can be made from its records by
+   `gpu/os_loop.py ledger-seed` (`notes/os_loop_2026-11-19/ledger_seed_from_2026-11-18.json`: calibration time
+   2026-11-18 11:05:21+01:00, last stacks P1 / P1 / P1), or empty]:
    round 1 starts from the ledger's last stacks only on the same device with the same calibration time, and per L only
    where tonight's pick is of the same family (P1 and P2 one family); otherwise tonight's pick. Every decision is in
    RULE1.json.
