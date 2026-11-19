@@ -1,0 +1,67 @@
+[
+ {
+  "name": "job_state: 16 status forms map to DONE / WAIT / FAILED / UNKNOWN as written",
+  "ok": true,
+  "note": "[]"
+ },
+ {
+  "name": "ibm.collect, status DONE: collect_status.json state DONE, raw_counts written",
+  "ok": true,
+  "note": "state DONE, raw True"
+ },
+ {
+  "name": "ibm.collect, status QUEUED: collect_status.json state WAIT, raw_counts not written",
+  "ok": true,
+  "note": "state WAIT, raw False"
+ },
+ {
+  "name": "ibm.collect, status ERROR: collect_status.json state FAILED, raw_counts not written",
+  "ok": true,
+  "note": "state FAILED, raw False"
+ },
+ {
+  "name": "ibm.collect, status CANCELLED: collect_status.json state FAILED, raw_counts not written",
+  "ok": true,
+  "note": "state FAILED, raw False"
+ },
+ {
+  "name": "ibm.collect, status COMPLETED: collect_status.json state UNKNOWN, raw_counts not written",
+  "ok": true,
+  "note": "state UNKNOWN, raw False"
+ },
+ {
+  "name": "ibm.collect, DONE but the result fetch fails: collect_status.json says DONE, no raw_counts",
+  "ok": true,
+  "note": "state DONE"
+ },
+ {
+  "name": "Night.collect WAIT: 'WAIT', run_job stops resumable",
+  "ok": true,
+  "note": "r1: not finished after 60 min; run resume"
+ },
+ {
+  "name": "Night.collect FAILED: 'FAILED (ERROR)', run_job stops not resumable",
+  "ok": true,
+  "note": "r1: the job ended FAILED (ERROR)"
+ },
+ {
+  "name": "Night.collect UNKNOWN: 'UNKNOWN (COMPLETED)', run_job stops not resumable",
+  "ok": true,
+  "note": "r1: the job ended UNKNOWN (COMPLETED)"
+ },
+ {
+  "name": "Night.collect DONE_no_raw: 'UNKNOWN (DONE but no raw_counts.json)', run_job stops not resumable",
+  "ok": true,
+  "note": "r1: the job ended UNKNOWN (DONE but no raw_counts.json)"
+ },
+ {
+  "name": "Night.collect no_status_file: 'UNKNOWN (no collect_status.json: fake co', run_job stops not resumable",
+  "ok": true,
+  "note": "r1: the job ended UNKNOWN (no collect_status.json: fake collect)"
+ },
+ {
+  "name": "Night.collect DONE with raw_counts: DONE",
+  "ok": true,
+  "note": "DONE"
+ }
+]

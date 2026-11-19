@@ -1,0 +1,97 @@
+{
+ "dc": {
+  "bytes_same": false,
+  "tests_same": true,
+  "sentinel_same": true,
+  "manifest_paths": [
+   "/cells[*]/qpy_sha256",
+   "/cells[*]/run_sha256",
+   "/circuits_sha256",
+   "/env/numpy",
+   "/env/python",
+   "/env/qiskit-aer",
+   "/env/qiskit-ibm-runtime",
+   "/qpy_sha256",
+   "/written"
+  ],
+  "run_record_paths": [
+   "/export/sha256"
+  ]
+ },
+ "dw": {
+  "bytes_same": false,
+  "tests_same": true,
+  "sentinel_same": true,
+  "manifest_paths": [
+   "/cells[*]/qpy_sha256",
+   "/cells[*]/run_sha256",
+   "/circuits_sha256",
+   "/env/numpy",
+   "/env/python",
+   "/env/qiskit-aer",
+   "/env/qiskit-ibm-runtime",
+   "/qpy_sha256",
+   "/written"
+  ],
+  "run_record_paths": [
+   "/export/sha256"
+  ]
+ },
+ "r1": {
+  "bytes_same": false,
+  "tests_same": true,
+  "sentinel_same": true,
+  "manifest_paths": [
+   "/cells[*]/qpy_sha256",
+   "/cells[*]/run_sha256",
+   "/circuits_sha256",
+   "/env/numpy",
+   "/env/python",
+   "/env/qiskit-aer",
+   "/env/qiskit-ibm-runtime",
+   "/qpy_sha256",
+   "/written"
+  ],
+  "run_record_paths": [
+   "/export/sha256"
+  ]
+ },
+ "r2": {
+  "bytes_same": false,
+  "tests_same": true,
+  "sentinel_same": true,
+  "manifest_paths": [
+   "/cells[*]/qpy_sha256",
+   "/cells[*]/run_sha256",
+   "/circuits_sha256",
+   "/env/numpy",
+   "/env/python",
+   "/env/qiskit-aer",
+   "/env/qiskit-ibm-runtime",
+   "/qpy_sha256",
+   "/written"
+  ],
+  "run_record_paths": [
+   "/export/sha256"
+  ]
+ },
+ "r3": {
+  "bytes_same": false,
+  "tests_same": true,
+  "sentinel_same": true,
+  "manifest_paths": [
+   "/cells[*]/qpy_sha256",
+   "/cells[*]/run_sha256",
+   "/circuits_sha256",
+   "/env/numpy",
+   "/env/python",
+   "/env/qiskit-aer",
+   "/env/qiskit-ibm-runtime",
+   "/qpy_sha256",
+   "/written"
+  ],
+  "run_record_paths": [
+   "/export/sha256"
+  ]
+ }
+}

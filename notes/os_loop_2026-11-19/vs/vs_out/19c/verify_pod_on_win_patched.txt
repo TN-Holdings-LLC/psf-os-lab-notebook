@@ -1,0 +1,18 @@
+SAME      dw job rebuilt (test circuits' gates (the bytes differ: other versions))
+SAME      dw re-scored
+SAME      dc job rebuilt (test circuits' gates (the bytes differ: other versions))
+SAME      dc re-scored
+SAME      round 1: the diagnostics' stacks re-ruled
+SAME      round 1: the ledger re-applied
+SAME      r1 job rebuilt (test circuits' gates (the bytes differ: other versions))
+SAME      r1 re-scored
+SAME      RULE2.json re-ruled
+SAME      r2 job rebuilt (test circuits' gates (the bytes differ: other versions))
+SAME      r2 re-scored
+SAME      RULE3.json re-ruled
+SAME      r3 job rebuilt (test circuits' gates (the bytes differ: other versions))
+SAME      r3 re-scored
+SAME      RULE4.json re-ruled
+SAME      predictions re-read
+SAME
+verify with the per-cell byte hashes left out: SAME

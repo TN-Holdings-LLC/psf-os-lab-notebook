@@ -1,0 +1,17 @@
+DIFFERENT dw job rebuilt: /cells[0]/run_sha256: '5e167c7b22bd33c0a97c7a9c00873852ad11f0f54f95d3997625b9e5d6f14cfe' != '2f4223a3fe53d1c74323bea912104f3baea94ff8633df9b08ea98228fb7a6660'
+SAME      dw re-scored
+DIFFERENT dc job rebuilt: /cells[0]/run_sha256: 'd964331a2cfdc99515386d7f4302b947274638c0340ee18e79881c55af22fb02' != 'a71b30ca8b545f9a65a5dc84c4496b9c9752c7a6006091aeef2a87163fcca845'
+SAME      dc re-scored
+SAME      round 1: the diagnostics' stacks re-ruled
+SAME      round 1: the ledger re-applied
+DIFFERENT r1 job rebuilt: /cells[0]/run_sha256: 'd7b328e6a3c75899ead5a1e685c66198895e8d24bc4dd41ef9c2af1f1f638bf0' != '0945b6a6adc9d179d1a719abe585acf6fd91e963d54ab5ea11768c06e10ad834'
+SAME      r1 re-scored
+SAME      RULE2.json re-ruled
+DIFFERENT r2 job rebuilt: /cells[0]/run_sha256: 'd7b328e6a3c75899ead5a1e685c66198895e8d24bc4dd41ef9c2af1f1f638bf0' != '0945b6a6adc9d179d1a719abe585acf6fd91e963d54ab5ea11768c06e10ad834'
+SAME      r2 re-scored
+SAME      RULE3.json re-ruled
+DIFFERENT r3 job rebuilt: /cells[0]/run_sha256: 'd7b328e6a3c75899ead5a1e685c66198895e8d24bc4dd41ef9c2af1f1f638bf0' != '0945b6a6adc9d179d1a719abe585acf6fd91e963d54ab5ea11768c06e10ad834'
+SAME      r3 re-scored
+SAME      RULE4.json re-ruled
+SAME      predictions re-read
+DIFFERENT (5: dw job rebuilt, dc job rebuilt, r1 job rebuilt, r2 job rebuilt, r3 job rebuilt)
