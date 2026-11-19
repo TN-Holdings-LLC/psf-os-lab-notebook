@@ -135,7 +135,7 @@ class RusLoop:
         return O2.compound_rows(rounds)
 
     def predictions(self, out):
-        """Draft predictions (prereg/drafts-2026-11-19/os_loop_DRAFT.md; [OWNER]): LOOP-1 the rule changes at least one
+        """The declared predictions (prereg/os_loop_night_2026-11-19.md): LOOP-1 the rule changes at least one
         stack between round 1 and round 2; LOOP-2 no L overshoots in the last round run; beside: the ledger's use,
         the rungs climbed, the OS's own compounding (numbers only)."""
         import os2_night as O2
