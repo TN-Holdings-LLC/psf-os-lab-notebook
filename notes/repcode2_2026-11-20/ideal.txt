@@ -1,0 +1,5 @@
+error n: ff c[0] right lut3 1.0000 lut1 1.0000 lut5 1.0000; off c[0] 1.0000; ceiling 1.0000
+error 0: ff c[0] right lut3 1.0000 lut1 1.0000 lut5 1.0000; off c[0] 0.5000; ceiling 0.5000
+error 1: ff c[0] right lut3 1.0000 lut1 1.0000 lut5 1.0000; off c[0] 1.0000; ceiling 1.0000
+error 2: ff c[0] right lut3 1.0000 lut1 1.0000 lut5 1.0000; off c[0] 1.0000; ceiling 1.0000
+ceiling C = 0.8750

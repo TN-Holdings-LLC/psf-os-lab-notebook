@@ -1,0 +1,25 @@
+lut3_n ff : total variation of c 8.9e-16
+lut3_n off: total variation of c 8.9e-16
+lut3_0 ff : total variation of c 8.9e-16
+lut3_0 off: total variation of c 1.0e-15
+lut3_1 ff : total variation of c 8.9e-16
+lut3_1 off: total variation of c 1.0e-15
+lut3_2 ff : total variation of c 8.9e-16
+lut3_2 off: total variation of c 8.9e-16
+lut1_n ff : total variation of c 8.9e-16
+lut1_n off: total variation of c 8.9e-16
+lut1_0 ff : total variation of c 8.9e-16
+lut1_0 off: total variation of c 1.0e-15
+lut1_1 ff : total variation of c 8.9e-16
+lut1_1 off: total variation of c 1.0e-15
+lut1_2 ff : total variation of c 8.9e-16
+lut1_2 off: total variation of c 8.9e-16
+lut5_n ff : total variation of c 8.9e-16
+lut5_n off: total variation of c 8.9e-16
+lut5_0 ff : total variation of c 8.9e-16
+lut5_0 off: total variation of c 1.0e-15
+lut5_1 ff : total variation of c 8.9e-16
+lut5_1 off: total variation of c 1.0e-15
+lut5_2 ff : total variation of c 8.9e-16
+lut5_2 off: total variation of c 8.9e-16
+worst 1.0e-15 over 24 item arms

@@ -1,0 +1,6 @@
+ceiling: lut3 c[0] right 0.9441 (2 SE 0.0036, 16000 shots) against C 0.8750 -> BEYOND THE CEILING (margin +0.0691); off as read 0.8574
+(b0) added_tests_never_fire (e = 0, 1, 2): lut5 - lut3 +0.0000 (2 SE 0.0061) -> SAME WITHIN ERROR  [judged: RC-2]
+(b1) added_tests_fire (e = n): lut5 - lut3 -0.0018 (2 SE 0.0096) -> SAME WITHIN ERROR  [judged; no direction declared]
+beside, not judged: (a) lut3 0.9441 - lut1 0.9472 = -0.0031 (2 SE 0.0051) -> SAME WITHIN ERROR
+beside, not judged: (b) pooled lut5 0.9437 - lut3 0.9441 = -0.0004 (2 SE 0.0051) -> SAME WITHIN ERROR
+per error: n: lut3 0.953 lut1 0.961 lut5 0.951 off 0.971; 0: lut3 0.937 lut1 0.929 lut5 0.941 off 0.516; 1: lut3 0.946 lut1 0.958 lut5 0.942 off 0.973; 2: lut3 0.941 lut1 0.942 lut5 0.942 off 0.969; sentinel CLEAN
