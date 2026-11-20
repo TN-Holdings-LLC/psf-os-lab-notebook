@@ -1,0 +1,64 @@
+{
+ "gates only (CZ 1 %)": {
+  "exact": {
+   "pl": 0.9679626212145596,
+   "fe": 0.9679626212145593,
+   "pk": 0.9679626212145593
+  },
+  "rows": {
+   "not seen": 19,
+   "against the expectation": 1
+  }
+ },
+ "damping 6 % per read": {
+  "exact": {
+   "pl": 0.9811339928708163,
+   "fe": 0.9267999999999997,
+   "pk": 0.9999999999999998
+  },
+  "rows": {
+   "decay": 20
+  }
+ },
+ "dephasing 5 % per conditional": {
+  "exact": {
+   "pl": 0.9782421682320772,
+   "fe": 0.9999999999999991,
+   "pk": 0.9999999999999998
+  },
+  "rows": {
+   "dephasing": 20
+  }
+ },
+ "CZ 1 % + damping 2 % per read": {
+  "exact": {
+   "pl": 0.9620329307833164,
+   "fe": 0.9443528822928395,
+   "pk": 0.9680906601871556
+  },
+  "rows": {
+   "decay": 18,
+   "against the expectation": 2
+  }
+ },
+ "CZ 1 % + dephasing 12 % per conditional": {
+  "exact": {
+   "pl": 0.918911316109976,
+   "fe": 0.9679626212145593,
+   "pk": 0.9679626212145593
+  },
+  "rows": {
+   "dephasing": 20
+  }
+ },
+ "CZ 1 % + damping 2 % + dephasing 12 %": {
+  "exact": {
+   "pl": 0.9137820473047895,
+   "fe": 0.9443528822928395,
+   "pk": 0.9680906601871557
+  },
+  "rows": {
+   "dephasing": 20
+  }
+ }
+}

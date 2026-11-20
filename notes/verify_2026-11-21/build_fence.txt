@@ -1,0 +1,4 @@
+n 3 job 0: build(fence=True) ff circuits identical to the tool's fe: 4, different: 0
+n 3 job 1: build(fence=True) ff circuits identical to the tool's fe: 4, different: 0
+n 4 job 0: build(fence=True) ff circuits identical to the tool's fe: 8, different: 0
+n 4 job 1: build(fence=True) ff circuits identical to the tool's fe: 8, different: 0

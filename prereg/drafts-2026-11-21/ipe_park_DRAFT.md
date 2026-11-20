@@ -83,6 +83,10 @@ seeds) gave the same one-to-one map: gates only -> not seen, damping -> decay, d
 - The extra X pair adds two one-qubit gates per wait (pk). Fe and pk add barriers (synchronisation, depth +1 to +3).
 - One n, one device. Each form's share includes everything else in the circuit. Only the differences are read.
 - The plain form is 2026-11-19's circuit as sent, so the comparison with 2026-11-19 stays.
+- During the last read and after it, the target may sit in |1>, unread (once per item); the result does not change.
+  (最後の読み出しの間とその後、目標は読まれないまま |1> にいることがある（1 項目に 1 回）。結果は変わらない。) pk's last
+  instruction, the target's return X, stands after the last fence (the home VS's check of 2026-11-21,
+  `notes/verify_2026-11-21/`); the circuit is left as built (owner, 2026-11-21).
 
 ## Decisions at home before declaring ([OWNER] list)
 

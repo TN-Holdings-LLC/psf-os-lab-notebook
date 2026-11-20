@@ -1,0 +1,18 @@
+== repcode: files 78 / 79; only in A [], only in B ['checks.json']
+  job: 2 files, byte-identical 1, different ['job/manifest.json']
+  runs: 74 files, byte-identical 74, different []
+  build.json: 1 files, byte-identical 1, different []
+  manifest keys that differ: ['written']
+  circuits.qpy sha256 a78c729f544bffb0572322a8467781c789e8c7db118a799db9e92d3f28e6986b
+== rus: files 23 / 24; only in A [], only in B ['checks.json']
+  job: 2 files, byte-identical 1, different ['job/manifest.json']
+  runs: 20 files, byte-identical 20, different []
+  build.json: 1 files, byte-identical 1, different []
+  manifest keys that differ: ['written']
+  circuits.qpy sha256 d4e256729ab67e260cbd7ac9de55ad5a03b25a6930288a6547907231ea09d936
+== qpeA: files 150 / 151; only in A [], only in B ['checks.json']
+  job: 2 files, byte-identical 1, different ['job/manifest.json']
+  runs: 146 files, byte-identical 146, different []
+  build.json: 1 files, byte-identical 1, different []
+  manifest keys that differ: ['written']
+  circuits.qpy sha256 d6c5de9f7ed2e87ebeecdf97297d1661b013d6c9d63f1c8f1aeab3872ad600fb

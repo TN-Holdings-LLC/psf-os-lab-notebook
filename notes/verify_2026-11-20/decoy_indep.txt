@@ -1,0 +1,16 @@
+circuits 22 pubs 22 rows 22 shots 4000 row totals [4000]
+noiseless (read flipped, right value 0): rd2 ff 0.7929, off 0.6307
+singles {'sa': 0.7492, 'sb': 0.5813, 'sz': 0.7312} sz off 0.635
+  d0a [cond] qubits [0, 1, 2, 3] bits 0-4: alone 0.7492 packed 0.6927 d -0.0565 (2 SE 0.0200) PACKED KEEPS LESS
+  d0b [cond] qubits [5, 6, 7, 8] bits 5-9: alone 0.5813 packed 0.5958 d +0.0145 (2 SE 0.0220) SAME WITHIN ERROR
+D0: mean d -0.0210 (2 SE 0.0149) PACKED KEEPS LESS
+  d1a [cond] qubits [0, 1, 2, 3] bits 5-9: alone 0.7492 packed 0.6925 d -0.0567 (2 SE 0.0200) PACKED KEEPS LESS
+  d1b [cond] qubits [5, 6, 7, 8] bits 10-14: alone 0.5813 packed 0.5843 d +0.0030 (2 SE 0.0221) SAME WITHIN ERROR
+  d1z [fixed] qubits [11, 12, 13, 14] bits 0-4: alone 0.6350 packed 0.6550 d -0.0200 (2 SE 0.0214) beside
+D1: mean d -0.0269 (2 SE 0.0149) PACKED KEEPS LESS
+  d2a [cond] qubits [0, 1, 2, 3] bits 0-4: alone 0.7492 packed 0.6643 d -0.0850 (2 SE 0.0203) PACKED KEEPS LESS
+  d2b [cond] qubits [5, 6, 7, 8] bits 5-9: alone 0.5813 packed 0.6028 d +0.0215 (2 SE 0.0220) SAME WITHIN ERROR
+  d2z [fixed] qubits [11, 12, 13, 14] bits 10-14: alone 0.6350 packed 0.6558 d -0.0208 (2 SE 0.0214) beside
+D2: mean d -0.0318 (2 SE 0.0149) PACKED KEEPS LESS
+reading table row 2
+measured qubits: {'ff_D0': [0, 2, 3, 5, 7, 8], 'ff_D1': [0, 2, 3, 5, 7, 8, 11, 13, 14], 'ff_D2': [0, 2, 3, 5, 7, 8, 11, 13, 14], 'ff_sa': [0, 2, 3], 'ff_sb': [5, 7, 8], 'ff_sz': [11, 13, 14]}

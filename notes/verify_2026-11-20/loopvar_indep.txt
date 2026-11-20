@@ -1,0 +1,21 @@
+V1 circuits 40 rows 40 shots per row {4000} manifest shots 4000
+V2 circuits 40 rows 40 shots per row {4000} manifest shots 4000
+V3 circuits 40 rows 40 shots per row {4000} manifest shots 4000
+right value / noiseless / m / qubits: {'ff_p01a': (1, 0.9222, 3, [0, 1]), 'ff_x1a': (1, 0.8915, 2, [0, 1]), 'ff_p02a': (1, 0.8516, 3, [0, 1, 2, 3]), 'ff_x2a': (1, 0.7924, 2, [0, 1, 2, 3]), 'ff_p03a': (1, 0.7862, 3, [0, 1, 2, 3, 4, 5]), 'ff_x3a': (1, 0.7077, 2, [0, 1, 2, 3, 4, 5])}
+L 1 (exact 0.937114): g per job V1 +0.0369 (SE 0.0060), V2 +0.0232 (SE 0.0059), V3 +0.0189 (SE 0.0058)
+   within: V1 +0.0112 (2 SE 0.0239) SAME WITHIN ERROR; V2 +0.0065 (2 SE 0.0234) SAME WITHIN ERROR; V3 +0.0212 (2 SE 0.0231) SAME WITHIN ERROR
+   between: V1-V2 +0.0136 (2 SE 0.0167) SAME WITHIN ERROR; V2-V3 +0.0044 (2 SE 0.0165) SAME WITHIN ERROR; V1-V3 +0.0180 (2 SE 0.0166) MOVES
+   three jobs: chi2 5.06 (2 df), p 0.080 -> SHOT NOISE ONLY; excess SD 0.0073 (variance +0.000054)
+   shares P0 / P1: V1a 0.8053 / 0.8478; V1b 0.8133 / 0.8445; V2a 0.8237 / 0.8502; V2b 0.8250 / 0.8450; V3a 0.8285 / 0.8580; V3b 0.8337 / 0.8420
+L 2 (exact 0.878182): g per job V1 +0.0215 (SE 0.0071), V2 -0.0042 (SE 0.0070), V3 -0.0076 (SE 0.0070)
+   within: V1 +0.0165 (2 SE 0.0283) SAME WITHIN ERROR; V2 -0.0030 (2 SE 0.0279) SAME WITHIN ERROR; V3 -0.0017 (2 SE 0.0279) SAME WITHIN ERROR
+   between: V1-V2 +0.0257 (2 SE 0.0199) MOVES; V2-V3 +0.0034 (2 SE 0.0197) SAME WITHIN ERROR; V1-V3 +0.0291 (2 SE 0.0199) MOVES
+   three jobs: chi2 10.23 (2 df), p 0.006 -> DRIFTS; excess SD 0.0143 (variance +0.000205)
+   shares P0 / P1: V1a 0.7045 / 0.7342; V1b 0.7192 / 0.7325; V2a 0.7445 / 0.7388; V2b 0.7282 / 0.7255; V3a 0.7402 / 0.7318; V3b 0.7370 / 0.7302
+L 3 (exact 0.822957): g per job V1 +0.1616 (SE 0.0077), V2 +0.1510 (SE 0.0077), V3 +0.1570 (SE 0.0077)
+   within: V1 -0.0088 (2 SE 0.0310) SAME WITHIN ERROR; V2 -0.0125 (2 SE 0.0310) SAME WITHIN ERROR; V3 -0.0060 (2 SE 0.0309) SAME WITHIN ERROR
+   between: V1-V2 +0.0106 (2 SE 0.0219) SAME WITHIN ERROR; V2-V3 -0.0060 (2 SE 0.0219) SAME WITHIN ERROR; V1-V3 +0.0046 (2 SE 0.0219) SAME WITHIN ERROR
+   three jobs: chi2 0.95 (2 df), p 0.623 -> SHOT NOISE ONLY; excess SD 0.0000 (variance -0.000031)
+   shares P0 / P1: V1a 0.4818 / 0.6390; V1b 0.4780 / 0.6440; V2a 0.4928 / 0.6375; V2b 0.4928 / 0.6500; V3a 0.4930 / 0.6470; V3b 0.4885 / 0.6485
+between jobs pooled over L: chi2 16.24 (6 df), p 0.013 (declared closed form 0.013)
+copies pooled (LV-1): chi2 7.11 (9 df), p 0.625 -> SAME WITHIN ERROR
