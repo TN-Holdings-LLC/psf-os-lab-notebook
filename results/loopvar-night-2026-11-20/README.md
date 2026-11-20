@@ -47,3 +47,10 @@ g (+0.15 to +0.16) is far from 11-19's (-0.027 with the same stack): the night, 
 ## Reproduce
 
 `python reproduce.py loopvar-night-2026-11-20`
+
+## Independent check (home VS, 2026-11-20)
+
+Re-counted from the raw counts with qiskit, aer and numpy only (`notes/verify_2026-11-20/loopvar_indep.py`): g and SE
+per L and job, copy and job differences, the three-job chi-squares and p, the excess SD and the pooled copy test (p
+0.625) agree; V1-V3 byte-identical; LV-1 held; reproduce SAME. (Between jobs only L 2 reads DRIFTS; L 1 and L 3 read
+SHOT NOISE ONLY.)

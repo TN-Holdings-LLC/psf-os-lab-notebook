@@ -33,9 +33,12 @@ declared before the data". Author TN Holdings. Which paper number it takes is th
 | 11-18 marrakesh | packing tests (`results/parallel-night-2026-11-18`) | fixed circuits packed read as alone (mean d +0.001): production form 21 s against 41 s; one conditional neighbour costs the first item 0.06, delaying the second does not remove it |
 | 11-18 marrakesh | decision timing (`results/timing-night-2026-11-18`) | no decision latency above ~0.4 us resolved; two conditional actors (fast path and CZ) run side by side |
 | 11-18 marrakesh | the compounding OS, first night (`results/os2-night-2026-11-18`) | ran unattended, picked P1 from the night's diagnostics (P2 on 11-17), HELPS at L = 1-3, fixed point after round 1 |
+| 11-19 marrakesh | loop, interference, repetition code, phase estimation (`results/*-night-2026-11-19`) | loop: ledger refused (other calibration), +M on L = 1, P0 on L = 2, 3, fixed point; the first conditional item's bits lose (E3); lut3 0.812 not beyond 0.875; IPE beyond at n = 2, 3, 4 |
+| 11-20 marrakesh | decoy and loop variation (`results/decoy-night-2026-11-20`, `results/loopvar-night-2026-11-20`) | a fixed item in the first bits does not shield (row 2: the first conditional item loses, -0.057); copies agree within a job, L = 2 drifts between jobs (p 0.006) |
 
-Predictions over three nights: 49 declared; 33 held, 16 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
-T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1. 11-18: R-2, PB-3, T-1, T-3, OS2-1). Each failure is reported as such in its folder.
+Predictions over five nights: 59 declared; 39 held, 20 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
+T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1. 11-18: R-2, PB-3, T-1, T-3, OS2-1. 11-19: LOOP-1, IF-1, IF-2, RC-1. 11-20: none
+of 2). Paper 10 (published 11-19) counts the first 57. Each failure is reported as such in its folder.
 
 ## Two numbers side by side (to carry into the text)
 

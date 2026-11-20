@@ -46,3 +46,10 @@ claimed.
 ## Reproduce
 
 `python reproduce.py decoy-night-2026-11-20`
+
+## Independent check (home VS, 2026-11-20)
+
+Re-counted from `job/raw_counts.json` with qiskit, aer and numpy only (no psf-os, no notebook scorer;
+`notes/verify_2026-11-20/decoy_indep.py`): the six conditional sub-items (alone, packed, d, 2 SE), Z's beside values
+and the bundle means agree; the table read in the declared order gives row 2; DC-1 held; 22 circuits, 4000 shots, the
+qubits, Z's bit positions and its coupling distance 3 as declared; reproduce SAME.
