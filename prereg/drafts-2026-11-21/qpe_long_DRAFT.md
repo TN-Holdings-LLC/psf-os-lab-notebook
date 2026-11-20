@@ -51,6 +51,21 @@ but the share itself shrinks, so its absolute drop barely grows (noise c: drops 
 On the log, a fixed loss per round gives a constant D_n and a fixed loss per conditional adds that loss to D_n per bit
 (noise c: 0.190, 0.254, ACCELERATES). The threshold is the usual 2 SE.
 
+The workplace VS's grid (その5, 20 seeds per noise, plan shape; illustrative noises, never fitted):
+
+| noise | log: ACCELERATES / FLAT / SLOWS | share: ACCELERATES / FLAT / SLOWS |
+|---|---|---|
+| a (per round) | 1 / 19 / 0 | 0 / 20 / 0 |
+| gate only, 3 % | 1 / 18 / 1 | 0 / 18 / 2 |
+| dephasing per conditional 3 % | 18 / 2 / 0 | 16 / 4 / 0 |
+| the same 6 % | 19 / 1 / 0 | 8 / 12 / 0 |
+| c (12 %) | 20 / 0 / 0 | 0 / 18 / 2 |
+| the same 24 % | 20 / 0 / 0 | 0 / 0 / 20 |
+
+On the log, a per-round loss reads FLAT and a per-conditional loss ACCELERATES at every strength. On the share, the
+same per-conditional loss turns from ACCELERATES to FLAT to SLOWS as it grows. The VS recommends the log for the
+declared words, with the share beside.
+
 Sensitivity (plan shape, if the device repeats 2026-11-19's slope: p about 0.88, 0.84, 0.80 at n = 4, 5, 6):
 2 SE of a is about 0.009, so the test can see a per-conditional loss of about 1 % of the log share per conditional.
 

@@ -46,6 +46,18 @@ Past noiseless dry runs read the same words with the new seeds as with the old (
 default, the tool's own score): ff_night, rus_night, qpe_repro_night parts A and B: SAME WORDS. (The noisy dry runs of
 the loop tools use the workplace VS's branch_noise with its own wide stride; unchanged.)
 
+The workplace VS checked every tool that builds on the current version (その5, `seed_words_all`): 13 of 14 read
+the same words. balanced_night differs: one L reads OVERSHOOT instead of BEYOND THE CORRECTION CEILING, and the slope
+reads NOT SHOWN instead of COMPOUNDS. Over 10 seeds each (`balanced_spread`):
+
+- old seeds: OVERSHOOT 0 of 50 L-runs. The two neighbouring arms (rd, nf) shared their shots shifted by one, so
+  their fluctuations cancelled, and the spread of the pooled score was smaller than its SE (ratio 0.49-0.94).
+- new seeds: OVERSHOOT 3 of 50, and the spread matches the SE (ratio 0.92-1.31).
+
+So the old noiseless dry run of balanced_night looked steadier than its shot noise allows, and the new default is the
+honest one. The recorded dry run of 2026-11-17 is not changed; `stride=1` reproduces it. Not run by the VS (they do
+not build on this version or have no run_local dry path): compound, packing, parallel, os_night, ctrl, wait.
+
 ## Small fix 2: the sentinel over the test's qubits (home's candidate 4)
 
 `build(..., sentinel_over_test=True)` / `build_bundle(..., sentinel_over_test=True)`: the ring rule
