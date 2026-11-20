@@ -1,0 +1,300 @@
+{
+ "selection": {
+  "cands": [
+   "A",
+   "B",
+   "C"
+  ],
+  "shots": 1950,
+  "a_forms": [
+   "F16",
+   "F10",
+   "F6P",
+   "F6"
+  ],
+  "b_plan": "shape",
+  "b_n4_from_c": false,
+  "b_fence": false,
+  "c_forms": [
+   "pl",
+   "fe",
+   "pk"
+  ],
+  "c_shared_fixed": false,
+  "ff_only": false,
+  "layout": "apart"
+ },
+ "devdir": "/home/psf/vs_rus/nb/results/loop-night-2026-11-19/fetch_in/ibm_marrakesh/dev",
+ "device": "ibm_marrakesh",
+ "region": {
+  "A": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "B": [
+   7,
+   8
+  ],
+  "C": [
+   11,
+   12
+  ]
+ },
+ "jobs": [
+  {
+   "folder": "job0",
+   "circuits": 94,
+   "qpu_seconds_model": 55.9,
+   "items": {
+    "A": [
+     "f16_n",
+     "f10_n",
+     "f6p_n",
+     "f6_n",
+     "f16_0",
+     "f10_0",
+     "f6p_0",
+     "f6_0",
+     "f16_1",
+     "f10_1",
+     "f6p_1",
+     "f6_1",
+     "f16_2",
+     "f10_2",
+     "f6p_2",
+     "f6_2"
+    ],
+    "B": [
+     "ipe4_0",
+     "ipe4_1",
+     "ipe4_2",
+     "ipe4_3",
+     "ipe4_4",
+     "ipe4_5",
+     "ipe4_6",
+     "ipe4_7",
+     "ipe4_8",
+     "ipe4_9",
+     "ipe4_10",
+     "ipe4_11",
+     "ipe4_12",
+     "ipe4_13"
+    ],
+    "C": []
+   },
+   "ff_only": []
+  },
+  {
+   "folder": "job1",
+   "circuits": 94,
+   "qpu_seconds_model": 55.9,
+   "items": {
+    "A": [],
+    "B": [
+     "ipe4_14",
+     "ipe4_15",
+     "ipe5_0",
+     "ipe5_1",
+     "ipe5_2",
+     "ipe5_3",
+     "ipe5_4",
+     "ipe5_5",
+     "ipe5_6",
+     "ipe5_7",
+     "ipe5_8",
+     "ipe5_9",
+     "ipe5_10",
+     "ipe5_11",
+     "ipe5_12",
+     "ipe5_13",
+     "ipe5_14",
+     "ipe5_15",
+     "ipe5_16",
+     "ipe5_17",
+     "ipe5_18",
+     "ipe5_19",
+     "ipe5_20",
+     "ipe5_21",
+     "ipe5_22",
+     "ipe5_23",
+     "ipe5_24",
+     "ipe5_25",
+     "ipe5_26",
+     "ipe5_27"
+    ],
+    "C": []
+   },
+   "ff_only": []
+  },
+  {
+   "folder": "job2",
+   "circuits": 94,
+   "qpu_seconds_model": 55.9,
+   "items": {
+    "A": [],
+    "B": [
+     "ipe5_28",
+     "ipe5_29",
+     "ipe5_30",
+     "ipe5_31",
+     "ipe6_0",
+     "ipe6_1",
+     "ipe6_2",
+     "ipe6_3",
+     "ipe6_4",
+     "ipe6_5",
+     "ipe6_6",
+     "ipe6_7",
+     "ipe6_8",
+     "ipe6_9",
+     "ipe6_10",
+     "ipe6_11",
+     "ipe6_12",
+     "ipe6_13",
+     "ipe6_14",
+     "ipe6_15",
+     "ipe6_16",
+     "ipe6_17",
+     "ipe6_18",
+     "ipe6_19",
+     "ipe6_20",
+     "ipe6_21",
+     "ipe6_22",
+     "ipe6_23",
+     "ipe6_24",
+     "ipe6_25"
+    ],
+    "C": []
+   },
+   "ff_only": []
+  },
+  {
+   "folder": "job3",
+   "circuits": 94,
+   "qpu_seconds_model": 55.9,
+   "items": {
+    "A": [],
+    "B": [
+     "ipe6_26",
+     "ipe6_27",
+     "ipe6_28",
+     "ipe6_29",
+     "ipe6_30",
+     "ipe6_31",
+     "ipe6_32",
+     "ipe6_33",
+     "ipe6_34",
+     "ipe6_35",
+     "ipe6_36",
+     "ipe6_37",
+     "ipe6_38",
+     "ipe6_39",
+     "ipe6_40",
+     "ipe6_41",
+     "ipe6_42",
+     "ipe6_43",
+     "ipe6_44",
+     "ipe6_45",
+     "ipe6_46",
+     "ipe6_47",
+     "ipe6_48",
+     "ipe6_49",
+     "ipe6_50",
+     "ipe6_51",
+     "ipe6_52",
+     "ipe6_53",
+     "ipe6_54",
+     "ipe6_55"
+    ],
+    "C": []
+   },
+   "ff_only": []
+  },
+  {
+   "folder": "job4",
+   "circuits": 91,
+   "qpu_seconds_model": 54.2,
+   "items": {
+    "A": [],
+    "B": [
+     "ipe6_56",
+     "ipe6_57",
+     "ipe6_58",
+     "ipe6_59",
+     "ipe6_60",
+     "ipe6_61",
+     "ipe6_62",
+     "ipe6_63"
+    ],
+    "C": [
+     "pl4_0",
+     "fe4_0",
+     "pk4_0",
+     "pl4_1",
+     "fe4_1",
+     "pk4_1",
+     "pl4_2",
+     "fe4_2",
+     "pk4_2",
+     "pl4_3",
+     "fe4_3",
+     "pk4_3",
+     "pl4_4",
+     "fe4_4",
+     "pk4_4",
+     "pl4_5",
+     "fe4_5",
+     "pk4_5",
+     "pl4_6",
+     "fe4_6",
+     "pk4_6"
+    ]
+   },
+   "ff_only": []
+  },
+  {
+   "folder": "job5",
+   "circuits": 85,
+   "qpu_seconds_model": 50.8,
+   "items": {
+    "A": [],
+    "B": [],
+    "C": [
+     "pl4_7",
+     "fe4_7",
+     "pk4_7",
+     "pl4_8",
+     "fe4_8",
+     "pk4_8",
+     "pl4_9",
+     "fe4_9",
+     "pk4_9",
+     "pl4_10",
+     "fe4_10",
+     "pk4_10",
+     "pl4_11",
+     "fe4_11",
+     "pk4_11",
+     "pl4_12",
+     "fe4_12",
+     "pk4_12",
+     "pl4_13",
+     "fe4_13",
+     "pk4_13",
+     "pl4_14",
+     "fe4_14",
+     "pk4_14",
+     "pl4_15",
+     "fe4_15",
+     "pk4_15"
+    ]
+   },
+   "ff_only": []
+  }
+ ],
+ "dry_clifford_sentinel": true,
+ "qpu_seconds_model": 328.6
+}

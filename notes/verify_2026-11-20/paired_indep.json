@@ -1,0 +1,26 @@
+{
+ "lines": [
+  "Dc A: D_late_nb +0.0692 (2 SE 0.0113) loss True;  Dw A: D_cond +0.0093 (2 SE 0.0112) loss False",
+  "Dc B: D_late_nb +0.0830 (2 SE 0.0113) loss True;  Dw B: D_cond +0.0008 (2 SE 0.0117) loss False",
+  "Dr L 1 (physical qubit 1): P(1|1) 0.9745, P(0|0) 0.9868, gap +0.0122 (2 SE 0.0062) loss True",
+  "Dr L 2 (physical qubit 3): P(1|1) 0.9922, P(0|0) 0.9948, gap +0.0025 (2 SE 0.0036) loss False",
+  "Dr L 3 (physical qubit 5): P(1|1) 0.9900, P(0|0) 0.9985, gap +0.0085 (2 SE 0.0034) loss True",
+  "pick {1: 'P2', 2: 'P1', 3: 'P2'}",
+  "r1 L 1: inc ['P0', 3] P 0.8542 (SE 0.0056, noiseless 0.9221); cand ['P2', 2] P 0.8688 (SE 0.0053, noiseless 0.8906); exact 0.9371; d +0.0145 (2 SE 0.0154) -> INCUMBENT KEPT; P0 0.8542",
+  "r1 L 2: inc ['P0', 3] P 0.7598 (SE 0.0068, noiseless 0.8501); cand ['P1', 2] P 0.7372 (SE 0.0070, noiseless 0.7931); exact 0.8782; d -0.0225 (2 SE 0.0194) -> CANDIDATE NOT ADOPTED; P0 0.7598",
+  "r1 L 3: inc ['P0', 3] P 0.6202 (SE 0.0077, noiseless 0.7848); cand ['P2', 2] P 0.6590 (SE 0.0075, noiseless 0.7056); exact 0.8230; d +0.0388 (2 SE 0.0215) -> CANDIDATE ADOPTED; P0 0.6202",
+  "r1 Dr: q1 P(1|1) 0.9742 P(0|0) 0.9838 gap +0.0095 (2 SE 0.0064); q3 P(1|1) 0.9938 P(0|0) 0.9968 gap +0.0030 (2 SE 0.0031); q5 P(1|1) 0.9922 P(0|0) 0.9970 gap +0.0048 (2 SE 0.0033); q7 P(1|1) 0.9765 P(0|0) 0.9752 gap -0.0013 (2 SE 0.0069); q9 P(1|1) 0.8758 P(0|0) 0.9992 gap +0.1235 (2 SE 0.0105)",
+  "r2 L 1: inc ['P0', 3] P 0.8472 (SE 0.0057, noiseless 0.9221); cand ['P2', 3] P 0.8935 (SE 0.0049, noiseless 0.9224); exact 0.9371; d +0.0463 (2 SE 0.0150) -> CANDIDATE ADOPTED; P0 0.8472",
+  "r2 L 2: no candidate; P0 0.7508",
+  "r2 L 3: inc ['P2', 2] P 0.6562 (SE 0.0075, noiseless 0.7056); cand ['P2', 3] P 0.6893 (SE 0.0073, noiseless 0.7828); exact 0.8230; d +0.0330 (2 SE 0.0210) -> CANDIDATE ADOPTED; P0 0.6360",
+  "r2 Dr: q1 P(1|1) 0.9702 P(0|0) 0.9848 gap +0.0145 (2 SE 0.0066); q3 P(1|1) 0.9915 P(0|0) 0.9952 gap +0.0037 (2 SE 0.0036); q5 P(1|1) 0.9945 P(0|0) 0.9970 gap +0.0025 (2 SE 0.0029); q7 P(1|1) 0.9715 P(0|0) 0.9702 gap -0.0013 (2 SE 0.0075); q9 P(1|1) 0.8768 P(0|0) 0.9988 gap +0.1220 (2 SE 0.0105)",
+  "RULE2 (re-written rule): incumbents {1: ('P0',), 2: ('P0',), 3: ('P2',)}; candidates {1: ('P2', 'M'), 2: None, 3: ('P2', 'M')}; tried {1: ['base'], 2: ['base'], 3: ['base']}",
+  "RULE3 (re-written rule): incumbents {1: ('P2', 'M'), 2: ('P0',), 3: ('P2', 'M')}; candidates {1: None, 2: None, 3: None}; tried {1: ['base', 'M'], 2: ['base'], 3: ['base', 'M']}",
+  "stop after round 2: every key out of steps: True",
+  "RULE2.json recorded: stacks {'1': ['P0'], '2': ['P0'], '3': ['P2']} candidates {'1': ['P2', 'M'], '2': None, '3': ['P2', 'M']} stop False reason None -> SAME",
+  "RULE3.json recorded: stacks {'1': ['P2', 'M'], '2': ['P0'], '3': ['P2', 'M']} candidates {'1': None, '2': None, '3': None} stop True reason no step left on any key: every key keeps its incumbent -> SAME",
+  "candidate overshoots in any round: none",
+  "LP-2 rows: [('r1', 3, ['P2', 2], 0.65625, 0.7056475, 0.007509759275436198, False)]; adopted in the last round (no next round, not counted): [(1, ['P2', 3]), (3, ['P2', 3])]; LP-2 held",
+  "charged 110 s, 1.7941 RU; circuits dw 22, dc 22, r1 25, r2 23; shots {4000}"
+ ]
+}

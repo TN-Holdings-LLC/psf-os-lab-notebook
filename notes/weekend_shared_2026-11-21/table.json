@@ -1,0 +1,1150 @@
+[
+ {
+  "name": "0 each alone (drafts)",
+  "circuits": 560,
+  "jobs": 8,
+  "seconds": 370.0,
+  "per_job": {
+   "A": [
+    34.2,
+    34.2
+   ],
+   "B": [
+    52.5,
+    52.5,
+    52.5,
+    52.5
+   ],
+   "C": [
+    45.8,
+    45.8
+   ]
+  },
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "-"
+ },
+ {
+  "name": "1 all three in one night's jobs, nothing cut (all 1950 shots)",
+  "selection": [
+   {
+    "cands": [
+     "A",
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 552,
+  "jobs": 6,
+  "seconds": 328.6,
+  "per_job": [
+   55.9,
+   55.9,
+   55.9,
+   55.9,
+   54.2,
+   50.8
+  ],
+  "two_se_factor": {
+   "A": 1.43,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "A at 1950 shots (psf-os: one shot count per job)"
+ },
+ {
+  "name": "1b as 1, A in its own jobs at 4000",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 560,
+  "jobs": 8,
+  "seconds": 369.8,
+  "per_job": [
+   34.2,
+   34.2,
+   50.8,
+   50.8,
+   50.8,
+   50.8,
+   47.4,
+   50.8
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "nothing"
+ },
+ {
+  "name": "2 A at 2000 shots (alone)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 2000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 52,
+  "jobs": 1,
+  "seconds": 33.0,
+  "per_job": [
+   33.0
+  ],
+  "two_se_factor": {
+   "A": 1.41
+  },
+  "lost": "A: 2 SE x1.41"
+ },
+ {
+  "name": "3 A without F16 (alone, 4000)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 40,
+  "jobs": 1,
+  "seconds": 47.6,
+  "per_job": [
+   47.6
+  ],
+  "two_se_factor": {
+   "A": 1.0
+  },
+  "lost": "A: beside F10 - F16; 2026-11-19's circuit"
+ },
+ {
+  "name": "4 B shape with n = 4 from C's pl, + C",
+  "selection": [
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": true,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 452,
+  "jobs": 5,
+  "seconds": 269.4,
+  "per_job": [
+   55.9,
+   55.9,
+   55.9,
+   55.9,
+   45.8
+  ],
+  "two_se_factor": {
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "nothing (B's n = 4 and C's pl are the same circuits on the same qubits)"
+ },
+ {
+  "name": "5 C alone, fe and pk without off/floor",
+  "selection": [
+   {
+    "cands": [
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": true,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 84,
+  "jobs": 1,
+  "seconds": 50.2,
+  "per_job": [
+   50.2
+  ],
+  "two_se_factor": {
+   "C": 1.0
+  },
+  "lost": "fe's and pk's floors (beside); their off arm is pl's (the same circuit)"
+ },
+ {
+  "name": "6a A alone, ff only (4000)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 20,
+  "jobs": 1,
+  "seconds": 25.3,
+  "per_job": [
+   25.3
+  ],
+  "two_se_factor": {
+   "A": 1.0
+  },
+  "lost": "off, floor (beside)"
+ },
+ {
+  "name": "6b B shape alone, ff only",
+  "selection": [
+   {
+    "cands": [
+     "B"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 120,
+  "jobs": 2,
+  "seconds": 73.6,
+  "per_job": [
+   36.8,
+   36.8
+  ],
+  "two_se_factor": {
+   "B": 1.0
+  },
+  "lost": "off, floor (beside)"
+ },
+ {
+  "name": "6c C alone, ff only",
+  "selection": [
+   {
+    "cands": [
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 52,
+  "jobs": 1,
+  "seconds": 32.2,
+  "per_job": [
+   32.2
+  ],
+  "two_se_factor": {
+   "C": 1.0
+  },
+  "lost": "off, floor (beside)"
+ },
+ {
+  "name": "7 B n5 (IPE + textbook) alone",
+  "selection": [
+   {
+    "cands": [
+     "B"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "n5",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 200,
+  "jobs": 2,
+  "seconds": 118.4,
+  "per_job": [
+   59.2,
+   59.2
+  ],
+  "two_se_factor": {
+   "B": 1.0
+  },
+  "lost": "B's shape (needs three n)"
+ },
+ {
+  "name": "7b B n5, IPE only, alone",
+  "selection": [
+   {
+    "cands": [
+     "B"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "n5ipe",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 100,
+  "jobs": 1,
+  "seconds": 59.2,
+  "per_job": [
+   59.2
+  ],
+  "two_se_factor": {
+   "B": 1.0
+  },
+  "lost": "B's shape; IPE - textbook"
+ },
+ {
+  "name": "8 A + B shape (A 4000 own jobs)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "B"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 408,
+  "jobs": 6,
+  "seconds": 278.4,
+  "per_job": [
+   34.2,
+   34.2,
+   52.5,
+   52.5,
+   52.5,
+   52.5
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0
+  },
+  "lost": "C"
+ },
+ {
+  "name": "8b A + C (A 4000 own jobs)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 208,
+  "jobs": 4,
+  "seconds": 160.0,
+  "per_job": [
+   34.2,
+   34.2,
+   45.8,
+   45.8
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "C": 1.0
+  },
+  "lost": "B"
+ },
+ {
+  "name": "8c B shape + C (n4 shared)",
+  "selection": [
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": true,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 452,
+  "jobs": 5,
+  "seconds": 269.4,
+  "per_job": [
+   55.9,
+   55.9,
+   55.9,
+   55.9,
+   45.8
+  ],
+  "two_se_factor": {
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "A"
+ },
+ {
+  "name": "9 all three, nothing cut but n4 shared (A 4000 own jobs)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": true,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": false,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 508,
+  "jobs": 7,
+  "seconds": 337.8,
+  "per_job": [
+   34.2,
+   34.2,
+   55.9,
+   55.9,
+   55.9,
+   55.9,
+   45.8
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "nothing"
+ },
+ {
+  "name": "10 all three, ff only, n4 shared (A 4000 own job)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": true,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 172,
+  "jobs": 3,
+  "seconds": 116.9,
+  "per_job": [
+   25.3,
+   45.8,
+   45.8
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "off, floor (beside)"
+ },
+ {
+  "name": "10b as 10, A at 1950 in the shared jobs",
+  "selection": [
+   {
+    "cands": [
+     "A",
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": true,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 168,
+  "jobs": 2,
+  "seconds": 100.4,
+  "per_job": [
+   50.2,
+   50.2
+  ],
+  "two_se_factor": {
+   "A": 1.43,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "off, floor; A 2 SE x1.43"
+ },
+ {
+  "name": "10c as 10, A without F16",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": true,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 168,
+  "jobs": 3,
+  "seconds": 112.5,
+  "per_job": [
+   20.9,
+   45.8,
+   45.8
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "off, floor; A's F10 - F16"
+ },
+ {
+  "name": "11 A + C, ff only (A 4000 own job)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 72,
+  "jobs": 2,
+  "seconds": 57.5,
+  "per_job": [
+   25.3,
+   32.2
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "C": 1.0
+  },
+  "lost": "B; off, floor"
+ },
+ {
+  "name": "11b A + B shape, ff only (A 4000 own job)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "B"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 140,
+  "jobs": 3,
+  "seconds": 98.9,
+  "per_job": [
+   25.3,
+   36.8,
+   36.8
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0
+  },
+  "lost": "C; off, floor"
+ },
+ {
+  "name": "11c B shape + C, ff only, n4 shared",
+  "selection": [
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": true,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 152,
+  "jobs": 2,
+  "seconds": 91.6,
+  "per_job": [
+   45.8,
+   45.8
+  ],
+  "two_se_factor": {
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "A; off, floor"
+ },
+ {
+  "name": "12 all three, ff only, B n5ipe (A 4000 own job)",
+  "selection": [
+   {
+    "cands": [
+     "A"
+    ],
+    "shots": 4000,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "shape",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   },
+   {
+    "cands": [
+     "B",
+     "C"
+    ],
+    "shots": 1950,
+    "a_forms": [
+     "F16",
+     "F10",
+     "F6P",
+     "F6"
+    ],
+    "b_plan": "n5ipe",
+    "b_n4_from_c": false,
+    "b_fence": false,
+    "c_forms": [
+     "pl",
+     "fe",
+     "pk"
+    ],
+    "c_shared_fixed": false,
+    "ff_only": true,
+    "layout": "apart"
+   }
+  ],
+  "circuits": 104,
+  "jobs": 2,
+  "seconds": 75.5,
+  "per_job": [
+   25.3,
+   50.2
+  ],
+  "two_se_factor": {
+   "A": 1.0,
+   "B": 1.0,
+   "C": 1.0
+  },
+  "lost": "B's shape and textbook; off, floor"
+ }
+]

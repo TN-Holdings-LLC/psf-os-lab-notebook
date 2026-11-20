@@ -1,0 +1,48 @@
+=== p10_A --cands A --shots 4000 --ff-only
+job0: 20 circuits, 25.3 s by the model; A 16 items
+1 jobs, 25.3 s by the model; regions {'A': [0, 1, 2, 3, 4]}
+job0 A: 16 items; A's own check: PASS
+PASS
+f6p_n        floor not in the shared night (ff only)
+f6p_n        off   not in the shared night (ff only)
+48 arms of the single builds; 16 with the same compiled circuit; 32 not in the shared night; SAME (CZ, depth, footprint)
+A: SAME (9 lines of A's own score)
+SAME
+=== p10_BC --cands BC --b-n4-from-c --ff-only
+job0: 76 circuits, 45.8 s by the model; B 72 items, C 0 items
+job1: 76 circuits, 45.8 s by the model; B 24 items, C 48 items
+2 jobs, 91.6 s by the model; regions {'B+C': [0, 1]}
+job0 B: 72 items; B's own check: 76 circuits; PASS
+job1 B: 24 items; B's own check: 28 circuits; PASS
+job1 C: 48 items; C's own check: 52 circuits; PASS
+PASS
+pl4_9        floor not in the shared night (ff only)
+pl4_9        off   not in the shared night (ff only)
+480 arms of the single builds; 160 with the same compiled circuit; 320 not in the shared night; SAME (CZ, depth, footprint)
+B: SAME (5 lines of B's own score)
+C: SAME (7 lines of C's own score)
+SAME
+=== p1_all --cands ABC
+job0: 94 circuits, 55.9 s by the model; A 16 items, B 14 items, C 0 items
+job1: 94 circuits, 55.9 s by the model; A 0 items, B 30 items, C 0 items
+job2: 94 circuits, 55.9 s by the model; A 0 items, B 30 items, C 0 items
+job3: 94 circuits, 55.9 s by the model; A 0 items, B 30 items, C 0 items
+job4: 91 circuits, 54.2 s by the model; A 0 items, B 8 items, C 21 items
+job5: 85 circuits, 50.8 s by the model; A 0 items, B 0 items, C 27 items
+6 jobs, 328.6 s by the model; regions {'A': [0, 1, 2, 3, 4], 'B': [7, 8], 'C': [11, 12]}
+job0 B: 14 items; B's own check: 46 circuits; PASS
+job1 B: 30 items; B's own check: 94 circuits; PASS
+job2 B: 30 items; B's own check: 94 circuits; PASS
+job3 B: 30 items; B's own check: 94 circuits; PASS
+job4 B: 8 items; B's own check: 28 circuits; PASS
+job4 C: 21 items; C's own check: 67 circuits; PASS
+job5 C: 27 items; C's own check: 85 circuits; PASS
+PASS
+pl4_9        floor circuit differs; chain [0, 1] -> [11, 12]; CZ 8/8; depth 48/48; footprint None/None ok
+pl4_9        off   circuit differs; chain [0, 1] -> [11, 12]; CZ 8/8; depth 57/57; footprint 1/1 ok
+528 arms of the single builds; 48 with the same compiled circuit; 0 not in the shared night; SAME (CZ, depth, footprint)
+A: SAME (9 lines of A's own score)
+B: SAME (5 lines of B's own score)
+C: SAME (7 lines of C's own score)
+SAME
+DONE

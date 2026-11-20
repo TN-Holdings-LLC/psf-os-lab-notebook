@@ -1,0 +1,15 @@
+== B
+n 4: IPE 1.0000 (2 SE 0.0000, 31200 shots) against C 0.4706 -> BEYOND THE CEILING (margin +0.5294)
+n 5: IPE 1.0000 (2 SE 0.0000, 62400 shots) against C 0.3792 -> BEYOND THE CEILING (margin +0.6208)
+n 6: IPE 1.0000 (2 SE 0.0000, 124800 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.6935)
+log drop per added bit: n 4 -> 5 +0.0000, 5 -> 6 +0.0000; acceleration +0.0000 (2 SE 0.0000) -> FLAT [OWNER]
+  beside, on the share: drop +0.0000, +0.0000; acceleration +0.0000 (2 SE 0.0000) -> FLAT
+
+== C
+n 4 pl: 1.0000 (2 SE 0.0000, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+n 4 fe: 1.0000 (2 SE 0.0000, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+n 4 pk: 1.0000 (2 SE 0.0000, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+  park (pk - pl): +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+  fence (fe - pl): +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+  park_vs_fence (pk - fe): +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+  reading [OWNER]: where the target waits is not seen at this night's shot noise

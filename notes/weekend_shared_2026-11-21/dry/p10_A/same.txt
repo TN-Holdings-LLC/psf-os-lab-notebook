@@ -1,0 +1,49 @@
+f10_0        ff    circuit equal; chain same; CZ 10/10; depth 43/43; footprint None/3 ok
+f10_0        floor not in the shared night (ff only)
+f10_0        off   not in the shared night (ff only)
+f10_1        ff    circuit equal; chain same; CZ 10/10; depth 43/43; footprint None/3 ok
+f10_1        floor not in the shared night (ff only)
+f10_1        off   not in the shared night (ff only)
+f10_2        ff    circuit equal; chain same; CZ 10/10; depth 43/43; footprint None/3 ok
+f10_2        floor not in the shared night (ff only)
+f10_2        off   not in the shared night (ff only)
+f10_n        ff    circuit equal; chain same; CZ 10/10; depth 43/43; footprint None/3 ok
+f10_n        floor not in the shared night (ff only)
+f10_n        off   not in the shared night (ff only)
+f16_0        ff    circuit equal; chain same; CZ 16/16; depth 62/62; footprint None/3 ok
+f16_0        floor not in the shared night (ff only)
+f16_0        off   not in the shared night (ff only)
+f16_1        ff    circuit equal; chain same; CZ 16/16; depth 62/62; footprint None/3 ok
+f16_1        floor not in the shared night (ff only)
+f16_1        off   not in the shared night (ff only)
+f16_2        ff    circuit equal; chain same; CZ 16/16; depth 62/62; footprint None/3 ok
+f16_2        floor not in the shared night (ff only)
+f16_2        off   not in the shared night (ff only)
+f16_n        ff    circuit equal; chain same; CZ 16/16; depth 62/62; footprint None/3 ok
+f16_n        floor not in the shared night (ff only)
+f16_n        off   not in the shared night (ff only)
+f6_0         ff    circuit equal; chain same; CZ 6/6; depth 29/29; footprint None/1 ok
+f6_0         floor not in the shared night (ff only)
+f6_0         off   not in the shared night (ff only)
+f6_1         ff    circuit equal; chain same; CZ 6/6; depth 29/29; footprint None/1 ok
+f6_1         floor not in the shared night (ff only)
+f6_1         off   not in the shared night (ff only)
+f6_2         ff    circuit equal; chain same; CZ 6/6; depth 29/29; footprint None/1 ok
+f6_2         floor not in the shared night (ff only)
+f6_2         off   not in the shared night (ff only)
+f6_n         ff    circuit equal; chain same; CZ 6/6; depth 29/29; footprint None/1 ok
+f6_n         floor not in the shared night (ff only)
+f6_n         off   not in the shared night (ff only)
+f6p_0        ff    circuit equal; chain same; CZ 10/10; depth 35/35; footprint None/1 ok
+f6p_0        floor not in the shared night (ff only)
+f6p_0        off   not in the shared night (ff only)
+f6p_1        ff    circuit equal; chain same; CZ 10/10; depth 35/35; footprint None/1 ok
+f6p_1        floor not in the shared night (ff only)
+f6p_1        off   not in the shared night (ff only)
+f6p_2        ff    circuit equal; chain same; CZ 10/10; depth 35/35; footprint None/1 ok
+f6p_2        floor not in the shared night (ff only)
+f6p_2        off   not in the shared night (ff only)
+f6p_n        ff    circuit equal; chain same; CZ 10/10; depth 35/35; footprint None/1 ok
+f6p_n        floor not in the shared night (ff only)
+f6p_n        off   not in the shared night (ff only)
+48 arms of the single builds; 16 with the same compiled circuit; 32 not in the shared night; SAME (CZ, depth, footprint)

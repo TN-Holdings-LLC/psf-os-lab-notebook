@@ -1,0 +1,11 @@
+A: SAME (9 lines of A's own score)
+   single: F16 (CZ 16, carriers 3): lut3 c[0] right 1.0000 (2 SE 0.0000) against C 0.8750 -> BEYOND THE CEILING (margin +0.1250); per error n 1.000, 0 1.000, 1 1.000, 2 1.000
+   single: F10 (CZ 10, carriers 3): lut3 c[0] right 1.0000 (2 SE 0.0000) against C 0.8750 -> BEYOND THE CEILING (margin +0.1250); per error n 1.000, 0 1.000, 1 1.000, 2 1.000
+   single: F6P (CZ 10, carriers 1): lut3 c[0] right 1.0000 (2 SE 0.0000) against C 0.8750 -> BEYOND THE CEILING (margin +0.1250); per error n 1.000, 0 1.000, 1 1.000, 2 1.000
+   single: F6 (CZ 6, carriers 1): lut3 c[0] right 1.0000 (2 SE 0.0000) against C 0.8750 -> BEYOND THE CEILING (margin +0.1250); per error n 1.000, 0 1.000, 1 1.000, 2 1.000
+   single: footprint: +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+   single: cz: +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+   single: cz16: +0.0000 (2 SE 0.0000) -> SAME WITHIN ERROR
+   single: reading [OWNER]: neither seen at this night's shot noise
+   single: beside: CZ at equal carriers (F10 - F16) SAME WITHIN ERROR
+SAME

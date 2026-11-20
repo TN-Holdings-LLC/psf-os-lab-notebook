@@ -1,0 +1,2 @@
+job0 A: 16 items; A's own check: PASS
+PASS

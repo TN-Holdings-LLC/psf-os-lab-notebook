@@ -1,0 +1,23 @@
+0 each alone (drafts)                             560 circuits 8 jobs  370.0 s  2SE x{'A': 1.0, 'B': 1.0, 'C': 1.0}  lost: -
+1 all three in one night's jobs, nothing cut (all 1950 shots)  552 circuits 6 jobs  328.6 s  2SE x{'A': 1.43, 'B': 1.0, 'C': 1.0}  lost: A at 1950 shots (psf-os: one shot count per job)
+1b as 1, A in its own jobs at 4000                560 circuits 8 jobs  369.8 s  2SE x{'A': 1.0, 'B': 1.0, 'C': 1.0}  lost: nothing
+2 A at 2000 shots (alone)                          52 circuits 1 jobs   33.0 s  2SE x{'A': 1.41}  lost: A: 2 SE x1.41
+3 A without F16 (alone, 4000)                      40 circuits 1 jobs   47.6 s  2SE x{'A': 1.0}  lost: A: beside F10 - F16; 2026-11-19's circuit
+4 B shape with n = 4 from C's pl, + C             452 circuits 5 jobs  269.4 s  2SE x{'B': 1.0, 'C': 1.0}  lost: nothing (B's n = 4 and C's pl are the same circuits on the same qubits)
+5 C alone, fe and pk without off/floor             84 circuits 1 jobs   50.2 s  2SE x{'C': 1.0}  lost: fe's and pk's floors (beside); their off arm is pl's (the same circuit)
+6a A alone, ff only (4000)                         20 circuits 1 jobs   25.3 s  2SE x{'A': 1.0}  lost: off, floor (beside)
+6b B shape alone, ff only                         120 circuits 2 jobs   73.6 s  2SE x{'B': 1.0}  lost: off, floor (beside)
+6c C alone, ff only                                52 circuits 1 jobs   32.2 s  2SE x{'C': 1.0}  lost: off, floor (beside)
+7 B n5 (IPE + textbook) alone                     200 circuits 2 jobs  118.4 s  2SE x{'B': 1.0}  lost: B's shape (needs three n)
+7b B n5, IPE only, alone                          100 circuits 1 jobs   59.2 s  2SE x{'B': 1.0}  lost: B's shape; IPE - textbook
+8 A + B shape (A 4000 own jobs)                   408 circuits 6 jobs  278.4 s  2SE x{'A': 1.0, 'B': 1.0}  lost: C
+8b A + C (A 4000 own jobs)                        208 circuits 4 jobs  160.0 s  2SE x{'A': 1.0, 'C': 1.0}  lost: B
+8c B shape + C (n4 shared)                        452 circuits 5 jobs  269.4 s  2SE x{'B': 1.0, 'C': 1.0}  lost: A
+9 all three, nothing cut but n4 shared (A 4000 own jobs)  508 circuits 7 jobs  337.8 s  2SE x{'A': 1.0, 'B': 1.0, 'C': 1.0}  lost: nothing
+10 all three, ff only, n4 shared (A 4000 own job)  172 circuits 3 jobs  116.9 s  2SE x{'A': 1.0, 'B': 1.0, 'C': 1.0}  lost: off, floor (beside)
+10b as 10, A at 1950 in the shared jobs           168 circuits 2 jobs  100.4 s  2SE x{'A': 1.43, 'B': 1.0, 'C': 1.0}  lost: off, floor; A 2 SE x1.43
+10c as 10, A without F16                          168 circuits 3 jobs  112.5 s  2SE x{'A': 1.0, 'B': 1.0, 'C': 1.0}  lost: off, floor; A's F10 - F16
+11 A + C, ff only (A 4000 own job)                 72 circuits 2 jobs   57.5 s  2SE x{'A': 1.0, 'C': 1.0}  lost: B; off, floor
+11b A + B shape, ff only (A 4000 own job)         140 circuits 3 jobs   98.9 s  2SE x{'A': 1.0, 'B': 1.0}  lost: C; off, floor
+11c B shape + C, ff only, n4 shared               152 circuits 2 jobs   91.6 s  2SE x{'B': 1.0, 'C': 1.0}  lost: A; off, floor
+12 all three, ff only, B n5ipe (A 4000 own job)   104 circuits 2 jobs   75.5 s  2SE x{'A': 1.0, 'B': 1.0, 'C': 1.0}  lost: B's shape and textbook; off, floor

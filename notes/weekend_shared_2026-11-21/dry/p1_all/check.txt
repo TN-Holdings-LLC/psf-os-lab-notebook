@@ -1,0 +1,9 @@
+job0 A: 16 items; A's own check: PASS
+job0 B: 14 items; B's own check: 46 circuits; PASS
+job1 B: 30 items; B's own check: 94 circuits; PASS
+job2 B: 30 items; B's own check: 94 circuits; PASS
+job3 B: 30 items; B's own check: 94 circuits; PASS
+job4 B: 8 items; B's own check: 28 circuits; PASS
+job4 C: 21 items; C's own check: 67 circuits; PASS
+job5 C: 27 items; C's own check: 85 circuits; PASS
+PASS
