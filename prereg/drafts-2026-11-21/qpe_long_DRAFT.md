@@ -20,12 +20,12 @@ Tool: `gpu/qpe_long_night.py` (reads the declared `gpu/qpe_repro_night.py` only)
 ## Design (one device record; rule C placement; no mitigation; DD and twirling off; every shot counted)
 
 The 2026-11-19 circuits unchanged (IPE from `notes/ffapps_2026-11-17` apps.ipe with its off arm; textbook =
-qpe_repro_night.textbook_logical), every phase j = 0 .. 2^n - 1, 1950 shots per circuit, every job 100 circuits
-(32 items x 3 arms + the sentinel's 4), 59.2 s by the model.
+qpe_repro_night.textbook_logical), every phase j = 0 .. 2^n - 1, 1950 shots per circuit; a job of 32 items is 100
+circuits (x 3 arms + the sentinel's 4), 59.2 s by the model; a job of 16 items 52 circuits, 32.2 s.
 
 | plan (`--plan`) [OWNER] | jobs | contents per job | model seconds | what it reads |
 |---|---|---|---|---|
-| shape | 4 | IPE n = 4 (16 phases) + n = 5 phases 0-15; n = 5 16-31; n = 6 0-31; n = 6 32-63 | 4 x 59.2 = 236.8 | the shape (IPE at n = 4, 5, 6 on one night) |
+| shape | 4 | IPE n = 4 (16 phases) + n = 5 phases 0-15; n = 5 16-31 (52 circuits); n = 6 0-31; n = 6 32-63 | 59.2 + 32.2 + 59.2 + 59.2 = 209.8 | the shape (IPE at n = 4, 5, 6 on one night) |
 | n5 | 2 | IPE and textbook n = 5, phases 0-15; the same 16-31 | 2 x 59.2 = 118.4 | n = 5 against its ceiling, IPE against textbook |
 | n5n6 | 4 | n5's two jobs; IPE n = 6 0-31; 32-63 | 236.8 | n = 5 both, n = 6 IPE; no n = 4 on the same night |
 
@@ -95,6 +95,14 @@ IPE off within 0.03 of exact, floors zero) PASS on every job of every plan.
   0, 1 on a Heron), where no ring can pass (qubit 0 has one coupler, qubit 1 two). psf-os after-2026-11-20 offers
   `ring_chains(dev, 2)` (chains on the sentinel's own ring, passed as build's `chains`) and records the cover with
   `sentinel_over_test`; using either changes the test's qubits from 2026-11-19's [OWNER].
+- **The target does not wait as written** (the workplace VS, 2026-11-20). Compiled, the target's return to |1> and
+  the next round's preparation are merged across the wait, so as sent the target waits in a superposition: one
+  carrier at every wait (`notes/footprint_2026-11-20/sent.txt`; written: 0). 2026-11-19's IPE was sent so. psf-os
+  after-2026-11-20's fence (`--fence`: a barrier on every qubit around each wait) keeps it in |1> (0 carriers, the
+  same CZ, depth +3; check PASS). Under the illustrative noises the fence alone trades dephasing for decay (noise a:
+  0.948 -> 0.918 at n = 4; noise c: 0.731 -> 0.754); parking the target in |0> during the wait does better in both
+  (`notes/park_2026-11-20/`; not in this tool) [OWNER: plain as 2026-11-19 (proposed: the comparison with 11-19
+  stays), or fenced].
 - The plan's jobs run at different times of the night; the shape reads three n from four jobs (n = 4 and half of
   n = 5 in job 0). A drift between jobs enters the acceleration (the loopvar test of 2026-11-20 measures that size).
 - The textbook circuit is not in plan shape (the night's budget); its gap at n = 5 is in plans n5 and n5n6.
@@ -107,6 +115,7 @@ IPE off within 0.03 of exact, floors zero) PASS on every job of every plan.
 3. The reading table above, as proposed or changed.
 4. Predictions QL-1 .. QL-3, each a direction or "none".
 5. Placement: rule C as 2026-11-19 (proposed), or on the sentinel's ring (`ring_chains`).
+6. Plain (as 2026-11-19, proposed) or `--fence`.
 
 ## Device procedure (home)
 
@@ -114,7 +123,7 @@ IPE off within 0.03 of exact, floors zero) PASS on every job of every plan.
 # psf-os at the declared commit (branch after-2026-11-20 or later); notebook at the declaring commit
 python gpu/qpe_long_night.py ideal                                     # ceilings 0.4706 0.3792 0.3065; the plans
 for k in 0 1 2 3; do
-  python gpu/qpe_long_night.py build DEV OUT$k --plan shape --job $k   # 100 circuits, 59.2 s each
+  python gpu/qpe_long_night.py build DEV OUT$k --plan shape --job $k   # 100 circuits, 59.2 s (job 1: 52, 32.2 s)
   python gpu/qpe_long_night.py check OUT$k                             # PASS
 done
 python -m psf_os submit OUT0 ; python -m psf_os collect OUT0           # then OUT1, OUT2, OUT3, as every night

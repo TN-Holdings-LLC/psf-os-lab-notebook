@@ -5,7 +5,8 @@ gpu/qpe_repro_night.py (declared 2026-11-19) is read only: its textbook circuit,
 The 2026-11-19 test at larger n: IPE (one ancilla, one target in |1>, bits read least significant first, the phase
 feedback of every bit already read, a conditional-X reset) against its ceiling C(n) (the best fixed decoder of the
 off arm's bits, exact), and beside it the textbook circuit (n counting qubits routed on a line, final measurements).
-1950 shots per circuit; every job 100 circuits (32 items x 3 arms + the sentinel's 4), 59.2 s by the model.
+1950 shots per circuit; a job of 32 items is 100 circuits (x 3 arms + the sentinel's 4), 59.2 s by the model; plan
+shape's job 1 holds 16 items: 52 circuits, 32.2 s (the workplace VS, 2026-11-20).
 
 Plans (`--plan`, one build per job, `--job k`):
   n5      2 jobs: n = 5 IPE and textbook, phases 0-15 and 16-31 (each job holds both circuits of its phases)
@@ -22,7 +23,7 @@ sqrt(t4^2 + 4 t5^2 + t6^2), t_n = SE_n / p_n; ACCELERATES when a >= 2 SE, FLAT w
 a <= -2 SE. The same on the share itself beside (it hides a per-conditional loss: noise c reads FLAT there).
 
   python gpu/qpe_long_night.py ideal
-  python gpu/qpe_long_night.py build DEVDIR OUT --plan n5|n5n6|shape --job K [--dry-clifford-sentinel]
+  python gpu/qpe_long_night.py build DEVDIR OUT --plan n5|n5n6|shape --job K [--fence] [--dry-clifford-sentinel]
   python gpu/qpe_long_night.py check OUT
   python gpu/qpe_long_night.py dry OUT NOISE.json [--seed S]         illustrative noise only (qpe_repro_night's dry)
   python gpu/qpe_long_night.py score OUT [OUT ...]                   every job of the plan
@@ -81,8 +82,10 @@ def build(a):
     from psf_os.device import Device
     spec = dict(kind="echo_clifford", D=24) if a.dry_clifford_sentinel else None   # dry runs only, never a device
     its = items(a.plan, a.job)
-    rep = FF.build(Device.load(a.devdir), its, a.out, shots=a.shots, max_seconds=70, sentinel_spec=spec)
+    kw = dict(fence=True, footprint=True) if a.fence else {}       # psf-os after-2026-11-20 (fence: [OWNER])
+    rep = FF.build(Device.load(a.devdir), its, a.out, shots=a.shots, max_seconds=70, sentinel_spec=spec, **kw)
     info = dict(part=f"{a.plan}:{a.job}", plan=a.plan, job=a.job, contents=PLANS[a.plan][a.job], shots=a.shots,
+                fence=bool(a.fence),
                 device=rep["device"],
                 circuits=rep["circuits"], qpu_seconds_model=rep["qpu_seconds_model"], versions=Q._versions())
     json.dump(info, open(os.path.join(a.out, "part.json"), "w"), indent=1)
@@ -193,6 +196,9 @@ if __name__ == "__main__":
     b.add_argument("--job", type=int, required=True)
     b.add_argument("--shots", type=int, default=SHOTS)
     b.add_argument("--dry-clifford-sentinel", action="store_true")
+    b.add_argument("--fence", action="store_true",
+                   help="psf-os after-2026-11-20: a barrier around every wait, so that the target waits in |1> as "
+                        "written (without it the compiler merges its rotations across the wait) [OWNER]")
     sub.add_parser("check").add_argument("out")
     d = sub.add_parser("dry")
     d.add_argument("out")

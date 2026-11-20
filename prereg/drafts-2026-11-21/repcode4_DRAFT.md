@@ -97,6 +97,11 @@ at equal excited count; only the carriers differ.
 - F6P's cancelling pairs add gate errors but act on qubits in basis states for d1, d2; they match F10's CZ count and
   rough timing, not every detail of F10's exposure. The barriers add synchronisation points (every form has the one
   after the error and one after the look-up).
+- **The compared forms differ in depth too** (the workplace VS, 2026-11-20): F6P 35 layers against F10's 43, F6 29
+  against F6P's 35. A loss in proportion to time adds to the footprint and CZ differences; the design does not
+  separate it. [OWNER: accept, or pad the shorter form with delays to the longer one's duration]
+- As sent the footprint is as written in every form (compiled and counted over the whole wait:
+  `notes/footprint_2026-11-20/sent.txt`; the forms' barriers already stop the merging that the VS found in IPE).
 - One night, one device. Dephasing during the wait (carriers) and decay (excited qubits) are not separated item by
   item: F6 raises the excited count for the error-on-d0 item (the syndrome 1, 1 waits on d1, d2: 2.5 against 1.5)
   and lowers it for the no-error item (0.5). Pooled over the four errors the excited count is 1.50 in every form, so
