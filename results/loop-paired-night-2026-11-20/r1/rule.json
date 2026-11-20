@@ -1,0 +1,227 @@
+{
+ "round": 1,
+ "device": "ibm_marrakesh",
+ "stacks": {
+  "1": [
+   "P0"
+  ],
+  "2": [
+   "P0"
+  ],
+  "3": [
+   "P0"
+  ]
+ },
+ "why": {
+  "1": "candidate P2 from the diagnostics against the incumbent P0 in one job",
+  "2": "candidate P1 from the diagnostics against the incumbent P0 in one job",
+  "3": "candidate P2 from the diagnostics against the incumbent P0 in one job"
+ },
+ "dr_in": {
+  "1": {
+   "p11": 0.9745,
+   "p00": 0.98675,
+   "gap": 0.012249999999999983,
+   "two_se": 0.00615826172714346,
+   "sig": true
+  },
+  "3": {
+   "p11": 0.99225,
+   "p00": 0.99475,
+   "gap": 0.0025000000000000577,
+   "two_se": 0.0035933793287099554,
+   "sig": false
+  },
+  "5": {
+   "p11": 0.99,
+   "p00": 0.9985,
+   "gap": 0.008500000000000063,
+   "two_se": 0.0033760553905408538,
+   "sig": true
+  }
+ },
+ "stop": false,
+ "stop_reason": null,
+ "model_seconds_so_far": 55.2,
+ "pick": {
+  "1": "P2",
+  "2": "P1",
+  "3": "P2"
+ },
+ "paired": true,
+ "diagnostics_stacks": {
+  "1": [
+   "P2"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P2"
+  ]
+ },
+ "ledger_stacks": {
+  "1": [
+   "P2"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P2"
+  ]
+ },
+ "candidates": {
+  "1": [
+   "P2"
+  ],
+  "2": [
+   "P1"
+  ],
+  "3": [
+   "P2"
+  ]
+ },
+ "steps": {
+  "1": "base",
+  "2": "base",
+  "3": "base"
+ },
+ "tried": {
+  "1": [],
+  "2": [],
+  "3": []
+ },
+ "ledger": {
+  "used": false,
+  "per_key": {},
+  "last_night": {
+   "night": "loop",
+   "device": "ibm_marrakesh",
+   "calibration_time": "2026-11-19 10:59:49+01:00"
+  },
+  "why": "other calibration (2026-11-19 10:59:49+01:00 -> 2026-11-19 23:09:26+01:00): start from tonight's diagnostics"
+ },
+ "ledger_last": {
+  "night": "loop",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-19 10:59:49+01:00",
+  "rungs": [
+   "M",
+   "F"
+  ],
+  "rounds_run": 3,
+  "ledger_used": false,
+  "ledger_why": "other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:59:49+01:00): start from tonight's diagnostics",
+  "last_stacks": {
+   "1": [
+    "P1",
+    "M"
+   ],
+   "2": [
+    "P0"
+   ],
+   "3": [
+    "P0"
+   ]
+  },
+  "last_g": {
+   "1": 0.04700000000000004,
+   "2": null,
+   "3": null
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "NO PRESCRIPTION",
+   "3": "NO PRESCRIPTION"
+  }
+ },
+ "calibration_time": "2026-11-19 23:09:26+01:00",
+ "rungs": [
+  "M",
+  "F"
+ ],
+ "meta": {
+  "p0_1": [
+   1,
+   "p0",
+   0,
+   "P0",
+   3,
+   "p0"
+  ],
+  "p0_2": [
+   2,
+   "p0",
+   0,
+   "P0",
+   3,
+   "p0"
+  ],
+  "p0_3": [
+   3,
+   "p0",
+   0,
+   "P0",
+   3,
+   "p0"
+  ],
+  "y1bc": [
+   1,
+   "x",
+   0,
+   "P2",
+   2,
+   "c"
+  ],
+  "y2ac": [
+   2,
+   "x",
+   0,
+   "P1",
+   2,
+   "c"
+  ],
+  "y3bc": [
+   3,
+   "x",
+   0,
+   "P2",
+   2,
+   "c"
+  ],
+  "dr": [
+   0,
+   "probe",
+   0,
+   null,
+   0,
+   "probe"
+  ]
+ },
+ "ff_only": [],
+ "output_qubit": {
+  "p0_1": 1,
+  "p0_2": 3,
+  "p0_3": 5,
+  "y1bc": 1,
+  "y2ac": 3,
+  "y3bc": 5
+ },
+ "probe_qubits": [
+  1,
+  3,
+  5,
+  7,
+  9
+ ],
+ "probe_positions": [
+  1,
+  3,
+  5,
+  7,
+  9
+ ],
+ "qpu_seconds_model": 30.9,
+ "incumbent_candidate_same_qubits": {}
+}

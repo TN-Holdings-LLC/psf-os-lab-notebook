@@ -1,0 +1,2 @@
+{"device": "ibm_marrakesh", "circuits": 25, "qpu_seconds_model": 30.9, "shots": 4000}
+incumbents {"1": ["P0"], "2": ["P0"], "3": ["P0"]} candidates {"1": ["P2"], "2": ["P1"], "3": ["P2"]}

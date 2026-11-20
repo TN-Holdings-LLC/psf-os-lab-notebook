@@ -1,0 +1,103 @@
+[
+ {
+  "night": "os2-night-2026-11-18",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-18 11:05:21+01:00",
+  "rungs": [],
+  "rounds_run": 1,
+  "ledger_used": false,
+  "ledger_why": "os2",
+  "last_stacks": {
+   "1": [
+    "P1"
+   ],
+   "2": [
+    "P1"
+   ],
+   "3": [
+    "P1"
+   ]
+  },
+  "last_g": {
+   "1": 0.03225,
+   "2": 0.025499999999999967,
+   "3": 0.05525000000000002
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "PRESCRIPTION HELPS",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "seeded_from_records": true
+ },
+ {
+  "night": "loop",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-19 10:59:49+01:00",
+  "rungs": [
+   "M",
+   "F"
+  ],
+  "rounds_run": 3,
+  "ledger_used": false,
+  "ledger_why": "other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:59:49+01:00): start from tonight's diagnostics",
+  "last_stacks": {
+   "1": [
+    "P1",
+    "M"
+   ],
+   "2": [
+    "P0"
+   ],
+   "3": [
+    "P0"
+   ]
+  },
+  "last_g": {
+   "1": 0.04700000000000004,
+   "2": null,
+   "3": null
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "NO PRESCRIPTION",
+   "3": "NO PRESCRIPTION"
+  }
+ },
+ {
+  "night": "lp@2026-11-20",
+  "device": "ibm_marrakesh",
+  "calibration_time": "2026-11-19 23:09:26+01:00",
+  "rungs": [
+   "M",
+   "F"
+  ],
+  "rounds_run": 2,
+  "ledger_used": false,
+  "ledger_why": "other calibration (2026-11-19 10:59:49+01:00 -> 2026-11-19 23:09:26+01:00): start from tonight's diagnostics",
+  "last_stacks": {
+   "1": [
+    "P2",
+    "M"
+   ],
+   "2": [
+    "P0"
+   ],
+   "3": [
+    "P2",
+    "M"
+   ]
+  },
+  "last_g": {
+   "1": 0.04625000000000001,
+   "2": null,
+   "3": 0.05324999999999991
+  },
+  "last_verdict": {
+   "1": "PRESCRIPTION HELPS",
+   "2": "NO CANDIDATE",
+   "3": "PRESCRIPTION HELPS"
+  },
+  "paired": true
+ }
+]

@@ -1,0 +1,76 @@
+{
+ "round": 3,
+ "device": "ibm_marrakesh",
+ "rungs": [
+  "M",
+  "F"
+ ],
+ "paired": true,
+ "stacks": {
+  "1": [
+   "P2",
+   "M"
+  ],
+  "2": [
+   "P0"
+  ],
+  "3": [
+   "P2",
+   "M"
+  ]
+ },
+ "candidates": {
+  "1": null,
+  "2": null,
+  "3": null
+ },
+ "steps": {
+  "1": null,
+  "2": null,
+  "3": null
+ },
+ "tried": {
+  "1": [
+   "base",
+   "M"
+  ],
+  "2": [
+   "base"
+  ],
+  "3": [
+   "base",
+   "M"
+  ]
+ },
+ "pick": {
+  "1": "P2",
+  "2": "P1",
+  "3": "P2"
+ },
+ "decisions": {
+  "1": {
+   "d": 0.04625000000000001,
+   "se": 0.00749291644655137,
+   "two_se": 0.01498583289310274,
+   "word": "CANDIDATE ADOPTED",
+   "adopted": true
+  },
+  "2": null,
+  "3": {
+   "d": 0.03299999999999992,
+   "se": 0.01048535138896165,
+   "two_se": 0.0209707027779233,
+   "word": "CANDIDATE ADOPTED",
+   "adopted": true
+  }
+ },
+ "why": {
+  "1": "P2+M against P0: d +0.0463 (2 SE 0.0150) CANDIDATE ADOPTED; no step left",
+  "2": "P0 kept (no candidate); no step left",
+  "3": "P2+M against P2: d +0.0330 (2 SE 0.0210) CANDIDATE ADOPTED; no step left"
+ },
+ "model_seconds_so_far": 114.8,
+ "climb_on_kept": true,
+ "stop": true,
+ "stop_reason": "no step left on any key: every key keeps its incumbent"
+}

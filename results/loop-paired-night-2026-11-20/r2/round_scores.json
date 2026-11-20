@@ -1,0 +1,179 @@
+{
+ "round": 2,
+ "device": "ibm_marrakesh",
+ "paired": true,
+ "stacks": {
+  "1": [
+   "P0"
+  ],
+  "2": [
+   "P0"
+  ],
+  "3": [
+   "P2"
+  ]
+ },
+ "candidates": {
+  "1": [
+   "P2",
+   "M"
+  ],
+  "2": null,
+  "3": [
+   "P2",
+   "M"
+  ]
+ },
+ "rows": {
+  "1": {
+   "stack": [
+    "P0"
+   ],
+   "candidate": [
+    "P2",
+    "M"
+   ],
+   "step": "M",
+   "tried": [
+    "base"
+   ],
+   "pick": "P2",
+   "exact": 0.937113901450291,
+   "p0": 0.84725,
+   "p0_n": 4000,
+   "output_qubit_p0": 1,
+   "inc_p": 0.84725,
+   "inc_se": 0.005688089255189304,
+   "inc_noiseless": 0.9218532460191509,
+   "inc_info": {
+    "output_qubit": 1
+   },
+   "cand_p": 0.8935,
+   "cand_se": 0.004877441696217393,
+   "cand_noiseless": 0.9218532460191513,
+   "cand_overshoot": false,
+   "cand_info": {
+    "output_qubit": 1
+   },
+   "d": 0.04625000000000001,
+   "d_se": 0.00749291644655137,
+   "decision": "CANDIDATE ADOPTED",
+   "adopted": true,
+   "p": 0.8935,
+   "se": 0.004877441696217393,
+   "noiseless": 0.9218532460191513,
+   "overshoot": false,
+   "g": 0.04625000000000001,
+   "g_se": 0.00749291644655137,
+   "verdict": "PRESCRIPTION HELPS",
+   "g_incumbent": 0.0,
+   "tries": null
+  },
+  "2": {
+   "stack": [
+    "P0"
+   ],
+   "candidate": null,
+   "step": null,
+   "tried": [
+    "base"
+   ],
+   "pick": "P1",
+   "exact": 0.8781824642913858,
+   "p0": 0.75075,
+   "p0_n": 4000,
+   "output_qubit_p0": 3,
+   "verdict": "NO CANDIDATE"
+  },
+  "3": {
+   "stack": [
+    "P2"
+   ],
+   "candidate": [
+    "P2",
+    "M"
+   ],
+   "step": "M",
+   "tried": [
+    "base"
+   ],
+   "pick": "P2",
+   "exact": 0.8229569952973316,
+   "p0": 0.636,
+   "p0_n": 4000,
+   "output_qubit_p0": 5,
+   "inc_p": 0.65625,
+   "inc_se": 0.007509759275436198,
+   "inc_noiseless": 0.7059708837850173,
+   "inc_info": {
+    "output_qubit": 5
+   },
+   "cand_p": 0.6892499999999999,
+   "cand_se": 0.007317520712304134,
+   "cand_noiseless": 0.783403247934271,
+   "cand_overshoot": false,
+   "cand_info": {
+    "output_qubit": 5
+   },
+   "d": 0.03299999999999992,
+   "d_se": 0.01048535138896165,
+   "decision": "CANDIDATE ADOPTED",
+   "adopted": true,
+   "p": 0.6892499999999999,
+   "se": 0.007317520712304134,
+   "noiseless": 0.783403247934271,
+   "overshoot": false,
+   "g": 0.05324999999999991,
+   "g_se": 0.010555667168635055,
+   "verdict": "PRESCRIPTION HELPS",
+   "g_incumbent": 0.02024999999999999,
+   "tries": null
+  }
+ },
+ "dr": {
+  "1": {
+   "p11": 0.97025,
+   "p00": 0.98475,
+   "gap": 0.014500000000000068,
+   "two_se": 0.006624377329228766,
+   "sig": true
+  },
+  "3": {
+   "p11": 0.9915,
+   "p00": 0.99525,
+   "gap": 0.00374999999999992,
+   "two_se": 0.0036270080645071615,
+   "sig": true
+  },
+  "5": {
+   "p11": 0.9945,
+   "p00": 0.997,
+   "gap": 0.0024999999999999467,
+   "two_se": 0.0029087368392482593,
+   "sig": false
+  },
+  "7": {
+   "p11": 0.9715,
+   "p00": 0.97025,
+   "gap": -0.0012500000000000844,
+   "two_se": 0.007520152092876847,
+   "sig": false
+  },
+  "9": {
+   "p11": 0.87675,
+   "p00": 0.99875,
+   "gap": 0.122,
+   "two_se": 0.010455040650327475,
+   "sig": true
+  }
+ },
+ "probe_qubits": [
+  1,
+  3,
+  5,
+  7,
+  9
+ ],
+ "qpu_seconds_model": 28.7,
+ "model_seconds_so_far": 114.8
+}

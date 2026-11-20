@@ -1,0 +1,84 @@
+{
+ "kind": "psfos",
+ "psfos_role": "off",
+ "psfos_job": {
+  "kind": "feedforward_off"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1,
+  "2": 2,
+  "3": 3
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_y2ac_off.qpy",
+  "circuits": 1,
+  "sha256": "a8c9bdcdc525a3cd1869a4b6f17d9f36c0de94c1b29913411ff5df3e394e97d4"
+ },
+ "tag": "y2ac",
+ "chain": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ]
+ },
+ "success": {},
+ "bound": null,
+ "clbits": 5,
+ "mid": 4,
+ "conditionals": 2,
+ "logical_cz": 6,
+ "rus": {
+  "L": 2,
+  "theta": 1.1,
+  "m": 2,
+  "out_bit": 4,
+  "tries": [
+   [
+    0,
+    1
+   ],
+   [
+    2,
+    3
+   ]
+  ],
+  "exact": 0.8781824642913858
+ },
+ "logical_cz_in_blocks": 6,
+ "ff_arm": "off",
+ "cz": 6,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}

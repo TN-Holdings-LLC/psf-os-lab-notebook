@@ -1,0 +1,257 @@
+{
+ "note": "record-only checks (psf-os after-2026-11-20): never part of the job; the job and its records are as without them",
+ "items": {
+  "Anow": {
+   "cz_written": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_compiled": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0,
+    "carriers": []
+   }
+  },
+  "Afar": {
+   "cz_written": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_compiled": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.0,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.0,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.0,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "Anb": {
+   "cz_written": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_compiled": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 1.0,
+     "carriers": [
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 1.0,
+     "carriers": [
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 1.0,
+    "carriers": [
+     []
+    ]
+   }
+  },
+  "Bnow": {
+   "cz_written": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_compiled": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0,
+    "carriers": []
+   }
+  },
+  "Bfar": {
+   "cz_written": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_compiled": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.0,
+     "carriers": [
+      [
+       4
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.0,
+     "carriers": [
+      [
+       4
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.0,
+    "carriers": [
+     [
+      4
+     ]
+    ]
+   }
+  },
+  "Bnb": {
+   "cz_written": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_compiled": {
+    "ff": 1,
+    "off": 1,
+    "floor": 1
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 1.0,
+     "carriers": [
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 1.0,
+     "carriers": [
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 1.0,
+    "carriers": [
+     []
+    ]
+   }
+  }
+ }
+}

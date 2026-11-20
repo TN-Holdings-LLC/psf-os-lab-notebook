@@ -1,0 +1,588 @@
+{
+ "note": "record-only checks (psf-os after-2026-11-20): never part of the job; the job and its records are as without them",
+ "items": {
+  "p0_1": {
+   "cz_written": {
+    "ff": 3,
+    "off": 1,
+    "floor": 3
+   },
+   "cz_compiled": {
+    "ff": 3,
+    "off": 1,
+    "floor": 3
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 1.684672,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 2,
+    "excited": 1.684672,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ]
+    ]
+   }
+  },
+  "p0_2": {
+   "cz_written": {
+    "ff": 18,
+    "off": 6,
+    "floor": 18
+   },
+   "cz_compiled": {
+    "ff": 18,
+    "off": 6,
+    "floor": 18
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 10,
+     "excited": 6.225104,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 9,
+    "excited": 6.073077,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ]
+    ]
+   }
+  },
+  "p0_3": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   }
+  },
+  "y1bc": {
+   "cz_written": {
+    "ff": 2,
+    "off": 1,
+    "floor": 2
+   },
+   "cz_compiled": {
+    "ff": 2,
+    "off": 1,
+    "floor": 2
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.205749,
+     "carriers": [
+      [
+       1
+      ],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.205749,
+     "carriers": [
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 2,
+    "excited": 0.315328,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ]
+    ]
+   }
+  },
+  "y2ac": {
+   "cz_written": {
+    "ff": 12,
+    "off": 6,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 6,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 3.018066,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 10,
+     "excited": 3.323789,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 8,
+    "excited": 1.354877,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ]
+    ]
+   }
+  },
+  "y3bc": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 31,
+     "excited": 10.700119,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 10.038968,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 17,
+    "excited": 5.710552,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   }
+  },
+  "dr": {
+   "cz_written": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  }
+ }
+}

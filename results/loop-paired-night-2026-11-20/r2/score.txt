@@ -1,0 +1,2 @@
+L 1: candidate [P2+M] P 0.8935 against incumbent [P0] P 0.8472 (exact 0.9371): d +0.0463 (2 SE 0.0150) -> CANDIDATE ADOPTED; beside: g +0.0463 (2 SE 0.0150) PRESCRIPTION HELPS
+L 3: candidate [P2+M] P 0.6892 against incumbent [P2] P 0.6562 (exact 0.8230): d +0.0330 (2 SE 0.0210) -> CANDIDATE ADOPTED; beside: g +0.0532 (2 SE 0.0211) PRESCRIPTION HELPS

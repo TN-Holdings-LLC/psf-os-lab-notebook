@@ -1,0 +1,281 @@
+{
+ "note": "record-only checks (psf-os after-2026-11-20): never part of the job; the job and its records are as without them",
+ "items": {
+  "Aref": {
+   "cz_written": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0,
+    "carriers": []
+   }
+  },
+  "AwT": {
+   "cz_written": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 2.0,
+     "carriers": [
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 2.0,
+    "carriers": [
+     [],
+     []
+    ]
+   }
+  },
+  "AwP": {
+   "cz_written": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ]
+    ]
+   }
+  },
+  "Bref": {
+   "cz_written": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0,
+    "carriers": []
+   }
+  },
+  "BwT": {
+   "cz_written": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 2.0,
+     "carriers": [
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 2.0,
+    "carriers": [
+     [],
+     []
+    ]
+   }
+  },
+  "BwP": {
+   "cz_written": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       5
+      ],
+      [
+       5
+      ],
+      [
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      5
+     ],
+     [
+      5
+     ],
+     [
+      5
+     ]
+    ]
+   }
+  }
+ }
+}

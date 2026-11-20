@@ -1,0 +1,22 @@
+ff_dr            user   P 1.000 ok
+ff_dr_floor      floor  P nan ok
+ff_dr_off        off    P 1.000 ok
+ff_p0_1          user   P 0.918 ok
+ff_p0_1_floor    floor  P nan ok
+ff_p0_1_off      off    P 0.791 ok
+ff_p0_2          user   P 0.850 ok
+ff_p0_2_floor    floor  P nan ok
+ff_p0_2_off      off    P 0.625 ok
+ff_p0_3          user   P 0.790 ok
+ff_p0_3_floor    floor  P nan ok
+ff_p0_3_off      off    P 0.497 ok
+ff_y1bc          user   P 0.888 ok
+ff_y1bc_floor    floor  P nan ok
+ff_y1bc_off      off    P 0.790 ok
+ff_y2ac          user   P 0.790 ok
+ff_y2ac_floor    floor  P nan ok
+ff_y2ac_off      off    P 0.625 ok
+ff_y3bc          user   P 0.697 ok
+ff_y3bc_floor    floor  P nan ok
+ff_y3bc_off      off    P 0.504 ok
+PASS

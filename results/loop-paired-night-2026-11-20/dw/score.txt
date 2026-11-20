@@ -1,0 +1,12 @@
+position A (output on q1): ref 0.9758; T_mid 0.9370; T_ff 0.9277; P_mid 0.9153; P_ff 0.9195
+  D_meas +0.0387 (2 SE 0.0091)
+  D_cond +0.0093 (2 SE 0.0112)
+  D_phase_mid +0.0218 (2 SE 0.0117)
+  D_phase_ff +0.0082 (2 SE 0.0119)
+position B (output on q5): ref 0.9900; T_mid 0.9263; T_ff 0.9255; P_mid 0.9493; P_ff 0.9503
+  D_meas +0.0637 (2 SE 0.0088)
+  D_cond +0.0008 (2 SE 0.0117)
+  D_phase_mid -0.0230 (2 SE 0.0108)
+  D_phase_ff -0.0248 (2 SE 0.0108)
+predictions: {'1 position A: D_cond >= 2 SE': 'failed', '2 ref at A below ref at B by >= 2 SE': 'held'}
+reading (declared rule: the larger of D_cond and D_phase_ff): {'A': 'waits', 'B': 'waits'}

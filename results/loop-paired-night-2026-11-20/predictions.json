@@ -1,0 +1,62 @@
+{
+ "declared predictions": {
+  "LP-2 no adopted candidate overshoots in the next round run": "held"
+ },
+ "LP-2 checked": [
+  {
+   "round": 1,
+   "key": "3",
+   "stack": [
+    "P2"
+   ],
+   "p": 0.65625,
+   "noiseless": 0.7059708837850173,
+   "se": 0.007509759275436198,
+   "overshoots": false
+  }
+ ],
+ "rounds_run": 2,
+ "decisions": {
+  "1": {
+   "1": [
+    "base",
+    "INCUMBENT KEPT"
+   ],
+   "2": [
+    "base",
+    "CANDIDATE NOT ADOPTED"
+   ],
+   "3": [
+    "base",
+    "CANDIDATE ADOPTED"
+   ]
+  },
+  "2": {
+   "1": [
+    "M",
+    "CANDIDATE ADOPTED"
+   ],
+   "2": [
+    null,
+    null
+   ],
+   "3": [
+    "M",
+    "CANDIDATE ADOPTED"
+   ]
+  }
+ },
+ "final_incumbents": {
+  "1": [
+   "P2",
+   "M"
+  ],
+  "2": [
+   "P0"
+  ],
+  "3": [
+   "P2",
+   "M"
+  ]
+ }
+}
