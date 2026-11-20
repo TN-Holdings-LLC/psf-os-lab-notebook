@@ -1,0 +1,4 @@
+ff_night: SAME WORDS (3 verdict lines)
+rus_night: SAME WORDS (3 verdict lines)
+qpe_repro_night A: SAME WORDS (4 verdict lines)
+qpe_repro_night B: SAME WORDS (2 verdict lines)

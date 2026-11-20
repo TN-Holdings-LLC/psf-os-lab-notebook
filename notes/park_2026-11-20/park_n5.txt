@@ -1,0 +1,3 @@
+ILLUSTRATIVE noise, never fitted; no device
+noise a n 5: plain 0.9318 (carriers 1, excited 2.50); fence 0.8896 (carriers 0, excited 4.00); park 0.9461 (carriers 0, excited 0.00)
+noise c n 5: plain 0.6007 (carriers 1, excited 2.50); fence 0.6252 (carriers 0, excited 4.00); park 0.6621 (carriers 0, excited 0.00)

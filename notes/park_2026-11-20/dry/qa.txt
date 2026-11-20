@@ -1,0 +1,7 @@
+n 4 pl: 0.9449 (2 SE 0.0026, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+n 4 fe: 0.9179 (2 SE 0.0031, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+n 4 pk: 0.9579 (2 SE 0.0023, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+  park (pk - pl): +0.0130 (2 SE 0.0034) -> KEEPS MORE
+  fence (fe - pl): -0.0270 (2 SE 0.0040) -> KEEPS LESS
+  park_vs_fence (pk - fe): +0.0400 (2 SE 0.0039) -> KEEPS MORE
+  reading [OWNER]: decay while waiting: |1> loses, |0> keeps
