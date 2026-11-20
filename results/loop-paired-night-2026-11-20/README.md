@@ -66,6 +66,10 @@ Beside, never judged: g against P0 in the same job: L = 1 +0.0145, +0.0463; L = 
 |---|---|---|
 | LP-2 no adopted candidate overshoots in the next round, where it runs as the incumbent | one row testable: L = 3, P2 adopted in r1, as the incumbent in r2 P 0.6562 against noiseless 0.7060 + 2 SE (SE 0.0075): no overshoot. The two steps adopted in r2 (the last round) are not counted, as declared | held |
 
+LP-2's overshoot is P_inc > noiseless + 2 SE on the incumbent's ff arm in the next round's job. This is not the
+R1 overshoot of the os3 verdicts, which needs the off and floor arms; those arms are not run for an incumbent (the
+declaration's known limits: "its overshoot is therefore not re-tested" means the R1 test, not LP-2's).
+
 Predictions over five nights (11-16 to 11-20): 60 declared; 40 held, 20 failed. LP-2 rests on one row tonight: it is held, and it is
 thin.
 
@@ -82,3 +86,12 @@ thin.
 `python reproduce.py --psf-os <a164fc5> loop-paired-night-2026-11-20-dw loop-paired-night-2026-11-20-dc`; the whole
 night (both rounds, the rule and LP-2): `python gpu/os_loop_paired.py verify results/loop-paired-night-2026-11-20` with
 psf-os a164fc5 (rebuilds every job, re-scores, re-rules, re-reads the predictions).
+
+## Independent check (home VS, 2026-11-20 evening)
+
+Re-counted from `job/raw_counts.json` and `job/manifest.json` with qiskit, aer and numpy only (no psf-os, no notebook
+scorer; `notes/verify_2026-11-20/paired_indep.py`): the diagnostics, every round's P, SE, d and 2 SE, the rule
+re-written by hand (climb_on_kept on: RULE2, RULE3 and the stop), no overshoot, LP-2 (one row, held), the charges (110 s,
+1.7941 RU, 114.8 s by the model, within 240 s) and the procedure-line note all agree with this record; reproduce 2 of 2
+SAME, `verify` 13 of 13 SAME. One note, taken in above: LP-2's overshoot and the known limit's "not re-tested" read
+alike and are two tests.
