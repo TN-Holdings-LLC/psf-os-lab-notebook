@@ -1,0 +1,1 @@
+n 5: IPE 0.9292 (2 SE 0.0021, 62400 shots) against C 0.3792 -> BEYOND THE CEILING (margin +0.5500); textbook 0.4012; IPE - textbook +0.5280 (2 SE 0.0044) -> IPE RIGHT MORE OFTEN

@@ -65,7 +65,28 @@ All 9 outcomes of the two words fall on exactly one row (counted in `notes/repco
 
 ## Dry runs (illustrative noise, never fitted; two parts; `notes/repcode4_2026-11-20/dry/`)
 
-[filled below by the workplace]
+Two parts on the 2026-11-19 marrakesh record (`--part 1`, `--part 2`, the dry Clifford sentinel), each part's dry with
+its own seed (20261120 + 5,000,000 x part), pooled by `score`. Noises in `notes/repcode4_2026-11-20/noise/` (written
+by hand, never fitted): gate = depolarizing 1 % on every CZ; wait = amplitude damping 6 % on every other qubit at each
+mid-circuit read; cond = dephasing 5 % on every qubit after each conditional; a = gate 1 % + damping 2 %; c = gate
+0.2 % + damping 2 % + dephasing 5 % per conditional.
+
+| noise | F16 | F10 | F6P | F6 | footprint F6P - F10 | CZ F6 - F6P | beside F10 - F16 | row of the reading table |
+|---|---|---|---|---|---|---|---|---|
+| gate | 0.927 | 0.957 | 0.959 | 0.978 | +0.001 SAME | +0.020 KEEPS MORE | +0.030 KEEPS MORE | the CZ count |
+| wait | 0.957 | 0.953 | 0.985 | 0.985 | +0.032 KEEPS MORE | -0.000 SAME | -0.004 SAME | the footprint |
+| cond | 0.842 | 0.839 | 0.939 | 0.941 | +0.100 KEEPS MORE | +0.002 SAME | -0.003 SAME | the footprint |
+| a | 0.915 | 0.942 | 0.954 | 0.974 | +0.012 KEEPS MORE | +0.020 KEEPS MORE | +0.027 KEEPS MORE | both |
+| c | 0.820 | 0.824 | 0.927 | 0.933 | +0.103 KEEPS MORE | +0.006 SAME | +0.004 SAME | the footprint |
+
+(2 SE of the comparisons 0.003-0.009; every form's per-error values in `dry/<noise>.txt`.) Each single-mechanism
+noise lands on its own row: gates only on "the CZ count", waits only and conditionals only on "the footprint", the mix
+a on "both". So the design tells the mechanisms apart when one dominates. Under cond and c, F16 and F10 fall below the
+ceiling (NOT BEYOND) while F6P and F6 stay beyond it: in those noises the footprint alone decides the ceiling verdict.
+
+The decay count (`excited`, the expected waiting qubits in |1>) pooled over the four errors is 1.50 in every form
+(F16, F10: 1.5 per error; F6P, F6: 0.5, 2.5, 1.5, 1.5 for none, d0, d1, d2), so the pooled footprint comparison is
+at equal excited count; only the carriers differ.
 
 ## Known limits
 
@@ -76,8 +97,10 @@ All 9 outcomes of the two words fall on exactly one row (counted in `notes/repco
 - F6P's cancelling pairs add gate errors but act on qubits in basis states for d1, d2; they match F10's CZ count and
   rough timing, not every detail of F10's exposure. The barriers add synchronisation points (every form has the one
   after the error and one after the look-up).
-- One night, one device. Whether the effect is dephasing during the wait (carriers) or decay (excited qubits, which
-  F6 raises for the error-on-d0 item: the syndrome 1, 1 waits on d1, d2) is not separated by this design.
+- One night, one device. Dephasing during the wait (carriers) and decay (excited qubits) are not separated item by
+  item: F6 raises the excited count for the error-on-d0 item (the syndrome 1, 1 waits on d1, d2: 2.5 against 1.5)
+  and lowers it for the no-error item (0.5). Pooled over the four errors the excited count is 1.50 in every form, so
+  the pooled footprint comparison holds decay fixed to first order; the per-error values are beside, not read.
 
 ## Decisions at home before declaring ([OWNER] list)
 

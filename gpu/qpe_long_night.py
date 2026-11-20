@@ -16,9 +16,10 @@ Plans (`--plan`, one build per job, `--job k`):
 What n = 5, 6 read (notes/ipe_long_2026-11-20/README.md): on 2026-11-19's slope IPE stays far beyond C(n) (about 0.84
 and 0.80 against 0.38 and 0.31); the question is whether the drop per added bit stays flat (a loss per round: the
 CZ pair and the read) or grows (a loss per conditional: each added bit adds one more feedback than the last: 2, 5, 9,
-14, 20 conditionals at n = 2 .. 6). Measure (proposed [OWNER]): with IPE at three n on one night (plan shape),
-D_n = p(n - 1) - p(n), the acceleration a = D_6 - D_5 with SE sqrt(SE4^2 + 4 SE5^2 + SE6^2); ACCELERATES when
-a >= 2 SE, FLAT when |a| < 2 SE, SLOWS when a <= -2 SE.
+14, 20 conditionals at n = 2 .. 6). Measure (proposed [OWNER], revised after the dry runs of 2026-11-20): with IPE at three n on one night
+(plan shape), on the log of the share, D_n = ln p(n - 1) - ln p(n), the acceleration a = D_6 - D_5 with SE
+sqrt(t4^2 + 4 t5^2 + t6^2), t_n = SE_n / p_n; ACCELERATES when a >= 2 SE, FLAT when |a| < 2 SE, SLOWS when
+a <= -2 SE. The same on the share itself beside (it hides a per-conditional loss: noise c reads FLAT there).
 
   python gpu/qpe_long_night.py ideal
   python gpu/qpe_long_night.py build DEVDIR OUT --plan n5|n5n6|shape --job K [--dry-clifford-sentinel]
@@ -157,11 +158,25 @@ def score(a):
     if all(n in res for n in (4, 5, 6)):
         p4, p5, p6 = (res[n]["ipe"] for n in (4, 5, 6))
         s4, s5, s6 = (res[n]["ipe_2se"] / 2 for n in (4, 5, 6))
+        # proposed measure (2026-11-20, after the dry runs): on the log of the share. A fixed loss per round gives
+        # a fixed log drop per added bit; a fixed loss per conditional gives a log drop that grows by about that loss
+        # per added bit (each bit adds one conditional more than the last: 3, 4, 5, 6). On the share itself (beside)
+        # the per-conditional shape is hidden by the share's own fall (illustrative noise c: FLAT on the share,
+        # ACCELERATES on its log).
+        l4, l5, l6 = (math.log(x) for x in (p4, p5, p6))
+        t4, t5, t6 = s4 / p4, s5 / p5, s6 / p6
+        la = (l5 - l6) - (l4 - l5)
+        lse = math.sqrt(t4 ** 2 + 4 * t5 ** 2 + t6 ** 2)
         a_ = (p5 - p6) - (p4 - p5)
         se = math.sqrt(s4 ** 2 + 4 * s5 ** 2 + s6 ** 2)
-        acc = dict(drop_5=p4 - p5, drop_6=p5 - p6, acceleration=a_, two_se=2 * se, word=accel_word(a_, se))
-        say(f"drop per added bit: n 4 -> 5 {p4 - p5:+.4f}, 5 -> 6 {p5 - p6:+.4f}; acceleration {a_:+.4f} (2 SE "
-            f"{2 * se:.4f}) -> {acc['word']} [OWNER]")
+        acc = dict(log_drop_5=l4 - l5, log_drop_6=l5 - l6, log_acceleration=la, log_two_se=2 * lse,
+                   word=accel_word(la, lse),
+                   beside=dict(drop_5=p4 - p5, drop_6=p5 - p6, acceleration=a_, two_se=2 * se,
+                               word=accel_word(a_, se)))
+        say(f"log drop per added bit: n 4 -> 5 {l4 - l5:+.4f}, 5 -> 6 {l5 - l6:+.4f}; acceleration {la:+.4f} (2 SE "
+            f"{2 * lse:.4f}) -> {acc['word']} [OWNER]")
+        say(f"  beside, on the share: drop {p4 - p5:+.4f}, {p5 - p6:+.4f}; acceleration {a_:+.4f} (2 SE {2 * se:.4f})"
+            f" -> {acc['beside']['word']}")
     json.dump(dict(rows={str(k): v for k, v in res.items()}, acceleration=acc),
               open(os.path.join(a.outs[0], "qpe_long_scores.json"), "w"), indent=1)
     open(os.path.join(a.outs[0], "score.txt"), "w").write("\n".join(lines) + "\n")

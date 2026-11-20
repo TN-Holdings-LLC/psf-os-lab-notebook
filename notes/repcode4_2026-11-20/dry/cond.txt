@@ -1,0 +1,9 @@
+F16 (CZ 16, carriers 3): lut3 c[0] right 0.8421 (2 SE 0.0058) against C 0.8750 -> NOT BEYOND (margin -0.0329); per error n 0.838, 0 0.845, 1 0.844, 2 0.842
+F10 (CZ 10, carriers 3): lut3 c[0] right 0.8394 (2 SE 0.0058) against C 0.8750 -> NOT BEYOND (margin -0.0356); per error n 0.837, 0 0.843, 1 0.847, 2 0.831
+F6P (CZ 10, carriers 1): lut3 c[0] right 0.9389 (2 SE 0.0038) against C 0.8750 -> BEYOND THE CEILING (margin +0.0639); per error n 0.942, 0 0.937, 1 0.942, 2 0.935
+F6 (CZ 6, carriers 1): lut3 c[0] right 0.9408 (2 SE 0.0037) against C 0.8750 -> BEYOND THE CEILING (margin +0.0658); per error n 0.943, 0 0.938, 1 0.938, 2 0.944
+footprint: +0.0995 (2 SE 0.0069) -> KEEPS MORE
+cz: +0.0019 (2 SE 0.0053) -> SAME WITHIN ERROR
+cz16: -0.0027 (2 SE 0.0082) -> SAME WITHIN ERROR
+reading [OWNER]: the footprint: fewer carriers during the wait keep more, at equal CZ; fewer CZ add nothing seen
+beside: CZ at equal carriers (F10 - F16) SAME WITHIN ERROR
