@@ -17,8 +17,10 @@ the pooling) is unchanged.
 | conditionals (lut3 / lut1 / lut5), circuits, seconds | 5 / 3 / 7; 40 circuits; 47.6 s | the same |
 
 Heavy-hex is bipartite (no triangles), so no ancilla can neighbour both data of an adjacent pair: with the data
-adjacent a parity costs 3, with the data apart the encoding costs 3 per link. 10 is the smaller of the two; the line
-of five fits any rule-C chain (no degree-3 site needed; placement unchanged, [0-4] on the 2026-11-19 record).
+adjacent a parity costs 3, with the data apart the encoding costs 3 per link. The line of five fits any rule-C chain
+(no degree-3 site needed; placement unchanged, [0-4] on the 2026-11-19 record). **Correction (the workplace VS,
+2026-11-20): 10 is not the least.** The argument assumed the code is kept while its syndrome is measured; undoing
+the encoding first leaves the syndrome on d1, d2, and one CX each copies it to the ancillas: 2 + 2 + 2 = 6 (below).
 
 ## Checks
 
@@ -62,3 +64,21 @@ So reaching the ceiling is possible only if the device's loss is like noise c (a
 resets add), and then by a thin margin. Dropping the resets changes a property of the 2026-11-19 design ("both
 versions hold the two reset conditionals") and the conditional counts the (b) comparison was built on: the owner's
 decision, not made here.
+
+## The workplace VS's check (2026-11-20, the VS's return `繰り返し符号の組み方/`, in the take-home 20d)
+
+- Noiselessly the same as 2026-11-19 in all 36 item arms (c[0] within 4e-15; the relabeling c2 = c1 xor c2 is the
+  only one that matches); ceiling 0.875; CZ recounted by other means (logical 16 -> 10, compiled 14-16 -> 8-10).
+- Three seeds per noise: the loss ratio of this arrangement to 2026-11-19's is 0.675 (0.66-0.69) under noise a and
+  0.703 (0.69-0.71) under noise c: the 0.70 does not move with the seed.
+- **Six CZ** (the VS's sketch `repcode6_vs.py`, not in this notebook): encode 2, (error), undo 2, copy the syndrome
+  from d1, d2 to the ancillas 2; the same line, ancillas, three register tests and two resets. Noiselessly the same
+  distributions and ceiling as 2026-11-19. Illustrative noise: lut3 0.981 (a) and 0.967 (c), loss 0.23 and 0.18 of
+  2026-11-19's. The VS's reading: in the 10- and 16-CZ forms the logical state is spread over three qubits during the
+  conditional wait, and the wait's dephasing acts about three times; here d0 alone holds it. But the code is undone
+  before the look-up (the correction acts on d0 alone): whether that is "the same test" is home's and the owner's.
+- **The compiler cancels CX pairs with no error X between them.** In the declared 2026-11-19 circuits the items other
+  than error 0 went 16 -> 14 CZ (the items are not equally heavy; worth one line in the record or the paper). In the
+  six-CZ form the no-error item compiles to 2 CZ (the code vanishes), error 1 to 4, errors 0 and 2 to 6; keeping six
+  needs something that stops the cancellation (a barrier; whether psf-os's build keeps barriers is not checked). The
+  error-0 item (6 CZ, nothing cancelled) still reads 0.966 under noise c.
