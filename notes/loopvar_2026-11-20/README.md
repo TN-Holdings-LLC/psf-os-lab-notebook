@@ -22,9 +22,15 @@ round 1 (`results/loop-night-2026-11-19/r1`), every arm and L. Chains as on 11-1
   reads) moves g by 0.07-0.21. The test asks about g, the rule's quantity; the shares are printed beside.
 - Under shot noise alone, 2 of 9 within-job pairs read MOVES here. At 2 SE each pair has about 4.6 % to read MOVES,
   so "SAME at every L in every job" (LV-1 over 9 pairs) fails about 34 % of the time with nothing but shot noise
-  (13 % over 3 pairs if each L pools its jobs). [OWNER: one pooled test, e.g. chi2 of the nine (a - b) / SE, 9 df]
+  (13 % over 3 pairs if each L pools its jobs). (the owner chose the pooled test; below)
 - Dry seeds: strides above the shot count (see notes/decoy_2026-11-20/README.md: Aer seeds shot by shot; psf-os
   run_local's consecutive seeds give near-identical shots, so a noiseless difference reads about 0 there).
+
+## LV-1 pooled (the owner's decision of 2026-11-20)
+
+The nine (a - b) / SE pooled in one chi2 (9 df; `chi2_sf` checked against scipy to 1e-6): noiseless 10.47, p 0.31;
+CZ drift 10.45, p 0.32; damping drift 16.59, p 0.055: SAME WITHIN ERROR in all three dry runs, although 1-2 single
+pairs read MOVES in each. Per L and job pair stays beside.
 
 ## Formula (in the draft)
 

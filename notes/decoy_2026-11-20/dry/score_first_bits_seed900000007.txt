@@ -1,0 +1,14 @@
+noiseless ff of rd2 (exact, read flipped): 0.7929; off 0.6308; singles sa 0.7592, sb 0.7500, sz 0.7582
+  d0a against sa: alone 0.7592  packed 0.6647  d -0.0945 (2 SE 0.0201) -> PACKED KEEPS LESS
+  d0b against sb: alone 0.7500  packed 0.7480  d -0.0020 (2 SE 0.0194) -> SAME WITHIN ERROR
+D0: mean d over its conditional sub-items -0.0483 (2 SE 0.0140) -> PACKED KEEPS LESS
+  d1a against sa: alone 0.7592  packed 0.7480  d -0.0112 (2 SE 0.0193) -> SAME WITHIN ERROR
+  d1b against sb: alone 0.7500  packed 0.7465  d -0.0035 (2 SE 0.0194) -> SAME WITHIN ERROR
+  beside: d1z (fixed) against sz's off arm: alone 0.6228 packed 0.6185 d -0.0042 (2 SE 0.0217)
+D1: mean d over its conditional sub-items -0.0074 (2 SE 0.0137) -> SAME WITHIN ERROR
+  d2a against sa: alone 0.7592  packed 0.6780  d -0.0813 (2 SE 0.0200) -> PACKED KEEPS LESS
+  d2b against sb: alone 0.7500  packed 0.7588  d +0.0088 (2 SE 0.0192) -> SAME WITHIN ERROR
+  beside: d2z (fixed) against sz's off arm: alone 0.6228 packed 0.6235 d +0.0007 (2 SE 0.0217)
+D2: mean d over its conditional sub-items -0.0363 (2 SE 0.0139) -> PACKED KEEPS LESS
+reading (the table of the owner's decision of 2026-11-20): row 1: the loss sits on the register's first bits; a fixed first item shields
+bundle words are beside; the table reads the sub-items D0 A, D0 B, D1 A, D1 B, D2 A

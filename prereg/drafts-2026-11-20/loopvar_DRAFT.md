@@ -1,7 +1,7 @@
 # DRAFT (not declared): how much the loop's g moves between rounds at the same stack (night of 2026-11-20)
 
 Home Claude, 2026-11-19 evening (owner's choice of 2026-11-19 21:38 JST: "1 and 2" of home's list, 2 = this test).
-Thresholds, words and predictions marked [OWNER] are the owner's; the workplace builds the tool and fills the sizes.
+Thresholds, words and predictions: the owner's decision of 2026-11-20 morning (below); the workplace built the tool and filled the sizes.
 
 ## Why
 
@@ -21,7 +21,7 @@ Thresholds, words and predictions marked [OWNER] are the owner's; the workplace 
 - Between jobs: the same job submitted three times back to back (V1, V2, V3; nothing rebuilt between them).
 - Numbers per L: g per copy and job with its SE; within-job difference (a - b) and between-job differences (V1 - V2,
   V2 - V3, V1 - V3), each against its own shot-noise 2 SE (sqrt of the summed variances).
-- Pooled reading (workplace, proposed; the owner fixes the level): per job g_j = (g_a + g_b) / 2 with
+- Pooled reading (workplace; the level 0.05 is the owner's, 2026-11-20): per job g_j = (g_a + g_b) / 2 with
   SE_j = sqrt(SE_a^2 + SE_b^2) / 2; the weighted mean gbar = sum w_j g_j / sum w_j (w_j = 1 / SE_j^2);
   chi2 = sum_j (g_j - gbar)^2 / SE_j^2 with 2 degrees of freedom, p = exp(-chi2 / 2) (closed form for 2 df); the
   excess between-job variance s_b^2 = var(g_j, ddof 1) - mean(SE_j^2) (a moment estimate; <= 0 means none seen);
@@ -35,15 +35,30 @@ Thresholds, words and predictions marked [OWNER] are the owner's; the workplace 
   x 3 arms + the sentinel's 4 = 40 circuits, 47.6 s per job by the model; three jobs 142.8 s. Tool
   `gpu/loopvar_night.py` (build makes V1-V3 from one build; check / score; dry for illustrative noise).
 
-## Verdict words [OWNER]
+## Verdict words (the owner's decision of 2026-11-20 morning)
 
-- Per L and job pair: SAME WITHIN ERROR (|difference| < 2 SE) or MOVES (>= 2 SE).
-- Per L across the three jobs: SHOT NOISE ONLY (chi-square p >= 0.05) or DRIFTS (p < 0.05). [OWNER: test and level]
+- Copies (LV-1): the nine within-job differences (a - b) / SE (3 L x 3 jobs, SE = sqrt(SE_a^2 + SE_b^2)) pooled in one
+  chi-square with 9 degrees of freedom: SAME WITHIN ERROR (p >= 0.05) or MOVES (p < 0.05). Per L and job pair beside
+  (SAME WITHIN ERROR |d| < 2 SE / MOVES >= 2 SE).
+- Per L across the three jobs: SHOT NOISE ONLY (chi-square, 2 df, p >= 0.05) or DRIFTS (p < 0.05); per job pair
+  beside, as above.
+- Why pooled: nine separate 2 SE tests read MOVES somewhere about 34 % of the time on shot noise alone (workplace VS,
+  workplace Claude); the pooled test at p < 0.05 does so 5 % of the time.
 
-## Predictions [OWNER] (written before the data)
+## Predictions (written before the data; the owner's decision of 2026-11-20 morning)
 
-- LV-1 within a job, copies a and b: SAME WITHIN ERROR at every L. [OWNER]
-- LV-2 between jobs: [OWNER: SHOT NOISE ONLY / DRIFTS, or no direction].
+- LV-1 copies a and b: SAME WITHIN ERROR (the pooled chi-square, p >= 0.05).
+- LV-2 between jobs: no direction declared (read and reported per L, not counted as a prediction).
+
+## Reading beside (the workplace VS's table, 2026-11-20; per L; not judged, it does not change the test)
+
+| copies a - b | three jobs | reading |
+|---|---|---|
+| every pair SAME | SHOT NOISE ONLY | the shot-noise SE explains the variation; 11-19's round 1 -> round 2 change (+0.012, 2 SE 0.023) is within it |
+| every pair SAME | DRIFTS | the device moves between jobs (tens of seconds to minutes); the rule's threshold would need a between-job term |
+| some pair MOVES | SHOT NOISE ONLY | the copies in one job disagree: the SE of g is underestimated, or order inside a job matters; between jobs not read |
+| some pair MOVES | DRIFTS | the SE is underestimated overall; review the SE formula before the rule's threshold |
+| L differ | - | read each L by the rows above; whether one L DRIFTS is enough to say "the rule can follow drift" is open |
 
 ## Known limits
 

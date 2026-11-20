@@ -20,20 +20,28 @@ table) the distance is 2 and that check fails (`check_zgap1.txt`); A and B are t
 
 ## Dry runs (`dry/`; noise files `noise/`: ILLUSTRATIVE, written by hand, never fitted)
 
-| noise | D0 A | D1 A | D2 A | reading printed |
-|---|---|---|---|---|
-| none | +0.000 SAME | -0.002 SAME | +0.001 SAME | "the control did not repeat" |
-| first_bits (the part holding bit 0 pays, when two or more conditional parts share a circuit) | -0.083 LESS | -0.001 SAME | -0.074 LESS | "the loss sits on the register's first bits; a fixed first item shields" |
-| first_conditional (the first conditional part pays) | -0.083 LESS | -0.083 LESS | -0.074 LESS | "the loss belongs to the first conditional item" |
+| noise (seed) | D0 A | D0 B | D1 A | D2 A | row printed |
+|---|---|---|---|---|---|
+| none (7) | +0.000 SAME | +0.004 SAME | -0.002 SAME | +0.001 SAME | 4 (the control did not repeat) |
+| first_bits: the part holding bit 0 pays (900000007) | -0.095 LESS | -0.002 SAME | -0.011 SAME | -0.081 LESS | 1 (the first bits; a fixed first item shields) |
+| first_conditional: the first conditional part pays (900000007) | -0.095 LESS | -0.002 SAME | -0.094 LESS | -0.081 LESS | 2 (the first conditional item) |
+| first_bits / first_conditional (7) | -0.083 LESS | **-0.026 LESS** | | | 4: D0's B lost by shot noise |
 
-Every word is reached; each illustrative mechanism lands on its own row. In both noisy runs D0's B also reads PACKED
-KEEPS LESS (-0.026, 2 SE 0.019) without paying anything: shot noise at 2 SE (about one sub-item in 40 per side).
+Each illustrative mechanism lands on its own row. With seed 7, D0's B read PACKED KEEPS LESS (-0.026, 2 SE 0.019)
+without paying anything (shot noise at 2 SE, about 2 % per sub-item), and under the owner's table that voids the
+night's mechanism reading (row 4). (Seed 11 repeated the same draw: Aer seeds shot by shot, so seeds 7 and 11 are
+the same shots shifted by four.)
+
+## Reading table (the owner's decision of 2026-11-20 morning)
+
+Rows 1-6 in `gpu/decoy_night.py` (READING, reading_row) and the draft. `coverage_decoy.py` (the workplace VS's
+script, rewritten for the new table; it calls the tool's own reading_row): 729 outcomes, every one on exactly one
+row (row 1: 24, 2: 18, 3: 36, 4: 567, 5: 48, 6: 36), none on no row, none on two as stand-alone conditions.
 
 ## Found while building (for the owner)
 
-- The reading table has no row for "A keeps in D1 and in D2" (a third item present shields, whatever its bits); the
-  tool prints "no row matches" then. Row 3 names B, but in D1 the item right after the first bits' owner (Z) is A.
-  (The workplace VS found the same and counted 108 of 729 outcomes without a row.)
+- (Done, the owner's decision of 2026-11-20.) The first table had no row for "A keeps in D1 and in D2" and its
+  row 3 named B; the workplace VS counted 108 of 729 outcomes on no row and 9 on two.
 - Dry-run seeds: Aer seeds a circuit with mid-circuit measurements shot by shot from seed_simulator, so seeds s and
   s + 1 give the same shots shifted by one. Dry runs that seed circuit k with seed + k (psf-os run_local: seed + k,
   parts seed + 1000 k) compare nearly the same shots between circuits, and a noiseless d reads about 0 instead of

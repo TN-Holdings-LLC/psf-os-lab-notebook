@@ -12,7 +12,7 @@ Three bundles and three singles in ONE job (rd2 = gpu/rus3_night.chain(2, 1.1, 2
 
 A and B sit on the same qubits in every bundle (checked against D0). Z sits ZG sites past B (default 2: Z then shares
 no coupler within two steps of B, as the draft's check asks; ZG = 1 puts Z on the next free site, two steps from B,
-and that check fails; the owner's choice, [OWNER] in the draft). The per-pair gap is psf-os's build_bundle
+and that check fails; the owner chose ZG = 2 on 2026-11-20). The per-pair gap is psf-os's build_bundle
 gap=[1, ZG] (added 2026-11-20; gap=[1, 1] is byte-identical to gap=1).
 
   python gpu/decoy_night.py build DEVDIR OUT [--z-gap 3] [--dry-clifford-sentinel]
@@ -28,8 +28,8 @@ and for this test: A and B on D0's qubits in D1 and D2; Z's bits first in D1 and
 distance >= 3 from B's (no coupler, working or failed, within two steps); one job within 30 s by the model.
 score: per conditional sub-item d = |s - v| - |p - v| (s its single's ff, p its ff packed, v rd2's noiseless ff,
 computed here exactly from the single circuit) with the words PACKED KEEPS LESS (d <= -2 SE) / PACKED KEEPS MORE
-(d >= 2 SE) / SAME WITHIN ERROR [OWNER], per sub-item and per bundle (mean of its conditional sub-items); Z against
-sz's off arm beside; the draft's reading table row, if one matches [OWNER].
+(d >= 2 SE) / SAME WITHIN ERROR, per sub-item and per bundle (mean of its conditional sub-items); Z against
+sz's off arm beside; the reading table's row (rows 1-6, the owner's decision of 2026-11-20; every outcome on one row).
 """
 import argparse
 import json
@@ -227,7 +227,7 @@ def check(a):
 
 
 def verdict(d, two_se):
-    """The words of P-B / E1-E3 [OWNER in the draft]: per sub-item and per bundle."""
+    """The words of P-B / E1-E3: per sub-item and per bundle (bundle words beside)."""
     if d <= -two_se:
         return "PACKED KEEPS LESS"
     if d >= two_se:
@@ -235,19 +235,38 @@ def verdict(d, two_se):
     return "SAME WITHIN ERROR"
 
 
+# The reading table (the owner's decision of 2026-11-20 morning, on the workplace VS's proposal). "loses" is PACKED
+# KEEPS LESS for that sub-item, "keeps" either other word; bundle words are beside. Rows are checked in this order and
+# every outcome of the six sub-items read falls on exactly one (notes/decoy_2026-11-20/coverage_decoy.py: 729 of 729).
+READING = {
+    4: "the control did not repeat 11-18 / 11-19 on this night (D0's A keeps, or D0's B loses too); D1, D2 not read "
+       "for the mechanism",
+    2: "the loss belongs to the first conditional item, whatever stands before it",
+    3: "the loss moves to the conditional item that is not first (B)",
+    1: "the loss sits on the register's first bits; a fixed first item shields",
+    5: "a third item present shields, wherever its bits stand",
+    6: "A loses with Z first and keeps with Z last: against the order reading; not read",
+}
+
+
+def reading_row(lose):
+    """The row number for a dict sub-item -> loses (bool), sub-items d0a, d0b, d1a, d1b, d2a."""
+    if not lose["d0a"] or lose["d0b"]:
+        return 4
+    if lose["d1a"] and lose["d2a"]:
+        return 2                      # D1's A and B both losing falls here (the owner's priority)
+    if lose["d1a"]:
+        return 6                      # D1's A loses, D2's A keeps
+    if lose["d1b"]:
+        return 3                      # D1's B alone loses
+    return 1 if lose["d2a"] else 5
+
+
 def reading(rows):
-    """The draft's reading table [OWNER]: the first row whose conditions all hold, else None. 'loses' is PACKED KEEPS
-    LESS for that sub-item; 'keeps' is either other word."""
-    lose = lambda t: rows[t]["verdict"] == "PACKED KEEPS LESS"
-    if not lose("d0a"):
-        return "the control did not repeat 11-18 / 11-19 on this night; D1, D2 not read for the mechanism"
-    if not lose("d1a") and not lose("d1b") and lose("d2a"):
-        return "the loss sits on the register's first bits; a fixed first item shields"
-    if lose("d1a") and lose("d2a"):
-        return "the loss belongs to the first conditional item, whatever stands before it"
-    if lose("d1b"):
-        return "the loss moves to the item right after the first bits' owner (order, not first place)"
-    return None
+    """(row, text) of the reading table for the scored sub-items."""
+    lose = {t: rows[t]["verdict"] == "PACKED KEEPS LESS" for t in ("d0a", "d0b", "d1a", "d1b", "d2a")}
+    r = reading_row(lose)
+    return r, READING[r]
 
 
 def score(a):
@@ -291,9 +310,10 @@ def score(a):
         m, ms = sum(ds) / len(ds), 2 * math.sqrt(sum(x * x for x in ses)) / len(ses)
         rows[name] = dict(mean=m, two_se=ms, verdict=verdict(m, ms))
         say(f"{name}: mean d over its conditional sub-items {m:+.4f} (2 SE {ms:.4f}) -> {rows[name]['verdict']}")
-    r = reading(rows)
-    say(f"reading (the draft's table, [OWNER]): {r if r else 'no row matches'}")
-    json.dump(dict(rows=rows, noiseless=v, noiseless_off=v_off, reading=r),
+    row, text = reading(rows)
+    say(f"reading (the table of the owner's decision of 2026-11-20): row {row}: {text}")
+    say("bundle words are beside; the table reads the sub-items D0 A, D0 B, D1 A, D1 B, D2 A")
+    json.dump(dict(rows=rows, noiseless=v, noiseless_off=v_off, reading=dict(row=row, text=text)),
               open(os.path.join(a.out, "decoy_scores.json"), "w"), indent=1)
     open(os.path.join(a.out, "score.txt"), "w").write("\n".join(lines) + "\n")
 
@@ -390,7 +410,7 @@ if __name__ == "__main__":
     b = sub.add_parser("build")
     b.add_argument("devdir")
     b.add_argument("out")
-    b.add_argument("--z-gap", type=int, default=Z_GAP, help="sites skipped between B and Z (default 2) [OWNER]")
+    b.add_argument("--z-gap", type=int, default=Z_GAP, help="sites skipped between B and Z (default 2, the owner's decision of 2026-11-20)")
     b.add_argument("--dry-clifford-sentinel", action="store_true",
                    help="a Clifford echo sentinel instead of the ring (dry runs only; never for a device)")
     sub.add_parser("check").add_argument("out")

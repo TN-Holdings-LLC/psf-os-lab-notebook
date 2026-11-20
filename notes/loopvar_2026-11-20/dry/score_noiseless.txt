@@ -13,5 +13,6 @@ L 3: g per job V1 -0.0863 (SE 0.0069), V2 -0.0757 (SE 0.0069), V3 -0.0753 (SE 0.
    between: V1-V2 -0.0105 (2 SE 0.0194) SAME WITHIN ERROR, V2-V3 -0.0005 (2 SE 0.0195) SAME WITHIN ERROR, V1-V3 -0.0110 (2 SE 0.0195) SAME WITHIN ERROR
    three jobs: chi2 1.64 (2 df), p 0.441 -> SHOT NOISE ONLY; excess between-job SD 0.0000 (variance -0.000009)
    beside, shares P0 / P1: V1a 0.7900 / 0.7045; V1b 0.7850 / 0.6980; V2a 0.7937 / 0.6975; V2b 0.7730 / 0.7177; V3a 0.7823 / 0.7130; V3b 0.7750 / 0.6937
-beside, pooled over L: chi2 8.54 (6 df), p 0.201
-words [OWNER]: pairs MOVES at |d| >= 2 SE; three jobs DRIFTS at p < 0.05
+beside, between jobs pooled over L: chi2 8.54 (6 df), p 0.201
+copies, the nine (a - b) / SE pooled (LV-1): chi2 16.59 (9 df), p 0.055 -> SAME WITHIN ERROR; per L and job pair beside
+words: copies pooled SAME WITHIN ERROR (p >= 0.05) / MOVES; pairs beside MOVES at |d| >= 2 SE; three jobs per L DRIFTS at p < 0.05 (LV-2: no direction declared)

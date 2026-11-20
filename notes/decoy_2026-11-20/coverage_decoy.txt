@@ -1,0 +1,9 @@
+outcomes 729; on a row 729 (one row each, by construction: rows are tested in order)
+  row 1:  24  the loss sits on the register's first bits; a fixed first item shields
+  row 2:  18  the loss belongs to the first conditional item, whatever stands before it
+  row 3:  36  the loss moves to the conditional item that is not first (B)
+  row 4: 567  the control did not repeat 11-18 / 11-19 on this night (D0's A keeps, or D0's B loses too); D1, D2 not read for the mechanism
+  row 5:  48  a third item present shields, wherever its bits stand
+  row 6:  36  A loses with Z first and keeps with Z last: against the order reading; not read
+on no row: 0
+as stand-alone conditions: on no row 0, on more than one row 0

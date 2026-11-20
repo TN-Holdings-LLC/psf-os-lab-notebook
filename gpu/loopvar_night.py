@@ -27,8 +27,10 @@ score, per L (g = |P0 - exact| - |P1 - exact| as os2 / os3, SE from the shots of
     (w_j = 1 / SE_j^2), chi2 = sum (g_j - gbar)^2 / SE_j^2 with 2 degrees of freedom, p = exp(-chi2 / 2); and the
     excess between-job variance s_b^2 = var(g_j, ddof 1) - mean(SE_j^2) (a moment estimate; negative means none seen);
   pooled over L, beside: chi2 summed over L, 6 degrees of freedom.
-  Words [OWNER]: per L and job pair SAME WITHIN ERROR (|d| < 2 SE) / MOVES (|d| >= 2 SE); per L across the three
-  jobs SHOT NOISE ONLY (p >= 0.05) / DRIFTS (p < 0.05). Beside: the shares P0 and P1 per job and copy.
+  copies (LV-1, the owner's decision of 2026-11-20): the nine (a - b) / SE (3 L x 3 jobs) pooled in one chi2 with
+    9 degrees of freedom: SAME WITHIN ERROR (p >= 0.05) / MOVES (p < 0.05); per L and job pair beside.
+  Words: per L and job pair SAME WITHIN ERROR (|d| < 2 SE) / MOVES (|d| >= 2 SE), beside; per L across the three
+  jobs SHOT NOISE ONLY (p >= 0.05) / DRIFTS (p < 0.05) (LV-2: no direction declared). Beside: the shares P0 and P1.
 """
 import argparse
 import hashlib
@@ -51,7 +53,7 @@ MAX_S = 60
 STACKS = {"1": ["P1"], "2": ["P1"], "3": ["P1"]}
 JOBS = ("V1", "V2", "V3")
 COPIES = ("a", "b")
-LEVEL = 0.05            # [OWNER]
+LEVEL = 0.05            # the owner's decision of 2026-11-20
 
 
 def items():
@@ -165,11 +167,24 @@ def chi2_sf_even(x, k):
     return math.exp(-h) * sum(h ** i / math.factorial(i) for i in range(k // 2))
 
 
-def pair_word(d, two_se):           # [OWNER]
+def chi2_sf(x, k):
+    """P(chi2_k >= x) for any integer k (even: the closed form; odd: erfc and the half-integer series)."""
+    if k % 2 == 0:
+        return chi2_sf_even(x, k)
+    h = x / 2
+    tail = math.erfc(math.sqrt(h))
+    term = math.sqrt(h) * math.exp(-h) / math.gamma(1.5)
+    for i in range(1, (k - 1) // 2 + 1):
+        tail += term
+        term *= h / (i + 0.5)
+    return tail
+
+
+def pair_word(d, two_se):           # the owner's words, 2026-11-20
     return "MOVES" if abs(d) >= two_se else "SAME WITHIN ERROR"
 
 
-def jobs_word(p):                   # [OWNER]
+def jobs_word(p):                   # the owner's words, 2026-11-20
     return "SHOT NOISE ONLY" if p >= LEVEL else "DRIFTS"
 
 
@@ -224,9 +239,18 @@ def score(a):
         say("   beside, shares P0 / P1: " + "; ".join(f"{v}{c} {per[v][c]['p0']:.4f} / {per[v][c]['p1']:.4f}"
                                                    for v in JOBS for c in COPIES))
     p_all = chi2_sf_even(chi_all, df_all)
-    say(f"beside, pooled over L: chi2 {chi_all:.2f} ({df_all} df), p {p_all:.3f}")
-    say(f"words [OWNER]: pairs MOVES at |d| >= 2 SE; three jobs DRIFTS at p < {LEVEL}")
-    json.dump(dict(rows=rows, pooled=dict(chi2=chi_all, df=df_all, p=p_all), level=LEVEL),
+    say(f"beside, between jobs pooled over L: chi2 {chi_all:.2f} ({df_all} df), p {p_all:.3f}")
+    # LV-1 (the owner's decision of 2026-11-20): the nine within-job differences (a - b) / SE pooled in one chi2
+    zs = [rows[str(L)]["within"][v]["d"] / (rows[str(L)]["within"][v]["two_se"] / 2) for L in O2.LS for v in JOBS]
+    chi_w = sum(z * z for z in zs)
+    p_w = chi2_sf(chi_w, len(zs))
+    lv1 = "SAME WITHIN ERROR" if p_w >= LEVEL else "MOVES"
+    say(f"copies, the nine (a - b) / SE pooled (LV-1): chi2 {chi_w:.2f} ({len(zs)} df), p {p_w:.3f} -> {lv1}; "
+        "per L and job pair beside")
+    say(f"words: copies pooled SAME WITHIN ERROR (p >= {LEVEL}) / MOVES; pairs beside MOVES at |d| >= 2 SE; three jobs "
+        f"per L DRIFTS at p < {LEVEL} (LV-2: no direction declared)")
+    json.dump(dict(rows=rows, copies_pooled=dict(chi2=chi_w, df=len(zs), p=p_w, word=lv1),
+                   between_pooled=dict(chi2=chi_all, df=df_all, p=p_all), level=LEVEL),
               open(os.path.join(a.out, "loopvar_scores.json"), "w"), indent=1)
     open(os.path.join(a.out, "score.txt"), "w").write("\n".join(lines) + "\n")
 
