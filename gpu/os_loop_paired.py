@@ -102,7 +102,8 @@ def build(devdir, folder, rule_path, dry):
         i = [rep["items"][t]["chain"] for t, v in meta.items() if v[0] == L and v[5] == "i"]
         c = [rep["items"][t]["chain"] for t, v in meta.items() if v[0] == L and v[5] == "c"]
         if i and c:
-            same_q[str(L)] = sorted(map(tuple, i)) == sorted(map(tuple, c))
+            # the same set of chains (a B stack holds two frame items on one chain, the incumbent one item)
+            same_q[str(L)] = set(map(tuple, i)) == set(map(tuple, c))
     R2 = dict(R, meta={t: list(v) for t, v in meta.items()}, ff_only=ff_only, output_qubit=outq,
               probe_qubits=probe_q, probe_positions=list(O2.PROBE_POS), qpu_seconds_model=rep["qpu_seconds_model"],
               incumbent_candidate_same_qubits=same_q)
@@ -257,8 +258,27 @@ class PairedRusLoop(OL.RusLoop):
         if rs:
             p = os.path.join(out, f"RULE{rs[-1]['round'] + 1}.json")
             last = json.load(open(p))["stacks"] if os.path.exists(p) else None
-        return {"declared predictions": "none yet ([OWNER])", "rounds_run": len(rs), "decisions": dec,
-                "final_incumbents": last}
+        # LP-2 (prereg/loop_paired_night_2026-11-20.md): a candidate adopted in round k does not overshoot in round
+        # k + 1, where it runs as the incumbent (ff): P > noiseless + 2 SE, the same test as a candidate's. A step
+        # adopted in the last round run has no next round and is not counted.
+        checked, over = [], []
+        for r0, r1 in zip(rs, rs[1:]):
+            for key, row in r0["rows"].items():
+                if not row.get("adopted"):
+                    continue
+                nxt = r1["rows"].get(key, {})
+                if "inc_p" not in nxt:
+                    continue
+                o = bool(nxt["inc_p"] > nxt["inc_noiseless"] + 2 * nxt["inc_se"])
+                item = dict(round=r0["round"], key=key, stack=row.get("candidate"), p=nxt["inc_p"],
+                            noiseless=nxt["inc_noiseless"], se=nxt["inc_se"], overshoots=o)
+                checked.append(item)
+                if o:
+                    over.append(item)
+        lp2 = ("held" if checked and not over else ("failed" if over else "not testable (no adopted step had a "
+                                                                          "next round)"))
+        return {"declared predictions": {"LP-2 no adopted candidate overshoots in the next round run": lp2},
+                "LP-2 checked": checked, "rounds_run": len(rs), "decisions": dec, "final_incumbents": last}
 
 
 def size(devdir, stacks_json=None):
