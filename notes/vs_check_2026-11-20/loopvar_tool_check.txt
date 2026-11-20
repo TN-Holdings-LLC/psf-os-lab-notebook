@@ -1,0 +1,9 @@
+copies p01a / p01b: same qubits True, same gates (ff, off, floor) True
+copies x1a / x1b: same qubits True, same gates (ff, off, floor) True
+copies p02a / p02b: same qubits True, same gates (ff, off, floor) True
+copies x2a / x2b: same qubits True, same gates (ff, off, floor) True
+copies p03a / p03b: same qubits True, same gates (ff, off, floor) True
+copies x3a / x3b: same qubits True, same gates (ff, off, floor) True
+V1, V2, V3: circuits.qpy and manifest byte-identical True (circuits.qpy sha256 3cdadb20a6d6b18c...)
+40 circuits, 47.6 s per job by the model (limit 60), 142.8 s for three jobs; submitted already: none
+PASS

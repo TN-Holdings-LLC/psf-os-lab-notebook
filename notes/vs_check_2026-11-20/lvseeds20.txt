@@ -1,0 +1,7 @@
+seeds 20
+within (a - b) / SE: n 180, mean +0.031, SD 0.952, MOVES 9 (expected 8.2)
+between / SE:        n 180, mean -0.142, SD 1.007, MOVES 7 (expected 8.2; pairs correlated)
+three-job p per L:   n 60, mean 0.492 (uniform 0.5), below 0.05: 2 (expected 3.0); deciles [13, 12, 13, 10, 12]
+pooled p (6 df):     mean 0.502, below 0.05: 1
+excess variance:     mean +1.90e-06 (0 under shot noise alone), share negative 0.60
+seeds where every within pair is SAME (LV-1 as written holds): 14 of 20 (expected about 66 %)

@@ -1,0 +1,8 @@
+1. V1, V2, V3: 78 files each; every file byte-identical: True; job/circuits.qpy 3cdadb20a6d6b18c...
+2. V1: 40 circuits, 36 item parts in 18 kinds; each kind exactly twice (copies a, b): True; kinds not among r1's parts on the same qubits: 0
+   r1 job: 25 circuits; its part kinds 28; sentinel parts V1 [(('sentinel', 40), 4)], r1 [(('sentinel', 40), 4)]
+   qubit sets of the item parts (kinds per set): {(0, 1): 6, (0, 1, 2, 3): 6, (0, 1, 2, 3, 4, 5): 6}
+3. L 1: chi2 1.947 p 0.378 (tool 1.947 / 0.378); s_b^2 -3.39e-07 (tool -3.39e-07)
+3. L 2: chi2 0.040 p 0.980 (tool 0.040 / 0.980); s_b^2 -3.56e-05 (tool -3.56e-05)
+3. L 3: chi2 0.302 p 0.860 (tool 0.302 / 0.860); s_b^2 -4.00e-05 (tool -4.00e-05)
+   pooled chi2 2.289, 6 df, p 0.891; largest difference from the tool's numbers 1.4e-17

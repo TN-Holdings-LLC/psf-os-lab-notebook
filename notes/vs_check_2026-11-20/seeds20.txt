@@ -1,0 +1,10 @@
+seeds 20, conditional sub-items 120; words: {'SAME WITHIN ERROR': 120}
+d / SE:            mean +0.028, SD 0.610, |d| >= 2 SE: 0
+(p - s) / SE:      mean -0.030, SD 0.981, |.| >= 2 SE: 3
+Monte Carlo, s and p ~ N(v, v(1-v)/4000), v = 0.793: SD(d)/SE 0.603 (theory sqrt(1 - 2/pi) = 0.603); P(|d| >= 2 SE) = 0.002 (a normal statistic: 0.045)
+expected LESS or MORE in 120 sub-items: 0.25 (folded) against 5.5 (normal)
+same, s and p centred 0.06 below v: SD(d)/SE 1.000; P(|d| >= 2 SE) 0.045
+  centred 0.000 below v: P(|d| >= 2 SE) 0.002
+  centred 0.005 below v: P(|d| >= 2 SE) 0.009
+  centred 0.010 below v: P(|d| >= 2 SE) 0.026
+  centred 0.020 below v: P(|d| >= 2 SE) 0.045

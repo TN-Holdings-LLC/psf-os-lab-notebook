@@ -1,0 +1,42 @@
+2026-11-20T00:18:54Z setup start
+2026-11-20T00:19:07Z untar done rc=0
+2026-11-20T00:19:28Z pip done rc=0
+versions 3.12.3 2.5.2 0.18.0 2.4.6
+2026-11-20T00:19:29Z cgroup cpus 10
+2026-11-20T00:39:35Z phase pytest done rc=0
+SKIPPED [1] tests/test_exact_tn.py:10: could not import 'quimb': No module named 'quimb'
+SKIPPED [1] tests/test_observables.py:153: could not import 'quimb': No module named 'quimb'
+328 passed, 2 skipped, 2 warnings in 1205.54s (0:20:05)
+2026-11-20T00:40:34Z all done
+--- pytest summary
+============================= slowest 15 durations =============================
+1054.45s call     tests/test_entrance.py::test_chain_of_equals_the_notebook_builder_on_every_record
+693.43s call     tests/test_t2_placement.py::test_same_ring_as_toqb[FakeMarrakesh-72]
+652.11s call     tests/test_m6_sentinel.py::test_s2_clean_without_noise
+644.48s call     tests/test_practice.py::test_q2_full_score_without_noise[kising_forward-20_0]
+548.49s call     tests/test_lattice2d.py::test_p6_placement_unchanged_random_marks
+497.09s call     tests/test_practice.py::test_q4_problems_read_no_map
+460.40s call     tests/test_t2_placement.py::test_same_ring_as_toqb[FakeKingston-72]
+452.29s call     tests/test_t2_placement.py::test_same_ring_as_toqb[FakeMarrakesh-40]
+449.19s call     tests/test_t2_placement.py::test_same_ring_as_toqb[FakeKingston-40]
+324.26s call     tests/test_practice.py::test_q2_full_score_without_noise[kising_forward-20_1]
+263.58s call     tests/test_t3_planted.py::test_planted_defects_are_listed_and_avoided
+261.76s call     tests/test_t2_placement.py::test_same_ring_as_toqb[FakeFez-72]
+252.63s call     tests/test_t2_placement.py::test_same_ring_as_toqb[FakeFez-40]
+236.00s call     tests/test_feedforward.py::test_run_local_splits_a_large_bundle_into_independent_parts
+215.40s call     tests/test_practice.py::test_q2_full_score_without_noise[clifford_stab-40]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_exact_tn.py:10: could not import 'quimb': No module named 'quimb'
+SKIPPED [1] tests/test_observables.py:153: could not import 'quimb': No module named 'quimb'
+328 passed, 2 skipped, 2 warnings in 1205.54s (0:20:05)
+--- quimb follow-up (collect with and without quimb; the two quimb files)
+329 tests collected in 1.87s
+43:Tests: 334 passed, 1 skipped (with psf-os-lab-notebook checked out as `TOQB_DIR` and the optional pieces installed);
+79:Tests: 286 passed, 1 skipped (with psf-os-lab-notebook checked out as `TOQB_DIR` and the optional pieces installed).
+quimb rc 0
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_exact_tn.py:101: heavy: set PSF_OS_HEAVY=1 (72 sites, minutes)
+17 passed, 1 skipped in 60.30s (0:01:00)
+336 tests collected in 2.56s
+18 tests collected in 1.45s
+tests/test_feedforward.py:1

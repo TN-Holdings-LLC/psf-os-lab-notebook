@@ -1,0 +1,15 @@
+1. job circuits 22; named: ['?[]', '?[]', '?[]', 'ff_D0', 'ff_D0_floor', 'ff_D0_off', 'ff_D1', 'ff_D1_floor', 'ff_D1_off', 'ff_D2', 'ff_D2_floor', 'ff_D2_off', 'ff_sa', 'ff_sa_floor', 'ff_sa_off', 'ff_sb', 'ff_sb_floor', 'ff_sb_off', 'ff_sz', 'ff_sz_floor', 'ff_sz_off', 'ksent_n40_D24-fold_rule']
+2./3. parts per bundle arm (qubits; clbits) and the same instructions as the single:
+   D0 ff: A q0-3 bits 0..4 same-as-sa True; B q5-8 bits 5..9 same-as-sb True
+   D0_off: A q0-3 bits 0..4; B q5-8 bits 5..9
+   D0_floor: A q0-3 bits 0..4; B q5-8 bits 5..9
+   D1 ff: A q0-3 bits 5..9 same-as-sa True; B q5-8 bits 10..14 same-as-sb True; Z q11-14 bits 0..4 same-as-sz True (Z bits as declared: True)
+   D1_off: A q0-3 bits 5..9; B q5-8 bits 10..14; Z q11-14 bits 0..4
+   D1_floor: A q0-3 bits 5..9; B q5-8 bits 10..14; Z q11-14 bits 0..4
+   D2 ff: A q0-3 bits 0..4 same-as-sa True; B q5-8 bits 5..9 same-as-sb True; Z q11-14 bits 10..14 same-as-sz True (Z bits as declared: True)
+   D2_off: A q0-3 bits 0..4; B q5-8 bits 5..9; Z q11-14 bits 10..14
+   D2_floor: A q0-3 bits 0..4; B q5-8 bits 5..9; Z q11-14 bits 10..14
+4. coupling distance (working and failed couplers): B-Z 3, A-B 2, A-Z 8
+5. noiseless rd2 ff (single sa, 2000000 shots): output bit reads 0 in 0.793 (2 SE 0.001)
+5. noiseless rd2 off (single sz, 2000000 shots): output bit reads 0 in 0.631 (2 SE 0.001)
+ALL OK
