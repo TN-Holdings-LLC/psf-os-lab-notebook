@@ -45,3 +45,20 @@ over to 0.812 that is about 0.87, short of 0.88 (a carry-over, not a fit; no noi
 instruction ("no prospect of 0.88 -> stop, numbers only"), this stops here. What it does show: fewer CZ (16 -> 10)
 and depth (55 -> 34) buy about 30 % of the loss under noises that cost per gate and per wait; the conditional count
 is unchanged, and a cost per conditional (noise c) keeps the new arrangement just under the ceiling.
+
+## Addendum: without the two reset conditionals (2026-11-20, after the owner asked whether improvement can reach it)
+
+In this arrangement the ancillas are not used after their measurement (the decoding runs on the data alone), so the
+two conditional-X resets do nothing for the answer; `no_resets.py` (desk only) drops them in every arm: lut3 holds 3
+conditionals instead of 5 (lut1 1, lut5 5). Noiselessly the same: c = 000 for every ff item, ceiling 0.8750.
+
+| noise | 2026-11-19 arrangement | fewer CZ | fewer CZ, no resets | loss ratio to 2026-11-19 |
+|---|---|---|---|---|
+| a (per gate and read) | 0.920 | 0.944 | 0.944 | 0.70 |
+| c (+ 5 % dephasing per conditional) | 0.813 NOT BEYOND | 0.869 NOT BEYOND | **0.888 BEYOND (+0.013)** | 0.60 |
+
+Carried over to 11-19's 0.812 (not a fit): x 0.70 gives about 0.87, x 0.60 about 0.89, against the 0.881 needed.
+So reaching the ceiling is possible only if the device's loss is like noise c (a cost per conditional, which the
+resets add), and then by a thin margin. Dropping the resets changes a property of the 2026-11-19 design ("both
+versions hold the two reset conditionals") and the conditional counts the (b) comparison was built on: the owner's
+decision, not made here.
