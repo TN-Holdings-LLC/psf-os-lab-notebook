@@ -26,8 +26,13 @@ IPE n = 4 (every phase 0-15, 1950 shots), three forms, the same off arm (the pla
 | form | the target during each wait (as sent) | carriers | excited | CZ | depth |
 |---|---|---|---|---|---|
 | pl (plain, as 2026-11-19) | superposition | 1 | 1/2 | 0-8 | 31-63 |
-| fe (fence) | \|1> | 0 | 1 | 0-8 | 32-66 |
-| pk (fence + park) | \|0> | 0 | 0 | 0-8 | 31-66 |
+| fe (fence) | \|1> | 0 | 1 | 0-8 | 32-72 |
+| pk (fence + park) | \|0> | 0 | 0 | 0-8 | 31-72 |
+
+Every wait means every read and every run of phase-feedback conditionals (the workplace VS's その6). Fenced at the
+reads only, the target still waited in a superposition at 6 of the 9 conditionals. The tool now fences and parks at
+every wait by default [OWNER]; `--reads-only` builds the forms the VS checked in その6 (depth to 66). As sent, with
+every read and conditional counted: pl carries 1 at every wait; fe and pk 0; excited (n = 4, phase 5) 3.5, 6.0, 0.0.
 
 Two jobs (phases 0-7 and 8-15, every form in both), 76 circuits and 45.8 s by the model each. `check`: noiseless,
 every ff arm success 1, every off arm at its exact value, floors zero: PASS on both jobs (the 2026-11-19 marrakesh
@@ -64,11 +69,14 @@ All 9 outcomes fall on exactly one row (3 + 1 + 5).
 | noise | pl | fe | pk | park | fence | row |
 |---|---|---|---|---|---|---|
 | qpe a (CZ 1 %, damping 2 % per read) | 0.9449 | 0.9179 | 0.9579 | KEEPS MORE | KEEPS LESS | decay |
-| qpe c (+ dephasing 12 % per conditional) | 0.7378 | 0.7562 | 0.7854 | KEEPS MORE | KEEPS MORE | dephasing |
+| qpe c (+ dephasing 12 % per conditional) | 0.7378 | 0.7909 | 0.8215 | KEEPS MORE | KEEPS MORE | dephasing |
 | damping 6 % per read only | 0.9672 | 0.8776 | 1.0000 | KEEPS MORE | KEEPS LESS | decay |
-| dephasing 5 % per conditional only | 0.8839 | 0.9094 | 0.9076 | KEEPS MORE | KEEPS MORE | dephasing |
+| dephasing 5 % per conditional only | 0.8839 | 0.9280 | 0.9260 | KEEPS MORE | KEEPS MORE | dephasing |
 
-Each noise lands on the row of its mechanism (`notes/park_2026-11-20/dry/`).
+The forms fence and park at every wait (the tool's default since the VS's その6; `notes/park_2026-11-20/dry_all_waits/`).
+With the reads only (`dry/`) the damping rows are the same, and under dephasing fe and pk keep less (qpe c: 0.7562,
+0.7854; cond only: 0.9094, 0.9076), on the same rows. The workplace VS's その6 grid (reads-only forms, 15 noises x 20
+seeds) gave the same one-to-one map: gates only -> not seen, damping -> decay, dephasing -> dephasing. Each noise lands on the row of its mechanism (`notes/park_2026-11-20/dry/`).
 
 ## Known limits
 

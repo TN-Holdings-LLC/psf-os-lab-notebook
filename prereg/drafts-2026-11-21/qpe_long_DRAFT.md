@@ -114,8 +114,9 @@ IPE off within 0.03 of exact, floors zero) PASS on every job of every plan.
   the next round's preparation are merged across the wait, so as sent the target waits in a superposition: one
   carrier at every wait (`notes/footprint_2026-11-20/sent.txt`; written: 0). 2026-11-19's IPE was sent so. psf-os
   after-2026-11-20's fence (`--fence`: a barrier on every qubit around each wait) keeps it in |1> (0 carriers, the
-  same CZ, depth +3; check PASS). Under the illustrative noises the fence alone trades dephasing for decay (noise a:
-  0.948 -> 0.918 at n = 4; noise c: 0.731 -> 0.754); parking the target in |0> during the wait does better in both
+  same CZ; check PASS; since the VS's その6 the fence covers the phase-feedback conditionals too, depth +9 at n = 4).
+  Under the illustrative noises the fence alone trades dephasing for decay (noise a: 0.948 -> 0.918 at n = 4; noise
+  c: 0.731 -> 0.790); parking the target in |0> during the wait does better in both
   (`notes/park_2026-11-20/`; not in this tool) [OWNER: plain as 2026-11-19 (proposed: the comparison with 11-19
   stays), or fenced].
 - The plan's jobs run at different times of the night; the shape reads three n from four jobs (n = 4 and half of

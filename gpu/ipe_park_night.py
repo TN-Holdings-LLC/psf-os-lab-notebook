@@ -39,20 +39,26 @@ COMPARISONS = {"park": ("pk", "pl"),       # waiting in |0> against waiting as 2
                "park_vs_fence": ("pk", "fe")}   # |0> against |1>, both without a carrier (beside)
 
 
-def form(f, qc):
+ALL_WAITS = True     # [OWNER] fence (and park at) every wait, the phase-feedback conditionals too (the workplace
+                     # VS's その6: fenced at reads only, the target still waited in a superposition at 6 of n = 4's
+                     # 9 conditionals); --reads-only gives the forms the VS checked in その6
+
+
+def form(f, qc, all_waits=None):
     from psf_os.footprint import fence_waits
     import park as PK
-    return {"pl": qc, "fe": fence_waits(qc), "pk": PK.park(qc)}[f]
+    aw = ALL_WAITS if all_waits is None else all_waits
+    return {"pl": qc, "fe": fence_waits(qc, conditionals=aw), "pk": PK.park(qc, conditionals=aw)}[f]
 
 
-def items(n, job):
+def items(n, job, all_waits=None):
     half = 2 ** n // 2
     out = []
     for j in range(job * half, (job + 1) * half):
         qc, succ = AP.ipe(n, j, True)
         off, _ = AP.ipe(n, j, False)
         for f in FORMS:
-            out.append((f"{f}{n}_{j}", form(f, qc), dict(success=succ, off_circuit=off, form="blocks")))
+            out.append((f"{f}{n}_{j}", form(f, qc, all_waits), dict(success=succ, off_circuit=off, form="blocks")))
     return out
 
 
@@ -60,9 +66,10 @@ def build(a):
     from psf_os import feedforward as FF
     from psf_os.device import Device
     spec = dict(kind="echo_clifford", D=24) if a.dry_clifford_sentinel else None   # dry runs only, never a device
-    rep = FF.build(Device.load(a.devdir), items(a.n, a.job), a.out, shots=a.shots, max_seconds=60,
+    aw = not a.reads_only
+    rep = FF.build(Device.load(a.devdir), items(a.n, a.job, aw), a.out, shots=a.shots, max_seconds=60,
                    sentinel_spec=spec, footprint=True)
-    info = dict(part=f"park:{a.n}:{a.job}", n=a.n, job=a.job, shots=a.shots, device=rep["device"],
+    info = dict(part=f"park:{a.n}:{a.job}", n=a.n, job=a.job, shots=a.shots, all_waits=aw, device=rep["device"],
                 circuits=rep["circuits"], qpu_seconds_model=rep["qpu_seconds_model"], versions=Q._versions())
     json.dump(info, open(os.path.join(a.out, "part.json"), "w"), indent=1)
     print(f"{rep['device']}: n {a.n} job {a.job}: {rep['circuits']} circuits, {rep['qpu_seconds_model']:.1f} s by the "
@@ -76,7 +83,7 @@ def build(a):
 
 def check(a):
     part = json.load(open(os.path.join(a.out, "part.json")))
-    spec = {t: sp for t, _, sp in items(part["n"], part["job"])}
+    spec = {t: sp for t, _, sp in items(part["n"], part["job"], part.get("all_waits", True))}
     saved = Q._spec_by_tag
     Q._spec_by_tag = lambda _part: spec
     try:
@@ -157,6 +164,7 @@ if __name__ == "__main__":
     b.add_argument("--n", type=int, default=4)
     b.add_argument("--shots", type=int, default=SHOTS)
     b.add_argument("--dry-clifford-sentinel", action="store_true")
+    b.add_argument("--reads-only", action="store_true", help="fence and park at the reads only (as checked in その6)")
     sub.add_parser("check").add_argument("out")
     d = sub.add_parser("dry")
     d.add_argument("out")
