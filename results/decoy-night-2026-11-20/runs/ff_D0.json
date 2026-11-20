@@ -1,0 +1,173 @@
+{
+ "kind": "psfos",
+ "psfos_role": "user",
+ "psfos_job": {
+  "kind": "feedforward"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+  "6": 6,
+  "7": 7,
+  "8": 8
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_D0.qpy",
+  "circuits": 1,
+  "sha256": "8356766993441ab87a9d871c78acd9aa8b3cd6652325d45a347957c8b34911d2"
+ },
+ "tag": "D0",
+ "chain": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ],
+  "bundle_gap": 1
+ },
+ "clbits": 10,
+ "bundle": {
+  "d0a": {
+   "segment": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "qubits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "bit_offset": 0,
+   "tag": "d0a",
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "success": {},
+   "bound": null,
+   "clbits": 5,
+   "mid": 4,
+   "conditionals": 2,
+   "logical_cz": 6,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "logical_cz_in_blocks": 6,
+   "cz": 12
+  },
+  "d0b": {
+   "segment": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "qubits": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "bit_offset": 5,
+   "tag": "d0b",
+   "chain": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "success": {},
+   "bound": null,
+   "clbits": 5,
+   "mid": 4,
+   "conditionals": 2,
+   "logical_cz": 6,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "logical_cz_in_blocks": 6,
+   "cz": 12
+  }
+ },
+ "ff_arm": "ff",
+ "cz": 24,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}

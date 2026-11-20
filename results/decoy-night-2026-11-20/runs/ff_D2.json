@@ -1,0 +1,241 @@
+{
+ "kind": "psfos",
+ "psfos_role": "user",
+ "psfos_job": {
+  "kind": "feedforward"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+  "6": 6,
+  "7": 7,
+  "8": 8,
+  "9": 9,
+  "10": 10,
+  "11": 11,
+  "12": 12,
+  "13": 13,
+  "14": 14
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 4000,
+ "export": {
+  "qpy": "ff_D2.qpy",
+  "circuits": 1,
+  "sha256": "df6dc11c24d6271a68b4c910035261ab54e8b84cf1851afcc2629ebb3b418733"
+ },
+ "tag": "D2",
+ "chain": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ],
+  "bundle_gap": [
+   1,
+   2
+  ]
+ },
+ "clbits": 15,
+ "bundle": {
+  "d2a": {
+   "segment": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "qubits": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "bit_offset": 0,
+   "tag": "d2a",
+   "chain": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "success": {},
+   "bound": null,
+   "clbits": 5,
+   "mid": 4,
+   "conditionals": 2,
+   "logical_cz": 6,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "logical_cz_in_blocks": 6,
+   "cz": 12
+  },
+  "d2b": {
+   "segment": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "qubits": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "bit_offset": 5,
+   "tag": "d2b",
+   "chain": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "success": {},
+   "bound": null,
+   "clbits": 5,
+   "mid": 4,
+   "conditionals": 2,
+   "logical_cz": 6,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "logical_cz_in_blocks": 6,
+   "cz": 12
+  },
+  "d2z": {
+   "segment": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "qubits": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "bit_offset": 10,
+   "tag": "d2z",
+   "chain": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "success": {},
+   "bound": null,
+   "clbits": 5,
+   "mid": 4,
+   "conditionals": 0,
+   "logical_cz": 6,
+   "rus": {
+    "L": 2,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 4,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "exact": 0.8781824642913858
+   },
+   "logical_cz_in_blocks": 0,
+   "cz": 6
+  }
+ },
+ "ff_arm": "ff",
+ "cz": 30,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ }
+}

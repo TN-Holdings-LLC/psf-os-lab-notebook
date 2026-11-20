@@ -240,6 +240,10 @@ RESULTS = {
         ["gpu/repcode_night.py", "score", "{T}"], "repcode_scores.json", "404daf9f"),
     "qpe-repro-night-2026-11-19": ("results/qpe-repro-night-2026-11-19", ["qA", "qB"],
         ["gpu/qpe_repro_night.py", "score", "{T}/qA", "{T}/qB"], "qA/qpe_scores.json"),
+    "decoy-night-2026-11-20": ("results/decoy-night-2026-11-20", ["job", "runs", "plan.json"],
+        ["gpu/decoy_night.py", "score", "{T}"], "decoy_scores.json"),
+    "loopvar-night-2026-11-20": ("results/loopvar-night-2026-11-20", ["V1", "V2", "V3", "plan.json"],
+        ["gpu/loopvar_night.py", "score", "{T}"], "loopvar_scores.json"),
 }
 
 

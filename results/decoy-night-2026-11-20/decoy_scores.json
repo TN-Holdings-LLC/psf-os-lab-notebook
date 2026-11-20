@@ -1,0 +1,103 @@
+{
+ "rows": {
+  "d0a": {
+   "single": 0.74925,
+   "packed": 0.69275,
+   "d": -0.056499999999999995,
+   "two_se": 0.020018038740096392,
+   "ref": "sa",
+   "verdict": "PACKED KEEPS LESS",
+   "still_single": 0.2125,
+   "still_packed": 0.19875
+  },
+  "d0b": {
+   "single": 0.58125,
+   "packed": 0.59575,
+   "d": 0.014499999999999957,
+   "two_se": 0.02200523517256746,
+   "ref": "sb",
+   "verdict": "SAME WITHIN ERROR",
+   "still_single": 0.27025,
+   "still_packed": 0.27125
+  },
+  "D0": {
+   "mean": -0.02100000000000002,
+   "two_se": 0.014874073500557942,
+   "verdict": "PACKED KEEPS LESS"
+  },
+  "d1a": {
+   "single": 0.74925,
+   "packed": 0.6925,
+   "d": -0.05674999999999997,
+   "two_se": 0.02002044423832798,
+   "ref": "sa",
+   "verdict": "PACKED KEEPS LESS",
+   "still_single": 0.2125,
+   "still_packed": 0.2105
+  },
+  "d1b": {
+   "single": 0.58125,
+   "packed": 0.5842499999999999,
+   "d": 0.0029999999999998916,
+   "two_se": 0.022052219276072874,
+   "ref": "sb",
+   "verdict": "SAME WITHIN ERROR",
+   "still_single": 0.27025,
+   "still_packed": 0.27675
+  },
+  "d1z": {
+   "single_off": 0.635,
+   "packed": 0.655,
+   "noiseless_off": 0.6308339498803703,
+   "d": -0.020000000000000018,
+   "two_se": 0.02139509289533467,
+   "ref": "sz off",
+   "beside": true
+  },
+  "D1": {
+   "mean": -0.026875000000000038,
+   "two_se": 0.014892267813365431,
+   "verdict": "PACKED KEEPS LESS"
+  },
+  "d2a": {
+   "single": 0.74925,
+   "packed": 0.66425,
+   "d": -0.08499999999999996,
+   "two_se": 0.02027057904944997,
+   "ref": "sa",
+   "verdict": "PACKED KEEPS LESS",
+   "still_single": 0.2125,
+   "still_packed": 0.19875
+  },
+  "d2b": {
+   "single": 0.58125,
+   "packed": 0.60275,
+   "d": 0.021499999999999964,
+   "two_se": 0.02197364045851301,
+   "ref": "sb",
+   "verdict": "SAME WITHIN ERROR",
+   "still_single": 0.27025,
+   "still_packed": 0.279
+  },
+  "d2z": {
+   "single_off": 0.635,
+   "packed": 0.65575,
+   "noiseless_off": 0.6308339498803703,
+   "d": -0.020750000000000046,
+   "two_se": 0.021389645567423506,
+   "ref": "sz off",
+   "beside": true
+  },
+  "D2": {
+   "mean": -0.03175,
+   "two_se": 0.014947719307640214,
+   "verdict": "PACKED KEEPS LESS"
+  }
+ },
+ "noiseless": 0.7928502970982856,
+ "noiseless_off": 0.6308339498803703,
+ "reading": {
+  "row": 2,
+  "text": "the loss belongs to the first conditional item, whatever stands before it"
+ }
+}
