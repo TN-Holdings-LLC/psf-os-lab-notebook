@@ -1,0 +1,63 @@
+== N1 drift 0
+current (next_stacks, K 4): wrong steps 2.24 / night (harmful 0.20), missed 0.00 L / night, final distance 0.0952, seconds 161.2, rounds 3.04
+      literal truth: wrong 1.80 (harmful 1.80), missed 0.00, distance 0.0952
+paired (next_stacks_paired, K 4): wrong steps 0.44 / night (harmful 0.00), missed 0.04 L / night, final distance 0.0972, seconds 154.0, rounds 3.00
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.04, distance 0.0944
+paired + climb_on_kept (K 4): wrong steps 0.44 / night (harmful 0.00), missed 0.04 L / night, final distance 0.0972, seconds 154.0, rounds 3.00
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.04, distance 0.0944
+== N1 drift 0.07
+current (next_stacks, K 4): wrong steps 2.24 / night (harmful 0.20), missed 0.00 L / night, final distance 0.0962, seconds 162.2, rounds 3.06
+      literal truth: wrong 1.82 (harmful 1.82), missed 0.00, distance 0.0962
+paired (next_stacks_paired, K 4): wrong steps 0.42 / night (harmful 0.00), missed 0.04 L / night, final distance 0.0982, seconds 154.1, rounds 3.00
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.04, distance 0.0954
+paired + climb_on_kept (K 4): wrong steps 0.42 / night (harmful 0.00), missed 0.04 L / night, final distance 0.0982, seconds 154.1, rounds 3.00
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.04, distance 0.0954
+== N1 drift 0.14
+current (next_stacks, K 4): wrong steps 2.22 / night (harmful 0.20), missed 0.00 L / night, final distance 0.0972, seconds 164.0, rounds 3.10
+      literal truth: wrong 1.84 (harmful 1.84), missed 0.00, distance 0.0972
+paired (next_stacks_paired, K 4): wrong steps 0.38 / night (harmful 0.00), missed 0.08 L / night, final distance 0.0991, seconds 154.2, rounds 3.00
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.08, distance 0.0977
+paired + climb_on_kept (K 4): wrong steps 0.38 / night (harmful 0.00), missed 0.08 L / night, final distance 0.0991, seconds 154.2, rounds 3.00
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.08, distance 0.0977
+== N2 drift 0
+current (next_stacks, K 4): wrong steps 3.10 / night (harmful 0.10), missed 0.00 L / night, final distance 0.1693, seconds 128.6, rounds 2.10
+      literal truth: wrong 2.42 (harmful 2.42), missed 0.00, distance 0.1693
+paired (next_stacks_paired, K 4): wrong steps 0.68 / night (harmful 0.00), missed 0.10 L / night, final distance 0.1706, seconds 128.4, rounds 2.10
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.10, distance 0.1666
+paired + climb_on_kept (K 4): wrong steps 0.68 / night (harmful 0.00), missed 0.10 L / night, final distance 0.1706, seconds 128.4, rounds 2.10
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.10, distance 0.1666
+== N2 drift 0.05
+current (next_stacks, K 4): wrong steps 3.08 / night (harmful 0.08), missed 0.00 L / night, final distance 0.1751, seconds 128.3, rounds 2.08
+      literal truth: wrong 2.52 (harmful 2.52), missed 0.00, distance 0.1751
+paired (next_stacks_paired, K 4): wrong steps 0.56 / night (harmful 0.00), missed 0.08 L / night, final distance 0.1762, seconds 128.1, rounds 2.08
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.08, distance 0.1730
+paired + climb_on_kept (K 4): wrong steps 0.56 / night (harmful 0.00), missed 0.08 L / night, final distance 0.1762, seconds 128.1, rounds 2.08
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.08, distance 0.1730
+== N2 drift 0.1
+current (next_stacks, K 4): wrong steps 3.08 / night (harmful 0.08), missed 0.00 L / night, final distance 0.1714, seconds 128.0, rounds 2.08
+      literal truth: wrong 2.44 (harmful 2.44), missed 0.00, distance 0.1714
+paired (next_stacks_paired, K 4): wrong steps 0.64 / night (harmful 0.00), missed 0.08 L / night, final distance 0.1725, seconds 127.9, rounds 2.08
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.08, distance 0.1692
+paired + climb_on_kept (K 4): wrong steps 0.64 / night (harmful 0.00), missed 0.08 L / night, final distance 0.1725, seconds 127.9, rounds 2.08
+      literal truth: wrong 0.00 (harmful 0.00), missed 0.08, distance 0.1692
+== N3 drift 0
+current (next_stacks, K 4): wrong steps 2.96 / night (harmful 1.22), missed 0.96 L / night, final distance 0.0582, seconds 160.2, rounds 3.46
+      literal truth: wrong 2.96 (harmful 1.22), missed 0.96, distance 0.0582
+paired (next_stacks_paired, K 4): wrong steps 0.04 / night (harmful 0.00), missed 1.20 L / night, final distance 0.0692, seconds 109.5, rounds 1.84
+      literal truth: wrong 0.04 (harmful 0.00), missed 1.20, distance 0.0692
+paired + climb_on_kept (K 4): wrong steps 0.04 / night (harmful 0.00), missed 0.28 L / night, final distance 0.0390, seconds 120.1, rounds 2.04
+      literal truth: wrong 0.04 (harmful 0.00), missed 0.28, distance 0.0390
+== N3 drift 0.15
+current (next_stacks, K 4): wrong steps 2.96 / night (harmful 1.28), missed 1.12 L / night, final distance 0.0613, seconds 158.9, rounds 3.42
+      literal truth: wrong 2.96 (harmful 1.28), missed 1.12, distance 0.0613
+paired (next_stacks_paired, K 4): wrong steps 0.06 / night (harmful 0.00), missed 1.34 L / night, final distance 0.0731, seconds 104.5, rounds 1.64
+      literal truth: wrong 0.06 (harmful 0.00), missed 1.34, distance 0.0731
+paired + climb_on_kept (K 4): wrong steps 0.06 / night (harmful 0.00), missed 0.26 L / night, final distance 0.0387, seconds 119.6, rounds 2.04
+      literal truth: wrong 0.06 (harmful 0.00), missed 0.26, distance 0.0387
+== N3 drift 0.3
+current (next_stacks, K 4): wrong steps 2.82 / night (harmful 1.24), missed 1.00 L / night, final distance 0.0584, seconds 160.2, rounds 3.42
+      literal truth: wrong 2.82 (harmful 1.24), missed 1.00, distance 0.0584
+paired (next_stacks_paired, K 4): wrong steps 0.12 / night (harmful 0.00), missed 1.36 L / night, final distance 0.0734, seconds 104.7, rounds 1.62
+      literal truth: wrong 0.12 (harmful 0.00), missed 1.36, distance 0.0734
+paired + climb_on_kept (K 4): wrong steps 0.12 / night (harmful 0.00), missed 0.34 L / night, final distance 0.0411, seconds 119.4, rounds 2.04
+      literal truth: wrong 0.12 (harmful 0.00), missed 0.34, distance 0.0411

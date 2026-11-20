@@ -1,0 +1,5362 @@
+{
+ "noise": {
+  "gamma": 0.1
+ },
+ "illustrative": true,
+ "drift_s": 0.1,
+ "between_job_sd_g": {
+  "1": {
+   "dg_deps": 0.14738272997178337,
+   "sd_g": 0.014738272997178337
+  },
+  "2": {
+   "dg_deps": 0.2478034311699462,
+   "sd_g": 0.02478034311699462
+  },
+  "3": {
+   "dg_deps": 0.26165211058364723,
+   "sd_g": 0.026165211058364723
+  }
+ },
+ "pick": {
+  "1": "P1",
+  "2": "P1",
+  "3": "P1"
+ },
+ "nights": 50,
+ "margin": 0.005,
+ "rules": {
+  "current (next_stacks, K 4)": {
+   "mean": {
+    "wrong": 3.08,
+    "harmful": 0.08,
+    "missed": 0.0,
+    "distance": 0.17135178169856569,
+    "wrong_literal": 2.44,
+    "harmful_literal": 2.44,
+    "missed_literal": 0.0,
+    "distance_literal": 0.17135178169856569,
+    "seconds": 128.016,
+    "rounds": 2.08
+   },
+   "finals": {
+    "{\"1\": \"P2+B\", \"2\": \"P2+B\", \"3\": \"P2+B\"}": 26,
+    "{\"1\": \"P1+M\", \"2\": \"P2+B\", \"3\": \"P2+B\"}": 13,
+    "{\"1\": \"P2+B\", \"2\": \"P1+M\", \"3\": \"P2+B\"}": 7,
+    "{\"1\": \"P1+M\", \"2\": \"P1+M\", \"3\": \"P2+B\"}": 4
+   },
+   "nights": [
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 4,
+     "harmful": 1,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 164.6,
+     "rounds": 3,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 1,
+     "harmful_literal": 1,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 120.3,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 4,
+     "harmful": 1,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 157.9,
+     "rounds": 3,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 1,
+     "harmful_literal": 1,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 120.3,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 4,
+     "harmful": 1,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 164.6,
+     "rounds": 3,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 4,
+     "harmful": 1,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 157.9,
+     "rounds": 3,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 1,
+     "harmful_literal": 1,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 120.3,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 3,
+     "harmful_literal": 3,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 1,
+     "harmful_literal": 1,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 120.3,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 3,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 2,
+     "harmful_literal": 2,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 123.69999999999999,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P1"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    }
+   ]
+  },
+  "paired (next_stacks_paired, K 4)": {
+   "mean": {
+    "wrong": 0.64,
+    "harmful": 0.0,
+    "missed": 0.08,
+    "distance": 0.17246794069211757,
+    "wrong_literal": 0.0,
+    "harmful_literal": 0.0,
+    "missed_literal": 0.08,
+    "distance_literal": 0.1692106482262259,
+    "seconds": 127.888,
+    "rounds": 2.08
+   },
+   "finals": {
+    "{\"1\": \"P2+B\", \"2\": \"P2+B\", \"3\": \"P2+B\"}": 24,
+    "{\"1\": \"P1+M\", \"2\": \"P2+B\", \"3\": \"P2+B\"}": 13,
+    "{\"1\": \"P2+B\", \"2\": \"P1+M\", \"3\": \"P2+B\"}": 5,
+    "{\"1\": \"P1+M\", \"2\": \"P1+M\", \"3\": \"P2+B\"}": 4
+   },
+   "nights": [
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.21028973994302935,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.1695735841193835,
+     "seconds": 153.5,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.1516036670437394,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.11088751122009355,
+     "seconds": 151.29999999999998,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.21028973994302935,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.1695735841193835,
+     "seconds": 153.5,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.1516036670437394,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.11088751122009355,
+     "seconds": 151.29999999999998,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    }
+   ]
+  },
+  "paired + climb_on_kept (K 4)": {
+   "mean": {
+    "wrong": 0.64,
+    "harmful": 0.0,
+    "missed": 0.08,
+    "distance": 0.17246794069211757,
+    "wrong_literal": 0.0,
+    "harmful_literal": 0.0,
+    "missed_literal": 0.08,
+    "distance_literal": 0.1692106482262259,
+    "seconds": 127.888,
+    "rounds": 2.08
+   },
+   "finals": {
+    "{\"1\": \"P2+B\", \"2\": \"P2+B\", \"3\": \"P2+B\"}": 24,
+    "{\"1\": \"P1+M\", \"2\": \"P2+B\", \"3\": \"P2+B\"}": 13,
+    "{\"1\": \"P2+B\", \"2\": \"P1+M\", \"3\": \"P2+B\"}": 5,
+    "{\"1\": \"P1+M\", \"2\": \"P1+M\", \"3\": \"P2+B\"}": 4
+   },
+   "nights": [
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.21028973994302935,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.1695735841193835,
+     "seconds": 153.5,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.1516036670437394,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.11088751122009355,
+     "seconds": 151.29999999999998,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.21028973994302935,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.1695735841193835,
+     "seconds": 153.5,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 1,
+     "distance": 0.1516036670437394,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 1,
+     "distance_literal": 0.11088751122009355,
+     "seconds": 151.29999999999998,
+     "rounds": 3,
+     "final": {
+      "1": "P1",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      },
+      {
+       "1": "P1",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 0,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.19633775252363114,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.19633775252363114,
+     "seconds": 127.0,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 2,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.10213687142663053,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.10213687142663053,
+     "seconds": 122.6,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.16082294432592048,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.16082294432592048,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P1+M",
+      "2": "P2+B",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P1+M",
+       "2": "P2+B",
+       "3": "P2+B"
+      }
+     ]
+    },
+    {
+     "wrong": 1,
+     "harmful": 0,
+     "missed": 0,
+     "distance": 0.1376516796243412,
+     "wrong_literal": 0,
+     "harmful_literal": 0,
+     "missed_literal": 0,
+     "distance_literal": 0.1376516796243412,
+     "seconds": 124.8,
+     "rounds": 2,
+     "final": {
+      "1": "P2+B",
+      "2": "P1+M",
+      "3": "P2+B"
+     },
+     "path": [
+      {
+       "1": "P0",
+       "2": "P0",
+       "3": "P0"
+      },
+      {
+       "1": "P0",
+       "2": "P1",
+       "3": "P0"
+      },
+      {
+       "1": "P2+B",
+       "2": "P1+M",
+       "3": "P2+B"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "reference": {
+  "credible": {
+   "1": {
+    "P0": 0.778599107297137,
+    "P1": 0.778599107297137,
+    "P1+M": 0.9269994941484636,
+    "P2": 0.778599107297137,
+    "P2+M": 0.9269994941484636,
+    "P2+B": 0.8204550695553317,
+    "P2+B+M": 0.8138693453579434,
+    "P2+F": 0.778599107297137,
+    "P2+M+F": 0.9269994941484636,
+    "P1+F": 0.778599107297137,
+    "P1+M+F": 0.9269994941484636,
+    "P2+B+Q2": 0.8204550695553317,
+    "P2+B+Q4": 0.8204550695553317
+   },
+   "2": {
+    "P0": 0.5661493450319246,
+    "P1": 0.5661493450319246,
+    "P1+M": 0.8425799954395898,
+    "P2": 0.5661493450319246,
+    "P2+M": 0.8425799954395902,
+    "P2+B": 0.66652177674172,
+    "P2+B+M": 0.6504969831014287,
+    "P2+F": 0.5661493450319246,
+    "P2+M+F": 0.8425799954395902,
+    "P1+F": 0.5661493450319246,
+    "P1+M+F": 0.8425799954395898,
+    "P2+B+Q2": 0.66652177674172,
+    "P2+B+Q4": 0.66652177674172
+   },
+   "3": {
+    "P0": 0.4231546870981954,
+    "P1": 0.4231546870981954,
+    "P1+M": 0.7706051272694454,
+    "P2": 0.4231546870981954,
+    "P2+M": 0.7706051272694465,
+    "P2+B": 0.5622632571710634,
+    "P2+B+M": 0.5490610430962726,
+    "P2+F": 0.4231546870981954,
+    "P2+M+F": 0.7706051272694465,
+    "P1+F": 0.4231546870981954,
+    "P1+M+F": 0.7706051272694454,
+    "P2+B+Q2": 0.5622632571710634,
+    "P2+B+Q4": 0.5622632571710634
+   }
+  },
+  "p0_distance": {
+   "1": 0.15851479415315406,
+   "2": 0.3120331192594612,
+   "3": 0.39980230819913615
+  },
+  "true_p": {
+   "1": {
+    "P0": 0.778599107297137,
+    "P1": 0.9007475747680745,
+    "P1+M": 0.9269994941484636,
+    "P2": 0.9007475747680745,
+    "P2+M": 0.9269994941484636,
+    "P2+B": 0.8204550695553317,
+    "P2+B+M": 0.8138693453579434,
+    "P2+F": 0.9007475747680745,
+    "P2+M+F": 0.9269994941484636,
+    "P1+F": 0.9007475747680745,
+    "P1+M+F": 0.9269994941484636,
+    "P2+B+Q2": 0.8204550695553317,
+    "P2+B+Q4": 0.8204550695553317
+   },
+   "2": {
+    "P0": 0.5661493450319246,
+    "P1": 0.8097036341978937,
+    "P1+M": 0.8425799954395898,
+    "P2": 0.8097036341978942,
+    "P2+M": 0.8425799954395902,
+    "P2+B": 0.66652177674172,
+    "P2+B+M": 0.6504969831014287,
+    "P2+F": 0.8097036341978942,
+    "P2+M+F": 0.8425799954395902,
+    "P1+F": 0.8097036341978937,
+    "P1+M+F": 0.8425799954395898,
+    "P2+B+Q2": 0.66652177674172,
+    "P2+B+Q4": 0.66652177674172
+   },
+   "3": {
+    "P0": 0.4231546870981954,
+    "P1": 0.7374042710126713,
+    "P1+M": 0.7706051272694454,
+    "P2": 0.7374042710126723,
+    "P2+M": 0.7706051272694465,
+    "P2+B": 0.5622632571710634,
+    "P2+B+M": 0.5490610430962726,
+    "P2+F": 0.7374042710126723,
+    "P2+M+F": 0.7706051272694465,
+    "P1+F": 0.7374042710126713,
+    "P1+M+F": 0.7706051272694454,
+    "P2+B+Q2": 0.5622632571710634,
+    "P2+B+Q4": 0.5622632571710634
+   }
+  },
+  "one_step_best": {
+   "1": 0.010114407301827444,
+   "2": 0.035602468851795965,
+   "3": 0.05235186802788616
+  }
+ }
+}
