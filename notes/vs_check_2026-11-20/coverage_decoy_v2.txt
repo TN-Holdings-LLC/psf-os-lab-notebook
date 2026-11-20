@@ -1,0 +1,4 @@
+outcomes 729; on no row 0; on more than one row 0
+per row: row 4 567, row 2 18, row 6 36, row 3 36, row 1 24, row 5 48
+D0 A loses, B keeps; D1 A and B lose; D2 A loses -> row [2]
+D0 A loses, B keeps; D1 A and B lose; D2 A keeps -> row [6]

@@ -1,0 +1,8 @@
+k = 1..12, x in [0, 60] (258 points each): largest |difference| 4.05e-15, largest relative 2.58e-14 at k 1, x 2.00
+  k  9 x  16.919: tool 0.050  scipy 0.050
+  k  9 x   9.000: tool 0.437  scipy 0.437
+  k  9 x   2.000: tool 0.991  scipy 0.991
+  k  2 x   5.991: tool 0.050  scipy 0.050
+  k  6 x  12.592: tool 0.050  scipy 0.050
+  k  1 x   3.841: tool 0.050  scipy 0.050
+  k  3 x   7.815: tool 0.050  scipy 0.050

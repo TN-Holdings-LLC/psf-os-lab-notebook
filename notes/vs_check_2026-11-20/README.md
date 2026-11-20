@@ -15,3 +15,11 @@ Report `報告_今夜の道具2本の独立の点検_2026-11-20.md`, scripts and
 - Noiseless loopvar dry, 20 seeds: copies' (a - b) / SE SD 0.95; three-job p about uniform (mean 0.49).
 - Aer seeds: confirmed (seed s + 1 is seed s shifted by one shot); tonight's tools' strides do not overlap.
 - Beside: the ring sentinel overlaps A's qubit 3 and B's 5-7 only; A 0-2, B 8 and Z are not covered (candidate 4).
+
+## Added by the VS for the owner's decisions (その3)
+
+- The new decoy reading table recounted from the draft's text alone (`coverage_decoy_v2.py`): 729 outcomes, each on
+  exactly one row, the same counts per row as the workplace's. The reading "D1's A and B lose, D2's A keeps -> row 6"
+  agreed (reasons in the report).
+- The 9-df chi2 p of loopvar against scipy: equal to 4e-15 (`chi2_vs_scipy.txt`). The pooled LV-1 on 20 noiseless
+  seeds: 1 MOVES in 20, as expected at p < 0.05 (`loopvar_lv1_pooled_20seeds.txt`).

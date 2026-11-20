@@ -1,0 +1,20 @@
+s1 chi2 10.93 (9 df), p 0.281 -> SAME WITHIN ERROR
+s2 chi2 5.96 (9 df), p 0.744 -> SAME WITHIN ERROR
+s3 chi2 2.12 (9 df), p 0.989 -> SAME WITHIN ERROR
+s4 chi2 8.92 (9 df), p 0.445 -> SAME WITHIN ERROR
+s5 chi2 6.95 (9 df), p 0.642 -> SAME WITHIN ERROR
+s6 chi2 3.83 (9 df), p 0.922 -> SAME WITHIN ERROR
+s7 chi2 6.35 (9 df), p 0.705 -> SAME WITHIN ERROR
+s8 chi2 3.83 (9 df), p 0.922 -> SAME WITHIN ERROR
+s9 chi2 17.13 (9 df), p 0.047 -> MOVES
+s10 chi2 10.00 (9 df), p 0.350 -> SAME WITHIN ERROR
+s11 chi2 11.49 (9 df), p 0.244 -> SAME WITHIN ERROR
+s12 chi2 14.98 (9 df), p 0.091 -> SAME WITHIN ERROR
+s13 chi2 7.37 (9 df), p 0.599 -> SAME WITHIN ERROR
+s14 chi2 4.64 (9 df), p 0.865 -> SAME WITHIN ERROR
+s15 chi2 12.47 (9 df), p 0.188 -> SAME WITHIN ERROR
+s16 chi2 5.17 (9 df), p 0.820 -> SAME WITHIN ERROR
+s17 chi2 15.60 (9 df), p 0.076 -> SAME WITHIN ERROR
+s18 chi2 7.77 (9 df), p 0.557 -> SAME WITHIN ERROR
+s19 chi2 4.68 (9 df), p 0.861 -> SAME WITHIN ERROR
+s20 chi2 2.27 (9 df), p 0.986 -> SAME WITHIN ERROR
