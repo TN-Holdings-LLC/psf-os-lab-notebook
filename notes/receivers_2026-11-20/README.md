@@ -1,7 +1,8 @@
 # Receivers for tonight's results, and two small fixes (workplace Claude, 2026-11-20; psf-os after-2026-11-20; not declared)
 
-Home's added instruction 3, items 5 and 6. Everything below is behind an argument whose default is the behaviour of
-psf-os 0.2.0 / night-2026-11-20 (61869bb), byte for byte; none of it is used by tonight's tools (decoy, loopvar),
+Home's added instruction 3, items 5 and 6. The two receivers and the sentinel cover are behind an argument whose
+default is the behaviour of psf-os 0.2.0 / night-2026-11-20 (61869bb), byte for byte; run_local's seeds are the one
+changed default (small fix 1; `stride=1` gives the old seeds). None of it is used by tonight's tools (decoy, loopvar),
 which stay at 61869bb. Tests in psf-os `tests/test_feedforward.py` and `tests/test_loop.py`.
 
 ## Receiver 1: decoy row 1 ("the loss sits on the register's first bits; a fixed first item shields")
