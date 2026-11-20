@@ -31,10 +31,11 @@ from psf_os.footprint import fence_waits, wait_footprint  # noqa: E402
 TARGET = 1          # apps.ipe: qubit 0 the ancilla, qubit 1 the target (prepared |1>)
 
 
-def park(qc, target=TARGET):
+def park(qc, target=TARGET, conditionals=False):
     """fence_waits(qc) with X on `target` just before each fence before a read and just after each fence after a
-    run of conditionals."""
-    f = fence_waits(qc)
+    run of conditionals. conditionals=True (after the workplace VS's その6): also fence each run of phase-feedback
+    conditionals and park the target there too."""
+    f = fence_waits(qc, conditionals=conditionals)
     out = f.copy_empty_like()
     data = list(f.data)
     parked = False
@@ -42,7 +43,7 @@ def park(qc, target=TARGET):
         nxt = data[i + 1].operation.name if i + 1 < len(data) else None
         prv = data[i - 1].operation.name if i > 0 else None
         is_fence = ins.operation.name == "barrier" and len(ins.qubits) == f.num_qubits
-        if is_fence and nxt == "measure" and not parked:
+        if is_fence and (nxt == "measure" or (conditionals and nxt == "if_else")) and not parked:
             out.x(target)
             parked = True
         out.append(ins.operation, ins.qubits, ins.clbits)
@@ -59,7 +60,8 @@ def share(n, form, noise, seed):
     ok = tot = 0
     for j in range(2 ** n):
         qc, succ = AP.ipe(n, j, True)
-        qc = {"plain": qc, "fence": fence_waits(qc), "park": park(qc)}[form]
+        qc = {"plain": qc, "fence": fence_waits(qc), "park": park(qc),
+              "fence2": fence_waits(qc, conditionals=True), "park2": park(qc, conditionals=True)}[form]
         cc = transpile(qc, basis_gates=["cz", "rz", "sx", "x"], optimization_level=1, seed_transpiler=0)
         nc = CN.dephase_conditionals(BN.noisy_circuit(cc, float(noise.get("gamma", 0.0))),
                                      float(noise.get("dephase_cond", 0.0)))
@@ -79,15 +81,16 @@ def main():
     ap.add_argument("--ns", default="3,4,5")
     ap.add_argument("--noises", default="a,c")
     ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--forms", default="plain,fence,park")
     a = ap.parse_args()
     lines = []
     for nz in a.noises.split(","):
         noise = json.load(open(os.path.join(NB, "notes", "qpe_repro_2026-11-19", "noise", f"illus_{nz}.json")))
         for n in [int(x) for x in a.ns.split(",")]:
             row = []
-            for form in ("plain", "fence", "park"):
+            for form in a.forms.split(","):
                 p, cc = share(n, form, noise, a.seed)
-                f = wait_footprint(cc, span=True)
+                f = wait_footprint(cc, span=True, conditionals=True)
                 row.append(f"{form} {p:.4f} (carriers {f['max']}, excited {f['excited_waits']:.2f})")
             lines.append(f"noise {nz} n {n}: " + "; ".join(row))
             print(lines[-1], flush=True)

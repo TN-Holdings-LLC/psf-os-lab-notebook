@@ -1,0 +1,7 @@
+n 4 pl: 0.7378 (2 SE 0.0050, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+n 4 fe: 0.7909 (2 SE 0.0046, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+n 4 pk: 0.8215 (2 SE 0.0043, 31200 shots) against C 0.4706 -> BEYOND THE CEILING
+  park (pk - pl): +0.0837 (2 SE 0.0066) -> KEEPS MORE
+  fence (fe - pl): +0.0531 (2 SE 0.0068) -> KEEPS MORE
+  park_vs_fence (pk - fe): +0.0306 (2 SE 0.0063) -> KEEPS MORE
+  reading [OWNER]: dephasing while waiting: any basis state keeps, |0> at least as well

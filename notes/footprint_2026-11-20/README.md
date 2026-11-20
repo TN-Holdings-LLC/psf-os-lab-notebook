@@ -67,7 +67,7 @@ before each mid-circuit read and after each run of conditionals. It does not cha
 
 What the fence costs and what does better (`notes/park_2026-11-20/`, illustrative noise only): with the fence the
 IPE target waits in |1>: no carrier, but fully excited (exposed to decay). Under damping per read (noise a) the fence
-alone loses (0.948 -> 0.918 at n = 4); under dephasing per conditional (noise c) it gains (0.731 -> 0.754).
+alone loses (0.948 -> 0.918 at n = 4); under dephasing per conditional (noise c) it gains (0.731 -> 0.754 fenced at the reads, 0.790 at every wait).
 Parking the target in |0> for the wait (X before, X after, inside the fence) removes both and is the best in both
 noises (0.959 and 0.785). The principle "do not spread the state while a conditional waits" reads, as sent: no
 carrier and nothing excited, i.e. waiting qubits in |0>.

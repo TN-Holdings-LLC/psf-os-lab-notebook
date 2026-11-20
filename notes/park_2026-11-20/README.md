@@ -38,3 +38,29 @@ As sent, the waits have:
 "nothing excited" ask for the same thing: waiting qubits in |0>. A psf-os pass could fence every wait and park every
 waiting qubit known to be |1> (from the footprint's branches). Whether the device rewards it is candidate C's
 question.
+
+## Every wait, not only the reads (after the workplace VS's その6, 2026-11-20)
+
+The VS found that fenced at the reads only, the target still waits in a superposition at IPE's phase-feedback
+conditionals. These are decided on bits read rounds before, and the compiler puts them after the next round's CZ,
+outside the fence: 6 of n = 4's 9 conditionals. So "pk waits in |0>" held at the reads and resets only.
+
+`fence_waits(qc, conditionals=True)` (psf-os after-2026-11-20) also fences each such run, and
+`park(qc, conditionals=True)` parks the target there too. Counted as the VS counts, at every read and every
+conditional run (`wait_footprint(span=True, conditionals=True)`, compiled, n = 4, phase 5):
+
+| form | waits: read r / conditional c, carriers | excited | depth |
+|---|---|---|---|
+| plain | r1 c1 r1 c1 r1 c1 r1 | 3.5 | 63 |
+| fence (reads) | r0 c1 r0 c1 r0 c1 | 4.5 | 66 |
+| fence (every wait) | r0 c0 r0 c0 r0 c0 | 6.0 | 72 |
+| park (reads) | r0 c1 r0 c1 r0 c1 | 1.5 | 66 |
+| park (every wait) | r0 c0 r0 c0 r0 c0 r0 | 0.0 | 72 |
+
+Only the every-wait forms hold the target in one basis state at every wait. The same distributions as the plain
+circuit at every phase, n = 3, 4 (exact). `gpu/ipe_park_night.py` now builds them by default (`--reads-only` gives the
+forms the VS checked in その6). Desk: `park2_n4.txt`; dry runs of the tool: `dry_all_waits/`.
+
+Desk (`park2_n4.txt`, n = 4): noise a plain 0.948, fence (every wait) 0.918, park (reads) 0.959, park (every wait)
+0.959; noise c 0.731, 0.790, 0.785, **0.824**. Under damping at the reads only, the extra fences change nothing;
+under dephasing per conditional, parking at every wait adds 0.04.
