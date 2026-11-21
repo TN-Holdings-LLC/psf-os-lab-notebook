@@ -1,0 +1,4 @@
+n 4: parked 0.9561 (2 SE 0.0023) -> BEYOND THE CEILING
+n 5: parked 0.9434 (2 SE 0.0019) -> BEYOND THE CEILING
+n 6: parked 0.9298 (2 SE 0.0014) -> BEYOND THE CEILING
+parked shape: log drops +0.0134, +0.0145; acceleration +0.0011 (2 SE 0.0049) -> FLAT

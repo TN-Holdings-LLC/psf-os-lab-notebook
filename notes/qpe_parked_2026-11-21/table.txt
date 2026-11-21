@@ -1,0 +1,6 @@
+parked                                       shots       1950   120 circuits  2 jobs    73.6 s  d_n 2SE n4 None, n5 None, n6 None  parked shape acc 2SE 0.0066
+both                                         shots       1950   236 circuits  3 jobs   141.8 s  d_n 2SE n4 0.0046, n5 0.0036, n6 0.0028  parked shape acc 2SE 0.0066
+subset                                       shots       1950   144 circuits  2 jobs    87.0 s  d_n 2SE n4 0.0064, n5 0.0072, n6 0.0078  parked shape acc 2SE 0.0066
+formula                                      shots        100   228 circuits  1 jobs    17.4 s  d_n 2SE n4 0.0201, n5 0.0158, n6 0.0123  parked shape acc 2SE 0.0289
+subset at the formula's shots                shots        100   140 circuits  1 jobs    11.8 s  d_n 2SE n4 0.0285, n5 0.0317, n6 0.0347  parked shape acc 2SE 0.0289
+parked (1950) + formula's job (both forms)   shots 1950 / 100   348 circuits  3 jobs    91.0 s  d_n 2SE n4 0.0201, n5 0.0158, n6 0.0123  parked shape acc 2SE 0.0066

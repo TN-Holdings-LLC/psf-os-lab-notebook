@@ -1,0 +1,4 @@
+n 4: parked 0.8244 (2 SE 0.0043) -> BEYOND THE CEILING; on 8 paired phases parked 0.8247 - unparked 0.7369 = +0.0878 (2 SE 0.0093) -> KEEPS MORE
+n 5: parked 0.7301 (2 SE 0.0036) -> BEYOND THE CEILING; on 8 paired phases parked 0.7374 - unparked 0.6079 = +0.1296 (2 SE 0.0105) -> KEEPS MORE
+n 6: parked 0.6312 (2 SE 0.0027) -> BEYOND THE CEILING; on 8 paired phases parked 0.6315 - unparked 0.4858 = +0.1457 (2 SE 0.0111) -> KEEPS MORE
+parked shape: log drops +0.1215, +0.1455; acceleration +0.0240 (2 SE 0.0119) -> ACCELERATES

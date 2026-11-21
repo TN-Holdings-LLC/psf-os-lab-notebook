@@ -1,0 +1,89 @@
+=== parked noise a
+job0: 60 circuits, 36.8 s; parked 56, unparked 0
+job1: 60 circuits, 36.8 s; parked 56, unparked 0
+2 jobs, 73.6 s by the model
+job0: qpe_repro_night.check: 60 circuits; PASS; park records as meant
+job1: qpe_repro_night.check: 60 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.9561 (2 SE 0.0023) -> BEYOND THE CEILING
+n 5: parked 0.9434 (2 SE 0.0019) -> BEYOND THE CEILING
+n 6: parked 0.9298 (2 SE 0.0014) -> BEYOND THE CEILING
+parked shape: log drops +0.0134, +0.0145; acceleration +0.0011 (2 SE 0.0049) -> FLAT
+=== parked noise c
+job0: 60 circuits, 36.8 s; parked 56, unparked 0
+job1: 60 circuits, 36.8 s; parked 56, unparked 0
+2 jobs, 73.6 s by the model
+job0: qpe_repro_night.check: 60 circuits; PASS; park records as meant
+job1: qpe_repro_night.check: 60 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.8244 (2 SE 0.0043) -> BEYOND THE CEILING
+n 5: parked 0.7301 (2 SE 0.0036) -> BEYOND THE CEILING
+n 6: parked 0.6303 (2 SE 0.0027) -> BEYOND THE CEILING
+parked shape: log drops +0.1215, +0.1470; acceleration +0.0254 (2 SE 0.0119) -> ACCELERATES
+=== both noise a
+job0: 80 circuits, 48.0 s; parked 38, unparked 38
+job1: 80 circuits, 48.0 s; parked 38, unparked 38
+job2: 76 circuits, 45.8 s; parked 36, unparked 36
+3 jobs, 141.8 s by the model
+job0: qpe_repro_night.check: 80 circuits; PASS; park records as meant
+job1: qpe_repro_night.check: 80 circuits; PASS; park records as meant
+job2: qpe_repro_night.check: 76 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.9561 (2 SE 0.0023) -> BEYOND THE CEILING; on 16 paired phases parked 0.9561 - unparked 0.9458 = +0.0103 (2 SE 0.0035) -> KEEPS MORE
+n 5: parked 0.9434 (2 SE 0.0018) -> BEYOND THE CEILING; on 32 paired phases parked 0.9434 - unparked 0.9297 = +0.0137 (2 SE 0.0028) -> KEEPS MORE
+n 6: parked 0.9308 (2 SE 0.0014) -> BEYOND THE CEILING; on 64 paired phases parked 0.9308 - unparked 0.9118 = +0.0189 (2 SE 0.0022) -> KEEPS MORE
+parked shape: log drops +0.0134, +0.0135; acceleration +0.0001 (2 SE 0.0049) -> FLAT
+=== both noise c
+job0: 80 circuits, 48.0 s; parked 38, unparked 38
+job1: 80 circuits, 48.0 s; parked 38, unparked 38
+job2: 76 circuits, 45.8 s; parked 36, unparked 36
+3 jobs, 141.8 s by the model
+job0: qpe_repro_night.check: 80 circuits; PASS; park records as meant
+job1: qpe_repro_night.check: 80 circuits; PASS; park records as meant
+job2: qpe_repro_night.check: 76 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.8244 (2 SE 0.0043) -> BEYOND THE CEILING; on 16 paired phases parked 0.8244 - unparked 0.7346 = +0.0898 (2 SE 0.0066) -> KEEPS MORE
+n 5: parked 0.7275 (2 SE 0.0036) -> BEYOND THE CEILING; on 32 paired phases parked 0.7275 - unparked 0.6013 = +0.1262 (2 SE 0.0053) -> KEEPS MORE
+n 6: parked 0.6294 (2 SE 0.0027) -> BEYOND THE CEILING; on 64 paired phases parked 0.6294 - unparked 0.4681 = +0.1613 (2 SE 0.0039) -> KEEPS MORE
+parked shape: log drops +0.1250, +0.1449; acceleration +0.0199 (2 SE 0.0119) -> ACCELERATES
+=== subset noise a
+job0: 72 circuits, 43.5 s; parked 51, unparked 17
+job1: 72 circuits, 43.5 s; parked 61, unparked 7
+2 jobs, 87.0 s by the model
+job0: qpe_repro_night.check: 72 circuits; PASS; park records as meant
+job1: qpe_repro_night.check: 72 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.9561 (2 SE 0.0023) -> BEYOND THE CEILING; on 8 paired phases parked 0.9606 - unparked 0.9522 = +0.0083 (2 SE 0.0046) -> KEEPS MORE
+n 5: parked 0.9434 (2 SE 0.0019) -> BEYOND THE CEILING; on 8 paired phases parked 0.9646 - unparked 0.9483 = +0.0163 (2 SE 0.0046) -> KEEPS MORE
+n 6: parked 0.9302 (2 SE 0.0014) -> BEYOND THE CEILING; on 8 paired phases parked 0.9614 - unparked 0.9456 = +0.0158 (2 SE 0.0048) -> KEEPS MORE
+parked shape: log drops +0.0134, +0.0140; acceleration +0.0006 (2 SE 0.0049) -> FLAT
+=== subset noise c
+job0: 72 circuits, 43.5 s; parked 51, unparked 17
+job1: 72 circuits, 43.5 s; parked 61, unparked 7
+2 jobs, 87.0 s by the model
+job0: qpe_repro_night.check: 72 circuits; PASS; park records as meant
+job1: qpe_repro_night.check: 72 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.8244 (2 SE 0.0043) -> BEYOND THE CEILING; on 8 paired phases parked 0.8247 - unparked 0.7369 = +0.0878 (2 SE 0.0093) -> KEEPS MORE
+n 5: parked 0.7301 (2 SE 0.0036) -> BEYOND THE CEILING; on 8 paired phases parked 0.7374 - unparked 0.6079 = +0.1296 (2 SE 0.0105) -> KEEPS MORE
+n 6: parked 0.6312 (2 SE 0.0027) -> BEYOND THE CEILING; on 8 paired phases parked 0.6315 - unparked 0.4858 = +0.1457 (2 SE 0.0111) -> KEEPS MORE
+parked shape: log drops +0.1215, +0.1455; acceleration +0.0240 (2 SE 0.0119) -> ACCELERATES
+=== formula noise a
+job0: 228 circuits, 17.4 s; parked 112, unparked 112
+1 jobs, 17.4 s by the model
+job0: qpe_repro_night.check: 228 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.9531 (2 SE 0.0106) -> BEYOND THE CEILING; on 16 paired phases parked 0.9531 - unparked 0.9394 = +0.0138 (2 SE 0.0159) -> SAME WITHIN ERROR
+n 5: parked 0.9463 (2 SE 0.0080) -> BEYOND THE CEILING; on 32 paired phases parked 0.9463 - unparked 0.9356 = +0.0106 (2 SE 0.0118) -> SAME WITHIN ERROR
+n 6: parked 0.9298 (2 SE 0.0064) -> BEYOND THE CEILING; on 64 paired phases parked 0.9298 - unparked 0.9092 = +0.0206 (2 SE 0.0096) -> KEEPS MORE
+parked shape: log drops +0.0072, +0.0175; acceleration +0.0103 (2 SE 0.0213) -> FLAT
+=== formula noise c
+job0: 228 circuits, 17.4 s; parked 112, unparked 112
+1 jobs, 17.4 s by the model
+job0: qpe_repro_night.check: 228 circuits; PASS; park records as meant
+PASS
+n 4: parked 0.8337 (2 SE 0.0186) -> BEYOND THE CEILING; on 16 paired phases parked 0.8337 - unparked 0.7325 = +0.1012 (2 SE 0.0289) -> KEEPS MORE
+n 5: parked 0.7331 (2 SE 0.0156) -> BEYOND THE CEILING; on 32 paired phases parked 0.7331 - unparked 0.6084 = +0.1247 (2 SE 0.0233) -> KEEPS MORE
+n 6: parked 0.6216 (2 SE 0.0121) -> BEYOND THE CEILING; on 64 paired phases parked 0.6216 - unparked 0.4688 = +0.1528 (2 SE 0.0174) -> KEEPS MORE
+parked shape: log drops +0.1286, +0.1651; acceleration +0.0365 (2 SE 0.0520) -> FLAT
+DONE

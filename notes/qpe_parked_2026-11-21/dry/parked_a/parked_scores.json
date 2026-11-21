@@ -1,0 +1,27 @@
+{
+ "per_n": {
+  "4": {
+   "parked": 0.9561217948717948,
+   "parked_2se": 0.0023191761424831703,
+   "N": 31200,
+   "verdict": "BEYOND THE CEILING"
+  },
+  "5": {
+   "parked": 0.9433814102564102,
+   "parked_2se": 0.0018503798126926028,
+   "N": 62400,
+   "verdict": "BEYOND THE CEILING"
+  },
+  "6": {
+   "parked": 0.9297596153846154,
+   "parked_2se": 0.001446776622584153,
+   "N": 124800,
+   "verdict": "BEYOND THE CEILING"
+  }
+ },
+ "shape": {
+  "acc": 0.0011299511280755056,
+  "two_se": 0.004867630636167,
+  "word": "FLAT"
+ }
+}

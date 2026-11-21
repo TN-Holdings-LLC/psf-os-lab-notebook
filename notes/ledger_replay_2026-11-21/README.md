@@ -43,3 +43,25 @@ stacks (paired: candidates). The device has never run it. On 11-18, 11-19 and 11
 - **A circuit never run.** It cannot be replayed. (a) stops at round 2 for P1+M at L2.
 - Before this branch, a broken ledger stopped the night with a Python error. It now goes unused, and the reason is
   written.
+
+
+## Strict replay (psf-os release-0.3.0, the owner's decision of 2026-11-21)
+
+The replay no longer gathers cells from two recorded jobs. Every cell of a replayed job must be in one recorded job;
+otherwise the night stops with "記録にない". The stop names the missing cells and the closest recorded job, in
+`stop.json` (`not_in_record`). The reason: a paired decision read across two jobs is not the loop's decision. In
+(a) above, L2 read −0.0135 (KEPT) across two jobs, where the record read −0.0225 (NOT ADOPTED) inside one.
+
+`python gpu/ledger_replay.py WORK` with release-0.3.0 gives `strict/summary.txt` and `.json`:
+
+| case | before (permissive) | strict |
+|---|---|---|
+| (d) paired 11-20, the ledger it read | RULE1-3 bytes SAME, stop SAME, verify SAME | the same |
+| (d) loop 11-19, the ledger it read | RULE1-4 bytes SAME, stop SAME, verify SAME | the same |
+| (a) 11-20 + the hand-made line | ran to r2, then 記録にない (L2's P1+M) | **stops at r1**: 記録にない, ff_y2ac (+ off, floor) not in r2, the closest job (it is in r1: not gathered) |
+| (b) 11-19 + its line | a fixed point after round 3 | **stops at r1**: ff_x1 (+ off, floor) not in r1, the closest job |
+| (c) other device / calibration / broken file / broken line | the ledger not used, the reason written; RULE2-3 bytes SAME | the same |
+| (c) a line without L3 | a different night | **stops at r1**: ff_y1bc (+ off, floor) not in r1, the closest job |
+
+In the record, the ledger's path cannot be followed past round 1 on any of the nights recorded so far. Its round 1 is
+right: the ledger is used and the candidates are built as declared.

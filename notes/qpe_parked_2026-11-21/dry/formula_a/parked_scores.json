@@ -1,0 +1,45 @@
+{
+ "per_n": {
+  "4": {
+   "parked": 0.953125,
+   "parked_2se": 0.01056855410817866,
+   "N": 1600,
+   "verdict": "BEYOND THE CEILING",
+   "phases_paired": 16,
+   "parked_on_pairs": 0.953125,
+   "unparked_on_pairs": 0.939375,
+   "d": 0.01375000000000004,
+   "d_2se": 0.015939521930566178,
+   "word": "SAME WITHIN ERROR"
+  },
+  "5": {
+   "parked": 0.94625,
+   "parked_2se": 0.007973466741323999,
+   "N": 3200,
+   "verdict": "BEYOND THE CEILING",
+   "phases_paired": 32,
+   "parked_on_pairs": 0.94625,
+   "unparked_on_pairs": 0.935625,
+   "d": 0.010624999999999996,
+   "d_2se": 0.011784088683209657,
+   "word": "SAME WITHIN ERROR"
+  },
+  "6": {
+   "parked": 0.92984375,
+   "parked_2se": 0.006385254036936272,
+   "N": 6400,
+   "verdict": "BEYOND THE CEILING",
+   "phases_paired": 64,
+   "parked_on_pairs": 0.92984375,
+   "unparked_on_pairs": 0.90921875,
+   "d": 0.020625000000000004,
+   "d_2se": 0.009610357863861493,
+   "word": "KEEPS MORE"
+  }
+ },
+ "shape": {
+  "acc": 0.010250988428314838,
+  "two_se": 0.0213101527891709,
+  "word": "FLAT"
+ }
+}

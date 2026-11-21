@@ -1,0 +1,45 @@
+{
+ "per_n": {
+  "4": {
+   "parked": 0.8243910256410256,
+   "parked_2se": 0.004308168485913817,
+   "N": 31200,
+   "verdict": "BEYOND THE CEILING",
+   "phases_paired": 8,
+   "parked_on_pairs": 0.8246794871794871,
+   "unparked_on_pairs": 0.7369230769230769,
+   "d": 0.08775641025641023,
+   "d_2se": 0.009315697893205787,
+   "word": "KEEPS MORE"
+  },
+  "5": {
+   "parked": 0.7300641025641026,
+   "parked_2se": 0.0035542544812373483,
+   "N": 62400,
+   "verdict": "BEYOND THE CEILING",
+   "phases_paired": 8,
+   "parked_on_pairs": 0.7374358974358974,
+   "unparked_on_pairs": 0.6078846153846154,
+   "d": 0.12955128205128208,
+   "d_2se": 0.01052451478109407,
+   "word": "KEEPS MORE"
+  },
+  "6": {
+   "parked": 0.6312099358974359,
+   "parked_2se": 0.0027314875298449417,
+   "N": 124800,
+   "verdict": "BEYOND THE CEILING",
+   "phases_paired": 8,
+   "parked_on_pairs": 0.631474358974359,
+   "unparked_on_pairs": 0.4857692307692308,
+   "d": 0.1457051282051282,
+   "d_2se": 0.011122995101848197,
+   "word": "KEEPS MORE"
+  }
+ },
+ "shape": {
+  "acc": 0.023981210318436225,
+  "two_se": 0.011867682960337146,
+  "word": "ACCELERATES"
+ }
+}

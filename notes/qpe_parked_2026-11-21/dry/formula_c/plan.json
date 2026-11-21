@@ -1,0 +1,15 @@
+{
+ "plan": "formula",
+ "shots": 100,
+ "device": "ibm_marrakesh",
+ "jobs": [
+  {
+   "folder": "job0",
+   "circuits": 228,
+   "qpu_seconds_model": 17.4,
+   "parked": 112,
+   "unparked": 112
+  }
+ ],
+ "qpu_seconds_model": 17.4
+}

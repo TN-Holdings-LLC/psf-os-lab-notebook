@@ -1,0 +1,22 @@
+{
+ "plan": "parked",
+ "shots": 1950,
+ "device": "ibm_marrakesh",
+ "jobs": [
+  {
+   "folder": "job0",
+   "circuits": 60,
+   "qpu_seconds_model": 36.8,
+   "parked": 56,
+   "unparked": 0
+  },
+  {
+   "folder": "job1",
+   "circuits": 60,
+   "qpu_seconds_model": 36.8,
+   "parked": 56,
+   "unparked": 0
+  }
+ ],
+ "qpu_seconds_model": 73.6
+}

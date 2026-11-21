@@ -1,0 +1,192 @@
+{
+ "rows": [
+  {
+   "plan": "parked",
+   "shots": 1950,
+   "circuits": 120,
+   "jobs": 2,
+   "seconds": 73.6,
+   "per_job": [
+    36.8,
+    36.8
+   ],
+   "per_n": {
+    "4": {
+     "parked_2se": 0.003,
+     "diff_2se": null,
+     "unparked_phases": 0
+    },
+    "5": {
+     "parked_2se": 0.0024,
+     "diff_2se": null,
+     "unparked_phases": 0
+    },
+    "6": {
+     "parked_2se": 0.0019,
+     "diff_2se": null,
+     "unparked_phases": 0
+    }
+   },
+   "shape_acc_2se": 0.0066,
+   "unparked_items": 0
+  },
+  {
+   "plan": "both",
+   "shots": 1950,
+   "circuits": 236,
+   "jobs": 3,
+   "seconds": 141.8,
+   "per_job": [
+    48.0,
+    48.0,
+    45.8
+   ],
+   "per_n": {
+    "4": {
+     "parked_2se": 0.003,
+     "diff_2se": 0.0046,
+     "unparked_phases": 16
+    },
+    "5": {
+     "parked_2se": 0.0024,
+     "diff_2se": 0.0036,
+     "unparked_phases": 32
+    },
+    "6": {
+     "parked_2se": 0.0019,
+     "diff_2se": 0.0028,
+     "unparked_phases": 64
+    }
+   },
+   "shape_acc_2se": 0.0066,
+   "unparked_items": 112
+  },
+  {
+   "plan": "subset",
+   "shots": 1950,
+   "circuits": 144,
+   "jobs": 2,
+   "seconds": 87.0,
+   "per_job": [
+    43.5,
+    43.5
+   ],
+   "per_n": {
+    "4": {
+     "parked_2se": 0.003,
+     "diff_2se": 0.0064,
+     "unparked_phases": 8
+    },
+    "5": {
+     "parked_2se": 0.0024,
+     "diff_2se": 0.0072,
+     "unparked_phases": 8
+    },
+    "6": {
+     "parked_2se": 0.0019,
+     "diff_2se": 0.0078,
+     "unparked_phases": 8
+    }
+   },
+   "shape_acc_2se": 0.0066,
+   "unparked_items": 24
+  },
+  {
+   "plan": "formula",
+   "shots": 100,
+   "circuits": 228,
+   "jobs": 1,
+   "seconds": 17.4,
+   "per_job": [
+    17.4
+   ],
+   "per_n": {
+    "4": {
+     "parked_2se": 0.0131,
+     "diff_2se": 0.0201,
+     "unparked_phases": 16
+    },
+    "5": {
+     "parked_2se": 0.0105,
+     "diff_2se": 0.0158,
+     "unparked_phases": 32
+    },
+    "6": {
+     "parked_2se": 0.0083,
+     "diff_2se": 0.0123,
+     "unparked_phases": 64
+    }
+   },
+   "shape_acc_2se": 0.0289,
+   "unparked_items": 112
+  },
+  {
+   "plan": "subset at the formula's shots",
+   "shots": 100,
+   "circuits": 140,
+   "jobs": 1,
+   "seconds": 11.8,
+   "per_job": [
+    11.8
+   ],
+   "per_n": {
+    "4": {
+     "parked_2se": 0.0131,
+     "diff_2se": 0.0285,
+     "unparked_phases": 8
+    },
+    "5": {
+     "parked_2se": 0.0105,
+     "diff_2se": 0.0317,
+     "unparked_phases": 8
+    },
+    "6": {
+     "parked_2se": 0.0083,
+     "diff_2se": 0.0347,
+     "unparked_phases": 8
+    }
+   },
+   "shape_acc_2se": 0.0289,
+   "unparked_items": 24
+  },
+  {
+   "plan": "parked (1950) + formula's job (both forms)",
+   "shots": "1950 / 100",
+   "circuits": 348,
+   "jobs": 3,
+   "seconds": 91.0,
+   "per_job": [
+    36.8,
+    36.8,
+    17.4
+   ],
+   "per_n": {
+    "4": {
+     "parked_2se": 0.003,
+     "diff_2se": 0.0201,
+     "unparked_phases": 16
+    },
+    "5": {
+     "parked_2se": 0.0024,
+     "diff_2se": 0.0158,
+     "unparked_phases": 32
+    },
+    "6": {
+     "parked_2se": 0.0019,
+     "diff_2se": 0.0123,
+     "unparked_phases": 64
+    }
+   },
+   "shape_acc_2se": 0.0066,
+   "unparked_items": 112
+  }
+ ],
+ "formula_shots": 100,
+ "d_min": 0.03,
+ "z": 2.84,
+ "weekend_unparked": {
+  "4": 0.8957,
+  "5": 0.8715,
+  "6": 0.8451
+ }
+}
