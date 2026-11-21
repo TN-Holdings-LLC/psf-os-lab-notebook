@@ -12,7 +12,8 @@ Papers: 7 [doi:10.5281/zenodo.24046673](https://doi.org/10.5281/zenodo.24046673)
 [doi:10.5281/zenodo.24278888](https://doi.org/10.5281/zenodo.24278888) (2026-11-16), 10
 [doi:10.5281/zenodo.24367001](https://doi.org/10.5281/zenodo.24367001) (2026-11-19, with psf-os 0.2.0
 [doi:10.5281/zenodo.24367846](https://doi.org/10.5281/zenodo.24367846)); records in `notes/paper7/`, `notes/paper8/`,
-`notes/paper9/`, `notes/paper10_ff/` (`ZENODO.md`).
+`notes/paper9/`, `notes/paper10_ff/` (`ZENODO.md`). psf-os 0.3.0 (2026-11-21; waiting qubits parked in |0> by default)
+[doi:10.5281/zenodo.24416958](https://doi.org/10.5281/zenodo.24416958); paper 11 in preparation (`notes/paper11/`).
 
 ## The original TOQB (kept as it was)
 
