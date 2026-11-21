@@ -1,0 +1,68 @@
+=== ibm_fez alpha-one-job
+job0: 60 circuits at 1950 shots, 36.8 s
+1 jobs, 36.8 s by the model on ibm_fez
+job0: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  nfl3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 22}; one-qubit gates {'D': 197, 'F': 197, 'M': 227}; majority X 30 -> ok
+  p0l3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 16}; one-qubit gates {'D': 197, 'F': 197, 'M': 203}; majority X 10 -> ok
+  p2l3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 15, 'M': 18}; one-qubit gates {'D': 220, 'F': 220, 'M': 224}; majority X 6 -> ok
+  control ipe: its declared check PASS
+  control rep: its declared check PASS
+PASS
+=== ibm_fez beta-two-jobs
+job0: 46 circuits at 4000 shots, 54.3 s
+job1: 24 circuits at 1950 shots, 16.5 s
+2 jobs, 70.8 s by the model on ibm_fez
+job0: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  nfl3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 22}; one-qubit gates {'D': 197, 'F': 197, 'M': 227}; majority X 30 -> ok
+  p0l3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 16}; one-qubit gates {'D': 197, 'F': 197, 'M': 203}; majority X 10 -> ok
+  p2l3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 15, 'M': 18}; one-qubit gates {'D': 220, 'F': 220, 'M': 224}; majority X 6 -> ok
+  p3l3: compiled distributions equal True; CZ {'D': 22, 'F': 22, 'M': 22}; full fences {'D': 0, 'F': 8, 'M': 10}; one-qubit gates {'D': 131, 'F': 131, 'M': 137}; majority X 8 -> ok
+job1: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  control ipe: its declared check PASS
+  control rep: its declared check PASS
+PASS
+=== ibm_fez gamma-one-job
+job0: 84 circuits at 1950 shots, 50.2 s
+1 jobs, 50.2 s by the model on ibm_fez
+job0: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  nfl3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 22}; one-qubit gates {'D': 197, 'F': 197, 'M': 227}; majority X 30 -> ok
+  p0l3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 16}; one-qubit gates {'D': 197, 'F': 197, 'M': 203}; majority X 10 -> ok
+  p2l3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 15, 'M': 18}; one-qubit gates {'D': 220, 'F': 220, 'M': 224}; majority X 6 -> ok
+  p3l3: compiled distributions equal True; CZ {'D': 22, 'F': 22, 'M': 22}; full fences {'D': 0, 'F': 8, 'M': 10}; one-qubit gates {'D': 131, 'F': 131, 'M': 137}; majority X 8 -> ok
+  control ipe: its declared check PASS
+  control rep: its declared check PASS
+PASS
+=== ibm_kingston alpha-one-job
+job0: 60 circuits at 1950 shots, 36.8 s
+1 jobs, 36.8 s by the model on ibm_kingston
+job0: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  nfl3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 22}; one-qubit gates {'D': 197, 'F': 197, 'M': 227}; majority X 30 -> ok
+  p0l3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 16}; one-qubit gates {'D': 197, 'F': 197, 'M': 203}; majority X 10 -> ok
+  p2l3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 15, 'M': 18}; one-qubit gates {'D': 220, 'F': 220, 'M': 224}; majority X 6 -> ok
+  control ipe: its declared check PASS
+  control rep: its declared check PASS
+PASS
+=== ibm_kingston beta-two-jobs
+job0: 46 circuits at 4000 shots, 54.3 s
+job1: 24 circuits at 1950 shots, 16.5 s
+2 jobs, 70.8 s by the model on ibm_kingston
+job0: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  nfl3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 22}; one-qubit gates {'D': 197, 'F': 197, 'M': 227}; majority X 30 -> ok
+  p0l3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 16}; one-qubit gates {'D': 197, 'F': 197, 'M': 203}; majority X 10 -> ok
+  p2l3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 15, 'M': 18}; one-qubit gates {'D': 220, 'F': 220, 'M': 224}; majority X 6 -> ok
+  p3l3: compiled distributions equal True; CZ {'D': 22, 'F': 22, 'M': 22}; full fences {'D': 0, 'F': 8, 'M': 10}; one-qubit gates {'D': 131, 'F': 131, 'M': 137}; majority X 8 -> ok
+job1: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  control ipe: its declared check PASS
+  control rep: its declared check PASS
+PASS
+=== ibm_kingston gamma-one-job
+job0: 84 circuits at 1950 shots, 50.2 s
+1 jobs, 50.2 s by the model on ibm_kingston
+job0: psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'} ok
+  nfl3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 22}; one-qubit gates {'D': 197, 'F': 197, 'M': 227}; majority X 30 -> ok
+  p0l3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 14, 'M': 16}; one-qubit gates {'D': 197, 'F': 197, 'M': 203}; majority X 10 -> ok
+  p2l3m3: compiled distributions equal True; CZ {'D': 33, 'F': 33, 'M': 33}; full fences {'D': 0, 'F': 15, 'M': 18}; one-qubit gates {'D': 220, 'F': 220, 'M': 224}; majority X 6 -> ok
+  p3l3: compiled distributions equal True; CZ {'D': 22, 'F': 22, 'M': 22}; full fences {'D': 0, 'F': 8, 'M': 10}; one-qubit gates {'D': 131, 'F': 131, 'M': 137}; majority X 8 -> ok
+  control ipe: its declared check PASS
+  control rep: its declared check PASS
+PASS

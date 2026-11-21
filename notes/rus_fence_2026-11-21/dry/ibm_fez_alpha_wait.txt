@@ -1,0 +1,7 @@
+p0l3: P D 0.5365 F 0.4832 M 0.5809 (exact 0.8230); fence F - D -0.0533 (2 SE 0.0143) KEEPS LESS; park M - F +0.0977 (2 SE 0.0142) KEEPS MORE
+nfl3m3: P D 0.4333 F 0.4597 M 0.7787 (exact 0.8230); fence F - D +0.0264 (2 SE 0.0225) KEEPS MORE; park M - F +0.3190 (2 SE 0.0208) KEEPS MORE
+p2l3m3: P D 0.7657 F 0.8184 M 0.8159 (exact 0.8230); fence F - D +0.0526 (2 SE 0.0116) KEEPS MORE; park M - F -0.0025 (2 SE 0.0111) SAME WITHIN ERROR
+control IPE n = 4 at [2, 6, 10, 14]: parked 1.0000 - unparked 0.9682 = +0.0318 (2 SE 0.0040) KEEPS MORE
+repetition code footprint F6P - F10: +0.0346 (2 SE 0.0056) KEEPS MORE
+repetition code CZ F6 - F6P: -0.0008 (2 SE 0.0039) SAME WITHIN ERROR
+repetition code F6 0.9846 (2 SE 0.0028) -> BEYOND THE CEILING

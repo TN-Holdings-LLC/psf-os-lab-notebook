@@ -1,0 +1,69 @@
+[
+ {
+  "plan": "alpha-one-job",
+  "jobs": [
+   {
+    "shots": 1950,
+    "circuits": 60,
+    "seconds": 36.8,
+    "rus": {
+     "nfl3m3": 2,
+     "p0l3": 5,
+     "p2l3m3": 5
+    },
+    "ipe": true,
+    "rep": true
+   }
+  ],
+  "seconds": 36.8,
+  "circuits": 60
+ },
+ {
+  "plan": "beta-two-jobs",
+  "jobs": [
+   {
+    "shots": 4000,
+    "circuits": 46,
+    "seconds": 54.3,
+    "rus": {
+     "nfl3m3": 2,
+     "p0l3": 5,
+     "p2l3m3": 5,
+     "p3l3": 2
+    },
+    "ipe": false,
+    "rep": false
+   },
+   {
+    "shots": 1950,
+    "circuits": 24,
+    "seconds": 16.5,
+    "rus": {},
+    "ipe": true,
+    "rep": true
+   }
+  ],
+  "seconds": 70.8,
+  "circuits": 70
+ },
+ {
+  "plan": "gamma-one-job",
+  "jobs": [
+   {
+    "shots": 1950,
+    "circuits": 84,
+    "seconds": 50.2,
+    "rus": {
+     "nfl3m3": 3,
+     "p0l3": 7,
+     "p2l3m3": 7,
+     "p3l3": 3
+    },
+    "ipe": true,
+    "rep": true
+   }
+  ],
+  "seconds": 50.2,
+  "circuits": 84
+ }
+]
