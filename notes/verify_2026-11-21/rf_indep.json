@@ -1,0 +1,19 @@
+{
+ "lines": [
+  "sent: 84 circuits, roles {'user': 80, 'sentinel': 4}, shots [1950]; off/floor cells none; psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'}",
+  "p0l3 copies {'D': 7, 'F': 7, 'M': 7}: P D 0.6604 F 0.6151 M 0.6291 (exact 0.8230); fence F - D -0.0453 (2 SE 0.0116) KEEPS LESS; park M - F +0.0140 (2 SE 0.0117) KEEPS MORE; beside M - D -0.0313",
+  "   M's X: extra x per physical qubit {1: 4, 3: 2}; part.json lists 5 qubit-waits on physical [1, 3]; same qubits True; each extra count even True; at most 2 per listed qubit-wait True",
+  "nfl3m3 copies {'D': 3, 'F': 3, 'M': 3}: P D 0.6181 F 0.6097 M 0.6974 (exact 0.8230); fence F - D -0.0084 (2 SE 0.0180) SAME WITHIN ERROR; park M - F +0.0877 (2 SE 0.0175) KEEPS MORE; beside M - D +0.0793",
+  "   M's X: extra x per physical qubit {1: 16, 3: 10, 5: 4}; part.json lists 15 qubit-waits on physical [1, 3, 5]; same qubits True; each extra count even True; at most 2 per listed qubit-wait True",
+  "p2l3m3 copies {'D': 7, 'F': 7, 'M': 7}: P D 0.7122 F 0.7042 M 0.7094 (exact 0.8230); fence F - D -0.0080 (2 SE 0.0110) SAME WITHIN ERROR; park M - F +0.0051 (2 SE 0.0110) SAME WITHIN ERROR; beside M - D -0.0029",
+  "   M's X: extra x per physical qubit {1: 4}; part.json lists 3 qubit-waits on physical [1]; same qubits True; each extra count even True; at most 2 per listed qubit-wait True",
+  "p3l3 copies {'D': 3, 'F': 3, 'M': 3}: P D 0.6294 F 0.6051 M 0.6072 (exact 0.8230); fence F - D -0.0243 (2 SE 0.0180) KEEPS LESS; park M - F +0.0021 (2 SE 0.0181) SAME WITHIN ERROR; beside M - D -0.0222",
+  "   M's X: extra x per physical qubit {1: 4, 3: 2}; part.json lists 4 qubit-waits on physical [1, 3]; same qubits True; each extra count even True; at most 2 per listed qubit-wait True",
+  "reading row: P0 fence KEEPS LESS, NF parking KEEPS MORE -> row 1",
+  "control IPE ['ipk4_10', 'ipk4_14', 'ipk4_2', 'ipk4_6']: parked 0.7172 - unparked 0.6881 = +0.0291 (2 SE 0.0146) KEEPS MORE; gate open",
+  "repetition code footprint F6P - F10: +0.0283 (2 SE 0.0094) KEEPS MORE",
+  "repetition code CZ F6 - F6P: +0.0108 (2 SE 0.0085) KEEPS MORE",
+  "repetition code: F10 0.8903, F6P 0.9186, F6 0.9294 (2 SE 0.0058) -> BEYOND THE CEILING",
+  "device rule: pending {'ibm_marrakesh': 0, 'ibm_fez': 0, 'ibm_kingston': 0}, order ['ibm_marrakesh', 'ibm_fez', 'ibm_kingston'] -> ibm_fez; the job ran on ibm_fez; charged 48 s, 0.7840 RU, model 50.2"
+ ]
+}

@@ -97,3 +97,21 @@ Every number and word equals the record. Beside:
 - **Compiled CZ per phase:** paired phases average 6.0, against 8.0 / 10.0 / 11.7 on the other phases. At n = 4, four
   of the eight paired phases (2, 6, 10, 14) keep the full 8 CZ.
 - reproduce.py with psf-os 0.3.0 gives 1 of 1 SAME.
+
+## The RUS fence night (results/rus-fence-night-2026-11-21, ibm_fez): the home VS's independent recount
+
+From the home instruction `VSクロードへの指示_RUSの柵の結果の独立検証と0.3.1の机上設計_2026-11-21.md`. The report is
+`VSから家へ_RUSの柵の結果の独立検証_2026-11-21.md`.
+
+`rf_indep.py RECORD OUT.json` uses qiskit, aer and numpy only, and recounts:
+
+- the RUS items' P per form, read as declared (P2 flipped), with exact derived here;
+- the fence and parking differences, their 2 SE and words;
+- M − D beside;
+- M's extra X per physical qubit against F, compiled, which fall on the qubits part.json lists;
+- the row (1) and the gate (open);
+- the controls (IPE +0.0291, KEEPS MORE; the repetition code's two differences, F6 beyond its ceiling);
+- the device rule from queue.json (a tie at 0 -> ibm_fez by queue.json's order);
+- the charge.
+
+Every number and word equals the record. reproduce.py with psf-os 0.3.0 gives 1 of 1 SAME.

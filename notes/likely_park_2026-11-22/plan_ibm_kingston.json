@@ -1,0 +1,146 @@
+{
+ "A": {
+  "copies": {
+   "nfl3m3": 3,
+   "p0l3": 8,
+   "p3l3": 5
+  },
+  "circuits": 44,
+  "seconds": 27.8,
+  "two_se": {
+   "nfl3m3": 0.0169,
+   "p0l3": 0.0104,
+   "p3l3": 0.0131
+  },
+  "psf_os_build": {
+   "version": "0.3.0",
+   "park": true,
+   "park_set": "explicit",
+   "park_likely": [
+    "nfl3m3La",
+    "nfl3m3Lb",
+    "nfl3m3Lc",
+    "p0l3La",
+    "p0l3Lb",
+    "p0l3Lc",
+    "p0l3Ld",
+    "p0l3Le",
+    "p0l3Lf",
+    "p0l3Lg",
+    "p0l3Lh",
+    "p3l3La",
+    "p3l3Lb",
+    "p3l3Lc",
+    "p3l3Ld",
+    "p3l3Le"
+   ]
+  },
+  "checks": [
+   {
+    "item": "nfl3m3",
+    "L_is_MP": true,
+    "distribution_same": true,
+    "cz": [
+     33,
+     33
+    ]
+   },
+   {
+    "item": "p0l3",
+    "L_is_MP": true,
+    "distribution_same": true,
+    "cz": [
+     33,
+     33
+    ]
+   },
+   {
+    "item": "p3l3",
+    "L_is_MP": true,
+    "distribution_same": true,
+    "cz": [
+     22,
+     22
+    ]
+   }
+  ]
+ },
+ "B": {
+  "copies": {
+   "nfl3m3": 4,
+   "p0l3": 14,
+   "p3l3": 10
+  },
+  "circuits": 68,
+  "seconds": 41.2,
+  "two_se": {
+   "nfl3m3": 0.0147,
+   "p0l3": 0.0078,
+   "p3l3": 0.0093
+  },
+  "psf_os_build": {
+   "version": "0.3.0",
+   "park": true,
+   "park_set": "explicit",
+   "park_likely": [
+    "nfl3m3La",
+    "nfl3m3Lb",
+    "nfl3m3Lc",
+    "nfl3m3Ld",
+    "p0l3La",
+    "p0l3Lb",
+    "p0l3Lc",
+    "p0l3Ld",
+    "p0l3Le",
+    "p0l3Lf",
+    "p0l3Lg",
+    "p0l3Lh",
+    "p0l3Li",
+    "p0l3Lj",
+    "p0l3Lk",
+    "p0l3Ll",
+    "p0l3Lm",
+    "p0l3Ln",
+    "p3l3La",
+    "p3l3Lb",
+    "p3l3Lc",
+    "p3l3Ld",
+    "p3l3Le",
+    "p3l3Lf",
+    "p3l3Lg",
+    "p3l3Lh",
+    "p3l3Li",
+    "p3l3Lj"
+   ]
+  },
+  "checks": [
+   {
+    "item": "nfl3m3",
+    "L_is_MP": true,
+    "distribution_same": true,
+    "cz": [
+     33,
+     33
+    ]
+   },
+   {
+    "item": "p0l3",
+    "L_is_MP": true,
+    "distribution_same": true,
+    "cz": [
+     33,
+     33
+    ]
+   },
+   {
+    "item": "p3l3",
+    "L_is_MP": true,
+    "distribution_same": true,
+    "cz": [
+     22,
+     22
+    ]
+   }
+  ]
+ }
+}

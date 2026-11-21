@@ -1,0 +1,36 @@
+== p0l3 (P0 m3 L3)
+  D   CZ 33 same True dist same True depth 68 1q 65 (+0) barriers 0 equal to D True excited 13.52; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  F   CZ 33 same True dist same True depth 74 1q 65 (+0) barriers 14 equal to D False excited 10.193; g vs D: wait -0.0557, cond +0.0444, phase +0.0050
+  M   CZ 33 same True dist same True depth 78 1q 71 (+6) barriers 16 equal to D False excited 8.914; g vs D: wait +0.0419, cond +0.0444, phase +0.0135
+  MW  CZ 33 same True dist same True depth 78 1q 71 (+6) barriers 8 equal to D False excited 8.914; g vs D: wait +0.0419, cond +0.0444, phase +0.0135
+  MP  CZ 33 same True dist same True depth 74 1q 71 (+6) barriers 8 equal to D False excited 13.904; g vs D: wait +0.0092, cond +0.0000, phase +0.0292
+  MQ  CZ 33 same True dist same True depth 72 1q 71 (+6) barriers 8 equal to D False excited 13.52; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  X0  CZ 33 same True dist same True depth 68 1q 65 (+0) barriers 0 equal to D True excited 13.52; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  Y0  CZ 33 same True dist same True depth 68 1q 65 (+0) barriers 0 equal to D True excited 13.52; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+== nfl3m3 (NF m3 L3)
+  D   CZ 33 same True dist same True depth 71 1q 65 (+0) barriers 30 equal to D True excited 23.353; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  F   CZ 33 same True dist same True depth 75 1q 65 (+0) barriers 44 equal to D False excited 16.145; g vs D: wait +0.0085, cond +0.0444, phase +0.0111
+  M   CZ 33 same True dist same True depth 91 1q 95 (+30) barriers 52 equal to D False excited 4.537; g vs D: wait +0.3241, cond +0.0444, phase -0.0157
+  MW  CZ 33 same True dist same True depth 91 1q 93 (+28) barriers 46 equal to D False excited 3.693; g vs D: wait +0.3241, cond +0.0444, phase -0.0157
+  MP  CZ 33 same True dist same True depth 87 1q 93 (+28) barriers 46 equal to D False excited 12.009; g vs D: wait +0.2680, cond +0.0000, phase +0.0201
+  MQ  CZ 33 same True dist same True depth 79 1q 93 (+28) barriers 46 equal to D False excited 21.665; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  X0  CZ 33 same True dist same True depth 71 1q 65 (+0) barriers 30 equal to D True excited 23.353; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  Y0  CZ 33 same True dist same True depth 71 1q 65 (+0) barriers 30 equal to D True excited 23.353; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+== p3l3 (P3 m2 L3)
+  D   CZ 22 same True dist same True depth 62 1q 65 (+0) barriers 0 equal to D True excited 6.475; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  F   CZ 22 same True dist same True depth 68 1q 65 (+0) barriers 8 equal to D False excited 4.812; g vs D: wait -0.0699, cond +0.0173, phase -0.0557
+  M   CZ 22 same True dist same True depth 72 1q 71 (+6) barriers 10 equal to D False excited 4.766; g vs D: wait +0.0292, cond +0.0173, phase -0.0499
+  MW  CZ 22 same True dist same True depth 72 1q 71 (+6) barriers 6 equal to D False excited 4.766; g vs D: wait +0.0292, cond +0.0173, phase -0.0499
+  MP  CZ 22 same True dist same True depth 68 1q 71 (+6) barriers 6 equal to D False excited 8.092; g vs D: wait +0.0107, cond +0.0000, phase +0.0158
+  MQ  CZ 22 same True dist same True depth 66 1q 71 (+6) barriers 6 equal to D False excited 6.475; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  X0  CZ 22 same True dist same True depth 62 1q 65 (+0) barriers 0 equal to D True excited 6.475; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  Y0  CZ 22 same True dist same True depth 62 1q 65 (+0) barriers 0 equal to D True excited 6.475; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+== p2l3m3 (P2 m3 L3)
+  D   CZ 33 same True dist same True depth 85 1q 88 (+0) barriers 30 equal to D True excited 15.896; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  F   CZ 33 same True dist same True depth 87 1q 88 (+0) barriers 45 equal to D False excited 8.689; g vs D: wait +0.0441, cond +0.0438, phase +0.0074
+  M   CZ 33 same True dist same True depth 87 1q 92 (+4) barriers 48 equal to D False excited 6.158; g vs D: wait +0.0441, cond +0.0438, phase +0.0074
+  MW  CZ 33 same True dist same True depth 85 1q 88 (+0) barriers 36 equal to D False excited 11.677; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  MP  CZ 33 same True dist same True depth 85 1q 88 (+0) barriers 36 equal to D False excited 11.677; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  MQ  CZ 33 same True dist same True depth 85 1q 88 (+0) barriers 36 equal to D False excited 15.896; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  X0  CZ 33 same True dist same True depth 85 1q 88 (+0) barriers 30 equal to D True excited 15.896; g vs D: wait +0.0000, cond +0.0000, phase +0.0000
+  Y0  CZ 33 same True dist same True depth 85 1q 88 (+0) barriers 30 equal to D True excited 15.896; g vs D: wait +0.0000, cond +0.0000, phase +0.0000

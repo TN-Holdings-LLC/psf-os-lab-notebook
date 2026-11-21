@@ -1,0 +1,918 @@
+{
+ "p0l3": {
+  "item": "P0 m3 L3",
+  "forms": {
+   "D": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 68,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 0,
+    "excited": 13.52,
+    "noise": {
+     "wait": {
+      "P": 0.5402,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8743,
+      "g_vs_D": 0.0,
+      "two_se": 0.0047
+     }
+    }
+   },
+   "F": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 74,
+    "equal_to_D": false,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 14,
+    "excited": 10.193,
+    "noise": {
+     "wait": {
+      "P": 0.4845,
+      "g_vs_D": -0.0557,
+      "two_se": 0.0071
+     },
+     "cond": {
+      "P": 0.7896,
+      "g_vs_D": 0.0444,
+      "two_se": 0.006
+     },
+     "phase": {
+      "P": 0.7767,
+      "g_vs_D": 0.005,
+      "two_se": 0.0053
+     }
+    }
+   },
+   "M": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 78,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 16,
+    "excited": 8.914,
+    "noise": {
+     "wait": {
+      "P": 0.5821,
+      "g_vs_D": 0.0419,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7896,
+      "g_vs_D": 0.0444,
+      "two_se": 0.006
+     },
+     "phase": {
+      "P": 0.7851,
+      "g_vs_D": 0.0135,
+      "two_se": 0.0053
+     }
+    }
+   },
+   "MW": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 78,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 8,
+    "excited": 8.914,
+    "noise": {
+     "wait": {
+      "P": 0.5821,
+      "g_vs_D": 0.0419,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7896,
+      "g_vs_D": 0.0444,
+      "two_se": 0.006
+     },
+     "phase": {
+      "P": 0.7851,
+      "g_vs_D": 0.0135,
+      "two_se": 0.0053
+     }
+    }
+   },
+   "MP": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 74,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 8,
+    "excited": 13.904,
+    "noise": {
+     "wait": {
+      "P": 0.5494,
+      "g_vs_D": 0.0092,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8451,
+      "g_vs_D": 0.0292,
+      "two_se": 0.0049
+     }
+    }
+   },
+   "MQ": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 72,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 8,
+    "excited": 13.52,
+    "noise": {
+     "wait": {
+      "P": 0.5402,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8743,
+      "g_vs_D": 0.0,
+      "two_se": 0.0047
+     }
+    }
+   },
+   "X0": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 68,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 0,
+    "excited": 13.52,
+    "noise": {
+     "wait": {
+      "P": 0.5402,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8743,
+      "g_vs_D": 0.0,
+      "two_se": 0.0047
+     }
+    }
+   },
+   "Y0": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 68,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 0,
+    "excited": 13.52,
+    "noise": {
+     "wait": {
+      "P": 0.5402,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8743,
+      "g_vs_D": 0.0,
+      "two_se": 0.0047
+     }
+    }
+   }
+  }
+ },
+ "nfl3m3": {
+  "item": "NF m3 L3",
+  "forms": {
+   "D": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 71,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 30,
+    "excited": 23.353,
+    "noise": {
+     "wait": {
+      "P": 0.4494,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8451,
+      "g_vs_D": 0.0,
+      "two_se": 0.0051
+     }
+    }
+   },
+   "F": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 75,
+    "equal_to_D": false,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 44,
+    "excited": 16.145,
+    "noise": {
+     "wait": {
+      "P": 0.4579,
+      "g_vs_D": 0.0085,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7896,
+      "g_vs_D": 0.0444,
+      "two_se": 0.006
+     },
+     "phase": {
+      "P": 0.8341,
+      "g_vs_D": 0.0111,
+      "two_se": 0.0052
+     }
+    }
+   },
+   "M": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 91,
+    "equal_to_D": false,
+    "one_qubit": 95,
+    "one_qubit_vs_D": 30,
+    "barriers": 52,
+    "excited": 4.537,
+    "noise": {
+     "wait": {
+      "P": 0.7734,
+      "g_vs_D": 0.3241,
+      "two_se": 0.0065
+     },
+     "cond": {
+      "P": 0.7896,
+      "g_vs_D": 0.0444,
+      "two_se": 0.006
+     },
+     "phase": {
+      "P": 0.7851,
+      "g_vs_D": -0.0157,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "MW": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 91,
+    "equal_to_D": false,
+    "one_qubit": 93,
+    "one_qubit_vs_D": 28,
+    "barriers": 46,
+    "excited": 3.693,
+    "noise": {
+     "wait": {
+      "P": 0.7734,
+      "g_vs_D": 0.3241,
+      "two_se": 0.0065
+     },
+     "cond": {
+      "P": 0.7896,
+      "g_vs_D": 0.0444,
+      "two_se": 0.006
+     },
+     "phase": {
+      "P": 0.7851,
+      "g_vs_D": -0.0157,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "MP": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 87,
+    "equal_to_D": false,
+    "one_qubit": 93,
+    "one_qubit_vs_D": 28,
+    "barriers": 46,
+    "excited": 12.009,
+    "noise": {
+     "wait": {
+      "P": 0.7174,
+      "g_vs_D": 0.268,
+      "two_se": 0.0067
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8208,
+      "g_vs_D": 0.0201,
+      "two_se": 0.0053
+     }
+    }
+   },
+   "MQ": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 79,
+    "equal_to_D": false,
+    "one_qubit": 93,
+    "one_qubit_vs_D": 28,
+    "barriers": 46,
+    "excited": 21.665,
+    "noise": {
+     "wait": {
+      "P": 0.4494,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8451,
+      "g_vs_D": 0.0,
+      "two_se": 0.0051
+     }
+    }
+   },
+   "X0": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 71,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 30,
+    "excited": 23.353,
+    "noise": {
+     "wait": {
+      "P": 0.4494,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8451,
+      "g_vs_D": 0.0,
+      "two_se": 0.0051
+     }
+    }
+   },
+   "Y0": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 71,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 30,
+    "excited": 23.353,
+    "noise": {
+     "wait": {
+      "P": 0.4494,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7453,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8451,
+      "g_vs_D": 0.0,
+      "two_se": 0.0051
+     }
+    }
+   }
+  }
+ },
+ "p3l3": {
+  "item": "P3 m2 L3",
+  "forms": {
+   "D": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 62,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 0,
+    "excited": 6.475,
+    "noise": {
+     "wait": {
+      "P": 0.5805,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.6879,
+      "g_vs_D": 0.0,
+      "two_se": 0.0066
+     },
+     "phase": {
+      "P": 0.7524,
+      "g_vs_D": 0.0,
+      "two_se": 0.0061
+     }
+    }
+   },
+   "F": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 68,
+    "equal_to_D": false,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 8,
+    "excited": 4.812,
+    "noise": {
+     "wait": {
+      "P": 0.5107,
+      "g_vs_D": -0.0699,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.7052,
+      "g_vs_D": 0.0173,
+      "two_se": 0.0065
+     },
+     "phase": {
+      "P": 0.6967,
+      "g_vs_D": -0.0557,
+      "two_se": 0.0063
+     }
+    }
+   },
+   "M": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 72,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 10,
+    "excited": 4.766,
+    "noise": {
+     "wait": {
+      "P": 0.6097,
+      "g_vs_D": 0.0292,
+      "two_se": 0.0069
+     },
+     "cond": {
+      "P": 0.7052,
+      "g_vs_D": 0.0173,
+      "two_se": 0.0065
+     },
+     "phase": {
+      "P": 0.7025,
+      "g_vs_D": -0.0499,
+      "two_se": 0.0063
+     }
+    }
+   },
+   "MW": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 72,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 6,
+    "excited": 4.766,
+    "noise": {
+     "wait": {
+      "P": 0.6097,
+      "g_vs_D": 0.0292,
+      "two_se": 0.0069
+     },
+     "cond": {
+      "P": 0.7052,
+      "g_vs_D": 0.0173,
+      "two_se": 0.0065
+     },
+     "phase": {
+      "P": 0.7025,
+      "g_vs_D": -0.0499,
+      "two_se": 0.0063
+     }
+    }
+   },
+   "MP": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 68,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 6,
+    "excited": 8.092,
+    "noise": {
+     "wait": {
+      "P": 0.5912,
+      "g_vs_D": 0.0107,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.6879,
+      "g_vs_D": 0.0,
+      "two_se": 0.0066
+     },
+     "phase": {
+      "P": 0.7682,
+      "g_vs_D": 0.0158,
+      "two_se": 0.006
+     }
+    }
+   },
+   "MQ": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 66,
+    "equal_to_D": false,
+    "one_qubit": 71,
+    "one_qubit_vs_D": 6,
+    "barriers": 6,
+    "excited": 6.475,
+    "noise": {
+     "wait": {
+      "P": 0.5805,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.6879,
+      "g_vs_D": 0.0,
+      "two_se": 0.0066
+     },
+     "phase": {
+      "P": 0.7524,
+      "g_vs_D": 0.0,
+      "two_se": 0.0061
+     }
+    }
+   },
+   "X0": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 62,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 0,
+    "excited": 6.475,
+    "noise": {
+     "wait": {
+      "P": 0.5805,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.6879,
+      "g_vs_D": 0.0,
+      "two_se": 0.0066
+     },
+     "phase": {
+      "P": 0.7524,
+      "g_vs_D": 0.0,
+      "two_se": 0.0061
+     }
+    }
+   },
+   "Y0": {
+    "cz": 22,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 62,
+    "equal_to_D": true,
+    "one_qubit": 65,
+    "one_qubit_vs_D": 0,
+    "barriers": 0,
+    "excited": 6.475,
+    "noise": {
+     "wait": {
+      "P": 0.5805,
+      "g_vs_D": 0.0,
+      "two_se": 0.007
+     },
+     "cond": {
+      "P": 0.6879,
+      "g_vs_D": 0.0,
+      "two_se": 0.0066
+     },
+     "phase": {
+      "P": 0.7524,
+      "g_vs_D": 0.0,
+      "two_se": 0.0061
+     }
+    }
+   }
+  }
+ },
+ "p2l3m3": {
+  "item": "P2 m3 L3",
+  "forms": {
+   "D": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 85,
+    "equal_to_D": true,
+    "one_qubit": 88,
+    "one_qubit_vs_D": 0,
+    "barriers": 30,
+    "excited": 15.896,
+    "noise": {
+     "wait": {
+      "P": 0.765,
+      "g_vs_D": 0.0,
+      "two_se": 0.006
+     },
+     "cond": {
+      "P": 0.7344,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8125,
+      "g_vs_D": 0.0,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "F": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 87,
+    "equal_to_D": false,
+    "one_qubit": 88,
+    "one_qubit_vs_D": 0,
+    "barriers": 45,
+    "excited": 8.689,
+    "noise": {
+     "wait": {
+      "P": 0.8091,
+      "g_vs_D": 0.0441,
+      "two_se": 0.0058
+     },
+     "cond": {
+      "P": 0.7782,
+      "g_vs_D": 0.0438,
+      "two_se": 0.0061
+     },
+     "phase": {
+      "P": 0.8199,
+      "g_vs_D": 0.0074,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "M": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 87,
+    "equal_to_D": false,
+    "one_qubit": 92,
+    "one_qubit_vs_D": 4,
+    "barriers": 48,
+    "excited": 6.158,
+    "noise": {
+     "wait": {
+      "P": 0.8091,
+      "g_vs_D": 0.0441,
+      "two_se": 0.0058
+     },
+     "cond": {
+      "P": 0.7782,
+      "g_vs_D": 0.0438,
+      "two_se": 0.0061
+     },
+     "phase": {
+      "P": 0.8199,
+      "g_vs_D": 0.0074,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "MW": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 85,
+    "equal_to_D": false,
+    "one_qubit": 88,
+    "one_qubit_vs_D": 0,
+    "barriers": 36,
+    "excited": 11.677,
+    "noise": {
+     "wait": {
+      "P": 0.765,
+      "g_vs_D": 0.0,
+      "two_se": 0.006
+     },
+     "cond": {
+      "P": 0.7344,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8125,
+      "g_vs_D": 0.0,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "MP": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 85,
+    "equal_to_D": false,
+    "one_qubit": 88,
+    "one_qubit_vs_D": 0,
+    "barriers": 36,
+    "excited": 11.677,
+    "noise": {
+     "wait": {
+      "P": 0.765,
+      "g_vs_D": 0.0,
+      "two_se": 0.006
+     },
+     "cond": {
+      "P": 0.7344,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8125,
+      "g_vs_D": 0.0,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "MQ": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 85,
+    "equal_to_D": false,
+    "one_qubit": 88,
+    "one_qubit_vs_D": 0,
+    "barriers": 36,
+    "excited": 15.896,
+    "noise": {
+     "wait": {
+      "P": 0.765,
+      "g_vs_D": 0.0,
+      "two_se": 0.006
+     },
+     "cond": {
+      "P": 0.7344,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8125,
+      "g_vs_D": 0.0,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "X0": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 85,
+    "equal_to_D": true,
+    "one_qubit": 88,
+    "one_qubit_vs_D": 0,
+    "barriers": 30,
+    "excited": 15.896,
+    "noise": {
+     "wait": {
+      "P": 0.765,
+      "g_vs_D": 0.0,
+      "two_se": 0.006
+     },
+     "cond": {
+      "P": 0.7344,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8125,
+      "g_vs_D": 0.0,
+      "two_se": 0.0055
+     }
+    }
+   },
+   "Y0": {
+    "cz": 33,
+    "cz_same": true,
+    "distribution_same": true,
+    "depth": 85,
+    "equal_to_D": true,
+    "one_qubit": 88,
+    "one_qubit_vs_D": 0,
+    "barriers": 30,
+    "excited": 15.896,
+    "noise": {
+     "wait": {
+      "P": 0.765,
+      "g_vs_D": 0.0,
+      "two_se": 0.006
+     },
+     "cond": {
+      "P": 0.7344,
+      "g_vs_D": 0.0,
+      "two_se": 0.0062
+     },
+     "phase": {
+      "P": 0.8125,
+      "g_vs_D": 0.0,
+      "two_se": 0.0055
+     }
+    }
+   }
+  }
+ }
+}
