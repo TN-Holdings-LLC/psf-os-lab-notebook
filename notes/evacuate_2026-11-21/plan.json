@@ -1,0 +1,218 @@
+{
+ "A (P2 m3 L3, 4 copies)": {
+  "circuits": 16,
+  "seconds": 20.9,
+  "items": [
+   [
+    "P2",
+    3,
+    3
+   ]
+  ],
+  "copies": 4,
+  "two_se_per_difference": 0.0089,
+  "checks": [
+   {
+    "item": "P2 m3 L3",
+    "cz": {
+     "d": 33,
+     "f": 33,
+     "e": 33
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   }
+  ]
+ },
+ "B (P2 m3 L2, L3; 2 copies)": {
+  "circuits": 16,
+  "seconds": 20.9,
+  "items": [
+   [
+    "P2",
+    3,
+    2
+   ],
+   [
+    "P2",
+    3,
+    3
+   ]
+  ],
+  "copies": 2,
+  "two_se_per_difference": 0.0126,
+  "checks": [
+   {
+    "item": "P2 m3 L2",
+    "cz": {
+     "d": 18,
+     "f": 18,
+     "e": 18
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   },
+   {
+    "item": "P2 m3 L3",
+    "cz": {
+     "d": 33,
+     "f": 33,
+     "e": 33
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   }
+  ]
+ },
+ "C (P2 m3 L3 and P0 L3; 4 copies)": {
+  "circuits": 28,
+  "seconds": 34.2,
+  "items": [
+   [
+    "P2",
+    3,
+    3
+   ],
+   [
+    "P0",
+    3,
+    3
+   ]
+  ],
+  "copies": 4,
+  "two_se_per_difference": 0.0089,
+  "checks": [
+   {
+    "item": "P2 m3 L3",
+    "cz": {
+     "d": 33,
+     "f": 33,
+     "e": 33
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   },
+   {
+    "item": "P0 m3 L3",
+    "cz": {
+     "d": 33,
+     "f": 33,
+     "e": 33
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   }
+  ]
+ },
+ "D (P0, P2 m3 at L 1-3; 2 copies)": {
+  "circuits": 40,
+  "seconds": 47.6,
+  "items": [
+   [
+    "P0",
+    3,
+    1
+   ],
+   [
+    "P0",
+    3,
+    2
+   ],
+   [
+    "P0",
+    3,
+    3
+   ],
+   [
+    "P2",
+    3,
+    1
+   ],
+   [
+    "P2",
+    3,
+    2
+   ],
+   [
+    "P2",
+    3,
+    3
+   ]
+  ],
+  "copies": 2,
+  "two_se_per_difference": 0.0126,
+  "checks": [
+   {
+    "item": "P0 m3 L1",
+    "cz": {
+     "d": 3,
+     "f": 3,
+     "e": 3
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   },
+   {
+    "item": "P0 m3 L2",
+    "cz": {
+     "d": 18,
+     "f": 18,
+     "e": 18
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   },
+   {
+    "item": "P0 m3 L3",
+    "cz": {
+     "d": 33,
+     "f": 33,
+     "e": 33
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   },
+   {
+    "item": "P2 m3 L1",
+    "cz": {
+     "d": 3,
+     "f": 3,
+     "e": 3
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   },
+   {
+    "item": "P2 m3 L2",
+    "cz": {
+     "d": 18,
+     "f": 18,
+     "e": 18
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   },
+   {
+    "item": "P2 m3 L3",
+    "cz": {
+     "d": 33,
+     "f": 33,
+     "e": 33
+    },
+    "cz_same": true,
+    "distribution_same": true,
+    "evacuated_differs": true
+   }
+  ]
+ }
+}

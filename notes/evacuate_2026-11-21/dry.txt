@@ -1,0 +1,43 @@
+ILLUSTRATIVE noise, never fitted; no device. 20000 shots per circuit; the default = psf-os 0.3.0 (parked)
+P0 L1: nothing to evacuate
+P3 L1: nothing to evacuate
+P1 L1 m2: nothing to evacuate
+P2 L1 m2: nothing to evacuate
+NF L1 m2: nothing to evacuate
+P1 L1 m3: nothing to evacuate
+P2 L1 m3: nothing to evacuate
+NF L1 m3: nothing to evacuate
+P0 L2 wait: default 0.6615, fenced 0.6275, evacuated 0.6275 (exact 0.8782); g -0.0341 = fence -0.0341 + B1 +0.0000 (2 SE of each about 0.0096); B1 2
+P0 L2 cond: default 0.8226, fenced 0.8427, evacuated 0.8377 (exact 0.8782); g +0.0151 = fence +0.0201 + B1 -0.0050 (2 SE of each about 0.0075); B1 2
+P3 L2 wait: default 0.7072, fenced 0.6651, evacuated 0.6651 (exact 0.8782); g -0.0422 = fence -0.0422 + B1 +0.0000 (2 SE of each about 0.0093); B1 1
+P3 L2 cond: default 0.7875, fenced 0.7947, evacuated 0.7920 (exact 0.8782); g +0.0045 = fence +0.0072 + B1 -0.0027 (2 SE of each about 0.0081); B1 1
+P1 L2 m2 wait: default 0.8070, fenced 0.8130, evacuated 0.8130 (exact 0.8782); g +0.0060 = fence +0.0060 + B1 +0.0000 (2 SE of each about 0.0078); B1 2
+P1 L2 m2 cond: default 0.7875, fenced 0.7947, evacuated 0.7903 (exact 0.8782); g +0.0028 = fence +0.0072 + B1 -0.0044 (2 SE of each about 0.0082); B1 2
+P2 L2 m2 wait: default 0.8072, fenced 0.8132, evacuated 0.8132 (exact 0.8782); g +0.0060 = fence +0.0060 + B1 +0.0000 (2 SE of each about 0.0078); B1 2
+P2 L2 m2 cond: default 0.7904, fenced 0.7978, evacuated 0.7936 (exact 0.8782); g +0.0032 = fence +0.0074 + B1 -0.0042 (2 SE of each about 0.0081); B1 2
+NF L2 m2 wait: default 0.6210, fenced 0.6250, evacuated 0.6250 (exact 0.8782); g +0.0040 = fence +0.0040 + B1 +0.0000 (2 SE of each about 0.0097); B1 1
+NF L2 m2 cond: default 0.7875, fenced 0.7947, evacuated 0.7903 (exact 0.8782); g +0.0028 = fence +0.0072 + B1 -0.0044 (2 SE of each about 0.0082); B1 1
+P1 L2 m3 wait: default 0.8365, fenced 0.8521, evacuated 0.8521 (exact 0.8782); g +0.0156 = fence +0.0156 + B1 +0.0000 (2 SE of each about 0.0072); B1 3
+P1 L2 m3 cond: default 0.8226, fenced 0.8427, evacuated 0.8348 (exact 0.8782); g +0.0122 = fence +0.0201 + B1 -0.0079 (2 SE of each about 0.0075); B1 3
+P2 L2 m3 wait: default 0.8500, fenced 0.8657, evacuated 0.8657 (exact 0.8782); g +0.0157 = fence +0.0157 + B1 +0.0000 (2 SE of each about 0.0070); B1 3
+P2 L2 m3 cond: default 0.8376, fenced 0.8529, evacuated 0.8470 (exact 0.8782); g +0.0094 = fence +0.0153 + B1 -0.0059 (2 SE of each about 0.0073); B1 3
+NF L2 m3 wait: default 0.5779, fenced 0.5874, evacuated 0.5874 (exact 0.8782); g +0.0095 = fence +0.0095 + B1 +0.0000 (2 SE of each about 0.0099); B1 2
+NF L2 m3 cond: default 0.8226, fenced 0.8427, evacuated 0.8348 (exact 0.8782); g +0.0122 = fence +0.0201 + B1 -0.0079 (2 SE of each about 0.0075); B1 2
+P0 L3 wait: default 0.5350, fenced 0.4783, evacuated 0.4834 (exact 0.8230); g -0.0517 = fence -0.0567 + B1 +0.0050 (2 SE of each about 0.0100); B1 7
+P0 L3 cond: default 0.7417, fenced 0.7873, evacuated 0.7753 (exact 0.8230); g +0.0336 = fence +0.0456 + B1 -0.0120 (2 SE of each about 0.0086); B1 7
+P3 L3 wait: default 0.5764, fenced 0.5074, evacuated 0.5118 (exact 0.8230); g -0.0646 = fence -0.0689 + B1 +0.0043 (2 SE of each about 0.0099); B1 4
+P3 L3 cond: default 0.6813, fenced 0.6991, evacuated 0.6929 (exact 0.8230); g +0.0116 = fence +0.0178 + B1 -0.0062 (2 SE of each about 0.0093); B1 4
+P1 L3 m2 wait: default 0.7171, fenced 0.7359, evacuated 0.7408 (exact 0.8230); g +0.0237 = fence +0.0188 + B1 +0.0049 (2 SE of each about 0.0089); B1 6
+P1 L3 m2 cond: default 0.6813, fenced 0.6991, evacuated 0.6863 (exact 0.8230); g +0.0050 = fence +0.0178 + B1 -0.0128 (2 SE of each about 0.0093); B1 6
+P2 L3 m2 wait: default 0.7332, fenced 0.7528, evacuated 0.7565 (exact 0.8230); g +0.0233 = fence +0.0195 + B1 +0.0038 (2 SE of each about 0.0087); B1 6
+P2 L3 m2 cond: default 0.6996, fenced 0.7136, evacuated 0.7045 (exact 0.8230); g +0.0049 = fence +0.0141 + B1 -0.0091 (2 SE of each about 0.0091); B1 6
+NF L3 m2 wait: default 0.4770, fenced 0.4808, evacuated 0.4814 (exact 0.8230); g +0.0044 = fence +0.0037 + B1 +0.0007 (2 SE of each about 0.0100); B1 4
+NF L3 m2 cond: default 0.6813, fenced 0.6991, evacuated 0.6863 (exact 0.8230); g +0.0050 = fence +0.0178 + B1 -0.0128 (2 SE of each about 0.0093); B1 4
+P1 L3 m3 wait: default 0.7732, fenced 0.8148, evacuated 0.8214 (exact 0.8230); g +0.0482 = fence +0.0416 + B1 +0.0066 (2 SE of each about 0.0080); B1 9
+P1 L3 m3 cond: default 0.7417, fenced 0.7873, evacuated 0.7682 (exact 0.8230); g +0.0265 = fence +0.0456 + B1 -0.0191 (2 SE of each about 0.0086); B1 9
+P2 L3 m3 wait: default 0.7662, fenced 0.8097, evacuated 0.8167 (exact 0.8230); g +0.0505 = fence +0.0434 + B1 +0.0071 (2 SE of each about 0.0081); B1 9
+P2 L3 m3 cond: default 0.7337, fenced 0.7790, evacuated 0.7608 (exact 0.8230); g +0.0271 = fence +0.0454 + B1 -0.0182 (2 SE of each about 0.0087); B1 9
+NF L3 m3 wait: default 0.4445, fenced 0.4523, evacuated 0.4536 (exact 0.8230); g +0.0091 = fence +0.0078 + B1 +0.0012 (2 SE of each about 0.0099); B1 7
+NF L3 m3 cond: default 0.7417, fenced 0.7873, evacuated 0.7682 (exact 0.8230); g +0.0265 = fence +0.0456 + B1 -0.0191 (2 SE of each about 0.0086); B1 7
+decoy rd2 wait: default 0.8072, fenced 0.8132, evacuated 0.8132 (exact 0.8782); g +0.0060 = fence +0.0060 + B1 +0.0000 (2 SE of each about 0.0078); B1 2
+decoy rd2 cond: default 0.7904, fenced 0.7978, evacuated 0.7936 (exact 0.8782); g +0.0032 = fence +0.0074 + B1 -0.0042 (2 SE of each about 0.0081); B1 2

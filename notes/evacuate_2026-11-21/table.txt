@@ -1,0 +1,26 @@
+neuron / RUS loop P0 (rus_chain m 3; os3, paired, loopvar): 3 items; qubit-waits {'0': 24, 'L': 0, 'K': 0, 'B': 9, 'E': 6}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.309, 'E': 5.459}; subs {'Ee': 6, 'B1': 9}
+   B: 2 items changed; CZ same True; the same as park False; depth added [7, 21]; waits added [4, 14]; errors 0
+   LKB: 2 items changed; CZ same True; the same as park False; depth added [7, 21]; waits added [4, 14]; errors 0
+RUS P3 (rus_chain m 2): 3 items; qubit-waits {'0': 16, 'L': 0, 'K': 0, 'B': 5, 'E': 5}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.522, 'E': 4.355}; subs {'Ee': 5, 'B1': 5}
+   B: 2 items changed; CZ same True; the same as park False; depth added [5, 15]; waits added [2, 8]; errors 0
+   LKB: 2 items changed; CZ same True; the same as park False; depth added [5, 15]; waits added [2, 8]; errors 0
+RUS P1 (flip_chain; loopvar's x): 6 items; qubit-waits {'0': 40, 'L': 0, 'K': 0, 'B': 20, 'E': 50}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 1.242, 'E': 12.088}; subs {'Ee': 50, 'B1': 20}
+   B: 4 items changed; CZ same True; the same as park False; depth added [5, 21]; waits added [4, 18]; errors 0
+   LKB: 4 items changed; CZ same True; the same as park False; depth added [5, 21]; waits added [4, 18]; errors 0
+RUS NF (flip_chain, no flip; B's other frame): 6 items; qubit-waits {'0': 40, 'L': 0, 'K': 0, 'B': 14, 'E': 38}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.831, 'E': 31.793}; subs {'Ee': 38, 'B1': 14}
+   B: 4 items changed; CZ same True; the same as park False; depth added [4, 19]; waits added [2, 14]; errors 0
+   LKB: 4 items changed; CZ same True; the same as park False; depth added [4, 19]; waits added [2, 14]; errors 0
+RUS P2 (rus3 chain): 6 items; qubit-waits {'0': 40, 'L': 0, 'K': 0, 'B': 20, 'E': 50}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 1.242, 'E': 12.088}; subs {'Ee': 50, 'B1': 20}
+   B: 4 items changed; CZ same True; the same as park False; depth added [5, 21]; waits added [4, 18]; errors 0
+   LKB: 4 items changed; CZ same True; the same as park False; depth added [5, 21]; waits added [4, 18]; errors 0
+IPE n 2-6 (every phase): 124 items; qubit-waits {'0': 0, 'L': 0, 'K': 1032, 'B': 0, 'E': 0}; excited {'0': 0.0, 'L': 0.0, 'K': 1032.0, 'B': 0.0, 'E': 0.0}; subs {}
+   K: 124 items changed; CZ same True; the same as park True; depth added [0, 0]; waits added [0, 0]; errors 0
+   LKB: 124 items changed; CZ same True; the same as park True; depth added [0, 0]; waits added [0, 0]; errors 0
+textbook phase estimation n 2-5: 60 items; qubit-waits {'0': 0, 'L': 0, 'K': 0, 'B': 0, 'E': 0}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.0, 'E': 0.0}; subs {}
+repetition code F16: 4 items; qubit-waits {'0': 0, 'L': 0, 'K': 0, 'B': 0, 'E': 0}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.0, 'E': 0.0}; subs {}
+repetition code F10: 4 items; qubit-waits {'0': 0, 'L': 0, 'K': 0, 'B': 0, 'E': 0}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.0, 'E': 0.0}; subs {}
+repetition code F6P: 4 items; qubit-waits {'0': 0, 'L': 0, 'K': 0, 'B': 0, 'E': 0}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.0, 'E': 0.0}; subs {}
+repetition code F6: 4 items; qubit-waits {'0': 0, 'L': 0, 'K': 0, 'B': 0, 'E': 0}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.0, 'E': 0.0}; subs {}
+decoy sub-item rd2 (and its off variant Z): 2 items; qubit-waits {'0': 8, 'L': 0, 'K': 0, 'B': 4, 'E': 12}; excited {'0': 0.0, 'L': 0.0, 'K': 0.0, 'B': 0.867, 'E': 2.596}; subs {'Ee': 11, 'B1': 4, 'Epsi': 1}
+   B: 2 items changed; CZ same True; the same as park False; depth added [5, 5]; waits added [4, 4]; errors 0
+   LKB: 2 items changed; CZ same True; the same as park False; depth added [5, 5]; waits added [4, 4]; errors 0

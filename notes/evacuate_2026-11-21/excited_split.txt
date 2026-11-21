@@ -1,0 +1,12 @@
+neuron / RUS loop P0 (rus_chain m 3; os3, paired, loopvar): 3 items; excited at the waits 20.75 (6.92 per item) = waiting qubits 5.77 (K 0.00, B 0.31, E 5.46, L 0.00) + taking part in the wait 14.98
+RUS P3 (rus_chain m 2): 3 items; excited at the waits 11.88 (3.96 per item) = waiting qubits 4.88 (K 0.00, B 0.52, E 4.36, L 0.00) + taking part in the wait 7.00
+RUS P1 (flip_chain; loopvar's x): 6 items; excited at the waits 16.75 (2.79 per item) = waiting qubits 13.33 (K 0.00, B 1.24, E 12.09, L 0.00) + taking part in the wait 3.42
+RUS NF (flip_chain, no flip; B's other frame): 6 items; excited at the waits 36.05 (6.01 per item) = waiting qubits 32.62 (K 0.00, B 0.83, E 31.79, L 0.00) + taking part in the wait 3.42
+RUS P2 (rus3 chain): 6 items; excited at the waits 16.75 (2.79 per item) = waiting qubits 13.33 (K 0.00, B 1.24, E 12.09, L 0.00) + taking part in the wait 3.42
+IPE n 2-6 (every phase): 124 items; excited at the waits 1032.00 (8.32 per item) = waiting qubits 1032.00 (K 1032.00, B 0.00, E 0.00, L 0.00) + taking part in the wait 0.00
+textbook phase estimation n 2-5: 60 items; excited at the waits 0.00 (0.00 per item) = waiting qubits 0.00 (K 0.00, B 0.00, E 0.00, L 0.00) + taking part in the wait 0.00
+repetition code F16: 4 items; excited at the waits 6.00 (1.50 per item) = waiting qubits 0.00 (K 0.00, B 0.00, E 0.00, L 0.00) + taking part in the wait 6.00
+repetition code F10: 4 items; excited at the waits 6.00 (1.50 per item) = waiting qubits 0.00 (K 0.00, B 0.00, E 0.00, L 0.00) + taking part in the wait 6.00
+repetition code F6P: 4 items; excited at the waits 6.00 (1.50 per item) = waiting qubits 0.00 (K 0.00, B 0.00, E 0.00, L 0.00) + taking part in the wait 6.00
+repetition code F6: 4 items; excited at the waits 6.00 (1.50 per item) = waiting qubits 0.00 (K 0.00, B 0.00, E 0.00, L 0.00) + taking part in the wait 6.00
+decoy sub-item rd2 (and its off variant Z): 2 items; excited at the waits 3.57 (1.78 per item) = waiting qubits 3.46 (K 0.00, B 0.87, E 2.60, L 0.00) + taking part in the wait 0.11
