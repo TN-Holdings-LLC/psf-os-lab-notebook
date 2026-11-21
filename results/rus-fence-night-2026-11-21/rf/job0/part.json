@@ -1,0 +1,266 @@
+{
+ "part": "rusfence:gamma-one-job:0",
+ "shots": 1950,
+ "tags": [
+  "nfl3m3Da",
+  "nfl3m3Fa",
+  "nfl3m3Ma",
+  "nfl3m3Db",
+  "nfl3m3Fb",
+  "nfl3m3Mb",
+  "nfl3m3Dc",
+  "nfl3m3Fc",
+  "nfl3m3Mc",
+  "p0l3Da",
+  "p0l3Fa",
+  "p0l3Ma",
+  "p0l3Db",
+  "p0l3Fb",
+  "p0l3Mb",
+  "p0l3Dc",
+  "p0l3Fc",
+  "p0l3Mc",
+  "p0l3Dd",
+  "p0l3Fd",
+  "p0l3Md",
+  "p0l3De",
+  "p0l3Fe",
+  "p0l3Me",
+  "p0l3Df",
+  "p0l3Ff",
+  "p0l3Mf",
+  "p0l3Dg",
+  "p0l3Fg",
+  "p0l3Mg",
+  "p2l3m3Da",
+  "p2l3m3Fa",
+  "p2l3m3Ma",
+  "p2l3m3Db",
+  "p2l3m3Fb",
+  "p2l3m3Mb",
+  "p2l3m3Dc",
+  "p2l3m3Fc",
+  "p2l3m3Mc",
+  "p2l3m3Dd",
+  "p2l3m3Fd",
+  "p2l3m3Md",
+  "p2l3m3De",
+  "p2l3m3Fe",
+  "p2l3m3Me",
+  "p2l3m3Df",
+  "p2l3m3Ff",
+  "p2l3m3Mf",
+  "p2l3m3Dg",
+  "p2l3m3Fg",
+  "p2l3m3Mg",
+  "p3l3Da",
+  "p3l3Fa",
+  "p3l3Ma",
+  "p3l3Db",
+  "p3l3Fb",
+  "p3l3Mb",
+  "p3l3Dc",
+  "p3l3Fc",
+  "p3l3Mc",
+  "ipk4_2",
+  "ipu4_2",
+  "ipk4_6",
+  "ipu4_6",
+  "ipk4_10",
+  "ipu4_10",
+  "ipk4_14",
+  "ipu4_14",
+  "f10_n",
+  "f6p_n",
+  "f6_n",
+  "f10_0",
+  "f6p_0",
+  "f6_0",
+  "f10_1",
+  "f6p_1",
+  "f6_1",
+  "f10_2",
+  "f6p_2",
+  "f6_2"
+ ],
+ "majority": {
+  "nfl3m3": {
+   "majority_x": [
+    {
+     "wait": 0,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.794251
+    },
+    {
+     "wait": 1,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.890421
+    },
+    {
+     "wait": 2,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 3,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 3,
+     "kind": "read",
+     "qubit": 3,
+     "p1": 0.732182
+    },
+    {
+     "wait": 4,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 4,
+     "kind": "read",
+     "qubit": 3,
+     "p1": 0.820838
+    },
+    {
+     "wait": 5,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 5,
+     "kind": "read",
+     "qubit": 3,
+     "p1": 0.849813
+    },
+    {
+     "wait": 6,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 6,
+     "kind": "read",
+     "qubit": 3,
+     "p1": 0.849813
+    },
+    {
+     "wait": 6,
+     "kind": "read",
+     "qubit": 5,
+     "p1": 0.674965
+    },
+    {
+     "wait": 7,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 7,
+     "kind": "read",
+     "qubit": 3,
+     "p1": 0.849813
+    },
+    {
+     "wait": 7,
+     "kind": "read",
+     "qubit": 5,
+     "p1": 0.756692
+    }
+   ]
+  },
+  "p0l3": {
+   "majority_x": [
+    {
+     "wait": 2,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 5,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 5,
+     "kind": "read",
+     "qubit": 3,
+     "p1": 0.849813
+    },
+    {
+     "wait": 6,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 7,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    }
+   ]
+  },
+  "p2l3m3": {
+   "majority_x": [
+    {
+     "wait": 6,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 7,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    },
+    {
+     "wait": 8,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.921853
+    }
+   ]
+  },
+  "p3l3": {
+   "majority_x": [
+    {
+     "wait": 1,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.890421
+    },
+    {
+     "wait": 3,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.890421
+    },
+    {
+     "wait": 3,
+     "kind": "read",
+     "qubit": 3,
+     "p1": 0.79285
+    },
+    {
+     "wait": 4,
+     "kind": "read",
+     "qubit": 1,
+     "p1": 0.890421
+    }
+   ]
+  }
+ }
+}

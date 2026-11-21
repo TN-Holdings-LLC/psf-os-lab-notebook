@@ -1,0 +1,3896 @@
+{
+ "device": "ibm_fez",
+ "kind": "feedforward",
+ "items": {
+  "nfl3m3Da": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 71,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 47,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Fa": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 75,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 21,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Ma": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 91,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 21,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Db": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 71,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 47,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Fb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 75,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 21,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Mb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 91,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 21,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Dc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 71,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 47,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Fc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 75,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 21,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Mc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 91,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 21,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Da": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 68,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fa": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 74,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 3,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Ma": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 78,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 19,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Db": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 68,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 74,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 3,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 78,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 19,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Dc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 68,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 74,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 3,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 78,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 19,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Dd": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 68,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fd": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 74,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 3,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Md": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 78,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 19,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3De": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 68,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fe": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 74,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 3,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Me": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 78,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 19,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Df": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 68,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Ff": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 74,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 3,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mf": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 78,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 19,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Dg": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 68,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fg": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 74,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 3,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mg": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 78,
+   "mid": 8,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 19,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Da": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 85,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 50,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fa": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Ma": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Db": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 85,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 50,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Dc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 85,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 50,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Dd": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 85,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 50,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fd": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Md": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3De": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 85,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 50,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fe": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Me": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Df": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 85,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 50,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Ff": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mf": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Dg": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 85,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 5,
+   "footprint_total": 50,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fg": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mg": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 33,
+   "off_cz": 11,
+   "floor_cz": 33,
+   "depth": 87,
+   "mid": 9,
+   "conditionals": 6,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 3,
+    "out_bit": 9,
+    "tries": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      6,
+      7,
+      8
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 22,
+   "footprint_max": 4,
+   "footprint_total": 24,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Da": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 62,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 5,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Fa": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 68,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 3,
+   "footprint_total": 6,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Ma": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 72,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 4,
+   "footprint_total": 13,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Db": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 62,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 5,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Fb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 68,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 3,
+   "footprint_total": 6,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Mb": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 72,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 4,
+   "footprint_total": 13,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Dc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 62,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 5,
+   "footprint_total": 12,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Fc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 68,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 3,
+   "footprint_total": 6,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Mc": {
+   "n": 6,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "cz": 22,
+   "off_cz": 11,
+   "floor_cz": 22,
+   "depth": 72,
+   "mid": 5,
+   "conditionals": 3,
+   "success": {},
+   "bound": null,
+   "rus": {
+    "L": 3,
+    "theta": 1.1,
+    "m": 2,
+    "out_bit": 6,
+    "tries": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "exact": 0.8229569952973316
+   },
+   "cz_in_blocks": 11,
+   "footprint_max": 4,
+   "footprint_total": 13,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_2": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 68,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 0,
+   "footprint_total": 0,
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_2": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 59,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 7,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_6": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 66,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 0,
+   "footprint_total": 0,
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_6": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 56,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 0,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 7,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_10": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 68,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 0,
+   "footprint_total": 0,
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_10": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 59,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 7,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_14": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 66,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 0,
+   "footprint_total": 0,
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_14": {
+   "n": 2,
+   "chain": [
+    0,
+    1
+   ],
+   "cz": 8,
+   "off_cz": 8,
+   "floor_cz": 8,
+   "depth": 56,
+   "mid": 3,
+   "conditionals": 9,
+   "success": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 7,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_n": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_n": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_n": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1,
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  }
+ },
+ "circuits": 84,
+ "qpu_seconds_model": 50.2,
+ "shots": 1950,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term",
+ "park": true
+}

@@ -1,0 +1,10755 @@
+{
+ "note": "record-only checks (psf-os after-2026-11-20): never part of the job; the job and its records are as without them",
+ "items": {
+  "nfl3m3Da": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 47,
+     "excited": 23.352507,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 9,
+     "excited": 4.209357,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 15.036562,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Fa": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 21,
+     "excited": 16.145355,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 14,
+     "excited": 6.201129,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 15.036562,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Ma": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 21,
+     "excited": 4.536745,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 6.643086,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 4.536745,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Db": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 47,
+     "excited": 23.352507,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 9,
+     "excited": 4.209357,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 15.036562,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Fb": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 21,
+     "excited": 16.145355,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 14,
+     "excited": 6.201129,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 15.036562,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Mb": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 21,
+     "excited": 4.536745,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 6.643086,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 4.536745,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Dc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 47,
+     "excited": 23.352507,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 9,
+     "excited": 4.209357,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 15.036562,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Fc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 21,
+     "excited": 16.145355,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 14,
+     "excited": 6.201129,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 15.036562,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "nfl3m3Mc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 21,
+     "excited": 4.536745,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 6.643086,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 21,
+    "excited": 4.536745,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Da": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fa": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 10.19331,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Ma": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 8.914386,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 8.914386,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Db": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fb": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 10.19331,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mb": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 8.914386,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 8.914386,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Dc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 10.19331,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 8.914386,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 8.914386,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Dd": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fd": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 10.19331,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Md": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 8.914386,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 8.914386,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3De": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fe": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 10.19331,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Me": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 8.914386,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 8.914386,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Df": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Ff": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 10.19331,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mf": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 8.914386,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 8.914386,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Dg": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 24,
+     "excited": 13.519688,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Fg": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 12,
+     "excited": 10.19331,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 12.988838,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p0l3Mg": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 19,
+     "excited": 8.914386,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 19,
+    "excited": 8.914386,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Da": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 50,
+     "excited": 15.895835,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 36,
+     "excited": 15.058453,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fa": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 8.688683,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 11.177678,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Ma": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 6.157564,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 9.412175,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 5.048771,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Db": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 50,
+     "excited": 15.895835,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 36,
+     "excited": 15.058453,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fb": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 8.688683,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 11.177678,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mb": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 6.157564,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 9.412175,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 5.048771,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Dc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 50,
+     "excited": 15.895835,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 36,
+     "excited": 15.058453,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 8.688683,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 11.177678,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mc": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 6.157564,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 9.412175,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 5.048771,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Dd": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 50,
+     "excited": 15.895835,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 36,
+     "excited": 15.058453,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fd": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 8.688683,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 11.177678,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Md": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 6.157564,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 9.412175,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 5.048771,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3De": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 50,
+     "excited": 15.895835,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 36,
+     "excited": 15.058453,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fe": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 8.688683,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 11.177678,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Me": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 6.157564,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 9.412175,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 5.048771,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Df": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 50,
+     "excited": 15.895835,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 36,
+     "excited": 15.058453,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Ff": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 8.688683,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 11.177678,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mf": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 6.157564,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 9.412175,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 5.048771,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Dg": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 50,
+     "excited": 15.895835,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 5,
+     "total": 36,
+     "excited": 15.058453,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Fg": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 8.688683,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 11.177678,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 7.57989,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p2l3m3Mg": {
+   "cz_written": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_compiled": {
+    "ff": 33,
+    "off": 11,
+    "floor": 33
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 24,
+     "excited": 6.157564,
+     "carriers": [
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 26,
+     "excited": 9.412175,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 24,
+    "excited": 5.048771,
+    "carriers": [
+     [
+      1
+     ],
+     [],
+     [
+      1
+     ],
+     [],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3
+     ],
+     [],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ],
+     [
+      1
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Da": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 12,
+     "excited": 6.474892,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 7.694151,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Fa": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.811703,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 7.694151,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Ma": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 4.765922,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 4.765922,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Db": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 12,
+     "excited": 6.474892,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 7.694151,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Fb": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.811703,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 7.694151,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Mb": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 4.765922,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 4.765922,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Dc": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 5,
+     "total": 12,
+     "excited": 6.474892,
+     "carriers": [
+      [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0,
+     "carriers": []
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 7.694151,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Fc": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.811703,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 7,
+     "excited": 2.219335,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 7.694151,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "p3l3Mc": {
+   "cz_written": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_compiled": {
+    "ff": 22,
+    "off": 11,
+    "floor": 22
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 4.765922,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 4,
+     "total": 13,
+     "excited": 5.577711,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       4,
+       5
+      ],
+      [
+       1,
+       3,
+       5
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 4,
+    "total": 13,
+    "excited": 4.765922,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1,
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      3,
+      5
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_2": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_2": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_6": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_6": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_10": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_10": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipk4_14": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_14": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_n": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_n": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 1.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 0.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_n": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 1.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 0.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_0": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_0": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 2.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 6.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 2.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_0": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 2.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 6.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 2.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_1": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_1": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 3.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_1": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 3.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f10_2": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6p_2": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 4.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "f6_2": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 4.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  }
+ }
+}

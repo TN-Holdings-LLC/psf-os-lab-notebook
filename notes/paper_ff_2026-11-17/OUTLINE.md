@@ -38,10 +38,11 @@ declared before the data". Author TN Holdings. Which paper number it takes is th
 | 11-20 marrakesh (evening) | the paired loop (`results/loop-paired-night-2026-11-20`) | incumbent and candidate in one job: L = 1 P2+M (+0.046), L = 2 P0 (P1 not adopted), L = 3 P2+M (+0.053); two rounds, 110 s charged |
 | 11-21 marrakesh (calibrated 01:34) | the weekend's three tests, shared (`results/weekend-shared-night-2026-11-21`) | repetition code: fewer carriers (+0.015) and fewer CZ (+0.022) both keep more, F6 0.874 at the ceiling, not beyond; IPE beyond to n = 6, FLAT (loss per round); parking the waiting target in \|0> keeps +0.039, the fence alone nothing; 111 s charged |
 | 11-21 marrakesh (calibrated 10:39) | IPE with the target parked, psf-os 0.3.0 (`results/qpe-parked-night-2026-11-21`) | parking keeps +0.035, +0.031, +0.039 at n = 4, 5, 6 inside each job; parked IPE beyond at every n; parked shape FLAT; 83 s charged |
+| 11-21 fez (calibrated 14:12) | RUS fence and parking the likely value, with controls (`results/rus-fence-night-2026-11-21`) | first night off marrakesh: P0's fence -0.045, NF's likely-value parking +0.088 (row 1, damping); IPE control +0.029; repetition code F6 0.929 beyond its ceiling; 48 s charged |
 
-Predictions over six nights (11-16 to 11-21): 64 declared; 44 held, 20 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
+Predictions over six nights (11-16 to 11-21): 65 declared; 45 held, 20 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
 T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1. 11-18: R-2, PB-3, T-1, T-3, OS2-1. 11-19: LOOP-1, IF-1, IF-2, RC-1. 11-20: none
-of 3. 11-21: none of 4). Paper 10 (published 11-19) counts the first 57. Each failure is reported as such in its folder.
+of 3. 11-21: none of 5). Paper 10 (published 11-19) counts the first 57. Each failure is reported as such in its folder.
 
 ## Two numbers side by side (to carry into the text)
 

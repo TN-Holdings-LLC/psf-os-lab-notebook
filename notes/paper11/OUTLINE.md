@@ -37,9 +37,10 @@ counted; no mitigation.
 | 11-21 marrakesh | B: IPE n = 4, 5, 6 (`…/BC`) | 0.8957, 0.8715, 0.8451, all BEYOND; log drops 0.0274, 0.0308, acceleration +0.0034 (2 SE 0.0077) FLAT | QL-1 held |
 | 11-21 marrakesh | C: plain / fence / park (`…/BC`, job BC1) | 0.8957 / 0.8914 / 0.9344; park KEEPS MORE, fence SAME | none declared (table only) |
 | 11-21 marrakesh (cal. 11-21 10:39) | IPE parked by psf-os 0.3.0's default (`results/qpe-parked-night-2026-11-21`) | parked - unparked in one job: +0.0349, +0.0312, +0.0386 at n = 4, 5, 6 (2 SE about 0.0075), KEEPS MORE at every n; parked beyond at every n; parked shape FLAT | QP-1 held, QP-3 held |
+| 11-21 **fez** (cal. 11-21 14:12) | RUS fence and parking the likely value, with controls (`results/rus-fence-night-2026-11-21`) | IPE control parked +0.0291 (KEEPS MORE); repetition code F6P - F10 +0.0283, F6 - F6P +0.0108 (both KEEPS MORE), F6 0.9294 BEYOND 0.875; RUS: P0's fence -0.0453 KEEPS LESS, NF's likely-value parking +0.0877 KEEPS MORE (row 1, damping) | RF-1 held |
 
-Predictions since paper 10: 7 declared, 7 held. Over the nights of 11-16 to 11-21: 64 declared; 44 held, 20 failed
-(each failure stays in paper 10 and its folder). Device time for this paper: 165 + 110 + 111 + 83 = 469 s charged.
+Predictions since paper 10: 8 declared, 8 held. Over the nights of 11-16 to 11-21: 65 declared; 45 held, 20 failed
+(each failure stays in paper 10 and its folder). Device time for this paper: 165 + 110 + 111 + 83 + 48 = 517 s charged.
 
 Independent checks (home VS, qiskit, aer and numpy only, no project scorer): decoy and loopvar (a2c6eb56), the
 paired loop (bfae2760, seven of seven items agree); the weekend night (1a87c959: every number, word and row agrees).

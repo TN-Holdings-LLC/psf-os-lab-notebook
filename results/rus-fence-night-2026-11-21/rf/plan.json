@@ -1,0 +1,193 @@
+{
+ "plan": "gamma-one-job",
+ "device": "ibm_fez",
+ "jobs": [
+  {
+   "folder": "job0",
+   "shots": 1950,
+   "circuits": 84,
+   "qpu_seconds_model": 50.2,
+   "majority": {
+    "nfl3m3": {
+     "majority_x": [
+      {
+       "wait": 0,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.794251
+      },
+      {
+       "wait": 1,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.890421
+      },
+      {
+       "wait": 2,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 3,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 3,
+       "kind": "read",
+       "qubit": 3,
+       "p1": 0.732182
+      },
+      {
+       "wait": 4,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 4,
+       "kind": "read",
+       "qubit": 3,
+       "p1": 0.820838
+      },
+      {
+       "wait": 5,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 5,
+       "kind": "read",
+       "qubit": 3,
+       "p1": 0.849813
+      },
+      {
+       "wait": 6,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 6,
+       "kind": "read",
+       "qubit": 3,
+       "p1": 0.849813
+      },
+      {
+       "wait": 6,
+       "kind": "read",
+       "qubit": 5,
+       "p1": 0.674965
+      },
+      {
+       "wait": 7,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 7,
+       "kind": "read",
+       "qubit": 3,
+       "p1": 0.849813
+      },
+      {
+       "wait": 7,
+       "kind": "read",
+       "qubit": 5,
+       "p1": 0.756692
+      }
+     ]
+    },
+    "p0l3": {
+     "majority_x": [
+      {
+       "wait": 2,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 5,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 5,
+       "kind": "read",
+       "qubit": 3,
+       "p1": 0.849813
+      },
+      {
+       "wait": 6,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 7,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      }
+     ]
+    },
+    "p2l3m3": {
+     "majority_x": [
+      {
+       "wait": 6,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 7,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      },
+      {
+       "wait": 8,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.921853
+      }
+     ]
+    },
+    "p3l3": {
+     "majority_x": [
+      {
+       "wait": 1,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.890421
+      },
+      {
+       "wait": 3,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.890421
+      },
+      {
+       "wait": 3,
+       "kind": "read",
+       "qubit": 3,
+       "p1": 0.79285
+      },
+      {
+       "wait": 4,
+       "kind": "read",
+       "qubit": 1,
+       "p1": 0.890421
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "qpu_seconds_model": 50.2
+}

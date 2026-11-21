@@ -1,0 +1,18 @@
+ff_f10_0         user   c0 1.000 c=000 1.000 all0 0.000 CZ 10 (want 10) ok
+ff_f10_1         user   c0 1.000 c=000 1.000 all0 0.000 CZ 10 (want 10) ok
+ff_f10_2         user   c0 1.000 c=000 1.000 all0 0.000 CZ 10 (want 10) ok
+ff_f10_n         user   c0 1.000 c=000 1.000 all0 1.000 CZ 10 (want 10) ok
+ff_f6_0          user   c0 1.000 c=000 1.000 all0 0.000 CZ 6 (want 6) ok
+ff_f6_1          user   c0 1.000 c=000 1.000 all0 0.000 CZ 6 (want 6) ok
+ff_f6_2          user   c0 1.000 c=000 1.000 all0 0.000 CZ 6 (want 6) ok
+ff_f6_n          user   c0 1.000 c=000 1.000 all0 1.000 CZ 6 (want 6) ok
+ff_f6p_0         user   c0 1.000 c=000 1.000 all0 0.000 CZ 10 (want 10) ok
+ff_f6p_1         user   c0 1.000 c=000 1.000 all0 0.000 CZ 10 (want 10) ok
+ff_f6p_2         user   c0 1.000 c=000 1.000 all0 0.000 CZ 10 (want 10) ok
+ff_f6p_n         user   c0 1.000 c=000 1.000 all0 1.000 CZ 10 (want 10) ok
+F16: ceiling 0.8750, carriers during the wait [3] (designed 3), noiseless ff 1 in every item: True
+F10: ceiling 0.8750, carriers during the wait [3] (designed 3), noiseless ff 1 in every item: True
+F6P: ceiling 0.8750, carriers during the wait [1] (designed 1), noiseless ff 1 in every item: True
+F6: ceiling 0.8750, carriers during the wait [1] (designed 1), noiseless ff 1 in every item: True
+16 circuits, 50.2 s by the model (1950 shots)
+PASS
