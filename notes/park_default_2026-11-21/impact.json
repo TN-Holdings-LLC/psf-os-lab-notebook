@@ -1,0 +1,9582 @@
+{
+ "neuron / RUS loop P0 (rus_chain m 3; os3, paired, loopvar)": {
+  "summary": {
+   "items": 3,
+   "items_parked": 0,
+   "waits": 15,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 20.747,
+   "excited_after": 20.747,
+   "depth_before": [
+    14,
+    68
+   ],
+   "depth_after": [
+    14,
+    68
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "P0 L1",
+    "waits": 2,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.6847,
+    "excited_after": 1.6847,
+    "depth_before": 14,
+    "depth_after": 14,
+    "cz_before": 3,
+    "cz_after": 3,
+    "distribution_same": true
+   },
+   {
+    "tag": "P0 L2",
+    "waits": 5,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 6.0731,
+    "excited_after": 6.0731,
+    "depth_before": 41,
+    "depth_after": 41,
+    "cz_before": 18,
+    "cz_after": 18,
+    "distribution_same": true
+   },
+   {
+    "tag": "P0 L3",
+    "waits": 8,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 12.9888,
+    "excited_after": 12.9888,
+    "depth_before": 68,
+    "depth_after": 68,
+    "cz_before": 33,
+    "cz_after": 33,
+    "distribution_same": true
+   }
+  ]
+ },
+ "RUS P3 (rus_chain m 2)": {
+  "summary": {
+   "items": 3,
+   "items_parked": 0,
+   "waits": 9,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 11.878,
+   "excited_after": 11.878,
+   "depth_before": [
+    12,
+    62
+   ],
+   "depth_after": [
+    12,
+    62
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "P3 L1",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.7943,
+    "excited_after": 0.7943,
+    "depth_before": 12,
+    "depth_after": 12,
+    "cz_before": 2,
+    "cz_after": 2,
+    "distribution_same": true
+   },
+   {
+    "tag": "P3 L2",
+    "waits": 3,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 3.3891,
+    "excited_after": 3.3891,
+    "depth_before": 37,
+    "depth_after": 37,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "P3 L3",
+    "waits": 5,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 7.6942,
+    "excited_after": 7.6942,
+    "depth_before": 62,
+    "depth_after": 62,
+    "cz_before": 22,
+    "cz_after": 22,
+    "distribution_same": true
+   }
+  ]
+ },
+ "RUS P1 (flip_chain; loopvar's x)": {
+  "summary": {
+   "items": 6,
+   "items_parked": 0,
+   "waits": 33,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 16.754,
+   "excited_after": 16.754,
+   "depth_before": [
+    16,
+    86
+   ],
+   "depth_after": [
+    16,
+    86
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "P1 L1 m2",
+    "waits": 3,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.3153,
+    "excited_after": 0.3153,
+    "depth_before": 16,
+    "depth_after": 16,
+    "cz_before": 2,
+    "cz_after": 2,
+    "distribution_same": true
+   },
+   {
+    "tag": "P1 L1 m3",
+    "waits": 5,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.3935,
+    "excited_after": 0.3935,
+    "depth_before": 20,
+    "depth_after": 20,
+    "cz_before": 3,
+    "cz_after": 3,
+    "distribution_same": true
+   },
+   {
+    "tag": "P1 L2 m2",
+    "waits": 4,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.3549,
+    "excited_after": 1.3549,
+    "depth_before": 45,
+    "depth_after": 45,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "P1 L2 m3",
+    "waits": 6,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.3996,
+    "excited_after": 1.3996,
+    "depth_before": 53,
+    "depth_after": 53,
+    "cz_before": 18,
+    "cz_after": 18,
+    "distribution_same": true
+   },
+   {
+    "tag": "P1 L3 m2",
+    "waits": 6,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 5.7106,
+    "excited_after": 5.7106,
+    "depth_before": 74,
+    "depth_after": 74,
+    "cz_before": 22,
+    "cz_after": 22,
+    "distribution_same": true
+   },
+   {
+    "tag": "P1 L3 m3",
+    "waits": 9,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 7.5799,
+    "excited_after": 7.5799,
+    "depth_before": 86,
+    "depth_after": 86,
+    "cz_before": 33,
+    "cz_after": 33,
+    "distribution_same": true
+   }
+  ]
+ },
+ "RUS NF (flip_chain, no flip; B's other frame)": {
+  "summary": {
+   "items": 6,
+   "items_parked": 0,
+   "waits": 27,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 36.048,
+   "excited_after": 36.048,
+   "depth_before": [
+    13,
+    71
+   ],
+   "depth_after": [
+    13,
+    71
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "NF L1 m2",
+    "waits": 2,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.7943,
+    "excited_after": 0.7943,
+    "depth_before": 13,
+    "depth_after": 13,
+    "cz_before": 2,
+    "cz_after": 2,
+    "distribution_same": true
+   },
+   {
+    "tag": "NF L1 m3",
+    "waits": 4,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.6847,
+    "excited_after": 1.6847,
+    "depth_before": 15,
+    "depth_after": 15,
+    "cz_before": 3,
+    "cz_after": 3,
+    "distribution_same": true
+   },
+   {
+    "tag": "NF L2 m2",
+    "waits": 3,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 3.496,
+    "excited_after": 3.496,
+    "depth_before": 39,
+    "depth_after": 39,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "NF L2 m3",
+    "waits": 5,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 6.1429,
+    "excited_after": 6.1429,
+    "depth_before": 43,
+    "depth_after": 43,
+    "cz_before": 18,
+    "cz_after": 18,
+    "distribution_same": true
+   },
+   {
+    "tag": "NF L3 m2",
+    "waits": 5,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 8.8933,
+    "excited_after": 8.8933,
+    "depth_before": 65,
+    "depth_after": 65,
+    "cz_before": 22,
+    "cz_after": 22,
+    "distribution_same": true
+   },
+   {
+    "tag": "NF L3 m3",
+    "waits": 8,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 15.0366,
+    "excited_after": 15.0366,
+    "depth_before": 71,
+    "depth_after": 71,
+    "cz_before": 33,
+    "cz_after": 33,
+    "distribution_same": true
+   }
+  ]
+ },
+ "RUS P2 (rus3 chain)": {
+  "summary": {
+   "items": 6,
+   "items_parked": 0,
+   "waits": 33,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 16.754,
+   "excited_after": 16.754,
+   "depth_before": [
+    15,
+    85
+   ],
+   "depth_after": [
+    15,
+    85
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "P2 L1 m2",
+    "waits": 3,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.3153,
+    "excited_after": 0.3153,
+    "depth_before": 15,
+    "depth_after": 15,
+    "cz_before": 2,
+    "cz_after": 2,
+    "distribution_same": true
+   },
+   {
+    "tag": "P2 L1 m3",
+    "waits": 5,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.3935,
+    "excited_after": 0.3935,
+    "depth_before": 19,
+    "depth_after": 19,
+    "cz_before": 3,
+    "cz_after": 3,
+    "distribution_same": true
+   },
+   {
+    "tag": "P2 L2 m2",
+    "waits": 4,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.3549,
+    "excited_after": 1.3549,
+    "depth_before": 44,
+    "depth_after": 44,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "P2 L2 m3",
+    "waits": 6,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.3996,
+    "excited_after": 1.3996,
+    "depth_before": 52,
+    "depth_after": 52,
+    "cz_before": 18,
+    "cz_after": 18,
+    "distribution_same": true
+   },
+   {
+    "tag": "P2 L3 m2",
+    "waits": 6,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 5.7106,
+    "excited_after": 5.7106,
+    "depth_before": 73,
+    "depth_after": 73,
+    "cz_before": 22,
+    "cz_after": 22,
+    "distribution_same": true
+   },
+   {
+    "tag": "P2 L3 m3",
+    "waits": 9,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 7.5799,
+    "excited_after": 7.5799,
+    "depth_before": 85,
+    "depth_after": 85,
+    "cz_before": 33,
+    "cz_after": 33,
+    "distribution_same": true
+   }
+  ]
+ },
+ "IPE n 2-6 (every phase)": {
+  "summary": {
+   "items": 124,
+   "items_parked": 124,
+   "waits": 1032,
+   "parked_waits": 1032,
+   "parked_logical_qubits": [
+    1
+   ],
+   "excited_before": 1032.0,
+   "excited_after": 0.0,
+   "depth_before": [
+    10,
+    102
+   ],
+   "depth_after": [
+    10,
+    117
+   ],
+   "depth_added": [
+    0,
+    16
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "IPE n2 j0",
+    "waits": 2,
+    "parked_waits": 2,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 2.0,
+    "excited_after": 0.0,
+    "depth_before": 10,
+    "depth_after": 10,
+    "cz_before": 0,
+    "cz_after": 0,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n2 j1",
+    "waits": 2,
+    "parked_waits": 2,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 2.0,
+    "excited_after": 0.0,
+    "depth_before": 28,
+    "depth_after": 31,
+    "cz_before": 4,
+    "cz_after": 4,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n2 j2",
+    "waits": 2,
+    "parked_waits": 2,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 2.0,
+    "excited_after": 0.0,
+    "depth_before": 24,
+    "depth_after": 27,
+    "cz_before": 4,
+    "cz_after": 4,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n2 j3",
+    "waits": 2,
+    "parked_waits": 2,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 2.0,
+    "excited_after": 0.0,
+    "depth_before": 26,
+    "depth_after": 29,
+    "cz_before": 4,
+    "cz_after": 4,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j0",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 20,
+    "depth_after": 20,
+    "cz_before": 0,
+    "cz_after": 0,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j1",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 45,
+    "depth_after": 51,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j2",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 41,
+    "depth_after": 47,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j3",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 43,
+    "depth_after": 49,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j4",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 28,
+    "depth_after": 34,
+    "cz_before": 4,
+    "cz_after": 4,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j5",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 45,
+    "depth_after": 51,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j6",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 38,
+    "depth_after": 45,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n3 j7",
+    "waits": 4,
+    "parked_waits": 4,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 4.0,
+    "excited_after": 0.0,
+    "depth_before": 43,
+    "depth_after": 49,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j0",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 31,
+    "depth_after": 31,
+    "cz_before": 0,
+    "cz_after": 0,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j1",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 63,
+    "depth_after": 72,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j2",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 59,
+    "depth_after": 68,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j3",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 61,
+    "depth_after": 70,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j4",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 46,
+    "depth_after": 55,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j5",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 63,
+    "depth_after": 72,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j6",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 56,
+    "depth_after": 66,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j7",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 61,
+    "depth_after": 70,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j8",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 39,
+    "depth_after": 45,
+    "cz_before": 4,
+    "cz_after": 4,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j9",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 63,
+    "depth_after": 72,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j10",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 59,
+    "depth_after": 68,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j11",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 61,
+    "depth_after": 70,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j12",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 43,
+    "depth_after": 53,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j13",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 63,
+    "depth_after": 72,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j14",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 56,
+    "depth_after": 66,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n4 j15",
+    "waits": 6,
+    "parked_waits": 6,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 6.0,
+    "excited_after": 0.0,
+    "depth_before": 61,
+    "depth_after": 70,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j0",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 43,
+    "depth_after": 43,
+    "cz_before": 0,
+    "cz_after": 0,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j1",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j2",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 78,
+    "depth_after": 90,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j3",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j4",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 65,
+    "depth_after": 77,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j5",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j6",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 75,
+    "depth_after": 88,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j7",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j8",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 58,
+    "depth_after": 67,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j9",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j10",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 78,
+    "depth_after": 90,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j11",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j12",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 62,
+    "depth_after": 75,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j13",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j14",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 75,
+    "depth_after": 88,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j15",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j16",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 51,
+    "depth_after": 57,
+    "cz_before": 4,
+    "cz_after": 4,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j17",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j18",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 78,
+    "depth_after": 90,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j19",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j20",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 65,
+    "depth_after": 77,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j21",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j22",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 75,
+    "depth_after": 88,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j23",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j24",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 55,
+    "depth_after": 65,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j25",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j26",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 78,
+    "depth_after": 90,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j27",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j28",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 62,
+    "depth_after": 75,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j29",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 94,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j30",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 75,
+    "depth_after": 88,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n5 j31",
+    "waits": 8,
+    "parked_waits": 8,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 8.0,
+    "excited_after": 0.0,
+    "depth_before": 80,
+    "depth_after": 92,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j0",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 56,
+    "depth_after": 56,
+    "cz_before": 0,
+    "cz_after": 0,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j1",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j2",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j3",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j4",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 85,
+    "depth_after": 100,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j5",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j6",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j7",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j8",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 78,
+    "depth_after": 90,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j9",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j10",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j11",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j12",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 98,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j13",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j14",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j15",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j16",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 71,
+    "depth_after": 80,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j17",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j18",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j19",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j20",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 85,
+    "depth_after": 100,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j21",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j22",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j23",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j24",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 75,
+    "depth_after": 88,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j25",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j26",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j27",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j28",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 98,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j29",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j30",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j31",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j32",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 64,
+    "depth_after": 70,
+    "cz_before": 4,
+    "cz_after": 4,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j33",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j34",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j35",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j36",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 85,
+    "depth_after": 100,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j37",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j38",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j39",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j40",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 78,
+    "depth_after": 90,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j41",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j42",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j43",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j44",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 98,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j45",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j46",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j47",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j48",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 68,
+    "depth_after": 78,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j49",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j50",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j51",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j52",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 85,
+    "depth_after": 100,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j53",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j54",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j55",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j56",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 75,
+    "depth_after": 88,
+    "cz_before": 8,
+    "cz_after": 8,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j57",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j58",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 113,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j59",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j60",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 82,
+    "depth_after": 98,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j61",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 117,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j62",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 95,
+    "depth_after": 111,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "IPE n6 j63",
+    "waits": 10,
+    "parked_waits": 10,
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       1
+      ]
+     },
+     {
+      "kind": "conditional",
+      "qubits": [
+       1
+      ]
+     }
+    ],
+    "excited_before": 10.0,
+    "excited_after": 0.0,
+    "depth_before": 100,
+    "depth_after": 115,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   }
+  ]
+ },
+ "textbook phase estimation n 2-5": {
+  "summary": {
+   "items": 60,
+   "items_parked": 0,
+   "waits": 0,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 0.0,
+   "excited_after": 0.0,
+   "depth_before": [
+    26,
+    250
+   ],
+   "depth_after": [
+    26,
+    250
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "textbook n2 j0",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 26,
+    "depth_after": 26,
+    "cz_before": 5,
+    "cz_after": 5,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n2 j1",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 53,
+    "depth_after": 53,
+    "cz_before": 15,
+    "cz_after": 15,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n2 j2",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 47,
+    "depth_after": 47,
+    "cz_before": 15,
+    "cz_after": 15,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n2 j3",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 51,
+    "depth_after": 51,
+    "cz_before": 15,
+    "cz_after": 15,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j0",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 57,
+    "depth_after": 57,
+    "cz_before": 15,
+    "cz_after": 15,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j1",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 98,
+    "cz_before": 39,
+    "cz_after": 39,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j2",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 94,
+    "depth_after": 94,
+    "cz_before": 39,
+    "cz_after": 39,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j3",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 96,
+    "depth_after": 96,
+    "cz_before": 39,
+    "cz_after": 39,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j4",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 85,
+    "depth_after": 85,
+    "cz_before": 28,
+    "cz_after": 28,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j5",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 98,
+    "depth_after": 98,
+    "cz_before": 39,
+    "cz_after": 39,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j6",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 94,
+    "depth_after": 94,
+    "cz_before": 39,
+    "cz_after": 39,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n3 j7",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 96,
+    "depth_after": 96,
+    "cz_before": 39,
+    "cz_after": 39,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j0",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 102,
+    "depth_after": 102,
+    "cz_before": 36,
+    "cz_after": 36,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j1",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 164,
+    "depth_after": 164,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j2",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 160,
+    "depth_after": 160,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j3",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 162,
+    "depth_after": 162,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j4",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 148,
+    "depth_after": 148,
+    "cz_before": 60,
+    "cz_after": 60,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j5",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 164,
+    "depth_after": 164,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j6",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 158,
+    "depth_after": 158,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j7",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 162,
+    "depth_after": 162,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j8",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 157,
+    "depth_after": 157,
+    "cz_before": 64,
+    "cz_after": 64,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j9",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 164,
+    "depth_after": 164,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j10",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 160,
+    "depth_after": 160,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j11",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 162,
+    "depth_after": 162,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j12",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 148,
+    "depth_after": 148,
+    "cz_before": 60,
+    "cz_after": 60,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j13",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 164,
+    "depth_after": 164,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j14",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 158,
+    "depth_after": 158,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n4 j15",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 162,
+    "depth_after": 162,
+    "cz_before": 80,
+    "cz_after": 80,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j0",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 162,
+    "depth_after": 162,
+    "cz_before": 68,
+    "cz_after": 68,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j1",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j2",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 234,
+    "depth_after": 234,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j3",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j4",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 227,
+    "depth_after": 227,
+    "cz_before": 112,
+    "cz_after": 112,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j5",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j6",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 232,
+    "depth_after": 232,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j7",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j8",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 250,
+    "depth_after": 250,
+    "cz_before": 110,
+    "cz_after": 110,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j9",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j10",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 234,
+    "depth_after": 234,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j11",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j12",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 227,
+    "depth_after": 227,
+    "cz_before": 112,
+    "cz_after": 112,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j13",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j14",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 232,
+    "depth_after": 232,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j15",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j16",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 226,
+    "depth_after": 226,
+    "cz_before": 102,
+    "cz_after": 102,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j17",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j18",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 234,
+    "depth_after": 234,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j19",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j20",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 227,
+    "depth_after": 227,
+    "cz_before": 112,
+    "cz_after": 112,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j21",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j22",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 232,
+    "depth_after": 232,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j23",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j24",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 248,
+    "depth_after": 248,
+    "cz_before": 110,
+    "cz_after": 110,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j25",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j26",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 234,
+    "depth_after": 234,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j27",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j28",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 227,
+    "depth_after": 227,
+    "cz_before": 112,
+    "cz_after": 112,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j29",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 238,
+    "depth_after": 238,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j30",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 232,
+    "depth_after": 232,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   },
+   {
+    "tag": "textbook n5 j31",
+    "waits": 0,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.0,
+    "excited_after": 0.0,
+    "depth_before": 236,
+    "depth_after": 236,
+    "cz_before": 138,
+    "cz_after": 138,
+    "distribution_same": true
+   }
+  ]
+ },
+ "repetition code F16": {
+  "summary": {
+   "items": 4,
+   "items_parked": 0,
+   "waits": 4,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 6.0,
+   "excited_after": 6.0,
+   "depth_before": [
+    62,
+    62
+   ],
+   "depth_after": [
+    62,
+    62
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "F16 n",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 62,
+    "depth_after": 62,
+    "cz_before": 16,
+    "cz_after": 16,
+    "distribution_same": true
+   },
+   {
+    "tag": "F16 0",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 62,
+    "depth_after": 62,
+    "cz_before": 16,
+    "cz_after": 16,
+    "distribution_same": true
+   },
+   {
+    "tag": "F16 1",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 62,
+    "depth_after": 62,
+    "cz_before": 16,
+    "cz_after": 16,
+    "distribution_same": true
+   },
+   {
+    "tag": "F16 2",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 62,
+    "depth_after": 62,
+    "cz_before": 16,
+    "cz_after": 16,
+    "distribution_same": true
+   }
+  ]
+ },
+ "repetition code F10": {
+  "summary": {
+   "items": 4,
+   "items_parked": 0,
+   "waits": 4,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 6.0,
+   "excited_after": 6.0,
+   "depth_before": [
+    43,
+    43
+   ],
+   "depth_after": [
+    43,
+    43
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "F10 n",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 43,
+    "depth_after": 43,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "F10 0",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 43,
+    "depth_after": 43,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "F10 1",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 43,
+    "depth_after": 43,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "F10 2",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 43,
+    "depth_after": 43,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   }
+  ]
+ },
+ "repetition code F6P": {
+  "summary": {
+   "items": 4,
+   "items_parked": 0,
+   "waits": 4,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 6.0,
+   "excited_after": 6.0,
+   "depth_before": [
+    35,
+    35
+   ],
+   "depth_after": [
+    35,
+    35
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "F6P n",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.5,
+    "excited_after": 0.5,
+    "depth_before": 35,
+    "depth_after": 35,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "F6P 0",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 2.5,
+    "excited_after": 2.5,
+    "depth_before": 35,
+    "depth_after": 35,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "F6P 1",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 35,
+    "depth_after": 35,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   },
+   {
+    "tag": "F6P 2",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 35,
+    "depth_after": 35,
+    "cz_before": 10,
+    "cz_after": 10,
+    "distribution_same": true
+   }
+  ]
+ },
+ "repetition code F6": {
+  "summary": {
+   "items": 4,
+   "items_parked": 0,
+   "waits": 4,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 6.0,
+   "excited_after": 6.0,
+   "depth_before": [
+    29,
+    29
+   ],
+   "depth_after": [
+    29,
+    29
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "F6 n",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 0.5,
+    "excited_after": 0.5,
+    "depth_before": 29,
+    "depth_after": 29,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "F6 0",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 2.5,
+    "excited_after": 2.5,
+    "depth_before": 29,
+    "depth_after": 29,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "F6 1",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 29,
+    "depth_after": 29,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   },
+   {
+    "tag": "F6 2",
+    "waits": 1,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.5,
+    "excited_after": 1.5,
+    "depth_before": 29,
+    "depth_after": 29,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   }
+  ]
+ },
+ "decoy sub-item rd2 (and its off variant Z)": {
+  "summary": {
+   "items": 2,
+   "items_parked": 0,
+   "waits": 8,
+   "parked_waits": 0,
+   "parked_logical_qubits": [],
+   "excited_before": 3.57,
+   "excited_after": 3.57,
+   "depth_before": [
+    42,
+    44
+   ],
+   "depth_after": [
+    42,
+    44
+   ],
+   "depth_added": [
+    0,
+    0
+   ],
+   "cz_same": true,
+   "distribution_same": true
+  },
+  "rows": [
+   {
+    "tag": "rd2",
+    "waits": 4,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 1.3549,
+    "excited_after": 1.3549,
+    "depth_before": 44,
+    "depth_after": 44,
+    "cz_before": 12,
+    "cz_after": 12,
+    "distribution_same": true
+   },
+   {
+    "tag": "rd2 Z",
+    "waits": 4,
+    "parked_waits": 0,
+    "parked": [],
+    "excited_before": 2.215,
+    "excited_after": 2.215,
+    "depth_before": 42,
+    "depth_after": 42,
+    "cz_before": 6,
+    "cz_after": 6,
+    "distribution_same": true
+   }
+  ]
+ }
+}

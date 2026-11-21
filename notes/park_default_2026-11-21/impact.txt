@@ -1,0 +1,12 @@
+neuron / RUS loop P0 (rus_chain m 3; os3, paired, loopvar): 3 items, 0 with a parked qubit; waits 15, parked 0; qubits []; excited 20.747 -> 20.747; depth [14, 68] -> [14, 68] (added [0, 0]); CZ same True; distribution same True
+RUS P3 (rus_chain m 2): 3 items, 0 with a parked qubit; waits 9, parked 0; qubits []; excited 11.878 -> 11.878; depth [12, 62] -> [12, 62] (added [0, 0]); CZ same True; distribution same True
+RUS P1 (flip_chain; loopvar's x): 6 items, 0 with a parked qubit; waits 33, parked 0; qubits []; excited 16.754 -> 16.754; depth [16, 86] -> [16, 86] (added [0, 0]); CZ same True; distribution same True
+RUS NF (flip_chain, no flip; B's other frame): 6 items, 0 with a parked qubit; waits 27, parked 0; qubits []; excited 36.048 -> 36.048; depth [13, 71] -> [13, 71] (added [0, 0]); CZ same True; distribution same True
+RUS P2 (rus3 chain): 6 items, 0 with a parked qubit; waits 33, parked 0; qubits []; excited 16.754 -> 16.754; depth [15, 85] -> [15, 85] (added [0, 0]); CZ same True; distribution same True
+IPE n 2-6 (every phase): 124 items, 124 with a parked qubit; waits 1032, parked 1032; qubits [1]; excited 1032.0 -> 0.0; depth [10, 102] -> [10, 117] (added [0, 16]); CZ same True; distribution same True
+textbook phase estimation n 2-5: 60 items, 0 with a parked qubit; waits 0, parked 0; qubits []; excited 0.0 -> 0.0; depth [26, 250] -> [26, 250] (added [0, 0]); CZ same True; distribution same True
+repetition code F16: 4 items, 0 with a parked qubit; waits 4, parked 0; qubits []; excited 6.0 -> 6.0; depth [62, 62] -> [62, 62] (added [0, 0]); CZ same True; distribution same True
+repetition code F10: 4 items, 0 with a parked qubit; waits 4, parked 0; qubits []; excited 6.0 -> 6.0; depth [43, 43] -> [43, 43] (added [0, 0]); CZ same True; distribution same True
+repetition code F6P: 4 items, 0 with a parked qubit; waits 4, parked 0; qubits []; excited 6.0 -> 6.0; depth [35, 35] -> [35, 35] (added [0, 0]); CZ same True; distribution same True
+repetition code F6: 4 items, 0 with a parked qubit; waits 4, parked 0; qubits []; excited 6.0 -> 6.0; depth [29, 29] -> [29, 29] (added [0, 0]); CZ same True; distribution same True
+decoy sub-item rd2 (and its off variant Z): 2 items, 0 with a parked qubit; waits 8, parked 0; qubits []; excited 3.57 -> 3.57; depth [42, 44] -> [42, 44] (added [0, 0]); CZ same True; distribution same True
