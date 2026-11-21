@@ -68,3 +68,14 @@ Predictions over the nights of 11-16 to 11-21: 65 declared; 45 held, 20 failed.
 ## Reproduce
 
 `python reproduce.py --psf-os <psf-os 0.3.0> rus-fence-night-2026-11-21` (1 of 1 SAME at home).
+
+## Independent check (home VS, 2026-11-22)
+
+Re-counted from `job/raw_counts.json` and `job/manifest.json` with qiskit, aer and numpy only (no psf-os, no notebook
+scorer; `notes/verify_2026-11-21/rf_indep.py`): every P, both differences and their words, row 1, the gate open, the
+controls' values (F10 0.8903, F6P 0.9186, F6 0.9294) and M - D beside agree with this record. Sent as declared: 84
+circuits (80 user, 4 sentinel), 1950 shots, no off or floor cell, `psf_os_build` 0.3.0 / park True / explicit. M's
+added X sit on the qubits that `part.json` lists, in even counts and at most two per listed qubit-wait (fewer than
+twice the list where the X after one wait and the X before the next cancel, so the qubit stays flipped across both).
+The device rule: all three queues 0, the declared order -> ibm_fez, where the job ran. Charges 48 s, 0.7840 RU, model
+50.2 s. Reproduce 1 of 1 SAME.
