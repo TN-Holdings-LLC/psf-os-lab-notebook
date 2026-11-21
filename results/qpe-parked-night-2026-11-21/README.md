@@ -32,7 +32,9 @@ Charged 83 s, 1.37 resource units (the model 87.0 s). Each job holds one sentine
 - Reading (the declared table, row 1): **parking keeps more at every n, and the parked loss per added bit is per
   round.**
 - Beside, never judged: the parked form reads higher on the paired phases (0, step, 2 step, ...) than on every phase
-  (0.904 against 0.874 at n = 4); the paired phases are the ones the compiler reduces to fewer CZ (phase 0 to none).
+  (0.904 against 0.874 at n = 4; 0.845 on the other phases). Many paired phases are cut to fewer CZ by the compiler:
+  phase 0 to none, 6.0 CZ on average against 8.0, 10.0 and 11.7 on the other phases at n = 4, 5, 6 (at n = 4, phases
+  2, 6, 10 and 14 keep their 8). A phase and its twin have the same compiled CZ, so no verdict carries it.
   Tonight's parked IPE over every phase (0.874 at n = 4) reads below the weekend's unparked over every phase
   (0.896). That is another calibration; inside tonight's jobs the parked form
   keeps more at every n. Across nights nothing is compared.
@@ -57,3 +59,14 @@ Predictions over the nights of 11-16 to 11-21: 64 declared; 44 held, 20 failed.
 ## Reproduce
 
 `python reproduce.py --psf-os <psf-os 0.3.0> qpe-parked-night-2026-11-21` (1 of 1 SAME at home).
+
+## Independent check (home VS, 2026-11-21 evening)
+
+Re-counted from `job/raw_counts.json` and `job/manifest.json` with qiskit, aer and numpy only (no psf-os, no notebook
+scorer; `notes/verify_2026-11-21/parked_indep.py`): every p, 2 SE, paired difference, ceiling, log drop and the
+acceleration with its declared SE, every word and the reading row agree with this record. The 24 pairs are on the
+declared phases and each pair is inside one job, with equal compiled CZ. Sent as declared: 1950 shots, 72 + 72
+circuits, ff only, `psf_os_build` 0.3.0 / park True / explicit; followed branch by branch, the n = 4 parked circuits
+hold the target in |0> at every wait and are the weekend C's 16 pk circuits exactly. Charges 83 s, 1.3656 RU, model
+87.0 s. Reproduce 1 of 1 SAME with psf-os 0.3.0. One wording corrected: the paired phases' CZ (above; the first text
+said every paired phase is cut, and four at n = 4 are not).
