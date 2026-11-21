@@ -72,3 +72,28 @@ Results:
 - B's n = 4 is the 16 pl4 items; no job holds an ipe4 item.
 - The compiled CZ of pl, fe and pk is the same at every phase.
 - reproduce.py with psf-os a164fc5 gives 3 of 3 SAME.
+
+## The parked phase estimation (results/qpe-parked-night-2026-11-21): the home VS's independent recount
+
+From the home instruction `VSクロードへの指示_置いたIPEの結果の独立検証_2026-11-21.md`. The report is
+`VSから家へ_置いたIPEの結果の独立検証_2026-11-21.md`.
+
+`parked_indep.py RECORD WEEKEND_RECORD OUT.json` writes `parked_indep.txt` and `.json`. It uses qiskit, aer and numpy
+only, and recounts:
+
+- the parked shares and 2 SE per n;
+- the paired differences on the phases that hold both forms, checking that each pair is in one job and that the
+  phases are 0, step, 2 step, ...;
+- the parked log shape with the declared SE;
+- the words and the reading table's row (row 1).
+
+Every number and word equals the record. Beside:
+
+- **What was sent:** the jobs hold ff arms only and record `psf_os_build` 0.3.0 / park True / explicit; 83 s,
+  1.3656 RU, 87.0 s.
+- **The target at the waits:** in every branch at every wait of the parked n = 4 circuits, it is in |0>
+  (P(|1>) <= 2.5e-31).
+- **Against the weekend:** the parked n = 4 circuits equal the weekend's C pk circuits (16 of 16).
+- **Compiled CZ per phase:** paired phases average 6.0, against 8.0 / 10.0 / 11.7 on the other phases. At n = 4, four
+  of the eight paired phases (2, 6, 10, 14) keep the full 8 CZ.
+- reproduce.py with psf-os 0.3.0 gives 1 of 1 SAME.

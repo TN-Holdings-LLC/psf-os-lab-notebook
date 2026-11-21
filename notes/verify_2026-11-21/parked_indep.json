@@ -1,0 +1,17 @@
+{
+ "lines": [
+  "n 4: parked 0.8742 (2 SE 0.0038, 31200 shots) -> BEYOND THE CEILING (margin +0.4036); paired phases [0, 2, 4, 6, 8, 10, 12, 14] (= 0, 2, 2*2, ...: True; same job True); 0.9037 - 0.8688 = +0.0349 (2 SE 0.0072) -> KEEPS MORE",
+  "   beside: parked on the other phases 0.8447; compiled CZ mean, paired 6.00 / other 8.00; per paired phase 0:0, 2:8, 4:6, 6:8, 8:4, 10:8, 12:6, 14:8; twin CZ equal True",
+  "n 5: parked 0.8391 (2 SE 0.0029, 62400 shots) -> BEYOND THE CEILING (margin +0.4599); paired phases [0, 4, 8, 12, 16, 20, 24, 28] (= 0, 4, 2*4, ...: True; same job True); 0.8990 - 0.8678 = +0.0312 (2 SE 0.0073) -> KEEPS MORE",
+  "   beside: parked on the other phases 0.8191; compiled CZ mean, paired 6.00 / other 10.00; per paired phase 0:0, 4:8, 8:6, 12:8, 16:4, 20:8, 24:6, 28:8; twin CZ equal True",
+  "n 6: parked 0.8006 (2 SE 0.0023, 124800 shots) -> BEYOND THE CEILING (margin +0.4941); paired phases [0, 8, 16, 24, 32, 40, 48, 56] (= 0, 8, 2*8, ...: True; same job True); 0.8908 - 0.8522 = +0.0386 (2 SE 0.0076) -> KEEPS MORE",
+  "   beside: parked on the other phases 0.7877; compiled CZ mean, paired 6.00 / other 11.71; per paired phase 0:0, 8:8, 16:6, 24:8, 32:4, 40:8, 48:6, 56:8; twin CZ equal True",
+  "parked shape: log drops +0.0410, +0.0469; acceleration +0.0059 (2 SE 0.0087) -> FLAT",
+  "reading table row (rows in the declared order): 1",
+  "job0: 72 circuits, roles {'user': 68, 'sentinel': 4}, shots [1950], parked 51 / unparked 17, off/floor cells none, psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'}, charged 41 s, 0.6775 RU, model 43.5",
+  "job1: 72 circuits, roles {'user': 68, 'sentinel': 4}, shots [1950], parked 61 / unparked 7, off/floor cells none, psf_os_build {'version': '0.3.0', 'park': True, 'park_set': 'explicit'}, charged 42 s, 0.6881 RU, model 43.5",
+  "total charged 83 s, 1.3656 RU, model 87.0 s; qubits [0, 1]",
+  "target at the waits (n = 4): parked circuits, largest P(|1>) in any branch at any wait 2.47e-31; unparked twins 1.000",
+  "parked n = 4 against the weekend's C pk (BC1): 16 of 16 equal circuits; 16 of 16 with the same instruction sequence (names and qubits)"
+ ]
+}
