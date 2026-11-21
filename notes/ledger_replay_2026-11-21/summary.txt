@@ -1,0 +1,119 @@
+== (d) paired1120
+  ledger_used: false
+  ledger_why: "other calibration (2026-11-19 10:59:49+01:00 -> 2026-11-19 23:09:26+01:00): start from tonight's diagnostics"
+  per_key: {}
+  diagnostics_stacks: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_stacks: {"1": ["P0"], "2": ["P0"], "3": ["P0"]}
+  round1_candidates: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_steps: {"1": "base", "2": "base", "3": "base"}
+  stacks_per_rule: {"RULE1.json": {"1": ["P0"], "2": ["P0"], "3": ["P0"]}, "RULE2.json": {"1": ["P0"], "2": ["P0"], "3": ["P2"]}, "RULE3.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2", "M"]}}
+  stop: "the rule: no step left on any key: every key keeps its incumbent (after round 2)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1"], "one_recorded_job": true}, "r2": {"primary": "r2", "test_cells_from": ["r2"], "one_recorded_job": true}}
+  against_record: {"RULE1.json": "bytes SAME", "RULE2.json": "bytes SAME", "RULE3.json": "bytes SAME", "stop reason": "SAME"}
+  verify: {"ok": true, "last": "SAME"}
+== (a) paired1120
+  ledger_used: true
+  ledger_why: "same device and calibration time"
+  per_key: {"1": "ledger used: start from P2+M (same device and calibration time; family agrees)", "2": "diagnostics disagree (tonight P1, ledger P0): the diagnostics win, ledger not used", "3": "ledger used: start from P2+M (same device and calibration time; family agrees)"}
+  diagnostics_stacks: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_stacks: {"1": ["P0"], "2": ["P0"], "3": ["P0"]}
+  round1_candidates: {"1": ["P2", "M"], "2": ["P1"], "3": ["P2", "M"]}
+  round1_steps: {"1": "ledger", "2": "base", "3": "ledger"}
+  stacks_per_rule: {"RULE1.json": {"1": ["P0"], "2": ["P0"], "3": ["P0"]}, "RULE2.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2", "M"]}}
+  stop: "r2: 記録にない: 3 of 19 circuits of r2 are in no recorded job of loop-paired-night-2026-11-20 (name and gates): ff_y2ac, ff_y2ac_floor, ff_y2ac_off"
+  replay_missing: true
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r2", "test_cells_from": ["r1", "r2"], "one_recorded_job": false}}
+  verify: {"ok": true, "last": "SAME"}
+== (c) other device
+  ledger_used: false
+  ledger_why: "other device (ibm_fez -> ibm_marrakesh): start from tonight's diagnostics"
+  per_key: {}
+  diagnostics_stacks: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_stacks: {"1": ["P0"], "2": ["P0"], "3": ["P0"]}
+  round1_candidates: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_steps: {"1": "base", "2": "base", "3": "base"}
+  stacks_per_rule: {"RULE1.json": {"1": ["P0"], "2": ["P0"], "3": ["P0"]}, "RULE2.json": {"1": ["P0"], "2": ["P0"], "3": ["P2"]}, "RULE3.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2", "M"]}}
+  stop: "the rule: no step left on any key: every key keeps its incumbent (after round 2)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1"], "one_recorded_job": true}, "r2": {"primary": "r2", "test_cells_from": ["r2"], "one_recorded_job": true}}
+  against_record: {"RULE1.json": "DIFFERENT (the same without the ledger's fields)", "RULE2.json": "bytes SAME", "RULE3.json": "bytes SAME", "stop reason": "SAME"}
+== (c) other calibration
+  ledger_used: false
+  ledger_why: "other calibration (2026-11-19 10:59:49+01:00 -> 2026-11-19 23:09:26+01:00): start from tonight's diagnostics"
+  per_key: {}
+  diagnostics_stacks: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_stacks: {"1": ["P0"], "2": ["P0"], "3": ["P0"]}
+  round1_candidates: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_steps: {"1": "base", "2": "base", "3": "base"}
+  stacks_per_rule: {"RULE1.json": {"1": ["P0"], "2": ["P0"], "3": ["P0"]}, "RULE2.json": {"1": ["P0"], "2": ["P0"], "3": ["P2"]}, "RULE3.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2", "M"]}}
+  stop: "the rule: no step left on any key: every key keeps its incumbent (after round 2)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1"], "one_recorded_job": true}, "r2": {"primary": "r2", "test_cells_from": ["r2"], "one_recorded_job": true}}
+  against_record: {"RULE1.json": "DIFFERENT (the same without the ledger's fields)", "RULE2.json": "bytes SAME", "RULE3.json": "bytes SAME", "stop reason": "SAME"}
+== (c) broken file (not JSON)
+  ledger_used: false
+  ledger_why: "ledger unreadable (the file is not JSON (JSONDecodeError)): start from tonight's diagnostics"
+  per_key: {}
+  diagnostics_stacks: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_stacks: {"1": ["P0"], "2": ["P0"], "3": ["P0"]}
+  round1_candidates: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_steps: {"1": "base", "2": "base", "3": "base"}
+  stacks_per_rule: {"RULE1.json": {"1": ["P0"], "2": ["P0"], "3": ["P0"]}, "RULE2.json": {"1": ["P0"], "2": ["P0"], "3": ["P2"]}, "RULE3.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2", "M"]}}
+  stop: "the rule: no step left on any key: every key keeps its incumbent (after round 2)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1"], "one_recorded_job": true}, "r2": {"primary": "r2", "test_cells_from": ["r2"], "one_recorded_job": true}}
+  against_record: {"RULE1.json": "DIFFERENT (the same without the ledger's fields)", "RULE2.json": "bytes SAME", "RULE3.json": "bytes SAME", "stop reason": "SAME"}
+== (c) broken line (last_stacks not a table)
+  ledger_used: false
+  ledger_why: "ledger unreadable (its last_stacks is not a table of keys (list)): start from tonight's diagnostics"
+  per_key: {}
+  diagnostics_stacks: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_stacks: {"1": ["P0"], "2": ["P0"], "3": ["P0"]}
+  round1_candidates: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_steps: {"1": "base", "2": "base", "3": "base"}
+  stacks_per_rule: {"RULE1.json": {"1": ["P0"], "2": ["P0"], "3": ["P0"]}, "RULE2.json": {"1": ["P0"], "2": ["P0"], "3": ["P2"]}, "RULE3.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2", "M"]}}
+  stop: "the rule: no step left on any key: every key keeps its incumbent (after round 2)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1"], "one_recorded_job": true}, "r2": {"primary": "r2", "test_cells_from": ["r2"], "one_recorded_job": true}}
+  against_record: {"RULE1.json": "DIFFERENT (the same without the ledger's fields)", "RULE2.json": "bytes SAME", "RULE3.json": "bytes SAME", "stop reason": "SAME"}
+== (c) L missing (no L3)
+  ledger_used: true
+  ledger_why: "same device and calibration time"
+  per_key: {"1": "ledger used: start from P2+M (same device and calibration time; family agrees)", "2": "diagnostics disagree (tonight P1, ledger P0): the diagnostics win, ledger not used", "3": "no stack for this key in the ledger"}
+  diagnostics_stacks: {"1": ["P2"], "2": ["P1"], "3": ["P2"]}
+  round1_stacks: {"1": ["P0"], "2": ["P0"], "3": ["P0"]}
+  round1_candidates: {"1": ["P2", "M"], "2": ["P1"], "3": ["P2"]}
+  round1_steps: {"1": "ledger", "2": "base", "3": "base"}
+  stacks_per_rule: {"RULE1.json": {"1": ["P0"], "2": ["P0"], "3": ["P0"]}, "RULE2.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2"]}, "RULE3.json": {"1": ["P2", "M"], "2": ["P0"], "3": ["P2", "M"]}}
+  stop: "the rule: no step left on any key: every key keeps its incumbent (after round 2)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1", "r2"], "one_recorded_job": false}, "r2": {"primary": "r2", "test_cells_from": ["r2"], "one_recorded_job": true}}
+  against_record: {"RULE1.json": "DIFFERENT", "RULE2.json": "DIFFERENT", "RULE3.json": "DIFFERENT", "stop reason": "SAME"}
+== (d) loop1119
+  ledger_used: false
+  ledger_why: "other calibration (2026-11-18 11:05:21+01:00 -> 2026-11-19 10:59:49+01:00): start from tonight's diagnostics"
+  per_key: {}
+  diagnostics_stacks: {"1": ["P1"], "2": ["P1"], "3": ["P1"]}
+  round1_stacks: {"1": ["P1"], "2": ["P1"], "3": ["P1"]}
+  round1_candidates: null
+  round1_steps: null
+  stacks_per_rule: {"RULE1.json": {"1": ["P1"], "2": ["P1"], "3": ["P1"]}, "RULE2.json": {"1": ["P1"], "2": ["P1"], "3": ["P1"]}, "RULE3.json": {"1": ["P1", "M"], "2": ["P0"], "3": ["P0"]}, "RULE4.json": {"1": ["P1", "M"], "2": ["P0"], "3": ["P0"]}}
+  stop: "the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 3)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1"], "one_recorded_job": true}, "r2": {"primary": "r2", "test_cells_from": ["r2"], "one_recorded_job": true}, "r3": {"primary": "r3", "test_cells_from": ["r3"], "one_recorded_job": true}}
+  against_record: {"RULE1.json": "bytes SAME", "RULE2.json": "bytes SAME", "RULE3.json": "bytes SAME", "RULE4.json": "bytes SAME", "stop reason": "SAME"}
+  verify: {"ok": true, "last": "SAME"}
+== (b) loop1119
+  ledger_used: true
+  ledger_why: "same device and calibration time"
+  per_key: {"1": "ledger used: start from P1+M (same device and calibration time; family agrees)", "2": "diagnostics disagree (tonight P1, ledger P0): the diagnostics win, ledger not used", "3": "diagnostics disagree (tonight P1, ledger P0): the diagnostics win, ledger not used"}
+  diagnostics_stacks: {"1": ["P1"], "2": ["P1"], "3": ["P1"]}
+  round1_stacks: {"1": ["P1", "M"], "2": ["P1"], "3": ["P1"]}
+  round1_candidates: null
+  round1_steps: null
+  stacks_per_rule: {"RULE1.json": {"1": ["P1", "M"], "2": ["P1"], "3": ["P1"]}, "RULE2.json": {"1": ["P1", "M"], "2": ["P1"], "3": ["P1"]}, "RULE3.json": {"1": ["P1", "M"], "2": ["P0"], "3": ["P0"]}, "RULE4.json": {"1": ["P1", "M"], "2": ["P0"], "3": ["P0"]}}
+  stop: "the rule: fixed point: every L keeps its stack, none overshoots, none NOT SHOWN for the first time (after round 3)"
+  replay_missing: false
+  jobs: {"dc": {"primary": "dc", "test_cells_from": ["dc"], "one_recorded_job": true}, "dw": {"primary": "dw", "test_cells_from": ["dw"], "one_recorded_job": true}, "r1": {"primary": "r1", "test_cells_from": ["r1", "r3"], "one_recorded_job": false}, "r2": {"primary": "r2", "test_cells_from": ["r2", "r3"], "one_recorded_job": false}, "r3": {"primary": "r3", "test_cells_from": ["r3"], "one_recorded_job": true}}
+  verify: {"ok": true, "last": "SAME"}
