@@ -86,3 +86,13 @@ Every other question was read by its table only (no direction declared). Predict
 
 `python reproduce.py --psf-os <a164fc5> weekend-shared-night-2026-11-21-A weekend-shared-night-2026-11-21-B
 weekend-shared-night-2026-11-21-C` (re-scores each candidate from the raw counts; 3 of 3 SAME at home).
+
+## Independent check (home VS, 2026-11-21)
+
+Re-counted from `job/raw_counts.json` and `job/manifest.json` with qiskit, aer and numpy only (no psf-os, no notebook
+scorer; `notes/verify_2026-11-21/weekend_indep.py`): every p, 2 SE and per-error value of A, B and C, the three
+comparisons of A and C, B's log drops, acceleration and its declared SE, every word and every reading row agree with
+this record. B's n = 4 is read from C's pl (16 items; no item tagged ipe4 in the jobs, nothing counted twice). Sent
+as declared: shots 4000 and 1950, 20 / 76 / 76 circuits (each 4 of them the sentinel), no off or floor arm, A on
+[0-4], B and C on [0, 1]. C's compiled CZ is the same for pl, fe and pk at every phase, so C's comparisons carry no
+CZ difference. Charges 111 s, 1.8223 RU, model 116.9 s. Reproduce 3 of 3 SAME.

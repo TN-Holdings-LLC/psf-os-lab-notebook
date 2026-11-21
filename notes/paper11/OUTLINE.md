@@ -41,7 +41,7 @@ Predictions since paper 10: 5 declared, 5 held. Over the nights of 11-16 to 11-2
 (each failure stays in paper 10 and its folder). Device time for this paper: 165 + 110 + 111 = 386 s charged.
 
 Independent checks (home VS, qiskit, aer and numpy only, no project scorer): decoy and loopvar (a2c6eb56), the
-paired loop (bfae2760, seven of seven items agree); the weekend night [PENDING].
+paired loop (bfae2760, seven of seven items agree); the weekend night (1a87c959: every number, word and row agrees).
 
 ## Sections (planned)
 
@@ -65,9 +65,9 @@ paired loop (bfae2760, seven of seven items agree); the weekend night [PENDING].
    not on the share); FLAT.
 8. **The operating layer after these nights (psf-os)**: park by default (only qubits in |1> on every branch; the
    noiseless output and the CZ count checked equal at every build; old records rebuilt without parking)
-   [PENDING: the home VS's branch park-default-2026-11-21]; the packing rule unchanged; the paired loop (opt-in);
+   (psf-os park-default-2026-11-21, 21ca4c2: only IPE changes among the tools so far; 1032 of 1032 waits parked; reproduce 88 of 88 SAME; the owner's rules: park=False written in any test that compares with the unparked form, the bundle paths parked too, the off arm parked as the ff arm); the packing rule unchanged; the paired loop (opt-in);
    the footprint recorded at every build; the ledger's path checked by replay of the device records, not on the device
-   [PENDING: ledger-replay-2026-11-21].
+   (psf-os ledger-replay-2026-11-21, b736028: the 11-20 night replayed with a same-calibration ledger line starts from the ledger's stacks and stops where a circuit is not in the record; a broken ledger is not used, with its reason).
 9. **Limits**: one device (marrakesh), one night per test; park on IPE n = 4 only; A's depth differences; B's shape
    from two jobs; the off arms not sent on 11-21; LP-2 one row; drift measured on one night.
 10. **Reproduction**: `reproduce.py` entries (decoy, loopvar, paired dw/dc and `verify`, weekend A/B/C), all SAME.
@@ -88,7 +88,6 @@ paired loop (bfae2760, seven of seven items agree); the weekend night [PENDING].
 
 ## Before the text
 
-- [PENDING] The home VS's independent check of the weekend night.
 - [PENDING] psf-os park-default (tests, the effect table on every earlier tool, reproduce all SAME); then a release
   (0.3.0) for the paper to cite.
 - [OWNER] The title; whether the ledger replay is in the paper or only in the release notes; whether F6/F6P count as
