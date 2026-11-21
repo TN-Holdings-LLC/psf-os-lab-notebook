@@ -1,0 +1,4 @@
+job0 B: 72 items; B's own check: 76 circuits; PASS
+job1 B: 24 items; B's own check: 28 circuits; PASS
+job1 C: 48 items; C's own check: 52 circuits; PASS
+PASS

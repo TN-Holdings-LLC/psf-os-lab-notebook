@@ -1,0 +1,10 @@
+== A
+F16 (CZ 16, carriers 3): lut3 c[0] right 0.7511 (2 SE 0.0068) against C 0.8750 -> NOT BEYOND (margin -0.1239); per error n 0.639, 0 0.665, 1 0.867, 2 0.834
+F10 (CZ 10, carriers 3): lut3 c[0] right 0.8364 (2 SE 0.0058) against C 0.8750 -> NOT BEYOND (margin -0.0386); per error n 0.847, 0 0.870, 1 0.835, 2 0.794
+F6P (CZ 10, carriers 1): lut3 c[0] right 0.8518 (2 SE 0.0056) against C 0.8750 -> NOT BEYOND (margin -0.0232); per error n 0.869, 0 0.894, 1 0.822, 2 0.823
+F6 (CZ 6, carriers 1): lut3 c[0] right 0.8741 (2 SE 0.0052) against C 0.8750 -> NOT BEYOND (margin -0.0009); per error n 0.892, 0 0.874, 1 0.874, 2 0.857
+footprint: +0.0153 (2 SE 0.0081) -> KEEPS MORE
+cz: +0.0224 (2 SE 0.0077) -> KEEPS MORE
+cz16: +0.0854 (2 SE 0.0090) -> KEEPS MORE
+reading [OWNER]: both: fewer carriers and fewer CZ each keep more
+beside: CZ at equal carriers (F10 - F16) KEEPS MORE

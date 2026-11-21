@@ -1,0 +1,149 @@
+{
+ "kind": "psfos",
+ "psfos_role": "user",
+ "psfos_job": {
+  "kind": "feedforward"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_marrakesh",
+ "masked": [],
+ "labels": [
+  0,
+  1
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 1950,
+ "export": {
+  "qpy": "ff_ipe6_61.qpy",
+  "circuits": 1,
+  "sha256": "03dd049cf06a21d5697cedd88e9916835ca7d840e012fef581ba5163473616ac"
+ },
+ "tag": "ipe6_61",
+ "chain": [
+  0,
+  1
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ]
+ },
+ "success": {
+  "0": 1,
+  "1": 1,
+  "2": 1,
+  "3": 1,
+  "4": 0,
+  "5": 1
+ },
+ "bound": null,
+ "clbits": 6,
+ "mid": 5,
+ "conditionals": 20,
+ "logical_cz": 12,
+ "off_explicit": true,
+ "ff_arm": "ff",
+ "cz": 12,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ },
+ "ff_only": true,
+ "wait_footprint": {
+  "sent": {
+   "ff": {
+    "max": 1,
+    "total": 11,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "off": {
+    "max": 1,
+    "total": 6,
+    "carriers": [
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ],
+     [
+      1
+     ]
+    ]
+   }
+  },
+  "written": {
+   "max": 0,
+   "total": 0,
+   "carriers": [
+    [],
+    [],
+    [],
+    [],
+    []
+   ]
+  },
+  "max": 1,
+  "total": 11
+ }
+}

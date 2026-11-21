@@ -1,0 +1,362 @@
+{
+ "device": "ibm_marrakesh",
+ "kind": "feedforward",
+ "items": {
+  "f16_n": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 16,
+   "off_cz": 16,
+   "floor_cz": 16,
+   "depth": 62,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f10_n": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f6p_n": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  },
+  "f6_n": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  },
+  "f16_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 16,
+   "off_cz": 16,
+   "floor_cz": 16,
+   "depth": 62,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f10_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f6p_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  },
+  "f6_0": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  },
+  "f16_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 16,
+   "off_cz": 16,
+   "floor_cz": 16,
+   "depth": 62,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f10_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f6p_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  },
+  "f6_1": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  },
+  "f16_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 16,
+   "off_cz": 16,
+   "floor_cz": 16,
+   "depth": 62,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f10_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 43,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 3,
+   "footprint_total": 3
+  },
+  "f6p_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 10,
+   "off_cz": 10,
+   "floor_cz": 10,
+   "depth": 35,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  },
+  "f6_2": {
+   "n": 5,
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "cz": 6,
+   "off_cz": 6,
+   "floor_cz": 6,
+   "depth": 29,
+   "mid": 2,
+   "conditionals": 5,
+   "success": {
+    "2": 0
+   },
+   "bound": null,
+   "footprint_max": 1,
+   "footprint_total": 1
+  }
+ },
+ "circuits": 20,
+ "qpu_seconds_model": 25.3,
+ "shots": 4000,
+ "note": "the time model does not include mid-circuit measurement and feed-forward latency (microseconds per shot), small against its per-shot term"
+}

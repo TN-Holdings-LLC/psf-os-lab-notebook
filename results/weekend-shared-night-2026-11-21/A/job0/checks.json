@@ -1,0 +1,885 @@
+{
+ "note": "record-only checks (psf-os after-2026-11-20): never part of the job; the job and its records are as without them",
+ "items": {
+  "f16_n": {
+   "cz_written": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_compiled": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ],
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      0,
+      2,
+      4
+     ]
+    ]
+   }
+  },
+  "f10_n": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   }
+  },
+  "f6p_n": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 1.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 0.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "f6_n": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 1.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 0.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "f16_0": {
+   "cz_written": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_compiled": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ],
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      0,
+      2,
+      4
+     ]
+    ]
+   }
+  },
+  "f10_0": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   }
+  },
+  "f6p_0": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 2.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 6.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 2.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "f6_0": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 2.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 6.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 2.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "f16_1": {
+   "cz_written": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_compiled": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.0,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ],
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      0,
+      2,
+      4
+     ]
+    ]
+   }
+  },
+  "f10_1": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   }
+  },
+  "f6p_1": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 3.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "f6_1": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 3.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "f16_2": {
+   "cz_written": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_compiled": {
+    "ff": 16,
+    "off": 16,
+    "floor": 16
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.0,
+     "carriers": [
+      [
+       0,
+       2,
+       4
+      ],
+      [
+       0,
+       2,
+       4
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      0,
+      2,
+      4
+     ]
+    ]
+   }
+  },
+  "f10_2": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 3,
+     "total": 3,
+     "excited": 1.5,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 3,
+     "total": 6,
+     "excited": 4.0,
+     "carriers": [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       1,
+       2,
+       3
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 3,
+    "total": 3,
+    "excited": 1.5,
+    "carriers": [
+     [
+      1,
+      2,
+      3
+     ]
+    ]
+   }
+  },
+  "f6p_2": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 4.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "f6_2": {
+   "cz_written": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 1.5,
+     "carriers": [
+      [
+       2
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 2,
+     "excited": 4.0,
+     "carriers": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 1,
+    "total": 1,
+    "excited": 1.5,
+    "carriers": [
+     [
+      2
+     ]
+    ]
+   }
+  }
+ }
+}

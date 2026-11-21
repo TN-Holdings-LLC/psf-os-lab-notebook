@@ -1,0 +1,75 @@
+{
+ "selection": {
+  "cands": [
+   "A"
+  ],
+  "shots": 4000,
+  "a_forms": [
+   "F16",
+   "F10",
+   "F6P",
+   "F6"
+  ],
+  "b_plan": "shape",
+  "b_n4_from_c": false,
+  "b_fence": false,
+  "c_forms": [
+   "pl",
+   "fe",
+   "pk"
+  ],
+  "c_shared_fixed": false,
+  "ff_only": true,
+  "layout": "own"
+ },
+ "devdir": "/home/psf/wk1121/fetch_in/ibm_marrakesh/dev",
+ "device": "ibm_marrakesh",
+ "region": {},
+ "jobs": [
+  {
+   "folder": "job0",
+   "circuits": 20,
+   "qpu_seconds_model": 25.3,
+   "items": {
+    "A": [
+     "f16_n",
+     "f10_n",
+     "f6p_n",
+     "f6_n",
+     "f16_0",
+     "f10_0",
+     "f6p_0",
+     "f6_0",
+     "f16_1",
+     "f10_1",
+     "f6p_1",
+     "f6_1",
+     "f16_2",
+     "f10_2",
+     "f6p_2",
+     "f6_2"
+    ]
+   },
+   "ff_only": [
+    "f16_n",
+    "f10_n",
+    "f6p_n",
+    "f6_n",
+    "f16_0",
+    "f10_0",
+    "f6p_0",
+    "f6_0",
+    "f16_1",
+    "f10_1",
+    "f6p_1",
+    "f6_1",
+    "f16_2",
+    "f10_2",
+    "f6p_2",
+    "f6_2"
+   ]
+  }
+ ],
+ "dry_clifford_sentinel": false,
+ "qpu_seconds_model": 25.3
+}

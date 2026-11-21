@@ -1,0 +1,5 @@
+n 4: IPE 0.8957 (2 SE 0.0035, 31200 shots) against C 0.4706 -> BEYOND THE CEILING (margin +0.4251)
+n 5: IPE 0.8715 (2 SE 0.0027, 62400 shots) against C 0.3792 -> BEYOND THE CEILING (margin +0.4922)
+n 6: IPE 0.8451 (2 SE 0.0020, 124800 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.5386)
+log drop per added bit: n 4 -> 5 +0.0274, 5 -> 6 +0.0308; acceleration +0.0034 (2 SE 0.0077) -> FLAT [OWNER]
+  beside, on the share: drop +0.0242, +0.0264; acceleration +0.0022 (2 SE 0.0067) -> FLAT

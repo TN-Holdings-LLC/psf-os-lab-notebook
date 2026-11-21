@@ -1,0 +1,5643 @@
+{
+ "note": "record-only checks (psf-os after-2026-11-20): never part of the job; the job and its records are as without them",
+ "items": {
+  "ipe6_40": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_41": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_42": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_43": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_44": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_45": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_46": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_47": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_48": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_49": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_50": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_51": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_52": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_53": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_54": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_55": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_56": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_57": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_58": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_59": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_60": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_61": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_62": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "ipe6_63": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 11,
+     "excited": 5.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 6,
+     "excited": 3.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_0": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 3.0,
+     "carriers": [
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_0": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 3.0,
+     "carriers": [
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_0": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 3.0,
+     "carriers": [
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_1": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_1": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_1": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_2": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_2": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_2": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_3": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_3": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_3": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_4": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_4": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_4": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_5": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_5": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_5": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_6": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_6": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_6": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_7": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_7": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_7": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_8": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 4,
+    "off": 4,
+    "floor": 4
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_8": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 4,
+    "off": 4,
+    "floor": 4
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_8": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 4,
+    "off": 4,
+    "floor": 4
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_9": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_9": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_9": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_10": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_10": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_10": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_11": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_11": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_11": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_12": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_12": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_12": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_13": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_13": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_13": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_14": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_14": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_14": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pl4_15": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "fe4_15": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  },
+  "pk4_15": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   }
+  }
+ }
+}

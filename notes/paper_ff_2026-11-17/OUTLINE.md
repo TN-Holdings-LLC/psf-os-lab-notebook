@@ -36,10 +36,11 @@ declared before the data". Author TN Holdings. Which paper number it takes is th
 | 11-19 marrakesh | loop, interference, repetition code, phase estimation (`results/*-night-2026-11-19`) | loop: ledger refused (other calibration), +M on L = 1, P0 on L = 2, 3, fixed point; the first conditional item's bits lose (E3); lut3 0.812 not beyond 0.875; IPE beyond at n = 2, 3, 4 |
 | 11-20 marrakesh | decoy and loop variation (`results/decoy-night-2026-11-20`, `results/loopvar-night-2026-11-20`) | a fixed item in the first bits does not shield (row 2: the first conditional item loses, -0.057); copies agree within a job, L = 2 drifts between jobs (p 0.006) |
 | 11-20 marrakesh (evening) | the paired loop (`results/loop-paired-night-2026-11-20`) | incumbent and candidate in one job: L = 1 P2+M (+0.046), L = 2 P0 (P1 not adopted), L = 3 P2+M (+0.053); two rounds, 110 s charged |
+| 11-21 marrakesh (calibrated 01:34) | the weekend's three tests, shared (`results/weekend-shared-night-2026-11-21`) | repetition code: fewer carriers (+0.015) and fewer CZ (+0.022) both keep more, F6 0.874 at the ceiling, not beyond; IPE beyond to n = 6, FLAT (loss per round); parking the waiting target in \|0> keeps +0.039, the fence alone nothing; 111 s charged |
 
-Predictions over five nights (11-16 to 11-20): 60 declared; 40 held, 20 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
+Predictions over six nights (11-16 to 11-21): 62 declared; 42 held, 20 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
 T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1. 11-18: R-2, PB-3, T-1, T-3, OS2-1. 11-19: LOOP-1, IF-1, IF-2, RC-1. 11-20: none
-of 3). Paper 10 (published 11-19) counts the first 57. Each failure is reported as such in its folder.
+of 3. 11-21: none of 2). Paper 10 (published 11-19) counts the first 57. Each failure is reported as such in its folder.
 
 ## Two numbers side by side (to carry into the text)
 
