@@ -1,0 +1,10789 @@
+{
+ "note": "record-only checks (psf-os after-2026-11-20): never part of the job; the job and its records are as without them",
+ "items": {
+  "ipe4_0": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_0": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 6.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 3.0,
+     "carriers": [
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_1": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe4_2": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_2": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_3": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe4_4": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_4": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_5": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe4_6": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_6": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_7": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe4_8": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 4,
+    "off": 4,
+    "floor": 4
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_8": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 4,
+    "off": 4,
+    "floor": 4
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_9": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe4_10": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_10": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_11": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe4_12": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_12": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_13": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe4_14": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu4_14": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 7,
+     "excited": 3.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 4,
+     "excited": 2.0,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 6.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe4_15": {
+   "cz_written": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 6,
+      "parked_waits": 6,
+      "excited_before": 6.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 3,
+      "parked_waits": 3,
+      "excited_before": 3.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_0": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_0": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 8.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 4.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_1": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_2": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_3": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_4": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_4": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 9,
+     "excited": 4.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 5,
+     "excited": 2.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_5": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_6": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_7": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_8": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_8": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 9,
+     "excited": 4.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 5,
+     "excited": 2.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_9": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_10": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_11": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_12": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_12": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 9,
+     "excited": 4.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 5,
+     "excited": 2.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_13": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_14": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_15": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_16": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 4,
+    "off": 4,
+    "floor": 4
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_16": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 4,
+    "off": 4,
+    "floor": 4
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 9,
+     "excited": 4.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 5,
+     "excited": 2.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_17": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_18": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_19": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_20": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_20": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 9,
+     "excited": 4.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 5,
+     "excited": 2.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_21": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_22": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_23": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_24": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_24": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 6,
+    "off": 6,
+    "floor": 6
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 9,
+     "excited": 4.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 5,
+     "excited": 2.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_25": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_26": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_27": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_28": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu5_28": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 8,
+    "off": 8,
+    "floor": 8
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 1,
+     "total": 9,
+     "excited": 4.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 5,
+     "excited": 2.5,
+     "carriers": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 8.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe5_29": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_30": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe5_31": {
+   "cz_written": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_compiled": {
+    "ff": 10,
+    "off": 10,
+    "floor": 10
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 8,
+      "parked_waits": 8,
+      "excited_before": 8.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 4,
+      "parked_waits": 4,
+      "excited_before": 4.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe6_0": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 10,
+      "parked_waits": 10,
+      "excited_before": 10.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 5,
+      "parked_waits": 5,
+      "excited_before": 5.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipu6_0": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 0,
+    "off": 0,
+    "floor": 0
+   },
+   "cz_same": false,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 10.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 5.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 10.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": false,
+    "skipped": "park_skip"
+   }
+  },
+  "ipe6_1": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 10,
+      "parked_waits": 10,
+      "excited_before": 10.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 5,
+      "parked_waits": 5,
+      "excited_before": 5.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  },
+  "ipe6_2": {
+   "cz_written": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_compiled": {
+    "ff": 12,
+    "off": 12,
+    "floor": 12
+   },
+   "cz_same": true,
+   "footprint_sent": {
+    "ff": {
+     "counted": true,
+     "max": 0,
+     "total": 0,
+     "excited": 0.0,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+     ]
+    },
+    "off": {
+     "counted": true,
+     "max": 1,
+     "total": 1,
+     "excited": 0.5,
+     "carriers": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+       1
+      ]
+     ]
+    }
+   },
+   "footprint_written": {
+    "counted": true,
+    "max": 0,
+    "total": 0,
+    "excited": 0.0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "park": {
+    "park": true,
+    "arms": {
+     "ff": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "conditional",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 10,
+      "parked_waits": 10,
+      "excited_before": 10.0,
+      "excited_after": 0.0
+     },
+     "off": {
+      "parked": [
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       },
+       {
+        "kind": "read",
+        "qubits": [
+         1
+        ],
+        "physical": [
+         1
+        ]
+       }
+      ],
+      "waits": 5,
+      "parked_waits": 5,
+      "excited_before": 5.0,
+      "excited_after": 0.0
+     }
+    }
+   }
+  }
+ }
+}
