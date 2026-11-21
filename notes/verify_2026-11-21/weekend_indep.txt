@@ -1,0 +1,27 @@
+A F16: p 0.7511 (2 SE 0.0068, 16000 shots) -> NOT BEYOND (margin -0.1239); per error n/d0/d1/d2 0.639 / 0.665 / 0.867 / 0.834
+A F10: p 0.8364 (2 SE 0.0058, 16000 shots) -> NOT BEYOND (margin -0.0386); per error n/d0/d1/d2 0.847 / 0.870 / 0.835 / 0.794
+A F6P: p 0.8518 (2 SE 0.0056, 16000 shots) -> NOT BEYOND (margin -0.0232); per error n/d0/d1/d2 0.869 / 0.894 / 0.822 / 0.823
+A F6: p 0.8741 (2 SE 0.0052, 16000 shots) -> NOT BEYOND (margin -0.0009); per error n/d0/d1/d2 0.892 / 0.874 / 0.874 / 0.857
+A footprint F6P - F10: +0.0153 (2 SE 0.0081) -> KEEPS MORE
+A cz F6 - F6P: +0.0224 (2 SE 0.0077) -> KEEPS MORE
+A cz16 (beside) F10 - F16: +0.0854 (2 SE 0.0090) -> KEEPS MORE
+A reading row: both
+C pl: p 0.8957 (2 SE 0.0035, 31200 shots) -> BEYOND THE CEILING; jobs ['BC1']
+C fe: p 0.8914 (2 SE 0.0035, 31200 shots) -> BEYOND THE CEILING; jobs ['BC1']
+C pk: p 0.9344 (2 SE 0.0028, 31200 shots) -> BEYOND THE CEILING; jobs ['BC1']
+C park pk - pl: +0.0387 (2 SE 0.0045) -> KEEPS MORE
+C fence fe - pl: -0.0042 (2 SE 0.0049) -> SAME WITHIN ERROR
+C pk - fe (beside) pk - fe: +0.0429 (2 SE 0.0045) -> KEEPS MORE
+C reading row: waiting in |0> keeps more; |1> neither
+B: items tagged ipe4 in the jobs: 0 (n = 4 is read from C's pl4: 16 items)
+B n 4: p 0.8957 (2 SE 0.0035, 31200 shots) -> BEYOND THE CEILING (margin +0.4251); jobs ['BC1']
+B n 5: p 0.8715 (2 SE 0.0027, 62400 shots) -> BEYOND THE CEILING (margin +0.4923); jobs ['BC0']
+B n 6: p 0.8451 (2 SE 0.0020, 124800 shots) -> BEYOND THE CEILING (margin +0.5386); jobs ['BC0', 'BC1']
+B log drops +0.0274, +0.0308; acceleration +0.0034 (2 SE 0.0077) -> FLAT
+B beside, on the share: drops +0.0242, +0.0264; acceleration +0.0022 (2 SE 0.0067)
+job A: 20 circuits, shots [4000], roles {'user': 16, 'sentinel': 4}, charged 24 s, 0.3880 RU, model 25.3
+job BC0: 76 circuits, shots [1950], roles {'user': 72, 'sentinel': 4}, charged 44 s, 0.7208 RU, model 45.8
+job BC1: 76 circuits, shots [1950], roles {'user': 72, 'sentinel': 4}, charged 43 s, 0.7136 RU, model 45.8
+total: charged 111 s, 1.8223 RU, model 116.9 s
+qubits touched by the user circuits: A [0, 1, 2, 3, 4]; BC [0, 1]
+C compiled CZ per phase (pl/fe/pk): 0: 0/0/0; 1: 8/8/8; 2: 8/8/8; 3: 8/8/8; 4: 6/6/6; 5: 8/8/8; 6: 8/8/8; 7: 8/8/8; 8: 4/4/4; 9: 8/8/8; 10: 8/8/8; 11: 8/8/8; 12: 6/6/6; 13: 8/8/8; 14: 8/8/8; 15: 8/8/8 -> the same at every phase

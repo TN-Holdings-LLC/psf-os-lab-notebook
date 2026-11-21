@@ -48,3 +48,27 @@ report to home: `VSから家へ_待つ場所の点検_2026-11-21.md` (psf_zero_p
    The night runs n = 4 only (owner, 2026-11-21).
 5. **Defaults unchanged.** job/circuits.qpy, runs/ and build.json are byte-identical between 61869bb and d4fb614.
    job/manifest.json differs in `written` (the build time) only. d4fb614 adds checks.json beside the job.
+
+## The weekend night's record (results/weekend-shared-night-2026-11-21): the home VS's independent recount
+
+From the home instruction `VSクロードへの指示_週末の結果の独立検証_2026-11-21.md`. The report is
+`VSから家へ_週末の結果の独立検証_2026-11-21.md`.
+
+`weekend_indep.py RECORD OUT.json` writes `weekend_indep.txt` and `.json`. It uses qiskit, aer and numpy only. It
+reads:
+
+- the success bits named in each record;
+- their right values from noiseless Aer of the recorded circuit (every one deterministic and equal to the record);
+- the pooled shares and 2 SE;
+- the declared comparisons;
+- B's log shape, with SE = sqrt(t4^2 + 4 t5^2 + t6^2);
+- the words and the rows of the reading tables.
+
+The ceilings are the declared exact values; they are not recomputed.
+
+Results:
+
+- Every number and word equals the record.
+- B's n = 4 is the 16 pl4 items; no job holds an ipe4 item.
+- The compiled CZ of pl, fe and pk is the same at every phase.
+- reproduce.py with psf-os a164fc5 gives 3 of 3 SAME.
