@@ -1,0 +1,9 @@
+{
+ "plan": "B",
+ "device": "ibm_kingston",
+ "psf_os": "0.3.1",
+ "shots": 1950,
+ "circuits": 68,
+ "qpu_seconds_model": 41.2,
+ "folder": "job0"
+}

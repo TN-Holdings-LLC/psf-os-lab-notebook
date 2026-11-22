@@ -248,6 +248,8 @@ RESULTS = {
         ["gpu/qpe_parked_night.py", "score", "{T}"], "parked_scores.json"),
     "rus-fence-night-2026-11-21": ("results/rus-fence-night-2026-11-21/rf", ["job0", "plan.json"],
         ["gpu/rus_fence_night.py", "score", "{T}"], "rusfence_scores.json"),
+    "likely-park-night-2026-11-22": ("results/likely-park-night-2026-11-22/lp", ["job0", "plan.json"],
+        ["gpu/likely_park_night.py", "score", "{T}"], "likely_scores.json"),
     "interfere-night-2026-11-19": ("results/interfere-night-2026-11-19", ["job", "runs", "plan.json"],
         ["gpu/interfere_night.py", "score", "{T}"], "interfere_scores.json", "404daf9f"),
     "repcode-night-2026-11-19": ("results/repcode-night-2026-11-19", ["job", "runs", "build.json", "part.json"],

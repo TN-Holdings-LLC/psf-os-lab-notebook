@@ -1,0 +1,6 @@
+psf_os_build version 0.3.1, park True, park_likely names 28 L items -> ok
+nfl3m3: distributions equal True; CZ D 33 L 33; parked waits 8 on physical [1, 3, 5]; each fenced with a qubit of its wait True; one-qubit gates on them D 15 L 43 -> ok
+p0l3: distributions equal True; CZ D 33 L 33; parked waits 4 on physical [1, 3]; each fenced with a qubit of its wait True; one-qubit gates on them D 10 L 16 -> ok
+p3l3: distributions equal True; CZ D 22 L 22; parked waits 3 on physical [1, 3]; each fenced with a qubit of its wait True; one-qubit gates on them D 10 L 16 -> ok
+IPE control: qpe_repro_night.check PASS
+PASS

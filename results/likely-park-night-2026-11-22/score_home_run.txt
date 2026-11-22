@@ -1,0 +1,5 @@
+nfl3m3: P D 0.5672 L 0.6644 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0972 (2 SE 0.0155) KEEPS MORE
+p0l3: P D 0.5458 L 0.5705 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0247 (2 SE 0.0085) KEEPS MORE
+p3l3: P D 0.5684 L 0.5778 (exact 0.8230; noiseless D 0.7060 L 0.7060); L - D +0.0094 (2 SE 0.0100) SAME WITHIN ERROR
+IPE control: parked 0.9200 - unparked 0.8677 = +0.0523 (2 SE 0.0098) KEEPS MORE (the gate open)
+the rule for the default (counted: ['nfl3m3', 'p0l3', 'p3l3']): the default in 0.3.1 (no counted item KEEPS LESS, at least one KEEPS MORE)

@@ -1,0 +1,68 @@
+{
+ "nfl3m3": {
+  "D": 0.5671794871794872,
+  "L": 0.6643589743589744,
+  "exact": 0.8229569952973316,
+  "g": 0.09717948717948721,
+  "two_se": 0.015499760859196856,
+  "word": "KEEPS MORE",
+  "overshoot": {
+   "D": {
+    "noiseless": 0.7834032479342685,
+    "overshoots": false
+   },
+   "L": {
+    "noiseless": 0.7834032479342682,
+    "overshoots": false
+   }
+  },
+  "counted": true
+ },
+ "p0l3": {
+  "D": 0.5457875457875457,
+  "L": 0.5705128205128205,
+  "exact": 0.8229569952973316,
+  "g": 0.02472527472527475,
+  "two_se": 0.00849849323248397,
+  "word": "KEEPS MORE",
+  "overshoot": {
+   "D": {
+    "noiseless": 0.7834032479342686,
+    "overshoots": false
+   },
+   "L": {
+    "noiseless": 0.7834032479342686,
+    "overshoots": false
+   }
+  },
+  "counted": true
+ },
+ "p3l3": {
+  "D": 0.5684102564102564,
+  "L": 0.5777948717948718,
+  "exact": 0.8229569952973316,
+  "g": 0.009384615384615325,
+  "two_se": 0.010018116868341791,
+  "word": "SAME WITHIN ERROR",
+  "overshoot": {
+   "D": {
+    "noiseless": 0.7059708837850153,
+    "overshoots": false
+   },
+   "L": {
+    "noiseless": 0.7059708837850149,
+    "overshoots": false
+   }
+  },
+  "counted": true
+ },
+ "control": {
+  "parked": 0.92,
+  "unparked": 0.8676923076923077,
+  "d": 0.05230769230769239,
+  "two_se": 0.009829374262471966,
+  "word": "KEEPS MORE"
+ },
+ "decision": "the default in 0.3.1 (no counted item KEEPS LESS, at least one KEEPS MORE)",
+ "excluded": []
+}
