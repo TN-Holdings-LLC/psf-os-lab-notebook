@@ -53,3 +53,19 @@ P0 and P3: no direction declared (KEEPS MORE, SAME). Predictions over the nights
 ## Reproduce
 
 `python reproduce.py --psf-os <psf-os 0.3.1 candidate, a6170e5> likely-park-night-2026-11-22` (1 of 1 SAME at home).
+
+## Independent check (home VS, 2026-11-22)
+
+Re-counted from `job/raw_counts.json` and `job/manifest.json` with qiskit, aer and numpy only (no psf-os, no notebook
+scorer; `notes/verify_2026-11-22/lp_indep.py`): every P, L - D and 2 SE, the words, no OVERSHOOT (the noiseless values
+by Aer, 0.7848 and 0.7061, agree with the tool's exact ones within its sampling), the IPE control and the rule's row
+agree with this record. Sent as declared: 68 circuits (64 user, 4 sentinel), 1950 shots, `psf_os_build` 0.3.1 with
+park_likely naming exactly the 28 L items; every parked wait held by barriers with a measured qubit of its wait. The
+device rule: pending marrakesh 2, fez 3, kingston 2 -> kingston, where the job ran. Charges 40 s, 0.6518 RU, model
+41.2 s. Reproduce 1 of 1 SAME.
+
+## After the night (the owner, 2026-11-22 14:0x JST)
+
+psf-os 0.3.1 is to be released with `park_likely` on by default (release commit 7caedaa on a6170e5), the bundle paths
+included, as for park in 0.3.0. Because the candidate (a6170e5, park_likely off) and the release (7caedaa, on) both
+say "0.3.1", every later declaration on 0.3.1 states `park_likely` explicitly.
