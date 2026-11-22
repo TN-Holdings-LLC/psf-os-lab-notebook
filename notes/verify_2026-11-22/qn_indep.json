@@ -1,0 +1,20 @@
+{
+ "lines": [
+  "sent: 64 circuits, roles {'user': 60, 'sentinel': 4}, shots [1950]; psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True}",
+  "n 6: a 41; parked phases equal k a mod 2^n (k = 1..16): True; twins at k = 1..4 True ([18, 36, 41, 59])",
+  "   parked 0.5785 (2 SE 0.0056, 31200 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.2720); twins parked 0.5969 - unparked 0.5471 = +0.0499 (2 SE 0.0158) KEEPS MORE",
+  "   compiled CZ mean (qiskit): every phase 11.00, the 16 phases 11.12; in the job (as sent) 11.12",
+  "   parked items fenced with target and ancilla: True; twins unparked: True",
+  "n 7: a 79; parked phases equal k a mod 2^n (k = 1..16): True; twins at k = 1..4 True ([30, 60, 79, 109])",
+  "   parked 0.5097 (2 SE 0.0057, 31200 shots) against C 0.248 -> BEYOND THE CEILING (margin +0.2617); twins parked 0.4549 - unparked 0.4441 = +0.0108 (2 SE 0.0159) SAME WITHIN ERROR",
+  "   compiled CZ mean (qiskit): every phase 13.00, the 16 phases 13.12; in the job (as sent) 13.12",
+  "   parked items fenced with target and ancilla: True; twins unparked: True",
+  "n 8: a 159; parked phases equal k a mod 2^n (k = 1..16): True; twins at k = 1..4 True ([62, 124, 159, 221])",
+  "   parked 0.4236 (2 SE 0.0056, 31200 shots) against C 0.2007 -> BEYOND THE CEILING (margin +0.2229); twins parked 0.3400 - unparked 0.3517 = -0.0117 (2 SE 0.0152) SAME WITHIN ERROR",
+  "   compiled CZ mean (qiskit): every phase 15.00, the 16 phases 15.12; in the job (as sent) 15.12",
+  "   parked items fenced with target and ancilla: True; twins unparked: True",
+  "log drops +0.1266 (6 -> 7), +0.1851 (7 -> 8); acceleration +0.0584 (2 SE 0.0276) -> ACCELERATES (beside)",
+  "the declared table's row: reaches n = 8; parking's gain not seen at n = 8",
+  "device rule: pending {'ibm_marrakesh': 0, 'ibm_fez': 0, 'ibm_kingston': 2}, order ['ibm_marrakesh', 'ibm_fez', 'ibm_kingston'] -> ibm_fez; ran on ibm_fez; charged 37 s, 0.6043 RU, model 39.0"
+ ]
+}
