@@ -31,8 +31,9 @@
   acceleration +0.0584 (2 SE 0.0276), the word ACCELERATES. The loss per added bit grew from n = 6 to n = 8 on this
   night, larger than the dry runs' accelerations.
 - Beside, never judged: the declared expectation (an extrapolation from marrakesh 2026-11-21) put P(8) near 0.72;
-  tonight reads 0.42 on another device and calibration. Parking at n = 6 keeps +0.050, as on marrakesh at n = 4 to 6
-  (+0.031 to +0.039), and is not seen at n = 7 and 8 on 4 phases.
+  tonight reads 0.42 on another device and calibration. Parking at n = 6 keeps +0.050 on 4 twin phases tonight and is
+  not seen at n = 7 and 8; marrakesh's +0.031 to +0.039 (n = 4 to 6, 8 paired phases, 2026-11-21) are set beside
+  only, not compared (another device, other phases).
 
 ## Against the declaration
 
@@ -53,3 +54,13 @@ held, 20 failed.
 ## Reproduce
 
 `python reproduce.py --psf-os <psf-os 0.3.1> qpe-n78-night-2026-11-22` (1 of 1 SAME at home).
+
+## Independent check (home VS, 2026-11-22)
+
+Re-counted from `job/raw_counts.json` and `job/manifest.json` with qiskit, aer and numpy only (no psf-os, no notebook
+scorer; `notes/verify_2026-11-22/qn_indep.py`): every p, 2 SE, ceiling, twin difference, the log drops and the
+acceleration with its SE, every word and the declared table's row agree with this record. The 16 phases and the 4
+twin phases follow k·a mod 2^n; the compiled CZ means, recompiled with qiskit without psf-os, match every phase's;
+the parked waits sit inside their fences; `psf_os_build` 0.3.1 with park and park_likely stated; the device rule ->
+fez. Charges 37 s, 0.6043 RU, model 39.0 s. Reproduce 1 of 1 SAME. One wording corrected at its suggestion: the
+marrakesh values beside n = 6's parking are set beside, not compared.
