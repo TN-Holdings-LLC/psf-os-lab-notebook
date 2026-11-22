@@ -1,0 +1,4 @@
+n 6: P F 0.8633, S 0.9290, SD 0.9307; SD - F +0.0673 (2 SE 0.0048); S - SD -0.0017 (2 SE 0.0041)
+n 8: P F 0.7863, S 0.9009, SD 0.9020; SD - F +0.1157 (2 SE 0.0057); S - SD -0.0011 (2 SE 0.0048)
+pooled over n (mean of the n): SD - F +0.0915 (2 SE 0.0038) -> FEEDBACK COSTS; S - SD -0.0014 (2 SE 0.0031) -> NO WAIT COST SEEN
+reading: the branch costs beyond its time: 0.4 tries deferring the corrections (applied once, late, from the bits together) or a classical post-correction where the algorithm allows it

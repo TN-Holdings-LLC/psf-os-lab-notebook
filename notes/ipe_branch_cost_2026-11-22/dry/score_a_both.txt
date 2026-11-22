@@ -1,0 +1,4 @@
+n 6: P F 0.7765, S 0.9293, SD 0.8333; SD - F +0.0569 (2 SE 0.0063); S - SD +0.0959 (2 SE 0.0051)
+n 8: P F 0.6450, S 0.9014, SD 0.7379; SD - F +0.0929 (2 SE 0.0074); S - SD +0.1635 (2 SE 0.0060)
+pooled over n (mean of the n): SD - F +0.0749 (2 SE 0.0049) -> FEEDBACK COSTS; S - SD +0.1297 (2 SE 0.0040) -> WAIT COSTS
+reading: both the branch and its wait cost: 0.4 tries fewer conditionals (the corrections of a round merged into one conditional on the earlier bits, a table look-up) and the parked wait kept

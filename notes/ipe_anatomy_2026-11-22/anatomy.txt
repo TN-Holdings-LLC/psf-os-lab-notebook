@@ -1,0 +1,55 @@
+Beside, after the declarations (hypotheses, not verdicts). Hazard h_r by round (round 1 read first), odd phases.
+== 11-19 marrakesh (0.2, as sent)
+  unparked n=2 (3900 shots): h 0.025 0.032 | 2 SE 0.005 0.006 | jump 1->2 +0.007
+      layer of each read 11 27; conditionals before 0 2; within-n dlogP/dCZ -0.0124 over 4 phases
+  unparked n=3 (7800 shots): h 0.025 0.041 0.039 | 2 SE 0.004 0.004 0.004 | jump 1->2 +0.016
+      layer of each read 11 27 44; conditionals before 0 2 5; within-n dlogP/dCZ -0.0158 over 8 phases
+  unparked n=4 (15600 shots): h 0.026 0.047 0.040 0.033 | 2 SE 0.003 0.003 0.003 0.003 | jump 1->2 +0.020
+      layer of each read 11 27 44 62; conditionals before 0 2 5 9; within-n dlogP/dCZ -0.0158 over 16 phases
+== 11-21 weekend marrakesh
+  fenced |1> n=4 (15600 shots): h 0.028 0.031 0.033 0.038 | 2 SE 0.003 0.003 0.003 0.003 | jump 1->2 +0.003
+      layer of each read 11 30 50 71; conditionals before 0 2 5 9; within-n dlogP/dCZ -0.0133 over 16 phases
+  parked n=4 (15600 shots): h 0.026 0.022 0.016 0.016 | 2 SE 0.003 0.002 0.002 0.002 | jump 1->2 -0.005
+      layer of each read 11 30 50 71; conditionals before 0 2 5 9; within-n dlogP/dCZ -0.0084 over 16 phases
+  unparked n=5 (31200 shots): h 0.026 0.036 0.032 0.030 0.029 | 2 SE 0.002 0.002 0.002 0.002 0.002 | jump 1->2 +0.010
+      layer of each read 11 27 44 62 81; conditionals before 0 2 5 9 14; within-n dlogP/dCZ -0.0142 over 32 phases
+  unparked n=6 (62400 shots): h 0.025 0.036 0.032 0.029 0.028 0.031 | 2 SE 0.001 0.002 0.002 0.001 0.001 0.002 | jump 1->2 +0.011
+      layer of each read 11 27 44 62 81 101; conditionals before 0 2 5 9 14 20; within-n dlogP/dCZ -0.0132 over 64 phases
+  unparked (C pl) n=4 (15600 shots): h 0.025 0.036 0.033 0.030 | 2 SE 0.003 0.003 0.003 0.003 | jump 1->2 +0.011
+      layer of each read 11 27 44 62; conditionals before 0 2 5 9; within-n dlogP/dCZ -0.0147 over 16 phases
+== 11-21 parked marrakesh
+  parked n=4 (15600 shots): h 0.024 0.061 0.041 0.039 | 2 SE 0.002 0.004 0.003 0.003 | jump 1->2 +0.037
+      layer of each read 11 30 50 71; conditionals before 0 2 5 9; within-n dlogP/dCZ -0.0207 over 16 phases
+  parked n=5 (31200 shots): h 0.027 0.061 0.038 0.040 0.041 | 2 SE 0.002 0.003 0.002 0.002 0.002 | jump 1->2 +0.035
+      layer of each read 11 30 50 71 93; conditionals before 0 2 5 9 14; within-n dlogP/dCZ -0.0211 over 32 phases
+  parked n=6 (62400 shots): h 0.025 0.061 0.039 0.041 0.040 0.044 | 2 SE 0.001 0.002 0.002 0.002 0.002 0.002 | jump 1->2 +0.036
+      layer of each read 11 30 50 71 93 116; conditionals before 0 2 5 9 14 20; within-n dlogP/dCZ -0.0212 over 64 phases
+  unparked n=4 (7800 shots): h 0.008 0.059 0.071 0.052 | 2 SE 0.002 0.005 0.006 0.005 | round 1 trivial (phases tz=1); jump 2->3 +0.012
+      layer of each read 10 22 40 58; conditionals before 0 2 5 9; within-n dlogP/dCZ -0.0241 over 8 phases
+  unparked n=5 (7800 shots): h 0.001 0.008 0.054 0.066 0.053 | 2 SE 0.001 0.002 0.005 0.006 0.005 | phases tz=2
+      layer of each read 1 13 26 44 64; conditionals before 0 2 5 9 14; within-n dlogP/dCZ -0.0209 over 8 phases
+  unparked n=6 (7800 shots): h 0.001 0.004 0.009 0.062 0.074 0.055 | 2 SE 0.001 0.001 0.002 0.005 0.006 0.006 | phases tz=3
+      layer of each read 1 10 23 38 56 76; conditionals before 0 2 5 9 14 20; within-n dlogP/dCZ -0.0242 over 8 phases
+== 11-21 RUS fence fez (control)
+  parked n=4 (7800 shots): h 0.027 0.089 0.110 0.090 | 2 SE 0.004 0.006 0.007 0.007 | round 1 trivial (phases tz=1); jump 2->3 +0.021
+      layer of each read 10 26 46 67; conditionals before 0 2 5 9
+  unparked n=4 (7800 shots): h 0.030 0.106 0.107 0.111 | 2 SE 0.004 0.007 0.007 0.008 | round 1 trivial (phases tz=1); jump 2->3 +0.001
+      layer of each read 10 22 40 58; conditionals before 0 2 5 9
+== 11-22 0.3.1 candidate kingston (control)
+  parked n=4 (7800 shots): h 0.017 0.021 0.023 0.022 | 2 SE 0.003 0.003 0.004 0.003 | round 1 trivial (phases tz=1); jump 2->3 +0.002
+      layer of each read 10 26 46 67; conditionals before 0 2 5 9
+  unparked n=4 (7800 shots): h 0.019 0.029 0.045 0.046 | 2 SE 0.003 0.004 0.005 0.005 | round 1 trivial (phases tz=1); jump 2->3 +0.016
+      layer of each read 10 22 40 58; conditionals before 0 2 5 9
+== 11-22 n = 6, 7, 8 fez
+  parked n=6 (15600 shots): h 0.065 0.094 0.096 0.091 0.115 0.123 | 2 SE 0.004 0.005 0.005 0.005 0.006 0.007 | jump 1->2 +0.029
+      layer of each read 11 30 50 71 93 116; conditionals before 0 2 5 9 14 20; within-n dlogP/dCZ -0.0534 over 16 phases
+  parked n=7 (15600 shots): h 0.064 0.097 0.088 0.093 0.099 0.110 0.113 | 2 SE 0.004 0.005 0.005 0.005 0.006 0.006 0.007 | jump 1->2 +0.033
+      layer of each read 11 30 50 71 93 116 140; conditionals before 0 2 5 9 14 20 27; within-n dlogP/dCZ -0.0350 over 16 phases
+  parked n=8 (15600 shots): h 0.062 0.097 0.092 0.105 0.101 0.149 0.095 0.116 | 2 SE 0.004 0.005 0.005 0.006 0.006 0.007 0.006 0.007 | jump 1->2 +0.034
+      layer of each read 11 30 50 71 93 116 140 165; conditionals before 0 2 5 9 14 20 27 35; within-n dlogP/dCZ -0.0354 over 16 phases
+  unparked n=6 (3900 shots): h 0.065 0.102 0.108 0.118 0.108 0.103 | 2 SE 0.008 0.010 0.011 0.012 0.012 0.013 | jump 1->2 +0.037
+      layer of each read 11 27 44 62 81 101; conditionals before 0 2 5 9 14 20; within-n dlogP/dCZ -0.0408 over 4 phases
+  unparked n=7 (3900 shots): h 0.068 0.099 0.113 0.126 0.166 0.083 0.119 | 2 SE 0.008 0.010 0.011 0.012 0.015 0.012 0.015 | jump 1->2 +0.031
+      layer of each read 11 27 44 62 81 101 122; conditionals before 0 2 5 9 14 20 27; within-n dlogP/dCZ -0.0364 over 4 phases
+  unparked n=8 (3900 shots): h 0.068 0.109 0.105 0.118 0.110 0.203 0.099 0.134 | 2 SE 0.008 0.010 0.011 0.012 0.012 0.017 0.014 0.017 | jump 1->2 +0.042
+      layer of each read 11 27 44 62 81 101 122 144; conditionals before 0 2 5 9 14 20 27 35; within-n dlogP/dCZ +0.0110 over 4 phases

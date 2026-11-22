@@ -1,0 +1,134 @@
+{
+ "rows": [
+  {
+   "plan": "a",
+   "circuits": 52,
+   "shots": 3900,
+   "seconds": 59.6,
+   "diff_two_se_per_n": {
+    "6": 0.0079,
+    "8": 0.0079
+   },
+   "diff_two_se_pooled": 0.0056,
+   "forms": [
+    "F",
+    "S",
+    "SD"
+   ],
+   "Lx": [
+    1
+   ],
+   "phases_per_n": 8
+  },
+  {
+   "plan": "b",
+   "circuits": 60,
+   "shots": 3350,
+   "seconds": 59.4,
+   "diff_two_se_per_n": {
+    "6": 0.0085,
+    "8": 0.0085
+   },
+   "diff_two_se_pooled": 0.006,
+   "forms": [
+    "F",
+    "S",
+    "SD"
+   ],
+   "Lx": [
+    1
+   ],
+   "phases_per_n": 8,
+   "twin_two_se_pooled": 0.0085
+  },
+  {
+   "plan": "c",
+   "circuits": 100,
+   "shots": 1950,
+   "seconds": 59.2,
+   "diff_two_se_per_n": {
+    "6": 0.0079,
+    "8": 0.0079
+   },
+   "diff_two_se_pooled": 0.0056,
+   "forms": [
+    "F",
+    "S",
+    "SD"
+   ],
+   "Lx": [
+    1
+   ],
+   "phases_per_n": 16
+  },
+  {
+   "plan": "d",
+   "circuits": 68,
+   "shots": 2950,
+   "seconds": 59.6,
+   "diff_two_se_per_n": {
+    "6": 0.0091,
+    "8": 0.0091
+   },
+   "diff_two_se_pooled": 0.0064,
+   "forms": [
+    "F",
+    "S",
+    "SD"
+   ],
+   "Lx": [
+    1,
+    2
+   ],
+   "phases_per_n": 8
+  }
+ ],
+ "phases": {
+  "6": [
+   41,
+   18,
+   59,
+   36,
+   13,
+   54,
+   31,
+   8,
+   49,
+   26,
+   3,
+   44,
+   21,
+   62,
+   39,
+   16
+  ],
+  "8": [
+   159,
+   62,
+   221,
+   124,
+   27,
+   186,
+   89,
+   248,
+   151,
+   54,
+   213,
+   116,
+   19,
+   178,
+   81,
+   240
+  ]
+ },
+ "a": {
+  "6": 41,
+  "8": 159
+ },
+ "record": {
+  "6": 0.5785,
+  "7": 0.5097,
+  "8": 0.4236
+ },
+ "L_us": 1.0
+}

@@ -1,0 +1,4 @@
+n 6: P F 0.8341, S 0.9293, SD 0.8333; SD - F -0.0007 (2 SE 0.0060); S - SD +0.0959 (2 SE 0.0051)
+n 8: P F 0.7367, S 0.9014, SD 0.7379; SD - F +0.0012 (2 SE 0.0070); S - SD +0.1635 (2 SE 0.0060)
+pooled over n (mean of the n): SD - F +0.0002 (2 SE 0.0046) -> NO FEEDBACK COST SEEN; S - SD +0.1297 (2 SE 0.0040) -> WAIT COSTS
+reading: the loss is the time waited, not the branch: 0.4 tries shorter waits (corrections merged into fewer conditionals), parking every waiting qubit, and placement away from the slow times

@@ -1,0 +1,14 @@
+(1) noiseless, every item all n bits right with probability 1: ok, 56 items
+(2) compiled CZ, X and SX per qubit outside conditionals, and fences the same in F, S, SD of every phase: ok
+    n 6 f: 8 items, CZ 11.25, one-qubit gates 111.6 (conditional blocks counted), conditionals 20.0
+    n 6 s: 8 items, CZ 11.25, one-qubit gates 100.8 (conditional blocks counted), conditionals 5.0
+    n 6 d: 8 items, CZ 11.25, one-qubit gates 100.8 (conditional blocks counted), conditionals 5.0
+    n 6 r: 4 items, CZ 11.50, one-qubit gates 113.2 (conditional blocks counted), conditionals 20.0
+    n 8 f: 8 items, CZ 15.25, one-qubit gates 160.1 (conditional blocks counted), conditionals 35.0
+    n 8 s: 8 items, CZ 15.25, one-qubit gates 138.2 (conditional blocks counted), conditionals 7.0
+    n 8 d: 8 items, CZ 15.25, one-qubit gates 138.2 (conditional blocks counted), conditionals 7.0
+    n 8 r: 4 items, CZ 15.50, one-qubit gates 161.2 (conditional blocks counted), conditionals 35.0
+(3) F's conditionals per run as built; SD's delays kept after compiling (L 4500 dt x (r - 1) per round, on all 3 qubits); none in F or S: ok
+(4) psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+    psf-os parked the target in every item: ok
+PASS
