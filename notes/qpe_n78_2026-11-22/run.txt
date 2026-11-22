@@ -1,0 +1,112 @@
+plan a: 52 circuits at 1950 shots, 32.2 s; P 2 SE n6 0.0045, n7 0.0048, n8 0.0051; acceleration 2 SE 0.0156
+plan a64: 100 circuits at 1950 shots, 59.2 s; P 2 SE n6 0.0023, n7 0.0048, n8 0.0051; acceleration 2 SE 0.0148
+plan b: 64 circuits at 1950 shots, 39.0 s; P 2 SE n6 0.0045, n7 0.0048, n8 0.0051; acceleration 2 SE 0.0156; twins 2 SE {6: 0.0128, 7: 0.0137, 8: 0.0144}
+plan c: 64 circuits at 650 shots, 16.5 s; P 2 SE n6 0.0078, n7 0.0084, n8 0.0088; acceleration 2 SE 0.0271; twins 2 SE {6: 0.0222, 7: 0.0237, 8: 0.025}
+ceilings: C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+extrapolation (record d5 0.041, d6 0.047): constant drop {7: 0.7662, 8: 0.7332}, growing drop {7: 0.7593, 8: 0.7158}
+ibm_kingston
+=== ibm_fez a
+52 circuits at 1950 shots, 32.2 s on ibm_fez
+qpe_repro_night.check: 52 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 16 parked phases, compiled CZ mean 11.12 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+=== ibm_fez a64
+100 circuits at 1950 shots, 59.2 s on ibm_fez
+qpe_repro_night.check: 100 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 64 parked phases, compiled CZ mean 11.00 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+=== ibm_fez b
+64 circuits at 1950 shots, 39.0 s on ibm_fez
+qpe_repro_night.check: 64 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 16 parked phases, compiled CZ mean 11.12 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+=== ibm_fez c
+64 circuits at 650 shots, 16.5 s on ibm_fez
+qpe_repro_night.check: 64 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 16 parked phases, compiled CZ mean 11.12 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+--- ibm_fez b noise a
+n 6: parked 0.9286 (2 SE 0.0029, 31200 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.6221); on 4 twin phases parked - unparked +0.0154 (2 SE 0.0088) KEEPS MORE
+n 7: parked 0.9159 (2 SE 0.0031, 31200 shots) against C 0.2480 -> BEYOND THE CEILING (margin +0.6679); on 4 twin phases parked - unparked +0.0185 (2 SE 0.0096) KEEPS MORE
+n 8: parked 0.9012 (2 SE 0.0034, 31200 shots) against C 0.2007 -> BEYOND THE CEILING (margin +0.7005); on 4 twin phases parked - unparked +0.0214 (2 SE 0.0104) KEEPS MORE
+log drops +0.0138 (6 -> 7), +0.0162 (7 -> 8); acceleration +0.0024 (2 SE 0.0084) -> FLAT
+reading: parked IPE beyond its ceiling to n = 8, the loss per added bit per round
+--- ibm_fez b noise c
+n 6: parked 0.6305 (2 SE 0.0055, 31200 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.3240); on 4 twin phases parked - unparked +0.1800 (2 SE 0.0157) KEEPS MORE
+n 7: parked 0.5254 (2 SE 0.0057, 31200 shots) against C 0.2480 -> BEYOND THE CEILING (margin +0.2774); on 4 twin phases parked - unparked +0.1905 (2 SE 0.0156) KEEPS MORE
+n 8: parked 0.4323 (2 SE 0.0056, 31200 shots) against C 0.2007 -> BEYOND THE CEILING (margin +0.2316); on 4 twin phases parked - unparked +0.1781 (2 SE 0.0149) KEEPS MORE
+log drops +0.1825 (6 -> 7), +0.1949 (7 -> 8); acceleration +0.0123 (2 SE 0.0266) -> FLAT
+reading: parked IPE beyond its ceiling to n = 8, the loss per added bit per round
+=== ibm_kingston a
+52 circuits at 1950 shots, 32.2 s on ibm_kingston
+qpe_repro_night.check: 52 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 16 parked phases, compiled CZ mean 11.12 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+=== ibm_kingston a64
+100 circuits at 1950 shots, 59.2 s on ibm_kingston
+qpe_repro_night.check: 100 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 64 parked phases, compiled CZ mean 11.00 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+=== ibm_kingston b
+64 circuits at 1950 shots, 39.0 s on ibm_kingston
+qpe_repro_night.check: 64 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 16 parked phases, compiled CZ mean 11.12 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+=== ibm_kingston c
+64 circuits at 650 shots, 16.5 s on ibm_kingston
+qpe_repro_night.check: 64 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 16 parked phases, compiled CZ mean 11.12 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
+--- ibm_kingston b noise a
+n 6: parked 0.9286 (2 SE 0.0029, 31200 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.6221); on 4 twin phases parked - unparked +0.0154 (2 SE 0.0088) KEEPS MORE
+n 7: parked 0.9159 (2 SE 0.0031, 31200 shots) against C 0.2480 -> BEYOND THE CEILING (margin +0.6679); on 4 twin phases parked - unparked +0.0185 (2 SE 0.0096) KEEPS MORE
+n 8: parked 0.9012 (2 SE 0.0034, 31200 shots) against C 0.2007 -> BEYOND THE CEILING (margin +0.7005); on 4 twin phases parked - unparked +0.0214 (2 SE 0.0104) KEEPS MORE
+log drops +0.0138 (6 -> 7), +0.0162 (7 -> 8); acceleration +0.0024 (2 SE 0.0084) -> FLAT
+reading: parked IPE beyond its ceiling to n = 8, the loss per added bit per round
+--- ibm_kingston b noise c
+n 6: parked 0.6305 (2 SE 0.0055, 31200 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.3240); on 4 twin phases parked - unparked +0.1800 (2 SE 0.0157) KEEPS MORE
+n 7: parked 0.5254 (2 SE 0.0057, 31200 shots) against C 0.2480 -> BEYOND THE CEILING (margin +0.2774); on 4 twin phases parked - unparked +0.1905 (2 SE 0.0156) KEEPS MORE
+n 8: parked 0.4323 (2 SE 0.0056, 31200 shots) against C 0.2007 -> BEYOND THE CEILING (margin +0.2316); on 4 twin phases parked - unparked +0.1781 (2 SE 0.0149) KEEPS MORE
+log drops +0.1825 (6 -> 7), +0.1949 (7 -> 8); acceleration +0.0123 (2 SE 0.0266) -> FLAT
+reading: parked IPE beyond its ceiling to n = 8, the loss per added bit per round
+DONE
