@@ -16,6 +16,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.ticker
 
+# The same figures on any machine: a font shipped with matplotlib, embedded as TrueType (not Type 3).
+plt.rcParams.update({"font.family": "DejaVu Sans", "pdf.fonttype": 42, "ps.fonttype": 42})
+
 NB = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.dirname(os.path.abspath(__file__))
 INK, MUTED, GRID = "#1f2328", "#59636e", "#d0d7de"
@@ -135,14 +138,12 @@ def fig_wait():
 
 def fig_ipe():
     wk = R("weekend-shared-night-2026-11-21/BC/scores/B/qpe_long_scores.json")["rows"]
-    pk = R("qpe-parked-night-2026-11-21/qp/parked_scores.json")["per_n"]
     q78 = R("qpe-n78-night-2026-11-22/qn/qpe78_scores.json")["per_n"]
     fig, ax = plt.subplots(figsize=(6.4, 3.4))
     s1 = [(n, wk[str(n)]["ipe"], wk[str(n)]["ipe_2se"], wk[str(n)]["ceiling"]) for n in (4, 5, 6)]
-    s2 = [(n, pk[str(n)]["parked"], pk[str(n)]["parked_2se"], None) for n in (4, 5, 6)]
     s3 = [(n, q78[str(n)]["p"], q78[str(n)]["two_se"], q78[str(n)]["ceiling"]) for n in (6, 7, 8)]
+    # The parked marrakesh night (qpe-parked, every phase) is not drawn: it is not in the text and would invite a comparison across nights.
     for s, lab, col, mk in [(s1, "unparked, marrakesh 11-21 01:52 (every phase)", C[3], "s"),
-                            (s2, "parked, marrakesh 11-21 10:59 (every phase)", C[0], "o"),
                             (s3, "parked by 0.3.1, fez 11-22 11:56 (16 phases)", C[2], "D")]:
         ax.errorbar([x[0] for x in s], [x[1] for x in s], yerr=[x[2] for x in s], fmt=mk + "-", color=col,
                     capsize=3, markersize=4, linewidth=1, label=lab)

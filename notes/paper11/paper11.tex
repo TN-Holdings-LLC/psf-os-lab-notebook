@@ -1,4 +1,4 @@
-% Paper 11 (TN Holdings), DRAFT 1, home, 2026-11-22 (owner 23:29 JST "始めて"). Built from notes/paper11/OUTLINE.md
+% Paper 11 (TN Holdings), DRAFT 2 (the home VS's reading of draft 1 applied, 2026-11-23), home, 2026-11-22 (owner 23:29 JST "始めて"). Built from notes/paper11/OUTLINE.md
 % and the committed records named beside each number; every number is quoted from those records (README and score
 % files) and is to be checked one by one against them before release (tools/check_readme_numbers.py and a home VS
 % reading). Figures: notes/paper11/figures.py. psf-os 0.3.2 is to be released with this paper.
@@ -8,7 +8,6 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
-\usepackage{url}
 \usepackage{float}
 \input{glyphtounicode}
 \pdfgentounicode=1
@@ -20,26 +19,26 @@
 
 \title{Where a Qubit Waits:\\ Rules for Real-Time Control from Declared Device Tests on IBM Heron}
 \author{TN Holdings\\ \small contact: \texttt{love.os.architect@proton.me}}
-\date{Draft 1, 22 November 2026}
+\date{Draft 2, 23 November 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-A circuit that measures in the middle and acts on the result at once loses much of its value while it waits. Paper 10
+A circuit that measures in the middle and acts on the result at once loses part of what it keeps while it waits. Paper 10
 of this series showed that such real-time control on IBM Heron devices can get closer to the exact answer than any
 correction of the uncontrolled circuit. This paper asks what an operating layer should do with the waits. Every test
 was declared in git before its device record was fetched; every comparison that decides a rule was made inside one
-job; every shot was counted, and no error mitigation, post-selection or fitted noise model was used. Over nine tests in eight device sessions on three devices (ibm\_marrakesh, ibm\_fez, ibm\_kingston; 706 s charged; 11 declared predictions, all held),
+job; every shot was counted, and no error mitigation, post-selection or fitted noise model was used. Over nine declared runs (eleven tests) in eight device sessions on three devices (ibm\_marrakesh, ibm\_fez, ibm\_kingston; 706 s charged; 11 declared predictions, all held),
 four rules came out. (1) A qubit that waits in $\ket{1}$ keeps more if it is turned to $\ket{0}$ for the wait and back
 after: $+0.039$ (2 SE 0.005) on iterative phase estimation (IPE) at $n=4$, $+0.031$ to $+0.039$ at $n = 4,5,6$ on
 another calibration, $+0.029$ and $+0.052$ on two further devices; fencing it so that it waits in $\ket{1}$ instead of a
-superposition gains nothing. The same holds for a waiting qubit that is only \emph{more likely} in $\ket{1}$, entangled
-or not: on chains of repeat-until-success (RUS) neurons it kept $+0.097$ and $+0.025$ more than the previous default,
-once a fence was put only around the parked qubit and its wait. (2) Fewer qubits holding a superposition during a wait,
-and fewer CZ, each keep more (repetition code: $+0.015$ and $+0.022$; on a second device $+0.028$ and $+0.011$, where
-the best form passed its ceiling, 0.929 against 0.875). (3) Two conditional items side by side cost the first one
-about 0.057 whatever stands before it. (4) The same circuits drift between jobs sent seconds apart (one of three chain
+superposition read SAME WITHIN ERROR ($-0.004$, 2 SE 0.005) on the one night it was sent. On one night and one device,
+parking a qubit that is only \emph{more likely} in $\ket{1}$, behind a fence around it and its wait, kept $+0.097$ and
+$+0.025$ more than the previous default on two of three chains of repeat-until-success (RUS) neurons (the third SAME
+WITHIN ERROR). (2) Fewer qubits holding a superposition during a wait,
+and fewer CZ, each keep more (repetition code, whose forms also differ in depth: $+0.015$ and $+0.022$; on a second device $+0.028$ and $+0.011$, where
+the best form passed its ceiling, 0.929 against 0.875). (3) Two conditional items side by side cost the first one 0.057, and 0.085 with a fixed item's bits last. (4) The same circuits drift between jobs sent seconds apart (one of three chain
 lengths, $p = 0.006$) while copies inside one job agree; a loop that decides inside one job keeps that drift out.
 Phase estimation, parked, stayed beyond its ceiling to $n = 8$ (0.424 against 0.201), with a loss per added bit that
 grew from $n = 6$ to 8 on that night. Removing every phase conditional changed the share by $+0.005$ (2 SE 0.006).
@@ -52,9 +51,8 @@ Heron devices through an operating layer, psf-os, that places a circuit from the
 elements only, never reads a calibration quality number, adds its own controls to each job and applies no mitigation.
 Paper 10 turned to dynamic circuits (real-time control, feed-forward) and introduced the correction ceiling: the best
 any correction of the circuit \emph{without} its real-time actions can return. Real-time control passed that ceiling
-on RUS neuron chains and on iterative phase estimation. The diagnosis that made the chains work pointed at the waits:
-the conditionals cost little when they did not fire, while time spent in $\ket{1}$ during mid-circuit measurement waits
-cost a lot. Paper 10's third design for the chains already held the likely value 1 as $\ket{0}$ during the waits, by
+on RUS neuron chains (Cao et al.\ 2017) and on iterative phase estimation (C\'orcoles et al.\ 2021). The diagnosis that made the chains work pointed at the waits:
+the conditionals that did not fire cost less than the time spent in $\ket{1}$ during mid-circuit measurement waits. Paper 10's third design for the chains already held the likely value 1 as $\ket{0}$ during the waits, by
 hand, for one circuit family.
 
 This paper asks the next question: what should an operating layer do with the waits? We tested where a waiting qubit
@@ -63,13 +61,16 @@ how a loop should decide when the device drifts between jobs. Each answer became
 one, and each rule was then sent to the device as the default it had become.
 
 \paragraph{Prior work.} Timing single-qubit gates placed in idle periods so that they offset idling errors, without
-lengthening the circuit, was shown by Smith et al.\ (2021, TimeStitch). Moving a Hadamard to the middle of an idle
+lengthening the circuit, was shown by Smith et al.\ (TimeStitch). Moving a Hadamard to the middle of an idle
 window, or to a random point in it, reduced idling errors on a superconducting device (Liu et al.\ 2026). Layout,
 routing and scheduling aware of mid-circuit measurement errors, with context-aware dynamical decoupling, were proposed
 by Zhong et al.\ (2025), and the error rates of mid-circuit measurements themselves were measured by Hothem et
 al.\ (2024). On trapped ions, the crosstalk of a mid-circuit measurement onto spectator ions was suppressed by
-inducing micromotion in them (Gaebler et al.\ 2021). We did not find, in a search that was not exhaustive, the
-specific form used here: adding gates to turn a waiting qubit to $\ket{0}$ during a mid-circuit measurement wait,
+inducing micromotion in them (Gaebler et al.\ 2021). The $X$ pair that parks a qubit has the form of a two-pulse
+dynamical-decoupling sequence (XX), and dynamical decoupling is off in these tests; here the pulses sit at the two ends
+of a measurement wait, are added only for a qubit more likely in $\ket{1}$ by the noiseless state, and change the
+population that waits rather than refocusing its phase. In a search of arXiv and the web in November 2026, not
+exhaustive, we did not find this form: adding gates to turn a waiting qubit to $\ket{0}$ during a mid-circuit measurement wait,
 decided from the circuit's noiseless state alone (no calibration, no tuning runs) and checked at every build to leave
 the noiseless output and the compiled CZ count unchanged.
 
@@ -98,7 +99,7 @@ $C(n)$ is the noiseless value of the best decoder of the circuit without its fee
 \paragraph{Device and build.} Placement uses the coupling graph and failed marks only; dynamical decoupling and
 twirling are off; each job holds a ring sentinel reported beside. A pre-run check builds every circuit, compares its
 noiseless output with its declared value and its compiled CZ count with the intended one, and stops the run on any
-failure. From 2026-11-21 14:00 CET the device rule excluded ibm\_marrakesh, to test the rules on other devices. Every
+failure. From the RUS fence declaration on (2026-11-21 14:25 CET) the device rule excluded ibm\_marrakesh, to test the rules on other devices. Every
 result re-scores from its committed raw counts (\texttt{reproduce.py}).
 
 \section{Where a qubit waits}\label{sec:park}
@@ -108,7 +109,8 @@ ways in one job (31200 shots per form, every phase): as compiled, the target wai
 that it waits in $\ket{1}$ (fe); fenced and turned to $\ket{0}$ for the wait and back after (pk). The shares were 0.8957,
 0.8914 and 0.9344. Parking kept more, $+0.0387$ (2 SE 0.0045); the fence alone, with the target in $\ket{1}$, read
 $-0.0042$ (2 SE 0.0049), SAME WITHIN ERROR. The declared reading: waiting in $\ket{0}$ keeps more; $\ket{1}$ neither
-more nor less than the superposition. The compiled CZ count was the same for the three forms at every phase.
+more nor less than the superposition. The compiled CZ count was the same for the three forms at every phase. The compiler merged the target's rotations
+across the wait, so what is written is not what waits; the state that waits is taken from the circuit as sent.
 
 \paragraph{The rule, as a default.} psf-os 0.3.0 parks, at every wait, a qubit that is in $\ket{1}$ on every branch of
 the noiseless state, behind a fence, and refuses to build if the noiseless output or the compiled CZ count changes. Sent
@@ -165,12 +167,12 @@ Paper 10 found that two conditional items packed in one circuit cost the first o
 followed the register's bit order. A decoy test (2026-11-20, marrakesh) asked whether a fixed item placed first shields
 the conditional items: in three bundles (no fixed item, the fixed item's bits first, its bits last) the first
 conditional item lost $-0.0565$, $-0.0567$ and $-0.085$ against itself alone (2 SE about 0.020), and the second read
-SAME everywhere. The declared reading: the first conditional item loses, whatever stands before it. psf-os keeps
+SAME everywhere. The declared reading: the first conditional item loses, whatever stands before it; the declared prediction was the
+control's repeat (D0). psf-os keeps
 refusing to pack conditional items side by side.
 
 \section{Deciding inside one job}\label{sec:inside}
-\paragraph{Drift between jobs.} The same 40 circuits (the RUS chains of a loop round at $L = 1,2,3$, two copies of
-every arm) were sent in three jobs, created 8 s apart and finished 40 to 50 s apart (2026-11-20, marrakesh). Copies inside a job agreed (nine pairs
+\paragraph{Drift between jobs.} The same 40 circuits (the RUS chains of a loop round at $L = 1,2,3$, two copies of every arm, and 4 sentinel circuits) were sent in three jobs, created 8 s apart and finished 40 to 50 s apart (2026-11-20, marrakesh). Copies inside a job agreed (nine pairs
 pooled, $\chi^2 = 7.11$ on 9 degrees of freedom, $p = 0.625$). Between jobs, $L = 2$ moved beyond shot noise
 ($p = 0.006$, an excess standard deviation of 0.014; $g$ changed sign), while $L = 1$ ($p = 0.080$) and $L = 3$
 ($p = 0.623$) did not. A loop that compares round $k$ with round $k-1$ across jobs can read such a drift as a
@@ -182,7 +184,7 @@ prescription's effect. Figure~\ref{fig:loopvar}.
 \end{figure}
 
 \paragraph{The paired loop.} psf-os's loop now places the incumbent prescription and the candidate in the same job and
-decides on their difference there. Run on marrakesh (2026-11-20 evening, 110 s, unattended), it adopted P2 on $L = 3$
+decides on their difference there. Run on marrakesh (2026-11-20, fetched 14:11 CET, 110 s, unattended), it adopted P2 on $L = 3$
 ($+0.0388$, 2 SE 0.0215); on $L = 1$ it kept the incumbent against P2 ($+0.0145$, 2 SE 0.0154), tried P2+M in the
 next round and adopted it ($+0.0463$, 2 SE 0.0150); it rejected P1 on $L = 2$ ($-0.0225$, 2 SE 0.0194) and added M on $L = 3$
 ($+0.0330$, 2 SE 0.0210). No candidate overshot. The declared prediction (no adopted step overshoots in the next round)
@@ -195,11 +197,11 @@ acceleration $+0.0034$ (2 SE 0.0077) read FLAT: the loss per added bit is per ro
 conditionals grow from 9 to 20.
 
 \paragraph{To $n = 8$, parked.} With psf-os 0.3.1's defaults on ibm\_fez (2026-11-22; 16 phases per $n$ chosen as
-$k\cdot a \bmod 2^n$ so that their compiled CZ mix matches every phase), the parked IPE read 0.5785, 0.5097 and 0.4236 at
+$k\cdot a \bmod 2^n$ so that their compiled CZ mix is close to that of every phase), the parked IPE read 0.5785, 0.5097 and 0.4236 at
 $n = 6,7,8$, beyond $C(n)$ by $+0.272$, $+0.262$, $+0.223$. The declared reading: the range reaches $n = 8$; parking's gain
 is not seen at $n = 8$ at this shot noise. Beside, the loss per added bit grew ($0.1266$ then $0.1851$, acceleration
-$+0.0584$, 2 SE 0.0276). The expectation declared from the marrakesh night, $P(8) \approx 0.72$, was an extrapolation;
-the fez night read 0.42. Figure~\ref{fig:ipe}.
+$+0.0584$, 2 SE 0.0276). The fez night read 0.4236 against the extrapolated 0.72 declared from the marrakesh night (another device and
+calibration). Figure~\ref{fig:ipe}.
 
 \begin{figure}[H]\centering
 \includegraphics[width=0.62\linewidth]{fig_ipe.pdf}
@@ -212,7 +214,7 @@ the feedback's cost into the branch and its wait. $L$ was declared as 4500 dt be
 is 4 ns and $L$ is 18 \textmu s per conditional, and the delayed arms collapsed (0.1177 at $n = 6$ and 0.0494 at $n = 8$, at $L$). The declared
 table's row was ``the delay overstates F's wait'': the split is not read from this night. Beside, removing every
 phase conditional with its real wait changed the share by $+0.0067$ (2 SE 0.0073) at $n = 6$ and $+0.0023$ (2 SE 0.0083)
-at $n = 8$, mean $+0.0045$ (2 SE 0.0055): the phase conditionals are not where most of the IPE's loss lies on that night.
+at $n = 8$, mean $+0.0045$ (2 SE 0.0055): not separated from 0; the upper end of 2 SE is about $+0.01$.
 
 \section{The operating layer after these tests}\label{sec:psfos}
 psf-os 0.3.0 (2026-11-21, doi:10.5281/zenodo.24416958) parks a waiting qubit that is in $\ket{1}$ on every branch, by
@@ -226,16 +228,22 @@ same calibration starts from the ledger's prescriptions and stops where a circui
 112 s against a model of 59.6 s, and the model with the delays' term gives 114.4 s. \pending{0.3.2 release and DOI}
 
 \section{What did not work}\label{sec:failed}
-The branch-cost split failed by a placeholder: a delay length declared in device units before the unit was read. It was charged 112 s, 1.9 times the model, because delays were charged and not modelled. The expectation for $n = 8$, extrapolated from another device and night,
-was off by about 0.30. Parking's gain was not seen at $n = 7$ and 8 on four twin phases. A declaration rule now requires
+The branch-cost split failed by a placeholder: a delay length declared in device units before the unit was read. It was charged 112 s, 1.9 times the model, because delays were charged and not modelled. The expectation for $n = 8$, extrapolated from another device and night, was 0.72; the night read 0.4236. Parking's gain was not seen at $n = 7$ and 8 on four twin phases. A declaration rule now requires
 physical units to be converted with the device's own values before a test is declared, and a delay over 100 \textmu s
-per circuit is refused unless stated.
+per circuit is refused unless stated. Two departures from declarations: the paired loop's declared flags
+(\texttt{--k-max 4 --budget 240}) were refused on a device run and it ran without them, with the same values; the $n = 6,7,8$
+tool printed its reading from the draft's table, and the record gives the declared table's row.
 
 \section{Limits}\label{sec:limits}
 Each rule rests on few nights: parking the always-$\ket{1}$ target on five nights and three devices, parking the
 likely value with the partial fence on one night and one device, the repetition code's forms on two. The circuit
 families are IPE, RUS chains and a repetition code. The repetition code's forms differ in depth as well as in carriers
-and CZ. The drift between jobs was measured on one night. A peak of errors at one round of IPE on one fez night,
+and CZ. The drift between jobs was measured on one night, and the packing loss and the drift on one device
+(marrakesh). Parking the likely value was read on three chains, one of them SAME. The 8 paired phases of the parked IPE
+are cut to fewer CZ by the compiler (6.0 on average at $n = 4$ against 8.0 on the other phases); a phase and its twin
+have the same compiled CZ, but parking's gain there was measured on those phases. The unparked IPE's shape to $n = 6$
+was read from two jobs. The off and floor arms were not sent on 2026-11-21, because no verdict read them. The paired
+loop's prediction was read on one row. A peak of errors at one round of IPE on one fez night,
 found after the declarations, did not appear on the next fez night with other qubits; it is not used. Values across
 nights and devices are set beside each other only.
 
@@ -243,8 +251,8 @@ nights and devices are set beside each other only.
 Every device result re-scores from its committed raw counts with \texttt{python reproduce.py} in
 \texttt{psf-os-lab-notebook}, with the psf-os named in each folder; each folder's README records the re-score SAME at
 home and an independent re-count from the raw counts with qiskit, aer and numpy only. The numbers in the records'
-READMEs were checked by machine against the score files (\texttt{tools/check\_readme\_numbers.py}, no mismatch over 51
-nights). Figures: \texttt{notes/paper11/figures.py}.
+READMEs were checked by machine against the score files (\texttt{tools/check\_readme\_numbers.py}, no mismatch over 65
+nights). Figures: \texttt{notes/paper11/figures.py}. The runs are in Table~\ref{tab:runs}.
 
 \begin{table}[H]\centering\footnotesize
 \setlength{\tabcolsep}{3.5pt}
@@ -252,9 +260,9 @@ nights). Figures: \texttt{notes/paper11/figures.py}.
 \toprule
 fetch (CET) & device & test (results/) & declared predictions \\
 \midrule
-11-20 & marrakesh & decoy-night-2026-11-20 & first conditional item loses: held \\
-11-20 & marrakesh & loopvar-night-2026-11-20 & copies agree inside a job: held \\
-11-20 evening & marrakesh & loop-paired-night-2026-11-20 & no adopted step overshoots next round: held \\
+11-20 11:38 & marrakesh & decoy-night-2026-11-20 & D0: A keeps less packed (the control repeats): held \\
+11-20 11:38 & marrakesh & loopvar-night-2026-11-20 & copies agree inside a job: held \\
+11-20 14:11 & marrakesh & loop-paired-night-2026-11-20 & no adopted step overshoots next round: held \\
 11-21 01:52 & marrakesh & weekend-shared-night-2026-11-21 & F16 not beyond; IPE $n=4$ beyond: both held \\
 11-21 10:59 & marrakesh & qpe-parked-night-2026-11-21 & parking keeps more at $n=4$; beyond at $n=4,5,6$: both held \\
 11-21 14:29 & fez & rus-fence-night-2026-11-21 & IPE control keeps more: held \\
@@ -269,13 +277,14 @@ share the 165 s). Over all nights of the series from 11-16: 68 declared, 48 held
 \end{table}
 
 \section{Conclusion}
-Where a qubit waits decides much of what a dynamic circuit keeps. On three devices, turning a waiting qubit to
-$\ket{0}$, whether it was surely or only probably in $\ket{1}$, kept more than leaving it as it was, and it cost nothing
-in CZ or in the noiseless answer, which every build checks. Fewer qubits in superposition during a wait and fewer CZ
-each kept more. Conditional items still cannot share a circuit. And because the device drifts between jobs, every
-rule was decided inside one job. These rules are now the defaults of psf-os. Phase estimation, built by those
-defaults, stayed above its ceiling to eight bits; removing its phase feedback changed little on the one night it was
-tried.
+Where a qubit waits changed what a dynamic circuit kept by $+0.03$ to $+0.10$ in these tests. Turning a waiting qubit
+that was in $\ket{1}$ on every branch to $\ket{0}$ kept more on three devices; turning one that was only more likely in
+$\ket{1}$ kept more than the previous default on one night and one device, on two of three chains. Neither cost CZ or
+changed the noiseless answer, which every build checks. Fewer qubits in superposition during a wait and fewer CZ each
+kept more. Packed side by side, the first conditional item lost 0.057 to 0.085; psf-os keeps refusing to pack them.
+Because the device drifts between jobs, every rule was decided inside one job. Parking is now the default of psf-os;
+the paired loop is available (opt-in). Phase estimation, built by those defaults, stayed above its ceiling to eight
+bits; removing its phase feedback changed the share by $+0.0045$ (2 SE 0.0055) on the one night it was tried.
 
 \section*{Data and code}
 Records, declarations and raw counts: \url{https://github.com/TN-Holdings-LLC/psf-os-lab-notebook}; the operating layer:
@@ -284,8 +293,8 @@ doi:10.5281/zenodo.24438701; 0.3.2 \pending{DOI}).
 
 \section*{References}
 \begin{itemize}
-\item Smith, K.\ N.\ et al. Error mitigation in quantum computers through instruction scheduling. arXiv:2105.01760
-(2021).
+\item Smith, K.\ N.\ et al. TimeStitch: exploiting slack to mitigate decoherence in quantum circuits. ACM Trans.\ Quantum
+Comput.\ 4(1) (also arXiv:2105.01760, 2021).
 \item Liu, H.\ M.\ et al. Idling error suppression through gate scheduling. arXiv:2607.02031 (2026).
 \item Zhong, M.\ et al. MERA: a mid-circuit-measurement error-aware compilation framework for quantum circuits. arXiv:2511.10921
 (2025).
@@ -294,7 +303,7 @@ doi:10.5281/zenodo.24438701; 0.3.2 \pending{DOI}).
 arXiv:2108.10932 (2021).
 \item C\'orcoles, A.\ D.\ et al. Exploiting dynamic quantum circuits in a quantum algorithm with superconducting qubits.
 Phys.\ Rev.\ Lett.\ 127, 100501 (2021).
-\item Cao, Y., Guerreschi, G.\ G., Aspuru-Guzik, A. Quantum neuron. arXiv:1711.11240 (2017).
+\item Cao, Y.\ et al. Quantum neuron. arXiv:1711.11240 (2017).
 \item TN Holdings. Papers 7, 8, 9 and 10 of this series: doi:10.5281/zenodo.24046673, 24136512, 24278888, 24367001.
 \end{itemize}
 
