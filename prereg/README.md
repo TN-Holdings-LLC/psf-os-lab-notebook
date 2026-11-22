@@ -16,3 +16,7 @@ These rules are for writing a declaration, not for any one test.
 2. **Tests with delays.** Write the seconds of a test that holds delays from an estimate that includes the delay
    term: shots × the sum of the circuits' delays, as psf-os 0.3.2's time model adds it.
    - Added 2026-11-23, after the same night: 112 s were charged against a model of 59.6 s that left the delays out.
+
+The owner's choices for psf-os 0.3.2 (2026-11-22 22:0x JST): a circuit's delays capped at 100 µs (allow_long_delay=True
+passes); the charge estimate is the 0.3.1 model plus the delays' term (the records' estimates unchanged; 2-7 % above
+the charge, on the safe side for budgets); `gpu/daily_fetch.py` also writes `dt.txt` (its earlier outputs unchanged).
