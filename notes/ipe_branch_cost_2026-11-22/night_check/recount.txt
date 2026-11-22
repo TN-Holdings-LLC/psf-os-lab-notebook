@@ -1,0 +1,55 @@
+circuits 68, pubs 68, user items 64, shots 2950, forms ['d', 'e', 'f', 's'], R twins 0
+n 6: phases as declared (k a mod 2^n, a = 41): [41, 18, 59, 36, 13, 54, 31, 8]
+n 8: phases as declared (k a mod 2^n, a = 159): [159, 62, 221, 124, 27, 186, 89, 248]
+n 6: f 0.7981 (2 SE 0.0052, 23600), s 0.8047 (2 SE 0.0052, 23600), d 0.1177 (2 SE 0.0042, 23600), e 0.0504 (2 SE 0.0028, 23600)
+n 8: f 0.7192 (2 SE 0.0059, 23600), s 0.7216 (2 SE 0.0058, 23600), d 0.0494 (2 SE 0.0028, 23600), e 0.0163 (2 SE 0.0016, 23600)
+SD - F: per n -0.6804 (0.0067), -0.6698 (0.0065); mean -0.6751 (2 SE 0.0047) -> FEEDBACK GAINS
+S - SD: per n +0.6871 (0.0067), +0.6722 (0.0065); mean +0.6796 (2 SE 0.0046) -> WAIT COSTS
+SD(L) - SD(2L): per n +0.0672 (0.0051), +0.0331 (0.0033); mean +0.0502 (2 SE 0.0030)
+S - F (beside): per n +0.0067 (0.0073), +0.0023 (0.0083); mean +0.0045 (2 SE 0.0055)
+('d', 6): conditionals [5]; delays (qubits, total dt per qubit, per-round values) [(3, (67500,), (4500, 9000, 13500, 18000, 22500))]
+('d', 8): conditionals [7]; delays (qubits, total dt per qubit, per-round values) [(3, (126000,), (4500, 9000, 13500, 18000, 22500, 27000, 31500))]
+('e', 6): conditionals [5]; delays (qubits, total dt per qubit, per-round values) [(3, (135000,), (9000, 18000, 27000, 36000, 45000))]
+('e', 8): conditionals [7]; delays (qubits, total dt per qubit, per-round values) [(3, (252000,), (9000, 18000, 27000, 36000, 45000, 54000, 63000))]
+('f', 6): conditionals [20]; delays (qubits, total dt per qubit, per-round values) [None]
+('f', 8): conditionals [35]; delays (qubits, total dt per qubit, per-round values) [None]
+('s', 6): conditionals [5]; delays (qubits, total dt per qubit, per-round values) [None]
+('s', 8): conditionals [7]; delays (qubits, total dt per qubit, per-round values) [None]
+n 6 SD: expected 67500 dt per qubit = 270 us
+n 6 SD(2L): expected 135000 dt per qubit = 540 us
+n 8 SD: expected 126000 dt per qubit = 504 us
+n 8 SD(2L): expected 252000 dt per qubit = 1008 us
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True}
+device rule: ibm_fez | recorded ibm_fez
+delay x shots summed: 54.8 s; model 59.6 s -> + delays 114.4; 105-job relation 56.6 s -> + delays 111.4; charged 112 s
+R twin in the job: False
+hazard n 6 f (odd phases): 0.048 0.049 0.038 0.039 0.046 0.038 | 2 SE 0.004 0.004 0.004 0.004 0.004 0.004
+hazard n 6 s (odd phases): 0.045 0.049 0.035 0.039 0.046 0.033 | 2 SE 0.004 0.004 0.004 0.004 0.004 0.004
+hazard n 6 d (odd phases): 0.047 0.211 0.373 0.398 0.386 0.346 | 2 SE 0.004 0.008 0.010 0.013 0.017 0.021
+hazard n 8 f (odd phases): 0.046 0.048 0.036 0.043 0.047 0.048 0.028 0.036 | 2 SE 0.004 0.004 0.004 0.004 0.004 0.004 0.003 0.004
+hazard n 8 s (odd phases): 0.052 0.048 0.036 0.043 0.047 0.042 0.027 0.035 | 2 SE 0.004 0.004 0.004 0.004 0.004 0.004 0.003 0.004
+hazard n 8 d (odd phases): 0.041 0.212 0.377 0.393 0.386 0.380 0.330 0.324 | 2 SE 0.004 0.008 0.010 0.013 0.017 0.021 0.026 0.032
+rounds at f = 0.4844 (and the highest F hazards), F against S:
+  n 6 j 31 round 3 f 0.8750: F 0.060 (2659), S 0.046 (2675); S - F -0.014 (2 SE 0.012)
+  n 8 j 248 round 6 f 0.8750: F 0.058 (2578), S 0.048 (2588); S - F -0.010 (2 SE 0.012)
+  n 8 j 27 round 2 f 0.7500: F 0.056 (2800), S 0.051 (2777); S - F -0.005 (2 SE 0.012)
+  n 8 j 159 round 4 f 0.9375: F 0.056 (2507), S 0.057 (2530); S - F +0.001 (2 SE 0.013)
+  n 8 j 124 round 6 f 0.9375: F 0.055 (2451), S 0.048 (2461); S - F -0.007 (2 SE 0.013)
+  n 6 j 31 round 2 f 0.7500: F 0.054 (2812), S 0.052 (2821); S - F -0.003 (2 SE 0.012)
+  n 6 j 31 round 6 f 0.4844: F 0.054 (2262), S 0.045 (2308); S - F -0.009 (2 SE 0.013)
+  n 8 j 62 round 7 f 0.4844: F 0.054 (2281), S 0.046 (2248); S - F -0.008 (2 SE 0.013)
+  f |f - 1/2| in [0.0, 0.02): 12 rounds, hazard 0.036
+  f |f - 1/2| in [0.02, 0.05): 2 rounds, hazard 0.048
+  f |f - 1/2| in [0.05, 0.15): 15 rounds, hazard 0.037
+  f |f - 1/2| in [0.15, 0.5): 61 rounds, hazard 0.042
+  s |f - 1/2| in [0.0, 0.02): 12 rounds, hazard 0.037
+  s |f - 1/2| in [0.02, 0.05): 2 rounds, hazard 0.039
+  s |f - 1/2| in [0.05, 0.15): 15 rounds, hazard 0.035
+  s |f - 1/2| in [0.15, 0.5): 61 rounds, hazard 0.041
+every F round with f within 0.05 of 1/2 but not 1/2 (after round 1), F against S:
+  n 6 j 31 round 6 f 0.4844: F 0.054 (2262), S 0.045 (2308); S - F -0.009 (2 SE 0.013)
+  n 8 j 62 round 7 f 0.4844: F 0.054 (2281), S 0.046 (2248); S - F -0.008 (2 SE 0.013)
+  n 8 j 124 round 8 f 0.4844: F 0.044 (2199), S 0.058 (2237); S - F +0.014 (2 SE 0.013)
+  n 8 j 159 round 6 f 0.4844: F 0.045 (2241), S 0.043 (2252); S - F -0.002 (2 SE 0.012)
+  n 8 j 186 round 7 f 0.4531: F 0.042 (2336), S 0.038 (2292); S - F -0.004 (2 SE 0.011)
+  n 8 j 221 round 6 f 0.4531: F 0.054 (2398), S 0.041 (2362); S - F -0.014 (2 SE 0.012)
