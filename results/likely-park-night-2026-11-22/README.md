@@ -66,6 +66,7 @@ device rule: pending marrakesh 2, fez 3, kingston 2 -> kingston, where the job r
 
 ## After the night (the owner, 2026-11-22 14:0x JST)
 
-psf-os 0.3.1 is to be released with `park_likely` on by default (release commit 7caedaa on a6170e5), the bundle paths
+psf-os 0.3.1 was released on 2026-11-22 with `park_likely` on by default (v0.3.1 at release commit 7caedaa on a6170e5;
+doi:10.5281/zenodo.24438701), the bundle paths
 included, as for park in 0.3.0. Because the candidate (a6170e5, park_likely off) and the release (7caedaa, on) both
 say "0.3.1", every later declaration on 0.3.1 states `park_likely` explicitly.

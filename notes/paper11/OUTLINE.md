@@ -92,6 +92,6 @@ paired loop (bfae2760, seven of seven items agree); the weekend night (1a87c959:
 ## Before the text
 
 - [DONE] psf-os park-default (tests, the effect table on every earlier tool, reproduce all SAME); then a release
-  (0.3.0) for the paper to cite. Done: psf-os 0.3.0, GitHub release of v0.3.0 at 2b8e2c4 (the code of cedd90d), archived as doi:10.5281/zenodo.24416958 (2026-11-21).
+  (0.3.0) for the paper to cite. Done: psf-os 0.3.0, GitHub release of v0.3.0 at 2b8e2c4 (the code of cedd90d), archived as doi:10.5281/zenodo.24416958 (2026-11-21). psf-os 0.3.1 (v0.3.1 at 7caedaa, on the code of a6170e5; the likely value parked by default after the kingston night) archived as doi:10.5281/zenodo.24438701 (2026-11-22).
 - [OWNER] The title; whether the ledger replay is in the paper or only in the release notes; whether F6/F6P count as
   one test with the others (repcode4 draft, item 4).
