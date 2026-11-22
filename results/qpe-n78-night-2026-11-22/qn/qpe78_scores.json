@@ -1,0 +1,46 @@
+{
+ "per_n": {
+  "6": {
+   "p": 0.5784935897435898,
+   "two_se": 0.005591187621756922,
+   "N": 31200,
+   "ceiling": 0.30650912926478213,
+   "verdict": "BEYOND THE CEILING",
+   "twin_parked": 0.5969230769230769,
+   "twin_unparked": 0.5470512820512821,
+   "d": 0.04987179487179483,
+   "d_two_se": 0.01582584860635695,
+   "park_word": "KEEPS MORE"
+  },
+  "7": {
+   "p": 0.5096794871794872,
+   "two_se": 0.005660324212966075,
+   "N": 31200,
+   "ceiling": 0.2479950588241734,
+   "verdict": "BEYOND THE CEILING",
+   "twin_parked": 0.45487179487179485,
+   "twin_unparked": 0.4441025641025641,
+   "d": 0.010769230769230753,
+   "d_two_se": 0.015929957615183343,
+   "park_word": "SAME WITHIN ERROR"
+  },
+  "8": {
+   "p": 0.4235576923076923,
+   "two_se": 0.005594830186862697,
+   "N": 31200,
+   "ceiling": 0.20073329131085005,
+   "verdict": "BEYOND THE CEILING",
+   "twin_parked": 0.34,
+   "twin_unparked": 0.3516666666666667,
+   "d": -0.011666666666666659,
+   "d_two_se": 0.015231499450105872,
+   "park_word": "SAME WITHIN ERROR"
+  }
+ },
+ "shape": {
+  "acc": 0.058446945320219545,
+  "two_se": 0.027590528177776547,
+  "word": "ACCELERATES"
+ },
+ "reading": "parked IPE beyond its ceiling to n = 8, the loss per added bit growing (a cost per conditional)"
+}

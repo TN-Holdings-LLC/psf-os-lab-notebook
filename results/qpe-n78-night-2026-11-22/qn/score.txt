@@ -1,0 +1,5 @@
+n 6: parked 0.5785 (2 SE 0.0056, 31200 shots) against C 0.3065 -> BEYOND THE CEILING (margin +0.2720); on 4 twin phases parked - unparked +0.0499 (2 SE 0.0158) KEEPS MORE
+n 7: parked 0.5097 (2 SE 0.0057, 31200 shots) against C 0.2480 -> BEYOND THE CEILING (margin +0.2617); on 4 twin phases parked - unparked +0.0108 (2 SE 0.0159) SAME WITHIN ERROR
+n 8: parked 0.4236 (2 SE 0.0056, 31200 shots) against C 0.2007 -> BEYOND THE CEILING (margin +0.2228); on 4 twin phases parked - unparked -0.0117 (2 SE 0.0152) SAME WITHIN ERROR
+log drops +0.1266 (6 -> 7), +0.1851 (7 -> 8); acceleration +0.0584 (2 SE 0.0276) -> ACCELERATES
+reading: parked IPE beyond its ceiling to n = 8, the loss per added bit growing (a cost per conditional)

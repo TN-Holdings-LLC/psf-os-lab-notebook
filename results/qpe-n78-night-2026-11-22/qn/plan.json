@@ -1,0 +1,9 @@
+{
+ "plan": "b",
+ "device": "ibm_fez",
+ "devdir": "/home/psf/qn1122/fetch_in/ibm_fez/dev",
+ "psf_os": "0.3.1",
+ "shots": 1950,
+ "circuits": 64,
+ "qpu_seconds_model": 39.0
+}

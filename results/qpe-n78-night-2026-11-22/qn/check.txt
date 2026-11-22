@@ -1,0 +1,8 @@
+qpe_repro_night.check: 64 circuits; PASS
+psf_os_build {'version': '0.3.1', 'park': True, 'park_set': 'explicit', 'declared': '0.3.1', 'park_likely': True} -> ok (park and park_likely stated)
+ceilings (exact): C(6) 0.3065, C(7) 0.2480, C(8) 0.2007
+n 6: 16 parked phases, compiled CZ mean 11.12 against every phase 11.00 (compiled the same way) -> ok
+n 7: 16 parked phases, compiled CZ mean 13.12 against every phase 13.00 (compiled the same way) -> ok
+n 8: 16 parked phases, compiled CZ mean 15.12 against every phase 15.00 (compiled the same way) -> ok
+park records: every parked item fenced with its target and ancilla; every twin unparked
+PASS
