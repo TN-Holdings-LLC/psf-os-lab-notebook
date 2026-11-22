@@ -1,0 +1,5 @@
+n 6: P F 0.7981, S 0.8047, SD 0.1177, SD(2L) 0.0504; SD - F -0.6804 (2 SE 0.0067); S - SD +0.6871 (2 SE 0.0067)
+n 8: P F 0.7192, S 0.7216, SD 0.0494, SD(2L) 0.0163; SD - F -0.6698 (2 SE 0.0065); S - SD +0.6722 (2 SE 0.0065)
+pooled over n (mean of the n): SD - F -0.6751 (2 SE 0.0047) -> FEEDBACK GAINS; S - SD +0.6796 (2 SE 0.0046) -> WAIT COSTS
+beside: SD(L) - SD(2L) +0.0502 (2 SE 0.0030), the wait's cost per further L
+reading: F keeps more than S plus the delay although the wait costs: the delay overstates F's wait (L too long); read with plan d's two lengths before any 0.4 step

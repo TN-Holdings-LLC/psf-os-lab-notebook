@@ -40,9 +40,10 @@ counted; no mitigation.
 | 11-21 **fez** (cal. 11-21 14:12) | RUS fence and parking the likely value, with controls (`results/rus-fence-night-2026-11-21`) | IPE control parked +0.0291 (KEEPS MORE); repetition code F6P - F10 +0.0283, F6 - F6P +0.0108 (both KEEPS MORE), F6 0.9294 BEYOND 0.875; RUS: P0's fence -0.0453 KEEPS LESS, NF's likely-value parking +0.0877 KEEPS MORE (row 1, damping) | RF-1 held |
 | 11-22 **kingston** (cal. 11-22 03:26) | psf-os 0.3.1's candidate: park the likely value behind a partial fence (`results/likely-park-night-2026-11-22`) | L - D in one job: NF +0.0972, P0 +0.0247 (KEEPS MORE), P3 +0.0094 (SAME); IPE control +0.0523; the declared rule: park_likely the default in 0.3.1 | LP-1 held, LP-2 held |
 | 11-22 fez (cal. 11-22 11:14) | IPE parked by psf-os 0.3.1 at n = 6, 7, 8 (`results/qpe-n78-night-2026-11-22`) | 0.5785 / 0.5097 / 0.4236, all BEYOND (C 0.3065 / 0.2480 / 0.2007); parking +0.0499 KEEPS MORE at n = 6, SAME at 7 and 8; the shape beside: ACCELERATES (+0.058, 2 SE 0.028) | QN-1 held |
+| 11-22 fez (cal. 11-22 12:28) | the branch cost in IPE (`results/ipe-branch-cost-night-2026-11-22`) | the declared split read "L too long" (dt 4 ns: L = 18 µs per conditional); beside: S − F +0.0045 (2 SE 0.0055), the feedback with its real wait costs a few thousandths at n = 6, 8 | none declared |
 
 Predictions since paper 10: 11 declared, 11 held. Over the nights of 11-16 to 11-22: 68 declared; 48 held, 20 failed
-(each failure stays in paper 10 and its folder). Device time for this paper: 165 + 110 + 111 + 83 + 48 + 40 + 37 = 594 s charged, on three devices.
+(each failure stays in paper 10 and its folder). Device time for this paper: 165 + 110 + 111 + 83 + 48 + 40 + 37 + 112 = 706 s charged, on three devices.
 
 Independent checks (home VS, qiskit, aer and numpy only, no project scorer): decoy and loopvar (a2c6eb56), the
 paired loop (bfae2760, seven of seven items agree); the weekend night (1a87c959: every number, word and row agrees).

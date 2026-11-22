@@ -41,6 +41,7 @@ declared before the data". Author TN Holdings. Which paper number it takes is th
 | 11-21 fez (calibrated 14:12) | RUS fence and parking the likely value, with controls (`results/rus-fence-night-2026-11-21`) | first night off marrakesh: P0's fence -0.045, NF's likely-value parking +0.088 (row 1, damping); IPE control +0.029; repetition code F6 0.929 beyond its ceiling; 48 s charged |
 | 11-22 kingston (calibrated 03:26) | psf-os 0.3.1's candidate park_likely (MP) against 0.3.0 (`results/likely-park-night-2026-11-22`) | third device: NF +0.097, P0 +0.025 KEEPS MORE, P3 SAME; IPE control +0.052; the declared rule: park_likely the default in 0.3.1; 40 s charged |
 | 11-22 fez (calibrated 11:14) | IPE parked by psf-os 0.3.1 at n = 6, 7, 8 (`results/qpe-n78-night-2026-11-22`) | beyond the ceiling to n = 8 (0.424 against 0.201); parking +0.050 at n = 6, SAME at 7 and 8; the loss per bit grows (beside); 37 s charged |
+| 11-22 fez (calibrated 12:28) | the branch cost in IPE: F, S, S + delay (`results/ipe-branch-cost-night-2026-11-22`) | L (4500 dt) proved 18 µs per conditional: the "L too long" row; beside, removing every phase conditional changes P by +0.005 (2 SE 0.006); 112 s charged (delays not in the model) |
 
 Predictions over seven nights (11-16 to 11-22): 68 declared; 48 held, 20 failed (11-16: teleport P3; neuron P1, P2; wait P1. 11-17:
 T3-3, T4-3, N2-1, N2-2, OS-2, B-2, PK-1. 11-18: R-2, PB-3, T-1, T-3, OS2-1. 11-19: LOOP-1, IF-1, IF-2, RC-1. 11-20: none

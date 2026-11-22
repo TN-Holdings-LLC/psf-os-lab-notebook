@@ -1,0 +1,239 @@
+{
+ "kind": "psfos",
+ "psfos_role": "user",
+ "psfos_job": {
+  "kind": "feedforward"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_fez",
+ "masked": [],
+ "labels": [
+  0,
+  1,
+  2
+ ],
+ "mapping": {
+  "0": 0,
+  "1": 1,
+  "2": 2
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 2950,
+ "export": {
+  "qpy": "ff_ips6_36.qpy",
+  "circuits": 1,
+  "sha256": "e3ec2a6bfd40489ec5af2751f6f2295ea27056f2320876620b47086fd7c790ab"
+ },
+ "tag": "ips6_36",
+ "chain": [
+  0,
+  1,
+  2
+ ],
+ "chain_rule": {
+  "rule": "C",
+  "start": [
+   1,
+   0,
+   0
+  ]
+ },
+ "success": {
+  "0": 1,
+  "1": 0,
+  "2": 0,
+  "3": 1,
+  "4": 0,
+  "5": 0
+ },
+ "bound": null,
+ "clbits": 6,
+ "mid": 5,
+ "conditionals": 5,
+ "logical_cz": 12,
+ "off_explicit": true,
+ "ff_arm": "ff",
+ "cz": 10,
+ "checks": {
+  "on_chain": true,
+  "qubits_ok": true,
+  "couplers_on_chain": true,
+  "couplers_working": true,
+  "measures": true
+ },
+ "ff_only": true,
+ "wait_footprint": {
+  "sent": {
+   "ff": {
+    "max": 0,
+    "total": 0,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ]
+   },
+   "off": {
+    "max": 1,
+    "total": 1,
+    "carriers": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [
+      2
+     ]
+    ]
+   }
+  },
+  "written": {
+   "max": 0,
+   "total": 0,
+   "carriers": [
+    [],
+    [],
+    [],
+    [],
+    []
+   ]
+  },
+  "max": 0,
+  "total": 0
+ },
+ "park": {
+  "park": true,
+  "arms": {
+   "ff": {
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     }
+    ],
+    "waits": 5,
+    "parked_waits": 5,
+    "excited_before": 5.0,
+    "excited_after": 0.0
+   },
+   "off": {
+    "parked": [
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     },
+     {
+      "kind": "read",
+      "qubits": [
+       2
+      ],
+      "physical": [
+       2
+      ]
+     }
+    ],
+    "waits": 5,
+    "parked_waits": 5,
+    "excited_before": 5.0,
+    "excited_after": 0.0
+   }
+  }
+ },
+ "park_likely": {
+  "park_likely": true,
+  "arms": {
+   "ff": {
+    "parked": [],
+    "waits": 5
+   },
+   "off": {
+    "parked": [],
+    "waits": 5
+   }
+  }
+ }
+}
