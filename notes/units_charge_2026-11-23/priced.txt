@@ -1,0 +1,5 @@
+psf-os 0.3.2; dt 4e-09 s; limit 100 us
+without allow_long_delay: refused: 32 circuit(s) hold a delay over 100 us (the longest 1008 us = 252000 dt at dt 4e-09 s, circuit 24); shorten the delays or pass allow_long_delay=True
+with allow_long_delay: 68 circuits; delays per circuit (us) [270.0, 504.0, 540.0, 1008.0]
+model without delays 59.6 s; delays 54.8 s; qpu_seconds_model 114.4 s
+charged 112 s: model +2.4 s (+2.1%); the 105-job relation with the delays 111.4 s

@@ -1,0 +1,14 @@
+not found device-d4-2026-10-28/README.md:24: 0.0223  | | device | **0.0223** | 0.0111 | 0.248 | +0.012 |
+not found device-d4-2026-10-28/README.md:25: 0.0282  | | twin (11:36:52 calibration) | 0.0282 | 0.0081 | 0.402 | −0.000 |
+not found feedforward-2026-11-16/README.md:30: 0.5158  | | 3. off arm at or under its circuit value + 2 SE | k = 1: 0.7935 against 0.7637; k = 2: 0.5175 against 0.5158 | failed 
+not found hub-dt-2026-11-12/README.md:24: 0.0009  | | J t 1.0 | 2 steps | 0.0049 / 0.0425 | 30 | **2 steps** | 0.0009 (0.0005) |
+not found hub-dt-2026-11-12/README.md:24: 0.0005  | | J t 1.0 | 2 steps | 0.0049 / 0.0425 | 30 | **2 steps** | 0.0009 (0.0005) |
+not found hub-dt-2026-11-12/README.md:27: 0.0172  | | J t 0.5 | 2 steps | 0.0116 / 0.2045 | 17 | **2 steps** | 0.0172 (0.0010) |
+not found hub-dt-2026-11-12/README.md:27: 0.0010  | | J t 0.5 | 2 steps | 0.0116 / 0.2045 | 17 | **2 steps** | 0.0172 (0.0010) |
+not found ipe-branch-cost-night-2026-11-22/README.md:35: 0.0073  | +0.0067 (2 SE 0.0073) at n = 6, +0.0023 (2 SE 0.0083) at n = 8, mean +0.0045 (2 SE 0.0055).** F and S differ by
+not found ipe-branch-cost-night-2026-11-22/README.md:35: +0.0023  | +0.0067 (2 SE 0.0073) at n = 6, +0.0023 (2 SE 0.0083) at n = 8, mean +0.0045 (2 SE 0.0055).** F and S differ by
+not found os-night-2026-11-17/README.md:52: 0.9009  | | OS-2 PRESCRIPTION HELPS at L = 1, 2, 3 | L = 1 OVERSHOOT (P2 0.9025 against the line 0.8915 + 2 SE 0.0094 = 0.9009); L
+not found qpe-parked-night-2026-11-21/README.md:26: 0.4706  | | 4 | 0.8742 (0.0038) | 0.4706 | BEYOND THE CEILING (+0.404) | 0.9037 - 0.8688 = +0.0349 (0.0072) | KEEPS MORE |
+not found qpe-parked-night-2026-11-21/README.md:27: 0.3792  | | 5 | 0.8391 (0.0029) | 0.3792 | BEYOND THE CEILING (+0.460) | 0.8990 - 0.8678 = +0.0312 (0.0073) | KEEPS MORE |
+not found qpe-parked-night-2026-11-21/README.md:28: 0.3065  | | 6 | 0.8006 (0.0023) | 0.3065 | BEYOND THE CEILING (+0.494) | 0.8908 - 0.8522 = +0.0386 (0.0076) | KEEPS MORE |
+51 nights checked (README and a job record); 0 mismatches; 13 values not found in the night's score files

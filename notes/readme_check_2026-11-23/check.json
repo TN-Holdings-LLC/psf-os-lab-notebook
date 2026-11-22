@@ -1,0 +1,395 @@
+{
+ "balanced-night-2026-11-17": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "balanced-repeat-2026-11-18": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "ctrl-diag-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "decoy-night-2026-11-20": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "device-d1-2026-10-26": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "device-d2-2026-10-26": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "device-d3-2026-10-28": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "device-d4-2026-10-28": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [
+   {
+    "line": 24,
+    "value": "0.0223",
+    "text": "| device | **0.0223** | 0.0111 | 0.248 | +0.012 |"
+   },
+   {
+    "line": 25,
+    "value": "0.0282",
+    "text": "| twin (11:36:52 calibration) | 0.0282 | 0.0081 | 0.402 | −0.000 |"
+   }
+  ],
+  "delays_us": null
+ },
+ "device-d5a-2026-10-28": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "feedforward-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [
+   {
+    "line": 30,
+    "value": "0.5158",
+    "text": "| 3. off arm at or under its circuit value + 2 SE | k = 1: 0.7935 against 0.7637; k = 2: 0.5175 against 0.5158 | failed (both k) |"
+   }
+  ],
+  "delays_us": null
+ },
+ "ff-night-2026-11-17": {
+  "jobs": 4,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "ff-night2-2026-11-17": {
+  "jobs": 3,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "full-floor-2026-11-13": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "full-floor-2026-11-14": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "full-floor-2026-11-15": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "full-floor-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "hub-dt-2026-11-12": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [
+   {
+    "line": 24,
+    "value": "0.0009",
+    "text": "| J t 1.0 | 2 steps | 0.0049 / 0.0425 | 30 | **2 steps** | 0.0009 (0.0005) |"
+   },
+   {
+    "line": 24,
+    "value": "0.0005",
+    "text": "| J t 1.0 | 2 steps | 0.0049 / 0.0425 | 30 | **2 steps** | 0.0009 (0.0005) |"
+   },
+   {
+    "line": 27,
+    "value": "0.0172",
+    "text": "| J t 0.5 | 2 steps | 0.0116 / 0.2045 | 17 | **2 steps** | 0.0172 (0.0010) |"
+   },
+   {
+    "line": 27,
+    "value": "0.0010",
+    "text": "| J t 0.5 | 2 steps | 0.0116 / 0.2045 | 17 | **2 steps** | 0.0172 (0.0010) |"
+   }
+  ],
+  "delays_us": null
+ },
+ "hubbard-2026-11-11": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "hubbard-big-2026-11-11": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "interfere-night-2026-11-19": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "ipe-branch-cost-night-2026-11-22": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [
+   {
+    "line": 35,
+    "value": "0.0073",
+    "text": "+0.0067 (2 SE 0.0073) at n = 6, +0.0023 (2 SE 0.0083) at n = 8, mean +0.0045 (2 SE 0.0055).** F and S differ by"
+   },
+   {
+    "line": 35,
+    "value": "+0.0023",
+    "text": "+0.0067 (2 SE 0.0073) at n = 6, +0.0023 (2 SE 0.0083) at n = 8, mean +0.0045 (2 SE 0.0055).** F and S differ by"
+   }
+  ],
+  "delays_us": [
+   18.0,
+   36.0,
+   54.0,
+   72.0,
+   90.0,
+   108.0,
+   126.0,
+   144.0,
+   180.0,
+   216.0,
+   252.0,
+   270.0,
+   504.0,
+   540.0,
+   1008.0
+  ]
+ },
+ "likely-park-night-2026-11-22": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "loop-night-2026-11-19": {
+  "jobs": 5,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "loop-paired-night-2026-11-20": {
+  "jobs": 4,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "loopvar-night-2026-11-20": {
+  "jobs": 3,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "ohm-2026-11-12": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "ohm-kingston-2026-11-12": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "os-night-2026-11-17": {
+  "jobs": 3,
+  "mismatches": [],
+  "not_found": [
+   {
+    "line": 52,
+    "value": "0.9009",
+    "text": "| OS-2 PRESCRIPTION HELPS at L = 1, 2, 3 | L = 1 OVERSHOOT (P2 0.9025 against the line 0.8915 + 2 SE 0.0094 = 0.9009); L = 2, 3 HELPS | failed |"
+   }
+  ],
+  "delays_us": null
+ },
+ "os2-night-2026-11-18": {
+  "jobs": 3,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "os3d-device-2026-11-06": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "os3d-v31-2026-11-07": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "packing-night-2026-11-17": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "parallel-night-2026-11-18": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "qpe-n78-night-2026-11-22": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "qpe-parked-night-2026-11-21": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [
+   {
+    "line": 26,
+    "value": "0.4706",
+    "text": "| 4 | 0.8742 (0.0038) | 0.4706 | BEYOND THE CEILING (+0.404) | 0.9037 - 0.8688 = +0.0349 (0.0072) | KEEPS MORE |"
+   },
+   {
+    "line": 27,
+    "value": "0.3792",
+    "text": "| 5 | 0.8391 (0.0029) | 0.3792 | BEYOND THE CEILING (+0.460) | 0.8990 - 0.8678 = +0.0312 (0.0073) | KEEPS MORE |"
+   },
+   {
+    "line": 28,
+    "value": "0.3065",
+    "text": "| 6 | 0.8006 (0.0023) | 0.3065 | BEYOND THE CEILING (+0.494) | 0.8908 - 0.8522 = +0.0386 (0.0076) | KEEPS MORE |"
+   }
+  ],
+  "delays_us": null
+ },
+ "qpe-repro-night-2026-11-19": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "repcode-night-2026-11-19": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "rus-fence-night-2026-11-21": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "rus-neuron-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "rus-neuron2-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "rus-neuron3-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "rus-neuron3-kingston-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "timing-night-2026-11-18": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "twin-2026-11-13": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "utility-depth-2026-11-11": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "wait-diag-2026-11-16": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "weekend-shared-night-2026-11-21": {
+  "jobs": 3,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "xx91-2026-11-12": {
+  "jobs": 1,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "xxcone-2026-11-14": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "xxsize-2026-11-14-fez": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ },
+ "xxsize-2026-11-14-marrakesh": {
+  "jobs": 2,
+  "mismatches": [],
+  "not_found": [],
+  "delays_us": null
+ }
+}

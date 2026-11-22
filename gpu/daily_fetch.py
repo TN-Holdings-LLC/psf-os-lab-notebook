@@ -3,6 +3,7 @@ choose the night's devices by the standing rule (every device with at most 10 pe
 the fewest; ties in that order), then `psf-os fetch` each into OUT_BASE/<device>/dev.
 
 Uses the saved IBM account only; reads no key and no quality number. Run from ~/toqb_push_2026-10-15.
+2026-11-23: also writes OUT_BASE/<device>/dt.txt, the clock step of the backend configuration (a unit of time).
 usage: python daily_fetch_2026-11-05.py OUT_BASE
 """
 import datetime as dt
@@ -28,4 +29,9 @@ print("queue", q, "-> chosen", chosen)
 for n in chosen:
     subprocess.run([sys.executable, "-m", "psf_os", "fetch", "--backend", n, "--out", os.path.join(base, n, "dev")],
                    check=True)
+    # 2026-11-23: the device's clock step dt (seconds), from the backend configuration (Target.dt). A unit of time,
+    # the same for every qubit, not a calibration or quality number: it converts delays between dt and seconds.
+    # psf-os 0.3.2 also writes it into device.json; dt.txt keeps it beside the record for every psf-os.
+    step = svc.backend(n).target.dt
+    open(os.path.join(base, n, "dt.txt"), "w").write(f"{step!r}\n" if step else "none\n")
 print("fetched:", ", ".join(chosen))
