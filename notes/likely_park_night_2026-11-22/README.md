@@ -23,6 +23,11 @@ Home VS Claude, on the home instruction `VSクロードへの指示_0.3.1候補�
 | cond (dephasing per conditional) | +0.010 SAME | +0.002 SAME | +0.002 SAME | +0.047 MORE | opt-in (no item MORE) |
 | phase (a coherent phase while reading) | +0.006 SAME | +0.030 KEEPS MORE* | +0.022 KEEPS MORE* | +0.019 MORE | the default* |
 
-(*) Under the coherent phase, D overshoots exact on P0: P 0.871 against exact 0.823. L's lower P (0.841) is nearer
+(*) Re-scored with OVERSHOOT (`rescore_overshoot.txt`; the owner's decision of 2026-11-22): under the coherent
+phase, D and L overshoot their noiseless value + 2 SE on all three items (P0's D 0.871 against 0.783). No item is
+counted, and the rule reads opt-in. Under damping and dephasing no item overshoots, and the rows stay as above. The
+rule's branches are tested in `test_score.py` (8 cases).
+
+Before OVERSHOOT was added: under the coherent phase, D overshoots exact on P0: P 0.871 against exact 0.823. L's lower P (0.841) is nearer
 exact, so g reads KEEPS MORE although L keeps no more in any direct sense. This comes from reading |P − exact|, not from
 parking. A device night whose D reads above exact would carry the same artifact; the draft lists it among the limits.

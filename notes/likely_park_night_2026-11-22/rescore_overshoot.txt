@@ -1,0 +1,38 @@
+8 cases: every branch as declared
+--- ibm_fez wait
+nfl3m3: P D 0.4399 L 0.7050 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.2651 (2 SE 0.0153) KEEPS MORE
+p0l3: P D 0.5337 L 0.5480 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0143 (2 SE 0.0085) KEEPS MORE
+p3l3: P D 0.5788 L 0.5944 (exact 0.8230; noiseless D 0.7060 L 0.7060); L - D +0.0156 (2 SE 0.0100) KEEPS MORE
+IPE control: parked 1.0000 - unparked 0.9605 = +0.0395 (2 SE 0.0044) KEEPS MORE (the gate open)
+the rule for the default (counted: ['nfl3m3', 'p0l3', 'p3l3']): the default in 0.3.1 (no counted item KEEPS LESS, at least one KEEPS MORE)
+--- ibm_fez cond
+nfl3m3: P D 0.7256 L 0.7356 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0100 (2 SE 0.0142) SAME WITHIN ERROR
+p0l3: P D 0.7400 L 0.7415 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0016 (2 SE 0.0075) SAME WITHIN ERROR
+p3l3: P D 0.6837 L 0.6858 (exact 0.8230; noiseless D 0.7060 L 0.7060); L - D +0.0022 (2 SE 0.0094) SAME WITHIN ERROR
+IPE control: parked 0.9253 - unparked 0.8787 = +0.0465 (2 SE 0.0095) KEEPS MORE (the gate open)
+the rule for the default (counted: ['nfl3m3', 'p0l3', 'p3l3']): opt-in (no counted item KEEPS MORE)
+--- ibm_fez phase
+nfl3m3: P D 0.8340 L 0.8176 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0056 (2 SE 0.0121) SAME WITHIN ERROR; OVERSHOOT (D, L): recorded, not counted for the rule
+p0l3: P D 0.8706 L 0.8410 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0297 (2 SE 0.0060) KEEPS MORE; OVERSHOOT (D, L): recorded, not counted for the rule
+p3l3: P D 0.7458 L 0.7680 (exact 0.8230; noiseless D 0.7060 L 0.7060); L - D +0.0222 (2 SE 0.0087) KEEPS MORE; OVERSHOOT (D, L): recorded, not counted for the rule
+IPE control: parked 1.0000 - unparked 0.9815 = +0.0185 (2 SE 0.0030) KEEPS MORE (the gate open)
+the rule for the default (counted: none): opt-in (no item counted: every item overshoots)
+--- ibm_kingston wait
+nfl3m3: P D 0.4399 L 0.7050 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.2651 (2 SE 0.0153) KEEPS MORE
+p0l3: P D 0.5337 L 0.5480 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0143 (2 SE 0.0085) KEEPS MORE
+p3l3: P D 0.5788 L 0.5944 (exact 0.8230; noiseless D 0.7060 L 0.7060); L - D +0.0156 (2 SE 0.0100) KEEPS MORE
+IPE control: parked 1.0000 - unparked 0.9605 = +0.0395 (2 SE 0.0044) KEEPS MORE (the gate open)
+the rule for the default (counted: ['nfl3m3', 'p0l3', 'p3l3']): the default in 0.3.1 (no counted item KEEPS LESS, at least one KEEPS MORE)
+--- ibm_kingston cond
+nfl3m3: P D 0.7256 L 0.7356 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0100 (2 SE 0.0142) SAME WITHIN ERROR
+p0l3: P D 0.7400 L 0.7415 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0016 (2 SE 0.0075) SAME WITHIN ERROR
+p3l3: P D 0.6837 L 0.6858 (exact 0.8230; noiseless D 0.7060 L 0.7060); L - D +0.0022 (2 SE 0.0094) SAME WITHIN ERROR
+IPE control: parked 0.9253 - unparked 0.8787 = +0.0465 (2 SE 0.0095) KEEPS MORE (the gate open)
+the rule for the default (counted: ['nfl3m3', 'p0l3', 'p3l3']): opt-in (no counted item KEEPS MORE)
+--- ibm_kingston phase
+nfl3m3: P D 0.8340 L 0.8176 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0056 (2 SE 0.0121) SAME WITHIN ERROR; OVERSHOOT (D, L): recorded, not counted for the rule
+p0l3: P D 0.8706 L 0.8410 (exact 0.8230; noiseless D 0.7834 L 0.7834); L - D +0.0297 (2 SE 0.0060) KEEPS MORE; OVERSHOOT (D, L): recorded, not counted for the rule
+p3l3: P D 0.7458 L 0.7680 (exact 0.8230; noiseless D 0.7060 L 0.7060); L - D +0.0222 (2 SE 0.0087) KEEPS MORE; OVERSHOOT (D, L): recorded, not counted for the rule
+IPE control: parked 1.0000 - unparked 0.9815 = +0.0185 (2 SE 0.0030) KEEPS MORE (the gate open)
+the rule for the default (counted: none): opt-in (no item counted: every item overshoots)
+DONE

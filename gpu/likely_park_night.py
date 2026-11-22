@@ -5,7 +5,8 @@ Per RUS item, the twins side by side in one job (copies a, b, ...):
   D  psf-os's default (0.3.0's: the chains have nothing to park)
   L  build(park_likely=...): every waiting qubit with P(|1>) > 0.5 parked by an X pair behind a partial fence (the parked
      qubits and the wait's own qubits, at those waits only): the desk's MP (notes/likely_park_2026-11-22)
-Read: L - D as the loop reads g (|P - exact|, nearer is better), per item. Beside, in the same job: the IPE control
+Read: L - D as the loop reads g (|P - exact|, nearer is better), per item. An item whose D or L OVERSHOOTS (P above
+that form's noiseless value + 2 SE, the loop's rule) is recorded but not counted for the rule for the default. Beside, in the same job: the IPE control
 (n = 4 at phases 2, 6, 10, 14, parked and unparked), the gate. Needs psf-os 0.3.1 (likely-park-2026-11-22); the
 declared tools are imported read only, gpu/rus_fence_night.py for its items, device rule and noises.
 
@@ -187,16 +188,30 @@ def dry(a):
                    note="ILLUSTRATIVE noise, never fitted"), open(os.path.join(jd, "job", "raw_counts.json"), "w"))
 
 
-def decision(words, gate):
-    """The rule for the default [OWNER] (the home's proposal): park_likely becomes 0.3.1's default when no item reads
-    KEEPS LESS and at least one reads KEEPS MORE, and the IPE control's gate is open; otherwise it stays opt-in."""
+def decision(words, gate, excluded=()):
+    """The rule for the default (the owner's decision of 2026-11-22, the home's proposal): park_likely becomes 0.3.1's
+    default when, among the items counted, none reads KEEPS LESS and at least one reads KEEPS MORE, and the IPE
+    control's gate is open; otherwise it stays opt-in. An item whose D or L OVERSHOOTS (P above that form's noiseless
+    value + 2 SE: the loop's rule) is recorded but not counted (`excluded`)."""
+    counted = {k: w for k, w in words.items() if k not in set(excluded)}
     if gate != "KEEPS MORE":
         return "opt-in (the gate is closed: 0.3.0's default kept)"
-    if any(w == "KEEPS LESS" for w in words.values()):
-        return "opt-in (an item KEEPS LESS)"
-    if any(w == "KEEPS MORE" for w in words.values()):
-        return "the default in 0.3.1 (no item KEEPS LESS, at least one KEEPS MORE)"
-    return "opt-in (no item KEEPS MORE)"
+    if not counted:
+        return "opt-in (no item counted: every item overshoots)"
+    if any(w == "KEEPS LESS" for w in counted.values()):
+        return "opt-in (a counted item KEEPS LESS)"
+    if any(w == "KEEPS MORE" for w in counted.values()):
+        return "the default in 0.3.1 (no counted item KEEPS LESS, at least one KEEPS MORE)"
+    return "opt-in (no counted item KEEPS MORE)"
+
+
+def noiseless_p(circ, ob, want):
+    """The noiseless P of the output bit read as declared, from the compiled circuit itself (exact, branching)."""
+    from psf_os import feedforward as FF
+    from psf_os.footprint import exact_distribution
+    cc = FF.compact(circ)
+    n = cc.num_clbits
+    return sum(p for k, p in exact_distribution(cc).items() if k[n - 1 - ob] == want)
 
 
 def score(a):
@@ -206,8 +221,9 @@ def score(a):
     read = J.read(os.path.join(jd, "job"), os.path.join(jd, "runs"))
     cards = {rec["tag"]: (rec, cc[("f", "z")]) for _n, (rec, cc) in read.items()
              if rec.get("psfos_job", {}).get("kind", "").startswith(FF.KIND) and rec.get("ff_arm") == "ff"}
-    lines, words, res = [], {}, {}
+    lines, words, res, excluded = [], {}, {}, []
     say = lambda s: (print(s), lines.append(s))
+    _jd, _man, compiled = _job(a.out)
     for key in ITEMS:
         presc = RF.RUS[key][0]
         P = {}
@@ -225,8 +241,20 @@ def score(a):
         g = abs(pd - ex) - abs(pl - ex)
         se = math.sqrt(pd * (1 - pd) / nd + pl * (1 - pl) / nl)
         words[key] = RF.word(g, se)
-        res[key] = dict(D=pd, L=pl, exact=ex, g=g, two_se=2 * se, word=words[key])
-        say(f"{key}: P D {pd:.4f} L {pl:.4f} (exact {ex:.4f}); L - D {g:+.4f} (2 SE {2 * se:.4f}) {words[key]}")
+        ob = cards[f"{key}Da"][0]["rus"]["out_bit"]
+        want = "1" if RF.reads_one(presc) else "0"
+        over = {}
+        for k, (pk_, nk_) in (("D", P["D"]), ("L", P["L"])):
+            nl_ = noiseless_p(compiled[f"{key}{k}a"], ob, want)
+            over[k] = dict(noiseless=nl_, overshoots=bool(pk_ > nl_ + 2 * math.sqrt(pk_ * (1 - pk_) / nk_)))
+        out_ = over["D"]["overshoots"] or over["L"]["overshoots"]
+        if out_:
+            excluded.append(key)
+        res[key] = dict(D=pd, L=pl, exact=ex, g=g, two_se=2 * se, word=words[key], overshoot=over, counted=not out_)
+        say(f"{key}: P D {pd:.4f} L {pl:.4f} (exact {ex:.4f}; noiseless D {over['D']['noiseless']:.4f} L "
+            f"{over['L']['noiseless']:.4f}); L - D {g:+.4f} (2 SE {2 * se:.4f}) {words[key]}"
+            + (f"; OVERSHOOT ({', '.join(k for k in 'DL' if over[k]['overshoots'])}): recorded, not counted for the "
+               f"rule" if out_ else ""))
 
     def pool(ts):
         ok = N = 0
@@ -242,9 +270,10 @@ def score(a):
     gate = RF.word(pk - pu, se)
     say(f"IPE control: parked {pk:.4f} - unparked {pu:.4f} = {pk - pu:+.4f} (2 SE {2 * se:.4f}) {gate} "
         f"(the gate {'open' if gate == 'KEEPS MORE' else 'closed'})")
-    d = decision(words, gate)
-    say(f"the rule for the default: {d}")
-    res.update(control=dict(parked=pk, unparked=pu, d=pk - pu, two_se=2 * se, word=gate), decision=d)
+    d = decision(words, gate, excluded)
+    say(f"the rule for the default (counted: {[k for k in ITEMS if k not in excluded] or 'none'}): {d}")
+    res.update(control=dict(parked=pk, unparked=pu, d=pk - pu, two_se=2 * se, word=gate), decision=d,
+               excluded=excluded)
     json.dump(res, open(os.path.join(a.out, "likely_scores.json"), "w"), indent=1)
     open(os.path.join(a.out, "score.txt"), "w").write("\n".join(lines) + "\n")
 
