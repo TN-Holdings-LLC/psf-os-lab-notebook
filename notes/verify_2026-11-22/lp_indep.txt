@@ -1,0 +1,11 @@
+sent: 68 circuits, roles {'user': 64, 'sentinel': 4}, shots [1950]; psf_os_build version 0.3.1, park True, park_likely 28 names, declared 0.3.1
+park_likely names exactly the L items: True (28)
+nfl3m3 copies D 4 L 4: P D 0.5672 L 0.6644 (exact 0.8230; noiseless by Aer D 0.7848 L 0.7848); L - D +0.0972 (2 SE 0.0155) KEEPS MORE; OVERSHOOT {'D': False, 'L': False}
+   L's parked waits 8 on physical [1, 3, 5]; barriers holding them with a measured qubit per wait [36, 36, 36, 20, 20, 20, 4, 4] (>= 2 each: True)
+p0l3 copies D 14 L 14: P D 0.5458 L 0.5705 (exact 0.8230; noiseless by Aer D 0.7848 L 0.7848); L - D +0.0247 (2 SE 0.0085) KEEPS MORE; OVERSHOOT {'D': False, 'L': False}
+   L's parked waits 4 on physical [1, 3]; barriers holding them with a measured qubit per wait [8, 6, 8, 8] (>= 2 each: True)
+p3l3 copies D 10 L 10: P D 0.5684 L 0.5778 (exact 0.8230; noiseless by Aer D 0.7061 L 0.7061); L - D +0.0094 (2 SE 0.0100) SAME WITHIN ERROR; OVERSHOOT {'D': False, 'L': False}
+   L's parked waits 3 on physical [1, 3]; barriers holding them with a measured qubit per wait [6, 4, 6] (>= 2 each: True)
+IPE control: parked 0.9200 - unparked 0.8677 = +0.0523 (2 SE 0.0098) KEEPS MORE
+counted ['nfl3m3', 'p0l3', 'p3l3']; the rule: park_likely the default in 0.3.1
+device rule: pending {'ibm_marrakesh': 2, 'ibm_fez': 3, 'ibm_kingston': 2} -> ibm_kingston; ran on ibm_kingston; charged 40 s, 0.6518 RU, model 41.2
