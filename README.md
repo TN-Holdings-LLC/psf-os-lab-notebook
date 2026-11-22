@@ -16,6 +16,17 @@ Papers: 7 [doi:10.5281/zenodo.24046673](https://doi.org/10.5281/zenodo.24046673)
 [doi:10.5281/zenodo.24416958](https://doi.org/10.5281/zenodo.24416958); psf-os 0.3.1 (2026-11-22; the likely value parked
 too) [doi:10.5281/zenodo.24438701](https://doi.org/10.5281/zenodo.24438701); paper 11 in preparation (`notes/paper11/`).
 
+## How the results are made (the stance)
+
+Every result here is raw counts. No error mitigation, no post-selection, no noise model fitted to a device, and no
+calibration error number read. Every shot is counted. What improves a result comes only from how the circuit is
+built and sent (where a qubit waits, what is packed beside what, which qubits are parked), and that is fixed in a
+declaration before the device record is read. Mitigation could be layered on top; no conclusion here rests on it.
+
+In one picture: we prepare the fruit before we eat it (the circuit is built to lose less), we do not sprinkle sugar
+on it afterwards (no mitigation), we do not throw away the bites we do not like (every shot counted), and how it is
+cut is written down before the first bite (the declaration).
+
 ## The original TOQB (kept as it was)
 
 TOQB compares quantum compilers on the quality of what they return within a time budget, from the circuit's

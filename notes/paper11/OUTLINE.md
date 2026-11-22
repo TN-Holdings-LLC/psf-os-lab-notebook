@@ -52,8 +52,11 @@ paired loop (bfae2760, seven of seven items agree); the weekend night (1a87c959:
 1. **Introduction**: paper 10's result in one paragraph; the question of this paper: what to do with the waits.
    The 11-16 neuron finding (holding the likely 1 as |0> while waiting, +0.11 to +0.18) as the first hint, which
    changed the encoding; C isolates the wait itself (same action, same CZ, three ways to wait).
-2. **Method**: declaration on push; one job per comparison; the 2 SE words; the reading tables fixed before the
-   data and counted to have no gaps; tools as of the declaring commit; the shared night (three tests, three jobs,
+2. **Method**: the stance first, in these words (the owner, 2026-11-22): "All results are raw counts. They include no
+   error mitigation, no post-selection and no noise model fitted to a device. Every improvement comes from how the
+   circuit is built and sent, and that was declared before the device record was read. Mitigation may be layered on
+   top; the conclusions here do not rest on it." Then: declaration on push; one job per comparison; the 2 SE words;
+   the reading tables fixed before the data and counted to have no gaps; tools as of the declaring commit; the shared night (three tests, three jobs,
    off and floor arms not sent because no verdict reads them).
 3. **Where a qubit waits (C)**: the forms, the footprint as sent (the compiler merged the target's rotations across
    the wait: what is written is not what waits), the result, the reading row. Why decay, not dephasing, is the
