@@ -1,0 +1,411 @@
+{
+ "note": "durations: fake backends' values (FakeFez, FakeKingston), not the devices' records; noise-free P(|1>) by MPS; schedules ASAP and ALAP (the device's own schedule is not recorded)",
+ "chi": 512,
+ "cutoff": 1e-08,
+ "cells": {
+  "fez_A0_t3": {
+   "circuits": 28,
+   "cz": [
+    234
+   ],
+   "one_qubit_gates_mean": 750.0,
+   "asap": {
+    "length_us_mean": 1.6,
+    "a_idle_share": 0.034482758620689655,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 1.0277142857142858,
+    "c_share_of_qubit_time": 0.017241379310344827,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 59.60742857142858,
+    "spans_per_circuit": 39.75,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 1.6,
+    "a_idle_share": 0.10091055168719872,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 1.1040000000000003,
+    "c_share_of_qubit_time": 0.01724692019282271,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 64.01142857142857,
+    "spans_per_circuit": 61.714285714285715,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   }
+  },
+  "fez_A0_t6": {
+   "circuits": 28,
+   "cz": [
+    468
+   ],
+   "one_qubit_gates_mean": 1449.0,
+   "asap": {
+    "length_us_mean": 3.16,
+    "a_idle_share": 0.04549340600655687,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 2.713857142857143,
+    "c_share_of_qubit_time": 0.022746703003278437,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 119.3077142857143,
+    "spans_per_circuit": 93.32142857142857,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 3.16,
+    "a_idle_share": 0.09913208570653648,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 2.9000000000000004,
+    "c_share_of_qubit_time": 0.0229409637464967,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 126.41142857142859,
+    "spans_per_circuit": 117.71428571428571,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   }
+  },
+  "fez_A1_t3": {
+   "circuits": 28,
+   "cz": [
+    351
+   ],
+   "one_qubit_gates_mean": 1063.0,
+   "asap": {
+    "length_us_mean": 2.52,
+    "a_idle_share": 0.10438307575373701,
+    "b_p1_over_half_share_of_idle": 0.16929611650485438,
+    "c_weighted_us_per_circuit": 4.949746333936759,
+    "c_share_of_qubit_time": 0.05225219928571024,
+    "park_gain_share_of_qubit_time": 0.009375048282735015,
+    "qubit_time_us_per_circuit": 94.72800000000001,
+    "spans_per_circuit": 320.64285714285717,
+    "spans_p1_over_half_per_circuit": 69.75,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 2.52,
+    "a_idle_share": 0.15833333333333333,
+    "b_p1_over_half_share_of_idle": 0.13979591836734695,
+    "c_weighted_us_per_circuit": 5.496268925935003,
+    "c_share_of_qubit_time": 0.054526477439831376,
+    "park_gain_share_of_qubit_time": 0.012926246636582522,
+    "qubit_time_us_per_circuit": 100.80000000000001,
+    "spans_per_circuit": 381.32142857142856,
+    "spans_p1_over_half_per_circuit": 62.42857142857143,
+    "parkable_per_circuit": 5.142857142857143,
+    "parkable_dt_per_circuit": 215.14285714285714
+   }
+  },
+  "fez_A1_t6": {
+   "circuits": 28,
+   "cz": [
+    702
+   ],
+   "one_qubit_gates_mean": 2116.0,
+   "asap": {
+    "length_us_mean": 5.004,
+    "a_idle_share": 0.11384460901217522,
+    "b_p1_over_half_share_of_idle": 0.21369507008977792,
+    "c_weighted_us_per_circuit": 10.919435798195122,
+    "c_share_of_qubit_time": 0.05710763042443372,
+    "park_gain_share_of_qubit_time": 0.008845526188153962,
+    "qubit_time_us_per_circuit": 191.208,
+    "spans_per_circuit": 649.7142857142857,
+    "spans_p1_over_half_per_circuit": 193.82142857142858,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 5.004,
+    "a_idle_share": 0.15347721822541965,
+    "b_p1_over_half_share_of_idle": 0.18681640625,
+    "c_weighted_us_per_circuit": 11.18419213848763,
+    "c_share_of_qubit_time": 0.05587625968469039,
+    "park_gain_share_of_qubit_time": 0.011953233058162266,
+    "qubit_time_us_per_circuit": 200.16,
+    "spans_per_circuit": 704.3214285714286,
+    "spans_p1_over_half_per_circuit": 165.71428571428572,
+    "parkable_per_circuit": 17.214285714285715,
+    "parkable_dt_per_circuit": 546.5357142857143
+   }
+  },
+  "fez_A2_t3": {
+   "circuits": 28,
+   "cz": [
+    351
+   ],
+   "one_qubit_gates_mean": 1063.0,
+   "asap": {
+    "length_us_mean": 2.52,
+    "a_idle_share": 0.10438307575373701,
+    "b_p1_over_half_share_of_idle": 0.1888002773925104,
+    "c_weighted_us_per_circuit": 4.943661522699956,
+    "c_share_of_qubit_time": 0.05218796472742965,
+    "park_gain_share_of_qubit_time": 0.009707749303534548,
+    "qubit_time_us_per_circuit": 94.72800000000001,
+    "spans_per_circuit": 320.64285714285717,
+    "spans_p1_over_half_per_circuit": 77.78571428571429,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 2.52,
+    "a_idle_share": 0.15833333333333333,
+    "b_p1_over_half_share_of_idle": 0.15016111707841032,
+    "c_weighted_us_per_circuit": 5.48147242611621,
+    "c_share_of_qubit_time": 0.05437968676702589,
+    "park_gain_share_of_qubit_time": 0.013322836345288419,
+    "qubit_time_us_per_circuit": 100.80000000000001,
+    "spans_per_circuit": 381.32142857142856,
+    "spans_p1_over_half_per_circuit": 70.53571428571429,
+    "parkable_per_circuit": 5.107142857142857,
+    "parkable_dt_per_circuit": 208.17857142857142
+   }
+  },
+  "fez_A2_t6": {
+   "circuits": 28,
+   "cz": [
+    702
+   ],
+   "one_qubit_gates_mean": 2116.0,
+   "asap": {
+    "length_us_mean": 5.004,
+    "a_idle_share": 0.11384460901217522,
+    "b_p1_over_half_share_of_idle": 0.21704205386675066,
+    "c_weighted_us_per_circuit": 10.896533039151025,
+    "c_share_of_qubit_time": 0.05698785113149568,
+    "park_gain_share_of_qubit_time": 0.009081754715256164,
+    "qubit_time_us_per_circuit": 191.208,
+    "spans_per_circuit": 649.7142857142857,
+    "spans_p1_over_half_per_circuit": 196.85714285714286,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 5.004,
+    "a_idle_share": 0.15347721822541965,
+    "b_p1_over_half_share_of_idle": 0.18935546875,
+    "c_weighted_us_per_circuit": 11.178073887820402,
+    "c_share_of_qubit_time": 0.05584569288479417,
+    "park_gain_share_of_qubit_time": 0.012610735455075914,
+    "qubit_time_us_per_circuit": 200.16,
+    "spans_per_circuit": 704.3214285714286,
+    "spans_p1_over_half_per_circuit": 169.25,
+    "parkable_per_circuit": 17.678571428571427,
+    "parkable_dt_per_circuit": 547.6071428571429
+   }
+  },
+  "kingston_A0_t3": {
+   "circuits": 28,
+   "cz": [
+    234
+   ],
+   "one_qubit_gates_mean": 750.0,
+   "asap": {
+    "length_us_mean": 1.68,
+    "a_idle_share": 0.05655740047440771,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 1.6962857142857144,
+    "c_share_of_qubit_time": 0.028278700237203854,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 59.984571428571435,
+    "spans_per_circuit": 63.214285714285715,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 1.68,
+    "a_idle_share": 0.15785714285714286,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 1.3760000000000001,
+    "c_share_of_qubit_time": 0.020476190476190478,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 67.2,
+    "spans_per_circuit": 75.5,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   }
+  },
+  "kingston_A0_t6": {
+   "circuits": 28,
+   "cz": [
+    468
+   ],
+   "one_qubit_gates_mean": 1449.0,
+   "asap": {
+    "length_us_mean": 3.312,
+    "a_idle_share": 0.07712817506653871,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 4.661428571428571,
+    "c_share_of_qubit_time": 0.03856408753326935,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 120.87485714285715,
+    "spans_per_circuit": 153.78571428571428,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 3.312,
+    "a_idle_share": 0.15797101449275364,
+    "b_p1_over_half_share_of_idle": 0.0,
+    "c_weighted_us_per_circuit": 4.223999999999999,
+    "c_share_of_qubit_time": 0.03188405797101449,
+    "park_gain_share_of_qubit_time": 0.0,
+    "qubit_time_us_per_circuit": 132.48000000000002,
+    "spans_per_circuit": 165.5,
+    "spans_p1_over_half_per_circuit": 0.0,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   }
+  },
+  "kingston_A1_t3": {
+   "circuits": 28,
+   "cz": [
+    351
+   ],
+   "one_qubit_gates_mean": 1063.0,
+   "asap": {
+    "length_us_mean": 2.688,
+    "a_idle_share": 0.13937251226442515,
+    "b_p1_over_half_share_of_idle": 0.16624813790168122,
+    "c_weighted_us_per_circuit": 6.720518921439489,
+    "c_share_of_qubit_time": 0.06976579315398368,
+    "park_gain_share_of_qubit_time": 0.012292220599663568,
+    "qubit_time_us_per_circuit": 96.32971428571429,
+    "spans_per_circuit": 322.82142857142856,
+    "spans_p1_over_half_per_circuit": 69.75,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 2.688,
+    "a_idle_share": 0.22894345238095237,
+    "b_p1_over_half_share_of_idle": 0.11370653233669158,
+    "c_weighted_us_per_circuit": 7.046589328965048,
+    "c_share_of_qubit_time": 0.06553747515778503,
+    "park_gain_share_of_qubit_time": 0.014767807250328144,
+    "qubit_time_us_per_circuit": 107.52,
+    "spans_per_circuit": 379.5,
+    "spans_p1_over_half_per_circuit": 60.607142857142854,
+    "parkable_per_circuit": 3.4285714285714284,
+    "parkable_dt_per_circuit": 214.14285714285714
+   }
+  },
+  "kingston_A1_t6": {
+   "circuits": 28,
+   "cz": [
+    702
+   ],
+   "one_qubit_gates_mean": 2116.0,
+   "asap": {
+    "length_us_mean": 5.328,
+    "a_idle_share": 0.1522174579023673,
+    "b_p1_over_half_share_of_idle": 0.20873980124139987,
+    "c_weighted_us_per_circuit": 14.903747730926828,
+    "c_share_of_qubit_time": 0.07635077551307025,
+    "park_gain_share_of_qubit_time": 0.011552778051919425,
+    "qubit_time_us_per_circuit": 195.20100000000002,
+    "spans_per_circuit": 643.9642857142857,
+    "spans_p1_over_half_per_circuit": 193.82142857142858,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 5.328,
+    "a_idle_share": 0.2234984984984985,
+    "b_p1_over_half_share_of_idle": 0.16468220643984835,
+    "c_weighted_us_per_circuit": 15.424850813074174,
+    "c_share_of_qubit_time": 0.07237636455083603,
+    "park_gain_share_of_qubit_time": 0.015257888703416676,
+    "qubit_time_us_per_circuit": 213.12000000000003,
+    "spans_per_circuit": 723.5,
+    "spans_p1_over_half_per_circuit": 165.14285714285714,
+    "parkable_per_circuit": 15.75,
+    "parkable_dt_per_circuit": 689.7142857142857
+   }
+  },
+  "kingston_A2_t3": {
+   "circuits": 28,
+   "cz": [
+    351
+   ],
+   "one_qubit_gates_mean": 1063.0,
+   "asap": {
+    "length_us_mean": 2.688,
+    "a_idle_share": 0.13937251226442515,
+    "b_p1_over_half_share_of_idle": 0.18540114918067674,
+    "c_weighted_us_per_circuit": 6.712405839790416,
+    "c_share_of_qubit_time": 0.06968157114928625,
+    "park_gain_share_of_qubit_time": 0.012728446016116363,
+    "qubit_time_us_per_circuit": 96.32971428571429,
+    "spans_per_circuit": 322.82142857142856,
+    "spans_p1_over_half_per_circuit": 77.78571428571429,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 2.688,
+    "a_idle_share": 0.22894345238095237,
+    "b_p1_over_half_share_of_idle": 0.12281210826872185,
+    "c_weighted_us_per_circuit": 7.020259679310611,
+    "c_share_of_qubit_time": 0.06529259374358826,
+    "park_gain_share_of_qubit_time": 0.015232045884551296,
+    "qubit_time_us_per_circuit": 107.52,
+    "spans_per_circuit": 379.5,
+    "spans_p1_over_half_per_circuit": 68.5,
+    "parkable_per_circuit": 3.3214285714285716,
+    "parkable_dt_per_circuit": 205.03571428571428
+   }
+  },
+  "kingston_A2_t6": {
+   "circuits": 28,
+   "cz": [
+    702
+   ],
+   "one_qubit_gates_mean": 2116.0,
+   "asap": {
+    "length_us_mean": 5.328,
+    "a_idle_share": 0.1522174579023673,
+    "b_p1_over_half_share_of_idle": 0.21200917347385223,
+    "c_weighted_us_per_circuit": 14.873210718868036,
+    "c_share_of_qubit_time": 0.07619433670354166,
+    "park_gain_share_of_qubit_time": 0.011861306418134477,
+    "qubit_time_us_per_circuit": 195.20100000000002,
+    "spans_per_circuit": 643.9642857142857,
+    "spans_p1_over_half_per_circuit": 196.85714285714286,
+    "parkable_per_circuit": 0.0,
+    "parkable_dt_per_circuit": 0.0
+   },
+   "alap": {
+    "length_us_mean": 5.328,
+    "a_idle_share": 0.2234984984984985,
+    "b_p1_over_half_share_of_idle": 0.16604383607658718,
+    "c_weighted_us_per_circuit": 15.376846770574858,
+    "c_share_of_qubit_time": 0.07215112035742707,
+    "park_gain_share_of_qubit_time": 0.015936879006897286,
+    "qubit_time_us_per_circuit": 213.12000000000003,
+    "spans_per_circuit": 723.5,
+    "spans_p1_over_half_per_circuit": 167.96428571428572,
+    "parkable_per_circuit": 15.714285714285714,
+    "parkable_dt_per_circuit": 682.6071428571429
+   }
+  }
+ },
+ "final_z_vs_exact_worst": 9.414595075751819e-08,
+ "check": {
+  "against": "notes/ohm_idle_2026-11-23/idle_check_chi256.json",
+  "chi": 256,
+  "cutoff": 1e-06,
+  "circuits": 336,
+  "largest_change_as_share_of_idle": 0.001979414093428345
+ }
+}
