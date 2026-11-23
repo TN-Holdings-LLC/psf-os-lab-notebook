@@ -1,0 +1,490 @@
+{
+ "qpy_sha256_matches_manifest": true,
+ "n_circuits": 180,
+ "shots_manifest": 1000,
+ "shots_per_pub": [
+  1000
+ ],
+ "answers_sha256": "216d6b960c927df4ab9c41ab87180a7f55a7005f04448217a1efece4f6787a11",
+ "strings_complements": true,
+ "string_names": [
+  "c00",
+  "c01",
+  "c02",
+  "c03",
+  "c04",
+  "c05",
+  "c06",
+  "s00",
+  "s01",
+  "s02",
+  "s03",
+  "s04",
+  "s05",
+  "s06"
+ ],
+ "pub_sets": {
+  "user_as_declared": true,
+  "floor_mirror": [
+   "p2d_A1_t1_F_s00_floor",
+   "p2d_A1_t1_F_s00_mirror",
+   "p2d_A1_t1_L_s00_floor",
+   "p2d_A1_t1_L_s00_mirror",
+   "p2d_A1_t3_F_s00_floor",
+   "p2d_A1_t3_F_s00_mirror",
+   "p2d_A1_t3_L_s00_floor",
+   "p2d_A1_t3_L_s00_mirror"
+  ],
+  "floor_mirror_as_declared": true,
+  "sentinel_pubs": 4,
+  "sentinel_names": [
+   "ksent_n40_D24-fold_rule"
+  ]
+ },
+ "chain_is_device_path": true,
+ "L_measured_on_F_physical_at_same_positions": true,
+ "noise_free_vs_answers_worst": 1.5945125775296276e-10,
+ "answers_vs_by_label_worst": 0.0,
+ "structure": {
+  "gates_after_measure": 0,
+  "delays": 0,
+  "ops": [
+   "cz",
+   "rz",
+   "sx",
+   "x"
+  ]
+ },
+ "cz": {
+  "A0_t1_L": [
+   [
+    6,
+    4
+   ]
+  ],
+  "A0_t1_F": [
+   [
+    78,
+    4
+   ]
+  ],
+  "A0_t3_L": [
+   [
+    66,
+    12
+   ]
+  ],
+  "A0_t3_F": [
+   [
+    234,
+    12
+   ]
+  ],
+  "A1_t1_L": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A1_t1_F": [
+   [
+    117,
+    6
+   ]
+  ],
+  "A1_t3_L": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A1_t3_F": [
+   [
+    351,
+    18
+   ]
+  ],
+  "A2_t1_L": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A2_t1_F": [
+   [
+    117,
+    6
+   ]
+  ],
+  "A2_t3_L": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A2_t3_F": [
+   [
+    351,
+    18
+   ]
+  ]
+ },
+ "fsim_count": {
+  "t1_L": 3,
+  "t1_F": 39,
+  "t3_L": 33,
+  "t3_F": 117
+ },
+ "cells": {
+  "A0_t1_L": {
+   "M_ratio": 0.0006,
+   "M": "READS",
+   "W_ratio": 0.0005,
+   "W": "READS",
+   "W_dev": 0.2836,
+   "W_exact": 0.2857,
+   "W_excess": -0.0021,
+   "W_excess_2SE": 0.0097,
+   "W_excess_rel": -0.0075,
+   "S_dev": -0.0054,
+   "S_exact": -0.0
+  },
+  "A0_t1_F": {
+   "M_ratio": 0.0018,
+   "M": "READS",
+   "W_ratio": 0.0013,
+   "W": "READS",
+   "W_dev": 0.2843,
+   "W_exact": 0.2857,
+   "W_excess": -0.0014,
+   "W_excess_2SE": 0.0151,
+   "W_excess_rel": -0.005,
+   "S_dev": -0.0097,
+   "S_exact": 0.0
+  },
+  "A0_t3_L": {
+   "M_ratio": 0.012,
+   "M": "READS",
+   "W_ratio": 0.0117,
+   "W": "READS",
+   "W_dev": 0.8434,
+   "W_exact": 0.75,
+   "W_excess": 0.0934,
+   "W_excess_2SE": 0.0343,
+   "W_excess_rel": 0.1245,
+   "S_dev": 0.0276,
+   "S_exact": -0.0
+  },
+  "A0_t3_F": {
+   "M_ratio": 0.0106,
+   "M": "READS",
+   "W_ratio": 0.0098,
+   "W": "READS",
+   "W_dev": 0.8333,
+   "W_exact": 0.75,
+   "W_excess": 0.0833,
+   "W_excess_2SE": 0.0353,
+   "W_excess_rel": 0.111,
+   "S_dev": 0.0046,
+   "S_exact": 0.0
+  },
+  "A1_t1_L": {
+   "M_ratio": 0.0014,
+   "M": "READS",
+   "W_ratio": 0.001,
+   "W": "READS",
+   "W_dev": 0.2819,
+   "W_exact": 0.2857,
+   "W_excess": -0.0039,
+   "W_excess_2SE": 0.0127,
+   "W_excess_rel": -0.0135,
+   "S_dev": -0.0114,
+   "S_exact": -0.0
+  },
+  "A1_t1_F": {
+   "M_ratio": 0.0021,
+   "M": "READS",
+   "W_ratio": 0.0015,
+   "W": "READS",
+   "W_dev": 0.2822,
+   "W_exact": 0.2857,
+   "W_excess": -0.0035,
+   "W_excess_2SE": 0.0159,
+   "W_excess_rel": -0.0122,
+   "S_dev": -0.0213,
+   "S_exact": -0.0
+  },
+  "A1_t3_L": {
+   "M_ratio": 0.0286,
+   "M": "READS",
+   "W_ratio": 0.0276,
+   "W": "READS",
+   "W_dev": 0.7699,
+   "W_exact": 0.655,
+   "W_excess": 0.1149,
+   "W_excess_2SE": 0.0498,
+   "W_excess_rel": 0.1754,
+   "S_dev": -0.0397,
+   "S_exact": -0.0
+  },
+  "A1_t3_F": {
+   "M_ratio": 0.0281,
+   "M": "READS",
+   "W_ratio": 0.027,
+   "W": "READS",
+   "W_dev": 0.7668,
+   "W_exact": 0.655,
+   "W_excess": 0.1118,
+   "W_excess_2SE": 0.0522,
+   "W_excess_rel": 0.1707,
+   "S_dev": -0.0264,
+   "S_exact": -0.0
+  },
+  "A2_t1_L": {
+   "M_ratio": 0.0017,
+   "M": "READS",
+   "W_ratio": 0.0013,
+   "W": "READS",
+   "W_dev": 0.277,
+   "W_exact": 0.2857,
+   "W_excess": -0.0087,
+   "W_excess_2SE": 0.0136,
+   "W_excess_rel": -0.0305,
+   "S_dev": -0.0103,
+   "S_exact": -0.0
+  },
+  "A2_t1_F": {
+   "M_ratio": 0.0017,
+   "M": "READS",
+   "W_ratio": 0.0013,
+   "W": "READS",
+   "W_dev": 0.2819,
+   "W_exact": 0.2857,
+   "W_excess": -0.0038,
+   "W_excess_2SE": 0.0148,
+   "W_excess_rel": -0.0132,
+   "S_dev": -0.0019,
+   "S_exact": -0.0
+  },
+  "A2_t3_L": {
+   "M_ratio": 0.049,
+   "M": "READS",
+   "W_ratio": 0.0494,
+   "W": "READS",
+   "W_dev": 0.6626,
+   "W_exact": 0.5273,
+   "W_excess": 0.1352,
+   "W_excess_2SE": 0.041,
+   "W_excess_rel": 0.2565,
+   "S_dev": -0.1306,
+   "S_exact": -0.1217
+  },
+  "A2_t3_F": {
+   "M_ratio": 0.0483,
+   "M": "READS",
+   "W_ratio": 0.0475,
+   "W": "READS",
+   "W_dev": 0.6618,
+   "W_exact": 0.5273,
+   "W_excess": 0.1345,
+   "W_excess_2SE": 0.0358,
+   "W_excess_rel": 0.255,
+   "S_dev": -0.1684,
+   "S_exact": -0.1217
+  }
+ },
+ "twins": {
+  "A0_t1": {
+   "F_minus_L": 0.00032,
+   "SE": 0.00014,
+   "verdict": "KEEPS MORE"
+  },
+  "A0_t3": {
+   "F_minus_L": -0.0013,
+   "SE": 0.00143,
+   "verdict": "SAME"
+  },
+  "A1_t1": {
+   "F_minus_L": 0.00018,
+   "SE": 0.00025,
+   "verdict": "SAME"
+  },
+  "A1_t3": {
+   "F_minus_L": -0.00027,
+   "SE": 0.00355,
+   "verdict": "SAME"
+  },
+  "A2_t1": {
+   "F_minus_L": -1e-05,
+   "SE": 0.00014,
+   "verdict": "SAME"
+  },
+  "A2_t3": {
+   "F_minus_L": -0.00032,
+   "SE": 0.00256,
+   "verdict": "SAME"
+  }
+ },
+ "order": {
+  "L": "yes",
+  "F": "yes"
+ },
+ "beside": {
+  "A0_L_W3/W1": {
+   "dev": 2.974,
+   "exact": 2.625
+  },
+  "A1_L_W3/W1": {
+   "dev": 2.731,
+   "exact": 2.293
+  },
+  "A2_L_W3/W1": {
+   "dev": 2.392,
+   "exact": 1.846
+  },
+  "A0_F_W3/W1": {
+   "dev": 2.931,
+   "exact": 2.625
+  },
+  "A1_F_W3/W1": {
+   "dev": 2.717,
+   "exact": 2.293
+  },
+  "A2_F_W3/W1": {
+   "dev": 2.348,
+   "exact": 1.846
+  }
+ },
+ "floor_mirror": {
+  "A1_t1_L_s00_floor": {
+   "n": 4,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.963,
+   "cz": 9
+  },
+  "A1_t1_L_s00_mirror": {
+   "n": 4,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.8685,
+   "cz": 18
+  },
+  "A1_t1_F_s00_floor": {
+   "n": 40,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.9829,
+   "cz": 117
+  },
+  "A1_t1_F_s00_mirror": {
+   "n": 40,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.8987,
+   "cz": 234
+  },
+  "A1_t3_L_s00_floor": {
+   "n": 16,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.978,
+   "cz": 99
+  },
+  "A1_t3_L_s00_mirror": {
+   "n": 16,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.7203,
+   "cz": 198
+  },
+  "A1_t3_F_s00_floor": {
+   "n": 40,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.9831,
+   "cz": 351
+  },
+  "A1_t3_F_s00_mirror": {
+   "n": 40,
+   "noise_free_min": 1.0,
+   "raw_mean": 0.7226,
+   "cz": 702
+  }
+ },
+ "sentinel": {
+  "ksent_n40_D24-fold_rule#0": {
+   "qubits": 40,
+   "cz": 960,
+   "shots": 1000,
+   "top": [
+    [
+     "1111111111111111111111111111111111111111",
+     39
+    ],
+    [
+     "1111111111111111110111111111111111111111",
+     3
+    ]
+   ]
+  },
+  "ksent_n40_D24-fold_rule#1": {
+   "qubits": 40,
+   "cz": 960,
+   "shots": 1000,
+   "top": [
+    [
+     "0000000000000000000000000000000000000000",
+     41
+    ],
+    [
+     "0000000000000000001000000000000000000000",
+     4
+    ]
+   ]
+  },
+  "ksent_n40_D24-fold_rule#2": {
+   "qubits": 40,
+   "cz": 960,
+   "shots": 1000,
+   "top": [
+    [
+     "0101010101010101010101010101010101010101",
+     42
+    ],
+    [
+     "0111010101010101010101010101010101010101",
+     3
+    ]
+   ]
+  },
+  "ksent_n40_D24-fold_rule#3": {
+   "qubits": 40,
+   "cz": 960,
+   "shots": 1000,
+   "top": [
+    [
+     "1010101010101010101010101010101010101010",
+     27
+    ],
+    [
+     "1010101010101010101010101110101010101010",
+     5
+    ]
+   ]
+  }
+ },
+ "queue": {
+  "read": "2026-11-23T13:52:40.684753+00:00",
+  "pending": {
+   "ibm_marrakesh": 1,
+   "ibm_fez": 5,
+   "ibm_kingston": 1
+  },
+  "pick": "ibm_kingston"
+ },
+ "charge_formula_s": 51.02,
+ "usage": [
+  50,
+  0.82288
+ ],
+ "timestamps": {
+  "created": "2026-11-23T13:54:39.849974Z",
+  "finished": "2026-11-23T13:55:41.929679Z",
+  "running": "2026-11-23T13:54:40.985614Z"
+ },
+ "calibration": "2026-11-23 14:21:41+01:00"
+}

@@ -39,12 +39,15 @@ psf-os's own model.
 - Order of W at t = 3 (A0 > A1 > A2): **L yes, F yes.**
 - Reading (the declared tables): per cell, "each circuit's transfer and the wall's transfer both read"; together at
   t = 3, **"the window reads; cutting the outside adds nothing at this size"** (window M READS on F in all three arms,
-  twins SAME in all three at t = 3); order "the arms' order shows in both twins".
+  twins SAME in all three at t = 3: F − L within 2 SE, whose ends are at most about ±0.007); order "the arms' order
+  shows in both twins".
 
 Beside, never judged, never used to correct:
-- The device's W at t = 3 is above the exact value in every arm and twin: +0.08 to +0.14 (W(3) / W(1) device 2.35 to
-  2.97 against exact 1.85 to 2.63). As the 11-12 declaration warned, noise mixes spins and looks like extra transport;
-  the ratio rule reads it as small against the exact mean square, but the excess is there.
+- The device's W at t = 3 is above the exact value in every arm and twin: +0.083 to +0.135, 2 SE 0.034 to 0.052 over
+  the 7 pairs, each separated from 0 (11 to 26 % of the exact value); at t = 1 it is within 2 SE of the exact value
+  (−0.001 to −0.009). W(3) / W(1): device 2.35 to 2.97 against exact 1.85 to 2.63. Guess (not measured), as the 11-12
+  declaration warned: noise mixes spins and looks like extra transport. The ratio rule reads the excess as small against
+  the exact mean square; READS does not say there is no bias.
 - S = mean of M_w(s) + M_w(c): −0.005 to −0.021 at t = 1; at t = 3 +0.028 / +0.005 (A0), −0.040 / −0.026 (A1), −0.131 /
   −0.168 (A2), L / F (A2's exact S is not 0).
 - Floor (A1 s00): 0.963 / 0.983 (t = 1, L / F), 0.978 / 0.983 (t = 3). Mirror: 0.868 / 0.899 (t = 1), 0.720 / 0.723
@@ -59,10 +62,11 @@ Beside, never judged, never used to correct:
 
 - Vanity: 24 of 24 cells READS, and the arms' order at t = 3 in both twins.
 - Essence: summed over the wall's light-cone window, the transfer across the wall reads on raw kingston at 1 and 3
-  cycles on a 40-qubit chain (error ratios 0.011 to 0.048 at t = 3), where the whole right half did not read on 11-12;
-  the device's W at t = 3 is 11 to 26 % above the exact value, and the transport exponent is not read by this test.
-  Cutting the circuit to the window's light cone (16 instead of 40 qubits, about a third of the CZ, the same layers)
-  changed nothing beyond 2 SE at t = 3. 50 s charged.
+  cycles on a 40-qubit chain (error ratios 0.011 to 0.048 at t = 3), where the whole right half did not read on 11-12
+  at 3 cycles (kingston's A0 read at 6); the device's W at t = 3 is 11 to 26 % above the exact value (each 2 SE away
+  from 0), and the transport exponent is not read by this test. Cutting the circuit to the window's light cone (16
+  instead of 40 qubits, 28 % of the CZ, the same layers) changed nothing beyond 2 SE at t = 3 (2 SE up to about 0.007).
+  50 s charged.
 
 ## Limits
 
@@ -75,3 +79,18 @@ Beside, never judged, never used to correct:
 ## Reproduce
 
 `python reproduce.py --psf-os <psf-os 0.3.3> ohm-window-night-2026-11-23` (1 of 1 SAME at home).
+
+## Independent check (home VS, 2026-11-23)
+
+Re-counted from `ow/job/raw_counts.json`, the sent circuits and the sealed answers with qiskit, Aer and numpy only (no
+psf-os, no notebook scorer; the qubit-to-chain map read from the circuits' measure instructions, not from build.json):
+the 24 cells' ratios and words, the six twins (A0 t = 1 KEEPS MORE, +0.00032, SE 0.00014; the rest SAME), the order
+(yes, yes), OW-1 held, and the beside values agree with this record. Sent as declared: 180 circuits (sha256 equal to the
+manifest's), 1000 shots per pub, the first 7 pairs (the 11-12 strings), every L item on F's physical qubits at the same
+chain positions, CZ and CZ layers as declared, floor and mirror on the 4 A1 s00 items only, 4 sentinel pubs, the device
+picked by the rule (fez 5, kingston 1), no delay and no gate after a measurement. The sealed answers' sha256 is the
+declared 216d6b96...; the answers by label (sha256 3b7d22a5...) equal them; the sent circuits' noise-free values are
+within 1.6e-10 of them. Reproduce 1 of 1 SAME. Not checked independently: the sentinel's CLEAN (psf-os's rule; the
+960-CZ noise-free run was stopped). Corrected at its notes: the twins' 2 SE ends, the 2 SE of the W excess, the guess
+marked as a guess, the 11-12 comparison limited to 3 cycles, and 28 % (not about a third) of the CZ. Its tool:
+`notes/verify_2026-11-23/ow_independent_check.py` and its output.
