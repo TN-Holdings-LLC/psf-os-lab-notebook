@@ -1,0 +1,63 @@
+{
+ "kind": "psfos",
+ "psfos_role": "mirror",
+ "psfos_job": {
+  "kind": "user2d_mirror"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_kingston",
+ "masked": [],
+ "labels": [
+  14,
+  15,
+  19,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35
+ ],
+ "mapping": {
+  "14": 14,
+  "15": 15,
+  "19": 19,
+  "23": 23,
+  "24": 24,
+  "25": 25,
+  "26": 26,
+  "27": 27,
+  "28": 28,
+  "29": 29,
+  "30": 30,
+  "31": 31,
+  "32": 32,
+  "33": 33,
+  "34": 34,
+  "35": 35
+ },
+ "points": [
+  {
+   "input": "m",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 1000,
+ "export": {
+  "qpy": "p2d_A0_t3_L_s02_mirror.qpy",
+  "circuits": 1,
+  "sha256": "238e72d87616a901d297c461da2fd283f4a616eefb907e5f60d7a40c02973a99"
+ },
+ "cz": 132,
+ "cz_expected": 132,
+ "tag": "A0_t3_L_s02"
+}

@@ -1,0 +1,19 @@
+A0_t1_L: window M READS (0.001); W READS (0.001); beside W 0.284 (exact 0.286), S -0.005
+A0_t1_F: window M READS (0.002); W READS (0.001); beside W 0.284 (exact 0.286), S -0.010
+A0_t3_L: window M READS (0.012); W READS (0.012); beside W 0.843 (exact 0.750), S +0.028
+A0_t3_F: window M READS (0.011); W READS (0.010); beside W 0.833 (exact 0.750), S +0.005
+A1_t1_L: window M READS (0.001); W READS (0.001); beside W 0.282 (exact 0.286), S -0.011
+A1_t1_F: window M READS (0.002); W READS (0.001); beside W 0.282 (exact 0.286), S -0.021
+A1_t3_L: window M READS (0.029); W READS (0.028); beside W 0.770 (exact 0.655), S -0.040
+A1_t3_F: window M READS (0.028); W READS (0.027); beside W 0.767 (exact 0.655), S -0.026
+A2_t1_L: window M READS (0.002); W READS (0.001); beside W 0.277 (exact 0.286), S -0.010
+A2_t1_F: window M READS (0.002); W READS (0.001); beside W 0.282 (exact 0.286), S -0.002
+A2_t3_L: window M READS (0.049); W READS (0.049); beside W 0.663 (exact 0.527), S -0.131
+A2_t3_F: window M READS (0.048); W READS (0.048); beside W 0.662 (exact 0.527), S -0.168
+twins A0_t1: the light-cone circuit KEEPS MORE (MSE F - MSE L +0.0003, SE 0.0001)
+twins A0_t3: the light-cone circuit SAME (MSE F - MSE L -0.0013, SE 0.0014)
+twins A1_t1: the light-cone circuit SAME (MSE F - MSE L +0.0002, SE 0.0002)
+twins A1_t3: the light-cone circuit SAME (MSE F - MSE L -0.0003, SE 0.0036)
+twins A2_t1: the light-cone circuit SAME (MSE F - MSE L -0.0000, SE 0.0001)
+twins A2_t3: the light-cone circuit SAME (MSE F - MSE L -0.0003, SE 0.0026)
+order of W at t = 3 (A0 > A1 > A2): L yes, F yes

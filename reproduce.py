@@ -264,6 +264,9 @@ RESULTS = {
         ["gpu/decoy_night.py", "score", "{T}"], "decoy_scores.json"),
     "loopvar-night-2026-11-20": ("results/loopvar-night-2026-11-20", ["V1", "V2", "V3", "plan.json"],
         ["gpu/loopvar_night.py", "score", "{T}"], "loopvar_scores.json"),
+    "ohm-window-night-2026-11-23": ("results/ohm-window-night-2026-11-23", ["ow", "answers"],
+        ["gpu/ohm_window_night.py", "score", "{T}/ow", "{T}/answers/ohm_window_answers_by_label.json"],
+        "ow/scores.json"),
 }
 
 

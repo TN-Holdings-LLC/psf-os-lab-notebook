@@ -1,0 +1,14 @@
+{
+ "pending": {
+  "ibm_marrakesh": 1,
+  "ibm_fez": 5,
+  "ibm_kingston": 1
+ },
+ "read": "2026-11-23T13:52:40.684753+00:00",
+ "limit": 10,
+ "chosen": [
+  "ibm_marrakesh",
+  "ibm_fez",
+  "ibm_kingston"
+ ]
+}
