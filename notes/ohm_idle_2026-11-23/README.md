@@ -18,6 +18,7 @@ number is read.
 | `summarize.py`, `summary.json`, `summary.txt` | (a), (b), (c) per device, arm and cycle count |
 | `park_try.py`, `park_alap.json`, `park_alap.txt` | the X, delay, X trial and its checks |
 | `shrink_bound.py`, `bound.json`, `bound.txt` | the upper bound (assumed model, a rough guide) |
+| `window_M.py`, `window_M.json`, `window_M.txt` | beside: M summed over a window next to the wall (section 4) |
 
 ## How
 
@@ -121,6 +122,54 @@ smaller than needed in every cell that did not read.
 Runs: `ohm_idle.py idle.json --chi 512 --cutoff 1e-8` and `--chi 256 --cutoff 1e-6` (check); `park_try.py
 park_alap.json --schedule alap`; `summarize.py idle.json summary.json idle_check_chi256.json`; `shrink_bound.py
 summary.json park_alap.json bound.json`. Each needs `PYTHONPATH=<psf-os 0.3.3>:.` and runs from the notebook root.
+
+## 4. Beside: M over a window next to the wall (`window_M.py`, `window_M.json`, `window_M.txt`; never judged)
+
+Owner's follow-up the same day ("縮みそのものを扱う"). This changes the measure, not the records. Raw counts are used,
+no shot is discarded, nothing is corrected, and the declared verdicts stay those of `scores.json`.
+
+What M_w is:
+- M_w sums the right half's (1 - z) / 2 over the w sites next to the wall only. w = 20 is the declared M; it matches
+  `scores.json` exactly.
+- M_w is **a different quantity**: the window also exchanges 1s through its far edge, by the right half's own dynamics.
+  Its exact value therefore comes from the sealed per-qubit answers.
+- The wall's light cone after t cycles reaches 2t - 1 sites (5 at 3 cycles, 11 at 6). The width follows from the
+  circuit's structure; it was not tuned on the data.
+- Even so, the idea came after the records were seen. Any verdict on it needs a new declaration before a new run.
+
+| device | arm | cycles | ratio, light-cone window | ratio, declared M | exact M_w against exact M (corr.) | W window: device / exact | W half: device / exact |
+|---|---|---|---|---|---|---|---|
+| fez | A0 | 3 | **0.014** | 2.35 | 0.92 | 0.84 / 0.76 | 1.94 / 0.71 |
+| fez | A0 | 6 | **0.259** | 1.57 | 0.92 | 2.36 / 1.38 | 3.28 / 1.39 |
+| fez | A1 | 3 | **0.034** | 4.16 | 0.94 | 0.78 / 0.68 | 1.95 / 0.60 |
+| fez | A1 | 6 | 0.679 | 4.13 | 0.92 | 2.13 / 0.99 | 3.01 / 0.95 |
+| fez | A2 | 3 | **0.061** | 5.79 | 0.96 | 0.70 / 0.57 | 1.93 / 0.52 |
+| fez | A2 | 6 | 1.444 | 7.21 | 0.93 | 1.92 / 0.74 | 2.77 / 0.71 |
+| kingston | A0 | 3 | **0.015** | 0.68 | 0.92 | 0.85 / 0.76 | 1.38 / 0.71 |
+| kingston | A0 | 6 | **0.027** | 0.375 | 0.92 | 1.69 / 1.38 | 2.29 / 1.39 |
+| kingston | A1 | 3 | **0.034** | 1.47 | 0.94 | 0.80 / 0.68 | 1.39 / 0.60 |
+| kingston | A1 | 6 | **0.125** | 1.38 | 0.92 | 1.46 / 0.99 | 2.12 / 0.95 |
+| kingston | A2 | 3 | **0.049** | 1.80 | 0.96 | 0.69 / 0.57 | 1.30 / 0.52 |
+| kingston | A2 | 6 | **0.269** | 2.27 | 0.93 | 1.23 / 0.74 | 1.85 / 0.71 |
+
+Bold: at or below the line (0.5). The ratio is the M MSE divided by the mean square of the exact value.
+
+- On the light-cone window, 10 of the 12 cells read. The two that do not are fez A1 and A2 at 6 cycles.
+- The window keeps the transport:
+  - its exact M_w moves with the exact declared M (correlation 0.92-0.96);
+  - its exact W is about the size of the half's (0.57-1.38 against 0.52-1.39).
+- At 3 cycles the device's W on the window is close to the exact W (0.70-0.85 against 0.57-0.76). On the half it is
+  1.3-1.9.
+- Limit: the exponent log2(W(6) / W(3)) over the windows does not read.
+  - fez: 1.50 / 1.45 / 1.47 (A0 / A1 / A2); the order A1 > A2 is not kept.
+  - kingston: 0.99 / 0.88 / 0.83; the order is kept.
+  - exact: 0.86 / 0.55 / 0.39.
+  - At 6 cycles the window is wider and the circuit has more layers, so the device's W grows more than the exact W.
+- Narrower windows read more easily; w = 1 is a single qubit's Z, which already read. The light-cone width is the
+  narrowest window that holds all of the wall's influence.
+- Guess (not measured): this is where the shrink lever is. A declared measure on the light-cone window would read M at
+  3 cycles on both devices, and at 6 cycles on a kingston-like day. The transport exponent would still not read at
+  these sizes.
 
 ## Computers and time
 
