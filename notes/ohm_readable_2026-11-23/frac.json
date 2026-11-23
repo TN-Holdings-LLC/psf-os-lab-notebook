@@ -1,0 +1,257 @@
+{
+ "targets": {
+  "FakeFez": {
+   "operations": [
+    "cz",
+    "delay",
+    "for_loop",
+    "id",
+    "if_else",
+    "measure",
+    "reset",
+    "rz",
+    "switch_case",
+    "sx",
+    "x"
+   ],
+   "rzz": false,
+   "rx": false
+  },
+  "FakeKingston": {
+   "operations": [
+    "cz",
+    "delay",
+    "id",
+    "if_else",
+    "measure",
+    "measure_2",
+    "reset",
+    "rz",
+    "sx",
+    "x"
+   ],
+   "rzz": false,
+   "rx": false
+  }
+ },
+ "fsim": {
+  "A0": {
+   "cz": {
+    "two_qubit": 2,
+    "two_qubit_layers": 2,
+    "one_qubit": 18,
+    "rzz_abs_angles": [],
+    "rzz_signs": [],
+    "equal_to_fsim": true
+   },
+   "rzz": {
+    "two_qubit": 2,
+    "two_qubit_layers": 2,
+    "one_qubit": 14,
+    "rzz_abs_angles": [
+     0.785398
+    ],
+    "rzz_signs": [
+     -1
+    ],
+    "equal_to_fsim": true
+   }
+  },
+  "A1": {
+   "cz": {
+    "two_qubit": 3,
+    "two_qubit_layers": 3,
+    "one_qubit": 17,
+    "rzz_abs_angles": [],
+    "rzz_signs": [],
+    "equal_to_fsim": true
+   },
+   "rzz": {
+    "two_qubit": 3,
+    "two_qubit_layers": 3,
+    "one_qubit": 14,
+    "rzz_abs_angles": [
+     0.785398
+    ],
+    "rzz_signs": [
+     -1,
+     1
+    ],
+    "equal_to_fsim": true
+   }
+  },
+  "A2": {
+   "cz": {
+    "two_qubit": 3,
+    "two_qubit_layers": 3,
+    "one_qubit": 17,
+    "rzz_abs_angles": [],
+    "rzz_signs": [],
+    "equal_to_fsim": true
+   },
+   "rzz": {
+    "two_qubit": 3,
+    "two_qubit_layers": 3,
+    "one_qubit": 14,
+    "rzz_abs_angles": [
+     0.785398
+    ],
+    "rzz_signs": [
+     -1,
+     1
+    ],
+    "equal_to_fsim": true
+   }
+  }
+ },
+ "circuits": {
+  "A0": {
+   "chain12_t3_fidelity_to_logical": {
+    "cz": 0.9999999999999969,
+    "rzz": 0.9999999999999967
+   },
+   "t3": {
+    "full_40": {
+     "cz": {
+      "two_qubit": 234,
+      "two_qubit_layers": 12,
+      "one_qubit": 1481,
+      "rzz_abs_angles": [],
+      "rzz_signs": []
+     },
+     "rzz": {
+      "two_qubit": 234,
+      "two_qubit_layers": 12,
+      "one_qubit": 837,
+      "rzz_abs_angles": [
+       0.785398
+      ],
+      "rzz_signs": [
+       -1
+      ]
+     }
+    },
+    "light_cone": {
+     "cz": {
+      "two_qubit": 66,
+      "two_qubit_layers": 12,
+      "one_qubit": 442,
+      "rzz_abs_angles": [],
+      "rzz_signs": []
+     },
+     "rzz": {
+      "two_qubit": 66,
+      "two_qubit_layers": 12,
+      "one_qubit": 275,
+      "rzz_abs_angles": [
+       0.785398
+      ],
+      "rzz_signs": [
+       -1
+      ]
+     }
+    }
+   }
+  },
+  "A1": {
+   "chain12_t3_fidelity_to_logical": {
+    "cz": 0.999999999999994,
+    "rzz": 1.0000000000000004
+   },
+   "t3": {
+    "full_40": {
+     "cz": {
+      "two_qubit": 351,
+      "two_qubit_layers": 18,
+      "one_qubit": 1902,
+      "rzz_abs_angles": [],
+      "rzz_signs": []
+     },
+     "rzz": {
+      "two_qubit": 351,
+      "two_qubit_layers": 18,
+      "one_qubit": 1444,
+      "rzz_abs_angles": [
+       0.785398
+      ],
+      "rzz_signs": [
+       -1,
+       1
+      ]
+     }
+    },
+    "light_cone": {
+     "cz": {
+      "two_qubit": 99,
+      "two_qubit_layers": 18,
+      "one_qubit": 541,
+      "rzz_abs_angles": [],
+      "rzz_signs": []
+     },
+     "rzz": {
+      "two_qubit": 99,
+      "two_qubit_layers": 18,
+      "one_qubit": 413,
+      "rzz_abs_angles": [
+       0.785398
+      ],
+      "rzz_signs": [
+       -1,
+       1
+      ]
+     }
+    }
+   }
+  },
+  "A2": {
+   "chain12_t3_fidelity_to_logical": {
+    "cz": 0.9999999999999964,
+    "rzz": 1.0000000000000009
+   },
+   "t3": {
+    "full_40": {
+     "cz": {
+      "two_qubit": 351,
+      "two_qubit_layers": 18,
+      "one_qubit": 1914,
+      "rzz_abs_angles": [],
+      "rzz_signs": []
+     },
+     "rzz": {
+      "two_qubit": 351,
+      "two_qubit_layers": 18,
+      "one_qubit": 1444,
+      "rzz_abs_angles": [
+       0.785398
+      ],
+      "rzz_signs": [
+       -1,
+       1
+      ]
+     }
+    },
+    "light_cone": {
+     "cz": {
+      "two_qubit": 99,
+      "two_qubit_layers": 18,
+      "one_qubit": 544,
+      "rzz_abs_angles": [],
+      "rzz_signs": []
+     },
+     "rzz": {
+      "two_qubit": 99,
+      "two_qubit_layers": 18,
+      "one_qubit": 413,
+      "rzz_abs_angles": [
+       0.785398
+      ],
+      "rzz_signs": [
+       -1,
+       1
+      ]
+     }
+    }
+   }
+  }
+ }
+}

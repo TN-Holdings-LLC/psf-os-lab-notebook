@@ -1,0 +1,2 @@
+A_shallow_cone: 168 items, 505 circuits, 1000 shots -> 157.5 s (model); shot SE of W on the window about 0.007 (rough, from the records)
+B_twin_cone_full: 168 items, 505 circuits, 1000 shots -> 157.5 s (model); shot SE of W on the window about 0.007 (rough, from the records)

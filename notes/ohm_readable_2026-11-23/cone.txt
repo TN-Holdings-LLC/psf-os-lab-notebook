@@ -1,0 +1,32 @@
+A0 t 1: cone 4 qubits 18..21, fSim 3 / 39, CZ 6 / 78, CZ layers 4 / 4, window <Z> cone vs full 5.0e-16
+A0 t 2: cone 10 qubits 16..25, fSim 14 / 78, CZ 28 / 156, CZ layers 8 / 8, window <Z> cone vs full 3.2e-15
+A0 t 3: cone 16 qubits 14..29, fSim 33 / 117, CZ 66 / 234, CZ layers 12 / 12, window <Z> cone vs full 8.2e-15
+A0 t 4: cone 22 qubits 12..33, fSim 60 / 156, CZ 120 / 312, CZ layers 16 / 16, window <Z> cone vs full 1.8e-10
+A1 t 1: cone 4 qubits 18..21, fSim 3 / 39, CZ 9 / 117, CZ layers 6 / 6, window <Z> cone vs full 5.0e-16
+A1 t 2: cone 10 qubits 16..25, fSim 14 / 78, CZ 42 / 234, CZ layers 12 / 12, window <Z> cone vs full 1.7e-15
+A1 t 3: cone 16 qubits 14..29, fSim 33 / 117, CZ 99 / 351, CZ layers 18 / 18, window <Z> cone vs full 6.2e-15
+A1 t 4: cone 22 qubits 12..33, fSim 60 / 156, CZ 180 / 468, CZ layers 24 / 24, window <Z> cone vs full 1.1e-11
+A2 t 1: cone 4 qubits 18..21, fSim 3 / 39, CZ 9 / 117, CZ layers 6 / 6, window <Z> cone vs full 6.1e-16
+A2 t 2: cone 10 qubits 16..25, fSim 14 / 78, CZ 42 / 234, CZ layers 12 / 12, window <Z> cone vs full 4.0e-15
+A2 t 3: cone 16 qubits 14..29, fSim 33 / 117, CZ 99 / 351, CZ layers 18 / 18, window <Z> cone vs full 5.8e-15
+A2 t 4: cone 22 qubits 12..33, fSim 60 / 156, CZ 180 / 468, CZ layers 24 / 24, window <Z> cone vs full 7.1e-15
+rough guide (not measured): r by CZ layers (records' 1 - r per layer), full 40 / cone / cone x qubits/40
+  A0_t1: fez 0.941 / 0.941 / 0.994; kingston 0.963 / 0.963 / 0.996
+  A0_t2: fez 0.883 / 0.883 / 0.971; kingston 0.926 / 0.926 / 0.981
+  A0_t3: fez 0.824 / 0.824 / 0.930; kingston 0.889 / 0.889 / 0.956
+  A0_t4: fez 0.765 / 0.765 / 0.871; kingston 0.852 / 0.852 / 0.919
+  A1_t1: fez 0.936 / 0.936 / 0.994; kingston 0.957 / 0.957 / 0.996
+  A1_t2: fez 0.871 / 0.871 / 0.968; kingston 0.914 / 0.914 / 0.979
+  A1_t3: fez 0.807 / 0.807 / 0.923; kingston 0.871 / 0.871 / 0.948
+  A1_t4: fez 0.742 / 0.742 / 0.858; kingston 0.828 / 0.828 / 0.906
+  A2_t1: fez 0.940 / 0.940 / 0.994; kingston 0.961 / 0.961 / 0.996
+  A2_t2: fez 0.879 / 0.879 / 0.970; kingston 0.921 / 0.921 / 0.980
+  A2_t3: fez 0.819 / 0.819 / 0.928; kingston 0.882 / 0.882 / 0.953
+  A2_t4: fez 0.759 / 0.759 / 0.867; kingston 0.842 / 0.842 / 0.913
+  fez_A0: CZ layers [12.0, 24.0], 1 - r [0.206, 0.337], per layer 0.0147
+  fez_A1: CZ layers [18.0, 36.0], 1 - r [0.233, 0.366], per layer 0.0107
+  fez_A2: CZ layers [18.0, 36.0], 1 - r [0.228, 0.338], per layer 0.0100
+  kingston_A0: CZ layers [12.0, 24.0], 1 - r [0.121, 0.217], per layer 0.0093
+  kingston_A1: CZ layers [18.0, 36.0], 1 - r [0.145, 0.25], per layer 0.0072
+  kingston_A2: CZ layers [18.0, 36.0], 1 - r [0.147, 0.223], per layer 0.0066
+331.73 s wall

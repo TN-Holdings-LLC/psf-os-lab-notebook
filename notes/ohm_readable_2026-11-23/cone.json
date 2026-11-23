@@ -1,0 +1,433 @@
+{
+ "note": "noise-free; compiled counts by qiskit on a line (basis cz, rz, sx, x, level 2); the shrink guide is a rough proportional guide from the 11-12 records, never fitted to the device, a guess",
+ "rows": {
+  "A0_t1": {
+   "window": [
+    20,
+    20
+   ],
+   "cone_qubits": 4,
+   "cone_span": [
+    18,
+    21
+   ],
+   "fsim_cone": 3,
+   "fsim_full": 39,
+   "cz_cone": 6,
+   "cz_layers_cone": 4,
+   "cz_full": 78,
+   "cz_layers_full": 4,
+   "window_z_cone_vs_full_max": 4.996003610813204e-16,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.9413099952145416,
+     "r_cone_by_layers": 0.9413099952145416,
+     "r_cone_by_layers_and_qubits": 0.9941309995214541
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.9629946684911107,
+     "r_cone_by_layers": 0.9629946684911107,
+     "r_cone_by_layers_and_qubits": 0.9962994668491111
+    }
+   }
+  },
+  "A0_t2": {
+   "window": [
+    20,
+    22
+   ],
+   "cone_qubits": 10,
+   "cone_span": [
+    16,
+    25
+   ],
+   "fsim_cone": 14,
+   "fsim_full": 78,
+   "cz_cone": 28,
+   "cz_layers_cone": 8,
+   "cz_full": 156,
+   "cz_layers_full": 8,
+   "window_z_cone_vs_full_max": 3.219646771412954e-15,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.8826199904290832,
+     "r_cone_by_layers": 0.8826199904290832,
+     "r_cone_by_layers_and_qubits": 0.9706549976072708
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.9259893369822214,
+     "r_cone_by_layers": 0.9259893369822214,
+     "r_cone_by_layers_and_qubits": 0.9814973342455554
+    }
+   }
+  },
+  "A0_t3": {
+   "window": [
+    20,
+    24
+   ],
+   "cone_qubits": 16,
+   "cone_span": [
+    14,
+    29
+   ],
+   "fsim_cone": 33,
+   "fsim_full": 117,
+   "cz_cone": 66,
+   "cz_layers_cone": 12,
+   "cz_full": 234,
+   "cz_layers_full": 12,
+   "window_z_cone_vs_full_max": 8.215650382226158e-15,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.8239299856436249,
+     "r_cone_by_layers": 0.8239299856436249,
+     "r_cone_by_layers_and_qubits": 0.92957199425745
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.8889840054733322,
+     "r_cone_by_layers": 0.8889840054733322,
+     "r_cone_by_layers_and_qubits": 0.9555936021893329
+    }
+   }
+  },
+  "A0_t4": {
+   "window": [
+    20,
+    26
+   ],
+   "cone_qubits": 22,
+   "cone_span": [
+    12,
+    33
+   ],
+   "fsim_cone": 60,
+   "fsim_full": 156,
+   "cz_cone": 120,
+   "cz_layers_cone": 16,
+   "cz_full": 312,
+   "cz_layers_full": 16,
+   "window_z_cone_vs_full_max": 1.828196483089073e-10,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.7652399808581665,
+     "r_cone_by_layers": 0.7652399808581665,
+     "r_cone_by_layers_and_qubits": 0.8708819894719915
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.8519786739644429,
+     "r_cone_by_layers": 0.8519786739644429,
+     "r_cone_by_layers_and_qubits": 0.9185882706804436
+    }
+   }
+  },
+  "A1_t1": {
+   "window": [
+    20,
+    20
+   ],
+   "cone_qubits": 4,
+   "cone_span": [
+    18,
+    21
+   ],
+   "fsim_cone": 3,
+   "fsim_full": 39,
+   "cz_cone": 9,
+   "cz_layers_cone": 6,
+   "cz_full": 117,
+   "cz_layers_full": 6,
+   "window_z_cone_vs_full_max": 4.996003610813204e-16,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.9356137349882562,
+     "r_cone_by_layers": 0.9356137349882562,
+     "r_cone_by_layers_and_qubits": 0.9935613734988256
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.9570655295826637,
+     "r_cone_by_layers": 0.9570655295826637,
+     "r_cone_by_layers_and_qubits": 0.9957065529582664
+    }
+   }
+  },
+  "A1_t2": {
+   "window": [
+    20,
+    22
+   ],
+   "cone_qubits": 10,
+   "cone_span": [
+    16,
+    25
+   ],
+   "fsim_cone": 14,
+   "fsim_full": 78,
+   "cz_cone": 42,
+   "cz_layers_cone": 12,
+   "cz_full": 234,
+   "cz_layers_full": 12,
+   "window_z_cone_vs_full_max": 1.6653345369377348e-15,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.8712274699765123,
+     "r_cone_by_layers": 0.8712274699765123,
+     "r_cone_by_layers_and_qubits": 0.967806867494128
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.9141310591653273,
+     "r_cone_by_layers": 0.9141310591653273,
+     "r_cone_by_layers_and_qubits": 0.9785327647913319
+    }
+   }
+  },
+  "A1_t3": {
+   "window": [
+    20,
+    24
+   ],
+   "cone_qubits": 16,
+   "cone_span": [
+    14,
+    29
+   ],
+   "fsim_cone": 33,
+   "fsim_full": 117,
+   "cz_cone": 99,
+   "cz_layers_cone": 18,
+   "cz_full": 351,
+   "cz_layers_full": 18,
+   "window_z_cone_vs_full_max": 6.217248937900877e-15,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.8068412049647685,
+     "r_cone_by_layers": 0.8068412049647685,
+     "r_cone_by_layers_and_qubits": 0.9227364819859074
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.8711965887479911,
+     "r_cone_by_layers": 0.8711965887479911,
+     "r_cone_by_layers_and_qubits": 0.9484786354991964
+    }
+   }
+  },
+  "A1_t4": {
+   "window": [
+    20,
+    26
+   ],
+   "cone_qubits": 22,
+   "cone_span": [
+    12,
+    33
+   ],
+   "fsim_cone": 60,
+   "fsim_full": 156,
+   "cz_cone": 180,
+   "cz_layers_cone": 24,
+   "cz_full": 468,
+   "cz_layers_full": 24,
+   "window_z_cone_vs_full_max": 1.0865364163947788e-11,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.7424549399530247,
+     "r_cone_by_layers": 0.7424549399530247,
+     "r_cone_by_layers_and_qubits": 0.8583502169741636
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.8282621183306548,
+     "r_cone_by_layers": 0.8282621183306548,
+     "r_cone_by_layers_and_qubits": 0.9055441650818601
+    }
+   }
+  },
+  "A2_t1": {
+   "window": [
+    20,
+    20
+   ],
+   "cone_qubits": 4,
+   "cone_span": [
+    18,
+    21
+   ],
+   "fsim_cone": 3,
+   "fsim_full": 39,
+   "cz_cone": 9,
+   "cz_layers_cone": 6,
+   "cz_full": 117,
+   "cz_layers_full": 6,
+   "window_z_cone_vs_full_max": 6.106226635438361e-16,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.9397044487973554,
+     "r_cone_by_layers": 0.9397044487973554,
+     "r_cone_by_layers_and_qubits": 0.9939704448797355
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.9605442955555015,
+     "r_cone_by_layers": 0.9605442955555015,
+     "r_cone_by_layers_and_qubits": 0.9960544295555501
+    }
+   }
+  },
+  "A2_t2": {
+   "window": [
+    20,
+    22
+   ],
+   "cone_qubits": 10,
+   "cone_span": [
+    16,
+    25
+   ],
+   "fsim_cone": 14,
+   "fsim_full": 78,
+   "cz_cone": 42,
+   "cz_layers_cone": 12,
+   "cz_full": 234,
+   "cz_layers_full": 12,
+   "window_z_cone_vs_full_max": 3.9968028886505635e-15,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.8794088975947109,
+     "r_cone_by_layers": 0.8794088975947109,
+     "r_cone_by_layers_and_qubits": 0.9698522243986777
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.9210885911110028,
+     "r_cone_by_layers": 0.9210885911110028,
+     "r_cone_by_layers_and_qubits": 0.9802721477777507
+    }
+   }
+  },
+  "A2_t3": {
+   "window": [
+    20,
+    24
+   ],
+   "cone_qubits": 16,
+   "cone_span": [
+    14,
+    29
+   ],
+   "fsim_cone": 33,
+   "fsim_full": 117,
+   "cz_cone": 99,
+   "cz_layers_cone": 18,
+   "cz_full": 351,
+   "cz_layers_full": 18,
+   "window_z_cone_vs_full_max": 5.773159728050814e-15,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.8191133463920663,
+     "r_cone_by_layers": 0.8191133463920663,
+     "r_cone_by_layers_and_qubits": 0.9276453385568265
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.8816328866665043,
+     "r_cone_by_layers": 0.8816328866665043,
+     "r_cone_by_layers_and_qubits": 0.9526531546666017
+    }
+   }
+  },
+  "A2_t4": {
+   "window": [
+    20,
+    26
+   ],
+   "cone_qubits": 22,
+   "cone_span": [
+    12,
+    33
+   ],
+   "fsim_cone": 60,
+   "fsim_full": 156,
+   "cz_cone": 180,
+   "cz_layers_cone": 24,
+   "cz_full": 468,
+   "cz_layers_full": 24,
+   "window_z_cone_vs_full_max": 7.105427357601002e-15,
+   "guide": {
+    "fez": {
+     "r_full_40_by_layers": 0.7588177951894217,
+     "r_cone_by_layers": 0.7588177951894217,
+     "r_cone_by_layers_and_qubits": 0.867349787354182
+    },
+    "kingston": {
+     "r_full_40_by_layers": 0.8421771822220057,
+     "r_cone_by_layers": 0.8421771822220057,
+     "r_cone_by_layers_and_qubits": 0.9131974502221032
+    }
+   }
+  }
+ },
+ "guide_from_records": {
+  "fez_A0": {
+   "cz_layers_records": [
+    12.0,
+    24.0
+   ],
+   "one_minus_r_records": [
+    0.20557861972102365,
+    0.33738572603042605
+   ],
+   "per_layer": 0.014672501196364597
+  },
+  "fez_A1": {
+   "cz_layers_records": [
+    18.0,
+    36.0
+   ],
+   "one_minus_r_records": [
+    0.23332302780687786,
+    0.3662354736846397
+   ],
+   "per_layer": 0.010731044168623971
+  },
+  "fez_A2": {
+   "cz_layers_records": [
+    18.0,
+    36.0
+   ],
+   "one_minus_r_records": [
+    0.22823866811416538,
+    0.3380972999627515
+   ],
+   "per_layer": 0.010049258533774095
+  },
+  "kingston_A0": {
+   "cz_layers_records": [
+    12.0,
+    24.0
+   ],
+   "one_minus_r_records": [
+    0.12092276043577388,
+    0.2170786060987826
+   ],
+   "per_layer": 0.009251332877222318
+  },
+  "kingston_A1": {
+   "cz_layers_records": [
+    18.0,
+    36.0
+   ],
+   "one_minus_r_records": [
+    0.14494086800928419,
+    0.2495380941253803
+   ],
+   "per_layer": 0.007155745069556053
+  },
+  "kingston_A2": {
+   "cz_layers_records": [
+    18.0,
+    36.0
+   ],
+   "one_minus_r_records": [
+    0.14667948095981986,
+    0.22257804285382943
+   ],
+   "per_layer": 0.006575950740749762
+  }
+ }
+}

@@ -1,0 +1,5 @@
+A0: fSim CZ form 2 CZ, RZZ form 2 RZZ (|angles| [0.785398], signs [-1]), equal True/True; 12-qubit fidelity {'cz': 0.9999999999999969, 'rzz': 0.9999999999999967}; t3 full 234/234 (layers 12/12), cone 66/66 (layers 12/12)
+A1: fSim CZ form 3 CZ, RZZ form 3 RZZ (|angles| [0.785398], signs [-1, 1]), equal True/True; 12-qubit fidelity {'cz': 0.999999999999994, 'rzz': 1.0000000000000004}; t3 full 351/351 (layers 18/18), cone 99/99 (layers 18/18)
+A2: fSim CZ form 3 CZ, RZZ form 3 RZZ (|angles| [0.785398], signs [-1, 1]), equal True/True; 12-qubit fidelity {'cz': 0.9999999999999964, 'rzz': 1.0000000000000009}; t3 full 351/351 (layers 18/18), cone 99/99 (layers 18/18)
+targets: {'FakeFez': (False, False), 'FakeKingston': (False, False)}
+2.24 s wall
