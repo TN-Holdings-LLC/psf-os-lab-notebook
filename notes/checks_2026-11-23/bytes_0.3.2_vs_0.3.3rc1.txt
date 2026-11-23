@@ -1,0 +1,7 @@
+# psf-os 0.3.2 (v0.3.2, f5744af) against 0.3.3rc1: the six nights rebuilt by recheck_nights.py, every file compared
+ipe-branch-cost-night-2026-11-22     files the same: 136; different: 0
+likely-park-night-2026-11-22         files the same: 135; different: 0
+qpe-n78-night-2026-11-22             files the same: 128; different: 0
+qpe-parked-night-2026-11-21          files the same: 287; different: 0
+rus-fence-night-2026-11-21           files the same: 168; different: 0
+weekend-shared-night-2026-11-21      files the same: 340; different: 0

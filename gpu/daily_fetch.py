@@ -4,6 +4,9 @@ the fewest; ties in that order), then `psf-os fetch` each into OUT_BASE/<device>
 
 Uses the saved IBM account only; reads no key and no quality number. Run from ~/toqb_push_2026-10-15.
 2026-11-23: also writes OUT_BASE/<device>/dt.txt, the clock step of the backend configuration (a unit of time).
+2026-11-23 (psf-os 0.3.3rc1): also writes OUT_BASE/<device>/timing.json, the lengths of time of the backend's Target
+(x, sx, cz, measure, reset per qubit or coupler, in dt) and its timing constraints, read with psf_os.device.timing_of
+(only an instruction's duration, never an error number). With a psf-os before 0.3.3rc1 it writes "timing": null.
 usage: python daily_fetch_2026-11-05.py OUT_BASE
 """
 import datetime as dt
@@ -34,4 +37,11 @@ for n in chosen:
     # psf-os 0.3.2 also writes it into device.json; dt.txt keeps it beside the record for every psf-os.
     step = svc.backend(n).target.dt
     open(os.path.join(base, n, "dt.txt"), "w").write(f"{step!r}\n" if step else "none\n")
+    # 2026-11-23 (psf-os 0.3.3rc1): lengths of time and the timing constraints, beside the record for every psf-os
+    try:
+        from psf_os.device import timing_of
+    except ImportError:
+        timing_of = None
+    tm = timing_of(svc.backend(n).target, step) if timing_of else None
+    json.dump(dict(timing=tm, dt=step), open(os.path.join(base, n, "timing.json"), "w"), indent=1)
 print("fetched:", ", ".join(chosen))

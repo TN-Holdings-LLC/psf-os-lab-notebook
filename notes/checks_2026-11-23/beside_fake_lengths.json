@@ -1,0 +1,82 @@
+{
+ "note": "FakeFez snapshot values (qiskit-ibm-runtime fake_provider), not the device's record; beside, never judged; conditional waits are lower bounds (no decision latency)",
+ "fake": {
+  "dt": 4e-09,
+  "constraints": {
+   "granularity": 1,
+   "min_length": 2,
+   "pulse_alignment": 1,
+   "acquire_alignment": 1
+  },
+  "x": [
+   6
+  ],
+  "measure": [
+   390
+  ],
+  "cz": [
+   21,
+   26
+  ]
+ },
+ "L_dt": 4500,
+ "L_us": 18.0,
+ "forms": {
+  "ipd6": {
+   "circuits": 8,
+   "length_us_median": 281.148,
+   "conditionals": 40,
+   "cond_wait_dt_lower_median": 396.0,
+   "cond_wait_us_lower_median": 1.584
+  },
+  "ipd8": {
+   "circuits": 8,
+   "length_us_median": 518.892,
+   "conditionals": 56,
+   "cond_wait_dt_lower_median": 396.0,
+   "cond_wait_us_lower_median": 1.584
+  },
+  "ipe6": {
+   "circuits": 8,
+   "length_us_median": 551.148,
+   "conditionals": 40,
+   "cond_wait_dt_lower_median": 396.0,
+   "cond_wait_us_lower_median": 1.584
+  },
+  "ipe8": {
+   "circuits": 8,
+   "length_us_median": 1022.892,
+   "conditionals": 56,
+   "cond_wait_dt_lower_median": 396.0,
+   "cond_wait_us_lower_median": 1.584
+  },
+  "ipf6": {
+   "circuits": 8,
+   "length_us_median": 11.148,
+   "conditionals": 160,
+   "cond_wait_dt_lower_median": 390.0,
+   "cond_wait_us_lower_median": 1.56
+  },
+  "ipf8": {
+   "circuits": 8,
+   "length_us_median": 14.892,
+   "conditionals": 280,
+   "cond_wait_dt_lower_median": 390.0,
+   "cond_wait_us_lower_median": 1.56
+  },
+  "ips6": {
+   "circuits": 8,
+   "length_us_median": 11.148,
+   "conditionals": 40,
+   "cond_wait_dt_lower_median": 396.0,
+   "cond_wait_us_lower_median": 1.584
+  },
+  "ips8": {
+   "circuits": 8,
+   "length_us_median": 14.892,
+   "conditionals": 56,
+   "cond_wait_dt_lower_median": 396.0,
+   "cond_wait_us_lower_median": 1.584
+  }
+ }
+}

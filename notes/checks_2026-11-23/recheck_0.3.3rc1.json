@@ -1,0 +1,244 @@
+{
+ "weekend-shared-night-2026-11-21": {
+  "built_with": "a164fc5",
+  "park": false,
+  "park_likely": false,
+  "psf_os_here": "0.3.3rc1",
+  "result": "BUILT",
+  "jobs": [
+   {
+    "job": "A/job0/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 20 circuits",
+    "records_with_parking": 0,
+    "parked_waits_checked": 0,
+    "parked_qubit_waits_checked": 0,
+    "records_not_counted": 0,
+    "circuits": 20,
+    "psf_os_build": {
+     "version": "a164fc5",
+     "park": false,
+     "park_set": "default"
+    }
+   },
+   {
+    "job": "BC/job0/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 76 circuits",
+    "records_with_parking": 0,
+    "parked_waits_checked": 0,
+    "parked_qubit_waits_checked": 0,
+    "records_not_counted": 0,
+    "circuits": 76,
+    "psf_os_build": {
+     "version": "a164fc5",
+     "park": false,
+     "park_set": "default"
+    }
+   },
+   {
+    "job": "BC/job1/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 76 circuits",
+    "records_with_parking": 0,
+    "parked_waits_checked": 0,
+    "parked_qubit_waits_checked": 0,
+    "records_not_counted": 0,
+    "circuits": 76,
+    "psf_os_build": {
+     "version": "a164fc5",
+     "park": false,
+     "park_set": "default"
+    }
+   }
+  ]
+ },
+ "qpe-parked-night-2026-11-21": {
+  "built_with": "0.3.0",
+  "park": true,
+  "park_likely": false,
+  "psf_os_here": "0.3.3rc1",
+  "result": "BUILT",
+  "jobs": [
+   {
+    "job": "qp/job0/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 72 circuits",
+    "records_with_parking": 51,
+    "parked_waits_checked": 382,
+    "parked_qubit_waits_checked": 382,
+    "records_not_counted": 0,
+    "circuits": 72,
+    "psf_os_build": {
+     "version": "0.3.0",
+     "park": true,
+     "park_set": "explicit"
+    }
+   },
+   {
+    "job": "qp/job1/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 72 circuits",
+    "records_with_parking": 61,
+    "parked_waits_checked": 610,
+    "parked_qubit_waits_checked": 610,
+    "records_not_counted": 0,
+    "circuits": 72,
+    "psf_os_build": {
+     "version": "0.3.0",
+     "park": true,
+     "park_set": "explicit"
+    }
+   }
+  ]
+ },
+ "rus-fence-night-2026-11-21": {
+  "built_with": "0.3.0",
+  "park": true,
+  "park_likely": false,
+  "psf_os_here": "0.3.3rc1",
+  "result": "BUILT",
+  "jobs": [
+   {
+    "job": "rf/job0/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 84 circuits",
+    "records_with_parking": 4,
+    "parked_waits_checked": 24,
+    "parked_qubit_waits_checked": 24,
+    "records_not_counted": 0,
+    "circuits": 84,
+    "psf_os_build": {
+     "version": "0.3.0",
+     "park": true,
+     "park_set": "explicit"
+    }
+   }
+  ]
+ },
+ "likely-park-night-2026-11-22": {
+  "built_with": "0.3.1",
+  "park": true,
+  "park_likely": false,
+  "psf_os_here": "0.3.3rc1",
+  "result": "BUILT",
+  "jobs": [
+   {
+    "job": "lp/job0/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 68 circuits",
+    "records_with_parking": 32,
+    "parked_waits_checked": 142,
+    "parked_qubit_waits_checked": 194,
+    "records_not_counted": 0,
+    "circuits": 68,
+    "psf_os_build": {
+     "version": "0.3.1",
+     "park": true,
+     "park_set": "explicit",
+     "declared": "0.3.1",
+     "park_likely": [
+      "nfl3m3La",
+      "nfl3m3Lb",
+      "nfl3m3Lc",
+      "nfl3m3Ld",
+      "p0l3La",
+      "p0l3Lb",
+      "p0l3Lc",
+      "p0l3Ld",
+      "p0l3Le",
+      "p0l3Lf",
+      "p0l3Lg",
+      "p0l3Lh",
+      "p0l3Li",
+      "p0l3Lj",
+      "p0l3Lk",
+      "p0l3Ll",
+      "p0l3Lm",
+      "p0l3Ln",
+      "p3l3La",
+      "p3l3Lb",
+      "p3l3Lc",
+      "p3l3Ld",
+      "p3l3Le",
+      "p3l3Lf",
+      "p3l3Lg",
+      "p3l3Lh",
+      "p3l3Li",
+      "p3l3Lj"
+     ]
+    }
+   }
+  ]
+ },
+ "qpe-n78-night-2026-11-22": {
+  "built_with": "0.3.1",
+  "park": true,
+  "park_likely": true,
+  "psf_os_here": "0.3.3rc1",
+  "result": "BUILT",
+  "jobs": [
+   {
+    "job": "qn/job0/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 64 circuits",
+    "records_with_parking": 48,
+    "parked_waits_checked": 576,
+    "parked_qubit_waits_checked": 576,
+    "records_not_counted": 0,
+    "circuits": 64,
+    "psf_os_build": {
+     "version": "0.3.1",
+     "park": true,
+     "park_set": "explicit",
+     "declared": "0.3.1",
+     "park_likely": true
+    }
+   }
+  ]
+ },
+ "ipe-branch-cost-night-2026-11-22": {
+  "built_with": "0.3.1",
+  "park": true,
+  "park_likely": true,
+  "psf_os_here": "0.3.3rc1",
+  "result": "BUILT",
+  "jobs": [
+   {
+    "job": "bc/job0/job",
+    "test_gates_same": true,
+    "sentinel_gates_same": true,
+    "bytes_same": true,
+    "summary": "summary: the same for all 68 circuits",
+    "records_with_parking": 64,
+    "parked_waits_checked": 480,
+    "parked_qubit_waits_checked": 480,
+    "records_not_counted": 0,
+    "circuits": 68,
+    "psf_os_build": {
+     "version": "0.3.1",
+     "park": true,
+     "park_set": "explicit",
+     "declared": "0.3.1",
+     "park_likely": true
+    }
+   }
+  ]
+ }
+}
