@@ -19,6 +19,7 @@ number is read.
 | `park_try.py`, `park_alap.json`, `park_alap.txt` | the X, delay, X trial and its checks |
 | `shrink_bound.py`, `bound.json`, `bound.txt` | the upper bound (assumed model, a rough guide) |
 | `window_M.py`, `window_M.json`, `window_M.txt` | beside: M summed over a window next to the wall (section 4) |
+| `reciprocity.py`, `reciprocity.json`, `reciprocity.txt` | beside: does the transfer reverse with the wall, S = M(s) + M(c) (section 5) |
 
 ## How
 
@@ -170,6 +171,66 @@ Bold: at or below the line (0.5). The ratio is the M MSE divided by the mean squ
 - Guess (not measured): this is where the shrink lever is. A declared measure on the light-cone window would read M at
   3 cycles on both devices, and at 6 cycles on a kingston-like day. The transport exponent would still not read at
   these sizes.
+
+## 5. Beside: does the transfer reverse with the wall? (`reciprocity.py`; never judged; computed after the records were seen)
+
+Home's instruction "オームの相反の机上計算": the outside AI's proposal 3 (J(+V) = -J(-V)), counted on the 11-12 records
+only. Raw counts are used, no shot is discarded, nothing is corrected, and `scores.json` is unchanged.
+
+What is counted, for each of the 14 pairs:
+- S_k = M(s_k) + M(c_k), where c_k is s_k's complement (the wall reversed);
+- three windows: the declared right half (20 sites), the light-cone window (2t - 1 sites) and the site next to the
+  wall (w = 1, proposal 3's "one link");
+- dS_k = device - exact.
+
+The shot error comes from the raw counts: the per-shot spread of the count of 1s in the window. A cell's mean dS is
+"off zero" if it is more than 2 SE from 0, using the larger of the pairs' spread and the shots alone.
+
+Checks:
+- The declared M, recomputed from the shots, matches `scores.json` to 4e-15.
+- S / 2 over the half is exactly the drift D that `scores.json` already reports beside. So the half adds nothing new;
+  the windows do.
+
+**Exact values first.** S = 0 in A0 at every window, to 1e-14. A1 is 0 too (to 4e-11), except the light-cone window at
+6 cycles (mean +0.007, at most 0.042). A2's field changes sign under the complement, so S is not 0 there: up to 0.48 in
+magnitude (mean -0.195 / -0.063 over the half at 3 / 6 cycles). dS is measured against these exact values.
+
+Mean dS (± the larger SE). `*` marks off zero (more than 2 SE):
+
+| device | arm | cycles | half (20) | light cone (2t - 1) | one site |
+|---|---|---|---|---|---|
+| fez | A0 | 3 | -0.164 ± 0.040 * | +0.004 ± 0.010 | +0.008 ± 0.005 |
+| fez | A0 | 6 | -0.142 ± 0.033 * | -0.034 ± 0.025 | -0.010 ± 0.007 |
+| fez | A1 | 3 | -0.303 ± 0.051 * | -0.072 ± 0.011 * | -0.009 ± 0.006 |
+| fez | A1 | 6 | -0.353 ± 0.045 * | -0.134 ± 0.042 * | -0.017 ± 0.006 * |
+| fez | A2 | 3 | -0.265 ± 0.051 * | -0.009 ± 0.022 | -0.001 ± 0.006 |
+| fez | A2 | 6 | -0.390 ± 0.042 * | -0.144 ± 0.047 * | -0.007 ± 0.014 |
+| kingston | A0 | 3 | -0.075 ± 0.025 * | -0.019 ± 0.012 | -0.020 ± 0.006 * |
+| kingston | A0 | 6 | -0.036 ± 0.026 | -0.054 ± 0.015 * | -0.010 ± 0.006 |
+| kingston | A1 | 3 | -0.106 ± 0.053 * | -0.065 ± 0.010 * | -0.016 ± 0.006 * |
+| kingston | A1 | 6 | -0.130 ± 0.075 | -0.201 ± 0.019 * | -0.017 ± 0.007 * |
+| kingston | A2 | 3 | -0.105 ± 0.036 * | -0.038 ± 0.011 * | -0.017 ± 0.009 |
+| kingston | A2 | 6 | -0.185 ± 0.055 * | -0.198 ± 0.020 * | -0.024 ± 0.009 * |
+
+Off zero: half 10 of 12, light cone 8 of 12, one site 5 of 12. **Every off-zero cell points the decay way**: fewer 1s
+than the exact value, with both s and c losing 1s. The only positive means are fez A0 at 3 cycles (light cone, one
+site), and both are within 2 SE.
+
+How the per-qubit Z shift accounts for dS (`dS_shrink_mean`, `dS_rest_mean` in the JSON):
+- dS_k = -1/2 x (the sum over the window of each circuit's z - e), exactly. Split each circuit's z = r e + rest.
+- The uniform shrink mostly cancels between s and c, because their exact z have opposite signs. Its part over the
+  half is small: -0.08 to +0.04 on fez, and +0.05 to +0.17 on kingston, where it points against decay.
+- The decay comes from the rest, the part that is not a uniform shrink: -0.08 to -0.31 over the half, and +0.01 to
+  -0.27 on the light cone.
+- Beside: the floor circuits (all |0>) read <Z> 0.965-0.967 on fez and 0.980-0.982 on kingston. That error points the
+  other way (towards more 1s, readout 0 -> 1), so it does not explain the decay.
+
+**Result (beside): the reversal breaks the way noise leans (decay, fewer 1s).** Over the half and the light-cone
+window, most cells sit outside 2 SE of the exact symmetry, all of them towards decay. At the single site next to the
+wall the break is small (-0.001 to -0.024), but in 5 of 12 cells it is still outside 2 SE, the same way.
+
+Guess (not measured): |1> -> |0> during the circuit (T1) and readout 1 -> 0 make it. Readout 0 -> 1, seen in the
+floor, works against it.
 
 ## Computers and time
 

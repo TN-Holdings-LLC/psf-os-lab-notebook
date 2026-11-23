@@ -1,0 +1,39 @@
+fez: declared M recomputed from the shots against scores.json, worst 3.6e-15
+kingston: declared M recomputed from the shots against scores.json, worst 3.6e-15
+cell              window      S exact (max|.|)  S device  mean dS   SE pairs SE shots  >2SE  dir    pairs in 2SE  shrink part  rest part  floor
+fez_A0_t3         half        +0.000 (4.4e-15)   -0.164   -0.164    0.040    0.019  yes  decay      7/14       -0.056     -0.108  0.965
+fez_A0_t3         light_cone  +0.000 (1.3e-15)   +0.004   +0.004    0.009    0.010  no   more1     14/14       -0.009     +0.013  0.965
+fez_A0_t3         one_site    +0.000 (2.2e-16)   +0.008   +0.008    0.005    0.005  no   more1     14/14       +0.001     +0.008  0.965
+fez_A0_t6         half        -0.000 (8.9e-15)   -0.142   -0.142    0.033    0.023  yes  decay      8/14       -0.058     -0.084  0.966
+fez_A0_t6         light_cone  -0.000 (4.0e-15)   -0.034   -0.034    0.025    0.017  no   decay     11/14       -0.024     -0.010  0.966
+fez_A0_t6         one_site    -0.000 (4.4e-16)   -0.010   -0.010    0.007    0.006  no   decay     13/14       +0.001     -0.010  0.966
+fez_A1_t3         half        -0.000 (4.4e-15)   -0.303   -0.303    0.051    0.020  yes  decay      4/14       -0.039     -0.264  0.966
+fez_A1_t3         light_cone  +0.000 (3.1e-15)   -0.072   -0.072    0.010    0.011  yes  decay      7/14       -0.010     -0.062  0.966
+fez_A1_t3         one_site    -0.000 (1.9e-15)   -0.009   -0.009    0.006    0.006  no   decay     14/14       -0.001     -0.008  0.966
+fez_A1_t6         half        -0.000 (4.0e-11)   -0.353   -0.353    0.045    0.023  yes  decay      1/14       -0.066     -0.287  0.967
+fez_A1_t6         light_cone  +0.007 (4.2e-02)   -0.126   -0.134    0.042    0.018  yes  decay      7/14       -0.027     -0.107  0.967
+fez_A1_t6         one_site    -0.000 (1.1e-11)   -0.017   -0.017    0.005    0.006  yes  decay     13/14       -0.001     -0.016  0.967
+fez_A2_t3         half        -0.195 (4.8e-01)   -0.460   -0.265    0.051    0.020  yes  decay      3/14       -0.004     -0.261  0.967
+fez_A2_t3         light_cone  -0.184 (4.8e-01)   -0.193   -0.009    0.022    0.011  no   decay      9/14       +0.036     -0.045  0.967
+fez_A2_t3         one_site    -0.015 (1.9e-01)   -0.017   -0.001    0.006    0.006  no   decay     13/14       +0.001     -0.003  0.967
+fez_A2_t6         half        -0.063 (2.9e-01)   -0.453   -0.390    0.042    0.023  yes  decay      1/14       -0.080     -0.310  0.967
+fez_A2_t6         light_cone  -0.040 (3.4e-01)   -0.184   -0.144    0.047    0.018  yes  decay      4/14       -0.036     -0.108  0.967
+fez_A2_t6         one_site    +0.004 (1.8e-01)   -0.004   -0.007    0.014    0.006  no   decay      9/14       -0.006     -0.002  0.967
+kingston_A0_t3    half        +0.000 (4.4e-15)   -0.075   -0.075    0.025    0.016  yes  decay      9/14       +0.052     -0.127  0.982
+kingston_A0_t3    light_cone  +0.000 (1.3e-15)   -0.019   -0.019    0.012    0.010  no   decay     13/14       +0.009     -0.028  0.982
+kingston_A0_t3    one_site    +0.000 (2.2e-16)   -0.020   -0.020    0.006    0.005  yes  decay     11/14       -0.000     -0.020  0.982
+kingston_A0_t6    half        -0.000 (8.9e-15)   -0.036   -0.036    0.026    0.020  no   decay     12/14       +0.067     -0.103  0.981
+kingston_A0_t6    light_cone  -0.000 (4.0e-15)   -0.054   -0.054    0.010    0.015  yes  decay     13/14       +0.027     -0.081  0.981
+kingston_A0_t6    one_site    -0.000 (4.4e-16)   -0.010   -0.010    0.005    0.006  no   decay     14/14       -0.001     -0.010  0.981
+kingston_A1_t3    half        -0.000 (4.4e-15)   -0.106   -0.106    0.053    0.017  yes  decay      5/14       +0.112     -0.218  0.982
+kingston_A1_t3    light_cone  +0.000 (3.1e-15)   -0.065   -0.065    0.009    0.010  yes  decay     10/14       +0.015     -0.080  0.982
+kingston_A1_t3    one_site    -0.000 (1.9e-15)   -0.016   -0.016    0.006    0.006  yes  decay     14/14       -0.001     -0.015  0.982
+kingston_A1_t6    half        -0.000 (4.0e-11)   -0.130   -0.130    0.075    0.021  no   decay      3/14       +0.173     -0.303  0.980
+kingston_A1_t6    light_cone  +0.007 (4.2e-02)   -0.194   -0.201    0.019    0.016  yes  decay      1/14       +0.071     -0.272  0.980
+kingston_A1_t6    one_site    -0.000 (1.1e-11)   -0.017   -0.017    0.007    0.006  yes  decay     12/14       -0.001     -0.016  0.980
+kingston_A2_t3    half        -0.195 (4.8e-01)   -0.300   -0.105    0.036    0.017  yes  decay      4/14       +0.110     -0.215  0.982
+kingston_A2_t3    light_cone  -0.184 (4.8e-01)   -0.222   -0.038    0.011    0.010  yes  decay     11/14       +0.039     -0.078  0.982
+kingston_A2_t3    one_site    -0.015 (1.9e-01)   -0.032   -0.017    0.009    0.006  no   decay     11/14       +0.002     -0.018  0.982
+kingston_A2_t6    half        -0.063 (2.9e-01)   -0.248   -0.185    0.055    0.020  yes  decay      4/14       +0.115     -0.300  0.980
+kingston_A2_t6    light_cone  -0.040 (3.4e-01)   -0.238   -0.198    0.020    0.016  yes  decay      2/14       +0.052     -0.250  0.980
+kingston_A2_t6    one_site    +0.004 (1.8e-01)   -0.020   -0.024    0.009    0.006  yes  decay      9/14       -0.001     -0.023  0.980
