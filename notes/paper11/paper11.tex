@@ -1,7 +1,7 @@
-% Paper 11 (TN Holdings), DRAFT 2 (the home VS's reading of draft 1 applied, 2026-11-23), home, 2026-11-22 (owner 23:29 JST "始めて"). Built from notes/paper11/OUTLINE.md
+% Paper 11 (TN Holdings), DRAFT 3 (psf-os 0.3.3 joined, owner 2026-11-23 10:4x CET), home, 2026-11-22 (owner 23:29 JST "始めて"). Built from notes/paper11/OUTLINE.md
 % and the committed records named beside each number; every number is quoted from those records (README and score
 % files) and is to be checked one by one against them before release (tools/check_readme_numbers.py and a home VS
-% reading). Figures: notes/paper11/figures.py. psf-os 0.3.2 is to be released with this paper.
+% reading). Figures: notes/paper11/figures.py. psf-os 0.3.3 (which includes 0.3.2) is to be released with this paper.
 \documentclass[10pt,a4paper]{article}
 \usepackage[margin=2.2cm]{geometry}
 \usepackage{amsmath,amssymb}
@@ -19,7 +19,7 @@
 
 \title{Where a Qubit Waits:\\ Rules for Real-Time Control from Declared Device Tests on IBM Heron}
 \author{TN Holdings\\ \small contact: \texttt{love.os.architect@proton.me}}
-\date{Draft 2, 23 November 2026}
+\date{Draft 3, 23 November 2026}
 
 \begin{document}
 \maketitle
@@ -42,7 +42,8 @@ the best form passed its ceiling, 0.929 against 0.875). (3) Two conditional item
 lengths, $p = 0.006$) while copies inside one job agree; a loop that decides inside one job keeps that drift out.
 Phase estimation, parked, stayed beyond its ceiling to $n = 8$ (0.424 against 0.201), with a loss per added bit that
 grew from $n = 6$ to 8 on that night. Removing every phase conditional changed the share by $+0.005$ (2 SE 0.006).
-The operating layer, psf-os, now parks by default (releases 0.3.0 and 0.3.1). No quantum advantage is claimed.
+The operating layer, psf-os, now parks by default (releases 0.3.0 and 0.3.1) and, from 0.3.3, checks at every build
+that a parked qubit stays parked in the circuit as sent. No quantum advantage is claimed.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -110,7 +111,9 @@ that it waits in $\ket{1}$ (fe); fenced and turned to $\ket{0}$ for the wait and
 0.8914 and 0.9344. Parking kept more, $+0.0387$ (2 SE 0.0045); the fence alone, with the target in $\ket{1}$, read
 $-0.0042$ (2 SE 0.0049), SAME WITHIN ERROR. The declared reading: waiting in $\ket{0}$ keeps more; $\ket{1}$ neither
 more nor less than the superposition. The compiled CZ count was the same for the three forms at every phase. The compiler merged the target's rotations
-across the wait, so what is written is not what waits; the state that waits is taken from the circuit as sent.
+across the wait, so what is written is not what waits; the state that waits is taken from the circuit as sent. Followed
+noiselessly through the compiled circuits after the night (psf-os 0.3.3's record), the target waited with
+$P(\ket{1})$ 0 in pk, 1 in fe, and 0.5 in most of pl's waits (1 in a few).
 
 \paragraph{The rule, as a default.} psf-os 0.3.0 parks, at every wait, a qubit that is in $\ket{1}$ on every branch of
 the noiseless state, behind a fence, and refuses to build if the noiseless output or the compiled CZ count changes. Sent
@@ -221,11 +224,16 @@ psf-os 0.3.0 (2026-11-21, doi:10.5281/zenodo.24416958) parks a waiting qubit tha
 default, and records at every build the qubits holding a superposition at each wait. psf-os 0.3.1 (2026-11-22,
 doi:10.5281/zenodo.24438701) also parks a waiting qubit whose noiseless probability of $\ket{1}$ is above 0.5, behind a
 fence on that qubit and its wait only. Both refuse a build whose noiseless output or compiled CZ count changes, keep
-recorded builds as they were built, and refuse a build declared on an earlier version unless the parking is stated. The
-loop decides inside one job (opt-in), and a recorded night can be replayed: a night replayed with a ledger line of the
-same calibration starts from the ledger's prescriptions and stops where a circuit is not in one recorded job. psf-os
-0.3.2, released with this paper, records the device's time step and prices delays: the branch-cost night's charge was
-112 s against a model of 59.6 s, and the model with the delays' term gives 114.4 s. \pending{0.3.2 release and DOI}
+recorded builds as they were built, and refuse a build declared on an earlier version unless the parking is stated. The loop decides inside one job (opt-in up to 0.3.2), and a recorded night can be replayed: a night replayed with a ledger line of the
+same calibration starts from the ledger's prescriptions and stops where a circuit is not in one recorded job. psf-os 0.3.3, released with this paper \pending{DOI}, includes 0.3.2 (tagged, not released on its own), which records the
+device's time step and prices delays: the branch-cost night's charge was 112 s against a model of 59.6 s, and the model
+with the delays' term gives 114.4 s; a delay over 100 \textmu s per circuit is refused unless stated. 0.3.3 follows every
+compiled circuit noiselessly through its waits, branch by branch, and refuses a build whose parked qubit did not stay
+parked as sent; it records the waits, the fences' cost in depth and a summary of every circuit as sent; it reads the
+device's lengths of time (no error number) and refuses a delay off the device's time grid; and on the device it decides
+a loop inside one job by default, a decision across jobs having to be stated. Rebuilt with 0.3.3, the recorded builds of
+2026-11-21 and 22 were the same files byte for byte, and every wait of a qubit psf-os parked (2214) stayed parked in the
+circuit as sent. A candidate is now named \texttt{X.Y.ZrcN} until it is released.
 
 \section{What did not work}\label{sec:failed}
 The branch-cost split failed by a placeholder: a delay length declared in device units before the unit was read. It was charged 112 s, 1.9 times the model, because delays were charged and not modelled. The expectation for $n = 8$, extrapolated from another device and night, was 0.72; the night read 0.4236. Parking's gain was not seen at $n = 7$ and 8 on four twin phases. A declaration rule now requires
@@ -283,13 +291,12 @@ $\ket{1}$ kept more than the previous default on one night and one device, on tw
 changed the noiseless answer, which every build checks. Fewer qubits in superposition during a wait and fewer CZ each
 kept more. Packed side by side, the first conditional item lost 0.057 to 0.085; psf-os keeps refusing to pack them.
 Because the device drifts between jobs, every rule was decided inside one job. Parking is now the default of psf-os;
-the paired loop is available (opt-in). Phase estimation, built by those defaults, stayed above its ceiling to eight
+the paired loop is the default on the device from 0.3.3. Phase estimation, built by those defaults, stayed above its ceiling to eight
 bits; removing its phase feedback changed the share by $+0.0045$ (2 SE 0.0055) on the one night it was tried.
 
 \section*{Data and code}
 Records, declarations and raw counts: \url{https://github.com/TN-Holdings-LLC/psf-os-lab-notebook}; the operating layer:
-\url{https://github.com/TN-Holdings-LLC/psf-os} (releases 0.3.0, doi:10.5281/zenodo.24416958; 0.3.1,
-doi:10.5281/zenodo.24438701; 0.3.2 \pending{DOI}).
+\url{https://github.com/TN-Holdings-LLC/psf-os} (releases 0.3.0, doi:10.5281/zenodo.24416958; 0.3.1, doi:10.5281/zenodo.24438701; 0.3.3, which includes 0.3.2, \pending{DOI}).
 
 \section*{References}
 \begin{itemize}
