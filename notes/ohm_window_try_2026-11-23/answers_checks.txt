@@ -1,0 +1,6 @@
+A0: 5 s
+A1: 20 s
+A2: 35 s
+checks: window L against F 7.3e-15; A0 quimb against free fermions 3.4e-15; |total Z - initial| (F) 5.3e-15
+35.93 s wall
+answers sha256 216d6b960c927df4ab9c41ab87180a7f55a7005f04448217a1efece4f6787a11
