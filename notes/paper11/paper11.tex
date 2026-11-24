@@ -206,11 +206,11 @@ $C(n)$ by $+0.425$, $+0.492$, $+0.539$. On the log of the share, the loss per ad
 acceleration $+0.0034$ (2 SE 0.0077) read FLAT: on this night the loss per added bit did not grow with the conditionals (from 9 to 20) beyond 2 SE.
 
 \paragraph{To $n = 8$, parked.} With psf-os 0.3.1's defaults on ibm\_fez (2026-11-22; 16 phases per $n$ chosen as
-$k\cdot a \bmod 2^n$ so that their compiled CZ mix is close to that of every phase), the parked IPE read 0.5785, 0.5097 and 0.4236 at
+$k\cdot a \bmod 2^n$ so that their compiled CZ mix is close to that of every phase), the parked IPE read 0.5785, 0.5097 and 0.4236 (2 SE 0.0056 to 0.0057) at
 $n = 6,7,8$, beyond $C(n)$ by $+0.272$, $+0.262$, $+0.223$. The declared reading: the range reaches $n = 8$; parking's gain
 is not seen at $n = 8$ at this shot noise. Beside, the loss per added bit grew ($0.1266$ then $0.1851$, acceleration
 $+0.0584$, 2 SE 0.0276). On another device and night, from $n = 6$ to 8, it grew; the two ranges are read on their own. The declared
-expectation, extrapolated from the marrakesh night, was 0.72; the fez night read 0.4236 (another device and
+expectation, extrapolated from the marrakesh night, was 0.72; the fez night read 0.4236 (2 SE 0.0056; another device and
 calibration; set beside, not compared). Figure~\ref{fig:ipe}.
 
 \begin{figure}[H]\centering
@@ -243,7 +243,7 @@ a loop inside one job by default, a decision across jobs having to be stated. Re
 for gate and byte for byte, and every wait of a qubit psf-os parked (2214) stayed parked in the circuit as sent. A candidate is now named \texttt{X.Y.ZrcN} until it is released.
 
 \section{What did not work}\label{sec:failed}
-The branch-cost split failed because of a placeholder: a delay length declared in device units before the unit was read. It was charged 112 s, 1.9 times the model, because delays were charged and not modelled. The expectation for $n = 8$, extrapolated from another device and night, was 0.72; the night read 0.4236. Parking's gain was not seen at $n = 7$ and 8 on four twin phases. A declaration rule now requires
+The branch-cost split failed because of a placeholder: a delay length declared in device units before the unit was read. It was charged 112 s, 1.9 times the model, because delays were charged and not modelled. The expectation for $n = 8$, extrapolated from another device and night, was 0.72; the night read 0.4236 (2 SE 0.0056). Parking's gain was not seen at $n = 7$ and 8 on four twin phases. A declaration rule now requires
 physical units to be converted with the device's own values before a test is declared, and a delay over 100 \textmu s
 per circuit is refused unless stated. Two departures from declarations: the paired loop's declared flags
 (\texttt{--k-max 4 --budget 240}) were refused on a device run and it ran without them, with the same values; the $n = 6,7,8$
