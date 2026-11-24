@@ -6,6 +6,7 @@
 \usepackage[margin=2.2cm]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{float}
@@ -30,8 +31,8 @@ of this series showed that such real-time control on IBM Heron devices can get c
 correction of the uncontrolled circuit. This paper asks what an operating layer should do with the waits. Every test
 was declared in git before its device record was fetched; every comparison that decides a rule was made inside one
 job; every shot was counted, and no error mitigation, post-selection or fitted noise model was used. Nine declared runs (eleven tests; the decoy and loopvar tests shared one session) were sent in eight charged sessions
-on three devices (ibm\_marrakesh, ibm\_fez, ibm\_kingston; 706 s charged; 11 declared predictions, all held). Four rules
-came out. (1) A qubit that waits in $\ket{1}$ keeps more if it is turned to $\ket{0}$ for the wait and back
+on three devices (ibm\_marrakesh, ibm\_fez, ibm\_kingston; 706 s charged; 11 declared predictions, all held; a prediction was declared only where an earlier device record
+grounded it, and over the series 20 of 68 failed, all on paper 10's nights). Four rules came out. (1) A qubit that waits in $\ket{1}$ keeps more if it is turned to $\ket{0}$ for the wait and back
 after: $+0.039$ (2 SE 0.005) on iterative phase estimation (IPE) at $n=4$, $+0.031$ to $+0.039$ at $n = 4,5,6$ on
 another calibration, $+0.029$ and $+0.052$ on two further devices; fencing it so that it waits in $\ket{1}$ instead of a
 superposition read SAME WITHIN ERROR ($-0.004$, 2 SE 0.005) on the one night it was sent. On one night and one device,
@@ -96,7 +97,8 @@ seconds apart. Values from different nights are set beside each other only and n
 KEEPS LESS ($d \le -2$ SE). For RUS chains, $d$ is taken on the distance to the exact value ($g$, nearer is better), and
 an arm whose share exceeds its own noiseless value by more than 2 SE (OVERSHOOT) is not counted. For IPE the ceiling
 $C(n)$ is the noiseless value of the best decoder of the circuit without its feedback (0.4706, 0.3792, 0.3065, 0.2480,
-0.2007 for $n = 4 \dots 8$); BEYOND THE CEILING means $p \ge C(n) + 2$ SE. The share is the fraction of shots with every bit right. NF, P0, P2
+0.2007 for $n = 4 \dots 8$); BEYOND THE CEILING means $p \ge C(n) + 2$ SE. The share is the fraction of shots with every bit right. A wait is a mid-circuit read with the conditionals after
+it, or a run of conditionals on bits read earlier. NF, P0, P2
 and P3 are paper 10's four RUS chains, and P1, P2 and P2+M the loop's prescriptions, M being one more try (paper 10's
 step). The ring sentinel is a fixed ring circuit with a known output, sent in every job; its reading is reported
 beside.
@@ -256,7 +258,9 @@ and CZ. The drift between jobs was measured on one night, and the packing loss a
 are cut to fewer CZ by the compiler (6.0 on average at $n = 4$ against 8.0 on the other phases); a phase and its twin
 have the same compiled CZ, but parking's gain there was measured on those phases. The unparked IPE's shape to $n = 6$
 was read from two jobs. In the shared test of 2026-11-21 the off and floor arms were not sent, because no verdict read them. The paired
-loop's prediction was read on one row. A peak of errors at one round of IPE on one fez night,
+loop's prediction was read on one row. Each verdict is read on its own at 2 SE, with no correction for multiple comparisons: the rules rest on the declared
+predictions and readings, and no beside value is read on its own (two lie near the line: P0's M $-$ F, $+0.0140$
+against 2 SE 0.0117, and the acceleration from $n = 6$ to 8, about 2.1 SE). A peak of errors at one round of IPE on one fez night,
 found after the declarations, did not appear on the next fez night with other qubits; it is not used. Values across
 nights and devices are set beside each other only.
 
@@ -264,7 +268,9 @@ nights and devices are set beside each other only.
 Every device result re-scores from its committed raw counts with \texttt{python reproduce.py} in
 \texttt{psf-os-lab-notebook}, with the psf-os named in each folder; each folder's README records the re-score SAME at
 home and an independent re-count from the raw counts with qiskit, aer and numpy only. The numbers in the records'
-READMEs were checked by machine against the score files (\texttt{tools/check\_readme\_numbers.py}, no mismatch over the 66 recorded nights on 2026-11-24). Figures: \texttt{notes/paper11/figures.py}. The runs are in Table~\ref{tab:runs}.
+READMEs were checked by machine against the score files (\texttt{tools/check\_readme\_numbers.py}, no mismatch over the 66 recorded nights on 2026-11-24). The device runs used qiskit 2.5.2, qiskit-aer 0.17.2 and qiskit-ibm-runtime 0.49.0 (each folder's
+\texttt{versions.txt}). Figures: \texttt{notes/paper11/figures.py}; every plotted value, with its source, is in
+\texttt{fig\_data.csv}, archived with this paper. The runs are in Table~\ref{tab:runs}.
 
 \begin{table}[H]\centering\footnotesize
 \setlength{\tabcolsep}{3.5pt}
@@ -288,8 +294,27 @@ share the 165 s). Over all nights of the series from 11-16 to 11-22: 68 declared
 10).}\label{tab:runs}
 \end{table}
 
+\begin{table}[H]\centering\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{tabular}{R{3.4cm}lR{2.4cm}R{2.2cm}R{3.3cm}R{2.8cm}}
+\toprule
+rule & nights & devices & circuits & KEEPS MORE (or the effect) & SAME WITHIN ERROR \\
+\midrule
+park the always-$\ket{1}$ waiting qubit & 5 & marrakesh, fez, kingston & IPE & $+0.029$ to $+0.052$ & $n = 7, 8$ (fez); the fence in $\ket{1}$ \\
+park the likely-$\ket{1}$ waiting qubit & 2 & fez, kingston & RUS chains & $+0.014$ to $+0.097$ & P2, P3 (fez); P3 (kingston) \\
+fewer carriers, fewer CZ & 2 & marrakesh, fez & repetition code & $+0.011$ to $+0.028$ & none \\
+no conditional items side by side & 1 & marrakesh & RUS items & first item $-0.057$ to $-0.085$ & the second item \\
+decide inside one job & 2 & marrakesh & RUS chains & drift between jobs at $L = 2$ ($p = 0.006$) & $L = 1, 3$; copies in a job \\
+\bottomrule
+\end{tabular}
+\caption{The rules and what they rest on (the nights of 2026-11-20 to 22). Each comparison is inside one job; the
+drift of the last row is between jobs by design.}\label{tab:rules}
+\end{table}
+
 \section{Conclusion}
-Where a qubit waits changed what a dynamic circuit kept by up to $+0.10$ in these tests ($+0.014$ to $+0.097$ where it
+Table~\ref{tab:rules} gathers the rules and what they rest on. Where a qubit waits changed what a dynamic circuit
+kept by up to $+0.10$ in these tests ($+0.014$ to $+0.097$ where it
 read KEEPS MORE; SAME WITHIN ERROR on some chains and at $n = 7, 8$). Turning a waiting qubit
 that was in $\ket{1}$ on every branch to $\ket{0}$ kept more on three devices; turning one that was only more likely in
 $\ket{1}$ kept more than the previous default on one night and one device, on two of three chains. Neither cost CZ nor changed the noiseless answer, which every build checks. Fewer qubits in superposition during a wait and fewer CZ each

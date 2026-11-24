@@ -1,12 +1,14 @@
 """Figures of paper 11 (TN Holdings), drawn from the committed score files only.
 
   python notes/paper11/figures.py   -> notes/paper11/fig_park.pdf, fig_rus.pdf, fig_wait.pdf, fig_ipe.pdf,
-                                       fig_loopvar.pdf
+                                       fig_loopvar.pdf, and fig_data.csv (every plotted value, so that the figures can
+                                       be checked from the paper's archive alone)
 
 Every value is read from a results/ folder named beside it; 2 SE of a share without a stored SE is the binomial
 2 * sqrt(p (1 - p) / N) with N the shots pooled for that share, as the scorers compute it. Times are the
 night's first fetch (CET), as in the paper's table.
 """
+import csv
 import json
 import math
 import os
@@ -25,8 +27,15 @@ INK, MUTED, GRID = "#1f2328", "#59636e", "#d0d7de"
 C = ["#2a6fdb", "#d1495b", "#1b998b", "#edae49", "#7a5195"]
 
 
+ROWS = []   # (figure, series, x, value, two_se, source) for fig_data.csv
+
+
 def R(p):
     return json.load(open(os.path.join(NB, "results", p)))
+
+
+def row(fig, series, x, value, two_se, source):
+    ROWS.append((fig, series, x, value, "" if two_se is None else two_se, source))
 
 
 def two_se(p, n):
@@ -53,6 +62,7 @@ def fig_park():
     for i, (k, lab) in enumerate(forms):
         a.bar(i, c[k], color=C[i], width=0.6)
         a.errorbar(i, c[k], yerr=two_se(c[k], n_c), color=INK, capsize=3, linewidth=1)
+        row("park_a", k, "n=4", c[k], two_se(c[k], n_c), "weekend-shared-night-2026-11-21/BC/scores/C/park_scores.json")
     a.set_xticks(range(3), [f[1] for f in forms])
     a.set_ylim(0.85, 0.95)
     a.set_ylabel("share of shots right (IPE n = 4)", fontsize=8)
@@ -70,6 +80,7 @@ def fig_park():
         xs.append(x)
         labels.append(f"n={n}")
         b.errorbar(x, d, yerr=s, fmt="o", color=C[(len(groups) - 1) % len(C)], capsize=3, markersize=4)
+        row("park_b", night.replace("\n", " "), f"n={n}", d, s, "results (see the paper's text)")
     b.axhline(0, color=MUTED, linewidth=0.8)
     b.set_xticks(xs, labels, fontsize=7)
     gx = {}
@@ -96,6 +107,10 @@ def fig_rus():
     for i, (k, lab) in enumerate(items):
         f = rf[k]["fence F - D"]
         m = rf[k]["park M - F"]
+        row("rus", "fez F-D", lab, f["g"], f["two_se"], "rus-fence-night-2026-11-21/rf/rusfence_scores.json")
+        row("rus", "fez M-F", lab, m["g"], m["two_se"], "rus-fence-night-2026-11-21/rf/rusfence_scores.json")
+        if k in lp:
+            row("rus", "kingston L-D", lab, lp[k]["g"], lp[k]["two_se"], "likely-park-night-2026-11-22/lp/likely_scores.json")
         ax.errorbar(i - w, f["g"], yerr=f["two_se"], fmt="s", color=C[1], capsize=3, markersize=4,
                     label="fez 11-21: full fence F - D" if i == 0 else None)
         ax.errorbar(i, m["g"], yerr=m["two_se"], fmt="o", color=C[0], capsize=3, markersize=4,
@@ -122,6 +137,7 @@ def fig_wait():
              ("F6", "6 CZ, 1 carrier")]
     for i, (k, lab) in enumerate(order):
         p, se = a[k]["p"], a[k]["se"]
+        row("wait", k, lab, p, 2 * se, "weekend-shared-night-2026-11-21/A/scores/A/repcode4_scores.json")
         ax.bar(i, p, color=C[0], width=0.6)
         ax.errorbar(i, p, yerr=2 * se, color=INK, capsize=3, linewidth=1)
     ax.axhline(0.875, color=C[1], linewidth=1, linestyle="--")
@@ -145,10 +161,14 @@ def fig_ipe():
     # The parked marrakesh night (qpe-parked, every phase) is not drawn: it is not in the text and would invite a comparison across nights.
     for s, lab, col, mk in [(s1, "unparked, marrakesh 11-21 01:52 (every phase)", C[3], "s"),
                             (s3, "parked by 0.3.1, fez 11-22 11:56 (16 phases)", C[2], "D")]:
+        for x in s:
+            row("ipe", lab, f"n={x[0]}", x[1], x[2], "weekend B / qpe-n78 score files")
         ax.errorbar([x[0] for x in s], [x[1] for x in s], yerr=[x[2] for x in s], fmt=mk + "-", color=col,
                     capsize=3, markersize=4, linewidth=1, label=lab)
     ceil = {x[0]: x[3] for x in s1 + s3 if x[3] is not None}
     ns = sorted(ceil)
+    for n in ns:
+        row("ipe", "ceiling C(n)", f"n={n}", ceil[n], None, "score files")
     ax.plot(ns, [ceil[n] for n in ns], color=C[1], linestyle="--", linewidth=1, label="ceiling C(n)")
     ax.set_yscale("log")
     ax.set_yticks([0.2, 0.3, 0.5, 0.7, 0.9], ["0.2", "0.3", "0.5", "0.7", "0.9"])
@@ -173,6 +193,8 @@ def fig_loopvar():
         for j, job in enumerate(("V1", "V2", "V3")):
             for c, cp in enumerate(("a", "b")):
                 x = i * 4 + j + (c - 0.5) * 0.25
+                row("loopvar", f"job {job} copy {cp}", f"L={L}", pj[job][cp]["g"], 2 * pj[job][cp]["se"],
+                    "loopvar-night-2026-11-20/loopvar_scores.json")
                 ax.errorbar(x, pj[job][cp]["g"], yerr=2 * pj[job][cp]["se"], fmt="o", color=C[j], capsize=2,
                             markersize=3, label=(f"job {job}" if (i == 0 and c == 0) else None))
     ax.axhline(0, color=MUTED, linewidth=0.8)
@@ -192,4 +214,8 @@ if __name__ == "__main__":
     fig_wait()
     fig_ipe()
     fig_loopvar()
-    print("figures written to", OUT)
+    with open(os.path.join(OUT, "fig_data.csv"), "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["figure", "series", "x", "value", "two_se", "source (results/ of psf-os-lab-notebook)"])
+        w.writerows(ROWS)
+    print("figures and fig_data.csv written to", OUT)

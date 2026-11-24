@@ -1,0 +1,56 @@
+figure,series,x,value,two_se,source (results/ of psf-os-lab-notebook)
+park_a,pl,n=4,0.895673076923077,0.00346119173559363,weekend-shared-night-2026-11-21/BC/scores/C/park_scores.json
+park_a,fe,n=4,0.8914423076923077,0.0035223265866673524,weekend-shared-night-2026-11-21/BC/scores/C/park_scores.json
+park_a,pk,n=4,0.9343589743589743,0.0028041242838375904,weekend-shared-night-2026-11-21/BC/scores/C/park_scores.json
+park_b,marrakesh 11-21 10:59,n=4,0.034871794871794926,0.007178392304042472,results (see the paper's text)
+park_b,marrakesh 11-21 10:59,n=5,0.031153846153846088,0.007259432965591139,results (see the paper's text)
+park_b,marrakesh 11-21 10:59,n=6,0.03858974358974354,0.007566271599773751,results (see the paper's text)
+park_b,fez 11-21 14:29,n=4,0.029102564102564177,0.014631545501807829,results (see the paper's text)
+park_b,kingston 11-22 03:46,n=4,0.05230769230769239,0.009829374262471966,results (see the paper's text)
+park_b,fez 11-22 11:56,n=6,0.04987179487179483,0.01582584860635695,results (see the paper's text)
+park_b,fez 11-22 11:56,n=7,0.010769230769230753,0.015929957615183343,results (see the paper's text)
+park_b,fez 11-22 11:56,n=8,-0.011666666666666659,0.015231499450105872,results (see the paper's text)
+rus,fez F-D,P0,-0.045274725274725314,0.011623351247684018,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+rus,fez M-F,P0,0.01399267399267401,0.011736935668888103,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+rus,kingston L-D,P0,0.02472527472527475,0.00849849323248397,likely-park-night-2026-11-22/lp/likely_scores.json
+rus,fez F-D,NF,-0.008376068376068302,0.01800292646440175,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+rus,fez M-F,NF,0.08769230769230763,0.017521179582385527,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+rus,kingston L-D,NF,0.09717948717948721,0.015499760859196856,likely-park-night-2026-11-22/lp/likely_scores.json
+rus,fez F-D,P3,-0.024273504273504276,0.01796869562950912,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+rus,fez M-F,P3,0.002051282051282133,0.01806844759912618,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+rus,kingston L-D,P3,0.009384615384615325,0.010018116868341791,likely-park-night-2026-11-22/lp/likely_scores.json
+rus,fez F-D,P2,-0.007985347985348001,0.011004346225727768,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+rus,fez M-F,P2,0.00512820512820511,0.011020373570533735,rus-fence-night-2026-11-21/rf/rusfence_scores.json
+wait,F16,"16 CZ, 3 carriers",0.7510625,0.0068368051949311455,weekend-shared-night-2026-11-21/A/scores/A/repcode4_scores.json
+wait,F10,"10 CZ, 3 carriers",0.8364375,0.005848286257395196,weekend-shared-night-2026-11-21/A/scores/A/repcode4_scores.json
+wait,F6P,"10 CZ, 1 carrier",0.85175,0.005618539345328107,weekend-shared-night-2026-11-21/A/scores/A/repcode4_scores.json
+wait,F6,"6 CZ, 1 carrier",0.874125,0.0052447708332919556,weekend-shared-night-2026-11-21/A/scores/A/repcode4_scores.json
+ipe,"unparked, marrakesh 11-21 01:52 (every phase)",n=4,0.895673076923077,0.00346119173559363,weekend B / qpe-n78 score files
+ipe,"unparked, marrakesh 11-21 01:52 (every phase)",n=5,0.871474358974359,0.0026795378551087573,weekend B / qpe-n78 score files
+ipe,"unparked, marrakesh 11-21 01:52 (every phase)",n=6,0.8450801282051282,0.0020484492658607687,weekend B / qpe-n78 score files
+ipe,"parked by 0.3.1, fez 11-22 11:56 (16 phases)",n=6,0.5784935897435898,0.005591187621756922,weekend B / qpe-n78 score files
+ipe,"parked by 0.3.1, fez 11-22 11:56 (16 phases)",n=7,0.5096794871794872,0.005660324212966075,weekend B / qpe-n78 score files
+ipe,"parked by 0.3.1, fez 11-22 11:56 (16 phases)",n=8,0.4235576923076923,0.005594830186862697,weekend B / qpe-n78 score files
+ipe,ceiling C(n),n=4,0.4705896756916814,,score files
+ipe,ceiling C(n),n=5,0.3792413617902753,,score files
+ipe,ceiling C(n),n=6,0.30650912926478213,,score files
+ipe,ceiling C(n),n=7,0.2479950588241734,,score files
+ipe,ceiling C(n),n=8,0.20073329131085005,,score files
+loopvar,job V1 copy a,L=1,0.04249999999999998,0.016908352226044972,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V1 copy b,L=1,0.03125,0.016828374475866645,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V2 copy a,L=1,0.026499999999999968,0.016507903410185078,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V2 copy b,L=1,0.020000000000000018,0.016593673493232295,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V3 copy a,L=1,0.02949999999999997,0.016245730208273187,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V3 copy b,L=1,0.00824999999999998,0.01648171524750989,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V1 copy a,L=2,0.029749999999999943,0.020082497043445568,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V1 copy b,L=2,0.013250000000000095,0.019946758821923927,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V2 copy a,L=2,-0.005750000000000033,0.019575959427317987,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V2 copy b,L=2,-0.002749999999999919,0.019926155863587938,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V3 copy a,L=2,-0.008499999999999952,0.019712226535833037,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V3 copy b,L=2,-0.006750000000000034,0.019769065165050167,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V1 copy a,L=3,0.15725,0.021916795785424475,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V1 copy b,L=3,0.16600000000000004,0.021881042022719118,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V2 copy a,L=3,0.14474999999999993,0.021932651173535773,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V2 copy b,L=3,0.15725,0.021850570644722303,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V3 copy a,L=3,0.15400000000000003,0.021871031068516178,loopvar-night-2026-11-20/loopvar_scores.json
+loopvar,job V3 copy b,L=3,0.15999999999999998,0.021858991285052476,loopvar-night-2026-11-20/loopvar_scores.json
