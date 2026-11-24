@@ -26,7 +26,7 @@ EXTRA_WORDS = ["nothing"]                  # home instruction, 2026-11-24 (not i
 FALLBACK_WORDS = ["at most", "at least", "only", "merely", "just", "far longer", "much smaller", "negligible",
                   "a few thousandths", "lies elsewhere", "is caused by", "is due to"]
 DEC = re.compile(r"(?<![\w.])[+\-−]?\d+\.\d+")
-SE = re.compile(r"\bSE\b")
+SE = re.compile(r"\bSE(?![A-Za-z])")      # "2 SE", "SE_d", "SE 0.008"; not a word such as "SEED"
 HEADING = re.compile(r"^\s*(#{1,6}\s|\\(sub)*section\*?\{|\\paragraph\{|\*\*[^*]+\*\*\s*$)")
 CODE = re.compile(r"`[^`]*`")
 
