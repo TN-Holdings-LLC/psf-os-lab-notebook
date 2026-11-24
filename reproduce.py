@@ -267,6 +267,9 @@ RESULTS = {
     "ohm-window-night-2026-11-23": ("results/ohm-window-night-2026-11-23", ["ow", "answers"],
         ["gpu/ohm_window_night.py", "score", "{T}/ow", "{T}/answers/ohm_window_answers_by_label.json"],
         "ow/scores.json"),
+    "ohm-ruler-night-2026-11-24": ("results/ohm-ruler-night-2026-11-24", ["or", "answers"],
+        ["gpu/ohm_ruler_night.py", "score", "{T}/or", "{T}/answers/ohm_ruler_answers_by_label.json"],
+        "or/scores.json"),
 }
 
 

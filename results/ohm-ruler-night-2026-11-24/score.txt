@@ -1,0 +1,22 @@
+A0_t1_L: raw M READS (0.007), W READS (0.006); W device 0.255 exact 0.250 (excess +0.005, 2 SE 0.027); ruler (a) NOT READ; ruler (b) sqrt(mirror) 0.911, d -0.005 (2 SE 0.019) AGREES
+A0_t3_L: raw M READS (0.051), W READS (0.050); W device 0.577 exact 0.435 (excess +0.142, 2 SE 0.072); ruler (a) W 0.319, d -0.116 (2 SE 0.025) DIFFERS; ruler (b) sqrt(mirror) 0.901, d +0.009 (2 SE 0.045) AGREES
+A0_t4_L: raw M READS (0.123), W READS (0.123); W device 1.240 exact 0.876 (excess +0.363, 2 SE 0.078); ruler (a) W 0.626, d -0.250 (2 SE 0.100) DIFFERS; ruler (b) sqrt(mirror) 0.777, d -0.080 (2 SE 0.100) AGREES
+A1_t1_L: raw M READS (0.007), W READS (0.006); W device 0.258 exact 0.250 (excess +0.008, 2 SE 0.028); ruler (a) NOT READ; ruler (b) sqrt(mirror) 0.909, d -0.002 (2 SE 0.020) AGREES
+A1_t3_L: raw M READS (0.123), W READS (0.119); W device 0.586 exact 0.368 (excess +0.218, 2 SE 0.059); ruler (a) W 0.286, d -0.083 (2 SE 0.028) DIFFERS; ruler (b) sqrt(mirror) 0.869, d +0.037 (2 SE 0.022) DIFFERS
+A1_t4_L: raw M READS (0.289), W READS (0.286); W device 1.190 exact 0.723 (excess +0.467, 2 SE 0.082); ruler (a) W 0.430, d -0.293 (2 SE 0.134) DIFFERS; ruler (b) sqrt(mirror) 0.737, d -0.102 (2 SE 0.111) AGREES
+A2_t1_L: raw M READS (0.006), W READS (0.006); W device 0.255 exact 0.250 (excess +0.005, 2 SE 0.026); ruler (a) NOT READ; ruler (b) sqrt(mirror) 0.919, d -0.004 (2 SE 0.016) AGREES
+A2_t3_L: raw M READS (0.243), W READS (0.261); W device 0.526 exact 0.279 (excess +0.247, 2 SE 0.081); ruler (a) W 0.212, d -0.067 (2 SE 0.037) DIFFERS; ruler (b) sqrt(mirror) 0.861, d +0.043 (2 SE 0.039) DIFFERS
+A2_t4_L: raw M READS (0.475), W READS (0.478); W device 0.974 exact 0.524 (excess +0.450, 2 SE 0.080); ruler (a) W 0.123, d -0.401 (2 SE 0.174) DIFFERS; ruler (b) sqrt(mirror) 0.738, d -0.195 (2 SE 0.091) DIFFERS
+uniform A0_t3_L: r by position [0.85, 0.855, 0.83, 0.883, 0.886] (pooled 0.874); chi2 25.08 on 4 dof, p 0.000 -> NOT UNIFORM
+uniform A0_t4_L: r by position [0.817, 0.821, 0.865, 0.787, 0.828, 0.668, 0.854] (pooled 0.800); chi2 278.50 on 6 dof, p 0.000 -> NOT UNIFORM
+uniform A1_t3_L: r by position [0.819, 0.827, 0.877, 0.831, 0.848] (pooled 0.840); chi2 13.76 on 4 dof, p 0.008 -> NOT UNIFORM
+uniform A1_t4_L: r by position [0.752, 0.792, 0.843, 0.74, 0.8, 0.659, 0.794] (pooled 0.761); chi2 178.81 on 6 dof, p 0.000 -> NOT UNIFORM
+uniform A2_t3_L: r by position [0.83, 0.825, 0.844, 0.825, 0.842] (pooled 0.833); chi2 4.80 on 4 dof, p 0.309 -> UNIFORM
+uniform A2_t4_L: r by position [0.803, 0.821, 0.824, 0.775, 0.815, 0.764, 0.796] (pooled 0.796); chi2 40.21 on 6 dof, p 0.000 -> NOT UNIFORM
+reading A0_t3_L: table1: neither one factor nor the total's: ruler (a) not read; table2: the mirror's square root reads it; the circuit's total does not
+reading A0_t4_L: table1: neither one factor nor the total's: ruler (a) not read; table2: the mirror's square root reads it; the circuit's total does not
+reading A1_t3_L: table1: neither one factor nor the total's: ruler (a) not read; table2: neither ruler reads it
+reading A1_t4_L: table1: neither one factor nor the total's: ruler (a) not read; table2: the mirror's square root reads it; the circuit's total does not
+reading A2_t3_L: table1: one factor on the window, but the circuit's total carries another (the outside of the window shrinks differently): ruler (a) not read for the transfer; table2: neither ruler reads it
+reading A2_t4_L: table1: neither one factor nor the total's: ruler (a) not read; table2: neither ruler reads it
+order (A0 > A1 > A2): W_device_t3_L no, W_a_t3_L yes, W_b_t3_L yes, W_device_t4_L yes, W_a_t4_L yes, W_b_t4_L yes
