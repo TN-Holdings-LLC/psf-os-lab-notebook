@@ -48,6 +48,10 @@ Beside, never judged, never used to correct:
   (−0.001 to −0.009). W(3) / W(1): device 2.35 to 2.97 against exact 1.85 to 2.63. Guess (not measured), as the 11-12
   declaration warned: noise mixes spins and looks like extra transport. The ratio rule reads the excess as small against
   the exact mean square; READS does not say there is no bias.
+  Read again at the desk after the night (workplace, `notes/ohm_window_beside_2026-11-24`, re-run at home: the same
+  output): the excess is, in this record, almost all a uniform shrink of the odd part of <Z> (a factor 0.86 to 0.89
+  per cell at t = 3, the same in L and F within SE), not an extra transport; the even part's one-sided shift is at most
+  0.009 on the window at t = 3. Beside; nothing here is corrected.
 - S = mean of M_w(s) + M_w(c): −0.005 to −0.021 at t = 1; at t = 3 +0.028 / +0.005 (A0), −0.040 / −0.026 (A1), −0.131 /
   −0.168 (A2), L / F (A2's exact S is not 0).
 - Floor (A1 s00): 0.963 / 0.983 (t = 1, L / F), 0.978 / 0.983 (t = 3). Mirror: 0.868 / 0.899 (t = 1), 0.720 / 0.723

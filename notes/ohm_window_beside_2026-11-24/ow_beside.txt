@@ -1,0 +1,33 @@
+window exact L vs F, worst 7.3e-15; shots 1000
+1. per-qubit twins (F - L on the window's qubits)
+  A0_t1: 14 points; dZ mean +0.0043 (shot SE 0.0116); chi2/dof against shot noise 0.60; squared error F - L +0.00127 (SE 0.00057)
+  A0_t3: 70 points; dZ mean +0.0046 (shot SE 0.0047); chi2/dof against shot noise 1.00; squared error F - L +0.00004 (SE 0.00058)
+  A1_t1: 14 points; dZ mean +0.0099 (shot SE 0.0116); chi2/dof against shot noise 1.17; squared error F - L +0.00074 (SE 0.00098)
+  A1_t3: 70 points; dZ mean -0.0027 (shot SE 0.0049); chi2/dof against shot noise 0.96; squared error F - L +0.00083 (SE 0.00056)
+  A2_t1: 14 points; dZ mean -0.0084 (shot SE 0.0116); chi2/dof against shot noise 0.44; squared error F - L -0.00003 (SE 0.00054)
+  A2_t3: 70 points; dZ mean +0.0076 (shot SE 0.0048); chi2/dof against shot noise 0.97; squared error F - L +0.00000 (SE 0.00061)
+   (scale: mean exact Z^2 on the window, per cell: {'A0_t1': 0.0714, 'A0_t3': 0.272, 'A1_t1': 0.0714, 'A1_t3': 0.214, 'A2_t1': 0.0714, 'A2_t3': 0.252} )
+2. odd part (W) and even part (S) of the window's <Z>, per cell (bootstrap SE over 7 pairs)
+  A0_t1_L: r_odd 0.933 (0.029); odd error left after r 0.45; W excess -0.0021 (0.0042), of it from the shrink -0.0048 (0.0032); even shift +0.0054 (0.0035); S excess -0.0054 (0.0035)
+  A0_t1_F: r_odd 0.901 (0.016); odd error left after r 0.49; W excess -0.0014 (0.0064), of it from the shrink -0.0071 (0.0039); even shift +0.0097 (0.0085); S excess -0.0097 (0.0085)
+  A0_t3_L: r_odd 0.891 (0.008); odd error left after r 0.16; W excess +0.0934 (0.0158), of it from the shrink +0.0817 (0.0212); even shift -0.0055 (0.0017); S excess +0.0276 (0.0087)
+  A0_t3_F: r_odd 0.891 (0.005); odd error left after r 0.13; W excess +0.0833 (0.0160), of it from the shrink +0.0817 (0.0190); even shift -0.0009 (0.0039); S excess +0.0046 (0.0197)
+  A1_t1_L: r_odd 0.921 (0.064); odd error left after r 0.57; W excess -0.0039 (0.0056), of it from the shrink -0.0056 (0.0053); even shift +0.0114 (0.0068); S excess -0.0114 (0.0068)
+  A1_t1_F: r_odd 0.881 (0.017); odd error left after r 0.36; W excess -0.0035 (0.0068), of it from the shrink -0.0085 (0.0048); even shift +0.0213 (0.0053); S excess -0.0213 (0.0053)
+  A1_t3_L: r_odd 0.874 (0.005); odd error left after r 0.12; W excess +0.1149 (0.0229), of it from the shrink +0.1066 (0.0204); even shift +0.0079 (0.0021); S excess -0.0397 (0.0107)
+  A1_t3_F: r_odd 0.863 (0.008); odd error left after r 0.13; W excess +0.1118 (0.0244), of it from the shrink +0.1156 (0.0226); even shift +0.0053 (0.0033); S excess -0.0264 (0.0165)
+  A2_t1_L: r_odd 0.867 (0.024); odd error left after r 0.10; W excess -0.0087 (0.0057), of it from the shrink -0.0095 (0.0053); even shift +0.0103 (0.0065); S excess -0.0103 (0.0065)
+  A2_t1_F: r_odd 0.879 (0.001); odd error left after r 0.24; W excess -0.0038 (0.0061), of it from the shrink -0.0086 (0.0045); even shift +0.0019 (0.0072); S excess -0.0019 (0.0072)
+  A2_t3_L: r_odd 0.870 (0.008); odd error left after r 0.10; W excess +0.1352 (0.0191), of it from the shrink +0.1267 (0.0184); even shift +0.0018 (0.0041); S excess -0.0089 (0.0204)
+  A2_t3_F: r_odd 0.875 (0.008); odd error left after r 0.16; W excess +0.1345 (0.0167), of it from the shrink +0.1220 (0.0193); even shift +0.0093 (0.0040); S excess -0.0467 (0.0199)
+3. rulers inside the job
+  mirror A1_t1_L: mean Z 0.869, its square root 0.932; r_odd 0.921
+  mirror A1_t1_F: mean Z 0.899, its square root 0.948; r_odd 0.881
+  mirror A1_t3_L: mean Z 0.720, its square root 0.849; r_odd 0.874
+  mirror A1_t3_F: mean Z 0.723, its square root 0.850; r_odd 0.863
+  total Z A0_t1_F: initial |total| [2, 4, 8]; odd ratio per pair [0.8, 0.834, 1.062, 0.939, 0.866, 1.054, 0.786], mean 0.906 (SE 0.044); r_odd on the window 0.901
+  total Z A0_t3_F: initial |total| [2, 4, 8]; odd ratio per pair [0.693, 0.958, 1.194, 0.859, 0.795, 1.08, 0.591], mean 0.881 (SE 0.080); r_odd on the window 0.891
+  total Z A1_t1_F: initial |total| [2, 4, 8]; odd ratio per pair [0.874, 0.914, 1.045, 0.928, 0.863, 0.982, 0.772], mean 0.911 (SE 0.033); r_odd on the window 0.881
+  total Z A1_t3_F: initial |total| [2, 4, 8]; odd ratio per pair [0.656, 0.765, 1.119, 0.843, 0.798, 0.99, 0.629], mean 0.829 (SE 0.066); r_odd on the window 0.863
+  total Z A2_t1_F: initial |total| [2, 4, 8]; odd ratio per pair [0.914, 0.865, 1.107, 0.916, 0.851, 0.975, 0.761], mean 0.913 (SE 0.041); r_odd on the window 0.879
+  total Z A2_t3_F: initial |total| [2, 4, 8]; odd ratio per pair [0.722, 0.867, 1.134, 0.87, 0.821, 0.905, 0.694], mean 0.859 (SE 0.055); r_odd on the window 0.875
