@@ -1,4 +1,4 @@
-% Paper 11 (TN Holdings), DRAFT 4 (the workplace reading of draft 3 applied, 2026-11-24), home, 2026-11-22 (owner 23:29 JST "始めて"). Built from notes/paper11/OUTLINE.md
+% Paper 11 (TN Holdings), FINAL (psf-os 0.3.3 released, doi:10.5281/zenodo.24496267, 2026-11-24), home, 2026-11-22 (owner 23:29 JST "始めて"). Built from notes/paper11/OUTLINE.md
 % and the committed records named beside each number; every number is quoted from those records (README and score
 % files) and is to be checked one by one against them before release (tools/check_readme_numbers.py and a home VS
 % reading). Figures: notes/paper11/figures.py. psf-os 0.3.3 (which includes 0.3.2) is to be released with this paper.
@@ -20,7 +20,7 @@
 
 \title{Where a Qubit Waits:\\ Rules for Real-Time Control from Declared Device Tests on IBM Heron}
 \author{TN Holdings\\ \small contact: \texttt{love.os.architect@proton.me}}
-\date{Draft 4, 24 November 2026}
+\date{24 November 2026}
 
 \begin{document}
 \maketitle
@@ -233,7 +233,7 @@ doi:10.5281/zenodo.24438701) also parks a waiting qubit whose noiseless probabil
 fence on that qubit and its wait only. Both refuse a build whose noiseless output or compiled CZ count changes, keep
 recorded builds as they were built, and refuse a build declared on an earlier version unless the parking is stated. The loop decides inside one job (opt-in up to 0.3.2), and a recorded night can be replayed from its raw counts: with a
 ledger line of the same calibration it starts from the ledger's prescriptions, and it stops at the first circuit that
-no recorded job holds. psf-os 0.3.3, released with this paper \pending{DOI}, includes 0.3.2 (tagged, not released on its own), which records the
+no recorded job holds. psf-os 0.3.3, released with this paper (doi:10.5281/zenodo.24496267), includes 0.3.2 (tagged, not released on its own), which records the
 device's time step and prices delays: the branch-cost night's charge was 112 s against a model of 59.6 s, and the model
 with the delays' term gives 114.4 s; a delay over 100 \textmu s per circuit is refused unless stated. 0.3.3 follows every
 compiled circuit noiselessly through its waits, branch by branch, and refuses a build whose parked qubit did not stay
@@ -325,7 +325,7 @@ bits; removing its phase feedback changed the share by $+0.0045$ (2 SE 0.0055) o
 
 \section*{Data and code}
 Records, declarations and raw counts: \url{https://github.com/TN-Holdings-LLC/psf-os-lab-notebook}; the operating layer:
-\url{https://github.com/TN-Holdings-LLC/psf-os} (releases 0.3.0, doi:10.5281/zenodo.24416958; 0.3.1, doi:10.5281/zenodo.24438701; 0.3.3, which includes 0.3.2, \pending{DOI}).
+\url{https://github.com/TN-Holdings-LLC/psf-os} (releases 0.3.0, doi:10.5281/zenodo.24416958; 0.3.1, doi:10.5281/zenodo.24438701; 0.3.3, which includes 0.3.2, doi:10.5281/zenodo.24496267).
 
 \section*{References}
 \begin{itemize}
