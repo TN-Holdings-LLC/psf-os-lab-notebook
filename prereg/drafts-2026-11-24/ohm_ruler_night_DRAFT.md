@@ -163,7 +163,8 @@ reads ruler (b) and the raw words.
 - OR-1: the raw W READS at t = 3 in every arm. 11-23: every cell READS, ratios 0.010 to 0.049.
 - OR-2: at t = 3 the raw W is above the exact value in every arm. 11-23: +0.083 to +0.135, each beyond 2 SE.
 - OR-3: ruler (a) AGREES at t = 3 in every arm. Ground: 11-23's uniform shrink (beside). The 11-12 strings did not allow
-  a well-conditioned ruler (a), so this is the weakest ground.
+  a well-conditioned ruler (a), so this is the weakest ground. The VS's gate-noise dry runs (above) speak against it:
+  with any p2 >= 0.005, ruler (a) DIFFERS at t = 3 in 29 or 30 of 30 cells.
 - OR-4: the pooled r of the window at t = 3 lies in 0.86 to 0.89. 11-23 beside: r 0.863 to 0.891; another day and other
   strings.
 - No prediction is proposed for t = 4 or for ruler (b): no record reads them. Ruler (b)'s ground is one string at
@@ -187,8 +188,32 @@ How often the words fire over seeds (`notes/ohm_ruler_2026-11-24/seeds.txt`, pla
 | bit flips q 0.065 | 9 of 96 (9 %) | 104 of 144 (72 %) | 5 of 96 (5 %) | 0 of 144 |
 
 Without noise every DIFFERS is false; the rate is near the 9 % that 2 SE from 7 pairs gives (t, 6 degrees of
-freedom). NOT UNIFORM fires near its 5 % level. Gate noise (depolarizing per CZ) and its rates, and the same count
-with 9 pairs: asked of the workplace VS (その1).
+freedom). NOT UNIFORM fires near its 5 % level.
+
+The workplace VS (その1, 2026-11-24, on bd19d464; its report and scripts travel beside this draft, outside the
+notebook) re-computed the rulers independently (largest difference from `score` 0, plans B and B9) and ran plan B with
+gate noise: two-qubit depolarizing p2 per CZ and readout flips q, ILLUSTRATIVE, not fitted to a device; Aer MPS
+trajectories, 10 seeds, t = 1 and 3 (t = 4 with gate noise was not run: over 2 hours per seed). At t = 3, 30 cells
+per row:
+
+| p2 | q | ruler (a) AGREES | ruler (b) AGREES | UNIFORM | raw W excess (mean) | r - sqrt(mirror) (mean) | r - rho_a (mean) |
+|---|---|---|---|---|---|---|---|
+| 0 | 0 | 26 (87 %) | 26 (87 %) | 28 (93 %) | -0.000 | +0.000 | +0.000 |
+| 0 | 0.02 | 24 (80 %) | 2 (7 %) | 28 (93 %) | +0.056 | -0.020 | +0.000 |
+| 0.005 | 0 | 1 (3 %) | 26 (87 %) | 26 (87 %) | +0.111 | -0.000 | -0.025 |
+| 0.005 | 0.02 | 1 (3 %) | 7 (23 %) | 27 (90 %) | +0.163 | -0.019 | -0.023 |
+| 0.01 | 0 | 0 (0 %) | 26 (87 %) | 25 (83 %) | +0.212 | -0.004 | -0.048 |
+| 0.01 | 0.02 | 0 (0 %) | 10 (33 %) | 25 (83 %) | +0.261 | -0.021 | -0.045 |
+| 0.02 | 0 | 0 (0 %) | 18 (60 %) | 24 (80 %) | +0.392 | -0.018 | -0.084 |
+| 0.02 | 0.02 | 0 (0 %) | 7 (23 %) | 23 (77 %) | +0.433 | -0.031 | -0.081 |
+
+- Under gate noise the window shrinks more than the circuit's total: r - rho_a is negative and grows with p2, and
+  ruler (a) DIFFERS in nearly every cell. Guess (not measured): the window sits in the middle of the light cone and
+  passes more CZ than the cone's edges, and depolarizing does not keep the number of 1s.
+- Under gate noise alone, sqrt(mirror) follows r up to p2 0.01; a readout share moves it by about -0.02.
+- The two rulers part in opposite ways: (a) holds under a readout-like shrink, (b) under a layer-accumulated one.
+- The false rates with 9 pairs (B9, 16 seeds): ruler (a) 11 of 96, ruler (b) 16 of 144, NOT UNIFORM 5 of 96, against
+  12, 15 and 9 with 7 pairs on the VS's seeds; within the seeds' scatter (about 3 points).
 
 ## Device procedure (home)
 
@@ -212,6 +237,9 @@ python gpu/ohm_ruler_night.py score OUT ANS_BY_LABEL.json
   16 seeds (one per seed or none); in the first dry run, on another seed, 2 of 6.
 - Ruler (a) assumes the conservation holds on the device's measured qubits, as it does exactly for the circuits.
   Leakage or a one-sided shift (decay) moves the total too. The even part is not divided by the ruler.
-- Ruler (b) assumes the shrink doubles with the layers. A readout share does not double (the dry runs).
+  It also assumes the window shrinks as the circuit's total does; under gate noise it does not (the VS's dry runs:
+  the window shrinks more, r - rho_a -0.025 to -0.084 for p2 0.005 to 0.02).
+- Ruler (b) assumes the shrink doubles with the layers. A readout share does not double (the dry runs; about -0.02 in
+  r - sqrt(mirror) for q 0.02).
 - One device night. The ideas came after the 11-23 record was seen. The strings are new, by a bits-only rule.
 - Not error correction, not post-selection: every shot counts, and the rulers are declared before the data (rule 3).
