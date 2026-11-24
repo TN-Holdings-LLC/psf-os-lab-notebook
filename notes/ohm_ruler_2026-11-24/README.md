@@ -43,4 +43,7 @@ all |0>.
   - ruler (b) does not: sqrt(mirror) is 0.93, because the mirror took the flips once, not twice.
   - This is the case where the two rulers part: a readout-like shrink. Gate noise, which accrues with the layers, is
     asked of the workplace VS (その1).
-- False words over seeds: `seeds.txt`.
+- Words over seeds (`seeds.txt`, 16 seeds each, `seeds.py` on the scratch scores):
+  - without noise, ruler (a) DIFFERS 12 of 96, ruler (b) 16 of 144, NOT UNIFORM 4 of 96: all false, near the 9 % of
+    2 SE with 7 pairs (t, 6 degrees of freedom) and the 5 % level of the chi2;
+  - with flips q = 0.065, ruler (a) 9 of 96, ruler (b) 104 of 144, NOT UNIFORM 5 of 96; the raw W READS in every cell.

@@ -179,8 +179,16 @@ noise-free, then, optionally, flips each measured bit with probability q (ILLUST
 | none | READS everywhere, excess within 2 SE | AGREES 6 of 6 | AGREES 6 of 6 | UNIFORM 4 of 6 (2 NOT UNIFORM at p 0.011, 0.049) |
 | bit flips q 0.065 (r = 0.87, once) | READS (ratios 0.058 to 0.221), excess +0.17 to +0.30 | AGREES 5 of 6 (A1 t = 3 DIFFERS, d -0.014, 2 SE 0.010) | DIFFERS 6 of 6 (sqrt(mirror) 0.93) | UNIFORM 6 of 6 |
 
-How often the words fire falsely over seeds: `seeds.txt` (filled in when the runs end). Gate noise (depolarizing per
-CZ) and its rates: asked of the workplace VS (その1).
+How often the words fire over seeds (`notes/ohm_ruler_2026-11-24/seeds.txt`, plan B, 16 seeds each):
+
+| noise | ruler (a) DIFFERS | ruler (b) DIFFERS | NOT UNIFORM | raw W DOES NOT READ |
+|---|---|---|---|---|
+| none | 12 of 96 (12 %) | 16 of 144 (11 %) | 4 of 96 (4 %) | 0 of 144 |
+| bit flips q 0.065 | 9 of 96 (9 %) | 104 of 144 (72 %) | 5 of 96 (5 %) | 0 of 144 |
+
+Without noise every DIFFERS is false; the rate is near the 9 % that 2 SE from 7 pairs gives (t, 6 degrees of
+freedom). NOT UNIFORM fires near its 5 % level. Gate noise (depolarizing per CZ) and its rates, and the same count
+with 9 pairs: asked of the workplace VS (その1).
 
 ## Device procedure (home)
 
@@ -200,7 +208,8 @@ python gpu/ohm_ruler_night.py score OUT ANS_BY_LABEL.json
   (t with 6 degrees of freedom), and the dry runs show such single DIFFERS. More pairs (plan A, 9) narrow this.
   [OWNER: 2 SE as the project's rule, or the t quantile]
 - The one-factor test assumes shot noise only around one factor. Other scatter between pairs (e.g. place-dependent
-  noise) reads as NOT UNIFORM. A false NOT UNIFORM came 2 times in 6 cells in one noise-free dry run.
+  noise) reads as NOT UNIFORM. Without noise, a false NOT UNIFORM came 4 times in 96 cells over 16 seeds (at most one
+  per seed); in the first dry run, on another seed, 2 of 6.
 - Ruler (a) assumes the conservation holds on the device's measured qubits, as it does exactly for the circuits.
   Leakage or a one-sided shift (decay) moves the total too. The even part is not divided by the ruler.
 - Ruler (b) assumes the shrink doubles with the layers. A readout share does not double (the dry runs).

@@ -1,0 +1,4 @@
+| bit flips q | seeds | ruler (a) DIFFERS | ruler (b) DIFFERS | NOT UNIFORM | raw W DOES NOT READ |
+|---|---|---|---|---|---|
+| 0 | 16 | 12 of 96 (12 %) | 16 of 144 (11 %) | 4 of 96 (4 %) | 0 of 144 (0 %) |
+| 0.065 | 16 | 9 of 96 (9 %) | 104 of 144 (72 %) | 5 of 96 (5 %) | 0 of 144 (0 %) |
