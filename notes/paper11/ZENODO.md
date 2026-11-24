@@ -1,5 +1,9 @@
 # Paper 11, version 1: Zenodo input (home, 2026-11-24)
 
+Published by the owner on 2026-11-24 (record page read 19:51 JST): **doi:10.5281/zenodo.24496368** (version 1; all
+versions 10.5281/zenodo.24496367), with the PDF and fig_data.csv. On the record page some keywords were joined in one
+entry by the semicolons (for example "IBM Heron r2; dynamic circuits"); one keyword per entry is to be set by Edit.
+
 - Upload (two files):
   - `TN-Holdings_Paper11_v1_Where-a-Qubit-Waits.pdf`：the same bytes as `notes/paper11/paper11_v1.pdf`, built from
     `notes/paper11/paper11.tex` in the commit that adds this file.

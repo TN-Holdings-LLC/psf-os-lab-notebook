@@ -16,7 +16,8 @@ Papers: 7 [doi:10.5281/zenodo.24046673](https://doi.org/10.5281/zenodo.24046673)
 [doi:10.5281/zenodo.24416958](https://doi.org/10.5281/zenodo.24416958); psf-os 0.3.1 (2026-11-22; the likely value parked
 too) [doi:10.5281/zenodo.24438701](https://doi.org/10.5281/zenodo.24438701); psf-os 0.3.3 (2026-11-24, with 0.3.2; the circuit
 as sent checked at every build, the device's lengths of time, delays priced)
-[doi:10.5281/zenodo.24496267](https://doi.org/10.5281/zenodo.24496267); paper 11 final, to Zenodo (`notes/paper11/`).
+[doi:10.5281/zenodo.24496267](https://doi.org/10.5281/zenodo.24496267); paper 11, Where a Qubit Waits (2026-11-24)
+[doi:10.5281/zenodo.24496368](https://doi.org/10.5281/zenodo.24496368); records in `notes/paper11/` (`ZENODO.md`).
 
 ## How the results are made (the stance)
 
