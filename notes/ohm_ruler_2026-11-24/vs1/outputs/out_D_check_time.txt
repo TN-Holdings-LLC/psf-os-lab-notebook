@@ -1,0 +1,4 @@
+D_check: 253 PASS lines, 0 FAIL; ALL PASS (94.8 s)
+D_check_idle1: 253 PASS lines, 0 FAIL; ALL PASS (133.1 s)
+D_check_idle2: 253 PASS lines, 0 FAIL; ALL PASS (138.8 s)
+D_check_omp1: 253 PASS lines, 0 FAIL; ALL PASS (113.3 s)

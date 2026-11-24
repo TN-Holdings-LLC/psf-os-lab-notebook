@@ -1,0 +1,2 @@
+B: largest difference from the tool's scores.json 0.0e+00; answers' total odd part against T0 worst 2.7e-15; words {('a', 'AGREES'): 5, ('a', 'DIFFERS'): 1, ('b', 'AGREES'): 3, ('b', 'DIFFERS'): 6, ('u', 'NOT UNIFORM'): 1, ('u', 'UNIFORM'): 5}
+B9: largest difference from the tool's scores.json 0.0e+00; answers' total odd part against T0 worst 2.7e-15; words {('a', 'AGREES'): 6, ('b', 'AGREES'): 3, ('b', 'DIFFERS'): 6, ('u', 'UNIFORM'): 6}

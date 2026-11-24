@@ -1,0 +1,6 @@
+B: 7 pairs, t [1, 3, 4], forms ['L']: generator written here gives build.json's strings True; complements True; every kept string meets the thresholds True; draws skipped before the last kept 19 (each misses a threshold by construction)
+B9: 9 pairs, t [1, 3, 4], forms ['L']: generator written here gives build.json's strings True; complements True; every kept string meets the thresholds True; draws skipped before the last kept 22 (each misses a threshold by construction)
+D: 7 pairs, t [1, 3, 4], forms ['L', 'F']: generator written here gives build.json's strings True; complements True; every kept string meets the thresholds True; draws skipped before the last kept 26 (each misses a threshold by construction)
+strings() in the tool: names used ['DRAWS_MAX', 'H', 'M_BIAS', 'N', 'SEED', 'SystemExit', 'THRESH', 'abs', 'all', 'append', 'b', 'default_rng', 'enumerate', 'forms', 'i', 'int', 'items', 'k', 'kept', 'len', 'np', 'out', 'pairs', 'qs', 'r', 'random', 'range', 'reg', 'regions', 'rng', 't0', 'tried', 'ts', 'x']; opens a file False
+table 1: 6 combinations, rows 6, every combination on one row True, no extra row True
+table 2: 4 combinations, rows 4, every combination on one row True, no extra row True
