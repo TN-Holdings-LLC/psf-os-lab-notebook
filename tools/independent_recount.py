@@ -9,12 +9,16 @@ The common part (any night with job folders):
                       raw_counts; per pub: its name (cell name, with "#point" for multi-point cells), its circuit,
                       its counts, its shots, and the measured physical qubit -> clbit map read from the circuit
   z_from_counts       per-qubit <Z> from the counts for given clbits
-A night's scoring formula is a small function registered in SCORERS under the night's folder name; the first is
-ohm-window-night-2026-11-23 (the same formulas as ow_independent_check.py). Past nights' reproduce.py is not changed.
+A night's scoring formula is a small function registered in SCORERS under the night's folder name:
+ohm-window-night-2026-11-23 (the same formulas as ow_independent_check.py), qpe-parked-night-2026-11-21 and
+qpe-n78-night-2026-11-22 (the hit shares, 2 SE, the ceiling words and margins, parking's difference with 2 SE; the
+ceilings are the declared values; each value is also looked up in the README's results row). Past nights'
+reproduce.py is not changed.
 
   python tools/independent_recount.py results/NIGHT [--json OUT.json] [--compare REF.json] [--simulate]
   python tools/independent_recount.py --selftest
-Exit code: 0 when every check of the common part holds (and, with --compare, every compared value is equal); 1 if not.
+Exit code: 0 when every check of the common part holds (and, with --compare, every compared value is equal; for the
+phase estimation nights, every value is found in the README's results rows); 1 if not.
 """
 import argparse
 import gzip
@@ -267,14 +271,162 @@ def _simulate_against_answers(pubs, names, chain, cone, ex_z):
     return worst
 
 
-SCORERS = {"ohm-window-night-2026-11-23": (os.path.join("ow", "job"), score_ohm_window)}
+# ------------------------------------------------------------------- phase estimation nights (11-21 parked, 11-22 n78)
+# The ceilings C(n) as written in a declaration (not recomputed). C(5) is written in no declaration: the value is the
+# 11-21 record's README (set apart in the output as "ceiling_source").
+CEILINGS = {4: (0.4706, "prereg/qpe_repro_night_2026-11-19.md"),
+            5: (0.3792, "results/qpe-parked-night-2026-11-21/README.md (no declaration states C(5))"),
+            6: (0.3065, "prereg/qpe_n78_night_2026-11-22.md"),
+            7: (0.2480, "prereg/qpe_n78_night_2026-11-22.md"),
+            8: (0.2007, "prereg/qpe_n78_night_2026-11-22.md")}
+
+
+def _bit(key, k):
+    return int(key.replace(" ", "")[-1 - k])
+
+
+def _ipe_items(night, jobs, simulate=False):
+    """{tag: dict(ok, N, job)} for every user item of the jobs: the success clbits and their right values are the
+    item's runs/ff_TAG.json record ("success"); a shot is a hit when every success clbit reads its right value. With
+    simulate, the right values are checked against noiseless Aer of the circuit as sent (each clbit 0 or 1 always)."""
+    items, checked = {}, 0
+    sim = None
+    if simulate:
+        from qiskit_aer import AerSimulator
+        sim = AerSimulator()
+    for jd, job in jobs:
+        runs = os.path.join(os.path.dirname(jd), "runs")
+        for p in job["pubs"]:
+            rec_f = os.path.join(runs, p["name"] + ".json")
+            if not p["name"].startswith("ff_") or not os.path.exists(rec_f):
+                continue
+            right = {int(k): int(v) for k, v in json.load(open(rec_f))["success"].items()}
+            if sim is not None:
+                ideal = sim.run(p["circuit"], shots=2000, seed_simulator=11).result().get_counts()
+                for k, v in right.items():
+                    p1 = sum(c for key, c in ideal.items() if _bit(key, k) == 1) / 2000
+                    if p1 != float(v):
+                        raise SystemExit(f"{p['name']}: clbit {k} noiseless {p1}, record says {v}")
+                checked += 1
+            ok = sum(c for key, c in p["counts"].items() if all(_bit(key, k) == v for k, v in right.items()))
+            items[p["name"][3:]] = dict(ok=ok, N=p["shots"], job=os.path.relpath(jd, night))
+    return items, checked
+
+
+def _pool(items, tags):
+    ok = sum(items[t]["ok"] for t in tags)
+    N = sum(items[t]["N"] for t in tags)
+    p = ok / N
+    return p, float(np.sqrt(p * (1 - p) / N)), N
+
+
+def _keep_word(d, se):
+    return "KEEPS MORE" if d >= 2 * se and d > 0 else "KEEPS LESS" if d <= -2 * se and d < 0 else "SAME WITHIN ERROR"
+
+
+def _ceiling_word(p, se, c):
+    return "BEYOND THE CEILING" if p >= c + 2 * se else "NOT BEYOND"
+
+
+def _shape(res, ns):
+    """Acceleration of the log share over three n and its SE sqrt(t1^2 + 4 t2^2 + t3^2), t = SE / p."""
+    lg = {n: float(np.log(res[n][0])) for n in ns}
+    t = {n: res[n][1] / res[n][0] for n in ns}
+    a, b, c = ns
+    acc = (lg[b] - lg[c]) - (lg[a] - lg[b])
+    se = float(np.sqrt(t[a] ** 2 + 4 * t[b] ** 2 + t[c] ** 2))
+    word = "ACCELERATES" if acc >= 2 * se and acc > 0 else "SLOWS" if acc <= -2 * se and acc < 0 else "FLAT"
+    return dict(drops=[lg[a] - lg[b], lg[b] - lg[c]], acc=acc, two_se=2 * se, word=word)
+
+
+def _tagnum(t):
+    return int(t.split("_")[1])
+
+
+def score_qpe_parked(night, jobs, simulate=False):
+    """qpe-parked-night-2026-11-21: per n = 4, 5, 6 the parked share over every phase (ipe{n}_j) with 2 SE, its
+    ceiling word and the distance from C(n); on the phases holding an unparked twin (ipu{n}_j, same job) the parked
+    and unparked shares, their difference d with 2 SE and the word; the parked shape over n (beside, as recorded)."""
+    items, checked = _ipe_items(night, jobs, simulate)
+    per_n, res = {}, {}
+    for n in (4, 5, 6):
+        pk = [t for t in items if t.startswith(f"ipe{n}_")]
+        p, se, N = _pool(items, pk)
+        res[n] = (p, se)
+        c, src = CEILINGS[n]
+        pairs = sorted(_tagnum(t) for t in items if t.startswith(f"ipu{n}_"))
+        split = [j for j in pairs if items[f"ipu{n}_{j}"]["job"] != items[f"ipe{n}_{j}"]["job"]]
+        a, sa, _ = _pool(items, [f"ipe{n}_{j}" for j in pairs])
+        b, sb, _ = _pool(items, [f"ipu{n}_{j}" for j in pairs])
+        d, sd = a - b, float(np.sqrt(sa ** 2 + sb ** 2))
+        per_n[str(n)] = dict(parked=p, parked_2se=2 * se, N=N, verdict=_ceiling_word(p, se, c), phases_paired=len(pairs),
+                             parked_on_pairs=a, unparked_on_pairs=b, d=d, d_2se=2 * sd, word=_keep_word(d, sd),
+                             ceiling=c, ceiling_source=src, beyond_ceiling_by=p - c, phases=len(pk),
+                             paired_phases=pairs, pairs_split_across_jobs=split)
+    return dict(per_n=per_n, shape=_shape(res, (4, 5, 6)), items=len(items), right_values_simulated=checked)
+
+
+def score_qpe_n78(night, jobs, simulate=False):
+    """qpe-n78-night-2026-11-22: per n = 6, 7, 8 the parked share over its 16 phases (ipk{n}_j) with 2 SE, the
+    ceiling word and the margin beyond C(n); on the twin phases (ipu{n}_j) the parked and unparked shares, the gain of
+    parking d with 2 SE and the word; the shape over n (beside, as recorded)."""
+    items, checked = _ipe_items(night, jobs, simulate)
+    per_n, res = {}, {}
+    for n in (6, 7, 8):
+        pk = [t for t in items if t.startswith(f"ipk{n}_")]
+        p, se, N = _pool(items, pk)
+        res[n] = (p, se)
+        c, src = CEILINGS[n]
+        tw = sorted(_tagnum(t) for t in items if t.startswith(f"ipu{n}_"))
+        a, sa, _ = _pool(items, [f"ipk{n}_{j}" for j in tw])
+        b, sb, _ = _pool(items, [f"ipu{n}_{j}" for j in tw])
+        d, sd = a - b, float(np.sqrt(sa ** 2 + sb ** 2))
+        per_n[str(n)] = dict(p=p, two_se=2 * se, N=N, ceiling=c, ceiling_source=src, verdict=_ceiling_word(p, se, c),
+                             margin=p - c, twin_parked=a, twin_unparked=b, d=d, d_two_se=2 * sd,
+                             park_word=_keep_word(d, sd), phases=len(pk), twin_phases=tw)
+    return dict(per_n=per_n, shape=_shape(res, (6, 7, 8)), items=len(items), right_values_simulated=checked)
+
+
+def readme_rows(night, score):
+    """[(n, [strings], [missing])]: the record README's results row for each n must hold this re-count's values
+    as the README writes them (4 decimals; the distance from the ceiling to 3; the words)."""
+    text = open(os.path.join(night, "README.md"), encoding="utf-8").read()
+    out = []
+    for n, c in score["per_n"].items():
+        row = next((ln for ln in text.splitlines() if ln.startswith(f"| {n} |")), "")
+        if "parked" in c:      # 11-21
+            want = [f"{c['parked']:.4f} ({c['parked_2se']:.4f})", f"{c['ceiling']:.4f}", c["verdict"],
+                    f"({c['beyond_ceiling_by']:+.3f})",
+                    f"{c['parked_on_pairs']:.4f} - {c['unparked_on_pairs']:.4f} = {c['d']:+.4f} ({c['d_2se']:.4f})",
+                    c["word"]]
+        else:                  # 11-22
+            want = [f"{c['p']:.4f} ({c['two_se']:.4f})", f"{c['ceiling']:.4f}", c["verdict"], f"({c['margin']:+.3f})",
+                    f"{c['d']:+.4f} ({c['d_two_se']:.4f})", c["park_word"]]
+        out.append((n, want, [w for w in want if w not in row]))
+    sh = score["shape"]
+    acc = f"{sh['acc']:+.4f} (2 SE {sh['two_se']:.4f})"
+    out.append(("shape", [acc, sh["word"]], [w for w in (acc, sh["word"]) if w not in text]))
+    return out
+
+
+# name -> (job folders under the night, the scoring function, the keys --compare reads, per-key tolerances).
+# A function given one job folder takes (night, job, simulate); given a list, (night, [(job_dir, job)], simulate).
+SCORERS = {
+    "ohm-window-night-2026-11-23": (os.path.join("ow", "job"), score_ohm_window,
+                                    ("cells", "twins", "order", "beside", "chain_is_device_path"), {}),
+    "qpe-parked-night-2026-11-21": ([os.path.join("qp", "job0", "job"), os.path.join("qp", "job1", "job")],
+                                    score_qpe_parked, ("per_n", "shape"), {}),
+    # the record JSON holds the exact ceiling; the declaration writes it to 4 decimals
+    "qpe-n78-night-2026-11-22": ([os.path.join("qn", "job0", "job")], score_qpe_n78, ("per_n", "shape"),
+                                 {"ceiling": 5e-5}),
+}
 
 
 # ------------------------------------------------------------------------------------------------ comparing
-def compare(mine, ref, keys=("cells", "twins", "order", "beside", "chain_is_device_path")):
-    """[(path, mine, ref)] for every value under the given keys that differs (floats equal to the reference's
-    rounding)."""
-    diffs = []
+def compare(mine, ref, keys=("cells", "twins", "order", "beside", "chain_is_device_path"), tol=None):
+    """[(path, mine, ref)] for every value under the given keys that differs (floats within 1e-12, or within tol[k]
+    for a value whose own key is k)."""
+    diffs, tol = [], tol or {}
 
     def walk(a, b, p):
         if isinstance(b, dict):
@@ -283,7 +435,7 @@ def compare(mine, ref, keys=("cells", "twins", "order", "beside", "chain_is_devi
                     continue
                 walk(a.get(k) if isinstance(a, dict) else None, b[k], f"{p}/{k}")
         elif isinstance(b, float) and isinstance(a, (int, float)):
-            if abs(a - b) > 1e-12:
+            if abs(a - b) > tol.get(p.rsplit("/", 1)[-1], 1e-12):
                 diffs.append((p, a, b))
         elif a != b:
             diffs.append((p, a, b))
@@ -340,34 +492,46 @@ def main():
         ap.error("give a night folder (results/NAME)")
     night = a.night.rstrip("/\\")
     name = os.path.basename(night)
-    if name in SCORERS:
-        jobs = [os.path.join(night, SCORERS[name][0])]
+    spec = SCORERS.get(name)
+    if spec:
+        jobs = [os.path.join(night, j) for j in ([spec[0]] if isinstance(spec[0], str) else spec[0])]
     else:
         jobs = sorted(os.path.dirname(p) for p in __import__("glob").glob(os.path.join(night, "**", "job",
                                                                                          "manifest.json"), recursive=True))
     if not jobs:
         print(f"independent_recount: no job folder under {night}", file=sys.stderr)
         return 1
-    out, ok = dict(night=name, jobs={}), True
+    out, ok, loaded = dict(night=name, jobs={}), True, []
     for jd in jobs:
         job = load_job(jd)
         cc = common_checks(job)
         ok &= cc["qpy_sha256_matches_manifest"] and cc["circuits_match_manifest"] and cc["shots_as_manifest"]
         out["jobs"][os.path.relpath(jd, night)] = cc
-        if name in SCORERS:
-            out["score"] = SCORERS[name][1](night, job, a.simulate)
+        loaded.append((jd, job))
+    if spec:
+        out["score"] = spec[1](night, loaded[0][1] if isinstance(spec[0], str) else loaded, a.simulate)
     print(json.dumps(out["jobs"], indent=1))
-    if "score" in out:
+    if "score" in out and "cells" in out["score"]:
         for k, c in out["score"]["cells"].items():
             print(k, c)
         print("twins", out["score"]["twins"])
         print("order", out["score"]["order"], "| chain", out["score"]["chain_from_records"],
               "| on the declared positions", out["score"]["measured_on_the_declared_positions"])
+    elif "score" in out:
+        for n, c in out["score"]["per_n"].items():
+            print(f"n {n}:", {k: (round(v, 6) if isinstance(v, float) else v) for k, v in c.items()})
+        print("shape (beside):", {k: (round(v, 6) if isinstance(v, float) else v) if not isinstance(v, list) else
+                                  [round(x, 6) for x in v] for k, v in out["score"]["shape"].items()})
+        rows = readme_rows(night, out["score"])
+        miss = sum(len(m) for _, _, m in rows)
+        print(f"against the README's results rows: {sum(len(w) for _, w, _ in rows)} values, {miss} not found"
+              + "".join(f"\n   n {n}: missing {m}" for n, _, m in rows if m))
+        ok &= not miss
     else:
         print(f"(no scoring formula registered for {name}; the common part only)")
     if a.compare:
         ref = json.load(open(a.compare))
-        diffs = compare(out.get("score", {}), ref)
+        diffs = compare(out.get("score", {}), ref, *(spec[2:4] if spec else ()))
         print(f"compared with {a.compare}: {len(diffs)} values differ" + "".join(f"\n   {d}" for d in diffs[:20]))
         ok &= not diffs
     if a.json:

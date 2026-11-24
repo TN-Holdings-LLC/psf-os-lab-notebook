@@ -6,14 +6,18 @@ Two kinds of line are listed, with the file, the line number and the reason:
   word     a word or phrase that notes/style_beside.md says not to use ("Words not used": at most, at least, only,
            merely, just, far longer, much smaller, negligible, a few thousandths, lies elsewhere, is caused by, is due
            to), plus "nothing" (home instruction); the list is read from style_beside.md's quoted words when the note
-           is there, and EXTRA_WORDS below are always added (one place to change)
-  no SE    a line about a value beside (it holds the word "beside", or it stands under a heading or a paragraph
-           title that holds "beside") with a decimal number and neither "2 SE" nor "SE"
+           is there, and EXTRA_WORDS below are always added (one place to change). "only", "just" and "nothing" are
+           listed only when the same sentence holds a number or a comparison (than, against, more, less, larger,
+           smaller, faster, slower, cost, gain); --all lists them everywhere (home instruction, 2026-11-24 tools2)
+  no SE    a sentence about a value beside (it holds the word "beside", or it stands under a heading or a paragraph
+           title that holds "beside") with a decimal number and neither "2 SE" nor "SE". The unit is a sentence of a
+           paragraph (tex, README) or one whole bullet (README), so a "2 SE" on the next line of the same sentence
+           counts; a table row and a heading are their own units. Fenced code and tex comments are not read.
 
 Read by default: every results/*/README.md. Further files (e.g. notes/paper11/paper11.tex) are given as arguments.
 A word inside an inline code span (`...`) is not counted.
 
-  python tools/lint_beside.py [FILE ...] [--results RESULTS_DIR] [--style STYLE.md] [--no-results] [--max N]
+  python tools/lint_beside.py [FILE ...] [--results RESULTS_DIR] [--style STYLE.md] [--no-results] [--max N] [--all]
   python tools/lint_beside.py --selftest
 """
 import argparse
@@ -53,21 +57,111 @@ def word_patterns(words):
     return [(w, re.compile(r"(?<![\w-])" + r"\s+".join(map(re.escape, w.split())) + r"(?![\w-])", re.I)) for w in words]
 
 
-def lint_text(text, pats):
-    """[(line number, reason, line)] for one file's text."""
-    out, beside_block = [], False
-    for i, line in enumerate(text.splitlines(), 1):
-        bare = CODE.sub("", line)
+GUARDED = ("only", "just", "nothing")     # home instruction 2026-11-24 (tools2): listed only beside a number or a
+COMPARE = re.compile(r"\b(than|against|more|less|larger|smaller|faster|slower|costs?|gains?)\b", re.I)  # comparison
+DIGIT = re.compile(r"\d")
+BULLET = re.compile(r"^\s*([-*+]|\d+[.)])\s")
+TEX_PARA = re.compile(r"^\s*\\paragraph\*?\{([^}]*)\}")
+ABBREV = re.compile(r"(\b(e\.g|i\.e|vs|cf|etc|Fig|Figs|Eq|Eqs|Ref|Sec|No|approx)\.|\b[A-Z]\.)$")
+BOUNDARY = re.compile(r"(?:(?<=[.!?])|(?<=[.!?][)\]}\"']))\s+(?=\S)")
+
+
+def sentences(s):
+    """[(start, end)] of the sentences of one block's text: split after . ! ? (or one closing bracket or quote after
+    them) and white space, never after an abbreviation such as e.g. or an initial; a decimal point has no space after
+    it, so 0.579 is never split."""
+    out, a = [], 0
+    for m in BOUNDARY.finditer(s):
+        if ABBREV.search(s[a:m.start()]):
+            continue
+        out.append((a, m.start()))
+        a = m.end()
+    if s[a:].strip():
+        out.append((a, len(s)))
+    return out
+
+
+def blocks(text, tex):
+    """The file cut into blocks: [(kind, first line index, text, beside context)], kind one of heading, table,
+    bullet, para. A bullet runs to its last continuation line, a paragraph to the next blank line, heading, bullet or
+    table row; fenced code (```) and tex comment lines are left out. The beside context is set by the last heading or
+    paragraph title (it holds "beside") and kept until the next one."""
+    out, cur, beside_block, fence = [], None, False, False
+    def close():
+        nonlocal cur
+        if cur:
+            out.append((cur[0], cur[1], "\n".join(cur[2]), cur[3]))
+        cur = None
+    for i, line in enumerate(text.splitlines()):
+        st = line.strip()
+        if not tex and st.startswith("```"):
+            close()
+            fence = not fence
+            continue
+        if fence or (tex and st.startswith("%")):
+            continue
+        if not st:
+            close()
+            continue
+        pm = TEX_PARA.match(line) if tex else None
+        if pm:
+            close()
+            beside_block = "beside" in pm.group(1).lower()
+            cur = ["para", i, [line], beside_block]
+            continue
         if HEADING.match(line):
+            close()
             beside_block = "beside" in line.lower()
-        elif not line.strip():
-            pass
-        for w, p in pats:
-            if p.search(bare):
-                out.append((i, f'word "{w}"', line.strip()))
-        about_beside = "beside" in bare.lower() or beside_block or re.match(r"^\s*[-*]?\s*\**beside", bare, re.I)
-        if about_beside and DEC.search(bare) and not SE.search(bare):
-            out.append((i, "no SE: a value beside without 2 SE", line.strip()))
+            out.append(("heading", i, line, beside_block))
+            continue
+        if not tex and st.startswith("|"):
+            close()
+            out.append(("table", i, line, beside_block))
+            continue
+        if not tex and BULLET.match(line):
+            close()
+            cur = ["bullet", i, [line], beside_block]
+            continue
+        if cur is None:
+            cur = ["para", i, [line], beside_block]
+        else:
+            cur[2].append(line)
+    close()
+    return out
+
+
+def lint_text(text, pats, tex=False, all_words=False):
+    """[(line number, reason, line)] for one file's text.
+
+    The SE check reads a sentence of a paragraph (tex, README), or one whole bullet, table row or heading (README):
+    a unit about a value beside (it holds "beside", or stands under a heading or paragraph title that holds it) with a
+    decimal number and neither "2 SE" nor "SE" is listed once, at the line of its first decimal. The word check reads
+    sentences; "only", "just" and "nothing" are listed only when their sentence also holds a number or a comparison
+    (than, against, more, less, larger, smaller, faster, slower, cost, gain), unless all_words."""
+    lines = text.splitlines()
+    out = []
+    for kind, i0, body, beside_block in blocks(text, tex):
+        bare = CODE.sub(lambda m: " " * len(m.group(0)), body)     # same length: offsets still map to lines
+        line_of = lambda off: i0 + bare.count("\n", 0, off)
+        sents = sentences(bare) if kind in ("para", "bullet") else [(0, len(bare))]
+        se_units = sents if kind == "para" else [(0, len(bare))]
+        for a, b in sents:
+            s = bare[a:b]
+            for w, p in pats:
+                for m in p.finditer(s):
+                    if (w.lower() in GUARDED and not all_words and not DIGIT.search(s) and not COMPARE.search(s)):
+                        continue
+                    n = line_of(a + m.start())
+                    out.append((n + 1, f'word "{w}"', lines[n].strip()))
+                    break
+        for a, b in se_units:
+            s = bare[a:b]
+            about_beside = beside_block or "beside" in s.lower()
+            d = DEC.search(s)
+            if about_beside and d and not SE.search(s):
+                n = line_of(a + d.start())
+                out.append((n + 1, "no SE: a value beside without 2 SE", lines[n].strip()))
+    out.sort(key=lambda r: r[0])
     return out
 
 
@@ -75,19 +169,25 @@ def selftest():
     pats = word_patterns(FALLBACK_WORDS + EXTRA_WORDS)
     sample = "\n".join([
         "## Results",
-        "the difference is at most +0.01 here",                       # word
-        "Beside: +0.004 (2 SE 0.006): not separated from 0.",           # fine
-        "beside, never judged: the share 0.845 on the other phases",    # no SE
+        "- the difference is at most +0.01 here",                     # 2 word
+        "- Beside: +0.004 (2 SE 0.006): not separated from 0.",         # fine
+        "- beside, never judged: the share 0.845 on the other phases",  # 4 no SE
         "## Beside",
-        "- F16 reads 0.751 tonight",                                     # no SE (under a Beside heading)
+        "- F16 reads 0.751 tonight",                                     # 6 no SE (under a Beside heading)
         "## Reading",
-        "the loss belongs to the first item; `only` in code is not a word",  # fine
-        "nothing is compared across nights",                            # word
+        "- the loss belongs to the first item; `only` in code is not a word",  # fine
+        "- nothing is compared across nights",                          # fine: no number, no comparison
+        "- the gain is only seen on two phases",                        # 10 word (a comparison)
+        "",
+        "Beside, the loss grew (0.127 then 0.185, acceleration +0.058,",  # fine: 2 SE on the next line of the sentence
+        "2 SE 0.028). It was only read once.",                          # fine: no number in that sentence
     ])
     got = [(n, "word" if r.startswith("word") else "no SE") for n, r, _ in lint_text(sample, pats)]
-    want = [(2, "word"), (4, "no SE"), (6, "no SE"), (9, "word")]
-    ok = got == want
-    print(f"lint_beside selftest: {'PASS' if ok else 'FAIL'} got {got}")
+    want = [(2, "word"), (4, "no SE"), (6, "no SE"), (10, "word")]
+    got_all = [(n, "word" if r.startswith("word") else "no SE") for n, r, _ in lint_text(sample, pats, all_words=True)]
+    want_all = sorted(want + [(9, "word"), (13, "word")])
+    ok = got == want and got_all == want_all
+    print(f"lint_beside selftest: {'PASS' if ok else 'FAIL'} got {got}, with --all {got_all}")
     return ok
 
 
@@ -99,6 +199,8 @@ def main():
     ap.add_argument("--no-results", action="store_true")
     ap.add_argument("--max", type=int, default=0, help="print at most N lines (0: all); the counts are always full")
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--all", action="store_true", help='list "only", "just" and "nothing" everywhere (no number or '
+                    "comparison needed in the sentence)")
     a = ap.parse_args()
     try:                                       # README lines hold µ, −, ≥ ...: never stop on a console's code page
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -116,7 +218,8 @@ def main():
         if not os.path.exists(f):
             print(f"lint_beside: not found: {f}", file=sys.stderr)
             continue
-        for n, reason, line in lint_text(open(f, encoding="utf-8", errors="replace").read(), pats):
+        for n, reason, line in lint_text(open(f, encoding="utf-8", errors="replace").read(), pats,
+                                         tex=f.endswith(".tex"), all_words=a.all):
             total += 1
             key = reason.split(":")[0]
             by_reason[key] = by_reason.get(key, 0) + 1
