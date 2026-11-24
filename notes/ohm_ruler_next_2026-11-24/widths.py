@@ -29,7 +29,9 @@ for p in sorted(glob.glob(os.path.join(folder, "seed_*_*.scores.json"))):
             c[key][0] += abs(d) >= 2 * se
             c[key][1] += abs(d) >= tq * se
             c[key][2] += 1
-print(f"K = {K}; 2 SE against t quantile {tq:.3f}; nominal false rate: 9.2 % at 2 SE (6 dof), 5 % at the t quantile")
+NOMINAL_2SE = {6: 9.2, 7: 8.6, 8: 8.1, 9: 7.7, 10: 7.3}  # 100 x P(|t_dof| >= 2), two-sided
+print(f"K = {K}; 2 SE against t quantile {tq:.3f}; nominal false rate: {NOMINAL_2SE.get(K - 1, float('nan'))} % at 2 SE "
+      f"({K - 1} dof), 5 % at the t quantile")
 print()
 print("| bit flips q | seeds | ruler | t | cells | DIFFERS at 2 SE | DIFFERS at the t quantile |")
 print("|---|---|---|---|---|---|---|")

@@ -54,3 +54,18 @@ width does not hide it. At t = 1 the flips move ruler (b) by less, and the two w
   (sqrt(window mirror) - sqrt(mirror) +0.0002 at t = 3, 4; -0.0011 at t = 1): (c) DIFFERS as (b) does, 96 of 96 at
   t = 3, 4 at both widths.
 - Where (c) and (b) part needs a shrink that differs by place (gate noise): asked of the workplace VS (その2).
+
+## The workplace VS's その2 (2026-11-24; its report, scripts and tables travel beside this folder, outside the notebook)
+
+ILLUSTRATIVE noise, not fitted to a device; plan B; t = 3, 30 cells per row unless noted.
+
+- Gate noise (p2 per CZ, flips q): ruler (c) follows the window's shrink more closely than (b). At p2 0.02, q 0:
+  (c) AGREES 29 of 30, (b) 18, (a) 0 (r - sqrt(window mirror) -0.006, r - sqrt(mirror) -0.018, r - rho_a -0.084).
+  A readout share moves (c) by about -0.02, as (b).
+- t = 4, p2 0.01, 3 seeds (9 cells): r - sqrt(mirror) +0.019, r - sqrt(window mirror) +0.012, the other sign from
+  t = 3; (c) AGREES 5 of 9, (b) 3 of 9.
+- Amplitude damping per CZ (gamma 0.005, 0.01; 5 seeds, 15 cells; GPU statevector): every ruler's rho above r, and (c)
+  farther from r than (b) (r - sqrt(window mirror) -0.011, -0.026; r - sqrt(mirror) -0.004, -0.016), the other order
+  from gate noise. Ruler (a) moves as under depolarizing (r - rho_a -0.024, -0.047).
+- 9 pairs, no noise (16 seeds): (a) DIFFERS 11 of 96 at both widths (t 2.306), against 12 and 6 with 7 pairs.
+- `widths.py` now writes the nominal 2 SE rate of K - 1 degrees of freedom (it wrote 6's for every K).
