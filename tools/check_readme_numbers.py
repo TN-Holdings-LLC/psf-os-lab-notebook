@@ -14,7 +14,13 @@ What is checked, per night folder holding a README.md and at least one job recor
      rounded to 4 places (and twice each number: a 2 SE from a stored SE); a value found nowhere is listed as "not found" (it may be quoted from another night: the
      line is shown so that a reader can tell).
 
-  python tools/check_readme_numbers.py [RESULTS_DIR] [--json OUT.json] [--night NAME ...]
+  python tools/check_readme_numbers.py [RESULTS_DIR | NIGHT_DIR | NIGHT_NAME ...] [--json OUT.json] [--night NAME ...]
+
+Arguments (2026-11-24, workplace VS): with none, every night under results/ (as before). A positional argument may be
+the results folder, a night's folder (results/<name>, the folder holding README.md) or a night's name under results/;
+--night NAME also accepts either form. A night given that does not exist, or a run that checked no night at all,
+stops with one line on stderr and exit code 2 or 1 (before, a night's path checked nothing and said "0 nights
+checked" with exit code 0).
 """
 import argparse
 import glob
@@ -212,15 +218,50 @@ def check_night(night):
     return dict(jobs=len(jobs), mismatches=found, not_found=notfound, delays_us=dl)
 
 
+def is_night(path):
+    """A night's folder: it holds the night's README.md (results/<name>/README.md)."""
+    return os.path.isfile(os.path.join(path, "README.md"))
+
+
+def resolve(targets, nights_opt, default_results="results"):
+    """The night folders to check, from the positional targets and --night; returns (nights, missing). A target is
+    the results folder (every night under it), a night's folder, or a night's name under the default results folder."""
+    targets, nights_opt = list(targets or []), list(nights_opt or [])
+    if not targets and not nights_opt:
+        return sorted(d for d in glob.glob(os.path.join(default_results, "*")) if os.path.isdir(d)), []
+    base = default_results
+    if len(targets) == 1 and os.path.isdir(targets[0]) and not is_night(targets[0]) and nights_opt:
+        base, targets = targets[0], []                       # the old form: RESULTS_DIR --night NAME ...
+    nights, missing = [], []
+    for t in targets + nights_opt:
+        t = t.rstrip("/\\")
+        if os.path.isdir(t) and is_night(t):
+            nights.append(t)
+        elif t in targets and os.path.isdir(t):
+            nights += sorted(d for d in glob.glob(os.path.join(t, "*")) if os.path.isdir(d))
+        elif os.path.isdir(os.path.join(base, t)):
+            nights.append(os.path.join(base, t))
+        else:
+            missing.append(t)
+    seen, out = set(), []
+    for n in nights:
+        k = os.path.normcase(os.path.abspath(n))
+        if k not in seen:
+            seen.add(k)
+            out.append(n)
+    return out, missing
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("results", nargs="?", default="results")
+    ap.add_argument("targets", nargs="*", help="the results folder, night folders or night names (default: results)")
     ap.add_argument("--json")
     ap.add_argument("--night", nargs="*")
     a = ap.parse_args()
-    nights = sorted(d for d in glob.glob(os.path.join(a.results, "*")) if os.path.isdir(d))
-    if a.night:
-        nights = [n for n in nights if os.path.basename(n) in a.night]
+    nights, missing = resolve(a.targets, a.night)
+    if missing:
+        print(f"check_readme_numbers: night not found: {', '.join(missing)}", file=sys.stderr)
+        return 2
     res, nm, nn, checked = {}, 0, 0, 0
     for n in nights:
         r = check_night(n)
@@ -240,6 +281,10 @@ def main():
           "night's score files")
     if a.json:
         json.dump(res, open(a.json, "w"), indent=1, ensure_ascii=False)
+    if checked == 0:
+        print(f"check_readme_numbers: no night checked (no README.md with a job record among {len(nights)} "
+              "folder(s))", file=sys.stderr)
+        return 1
     return 0
 
 
