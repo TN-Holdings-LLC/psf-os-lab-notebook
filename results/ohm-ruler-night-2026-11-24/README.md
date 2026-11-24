@@ -121,7 +121,13 @@ output: `notes/verify_2026-11-24/`.
 After the record, never judged (`notes/verify_2026-11-24/or_score2_output.txt`, the workplace's
 `gpu/ohm_ruler_night2.py score2`): ruler (c), the square root of the window's own mirror, DIFFERS on the positive side
 in five of six cells at t = 3 and 4 (AGREES at A0 t = 3, +0.014, SE 0.024); with the t quantile (2.447) in place of
-2 SE, the only word that changes is ruler (b) at A2 t = 3 (DIFFERS to AGREES).
+2 SE, the only word that changes is ruler (b) at A2 t = 3 (DIFFERS to AGREES). By position (`notes/verify_2026-11-24/or_beside_positions.txt`):
+the window's √(mirror) is above its r at 32 of 36 window positions; at t = 4 the same-layer mirror's <Z> on physical
+qubits 101, 102 and 104 is near 0 (0.022 / 0.080 / 0.014 in A0; down to −0.044 in A2), while at t = 3, where they lie
+outside the cone, nothing of the kind shows; position 25 (physical 107) has a low r at t = 4 in all three arms (0.668 /
+0.659 / 0.764) but a mirror like the others (√ 0.85 to 0.88). Guess (not measured): those qubits pull down the
+circuit's total and the mirror's mean at t = 4, which would account for r above rho_a and for ruler (b)'s sign at
+t = 4. Not read from the calibration; seen in the sent circuits' own mirrors.
 
 ## Reproduce
 
