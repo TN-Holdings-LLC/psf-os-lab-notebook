@@ -2,7 +2,7 @@
 
 Home's instruction "オームの「回路の中の物差し」の晩" (f bundle), on `prereg/README.md` rule 3 and
 `notes/ohm_window_beside_2026-11-24`. Tool `gpu/ohm_ruler_night.py`; draft
-`prereg/drafts-2026-11-24/ohm_ruler_night_DRAFT.md`. psf-os 0.3.3 (e652257). Nothing under `results/` and no
+`prereg/drafts-2026-11-24/ohm_ruler_night_DRAFT.md`. psf-os 0.3.3 (e652257). No file under `results/` and no
 declaration is written; no device was used.
 
 | file | what it holds |

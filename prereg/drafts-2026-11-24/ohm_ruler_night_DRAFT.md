@@ -39,15 +39,15 @@ The raw M, W and S are read and reported as on 11-23.
 - **Strings, by the bits alone** (`strings`): the 11-12 generator (left half |1> with probability 0.75, right half
   0.25), seed **20261124**, drawn in order.
   - A string is kept when |T0| (the initial sum of Z, 1 - 2 b, over a region) is at least **6 on the window's light cone
-    at each t >= 3** (16 qubits at t = 3, 22 at t = 4) and, when F is built, at least **8 on the whole chain**.
+    at each t >= 3** (16 qubits at t = 3, 22 at t = 4) and, when F is built, **8 or more on the whole chain**.
   - The first K kept strings and their complements are the test's strings. [OWNER: K and the thresholds]
-  - On the 11-12 strings |T0| was 2 to 8 on the chain. Here, for K = 7 and L only, |T0| is 6 to 12 on the cones, kept
+  - On the 11-12 strings |T0| was 2 to 8 on the chain. Here, for K = 7 and L alone, |T0| is 6 to 12 on the cones, kept
     from 26 draws.
 - **Cycles** t = 1, 3, 4. [OWNER]
 - **Mirrors.** One per (arm, t, form), on string s00 of the cell: psf-os's user-entrance mirror, the compiled circuit
   and its inverse, ideal every qubit |0>. [OWNER: one per cell (proposed), or none]
 - No floors (`--floors` adds them).
-- No mid-circuit measurement and no delay: nothing to park (the build checks and records it).
+- No mid-circuit measurement and no delay: no qubit to park (the build checks and records it).
 
 ## The rulers (rule 3; written before the data)
 
@@ -64,7 +64,7 @@ of the pair is W_k = -sum_{q in window} O_kq / 2 + const_k. This is an identity 
   replaced by O_device / rho_b.
   - Why the square root: the mirror holds the layers twice.
   - Guess (not measured): rho_b follows r when the shrink accrues with the layers. A readout-like shrink, which hits the
-    mirror only once, leaves rho_b above r (the dry runs below).
+    mirror once, leaves rho_b above r (the dry runs below).
 - Without noise, rho_a = rho_b = 1 and W_a = W_b = W_exact. The sealed answers hold the exact window odd part, T0 and
   T_exact per pair.
 
@@ -114,7 +114,7 @@ ALL PASS or no run.
 
 Per cell (arm, t, form), over the K pairs, with SE from the pairs' scatter:
 
-- **Raw** (as 11-23): window M and W, READS when the mean squared error is at most half the exact mean square.
+- **Raw** (as 11-23): window M and W, READS when the mean squared error is half the exact mean square or less.
   Beside: W excess (device - exact) with 2 SE, and S.
 - **Ruler (a)**: d_a = mean_k (W_a,k - W_exact,k).
   - AGREES when |d_a| < 2 SE, DIFFERS otherwise.
@@ -141,7 +141,7 @@ Table 1, per cell at t >= 3 (one factor x ruler (a): 3 x 2 = 6 rows):
 |---|---|---|
 | UNIFORM | AGREES | the shrink is one factor on the window, and the circuit's own total carries it: the transfer reads through ruler (a) |
 | UNIFORM | DIFFERS | one factor on the window, but the circuit's total carries another (the outside of the window shrinks differently): ruler (a) not read for the transfer |
-| NOT UNIFORM | AGREES | the total carries the window's mean shrink, but the window's positions differ: the transfer reads on the mean only |
+| NOT UNIFORM | AGREES | the total carries the window's mean shrink, but the window's positions differ: the transfer reads on the mean, not per position |
 | NOT UNIFORM | DIFFERS | neither one factor nor the total's: ruler (a) not read |
 | NOT READ | AGREES | too few window positions to test one factor; ruler (a) agrees |
 | NOT READ | DIFFERS | too few window positions to test one factor; ruler (a) differs |
@@ -156,7 +156,7 @@ Table 2, per cell with a mirror where ruler (a) is read (2 x 2 = 4 rows):
 | DIFFERS | DIFFERS | neither ruler reads it |
 
 The raw words keep 11-23's meaning and are read on their own line. A cell where ruler (a) is not read (L at t = 1)
-reads ruler (b) and the raw words only.
+reads ruler (b) and the raw words.
 
 ## Predictions [OWNER] (candidates, each grounded on the 11-23 record; written after that record was seen)
 
@@ -166,7 +166,7 @@ reads ruler (b) and the raw words only.
   a well-conditioned ruler (a), so this is the weakest ground.
 - OR-4: the pooled r of the window at t = 3 lies in 0.86 to 0.89. 11-23 beside: r 0.863 to 0.891; another day and other
   strings.
-- No prediction is proposed for t = 4 or for ruler (b): no record reads them. Ruler (b)'s only ground is one string at
+- No prediction is proposed for t = 4 or for ruler (b): no record reads them. Ruler (b)'s ground is one string at
   t = 1 and 3.
 
 ## Dry runs (no device; `notes/ohm_ruler_2026-11-24/`)
@@ -207,9 +207,9 @@ python gpu/ohm_ruler_night.py score OUT ANS_BY_LABEL.json
 - **The words rest on K pairs.** With 7 pairs, "2 SE" from the pairs' scatter fires falsely about 9 % of the time
   (t with 6 degrees of freedom), and the dry runs show such single DIFFERS. More pairs (plan A, 9) narrow this.
   [OWNER: 2 SE as the project's rule, or the t quantile]
-- The one-factor test assumes shot noise only around one factor. Other scatter between pairs (e.g. place-dependent
-  noise) reads as NOT UNIFORM. Without noise, a false NOT UNIFORM came 4 times in 96 cells over 16 seeds (at most one
-  per seed); in the first dry run, on another seed, 2 of 6.
+- The one-factor test assumes the positions scatter by shot noise around one factor. Other scatter between pairs
+  (e.g. place-dependent noise) reads as NOT UNIFORM. Without noise, a false NOT UNIFORM came 4 times in 96 cells over
+  16 seeds (one per seed or none); in the first dry run, on another seed, 2 of 6.
 - Ruler (a) assumes the conservation holds on the device's measured qubits, as it does exactly for the circuits.
   Leakage or a one-sided shift (decay) moves the total too. The even part is not divided by the ruler.
 - Ruler (b) assumes the shrink doubles with the layers. A readout share does not double (the dry runs).
