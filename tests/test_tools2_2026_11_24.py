@@ -102,6 +102,14 @@ def test_compare_tolerance_by_key():
     assert IR.compare(mine, ref, ("per_n",), {"ceiling": 5e-5}) == []
 
 
+def test_compare_never_hides_a_nan():
+    nan = float("nan")
+    ref = {"per_n": {"6": {"d": 0.05, "p": nan, "q": nan}}}
+    mine = {"per_n": {"6": {"d": nan, "p": 0.5, "q": nan}}}
+    diffs = IR.compare(mine, ref, ("per_n",), {"d": 1.0})
+    assert sorted(p for p, _, _ in diffs) == ["per_n/6/d", "per_n/6/p"]   # NaN on one side; NaN on both is equal
+
+
 def test_scorers_registered_with_declared_ceilings():
     assert {"qpe-parked-night-2026-11-21", "qpe-n78-night-2026-11-22"} <= set(IR.SCORERS)
     assert [IR.CEILINGS[n][0] for n in (4, 6, 7, 8)] == [0.4706, 0.3065, 0.2480, 0.2007]

@@ -435,7 +435,12 @@ def compare(mine, ref, keys=("cells", "twins", "order", "beside", "chain_is_devi
                     continue
                 walk(a.get(k) if isinstance(a, dict) else None, b[k], f"{p}/{k}")
         elif isinstance(b, float) and isinstance(a, (int, float)):
-            if abs(a - b) > tol.get(p.rsplit("/", 1)[-1], 1e-12):
+            # NaN on one side is a difference (abs(a - b) > tol is False for NaN, so test it first); NaN on both
+            # sides is equal
+            if (a != a) or (b != b):
+                if not ((a != a) and (b != b)):
+                    diffs.append((p, a, b))
+            elif abs(a - b) > tol.get(p.rsplit("/", 1)[-1], 1e-12):
                 diffs.append((p, a, b))
         elif a != b:
             diffs.append((p, a, b))
