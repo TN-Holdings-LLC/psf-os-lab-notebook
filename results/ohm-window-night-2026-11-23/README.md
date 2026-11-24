@@ -76,6 +76,12 @@ Beside, never judged, never used to correct:
 - The twins share their physical qubits and layers; they differ in qubits measured, CZ and spectators, and a difference
   would not say which. Here none was seen at t = 3.
 
+## The psf-os it ran with
+
+The night ran with a45c54a, the commit tagged v0.3.3 on 2026-11-23. Before the release (2026-11-24), the workplace
+reading corrected 0.3.3's documents and one function, `feedforward.version_key` (a bare `.devN` now sorts before the
+pre-releases); the release is e652257. The two differ in no step of a build; re-scored with e652257: SAME.
+
 ## Reproduce
 
 `python reproduce.py --psf-os <psf-os 0.3.3> ohm-window-night-2026-11-23` (1 of 1 SAME at home).
