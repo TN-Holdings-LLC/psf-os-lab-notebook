@@ -1,0 +1,10 @@
+K = 7; t quantile 2.447; (a) and (b) equal the declared scores.json
+A0_t1_L: (b) d -0.0049 SE 0.0093 2se AGREES t AGREES; (c) d -0.0014 SE 0.0106 2se AGREES t AGREES sqrt(window mirror) 0.940
+A0_t3_L: (a) d -0.1162 SE 0.0124 2se DIFFERS t DIFFERS; (b) d +0.0085 SE 0.0224 2se AGREES t AGREES; (c) d +0.0139 SE 0.0238 2se AGREES t AGREES sqrt(window mirror) 0.904
+A0_t4_L: (a) d -0.2503 SE 0.0498 2se DIFFERS t DIFFERS; (b) d -0.0796 SE 0.0498 2se AGREES t AGREES; (c) d +0.1066 SE 0.0408 2se DIFFERS t DIFFERS sqrt(window mirror) 0.858
+A1_t1_L: (b) d -0.0015 SE 0.0099 2se AGREES t AGREES; (c) d +0.0018 SE 0.0110 2se AGREES t AGREES sqrt(window mirror) 0.938
+A1_t3_L: (a) d -0.0828 SE 0.0140 2se DIFFERS t DIFFERS; (b) d +0.0367 SE 0.0112 2se DIFFERS t DIFFERS; (c) d +0.0746 SE 0.0148 2se DIFFERS t DIFFERS sqrt(window mirror) 0.894
+A1_t4_L: (a) d -0.2929 SE 0.0669 2se DIFFERS t DIFFERS; (b) d -0.1017 SE 0.0554 2se AGREES t AGREES; (c) d +0.1497 SE 0.0395 2se DIFFERS t DIFFERS sqrt(window mirror) 0.834
+A2_t1_L: (b) d -0.0041 SE 0.0080 2se AGREES t AGREES; (c) d -0.0011 SE 0.0096 2se AGREES t AGREES sqrt(window mirror) 0.944
+A2_t3_L: (a) d -0.0672 SE 0.0186 2se DIFFERS t DIFFERS; (b) d +0.0433 SE 0.0193 2se DIFFERS t AGREES; (c) d +0.0827 SE 0.0225 2se DIFFERS t DIFFERS sqrt(window mirror) 0.885
+A2_t4_L: (a) d -0.4010 SE 0.0868 2se DIFFERS t DIFFERS; (b) d -0.1945 SE 0.0454 2se DIFFERS t DIFFERS; (c) d +0.1202 SE 0.0216 2se DIFFERS t DIFFERS sqrt(window mirror) 0.846

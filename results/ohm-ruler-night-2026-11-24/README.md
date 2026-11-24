@@ -69,8 +69,18 @@ Beside, never judged:
 - The raw W is above the exact value in every cell at t = 3 and 4, each beyond 2 SE (+0.142 to +0.467); W(t) / W(1)
   raw 2.26 / 2.27 / 2.06 at t = 3 against exact 1.74 / 1.47 / 1.11. The raw W READS by the ratio rule even so; READS
   does not say there is no bias.
-- Ruler (a) is below the exact value in every cell where it was read, as the gate-noise dry runs foresaw (the window
-  shrinks more than the circuit's total).
+- Ruler (a) is below the exact value in every cell where it was read. The dry runs foresaw DIFFERS, but with the
+  opposite sign: there the window's factor r was below the circuit total's rho_a (r - rho_a -0.024 to -0.084, gate noise
+  and damping alike), which puts d_a above zero. On the record r is above rho_a (the mean of the 7 pairs) in all six
+  cells: +0.048 / +0.040 / +0.032 at t = 3, +0.091 / +0.089 / +0.119 at t = 4 (2 SE of rho_a 0.014 to 0.044), so the
+  window shrinks less than the circuit's total, and d_a falls below zero. Table 2's third row names the dry runs' gate
+  noise as its reading; tonight's r and rho_a run the other way (the declaration calls that text a reading, not a
+  measurement of the noise). Corrected after the home VS's check.
+- The sentinel (declared beside): DEAD (`or/scores.json`, beside.sentinel; signal below 0.12 at ring positions 24 to
+  34, physical qubits 47, 57, 67, 66, 65, 64, 63, 56, 43, 42, 41). Its ring (40 qubits, 3 to 67) shares no qubit with
+  tonight's user circuits (22 qubits, 92 to 121: the copy moved to drow 4 after passing over copies 0 and 2), so it
+  says nothing about the user's qubits tonight. On 11-23, 15 of the ring's qubits were the user's. Added after the home
+  VS's check.
 
 ## Against the declaration
 
@@ -82,7 +92,8 @@ Beside, never judged:
 - Vanity: 18 of 18 raw cells READS; OR-1 held; the order at t = 4 by every measure.
 - Essence: the raw W reads by the loose ratio rule, but it is 0.14 to 0.47 above the exact value at 3 and 4 cycles;
   dividing by the same-layer mirror (ruler b) brought it to the exact value within 2 SE in three of six cells at t = 3
-  and 4, and the circuit's own total (ruler a) in none. 39 s charged.
+  and 4 (at t = 4 with 2 SE about 0.10: d −0.080, ends −0.180 to +0.020; d −0.102, ends −0.213 to +0.009), and the
+  circuit's own total (ruler a) in none. 39 s charged.
 
 ## Limits
 
@@ -90,6 +101,27 @@ Beside, never judged:
   about 9 to 12 % of noise-free cells (rule 4 now asks for the t quantile in later declarations; this one keeps 2 SE).
 - The rulers' readings of the kind of shrink are readings of their directions, from the dry runs with illustrative
   noise; nothing here measures the noise. Values on other nights are set beside, not compared.
+
+## Independent check (home VS, 2026-11-24)
+
+Re-counted from `or/job/raw_counts.json`, the sent circuits and the sealed answers with qiskit, Aer and numpy only (no
+psf-os, no notebook scorer; the qubit-to-bit map read from the circuits' measure instructions; the strings regenerated
+from the declared rule, 26 drawn for 7 pairs): the 18 raw words, rulers (a) and (b) with their d, 2 SE and words, the
+uniformity r, chi2 and p, the rows of tables 1 and 2, the order and the beside values agree with this record (largest
+difference 3.3e-16). Sent as declared: 139 circuits (126 items, 9 mirrors, 4 sentinel pubs; sha256 equal to the
+manifest's), 1000 shots per pub, every L item on F's placement at the same chain positions, CZ and CZ layers as
+declared, the device picked by the rule, no delay and no gate after a measurement; `results/` byte-equal to the run's
+raw output. The sealed answers' sha256 is the declared 59cbd7a0...; the answers by label differ from it by 0. Try 1:
+no `or/` and no job folder in the raw output, so nothing was assembled to send (IBM's job list not looked at).
+Reproduce 1 of 1 SAME. Corrected here: the direction of ruler (a) (beside), the sentinel added (beside), the 2 SE ends
+of ruler (b) at t = 4 (two numbers). Noted, not changed: the tool's table-1 text for "NOT UNIFORM x AGREES" reads "on
+the mean only" where the declaration reads "on the mean, not per position" (the row did not occur tonight). Its tool and
+output: `notes/verify_2026-11-24/`.
+
+After the record, never judged (`notes/verify_2026-11-24/or_score2_output.txt`, the workplace's
+`gpu/ohm_ruler_night2.py score2`): ruler (c), the square root of the window's own mirror, DIFFERS on the positive side
+in five of six cells at t = 3 and 4 (AGREES at A0 t = 3, +0.014, SE 0.024); with the t quantile (2.447) in place of
+2 SE, the only word that changes is ruler (b) at A2 t = 3 (DIFFERS to AGREES).
 
 ## Reproduce
 
