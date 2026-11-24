@@ -77,7 +77,7 @@ both within about 2 SE of 0. The window is one qubit there and the odd signal is
   transport", is in this record more precisely a uniform contraction whose effect on W can be read from r and the
   exact values.
 - The even part is a one-sided shift, such as decay towards |0>.
-  - At t = 3 it is small on the window: at most 0.009 in size, mostly within 2 SE.
+  - At t = 3 it is small on the window: -0.006 to +0.009 (2 SE 0.003 to 0.008), three of six cells within 2 SE (corrected 2026-11-24: "mostly within 2 SE" before).
   - At t = 1 it reaches +0.021 (A1 F, 4 SE), seen in S as -0.021.
 - **r is the same in L and F within SE** (0.891 / 0.891, 0.874 / 0.863, 0.870 / 0.875 at t = 3). The shrink follows
   the layers, not the number of qubits measured, as the record's twins read for the window sums.
@@ -106,7 +106,7 @@ both within about 2 SE of 0. The window is one qubit there and the odd signal is
 
 ## Limits
 
-- One device-day, 7 pairs. r is a summary of the data, fitted to nothing.
+- One device-day, 7 pairs. r is a summary of the data; no noise model is fitted.
 - "Uniform" is read on the window's 1 or 5 qubits only.
 - The mirror was sent on one string (A1 s00), and the total ruler is poorly conditioned on these strings.
 - The odd / even split assumes the complement pairing of the declared strings, which holds (`strings`).
