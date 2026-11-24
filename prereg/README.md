@@ -23,6 +23,15 @@ These rules are for writing a declaration, not for any one test.
    still reported, and nothing is fitted to a device or chosen after the data.
    - The owner's choice, 2026-11-24 (10:30 JST): "補正と見なさないで、フェンスを入れたり休ませたりと同様に、量を追加する
      工夫で良い。意図的に数字だけを掘り出す作業とは違う". After `notes/ohm_window_beside_2026-11-24`.
+4. **Few units, the t quantile.** From the declarations after 2026-11-24, a word whose SE comes from the scatter of
+   fewer than 10 units (pairs, strings, phases) uses the two-sided 95 % t quantile with n - 1 degrees of freedom in
+   place of 2 (for 7 pairs, 2.447). With 10 or more, or with an SE from shot noise, 2 SE as before. Declarations
+   before this rule keep their widths.
+   - Why: on the Ohm ruler dry runs, 2 SE from 7 pairs gave false DIFFERS in 11 to 12 % of noise-free cells; the t
+     quantile gave 5 to 6 % and kept every real departure (`notes/ohm_ruler_next_2026-11-24`).
+5. **No scatter, no word.** From the same date, a word whose SE is exactly 0 (data with no scatter) reads NOT READ,
+   not a difference.
+   - The owner's choices, 2026-11-24 (15:44 JST), on the workplace's points 1 and 4.
 
 The owner's choices for psf-os 0.3.2 (2026-11-22 22:0x JST): a circuit's delays capped at 100 µs (allow_long_delay=True
 passes); the charge estimate is the 0.3.1 model plus the delays' term (the records' estimates unchanged; 2-7 % above
