@@ -1,0 +1,17 @@
+| bit flips q | seeds | ruler | t | cells | DIFFERS at 2 SE | DIFFERS at the t quantile |
+|---|---|---|---|---|---|---|
+| 0 | 16 | (a) | t>=3 | 96 | 12 (12 %) | 6 (6 %) |
+| 0 | 16 | (b) | t1 | 48 | 4 (8 %) | 1 (2 %) |
+| 0 | 16 | (b) | t>=3 | 96 | 12 (12 %) | 6 (6 %) |
+| 0 | 16 | (c) | t1 | 48 | 4 (8 %) | 1 (2 %) |
+| 0 | 16 | (c) | t>=3 | 96 | 12 (12 %) | 6 (6 %) |
+| 0.065 | 16 | (a) | t>=3 | 96 | 9 (9 %) | 6 (6 %) |
+| 0.065 | 16 | (b) | t1 | 48 | 8 (17 %) | 6 (12 %) |
+| 0.065 | 16 | (b) | t>=3 | 96 | 96 (100 %) | 96 (100 %) |
+| 0.065 | 16 | (c) | t1 | 48 | 9 (19 %) | 6 (12 %) |
+| 0.065 | 16 | (c) | t>=3 | 96 | 96 (100 %) | 96 (100 %) |
+
+q 0, t1: sqrt(window mirror) - sqrt(mirror), mean +0.0000 over 48 cells
+q 0, t>=3: sqrt(window mirror) - sqrt(mirror), mean +0.0000 over 96 cells
+q 0.065, t1: sqrt(window mirror) - sqrt(mirror), mean -0.0011 over 48 cells
+q 0.065, t>=3: sqrt(window mirror) - sqrt(mirror), mean +0.0002 over 96 cells
