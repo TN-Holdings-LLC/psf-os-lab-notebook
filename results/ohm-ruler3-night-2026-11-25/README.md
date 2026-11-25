@@ -89,8 +89,11 @@ Beside, never judged (`or3/scores3.json`, beside):
   user's qubits tonight, as 11-24.
 - The raw W is above the exact value in every cell at t = 3 and 4, each beyond 2 SE (+0.153 to +0.337). READS does not
   say there is no bias.
-- The qubits (b') leaves out at t = 4 are the four the 11-24 record's mirrors showed near 0 on the same device and the
-  same copy (`notes/verify_2026-11-24/`). Set beside, not compared.
+- The qubits (b') leaves out at t = 4 sit where the 11-24 record (same device, same copy) showed its low values: there
+  the same-layer mirror's <Z> at t = 4 was near 0 on 104 and 102 in every arm (−0.044 to 0.080) and on 101 in A0
+  (0.022; 0.24 and 0.30 in A1, A2), while on 103 it was 0.45 to 0.51 and 103 showed a low r instead (0.42); tonight
+  103's mirror is 0.16 to 0.18 and all four fall below tau 0.3. Set beside, not compared. (Corrected after the home
+  VS's check: the first text said all four had shown mirrors near 0.)
 
 ## Against the declaration
 
@@ -114,6 +117,19 @@ Beside, never judged (`or3/scores3.json`, beside):
 - The rulers' readings of the kind of shrink are readings of their directions, from the dry runs with illustrative
   noise; nothing here measures the noise. Values on other nights are set beside, not compared.
 - (b') and the outlying positions are beside; they were not judged.
+
+## Independent check (home VS, 2026-11-25)
+
+Re-counted from `or3/job/raw_counts.json`, the sent circuits and the sealed answers with qiskit, Aer and numpy only
+(the home VS's own tool of 11-24, widened; not psf-os, not the notebook's scorers): the raw words; rulers (a), (b),
+(c), (d) and (b') with rho, d, the t width, 2 SE and the words; the direction; the one-factor p and the outlying
+positions; the rows of tables A and B; the order and the growth agree with this record (largest difference 5.7e-14;
+no word differs). Sent as declared: 169 circuits; 7, 7, 9 pairs (the rule drew 31 strings for 9 pairs, the first 7
+those of 11-24); the 9 |0> mirrors and 18 string mirrors return to their ideal values without noise; CZ counts; no
+parking; fez picked by the rule (level with kingston, the queue's order); the sentinel's overlap 0. The sealed
+answers' sha256 is the declared e581df9d...; the answers by label differ from it by 0. (b')'s left-out positions
+28 to 31 are physical 104, 103, 102, 101, each with a mirror below 0.3 tonight. Reproduce SAME. Corrected here: the
+sentence on the 11-24 mirrors (beside). Its tool and output: `notes/verify_2026-11-25/`.
 
 ## Reproduce
 

@@ -1,0 +1,330 @@
+{
+ "strings_draws_for_9": 31,
+ "strings_equal_answers": true,
+ "strings_equal_build": true,
+ "first7_equal_11_24": true,
+ "answers_sha256": "e581df9d4fbb99ca219f3beb1e3efbf6b2d34be0477d32fc7bf51071207497ac",
+ "qpy_sha256_matches_manifest": true,
+ "n_circuits": 169,
+ "shots": [
+  1000,
+  [
+   1000
+  ]
+ ],
+ "F_copy": {
+  "drow": 4,
+  "dcol": 0,
+  "passed_over": [
+   {
+    "drow": 0,
+    "dcol": 0,
+    "why": [
+     "qubit 32 suspect",
+     "qubit 33 suspect",
+     "coupler (32, 33) not working"
+    ]
+   },
+   {
+    "drow": 2,
+    "dcol": 0,
+    "why": [
+     "qubit 72 failed"
+    ]
+   }
+  ]
+ },
+ "F_is_device_path": true,
+ "pubs": {
+  "users": true,
+  "zero_mirrors": true,
+  "string_mirrors": true,
+  "floors": [],
+  "sentinel": 4,
+  "others": []
+ },
+ "L_on_F_physical": true,
+ "noise_free_vs_answers_worst": 9.870954054136405e-11,
+ "answers_vs_by_label_worst": 0.0,
+ "structure": {
+  "after": 0,
+  "delays": 0,
+  "ops": [
+   "cz",
+   "rz",
+   "sx",
+   "x"
+  ]
+ },
+ "cz": {
+  "A0_t1": [
+   [
+    6,
+    4
+   ]
+  ],
+  "A0_t3": [
+   [
+    66,
+    12
+   ]
+  ],
+  "A0_t4": [
+   [
+    120,
+    16
+   ]
+  ],
+  "A1_t1": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A1_t3": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A1_t4": [
+   [
+    180,
+    24
+   ]
+  ],
+  "A2_t1": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A2_t3": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A2_t4": [
+   [
+    180,
+    24
+   ]
+  ]
+ },
+ "mirrors_noise_free_worst": 3.8413716652030416e-14,
+ "mirror_cz": {
+  "A0_t1": [
+   12,
+   12
+  ],
+  "A0_t3": [
+   132,
+   132
+  ],
+  "A0_t4": [
+   240,
+   240
+  ],
+  "A1_t1": [
+   18,
+   18
+  ],
+  "A1_t3": [
+   198,
+   198
+  ],
+  "A1_t4": [
+   360,
+   360
+  ],
+  "A2_t1": [
+   18,
+   18
+  ],
+  "A2_t3": [
+   198,
+   198
+  ],
+  "A2_t4": [
+   360,
+   360
+  ]
+ },
+ "sentinel_overlap": {
+  "sentinel_qubits": 40,
+  "user_qubits": 22,
+  "overlap": []
+ },
+ "queue": {
+  "read": "2026-11-25T10:33:50.669779+00:00",
+  "pending": {
+   "ibm_marrakesh": 4,
+   "ibm_fez": 0,
+   "ibm_kingston": 0
+  },
+  "pick": "ibm_fez"
+ },
+ "charge_formula_s": 48.06,
+ "usage": [
+  47,
+  0.767956,
+  "dc3bju5hdvas73bni4og"
+ ],
+ "direction": {
+  "A0_t3": {
+   "r_minus_rho_a": -0.023927582298268413,
+   "se": 0.01193481427231756,
+   "t_se": 0.029204490524361068,
+   "word": "NOT SEEN",
+   "ruler_a": "AGREES"
+  },
+  "A0_t4": {
+   "r_minus_rho_a": 0.059273942435371235,
+   "se": 0.018561667530554247,
+   "t_se": 0.042803205325458095,
+   "word": "WINDOW SHRINKS LESS",
+   "ruler_a": "DIFFERS"
+  },
+  "A1_t3": {
+   "r_minus_rho_a": -0.03838878943419943,
+   "se": 0.014714450559881392,
+   "t_se": 0.03600626052002977,
+   "word": "WINDOW SHRINKS MORE",
+   "ruler_a": "AGREES"
+  },
+  "A1_t4": {
+   "r_minus_rho_a": 0.0525117714341765,
+   "se": 0.013657066536219524,
+   "t_se": 0.03149319543252222,
+   "word": "WINDOW SHRINKS LESS",
+   "ruler_a": "DIFFERS"
+  },
+  "A2_t3": {
+   "r_minus_rho_a": -0.04782465225031707,
+   "se": 0.022736427198892732,
+   "t_se": 0.05563603735569052,
+   "word": "NOT SEEN",
+   "ruler_a": "DIFFERS"
+  },
+  "A2_t4": {
+   "r_minus_rho_a": 0.06855474901981586,
+   "se": 0.012493962611719834,
+   "t_se": 0.028811077782625937,
+   "word": "WINDOW SHRINKS LESS",
+   "ruler_a": "DIFFERS"
+  }
+ },
+ "tableB": {
+  "A0_t3": "the window and the total shrink alike",
+  "A0_t4": "the total overstates the window's shrink",
+  "A1_t3": "the window loses more than the total, within ruler (a)'s word",
+  "A1_t4": "the total overstates the window's shrink",
+  "A2_t3": "no lean seen, yet the total does not carry it: read with the one-factor word",
+  "A2_t4": "the total overstates the window's shrink"
+ },
+ "order": {
+  "W_dev_t3": "yes",
+  "W_ex_t3": "yes",
+  "W_a_t3": "yes",
+  "W_b_t3": "yes",
+  "W_b_out_t3": "yes",
+  "W_c_t3": "yes",
+  "W_d_t3": "yes",
+  "W_dev_t4": "yes",
+  "W_ex_t4": "yes",
+  "W_a_t4": "yes",
+  "W_b_t4": "yes",
+  "W_b_out_t4": "yes",
+  "W_c_t4": "yes",
+  "W_d_t4": "yes"
+ },
+ "growth": {
+  "A0_W3/W1": {
+   "raw": 2.389727219965177,
+   "exact": 1.74107142857143
+  },
+  "A0_W4/W1": {
+   "raw": 3.0289546656348745,
+   "exact": 2.105902777846899
+  },
+  "A1_W3/W1": {
+   "raw": 2.1935661259279624,
+   "exact": 1.4733537946428572
+  },
+  "A1_W4/W1": {
+   "raw": 2.78541533009501,
+   "exact": 1.5517663955688465
+  },
+  "A2_W3/W1": {
+   "raw": 1.9802089059923036,
+   "exact": 1.1148734351374596
+  },
+  "A2_W4/W1": {
+   "raw": 2.4983812839777664,
+   "exact": 1.2492566005471315
+  }
+ },
+ "vs_declared": {
+  "worst_abs_difference": 5.684341886080802e-14,
+  "words_equal": true,
+  "differences": []
+ }
+}
+A0_t1 M 0.010 W 0.010 Wdev 0.246 Wex 0.250 exc -0.004 (2SE 0.035)
+   b     rho 0.910 d -0.0148 tSE 0.0343 2SE 0.0280 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.910 d -0.0148 tSE 0.0343 2SE 0.0280 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.959 d -0.0086 tSE 0.0386 2SE 0.0316 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.948 d -0.0099 tSE 0.0376 2SE 0.0307 {'t': 'AGREES', '2se': 'AGREES'}
+A0_t3 M 0.060 W 0.059 Wdev 0.588 Wex 0.435 exc +0.153 (2SE 0.080)
+   a     rho nan d -0.0028 tSE 0.0378 2SE 0.0309 {'t': 'AGREES', '2se': 'AGREES'}
+   b     rho 0.890 d +0.0053 tSE 0.0623 2SE 0.0509 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.890 d +0.0053 tSE 0.0623 2SE 0.0509 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.902 d +0.0228 tSE 0.0676 2SE 0.0552 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.900 d +0.0205 tSE 0.0655 2SE 0.0536 {'t': 'AGREES', '2se': 'AGREES'}
+A0_t4 M 0.102 W 0.102 Wdev 0.746 Wex 0.526 exc +0.219 (2SE 0.167)
+   a     rho nan d -0.2120 tSE 0.0963 2SE 0.0835 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.781 d -0.1478 tSE 0.0923 2SE 0.0801 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.845 d -0.0214 tSE 0.0910 2SE 0.0789 {'t': 'AGREES', '2se': 'AGREES'} left [28, 29, 30, 31]
+   c     rho 0.868 d +0.0193 tSE 0.1033 2SE 0.0896 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.874 d +0.0298 tSE 0.1055 2SE 0.0915 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t1 M 0.008 W 0.007 Wdev 0.260 Wex 0.250 exc +0.010 (2SE 0.029)
+   b     rho 0.891 d -0.0021 tSE 0.0217 2SE 0.0178 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.891 d -0.0021 tSE 0.0217 2SE 0.0178 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.937 d +0.0032 tSE 0.0275 2SE 0.0224 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.939 d +0.0035 tSE 0.0277 2SE 0.0226 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t3 M 0.111 W 0.109 Wdev 0.570 Wex 0.368 exc +0.202 (2SE 0.071)
+   a     rho nan d +0.0238 tSE 0.0369 2SE 0.0302 {'t': 'AGREES', '2se': 'AGREES'}
+   b     rho 0.849 d -0.0154 tSE 0.0513 2SE 0.0419 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.849 d -0.0154 tSE 0.0513 2SE 0.0419 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.885 d +0.0428 tSE 0.0567 2SE 0.0463 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.874 d +0.0265 tSE 0.0523 2SE 0.0428 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t4 M 0.217 W 0.214 Wdev 0.724 Wex 0.388 exc +0.336 (2SE 0.164)
+   a     rho nan d -0.1894 tSE 0.1137 2SE 0.0986 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.715 d -0.1950 tSE 0.1649 2SE 0.1430 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.775 d -0.0514 tSE 0.1012 2SE 0.0878 {'t': 'AGREES', '2se': 'AGREES'} left [28, 29, 30, 31]
+   c     rho 0.842 d +0.0853 tSE 0.0869 2SE 0.0754 {'t': 'AGREES', '2se': 'DIFFERS'}
+   d     rho 0.821 d +0.0445 tSE 0.0817 2SE 0.0708 {'t': 'AGREES', '2se': 'AGREES'}
+A2_t1 M 0.007 W 0.007 Wdev 0.260 Wex 0.250 exc +0.010 (2SE 0.029)
+   b     rho 0.885 d -0.0027 tSE 0.0210 2SE 0.0172 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.885 d -0.0027 tSE 0.0210 2SE 0.0172 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.925 d +0.0020 tSE 0.0256 2SE 0.0209 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.925 d +0.0020 tSE 0.0256 2SE 0.0209 {'t': 'AGREES', '2se': 'AGREES'}
+A2_t3 M 0.225 W 0.243 Wdev 0.515 Wex 0.279 exc +0.236 (2SE 0.083)
+   a     rho nan d +0.0375 tSE 0.0264 2SE 0.0216 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.867 d +0.0401 tSE 0.0466 2SE 0.0381 {'t': 'AGREES', '2se': 'DIFFERS'}
+   b_out rho 0.867 d +0.0401 tSE 0.0466 2SE 0.0381 {'t': 'AGREES', '2se': 'DIFFERS'} left []
+   c     rho 0.888 d +0.0761 tSE 0.0563 2SE 0.0461 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.872 d +0.0489 tSE 0.0486 2SE 0.0397 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+A2_t4 M 0.401 W 0.403 Wdev 0.649 Wex 0.312 exc +0.337 (2SE 0.161)
+   a     rho nan d -0.1993 tSE 0.1388 2SE 0.1204 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.711 d -0.2336 tSE 0.2047 2SE 0.1775 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.775 d -0.0717 tSE 0.1049 2SE 0.0910 {'t': 'AGREES', '2se': 'AGREES'} left [28, 29, 30, 31]
+   c     rho 0.827 d +0.0435 tSE 0.0576 2SE 0.0500 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.831 d +0.0511 tSE 0.0515 2SE 0.0447 {'t': 'AGREES', '2se': 'DIFFERS'}
+uniform A0_t3 NOT UNIFORM p 1.372e-13 outlying [21, 22, 23, 24] r_pool 0.874
+uniform A0_t4 NOT UNIFORM p 2.155e-26 outlying [23, 24, 25, 26] r_pool 0.826
+uniform A1_t3 NOT UNIFORM p 0.002576 outlying [21, 24] r_pool 0.849
+uniform A1_t4 NOT UNIFORM p 3.101e-15 outlying [21, 22, 24, 25, 26] r_pool 0.788
+uniform A2_t3 UNIFORM p 0.1968 outlying [] r_pool 0.839
+uniform A2_t4 NOT UNIFORM p 8.676e-06 outlying [23, 24, 25, 26] r_pool 0.811
