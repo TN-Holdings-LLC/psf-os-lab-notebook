@@ -187,7 +187,7 @@ cells per row; AGREES at the t quantile, 2 SE in brackets):
 | every bit flips with 0.02 | 91 (89) | 2 (0) | 2 (0) | 3 (1) | 1 (0) |
 
 **Gate noise, idle dephasing, amplitude damping** (the workplace VS's その2: plan B + d on the 11-24 ibm_fez record,
-Aer trajectories; t = 3, 30 cells per row (6 where the VS kept 2 seeds); read again by the workplace with this score3,
+Aer trajectories; t = 3, 30 cells per row (15 for the damping, 5 seeds); read again by the workplace with this score3,
 whose (b), (c), (d) equal the VS's table):
 
 | case | (a) | (b) | (b') | (c) | (d) |
@@ -196,17 +196,19 @@ whose (b), (c), (d) equal the VS's table):
 | p2 0.01 | 0 (0) | 28 (26) | 28 (26) | 30 (28) | 29 (27) |
 | p2 0.02 | 0 (0) | 22 (17) | 9 (6) | 29 (28) | 28 (25) |
 | idle dephasing, T2 10 us | 20 (20) | 0 (0) | 0 (0) | 14 (8) | 13 (12) |
-| amplitude damping per CZ, gamma 0.005 (2 seeds) | 0 (0) | 6 (4) | 6 (4) | 2 (2) | 6 (6) |
+| amplitude damping per CZ, gamma 0.005 | 0 (0) | 10 (7) | 10 (7) | 6 (5) | 15 (15) |
+| gamma 0.01 | 0 (0) | 9 (9) | 9 (9) | 5 (5) | 15 (15) |
 | positions 15, 18, 22 depolarized 0.1 per CZ | 0 (0) | 22 (20) | 10 (4) | 30 (30) | 30 (30) |
-| positions 15, 18, 22 damped 0.1 per CZ (2 seeds) | 0 (0) | 4 (4) | 2 (2) | 4 (4) | 6 (6) |
+| positions 15, 18, 22 damped 0.1 per CZ | 0 (0) | 10 (9) | 5 (5) | 9 (9) | 15 (15) |
 
 - Rule 4 halves the false words: without noise 4 of 96 DIFFERS at the t quantile, 9 of 96 at 2 SE (the VS's 64 seeds:
   4.2 % and 7.6 % with 7 pairs, 6.0 % and 8.3 % with 9).
 - (d) reads a fault that a |1> suffers and a |0> does not (61 and 60 of 96 against 30 and 31), the 3-qubit faults under
-  gate noise (30 of 30) and the damping (6 of 6). (c) and (d) follow r under uniform depolarizing up to p2 0.02.
+  gate noise (30 of 30) and the damping (15 of 15 in each damping row; (c) 5 to 9). (c) and (d) follow r under uniform depolarizing up to p2 0.02.
 - Home's two conditions for (b'), on the readout cases: (d) does not fall when a window qubit fails (61, 60: (b') does
   not touch the window rulers), and (b) comes back when the faults sit outside the window (0 -> 91 of 96). Both hold.
-- Under gate noise (b') does worse than (b): p2 0.02 22 -> 9 of 30, the 3-qubit depolarizing 22 -> 10. Guess (not
+- Under gate noise (b') does worse than (b): p2 0.02 22 -> 9 of 30, the 3-qubit depolarizing 22 -> 10, the 3-qubit
+  damping 10 -> 5 of 15. Guess (not
   measured): the mirror holds the layers twice, so the qubits it leaves out are the cone's spreading ones, and the
   mean of the rest is less shrunk than the window. [OWNER: home's rule judged (b') on the two readout conditions; with
   the gate-noise rows it is written here as beside]
