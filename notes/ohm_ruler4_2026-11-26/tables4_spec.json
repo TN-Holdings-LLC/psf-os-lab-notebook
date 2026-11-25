@@ -1,0 +1,10 @@
+[
+ {"name": "readout faults, t >= 3", "folder": "seeds", "t": "ge3",
+  "rulers": ["a", "a_prime", "b", "b_out", "c", "d", "e", "de", "de_lt_d"],
+  "labels": {"a": "(a)", "a_prime": "(a')", "b": "(b)", "b_out": "(b')", "c": "(c)", "d": "(d)", "e": "(e)", "de": "(de)", "de_lt_d": "(de) \\|d\\| < (d) \\|d\\|"},
+  "rows": [["no noise", "none"], ["every position: 1 read as 0 with 0.02 (one-sided)", "ro1"], ["every bit flips with 0.02 (two-sided)", "ro2"], ["positions 14, 17, 18 (outside the window): both ways 0.4", "bo04"]]},
+ {"name": "the direction at t >= 3", "folder": "seeds", "t": "ge3",
+  "rulers": ["dir_a_prime", "dir_a"],
+  "labels": {"dir_a_prime": "with rho_a' (judged)", "dir_a": "with rho_a (beside)"},
+  "rows": [["no noise", "none"], ["one-sided readout 0.02", "ro1"], ["two-sided readout 0.02", "ro2"], ["outside positions both ways 0.4", "bo04"]]}
+]
