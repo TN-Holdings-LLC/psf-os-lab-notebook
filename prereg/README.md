@@ -32,6 +32,14 @@ These rules are for writing a declaration, not for any one test.
 5. **No scatter, no word.** From the same date, a word whose SE is exactly 0 (data with no scatter) reads NOT READ,
    not a difference.
    - The owner's choices, 2026-11-24 (15:44 JST), on the workplace's points 1 and 4.
+6. **The procedure, word for word.** Before a declaration is pushed, its "Device procedure" block is run word for
+   word on a try-build with `tools/procedure_dry.py PREREG --fetch-in RECORD/fetch_in --answers SEALED`: every line
+   that does not reach IBM (pick, build, check) runs as written, with OUT, ANSWERS_SEALED and python replaced; the
+   lines that fetch from or send to IBM, and the score lines (score, score2, score3), are not run. The declaration is
+   pushed only when every line run passes; the tool's output is kept beside the try-build.
+   - Added 2026-11-25, after `results/ohm-ruler-night-2026-11-24`: the first try stopped on the procedure's build
+     line (plan flags that `build` does not take), which the try-build had not run as written. The owner's choice,
+     2026-11-25 (12:2x JST), on the workplace VS's text.
 
 The owner's choices for psf-os 0.3.2 (2026-11-22 22:0x JST): a circuit's delays capped at 100 µs (allow_long_delay=True
 passes); the charge estimate is the 0.3.1 model plus the delays' term (the records' estimates unchanged; 2-7 % above

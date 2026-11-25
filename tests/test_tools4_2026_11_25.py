@@ -94,7 +94,9 @@ def test_draft3_beside_list_form():
     assert rows                                                      # the draft has a beside list
     forms = {r["form"] for r in rows}
     if forms == {"named"}:                                           # the draft as finished on 2026-11-25 b
-        assert [r["head"] for r in rows] == ["order", "growth", "smallest difference", "left out", "sentinel"]
+        assert [r["head"] for r in rows] in (
+            ["order", "growth", "smallest difference", "left out", "sentinel"],          # the draft at 93b138d7
+            ["order", "growth", "smallest difference", "candidate 1", "outlying positions", "sentinel"])  # at 2aa4b404
 
 
 # ---- 3. reading tables: "|0>" inside a cell, "(a)" against the tool's "a" ------------------------------------------
