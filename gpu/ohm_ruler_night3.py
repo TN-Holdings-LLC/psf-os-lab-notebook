@@ -13,8 +13,11 @@ changed. This file adds:
             raw M, W (as 11-24); the one-factor test (as 11-24, with its shot-noise SE, NOT READ on a 0 SE);
             rulers (a) total, (b) |0> mirror, (c) |0> mirror on the window, (d) string mirrors' odd part on the window,
             (d1) the s00 string mirror alone on the window;
-            candidate 1: (b), (c), (d), (d1) again with the qubits whose mirror value is below --tau left out of the mean
-                         (NOT READ when fewer than half are left);
+            candidate 1 (home's form, 11-25 b): (b) again with the qubits OUTSIDE the window whose |0> mirror <Z> is
+                         below --tau left out of its mean (key b_out; NOT READ when fewer than half are left); the
+                         window rulers (c), (d), (d1) are not changed by it (their qubits are the window's);
+            beside: the 11-25 a form, every averaged qubit below --tau left out (keys *_tau; it harms a window ruler
+                         when a window qubit fails, the dry runs of 11-25 a);
             candidate 3: the direction r - rho_a per cell (the window's own factor against the circuit's total).
           Words: AGREES when |d| < t_{0.975, K-1} SE (prereg rule 4), DIFFERS otherwise, NOT READ when SE = 0 (rule 5);
           the 2 SE word beside. The one-factor test keeps its chi2 (its SE is shot noise, not the pairs' scatter).
@@ -43,7 +46,35 @@ import ohm_ruler_night2 as ORN2  # noqa: E402  (read only: t quantile table)
 
 TAU = 0.3            # [OWNER] candidate 1: a qubit whose mirror value is below TAU leaves the ruler's mean
 KEEP_FRACTION = 0.5  # [OWNER] candidate 1: fewer than this fraction left -> NOT READ
-RULERS = ("a", "b", "c", "d", "d1")
+RULERS = ("a", "b", "b_out", "c", "d", "d1")
+
+# [OWNER] the reading tables, word for word as the draft's tables A and B (prereg/drafts-2026-11-25); each row reads on
+# its own conditions only
+READ_TABLE_A = {
+    ("a", "AGREES"): "the circuit's total carries the window's shrink",
+    ("a", "DIFFERS"): "the circuit's total does not carry the window's shrink",
+    ("a", "NOT READ"): "no scatter between the pairs (rule 5)",
+    ("b", "AGREES"): "the |0> mirror's mean over the circuit carries the window's shrink",
+    ("b", "DIFFERS"): "the |0> mirror's mean over the circuit does not carry the window's shrink",
+    ("b", "NOT READ"): "no scatter (rule 5)",
+    ("b_out", "AGREES"): "the |0> mirror's mean over the circuit, its low qubits outside the window left out, carries the window's shrink",
+    ("b_out", "DIFFERS"): "the |0> mirror's mean over the circuit, its low qubits outside the window left out, does not carry the window's shrink",
+    ("b_out", "NOT READ"): "fewer than half of the circuit's qubits left, or no scatter (rule 5)",
+    ("c", "AGREES"): "the |0> mirror's mean over the window carries the window's shrink",
+    ("c", "DIFFERS"): "the |0> mirror's mean over the window does not carry the window's shrink",
+    ("c", "NOT READ"): "no scatter (rule 5)",
+    ("d", "AGREES"): "the string mirrors' odd part over the window carries the window's shrink",
+    ("d", "DIFFERS"): "the string mirrors' odd part over the window does not carry the window's shrink",
+    ("d", "NOT READ"): "no scatter (rule 5)",
+}
+READ_TABLE_B = {
+    ("WINDOW SHRINKS LESS", "DIFFERS"): "the window keeps more of its odd part than the circuit's total: the total overstates the window's shrink",
+    ("WINDOW SHRINKS LESS", "AGREES"): "the window keeps more than the total, within what ruler (a)'s word can see",
+    ("WINDOW SHRINKS MORE", "DIFFERS"): "the window loses more of its odd part than the circuit's total: the total understates the window's shrink",
+    ("WINDOW SHRINKS MORE", "AGREES"): "the window loses more than the total, within what ruler (a)'s word can see",
+    ("NOT SEEN", "DIFFERS"): "no lean between the window and the total is seen, yet the total does not carry the window's shrink: read with the one-factor word",
+    ("NOT SEEN", "AGREES"): "the window and the total shrink alike",
+}
 
 
 def pairs_by_t(spec, ts, kmax):
@@ -225,6 +256,23 @@ def cmd_check3(a):
 
 # --------------------------------------------------------------------------------------------------------- score3
 
+def sentinel_overlap(jobd):
+    """The qubits the ring sentinel's circuits touch against those of every other circuit of the job, from the circuits
+    as sent (every operation but barriers), as the workplace VS's tools/independent_recount.sentinel_overlap; NOT ON
+    USER QUBITS when they share none."""
+    from qiskit import qpy
+    man = json.load(open(os.path.join(jobd, "manifest.json")))
+    circs = qpy.load(open(os.path.join(jobd, "circuits.qpy"), "rb"))
+    role = {c["cell"]: c.get("role") for c in man["cells"]}
+    sent, other = set(), set()
+    for pb, qc in zip(man["pubs"], circs):
+        act = {qc.find_bit(q).index for ins in qc.data if ins.operation.name != "barrier" for q in ins.qubits}
+        (sent if role[pb["cell"]] == "sentinel" else other).update(act)
+    ov = sorted(sent & other)
+    return dict(sentinel_qubits=len(sent), other_qubits=len(other), overlap=len(ov), overlap_qubits=ov,
+                word="NO SENTINEL" if not sent else ("NOT ON USER QUBITS" if not ov else "ON USER QUBITS"))
+
+
 def counts_mean_se(counts, rec_labels, labels, weights, idx):
     """Per-label <Z>, and the shot-noise SE of the per-shot mean of weights[q] Z_q over labels[idx]."""
     k_of = {lb: k for k, lb in enumerate(rec_labels)}
@@ -277,7 +325,8 @@ def cmd_score3(a):
     strs = b["strings"]
     shots = b["shots"]
     tau = a.tau
-    res = dict(device=b["device"], tau=tau, keep_fraction=KEEP_FRACTION, cells={}, uniform={}, direction={}, beside={})
+    res = dict(device=b["device"], tau=tau, keep_fraction=KEEP_FRACTION, cells={}, uniform={}, direction={}, tables={},
+               beside={})
     for arm in ORN.ARMS:
         for t in b["cycles"]:
             s00 = ORN.tag(arm, t, "L", "s00")
@@ -338,7 +387,10 @@ def cmd_score3(a):
                     zc, _ = counts_mean_se(cc_, rlc, lbc, sig, [])
                     sets["d"] = ((zs - zc) / 2 * sig, wi, ("sc", (cs, rls, lbs), (cc_, rlc, lbc)))
             for r, (val, idx, src) in sets.items():
-                for variant, use in (("", list(idx)), ("_tau", [i for i in idx if val[i] >= tau])):
+                variants = [("", list(idx)), ("_tau", [i for i in idx if val[i] >= tau])]
+                if r == "b":                                  # candidate 1, home's form: outside the window only
+                    variants.append(("_out", [i for i in idx if i in wi or val[i] >= tau]))
+                for variant, use in variants:
                     key = r + variant
                     if variant and len(use) < KEEP_FRACTION * len(idx):
                         R[key] = dict(words=dict(t="NOT READ", **{"2se": "NOT READ"}), kept=len(use), of=len(idx),
@@ -393,10 +445,38 @@ def cmd_score3(a):
                         wd = "NOT SEEN"
                     res["direction"][f"{arm}_t{t}_L"] = dict(r_minus_rho_a=float(dl.mean()), se=se_dl, t_se=tq * se_dl,
                                                              word=wd, ruler_a=R["a"]["words"]["t"])
+                    tb = READ_TABLE_B.get((wd, R["a"]["words"]["t"]), "not read (rule 5)")
+                else:
+                    tb = None
+                ta = {r: READ_TABLE_A[(r, R[r]["words"]["t"])] for r in ("a", "b", "b_out", "c", "d") if r in R}
+                res["tables"][f"{arm}_t{t}_L"] = dict(A=ta, B=tb)
+    # beside, never judged: the order of W and the ruled W at t >= 3 (A0 > A1 > A2); W(t) / W(1) raw and exact; the
+    # sentinel and its overlap with the user's qubits
+    for t in b["cycles"]:
+        if t < 3:
+            continue
+        cs = [res["cells"][f"{arm}_t{t}_L"] for arm in ORN.ARMS]
+        order = {"W_device": [c["W_device"] for c in cs], "W_exact": [c["W_exact"] for c in cs]}
+        for r in ("a", "b", "b_out", "c", "d"):
+            if all(c["rulers"].get(r, {}).get("d") is not None for c in cs):
+                order[f"W_{r}"] = [c["W_exact"] + c["rulers"][r]["d"] for c in cs]
+        res["beside"][f"order_t{t}"] = {k: ("yes" if v[0] > v[1] > v[2] else "no") for k, v in order.items()}
+    t1 = min(b["cycles"])
+    for arm in ORN.ARMS:
+        c1 = res["cells"][f"{arm}_t{t1}_L"]
+        for t in b["cycles"]:
+            if t != t1:
+                ct = res["cells"][f"{arm}_t{t}_L"]
+                res["beside"][f"{arm}_W{t}_over_W{t1}"] = dict(raw=ct["W_device"] / c1["W_device"],
+                                                               exact=ct["W_exact"] / c1["W_exact"])
     try:
         res["beside"]["sentinel"] = sentinel.verdict(jobd, runs)["status"]
     except Exception as e:                                # beside only: never stops the scores
         res["beside"]["sentinel"] = f"not read ({type(e).__name__})"
+    try:
+        res["beside"]["sentinel_overlap"] = sentinel_overlap(jobd)
+    except (OSError, KeyError, ValueError) as e:          # beside only: never stops the scores
+        res["beside"]["sentinel_overlap"] = f"not read ({type(e).__name__})"
     json.dump(res, open(os.path.join(a.out, "scores3.json"), "w"), indent=1)
     for k, c in res["cells"].items():
         line = (f"{k}: K {c['K']}; raw W {c['W']} ({c['W_ratio']:.3f}), excess {c['W_excess']:+.3f}; " + "; ".join(
