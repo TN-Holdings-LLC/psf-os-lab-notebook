@@ -162,9 +162,27 @@ The raw words keep 11-23's meaning. The one-factor word is read on its own line,
 
 ## Dry runs (no device; `notes/ohm_ruler3_2026-11-25/` and the workplace VS's その2)
 
-Filled when the runs end: noise-free; illustrative gate noise (p2 per CZ), amplitude damping, idle (wait-time)
-dephasing; and "1 to 3 qubits fail badly" (illustrative, not placed where any device's qubits failed). Per candidate:
-the words' rates at 2 SE and at the t quantile; candidate 1's left-out qubits.
+Plan B + d, built on the 11-23 ibm_fez record; `dry3.py` samples every circuit noise-free (the sentinel not sampled)
+and adds ILLUSTRATIVE readout-like faults written by hand, at chain positions chosen by hand (not where any device's
+qubits failed). 16 seeds per case; t >= 3, 96 cells per row; AGREES at the t quantile (2 SE in brackets):
+
+| case | (a) | (b) | (c) | (d) | (d1) | (b), tau 0.3 | (d), tau 0.3 |
+|---|---|---|---|---|---|---|---|
+| no noise | 92 (87) | 92 (87) | 92 (87) | 92 (87) | 92 (87) | 92 (87) | 92 (87) |
+| positions 15, 18, 22: 1 read as 0 with 0.4 | 73 (68) | 30 (26) | 30 (26) | 61 (57) | 30 (26) | 30 (26) | 61 (57) |
+| the same with 0.8 | 69 (66) | 31 (27) | 31 (27) | 60 (52) | 31 (27) | 31 (27) | 31 (27) |
+| positions 14, 17, 18 (outside the window): both ways 0.4 | 67 (62) | 0 (0) | 92 (87) | 92 (87) | 92 (87) | 91 (86) | 92 (87) |
+| every bit flips with 0.02 | 91 (89) | 2 (0) | 3 (1) | 1 (0) | 1 (0) | 2 (0) | 1 (0) |
+
+- Rule 4 halves the false words: without noise 4 of 96 DIFFERS at the t quantile, 9 of 96 at 2 SE.
+- A fault that a |1> suffers and a |0> does not is seen by (d) only (rho_d 0.965 and 0.929; rho_b, rho_c, rho_d1 1.000).
+- Candidate 1 helps (b) when the faulty qubits sit outside the window (0 -> 91 of 96) and harms (d) when a faulty qubit
+  sits in the window (60 -> 31 of 96 at q 0.8: the window's W carries that qubit's shrink). [OWNER: a rule that leaves
+  out only qubits outside the window keeps the first and avoids the second; not built]
+- Uniform readout flips hit each mirror once: every mirror ruler's square root misses them, (a) does not.
+- The direction without noise: 7 of 96 false words. With the faults outside the window: WINDOW SHRINKS LESS 34 of 96.
+- Gate noise, amplitude damping, idle dephasing and "a few qubits fail" under gate noise: the workplace VS's その2
+  (pod), filled when it returns.
 
 ## Device procedure (home)
 

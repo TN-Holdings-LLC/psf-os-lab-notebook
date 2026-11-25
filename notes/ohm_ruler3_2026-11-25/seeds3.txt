@@ -1,0 +1,136 @@
+| case | seeds | ruler | t | cells | AGREES (t quantile) | AGREES (2 SE) | NOT READ |
+|---|---|---|---|---|---|---|---|
+| bk04 | 16 | (a) | t>=3 | 96 | 73 (76 %) | 68 (71 %) | 0 |
+| bk04 | 16 | (b) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (b) | t>=3 | 96 | 30 (31 %) | 26 (27 %) | 0 |
+| bk04 | 16 | (c) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (c) | t>=3 | 96 | 30 (31 %) | 26 (27 %) | 0 |
+| bk04 | 16 | (d) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (d) | t>=3 | 96 | 61 (64 %) | 57 (59 %) | 0 |
+| bk04 | 16 | (d1) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (d1) | t>=3 | 96 | 30 (31 %) | 26 (27 %) | 0 |
+| bk04 | 16 | (b_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (b_tau) | t>=3 | 96 | 30 (31 %) | 26 (27 %) | 0 |
+| bk04 | 16 | (c_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (c_tau) | t>=3 | 96 | 30 (31 %) | 26 (27 %) | 0 |
+| bk04 | 16 | (d_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (d_tau) | t>=3 | 96 | 61 (64 %) | 57 (59 %) | 0 |
+| bk04 | 16 | (d1_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk04 | 16 | (d1_tau) | t>=3 | 96 | 30 (31 %) | 26 (27 %) | 0 |
+| bk08 | 16 | (a) | t>=3 | 96 | 69 (72 %) | 66 (69 %) | 0 |
+| bk08 | 16 | (b) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (b) | t>=3 | 96 | 31 (32 %) | 27 (28 %) | 0 |
+| bk08 | 16 | (c) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (c) | t>=3 | 96 | 31 (32 %) | 27 (28 %) | 0 |
+| bk08 | 16 | (d) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (d) | t>=3 | 96 | 60 (62 %) | 52 (54 %) | 0 |
+| bk08 | 16 | (d1) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (d1) | t>=3 | 96 | 31 (32 %) | 27 (28 %) | 0 |
+| bk08 | 16 | (b_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (b_tau) | t>=3 | 96 | 31 (32 %) | 27 (28 %) | 0 |
+| bk08 | 16 | (c_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (c_tau) | t>=3 | 96 | 31 (32 %) | 27 (28 %) | 0 |
+| bk08 | 16 | (d_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (d_tau) | t>=3 | 96 | 31 (32 %) | 27 (28 %) | 0 |
+| bk08 | 16 | (d1_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bk08 | 16 | (d1_tau) | t>=3 | 96 | 31 (32 %) | 27 (28 %) | 0 |
+| bo04 | 16 | (a) | t>=3 | 96 | 67 (70 %) | 62 (65 %) | 0 |
+| bo04 | 16 | (b) | t1 | 48 | 47 (98 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (b) | t>=3 | 96 | 0 (0 %) | 0 (0 %) | 0 |
+| bo04 | 16 | (c) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (c) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| bo04 | 16 | (d) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (d) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| bo04 | 16 | (d1) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (d1) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| bo04 | 16 | (b_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (b_tau) | t>=3 | 96 | 91 (95 %) | 86 (90 %) | 0 |
+| bo04 | 16 | (c_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (c_tau) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| bo04 | 16 | (d_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (d_tau) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| bo04 | 16 | (d1_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| bo04 | 16 | (d1_tau) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| fl02 | 16 | (a) | t>=3 | 96 | 91 (95 %) | 89 (93 %) | 0 |
+| fl02 | 16 | (b) | t1 | 48 | 46 (96 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (b) | t>=3 | 96 | 2 (2 %) | 0 (0 %) | 0 |
+| fl02 | 16 | (c) | t1 | 48 | 46 (96 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (c) | t>=3 | 96 | 3 (3 %) | 1 (1 %) | 0 |
+| fl02 | 16 | (d) | t1 | 48 | 45 (94 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (d) | t>=3 | 96 | 1 (1 %) | 0 (0 %) | 0 |
+| fl02 | 16 | (d1) | t1 | 48 | 46 (96 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (d1) | t>=3 | 96 | 1 (1 %) | 0 (0 %) | 0 |
+| fl02 | 16 | (b_tau) | t1 | 48 | 46 (96 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (b_tau) | t>=3 | 96 | 2 (2 %) | 0 (0 %) | 0 |
+| fl02 | 16 | (c_tau) | t1 | 48 | 46 (96 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (c_tau) | t>=3 | 96 | 3 (3 %) | 1 (1 %) | 0 |
+| fl02 | 16 | (d_tau) | t1 | 48 | 45 (94 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (d_tau) | t>=3 | 96 | 1 (1 %) | 0 (0 %) | 0 |
+| fl02 | 16 | (d1_tau) | t1 | 48 | 46 (96 %) | 42 (88 %) | 0 |
+| fl02 | 16 | (d1_tau) | t>=3 | 96 | 1 (1 %) | 0 (0 %) | 0 |
+| none | 16 | (a) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (b) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (b) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (c) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (c) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (d) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (d) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (d1) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (d1) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (b_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (b_tau) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (c_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (c_tau) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (d_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (d_tau) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+| none | 16 | (d1_tau) | t1 | 48 | 48 (100 %) | 45 (94 %) | 0 |
+| none | 16 | (d1_tau) | t>=3 | 96 | 92 (96 %) | 87 (91 %) | 0 |
+
+bk04: direction {'NOT SEEN': 87, 'WINDOW SHRINKS LESS': 5, 'WINDOW SHRINKS MORE': 4}; one factor {'NOT UNIFORM': 96}
+bk08: direction {'NOT SEEN': 92, 'WINDOW SHRINKS LESS': 4}; one factor {'NOT UNIFORM': 96}
+bo04: direction {'NOT SEEN': 62, 'WINDOW SHRINKS LESS': 34}; one factor {'NOT UNIFORM': 9, 'UNIFORM': 87}
+fl02: direction {'NOT SEEN': 92, 'WINDOW SHRINKS MORE': 3, 'WINDOW SHRINKS LESS': 1}; one factor {'NOT UNIFORM': 10, 'UNIFORM': 86}
+none: direction {'NOT SEEN': 89, 'WINDOW SHRINKS MORE': 3, 'WINDOW SHRINKS LESS': 4}; one factor {'NOT UNIFORM': 9, 'UNIFORM': 87}
+
+bk08 (d_tau): left out by chain position {22: 96}
+bo04 (b_tau): left out by chain position {14: 95, 17: 96, 18: 144}
+bk04 (b): mean rho at t >= 3 1.000 over 96 cells
+bk04 (b_tau): mean rho at t >= 3 1.000 over 96 cells
+bk04 (c): mean rho at t >= 3 1.000 over 96 cells
+bk04 (c_tau): mean rho at t >= 3 1.000 over 96 cells
+bk04 (d): mean rho at t >= 3 0.965 over 96 cells
+bk04 (d1): mean rho at t >= 3 1.000 over 96 cells
+bk04 (d1_tau): mean rho at t >= 3 1.000 over 96 cells
+bk04 (d_tau): mean rho at t >= 3 0.965 over 96 cells
+bk08 (b): mean rho at t >= 3 1.000 over 96 cells
+bk08 (b_tau): mean rho at t >= 3 1.000 over 96 cells
+bk08 (c): mean rho at t >= 3 1.000 over 96 cells
+bk08 (c_tau): mean rho at t >= 3 1.000 over 96 cells
+bk08 (d): mean rho at t >= 3 0.929 over 96 cells
+bk08 (d1): mean rho at t >= 3 1.000 over 96 cells
+bk08 (d1_tau): mean rho at t >= 3 1.000 over 96 cells
+bk08 (d_tau): mean rho at t >= 3 1.000 over 96 cells
+bo04 (b): mean rho at t >= 3 0.933 over 96 cells
+bo04 (b_tau): mean rho at t >= 3 1.000 over 96 cells
+bo04 (c): mean rho at t >= 3 1.000 over 96 cells
+bo04 (c_tau): mean rho at t >= 3 1.000 over 96 cells
+bo04 (d): mean rho at t >= 3 1.000 over 96 cells
+bo04 (d1): mean rho at t >= 3 1.000 over 96 cells
+bo04 (d1_tau): mean rho at t >= 3 1.000 over 96 cells
+bo04 (d_tau): mean rho at t >= 3 1.000 over 96 cells
+fl02 (b): mean rho at t >= 3 0.980 over 96 cells
+fl02 (b_tau): mean rho at t >= 3 0.980 over 96 cells
+fl02 (c): mean rho at t >= 3 0.980 over 96 cells
+fl02 (c_tau): mean rho at t >= 3 0.980 over 96 cells
+fl02 (d): mean rho at t >= 3 0.980 over 96 cells
+fl02 (d1): mean rho at t >= 3 0.980 over 96 cells
+fl02 (d1_tau): mean rho at t >= 3 0.980 over 96 cells
+fl02 (d_tau): mean rho at t >= 3 0.980 over 96 cells
+none (b): mean rho at t >= 3 1.000 over 96 cells
+none (b_tau): mean rho at t >= 3 1.000 over 96 cells
+none (c): mean rho at t >= 3 1.000 over 96 cells
+none (c_tau): mean rho at t >= 3 1.000 over 96 cells
+none (d): mean rho at t >= 3 1.000 over 96 cells
+none (d1): mean rho at t >= 3 1.000 over 96 cells
+none (d1_tau): mean rho at t >= 3 1.000 over 96 cells
+none (d_tau): mean rho at t >= 3 1.000 over 96 cells
