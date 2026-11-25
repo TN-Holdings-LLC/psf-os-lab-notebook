@@ -1,0 +1,60 @@
+== A0_t1 (K 7) left out []
+   d        d -0.0099  t width 0.0376  2SE 0.0307  {'t': 'AGREES', '2se': 'AGREES'}
+   dq       d -0.0099  t width 0.0376  2SE 0.0307  {'t': 'AGREES', '2se': 'AGREES'}
+   m_q {'20': 0.899}
+== A0_t3 (K 7) left out []
+   a        d -0.0028  t width 0.0378  2SE 0.0309  {'t': 'AGREES', '2se': 'AGREES'}  rho_mean 0.893
+   a_prime  d -0.0028  t width 0.0378  2SE 0.0309  {'t': 'AGREES', '2se': 'AGREES'}  rho_mean 0.893
+   d        d +0.0205  t width 0.0655  2SE 0.0536  {'t': 'AGREES', '2se': 'AGREES'}
+   dq       d +0.0227  t width 0.0631  2SE 0.0516  {'t': 'AGREES', '2se': 'AGREES'}
+   dir_a        -0.0239 (t width 0.0292) NOT SEEN
+   dir_a_prime  -0.0239 (t width 0.0292) NOT SEEN
+   m_q {'20': 0.79, '21': 0.803, '22': 0.81, '23': 0.787, '24': 0.864}
+== A0_t4 (K 9) left out [28, 29, 30, 31]
+   a        d -0.2120  t width 0.0963  2SE 0.0835  {'t': 'DIFFERS', '2se': 'DIFFERS'}  rho_mean 0.758
+   a_prime  d -0.0315  t width 0.0488  2SE 0.0424  {'t': 'AGREES', '2se': 'AGREES'}  rho_mean 0.829
+   d        d +0.0298  t width 0.1055  2SE 0.0915  {'t': 'AGREES', '2se': 'AGREES'}
+   dq       d +0.0257  t width 0.1046  2SE 0.0907  {'t': 'AGREES', '2se': 'AGREES'}
+   dir_a        +0.0593 (t width 0.0428) WINDOW SHRINKS LESS
+   dir_a_prime  -0.0120 (t width 0.0289) NOT SEEN
+   m_q {'20': 0.759, '21': 0.766, '22': 0.756, '23': 0.789, '24': 0.834, '25': 0.779, '26': 0.661}
+== A1_t1 (K 7) left out []
+   d        d +0.0035  t width 0.0277  2SE 0.0226  {'t': 'AGREES', '2se': 'AGREES'}
+   dq       d +0.0035  t width 0.0277  2SE 0.0226  {'t': 'AGREES', '2se': 'AGREES'}
+   m_q {'20': 0.882}
+== A1_t3 (K 7) left out []
+   a        d +0.0238  t width 0.0369  2SE 0.0302  {'t': 'AGREES', '2se': 'AGREES'}  rho_mean 0.883
+   a_prime  d +0.0238  t width 0.0369  2SE 0.0302  {'t': 'AGREES', '2se': 'AGREES'}  rho_mean 0.883
+   d        d +0.0265  t width 0.0523  2SE 0.0428  {'t': 'AGREES', '2se': 'AGREES'}
+   dq       d +0.0339  t width 0.0488  2SE 0.0399  {'t': 'AGREES', '2se': 'AGREES'}
+   dir_a        -0.0384 (t width 0.0360) WINDOW SHRINKS MORE
+   dir_a_prime  -0.0384 (t width 0.0360) WINDOW SHRINKS MORE
+   m_q {'20': 0.712, '21': 0.727, '22': 0.776, '23': 0.779, '24': 0.827}
+== A1_t4 (K 9) left out [28, 29, 30, 31]
+   a        d -0.1894  t width 0.1137  2SE 0.0986  {'t': 'DIFFERS', '2se': 'DIFFERS'}  rho_mean 0.727
+   a_prime  d +0.0187  t width 0.0672  2SE 0.0583  {'t': 'AGREES', '2se': 'AGREES'}  rho_mean 0.800
+   d        d +0.0445  t width 0.0817  2SE 0.0708  {'t': 'AGREES', '2se': 'AGREES'}
+   dq       d +0.0338  t width 0.0820  2SE 0.0711  {'t': 'AGREES', '2se': 'AGREES'}
+   dir_a        +0.0525 (t width 0.0315) WINDOW SHRINKS LESS
+   dir_a_prime  -0.0201 (t width 0.0402) NOT SEEN
+   m_q {'20': 0.685, '21': 0.653, '22': 0.697, '23': 0.68, '24': 0.729, '25': 0.699, '26': 0.571}
+== A2_t1 (K 7) left out []
+   d        d +0.0020  t width 0.0256  2SE 0.0209  {'t': 'AGREES', '2se': 'AGREES'}
+   dq       d +0.0020  t width 0.0256  2SE 0.0209  {'t': 'AGREES', '2se': 'AGREES'}
+   m_q {'20': 0.856}
+== A2_t3 (K 7) left out []
+   a        d +0.0375  t width 0.0264  2SE 0.0216  {'t': 'DIFFERS', '2se': 'DIFFERS'}  rho_mean 0.876
+   a_prime  d +0.0375  t width 0.0264  2SE 0.0216  {'t': 'DIFFERS', '2se': 'DIFFERS'}  rho_mean 0.876
+   d        d +0.0489  t width 0.0486  2SE 0.0397  {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   dq       d +0.0532  t width 0.0477  2SE 0.0390  {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   dir_a        -0.0478 (t width 0.0556) NOT SEEN
+   dir_a_prime  -0.0478 (t width 0.0556) NOT SEEN
+   m_q {'20': 0.737, '21': 0.708, '22': 0.77, '23': 0.78, '24': 0.805}
+== A2_t4 (K 9) left out [28, 29, 30, 31]
+   a        d -0.1993  t width 0.1388  2SE 0.1204  {'t': 'DIFFERS', '2se': 'DIFFERS'}  rho_mean 0.734
+   a_prime  d +0.0377  t width 0.0857  2SE 0.0743  {'t': 'AGREES', '2se': 'AGREES'}  rho_mean 0.814
+   d        d +0.0511  t width 0.0515  2SE 0.0447  {'t': 'AGREES', '2se': 'DIFFERS'}
+   dq       d +0.0459  t width 0.0501  2SE 0.0434  {'t': 'AGREES', '2se': 'DIFFERS'}
+   dir_a        +0.0686 (t width 0.0288) WINDOW SHRINKS LESS
+   dir_a_prime  -0.0106 (t width 0.0393) NOT SEEN
+   m_q {'20': 0.657, '21': 0.66, '22': 0.734, '23': 0.731, '24': 0.735, '25': 0.732, '26': 0.586}

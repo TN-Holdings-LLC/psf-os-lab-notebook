@@ -131,6 +131,15 @@ answers' sha256 is the declared e581df9d...; the answers by label differ from it
 28 to 31 are physical 104, 103, 102, 101, each with a mirror below 0.3 tonight. Reproduce SAME. Corrected here: the
 sentence on the 11-24 mirrors (beside). Its tool and output: `notes/verify_2026-11-25/`.
 
+After the record, never judged (`notes/verify_2026-11-25/or3_beside_aprime_dq.txt`, the home VS; run again at home on
+the committed record: the same text and JSON): (a'), the circuit's total over the qubits (b') keeps, divided by the
+exact total over the same qubits, AGREES in five of six cells at t >= 3 (DIFFERS at A2 t = 3; at t = 3 it equals (a));
+at t = 4, d −0.032 / +0.019 / +0.038 with t widths 0.049 / 0.067 / 0.086, and the direction r − rho_a' is NOT SEEN in
+all three arms (−0.011 to −0.020) where r − rho_a read WINDOW SHRINKS LESS. Ruler (d) taken qubit by qubit over the
+window differs from (d) by −0.005 to +0.007 in d and in no word; its d stays positive at t >= 3 (+0.02 to +0.05).
+Guess (not measured): on this record, qubits 101 to 104 pulling the circuit's total down account for tonight's
+WINDOW SHRINKS LESS at t = 4.
+
 ## Reproduce
 
 `python reproduce.py --psf-os <psf-os 0.3.3> ohm-ruler3-night-2026-11-25` (1 of 1 SAME at home).
