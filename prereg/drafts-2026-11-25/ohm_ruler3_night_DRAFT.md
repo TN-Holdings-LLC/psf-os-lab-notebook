@@ -56,7 +56,8 @@ mirrors). Without noise every rho is 1 and every W_x equals W_exact.
 - **(b) the |0> mirror over the circuit** (as 11-24): rho_b = sqrt(mean over the circuit's qubits of the mirror's <Z>).
 - **(b') candidate 1, the |0> mirror over the circuit with its low qubits outside the window left out** [OWNER: home's
   proposal was "judged if the dry runs meet both conditions, beside otherwise"; the dry runs below do not meet them
-  under gate noise, so (b') is **beside, not judged**]: a qubit **outside the
+  under gate noise, so (b') is **beside, not judged**; the workplace proposes to drop it altogether and leave the
+  locating of failing qubits to the one-factor test's outlying positions below]: a qubit **outside the
   window** whose |0> mirror <Z_q> is below **tau = 0.3** is left out of (b)'s mean (not out of the circuit or of W);
   window qubits always stay (W carries their shrink). When fewer than half of the circuit's qubits are left, NOT READ.
   tau is set from the dry runs, never from a device record.
@@ -123,6 +124,8 @@ Per cell, over its K pairs:
   - growth: W(t) / W(1), raw and exact
   - smallest difference: each ruler's t SE per cell
   - candidate 1: ruler (b')'s words and the qubits it leaves out, per cell
+  - outlying positions: per cell at t >= 3, the window positions whose r lies beyond 2 shot-noise SE of the pooled r
+    (where the window departs from one factor)
   - sentinel: the sentinel's word and its overlap with the user's qubits
 
 ## Reading tables (fixed before the data; every combination on one row; each row reads on its own conditions)

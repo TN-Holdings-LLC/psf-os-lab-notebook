@@ -429,6 +429,10 @@ def cmd_score3(a):
                     p = ORN.chi2_sf(chi2, len(use) - 1)
                     u = dict(word="UNIFORM" if p >= ORN.LEVEL else "NOT UNIFORM", positions=[pos[i] for i in use],
                              r=r_pos.tolist(), se=se_pos.tolist(), r_pool=pool, chi2=chi2, dof=len(use) - 1, p=p)
+                    # beside: where the window departs from one factor (each position's r beyond 2 shot-noise SE of
+                    # the pooled r; the SE is shot noise, not the pairs' scatter, so rule 4 does not apply)
+                    u["outlying_positions"] = [dict(position=pos[i], r=float(r), se=float(e))
+                                               for i, r, e in zip(use, r_pos, se_pos) if abs(r - pool) > 2 * e]
                 res["uniform"][f"{arm}_t{t}_L"] = u
                 if rho_a is not None and use:
                     r_k = np.sum(Od[:, use] * Oe[:, use], axis=1) / np.sum(Oe[:, use] ** 2, axis=1)
@@ -488,7 +492,9 @@ def cmd_score3(a):
         print(f"direction {k}: r - rho_a {v['r_minus_rho_a']:+.3f} (t SE {v['t_se']:.3f}) {v['word']}; ruler (a) "
               f"{v['ruler_a']}")
     for k, u in res["uniform"].items():
-        print(f"uniform {k}: {u['word']}" + (f" (p {u['p']:.3f})" if "p" in u else ""))
+        print(f"uniform {k}: {u['word']}" + (f" (p {u['p']:.3f})" if "p" in u else "")
+              + (f"; outlying positions {[o['position'] for o in u['outlying_positions']]}"
+                 if u.get("outlying_positions") else ""))
 
 
 def main():
