@@ -185,3 +185,39 @@ def test_no_scatter_reads_not_read(tmp_path, monkeypatch):
         assert u["word"] == "NOT READ", k
     for k, v in res["direction"].items():
         assert v["word"] == "NOT READ", k
+
+
+def test_candidate1_outside_window_form(tmp_path, monkeypatch):
+    # low |0> mirror values outside the window are left out of (b_out); a low value inside the window is kept
+    def low_out(pos, win):
+        out = [p for p in pos if p not in win][:3]
+        return [0.1 if p in out else 0.85 ** 2 for p in pos]
+    res = _s3(_job3(tmp_path, monkeypatch, mirror=low_out, K=5, eta=0.002))
+    for k, c in res["cells"].items():
+        R = c["rulers"]
+        assert len(R["b_out"]["left_out"]) == 3 and not set(R["b_out"]["left_out"]) & set(ORN.window(3))
+        assert R["b_out"]["words"]["t"] == "AGREES" and R["b"]["words"]["t"] == "DIFFERS", k
+    tmp2 = tmp_path / "in"
+    tmp2.mkdir()
+
+    def low_in(pos, win):
+        return [0.1 if p == win[1] else 0.85 ** 2 for p in pos]
+    res = _s3(_job3(tmp2, monkeypatch, mirror=low_in, K=5, eta=0.002))
+    for k, c in res["cells"].items():
+        assert not c["rulers"]["b_out"].get("left_out"), k
+        assert c["rulers"]["b_tau"]["left_out"] == [ORN.window(3)[1]]
+
+
+def test_reading_tables_word_for_word_in_the_draft():
+    draft = open(os.path.join(ROOT, "prereg", "drafts-2026-11-25", "ohm_ruler3_night_DRAFT.md"), encoding="utf-8").read()
+    for (r, w), text in ORN3.READ_TABLE_A.items():
+        assert f"| ({r}) | {w} | {text} |" in draft, (r, w)
+    for (d, w), text in ORN3.READ_TABLE_B.items():
+        assert f"| {d} | {w} | {text} |" in draft, (d, w)
+
+
+def test_scores3_tables_and_sentinel_beside(tmp_path, monkeypatch):
+    res = _s3(_job3(tmp_path, monkeypatch, K=5, eta=0.002))
+    for k, v in res["tables"].items():
+        assert v["A"]["d"] == ORN3.READ_TABLE_A[("d", res["cells"][k]["rulers"]["d"]["words"]["t"])]
+        assert v["B"] in ORN3.READ_TABLE_B.values()
