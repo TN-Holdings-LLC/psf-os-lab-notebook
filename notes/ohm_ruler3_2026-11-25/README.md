@@ -52,3 +52,17 @@ rulers are untouched. The direction reads WINDOW SHRINKS LESS in 34 of 96 cells,
   for the owner; not built).
 - Uniform readout flips (q 0.02) hit each mirror once, so every mirror ruler's square root misses them (as 11-24's dry
   runs): (b), (c), (d) DIFFER in nearly every cell; (a) AGREES in 91 of 96.
+
+## 2026-11-25 b (home's proposals): (b'), 9 pairs at t = 4, the VS's gate-noise runs read again
+
+- `score3` gives (b') as `b_out`: low |0> mirror qubits outside the window left out of (b)'s mean (tau 0.3; NOT READ
+  below half). `seeds3b.txt`: the five readout cases again, same seeds (101 to 116), raw counts kept this time. (b')
+  equals the 11-25 a `b_tau` in these cases; (d) is untouched by it.
+- `vs2_rescored.txt`: the workplace VS's その2 raw counts (gate noise, T2, damping, 3-qubit faults; its build rebuilt
+  from the 11-24 ibm_fez record with `build3 --smirrors sc`, 157 circuits) read again by this score3. Its (b), (c),
+  (d) agree with the VS's own table (e.g. p2 0.02: 22, 29, 28 of 30); its t >= 3 rows include the t = 4 cells the VS
+  did not run (counts all zero), so the draft quotes t = 3 alone. (b'): p2 0.02 9 of 30 against (b) 22; the 3-qubit
+  depolarizing 10 against 22.
+- Try-build with 9 pairs at t = 4 (`--pairs-t 1:7 3:7 4:9`; 9-pair answers sha256 e581df9d..., made again here): 169
+  circuits with the string mirrors (48.1 s, psf-os model 54.7 s), 151 without (43.2 s, 49.2 s); check3 ALL PASS;
+  noise-free score3 reads K 9 and t 2.306 at t = 4.

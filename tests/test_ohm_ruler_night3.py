@@ -209,7 +209,7 @@ def test_candidate1_outside_window_form(tmp_path, monkeypatch):
 
 
 def test_reading_tables_word_for_word_in_the_draft():
-    draft = open(os.path.join(ROOT, "prereg", "drafts-2026-11-25", "ohm_ruler3_night_DRAFT.md")).read()
+    draft = open(os.path.join(ROOT, "prereg", "drafts-2026-11-25", "ohm_ruler3_night_DRAFT.md"), encoding="utf-8").read()
     for (r, w), text in ORN3.READ_TABLE_A.items():
         assert f"| ({r}) | {w} | {text} |" in draft, (r, w)
     for (d, w), text in ORN3.READ_TABLE_B.items():

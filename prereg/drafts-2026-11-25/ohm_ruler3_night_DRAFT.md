@@ -55,7 +55,8 @@ mirrors). Without noise every rho is 1 and every W_x equals W_exact.
 - **(a) the circuit's total** (as 11-24): rho_a,k = T_device,k / T0_k. Read at t >= 3.
 - **(b) the |0> mirror over the circuit** (as 11-24): rho_b = sqrt(mean over the circuit's qubits of the mirror's <Z>).
 - **(b') candidate 1, the |0> mirror over the circuit with its low qubits outside the window left out** [OWNER: home's
-  proposal; judged if the dry runs below meet both of home's conditions, beside otherwise]: a qubit **outside the
+  proposal was "judged if the dry runs meet both conditions, beside otherwise"; the dry runs below do not meet them
+  under gate noise, so (b') is **beside, not judged**]: a qubit **outside the
   window** whose |0> mirror <Z_q> is below **tau = 0.3** is left out of (b)'s mean (not out of the circuit or of W);
   window qubits always stay (W carries their shrink). When fewer than half of the circuit's qubits are left, NOT READ.
   tau is set from the dry runs, never from a device record.
@@ -114,14 +115,14 @@ t SE with 11-24's scatter of ruler (b): at t = 3 (7 pairs, 2.447) 0.03 to 0.05; 
 
 Per cell, over its K pairs:
 - raw M, W as 11-24 (READS at a ratio of 0.5 or below);
-- rulers (a), (b), (b'), (c), (d): AGREES / DIFFERS / NOT READ (t quantile; 2 SE beside);
+- rulers (a), (b), (c), (d): AGREES / DIFFERS / NOT READ (t quantile; 2 SE beside);
 - one factor on the window (t >= 3), as 11-24 (UNIFORM at p >= 0.05; NOT READ with fewer than 2 positions or a 0 SE);
 - the direction (t >= 3).
 - Beside, never judged:
   - order: the order of W, W_a, W_b, W_b', W_c and W_d at t = 3 and 4 (A0 > A1 > A2)
   - growth: W(t) / W(1), raw and exact
   - smallest difference: each ruler's t SE per cell
-  - left out: the qubits (b') leaves out, per cell
+  - candidate 1: ruler (b')'s words and the qubits it leaves out, per cell
   - sentinel: the sentinel's word and its overlap with the user's qubits
 
 ## Reading tables (fixed before the data; every combination on one row; each row reads on its own conditions)
@@ -146,7 +147,8 @@ Table A, which rulers carry the window's shrink (per cell; each ruler on its own
 | (d) | DIFFERS | the string mirrors' odd part over the window does not carry the window's shrink |
 | (d) | NOT READ | no scatter (rule 5) |
 
-(b_out) is (b'); the tool's key is b_out.
+(b_out) is (b'); the tool's key is b_out. Its rows are read only if the owner judges (b') [OWNER: home's proposal
+leads to beside, see the dry runs].
 
 Table B, the direction (per cell at t >= 3; 3 words x ruler (a) 2 words = 6 rows; a cell where either is NOT READ is
 not read here):
@@ -171,27 +173,49 @@ The raw words keep 11-23's meaning. The one-factor word is read on its own line,
 
 ## Dry runs (no device; `notes/ohm_ruler3_2026-11-25/` and the workplace VS's その2)
 
-Plan B + d, built on the 11-23 ibm_fez record; `dry3.py` samples every circuit noise-free (the sentinel not sampled)
-and adds ILLUSTRATIVE readout-like faults written by hand, at chain positions chosen by hand (not where any device's
-qubits failed). 16 seeds per case; t >= 3, 96 cells per row; AGREES at the t quantile (2 SE in brackets):
+All noise ILLUSTRATIVE, written by hand, at chain positions chosen by hand (not where any device's qubits failed).
 
-| case | (a) | (b) | (c) | (d) | (d1) | (b), tau 0.3 | (d), tau 0.3 |
-|---|---|---|---|---|---|---|---|
-| no noise | 92 (87) | 92 (87) | 92 (87) | 92 (87) | 92 (87) | 92 (87) | 92 (87) |
-| positions 15, 18, 22: 1 read as 0 with 0.4 | 73 (68) | 30 (26) | 30 (26) | 61 (57) | 30 (26) | 30 (26) | 61 (57) |
-| the same with 0.8 | 69 (66) | 31 (27) | 31 (27) | 60 (52) | 31 (27) | 31 (27) | 31 (27) |
-| positions 14, 17, 18 (outside the window): both ways 0.4 | 67 (62) | 0 (0) | 92 (87) | 92 (87) | 92 (87) | 91 (86) | 92 (87) |
-| every bit flips with 0.02 | 91 (89) | 2 (0) | 3 (1) | 1 (0) | 1 (0) | 2 (0) | 1 (0) |
+**Readout-like faults** (workplace; plan B + d on the 11-23 ibm_fez record; `dry3.py`; 16 seeds per case; t >= 3, 96
+cells per row; AGREES at the t quantile, 2 SE in brackets):
 
-- Rule 4 halves the false words: without noise 4 of 96 DIFFERS at the t quantile, 9 of 96 at 2 SE.
-- A fault that a |1> suffers and a |0> does not is seen by (d) only (rho_d 0.965 and 0.929; rho_b, rho_c, rho_d1 1.000).
-- Candidate 1 helps (b) when the faulty qubits sit outside the window (0 -> 91 of 96) and harms (d) when a faulty qubit
-  sits in the window (60 -> 31 of 96 at q 0.8: the window's W carries that qubit's shrink). [OWNER: a rule that leaves
-  out only qubits outside the window keeps the first and avoids the second; not built]
-- Uniform readout flips hit each mirror once: every mirror ruler's square root misses them, (a) does not.
-- The direction without noise: 7 of 96 false words. With the faults outside the window: WINDOW SHRINKS LESS 34 of 96.
-- Gate noise, amplitude damping, idle dephasing and "a few qubits fail" under gate noise: the workplace VS's その2
-  (pod), filled when it returns.
+| case | (a) | (b) | (b') | (c) | (d) |
+|---|---|---|---|---|---|
+| no noise | 92 (87) | 92 (87) | 92 (87) | 92 (87) | 92 (87) |
+| positions 15, 18, 22: 1 read as 0 with 0.4 | 73 (68) | 30 (26) | 30 (26) | 30 (26) | 61 (57) |
+| the same with 0.8 | 69 (66) | 31 (27) | 31 (27) | 31 (27) | 60 (52) |
+| positions 14, 17, 18 (outside the window): both ways 0.4 | 67 (62) | 0 (0) | 91 (86) | 92 (87) | 92 (87) |
+| every bit flips with 0.02 | 91 (89) | 2 (0) | 2 (0) | 3 (1) | 1 (0) |
+
+**Gate noise, idle dephasing, amplitude damping** (the workplace VS's その2: plan B + d on the 11-24 ibm_fez record,
+Aer trajectories; t = 3, 30 cells per row (6 where the VS kept 2 seeds); read again by the workplace with this score3,
+whose (b), (c), (d) equal the VS's table):
+
+| case | (a) | (b) | (b') | (c) | (d) |
+|---|---|---|---|---|---|
+| depolarizing per CZ, p2 0.005 | 1 (0) | 29 (27) | 29 (27) | 30 (29) | 28 (25) |
+| p2 0.01 | 0 (0) | 28 (26) | 28 (26) | 30 (28) | 29 (27) |
+| p2 0.02 | 0 (0) | 22 (17) | 9 (6) | 29 (28) | 28 (25) |
+| idle dephasing, T2 10 us | 20 (20) | 0 (0) | 0 (0) | 14 (8) | 13 (12) |
+| amplitude damping per CZ, gamma 0.005 (2 seeds) | 0 (0) | 6 (4) | 6 (4) | 2 (2) | 6 (6) |
+| positions 15, 18, 22 depolarized 0.1 per CZ | 0 (0) | 22 (20) | 10 (4) | 30 (30) | 30 (30) |
+| positions 15, 18, 22 damped 0.1 per CZ (2 seeds) | 0 (0) | 4 (4) | 2 (2) | 4 (4) | 6 (6) |
+
+- Rule 4 halves the false words: without noise 4 of 96 DIFFERS at the t quantile, 9 of 96 at 2 SE (the VS's 64 seeds:
+  4.2 % and 7.6 % with 7 pairs, 6.0 % and 8.3 % with 9).
+- (d) reads a fault that a |1> suffers and a |0> does not (61 and 60 of 96 against 30 and 31), the 3-qubit faults under
+  gate noise (30 of 30) and the damping (6 of 6). (c) and (d) follow r under uniform depolarizing up to p2 0.02.
+- Home's two conditions for (b'), on the readout cases: (d) does not fall when a window qubit fails (61, 60: (b') does
+  not touch the window rulers), and (b) comes back when the faults sit outside the window (0 -> 91 of 96). Both hold.
+- Under gate noise (b') does worse than (b): p2 0.02 22 -> 9 of 30, the 3-qubit depolarizing 22 -> 10. Guess (not
+  measured): the mirror holds the layers twice, so the qubits it leaves out are the cone's spreading ones, and the
+  mean of the rest is less shrunk than the window. [OWNER: home's rule judged (b') on the two readout conditions; with
+  the gate-noise rows it is written here as beside]
+- Readout flips (q 0.02) hit each mirror once: every mirror ruler's square root misses them; (a) does not.
+- Idle dephasing (T2 10 us) moves the |0> mirror far more than the forward circuit (r - sqrt(mirror) +0.086, the VS):
+  (b) DIFFERS in every cell; (c), (d) in about half.
+- t = 4 with gate noise (p2 0.01, 3 seeds, 9 cells, the VS): (c), (d) AGREES in 4 and 3 of 9, on the other side
+  (r - rho positive); (a) in 9 of 9. Coarse.
+- The direction without noise: 7 of 96 false words. Uniform depolarizing: WINDOW SHRINKS MORE in every cell (the VS).
 
 ## Device procedure (home)
 

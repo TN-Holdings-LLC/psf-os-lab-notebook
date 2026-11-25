@@ -1,0 +1,318 @@
+| case | seeds | ruler | t | cells | AGREES (t quantile) | AGREES (2 SE) | NOT READ |
+|---|---|---|---|---|---|---|---|
+| baddamp_q0.0 | 2 | (a) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 6 |
+| baddamp_q0.0 | 2 | (b) | t1 | 6 | 4 (67 %) | 3 (50 %) | 0 |
+| baddamp_q0.0 | 2 | (b) | t>=3 | 12 | 4 (33 %) | 4 (33 %) | 0 |
+| baddamp_q0.0 | 2 | (c) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.0 | 2 | (c) | t>=3 | 12 | 4 (33 %) | 4 (33 %) | 0 |
+| baddamp_q0.0 | 2 | (d) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.0 | 2 | (d) | t>=3 | 12 | 6 (50 %) | 6 (50 %) | 6 |
+| baddamp_q0.0 | 2 | (d1) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.0 | 2 | (d1) | t>=3 | 12 | 4 (33 %) | 4 (33 %) | 0 |
+| baddamp_q0.0 | 2 | (b_tau) | t1 | 6 | 4 (67 %) | 3 (50 %) | 0 |
+| baddamp_q0.0 | 2 | (b_tau) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| baddamp_q0.0 | 2 | (c_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.0 | 2 | (c_tau) | t>=3 | 12 | 4 (33 %) | 4 (33 %) | 0 |
+| baddamp_q0.0 | 2 | (d_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.0 | 2 | (d_tau) | t>=3 | 12 | 6 (50 %) | 6 (50 %) | 6 |
+| baddamp_q0.0 | 2 | (d1_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.0 | 2 | (d1_tau) | t>=3 | 12 | 4 (33 %) | 4 (33 %) | 0 |
+| baddamp_q0.0 | 2 | (b_out) | t1 | 6 | 4 (67 %) | 3 (50 %) | 0 |
+| baddamp_q0.0 | 2 | (b_out) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| baddamp_q0.02 | 2 | (a) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 6 |
+| baddamp_q0.02 | 2 | (b) | t1 | 6 | 6 (100 %) | 4 (67 %) | 0 |
+| baddamp_q0.02 | 2 | (b) | t>=3 | 12 | 4 (33 %) | 3 (25 %) | 0 |
+| baddamp_q0.02 | 2 | (c) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.02 | 2 | (c) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| baddamp_q0.02 | 2 | (d) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.02 | 2 | (d) | t>=3 | 12 | 6 (50 %) | 6 (50 %) | 6 |
+| baddamp_q0.02 | 2 | (d1) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.02 | 2 | (d1) | t>=3 | 12 | 3 (25 %) | 2 (17 %) | 0 |
+| baddamp_q0.02 | 2 | (b_tau) | t1 | 6 | 6 (100 %) | 4 (67 %) | 0 |
+| baddamp_q0.02 | 2 | (b_tau) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| baddamp_q0.02 | 2 | (c_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.02 | 2 | (c_tau) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| baddamp_q0.02 | 2 | (d_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.02 | 2 | (d_tau) | t>=3 | 12 | 6 (50 %) | 6 (50 %) | 6 |
+| baddamp_q0.02 | 2 | (d1_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| baddamp_q0.02 | 2 | (d1_tau) | t>=3 | 12 | 3 (25 %) | 2 (17 %) | 0 |
+| baddamp_q0.02 | 2 | (b_out) | t1 | 6 | 6 (100 %) | 4 (67 %) | 0 |
+| baddamp_q0.02 | 2 | (b_out) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| baddep_q0.0 | 10 | (a) | t>=3 | 60 | 0 (0 %) | 0 (0 %) | 30 |
+| baddep_q0.0 | 10 | (b) | t1 | 30 | 18 (60 %) | 9 (30 %) | 0 |
+| baddep_q0.0 | 10 | (b) | t>=3 | 60 | 22 (37 %) | 20 (33 %) | 0 |
+| baddep_q0.0 | 10 | (c) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.0 | 10 | (c) | t>=3 | 60 | 30 (50 %) | 30 (50 %) | 0 |
+| baddep_q0.0 | 10 | (d) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.0 | 10 | (d) | t>=3 | 60 | 30 (50 %) | 30 (50 %) | 30 |
+| baddep_q0.0 | 10 | (d1) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.0 | 10 | (d1) | t>=3 | 60 | 30 (50 %) | 30 (50 %) | 0 |
+| baddep_q0.0 | 10 | (b_tau) | t1 | 30 | 18 (60 %) | 9 (30 %) | 0 |
+| baddep_q0.0 | 10 | (b_tau) | t>=3 | 60 | 10 (17 %) | 4 (7 %) | 1 |
+| baddep_q0.0 | 10 | (c_tau) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.0 | 10 | (c_tau) | t>=3 | 60 | 24 (40 %) | 21 (35 %) | 1 |
+| baddep_q0.0 | 10 | (d_tau) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.0 | 10 | (d_tau) | t>=3 | 60 | 25 (42 %) | 22 (37 %) | 30 |
+| baddep_q0.0 | 10 | (d1_tau) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.0 | 10 | (d1_tau) | t>=3 | 60 | 23 (38 %) | 20 (33 %) | 1 |
+| baddep_q0.0 | 10 | (b_out) | t1 | 30 | 18 (60 %) | 9 (30 %) | 0 |
+| baddep_q0.0 | 10 | (b_out) | t>=3 | 60 | 10 (17 %) | 4 (7 %) | 0 |
+| baddep_q0.02 | 10 | (a) | t>=3 | 60 | 0 (0 %) | 0 (0 %) | 30 |
+| baddep_q0.02 | 10 | (b) | t1 | 30 | 23 (77 %) | 15 (50 %) | 0 |
+| baddep_q0.02 | 10 | (b) | t>=3 | 60 | 20 (33 %) | 18 (30 %) | 0 |
+| baddep_q0.02 | 10 | (c) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.02 | 10 | (c) | t>=3 | 60 | 30 (50 %) | 28 (47 %) | 0 |
+| baddep_q0.02 | 10 | (d) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.02 | 10 | (d) | t>=3 | 60 | 30 (50 %) | 29 (48 %) | 30 |
+| baddep_q0.02 | 10 | (d1) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.02 | 10 | (d1) | t>=3 | 60 | 30 (50 %) | 29 (48 %) | 0 |
+| baddep_q0.02 | 10 | (b_tau) | t1 | 30 | 23 (77 %) | 15 (50 %) | 0 |
+| baddep_q0.02 | 10 | (b_tau) | t>=3 | 60 | 4 (7 %) | 1 (2 %) | 3 |
+| baddep_q0.02 | 10 | (c_tau) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.02 | 10 | (c_tau) | t>=3 | 60 | 20 (33 %) | 17 (28 %) | 3 |
+| baddep_q0.02 | 10 | (d_tau) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.02 | 10 | (d_tau) | t>=3 | 60 | 20 (33 %) | 17 (28 %) | 30 |
+| baddep_q0.02 | 10 | (d1_tau) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| baddep_q0.02 | 10 | (d1_tau) | t>=3 | 60 | 18 (30 %) | 12 (20 %) | 1 |
+| baddep_q0.02 | 10 | (b_out) | t1 | 30 | 23 (77 %) | 15 (50 %) | 0 |
+| baddep_q0.02 | 10 | (b_out) | t>=3 | 60 | 4 (7 %) | 1 (2 %) | 0 |
+| damp0.005_q0.0 | 2 | (a) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 6 |
+| damp0.005_q0.0 | 2 | (b) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (b) | t>=3 | 12 | 6 (50 %) | 4 (33 %) | 0 |
+| damp0.005_q0.0 | 2 | (c) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (c) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| damp0.005_q0.0 | 2 | (d) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (d) | t>=3 | 12 | 6 (50 %) | 6 (50 %) | 6 |
+| damp0.005_q0.0 | 2 | (d1) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (d1) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| damp0.005_q0.0 | 2 | (b_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (b_tau) | t>=3 | 12 | 6 (50 %) | 4 (33 %) | 0 |
+| damp0.005_q0.0 | 2 | (c_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (c_tau) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| damp0.005_q0.0 | 2 | (d_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (d_tau) | t>=3 | 12 | 6 (50 %) | 6 (50 %) | 6 |
+| damp0.005_q0.0 | 2 | (d1_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (d1_tau) | t>=3 | 12 | 2 (17 %) | 2 (17 %) | 0 |
+| damp0.005_q0.0 | 2 | (b_out) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.0 | 2 | (b_out) | t>=3 | 12 | 6 (50 %) | 4 (33 %) | 0 |
+| damp0.005_q0.02 | 2 | (a) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 6 |
+| damp0.005_q0.02 | 2 | (b) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (b) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 0 |
+| damp0.005_q0.02 | 2 | (c) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (c) | t>=3 | 12 | 1 (8 %) | 0 (0 %) | 0 |
+| damp0.005_q0.02 | 2 | (d) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (d) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 6 |
+| damp0.005_q0.02 | 2 | (d1) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (d1) | t>=3 | 12 | 1 (8 %) | 1 (8 %) | 0 |
+| damp0.005_q0.02 | 2 | (b_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (b_tau) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 0 |
+| damp0.005_q0.02 | 2 | (c_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (c_tau) | t>=3 | 12 | 1 (8 %) | 0 (0 %) | 0 |
+| damp0.005_q0.02 | 2 | (d_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (d_tau) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 6 |
+| damp0.005_q0.02 | 2 | (d1_tau) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (d1_tau) | t>=3 | 12 | 1 (8 %) | 1 (8 %) | 0 |
+| damp0.005_q0.02 | 2 | (b_out) | t1 | 6 | 6 (100 %) | 6 (100 %) | 0 |
+| damp0.005_q0.02 | 2 | (b_out) | t>=3 | 12 | 0 (0 %) | 0 (0 %) | 0 |
+| dep0.005_q0.0 | 10 | (a) | t>=3 | 60 | 1 (2 %) | 0 (0 %) | 30 |
+| dep0.005_q0.0 | 10 | (b) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.005_q0.0 | 10 | (b) | t>=3 | 60 | 29 (48 %) | 27 (45 %) | 0 |
+| dep0.005_q0.0 | 10 | (c) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.005_q0.0 | 10 | (c) | t>=3 | 60 | 30 (50 %) | 29 (48 %) | 0 |
+| dep0.005_q0.0 | 10 | (d) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| dep0.005_q0.0 | 10 | (d) | t>=3 | 60 | 28 (47 %) | 25 (42 %) | 30 |
+| dep0.005_q0.0 | 10 | (d1) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.005_q0.0 | 10 | (d1) | t>=3 | 60 | 28 (47 %) | 28 (47 %) | 0 |
+| dep0.005_q0.0 | 10 | (b_tau) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.005_q0.0 | 10 | (b_tau) | t>=3 | 60 | 29 (48 %) | 27 (45 %) | 0 |
+| dep0.005_q0.0 | 10 | (c_tau) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.005_q0.0 | 10 | (c_tau) | t>=3 | 60 | 30 (50 %) | 29 (48 %) | 0 |
+| dep0.005_q0.0 | 10 | (d_tau) | t1 | 30 | 30 (100 %) | 30 (100 %) | 0 |
+| dep0.005_q0.0 | 10 | (d_tau) | t>=3 | 60 | 28 (47 %) | 25 (42 %) | 30 |
+| dep0.005_q0.0 | 10 | (d1_tau) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.005_q0.0 | 10 | (d1_tau) | t>=3 | 60 | 28 (47 %) | 28 (47 %) | 0 |
+| dep0.005_q0.0 | 10 | (b_out) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.005_q0.0 | 10 | (b_out) | t>=3 | 60 | 29 (48 %) | 27 (45 %) | 0 |
+| dep0.01_q0.0 | 10 | (a) | t>=3 | 60 | 0 (0 %) | 0 (0 %) | 30 |
+| dep0.01_q0.0 | 10 | (b) | t1 | 30 | 29 (97 %) | 27 (90 %) | 0 |
+| dep0.01_q0.0 | 10 | (b) | t>=3 | 60 | 28 (47 %) | 26 (43 %) | 0 |
+| dep0.01_q0.0 | 10 | (c) | t1 | 30 | 30 (100 %) | 29 (97 %) | 0 |
+| dep0.01_q0.0 | 10 | (c) | t>=3 | 60 | 30 (50 %) | 28 (47 %) | 0 |
+| dep0.01_q0.0 | 10 | (d) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.01_q0.0 | 10 | (d) | t>=3 | 60 | 29 (48 %) | 27 (45 %) | 30 |
+| dep0.01_q0.0 | 10 | (d1) | t1 | 30 | 28 (93 %) | 28 (93 %) | 0 |
+| dep0.01_q0.0 | 10 | (d1) | t>=3 | 60 | 30 (50 %) | 30 (50 %) | 0 |
+| dep0.01_q0.0 | 10 | (b_tau) | t1 | 30 | 29 (97 %) | 27 (90 %) | 0 |
+| dep0.01_q0.0 | 10 | (b_tau) | t>=3 | 60 | 28 (47 %) | 26 (43 %) | 0 |
+| dep0.01_q0.0 | 10 | (c_tau) | t1 | 30 | 30 (100 %) | 29 (97 %) | 0 |
+| dep0.01_q0.0 | 10 | (c_tau) | t>=3 | 60 | 30 (50 %) | 28 (47 %) | 0 |
+| dep0.01_q0.0 | 10 | (d_tau) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.01_q0.0 | 10 | (d_tau) | t>=3 | 60 | 29 (48 %) | 27 (45 %) | 30 |
+| dep0.01_q0.0 | 10 | (d1_tau) | t1 | 30 | 28 (93 %) | 28 (93 %) | 0 |
+| dep0.01_q0.0 | 10 | (d1_tau) | t>=3 | 60 | 30 (50 %) | 30 (50 %) | 0 |
+| dep0.01_q0.0 | 10 | (b_out) | t1 | 30 | 29 (97 %) | 27 (90 %) | 0 |
+| dep0.01_q0.0 | 10 | (b_out) | t>=3 | 60 | 28 (47 %) | 26 (43 %) | 0 |
+| dep0.02_q0.0 | 10 | (a) | t>=3 | 60 | 0 (0 %) | 0 (0 %) | 30 |
+| dep0.02_q0.0 | 10 | (b) | t1 | 30 | 30 (100 %) | 28 (93 %) | 0 |
+| dep0.02_q0.0 | 10 | (b) | t>=3 | 60 | 22 (37 %) | 17 (28 %) | 0 |
+| dep0.02_q0.0 | 10 | (c) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.02_q0.0 | 10 | (c) | t>=3 | 60 | 29 (48 %) | 28 (47 %) | 0 |
+| dep0.02_q0.0 | 10 | (d) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.02_q0.0 | 10 | (d) | t>=3 | 60 | 28 (47 %) | 25 (42 %) | 30 |
+| dep0.02_q0.0 | 10 | (d1) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.02_q0.0 | 10 | (d1) | t>=3 | 60 | 29 (48 %) | 28 (47 %) | 0 |
+| dep0.02_q0.0 | 10 | (b_tau) | t1 | 30 | 30 (100 %) | 28 (93 %) | 0 |
+| dep0.02_q0.0 | 10 | (b_tau) | t>=3 | 60 | 9 (15 %) | 6 (10 %) | 0 |
+| dep0.02_q0.0 | 10 | (c_tau) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.02_q0.0 | 10 | (c_tau) | t>=3 | 60 | 29 (48 %) | 28 (47 %) | 0 |
+| dep0.02_q0.0 | 10 | (d_tau) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.02_q0.0 | 10 | (d_tau) | t>=3 | 60 | 28 (47 %) | 25 (42 %) | 30 |
+| dep0.02_q0.0 | 10 | (d1_tau) | t1 | 30 | 29 (97 %) | 29 (97 %) | 0 |
+| dep0.02_q0.0 | 10 | (d1_tau) | t>=3 | 60 | 29 (48 %) | 28 (47 %) | 0 |
+| dep0.02_q0.0 | 10 | (b_out) | t1 | 30 | 30 (100 %) | 28 (93 %) | 0 |
+| dep0.02_q0.0 | 10 | (b_out) | t>=3 | 60 | 9 (15 %) | 6 (10 %) | 0 |
+| t2_10000_q0.0 | 10 | (a) | t>=3 | 60 | 20 (33 %) | 20 (33 %) | 30 |
+| t2_10000_q0.0 | 10 | (b) | t1 | 30 | 28 (93 %) | 26 (87 %) | 0 |
+| t2_10000_q0.0 | 10 | (b) | t>=3 | 60 | 0 (0 %) | 0 (0 %) | 0 |
+| t2_10000_q0.0 | 10 | (c) | t1 | 30 | 29 (97 %) | 28 (93 %) | 0 |
+| t2_10000_q0.0 | 10 | (c) | t>=3 | 60 | 14 (23 %) | 8 (13 %) | 0 |
+| t2_10000_q0.0 | 10 | (d) | t1 | 30 | 28 (93 %) | 28 (93 %) | 0 |
+| t2_10000_q0.0 | 10 | (d) | t>=3 | 60 | 13 (22 %) | 12 (20 %) | 30 |
+| t2_10000_q0.0 | 10 | (d1) | t1 | 30 | 29 (97 %) | 28 (93 %) | 0 |
+| t2_10000_q0.0 | 10 | (d1) | t>=3 | 60 | 13 (22 %) | 11 (18 %) | 0 |
+| t2_10000_q0.0 | 10 | (b_tau) | t1 | 30 | 28 (93 %) | 26 (87 %) | 0 |
+| t2_10000_q0.0 | 10 | (b_tau) | t>=3 | 60 | 0 (0 %) | 0 (0 %) | 0 |
+| t2_10000_q0.0 | 10 | (c_tau) | t1 | 30 | 29 (97 %) | 28 (93 %) | 0 |
+| t2_10000_q0.0 | 10 | (c_tau) | t>=3 | 60 | 14 (23 %) | 8 (13 %) | 0 |
+| t2_10000_q0.0 | 10 | (d_tau) | t1 | 30 | 28 (93 %) | 28 (93 %) | 0 |
+| t2_10000_q0.0 | 10 | (d_tau) | t>=3 | 60 | 13 (22 %) | 12 (20 %) | 30 |
+| t2_10000_q0.0 | 10 | (d1_tau) | t1 | 30 | 29 (97 %) | 28 (93 %) | 0 |
+| t2_10000_q0.0 | 10 | (d1_tau) | t>=3 | 60 | 13 (22 %) | 11 (18 %) | 0 |
+| t2_10000_q0.0 | 10 | (b_out) | t1 | 30 | 28 (93 %) | 26 (87 %) | 0 |
+| t2_10000_q0.0 | 10 | (b_out) | t>=3 | 60 | 0 (0 %) | 0 (0 %) | 0 |
+
+baddamp_q0.0: direction {'WINDOW SHRINKS MORE': 6, 'NOT READ': 6}; one factor {'NOT UNIFORM': 6, 'NOT READ': 6}
+baddamp_q0.02: direction {'WINDOW SHRINKS MORE': 6, 'NOT READ': 6}; one factor {'NOT UNIFORM': 6, 'NOT READ': 6}
+baddep_q0.0: direction {'WINDOW SHRINKS MORE': 30, 'NOT READ': 30}; one factor {'NOT UNIFORM': 30, 'NOT READ': 30}
+baddep_q0.02: direction {'WINDOW SHRINKS MORE': 30, 'NOT READ': 30}; one factor {'NOT UNIFORM': 30, 'NOT READ': 30}
+damp0.005_q0.0: direction {'WINDOW SHRINKS MORE': 6, 'NOT READ': 6}; one factor {'UNIFORM': 5, 'NOT READ': 6, 'NOT UNIFORM': 1}
+damp0.005_q0.02: direction {'WINDOW SHRINKS MORE': 6, 'NOT READ': 6}; one factor {'UNIFORM': 5, 'NOT READ': 6, 'NOT UNIFORM': 1}
+dep0.005_q0.0: direction {'WINDOW SHRINKS MORE': 30, 'NOT READ': 30}; one factor {'UNIFORM': 29, 'NOT READ': 30, 'NOT UNIFORM': 1}
+dep0.01_q0.0: direction {'WINDOW SHRINKS MORE': 30, 'NOT READ': 30}; one factor {'UNIFORM': 24, 'NOT READ': 30, 'NOT UNIFORM': 6}
+dep0.02_q0.0: direction {'WINDOW SHRINKS MORE': 30, 'NOT READ': 30}; one factor {'NOT UNIFORM': 9, 'NOT READ': 30, 'UNIFORM': 21}
+t2_10000_q0.0: direction {'WINDOW SHRINKS LESS': 10, 'NOT READ': 30, 'NOT SEEN': 20}; one factor {'UNIFORM': 28, 'NOT READ': 30, 'NOT UNIFORM': 2}
+
+baddamp_q0.0 (b_out): left out by chain position {14: 1, 16: 1, 17: 4, 18: 4, 19: 2}
+baddamp_q0.0 (b_tau): left out by chain position {14: 1, 16: 1, 17: 4, 18: 4, 19: 2}
+baddamp_q0.0 (d_tau): left out by chain position {20: 6, 21: 6, 22: 6, 23: 6, 24: 6, 25: 6, 26: 6}
+baddamp_q0.02 (b_out): left out by chain position {14: 2, 16: 1, 17: 4, 18: 4, 19: 4}
+baddamp_q0.02 (b_tau): left out by chain position {14: 2, 16: 1, 17: 4, 18: 4, 19: 4}
+baddamp_q0.02 (d_tau): left out by chain position {20: 6, 21: 6, 22: 6, 23: 6, 24: 6, 25: 6, 26: 6}
+baddep_q0.0 (b_out): left out by chain position {14: 20, 15: 20, 16: 21, 17: 20, 18: 30, 19: 29}
+baddep_q0.0 (b_tau): left out by chain position {14: 20, 15: 20, 16: 21, 17: 20, 18: 30, 19: 29, 20: 13, 21: 6, 22: 6}
+baddep_q0.0 (c_tau): left out by chain position {20: 13, 21: 6, 22: 6}
+baddep_q0.0 (d1_tau): left out by chain position {20: 15, 21: 11, 22: 4}
+baddep_q0.0 (d_tau): left out by chain position {20: 44, 21: 39, 22: 30, 23: 30, 24: 30, 25: 30, 26: 30}
+baddep_q0.02 (b_out): left out by chain position {14: 20, 15: 20, 16: 24, 17: 20, 18: 30, 19: 30}
+baddep_q0.02 (b_tau): left out by chain position {14: 20, 15: 20, 16: 24, 17: 20, 18: 30, 19: 30, 20: 15, 21: 10, 22: 8}
+baddep_q0.02 (c_tau): left out by chain position {20: 15, 21: 10, 22: 8}
+baddep_q0.02 (d1_tau): left out by chain position {20: 18, 21: 12, 22: 3}
+baddep_q0.02 (d_tau): left out by chain position {20: 46, 21: 40, 22: 30, 23: 30, 24: 30, 25: 30, 26: 30}
+damp0.005_q0.0 (d_tau): left out by chain position {20: 6, 21: 6, 22: 6, 23: 6, 24: 6, 25: 6, 26: 6}
+damp0.005_q0.02 (d_tau): left out by chain position {20: 6, 21: 6, 22: 6, 23: 6, 24: 6, 25: 6, 26: 6}
+dep0.005_q0.0 (d_tau): left out by chain position {20: 30, 21: 30, 22: 30, 23: 30, 24: 30, 25: 30, 26: 30}
+dep0.01_q0.0 (d_tau): left out by chain position {20: 30, 21: 30, 22: 30, 23: 30, 24: 30, 25: 30, 26: 30}
+dep0.02_q0.0 (b_out): left out by chain position {18: 20, 19: 1}
+dep0.02_q0.0 (b_tau): left out by chain position {18: 20, 19: 1}
+dep0.02_q0.0 (d_tau): left out by chain position {20: 30, 21: 30, 22: 30, 23: 30, 24: 30, 25: 30, 26: 30}
+t2_10000_q0.0 (d_tau): left out by chain position {20: 30, 21: 30, 22: 30, 23: 30, 24: 30, 25: 30, 26: 30}
+baddamp_q0.0 (b): mean rho at t >= 3 0.893 over 12 cells
+baddamp_q0.0 (b_out): mean rho at t >= 3 0.913 over 12 cells
+baddamp_q0.0 (b_tau): mean rho at t >= 3 0.913 over 12 cells
+baddamp_q0.0 (c): mean rho at t >= 3 0.895 over 12 cells
+baddamp_q0.0 (c_tau): mean rho at t >= 3 0.895 over 12 cells
+baddamp_q0.0 (d): mean rho at t >= 3 0.752 over 6 cells
+baddamp_q0.0 (d1): mean rho at t >= 3 0.894 over 12 cells
+baddamp_q0.0 (d1_tau): mean rho at t >= 3 0.894 over 12 cells
+baddamp_q0.0 (d_tau): mean rho at t >= 3 0.752 over 6 cells
+baddamp_q0.02 (b): mean rho at t >= 3 0.885 over 12 cells
+baddamp_q0.02 (b_out): mean rho at t >= 3 0.909 over 12 cells
+baddamp_q0.02 (b_tau): mean rho at t >= 3 0.909 over 12 cells
+baddamp_q0.02 (c): mean rho at t >= 3 0.885 over 12 cells
+baddamp_q0.02 (c_tau): mean rho at t >= 3 0.885 over 12 cells
+baddamp_q0.02 (d): mean rho at t >= 3 0.735 over 6 cells
+baddamp_q0.02 (d1): mean rho at t >= 3 0.885 over 12 cells
+baddamp_q0.02 (d1_tau): mean rho at t >= 3 0.885 over 12 cells
+baddamp_q0.02 (d_tau): mean rho at t >= 3 0.735 over 6 cells
+baddep_q0.0 (b): mean rho at t >= 3 0.858 over 60 cells
+baddep_q0.0 (b_out): mean rho at t >= 3 0.908 over 60 cells
+baddep_q0.0 (b_tau): mean rho at t >= 3 0.920 over 59 cells
+baddep_q0.0 (c): mean rho at t >= 3 0.841 over 60 cells
+baddep_q0.0 (c_tau): mean rho at t >= 3 0.856 over 59 cells
+baddep_q0.0 (d): mean rho at t >= 3 0.679 over 30 cells
+baddep_q0.0 (d1): mean rho at t >= 3 0.840 over 60 cells
+baddep_q0.0 (d1_tau): mean rho at t >= 3 0.859 over 59 cells
+baddep_q0.0 (d_tau): mean rho at t >= 3 0.704 over 30 cells
+baddep_q0.02 (b): mean rho at t >= 3 0.851 over 60 cells
+baddep_q0.02 (b_out): mean rho at t >= 3 0.901 over 60 cells
+baddep_q0.02 (b_tau): mean rho at t >= 3 0.918 over 57 cells
+baddep_q0.02 (c): mean rho at t >= 3 0.835 over 60 cells
+baddep_q0.02 (c_tau): mean rho at t >= 3 0.858 over 57 cells
+baddep_q0.02 (d): mean rho at t >= 3 0.666 over 30 cells
+baddep_q0.02 (d1): mean rho at t >= 3 0.833 over 60 cells
+baddep_q0.02 (d1_tau): mean rho at t >= 3 0.854 over 59 cells
+baddep_q0.02 (d_tau): mean rho at t >= 3 0.693 over 30 cells
+damp0.005_q0.0 (b): mean rho at t >= 3 0.965 over 12 cells
+damp0.005_q0.0 (b_out): mean rho at t >= 3 0.965 over 12 cells
+damp0.005_q0.0 (b_tau): mean rho at t >= 3 0.965 over 12 cells
+damp0.005_q0.0 (c): mean rho at t >= 3 0.968 over 12 cells
+damp0.005_q0.0 (c_tau): mean rho at t >= 3 0.968 over 12 cells
+damp0.005_q0.0 (d): mean rho at t >= 3 0.922 over 6 cells
+damp0.005_q0.0 (d1): mean rho at t >= 3 0.967 over 12 cells
+damp0.005_q0.0 (d1_tau): mean rho at t >= 3 0.967 over 12 cells
+damp0.005_q0.0 (d_tau): mean rho at t >= 3 0.922 over 6 cells
+damp0.005_q0.02 (b): mean rho at t >= 3 0.955 over 12 cells
+damp0.005_q0.02 (b_out): mean rho at t >= 3 0.955 over 12 cells
+damp0.005_q0.02 (b_tau): mean rho at t >= 3 0.955 over 12 cells
+damp0.005_q0.02 (c): mean rho at t >= 3 0.958 over 12 cells
+damp0.005_q0.02 (c_tau): mean rho at t >= 3 0.958 over 12 cells
+damp0.005_q0.02 (d): mean rho at t >= 3 0.901 over 6 cells
+damp0.005_q0.02 (d1): mean rho at t >= 3 0.957 over 12 cells
+damp0.005_q0.02 (d1_tau): mean rho at t >= 3 0.957 over 12 cells
+damp0.005_q0.02 (d_tau): mean rho at t >= 3 0.901 over 6 cells
+dep0.005_q0.0 (b): mean rho at t >= 3 0.962 over 60 cells
+dep0.005_q0.0 (b_out): mean rho at t >= 3 0.962 over 60 cells
+dep0.005_q0.0 (b_tau): mean rho at t >= 3 0.962 over 60 cells
+dep0.005_q0.0 (c): mean rho at t >= 3 0.961 over 60 cells
+dep0.005_q0.0 (c_tau): mean rho at t >= 3 0.961 over 60 cells
+dep0.005_q0.0 (d): mean rho at t >= 3 0.923 over 30 cells
+dep0.005_q0.0 (d1): mean rho at t >= 3 0.961 over 60 cells
+dep0.005_q0.0 (d1_tau): mean rho at t >= 3 0.961 over 60 cells
+dep0.005_q0.0 (d_tau): mean rho at t >= 3 0.923 over 30 cells
+dep0.01_q0.0 (b): mean rho at t >= 3 0.928 over 60 cells
+dep0.01_q0.0 (b_out): mean rho at t >= 3 0.928 over 60 cells
+dep0.01_q0.0 (b_tau): mean rho at t >= 3 0.928 over 60 cells
+dep0.01_q0.0 (c): mean rho at t >= 3 0.925 over 60 cells
+dep0.01_q0.0 (c_tau): mean rho at t >= 3 0.925 over 60 cells
+dep0.01_q0.0 (d): mean rho at t >= 3 0.852 over 30 cells
+dep0.01_q0.0 (d1): mean rho at t >= 3 0.925 over 60 cells
+dep0.01_q0.0 (d1_tau): mean rho at t >= 3 0.925 over 60 cells
+dep0.01_q0.0 (d_tau): mean rho at t >= 3 0.852 over 30 cells
+dep0.02_q0.0 (b): mean rho at t >= 3 0.870 over 60 cells
+dep0.02_q0.0 (b_out): mean rho at t >= 3 0.875 over 60 cells
+dep0.02_q0.0 (b_tau): mean rho at t >= 3 0.875 over 60 cells
+dep0.02_q0.0 (c): mean rho at t >= 3 0.864 over 60 cells
+dep0.02_q0.0 (c_tau): mean rho at t >= 3 0.864 over 60 cells
+dep0.02_q0.0 (d): mean rho at t >= 3 0.727 over 30 cells
+dep0.02_q0.0 (d1): mean rho at t >= 3 0.864 over 60 cells
+dep0.02_q0.0 (d1_tau): mean rho at t >= 3 0.864 over 60 cells
+dep0.02_q0.0 (d_tau): mean rho at t >= 3 0.727 over 30 cells
+t2_10000_q0.0 (b): mean rho at t >= 3 0.946 over 60 cells
+t2_10000_q0.0 (b_out): mean rho at t >= 3 0.946 over 60 cells
+t2_10000_q0.0 (b_tau): mean rho at t >= 3 0.946 over 60 cells
+t2_10000_q0.0 (c): mean rho at t >= 3 0.983 over 60 cells
+t2_10000_q0.0 (c_tau): mean rho at t >= 3 0.983 over 60 cells
+t2_10000_q0.0 (d): mean rho at t >= 3 0.965 over 30 cells
+t2_10000_q0.0 (d1): mean rho at t >= 3 0.982 over 60 cells
+t2_10000_q0.0 (d1_tau): mean rho at t >= 3 0.982 over 60 cells
+t2_10000_q0.0 (d_tau): mean rho at t >= 3 0.965 over 30 cells
