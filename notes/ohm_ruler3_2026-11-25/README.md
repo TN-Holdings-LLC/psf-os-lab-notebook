@@ -68,3 +68,13 @@ rulers are untouched. The direction reads WINDOW SHRINKS LESS in 34 of 96 cells,
   noise-free score3 reads K 9 and t 2.306 at t = 4.
 - The VS's damping rerun (5 seeds each, its pod p3) read again the same way: (d) 15 of 15 in each damping row; (c) 6
   and 5; (b') 5 against (b) 10 under the 3-qubit damping.
+
+## The tables from the scores (`tables3.py`, `tables3_spec.json`, `scores3_dryruns.tar.gz`)
+
+The draft's two dry-run tables are written by `tables3.py` from the score3 files themselves (packed in
+`scores3_dryruns.tar.gz`: the workplace's 80 readout runs and the 79 VS runs read again; no raw counts, no answers).
+`--check` finds every row of the spec word for word in the draft (2026-11-25: 13 of 13):
+
+    mkdir /tmp/t && tar -C /tmp/t -xzf notes/ohm_ruler3_2026-11-25/scores3_dryruns.tar.gz
+    python notes/ohm_ruler3_2026-11-25/tables3.py /tmp/t notes/ohm_ruler3_2026-11-25/tables3_spec.json \
+        --check prereg/drafts-2026-11-25/ohm_ruler3_night_DRAFT.md

@@ -1,0 +1,19 @@
+[
+ {"name": "readout-like faults (workplace, 16 seeds, t >= 3)", "folder": "workplace", "t": "ge3",
+  "rulers": ["a", "b", "b_out", "c", "d"], "labels": {"b_out": "(b')"},
+  "rows": [["no noise", "none"],
+           ["positions 15, 18, 22: 1 read as 0 with 0.4", "bk04"],
+           ["the same with 0.8", "bk08"],
+           ["positions 14, 17, 18 (outside the window): both ways 0.4", "bo04"],
+           ["every bit flips with 0.02", "fl02"]]},
+ {"name": "gate noise, idle dephasing, damping (the workplace VS's raw counts read again, t = 3)", "folder": "vs2", "t": "3",
+  "rulers": ["a", "b", "b_out", "c", "d"], "labels": {"b_out": "(b')"},
+  "rows": [["depolarizing per CZ, p2 0.005", "dep0.005_q0.0"],
+           ["p2 0.01", "dep0.01_q0.0"],
+           ["p2 0.02", "dep0.02_q0.0"],
+           ["idle dephasing, T2 10 us", "t2_10000_q0.0"],
+           ["amplitude damping per CZ, gamma 0.005", "damp0.005_q0.0"],
+           ["gamma 0.01", "damp0.01_q0.0"],
+           ["positions 15, 18, 22 depolarized 0.1 per CZ", "baddep_q0.0"],
+           ["positions 15, 18, 22 damped 0.1 per CZ", "baddamp_q0.0"]]}
+]
