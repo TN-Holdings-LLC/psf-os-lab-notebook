@@ -15,6 +15,9 @@ qpe-n78-night-2026-11-22 (the hit shares, 2 SE, the ceiling words and margins, p
 ceilings are the declared values; each value is also looked up in the README's results row) and
 ohm-ruler-night-2026-11-24 (the raw words, rulers (a) and (b), the one-factor test, the order and W(t) / W(1), from the
 declaration's formulas). sentinel_overlap(job) counts the qubits the ring sentinel shares with the other circuits.
+score_ohm_ruler3(out_dir, job, answers_by_label) is the frame for the third night (not declared): rulers (b), (b')
+(candidate 1, low qubits outside the window left out), (c) and (d), written from the draft; compare_ruler3 sets it
+against score3's scores3.json (--ruler3 OUT ANS_BY_LABEL).
 Past nights' reproduce.py is not changed.
 
   python tools/independent_recount.py results/NIGHT [--json OUT.json] [--compare REF.json] [--simulate]
@@ -564,6 +567,122 @@ def score_ohm_ruler(night, job, simulate=False):
     return out
 
 
+# ------------------------------------------------------------------- the third Ohm ruler night (frame, not declared)
+T975 = {1: 12.706, 2: 4.303, 3: 3.182, 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262, 10: 2.228}
+
+
+def _words(d, se, K):
+    """Rule 4 (t quantile, K - 1 degrees of freedom) and rule 5 (NOT READ on a 0 SE); the 2 SE word beside."""
+    if not (se > 0):
+        return {"t": "NOT READ", "2se": "NOT READ"}
+    tq = T975.get(K - 1, 1.96)
+    return {"t": "AGREES" if abs(d) < tq * se else "DIFFERS", "2se": "AGREES" if abs(d) < 2 * se else "DIFFERS"}
+
+
+def _mirror_mean_se(pub, labels, idx, weights):
+    """Per-label <Z> of a mirror pub, the mean of weights * <Z> over labels[idx] and its shot-noise SE (per-shot mean)."""
+    m, w = pub["meas"], np.asarray(weights, dtype=float)
+    tot = sum(pub["counts"].values())
+    z, per = np.zeros(len(labels)), []
+    for key, c in pub["counts"].items():
+        s = key.replace(" ", "")
+        v = np.array([1 - 2 * int(s[-1 - m[lb]]) for lb in labels], dtype=float)
+        z += c * v
+        per.append((float((w[idx] * v[idx]).mean()), c))
+    z /= tot
+    mu = sum(x * c for x, c in per) / tot
+    return z, math.sqrt(sum(c * (x - mu) ** 2 for x, c in per) / (tot - 1) / tot)
+
+
+def score_ohm_ruler3(out_dir, job, answers_by_label, tau=0.3, keep_fraction=0.5):
+    """The third night's mirror rulers, written from prereg/drafts-2026-11-25/ohm_ruler3_night_DRAFT.md ("The rulers"):
+    per cell (arm, t, L), over its K pairs (K per t from build.json),
+      (b)  rho_b = sqrt(mean over the circuit's qubits of the |0> mirror's <Z>);
+      (b') the same with the qubits OUTSIDE the window whose mirror <Z> is below tau left out (window qubits always
+           stay); NOT READ when fewer than keep_fraction of the circuit's qubits are left;
+      (c)  rho_c = sqrt(mean over the window's qubits of the |0> mirror's <Z>);
+      (d)  rho_d = sqrt(mean over the window of m_q = (Z^m_s,q - Z^m_c,q) / 2 x (1 - 2 b_s00,q)) from the s00 and c00
+           string mirrors;
+    each W_x,k = -sum_window (O_device,kq / rho) / 2 + const_k, d = mean_k (W_x,k - W_exact,k), its SE from the pairs'
+    scatter and the mirror's shot noise through the square root, and the words (t quantile, rule 5; 2 SE beside).
+    Keys as score3's: b, b_out, c, d. The qubit -> clbit map comes from the sent circuits."""
+    b = json.load(open(os.path.join(out_dir, "build.json")))
+    ans = json.load(open(answers_by_label))["z"]
+    strs = b["strings"]
+    pubs = {p["name"]: p for p in job["pubs"]}
+    window = lambda t: list(range(20, 20 + 2 * t - 1))
+    out = {}
+    for arm in ("A0", "A1", "A2"):
+        for t in b["cycles"]:
+            key = f"{arm}_t{t}_L"
+            ks = sorted(n[1:] for n in strs if n.startswith("s") and f"{key}_{n}" in b["items"])
+            K = len(ks)
+            it = b["items"][f"{key}_s00"]
+            pos, labels = it["positions"], it["given_labels"]
+            wi = [i for i, q in enumerate(pos) if q in window(t)]
+            zd = {}
+            for n in (p + k for k in ks for p in "sc"):
+                pb = pubs[f"p2d_{key}_{n}"]
+                zd[n] = z_from_counts(pb["counts"], [pb["meas"][lb] for lb in labels])
+            ze = {n: np.array([ans[f"{key}_{n}"][str(lb)] for lb in labels]) for n in zd}
+            Od = np.array([(zd["s" + k] - zd["c" + k]) / 2 for k in ks])
+            Oe = np.array([(ze["s" + k] - ze["c" + k]) / 2 for k in ks])
+            const = np.array([-(sum(int(strs["s" + k][q]) for q in window(t))
+                                - sum(int(strs["c" + k][q]) for q in window(t))) / 2 for k in ks])
+            Od_w, w_ex = Od[:, wi].sum(axis=1), -Oe[:, wi].sum(axis=1) / 2 + const
+
+            def ruler(m, m_se):
+                if not (m > 0):
+                    return dict(rho=None, d=None, se=None, words={"t": "NOT READ", "2se": "NOT READ"})
+                rho = math.sqrt(m)
+                dk = (-(Od_w / rho) / 2 + const) - w_ex
+                se = math.sqrt(float(np.std(dk, ddof=1) / math.sqrt(K)) ** 2
+                               + (float(np.mean(Od_w)) / (4 * m ** 1.5) * m_se) ** 2)
+                return dict(rho=rho, mean=m, d=float(dk.mean()), se=se, words=_words(float(dk.mean()), se, K))
+            R = {}
+            mp = pubs.get(f"p2d_{key}_s00_mirror")
+            if mp is not None:
+                ones = np.ones(len(labels))
+                allq = list(range(len(pos)))
+                zm, se_all = _mirror_mean_se(mp, labels, allq, ones)
+                R["b"] = ruler(float(zm.mean()), se_all)
+                keep = [i for i in allq if i in wi or zm[i] >= tau]
+                if len(keep) < keep_fraction * len(allq):
+                    R["b_out"] = dict(words={"t": "NOT READ", "2se": "NOT READ"}, kept=len(keep), of=len(allq))
+                else:
+                    R["b_out"] = ruler(float(zm[keep].mean()), _mirror_mean_se(mp, labels, keep, ones)[1])
+                    R["b_out"].update(kept=len(keep), of=len(allq), left_out=[pos[i] for i in allq if i not in keep])
+                R["c"] = ruler(float(zm[wi].mean()), _mirror_mean_se(mp, labels, wi, ones)[1])
+            ms, mc = pubs.get(f"p2d_{key}_s00_smirror"), pubs.get(f"p2d_{key}_c00_smirror")
+            if ms is not None and mc is not None:
+                sig = np.array([1 - 2 * int(strs["s00"][q]) for q in pos], dtype=float)
+                zs, se_s = _mirror_mean_se(ms, labels, wi, sig)
+                zc, se_c = _mirror_mean_se(mc, labels, wi, sig)
+                mq = (zs - zc) / 2 * sig
+                R["d"] = ruler(float(mq[wi].mean()), math.sqrt(se_s ** 2 + se_c ** 2) / 2)
+            out[key] = dict(K=K, rulers=R)
+    return out
+
+
+def compare_ruler3(mine, scores3, keys=("rho", "d", "se"), words=("t", "2se")):
+    """[(cell, ruler, what, mine, score3's)] for every value and word that differs (floats beyond 1e-12)."""
+    diffs = []
+    for cell, c in mine.items():
+        for r, v in c["rulers"].items():
+            ref = scores3["cells"][cell]["rulers"].get(r)
+            if ref is None:
+                diffs.append((cell, r, "missing in scores3", None, None))
+                continue
+            for k in keys:
+                a, b2 = v.get(k), ref.get(k)
+                if (a is None) != (b2 is None) or (a is not None and abs(a - b2) > 1e-12):
+                    diffs.append((cell, r, k, a, b2))
+            for w in words:
+                if v["words"][w] != ref["words"][w]:
+                    diffs.append((cell, r, "word " + w, v["words"][w], ref["words"][w]))
+    return diffs
+
+
 # name -> (job folders under the night, the scoring function, the keys --compare reads, per-key tolerances, keys
 # --compare skips). A function given one job folder takes (night, job, simulate); given a list,
 # (night, [(job_dir, job)], simulate).
@@ -653,9 +772,22 @@ def main():
     ap.add_argument("--compare")
     ap.add_argument("--simulate", action="store_true")
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--ruler3", nargs=2, metavar=("OUT", "ANS_BY_LABEL"),
+                    help="the third night's frame on a build folder with counts: compared with its scores3.json")
+    ap.add_argument("--tau", type=float, default=0.3)
     a = ap.parse_args()
     if a.selftest:
         return 0 if selftest() else 1
+    if a.ruler3:
+        out_dir, ansf = a.ruler3
+        job = load_job(os.path.join(out_dir, "job"))
+        mine = score_ohm_ruler3(out_dir, job, ansf, tau=a.tau)
+        ref = json.load(open(os.path.join(out_dir, "scores3.json")))
+        diffs = compare_ruler3(mine, ref)
+        n = sum(len(c["rulers"]) for c in mine.values())
+        print(f"third night frame: {len(mine)} cells, {n} rulers (b, b_out, c, d) against scores3.json: "
+              f"{len(diffs)} values differ" + "".join(f"\n   {d}" for d in diffs[:20]))
+        return 0 if not diffs else 1
     if not a.night:
         ap.error("give a night folder (results/NAME)")
     night = a.night.rstrip("/\\")

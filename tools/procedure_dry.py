@@ -5,7 +5,7 @@ The first code block under the declaration's "Device procedure" heading is read 
 dropped) and run in one bash session from the notebook's root, so a wrong argument stops here, before the night:
   - a line holding daily_fetch (it reads IBM) is not run: a recorded device folder (--fetch-in) is copied in its place;
   - a line holding "psf_os submit" or "psf_os collect" (they reach IBM) is not run;
-  - a line holding " score " is not run (it needs the device's counts);
+  - a line holding " score ", " score2 ", " score3 " (any " score<digits> ") is not run (it needs the device's counts);
   - every other line (pick, build, check, ...) is run as written, with OUT -> a fresh folder, ANSWERS_SEALED -> the
     given answers file and "python" -> this interpreter. Nothing else in the line is changed.
 It stops at the first line that fails and prints that line's last output lines. Nothing is sent and nothing in the
@@ -24,7 +24,7 @@ import tempfile
 
 SKIP = [(re.compile(r"daily_fetch"), "reads IBM: the recorded device folder is copied instead"),
         (re.compile(r"psf_os\s+(submit|collect)"), "reaches IBM: not run"),
-        (re.compile(r"\sscore\s"), "needs the device's counts: not run")]
+        (re.compile(r"\sscore\d*\s"), "needs the device's counts: not run")]   # score, score2, score3
 
 
 def procedure_lines(prereg):
