@@ -66,3 +66,5 @@ rulers are untouched. The direction reads WINDOW SHRINKS LESS in 34 of 96 cells,
 - Try-build with 9 pairs at t = 4 (`--pairs-t 1:7 3:7 4:9`; 9-pair answers sha256 e581df9d..., made again here): 169
   circuits with the string mirrors (48.1 s, psf-os model 54.7 s), 151 without (43.2 s, 49.2 s); check3 ALL PASS;
   noise-free score3 reads K 9 and t 2.306 at t = 4.
+- The VS's damping rerun (5 seeds each, its pod p3) read again the same way: (d) 15 of 15 in each damping row; (c) 6
+  and 5; (b') 5 against (b) 10 under the 3-qubit damping.
