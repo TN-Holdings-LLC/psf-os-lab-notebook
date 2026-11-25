@@ -240,5 +240,15 @@ section).
 - One device night per declaration; the candidates come from one record, so their worth is read on a new night.
 - Candidate 1's tau is set from illustrative noise; a device whose ordinary qubits sit below tau would leave them out
   (the NOT READ rule bounds this).
-- Ruler (d) adds 9 or 18 circuits with twice the layers of the test; its own SE is larger than (b)'s on the window.
+- Ruler (d) adds 18 circuits with twice the layers of the test; its own SE is larger than (b)'s on the window.
+- A readout share is in every mirror once, so no mirror ruler takes it out (the dry runs: about -0.02 in each at q
+  0.02). [OWNER: a readout ruler, the string prepared and measured with no gate, would read it; whether it falls
+  under rule 3 is the owner's question; not built]
+- A mirror waits differently from the forward circuit (its edge qubits wait between U and U^dagger in superposition),
+  so dephasing while waiting moves the mirror more than the test: on a night where the device's T2 matters, (b) can
+  DIFFER for that reason (the VS's dry runs at T2 10 us: (b) 0 of 30). Guess (not measured) for the mechanism.
+- (c) and (d) part by the kind of shrink in the dry runs: both follow r under depolarizing, only (d) under amplitude
+  damping. Table A reads each on its own row; which of them passes is beside evidence of the kind, not a word.
+- t = 4 rests on 9 pairs and 3 gate-noise seeds; its direction in the dry runs (r - rho positive, (a) AGREES) is coarse.
+  More seeds go to t = 4 first if the owner asks for more dry runs.
 - Not error correction, not post-selection: every shot counts; the rulers are declared before the data.
