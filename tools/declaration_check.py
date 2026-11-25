@@ -5,10 +5,15 @@
            Each item's head (its first words, before " of ", a comma, a bracket, a colon or a semicolon, without "the")
            is looked for in the README, case and spacing aside. An item that starts "with X," is conditional on X: it
            is checked only when X is one of the night's forms (--forms, or the forms in --build build.json).
-  tables   every row of the declaration's reading tables (the markdown tables after "Table 1" and "Table 2") against
+           A list written as "- name: description" on every item (from the 11-25 drafts) is read strictly: each name
+           must stand in the README as written (case and spacing aside); no head guessing, no word match.
+  tables   every row of the declaration's reading tables (the markdown tables after "Table 1", "Table A", ...) against
            the tool's strings (dicts keyed by the row's words, e.g. READ_UNIFORM_A, read from the tool's source
            without importing it). A row is SAME (equal text), PREFIX (the tool's text is the declaration's text up to
            a colon: the tool names the row, the declaration adds its reading of the kind of shrink) or DIFFERENT.
+           A table of three columns is keyed by its first two cells; a wider one (e.g. "| ruler | AGREES | DIFFERS |
+           NOT READ |") by (first cell, column word), a "-" cell being no row. A cell is split only at a "|" with white
+           space on both sides ("|0>" stays in its cell), and a key "(a)" in the declaration matches "a" in the tool.
 
   python tools/declaration_check.py beside PREREG.md README.md [--forms L F | --build build.json]
   python tools/declaration_check.py tables PREREG.md TOOL.py NAME [NAME ...]
@@ -28,10 +33,19 @@ def _norm(s):
     return re.sub(r"\s+", " ", s.replace("`", "").replace("*", "")).strip().lower()
 
 
+NAMED = re.compile(r"^`?(?:\*\*)?([^:`*]{1,60}?)(?:\*\*)?`?:\s+\S")
+
+
 def beside_items(prereg):
-    """The items of every "Beside, never judged" list: [(line number, text)]. A list is the bullets right under the
-    line, or, when the line itself goes on, that text up to the next blank line, split at semicolons (else commas)."""
-    lines, out = prereg.splitlines(), []
+    """The items of every "Beside, never judged" list: [(line number, text)] (see beside_lists)."""
+    return [it for _, items in beside_lists(prereg) for it in items]
+
+
+def beside_lists(prereg):
+    """Every "Beside, never judged" list: [(line number of its head, [(line number, text)])]. A list is the bullets
+    right under the line, or, when the line itself goes on, that text up to the next blank line, split at semicolons
+    (else commas)."""
+    lines, lists = prereg.splitlines(), []
     for i, ln in enumerate(lines):
         m = BESIDE_HEAD.match(ln)
         if not m:
@@ -43,8 +57,9 @@ def beside_items(prereg):
                 text += " " + lines[j].strip()
                 j += 1
             parts = text.split(";") if ";" in text else re.split(r",\s+(?![^()]*\))", text)
-            out += [(i + 1, p.strip().rstrip(".")) for p in parts if p.strip()]
+            lists.append((i + 1, [(i + 1, p.strip().rstrip(".")) for p in parts if p.strip()]))
             continue
+        out = []
         j = i + 1
         while j < len(lines):
             b = BULLET.match(lines[j])
@@ -58,7 +73,8 @@ def beside_items(prereg):
                 j = k
             else:
                 break
-    return out
+        lists.append((i + 1, out))
+    return lists
 
 
 def head_of(item):
@@ -90,32 +106,64 @@ def _found(head, readme):
 
 
 def beside_coverage(prereg, readme, forms=None):
-    """[dict(line, item, head, condition, checked, found)] for every beside item of the declaration; found is
-    "exact", "words" (see _found) or None."""
-    out = []
-    for n, item in beside_items(prereg):
-        cond, h = head_of(item)
-        checked = cond is None or forms is None or cond in forms
-        out.append(dict(line=n, item=item, head=h, condition=cond, checked=checked,
-                        found=_found(h, readme) if checked else None))
+    """[dict(line, item, head, condition, checked, found, form)] for every beside item of the declaration. In a list
+    whose every item is "name: description" (form "named") the head is the name and found is "name" when the name
+    stands in the README, else None; otherwise (form "free") found is "exact", "words" (see _found) or None."""
+    out, text = [], _norm(readme)
+    for _, items in beside_lists(prereg):
+        named = bool(items) and all(NAMED.match(t) for _, t in items)
+        for n, item in items:
+            if named:
+                h = NAMED.match(item).group(1).strip()
+                out.append(dict(line=n, item=item, head=h, condition=None, checked=True,
+                                found="name" if _norm(h) in text else None, form="named"))
+                continue
+            cond, h = head_of(item)
+            checked = cond is None or forms is None or cond in forms
+            out.append(dict(line=n, item=item, head=h, condition=cond, checked=checked,
+                            found=_found(h, readme) if checked else None, form="free"))
     return out
 
 
+def _cells(row):
+    """The cells of a markdown table row, split only at a "|" with white space on both sides (or at the row's ends),
+    so a "|0>" inside a cell stays in its cell."""
+    inner = re.sub(r"^\s*\|\s?", "", row.rstrip())
+    inner = re.sub(r"\s?\|\s*$", "", inner)
+    return [c.strip() for c in re.split(r"\s\|\s", " " + inner + " ")]
+
+
+def _key(k):
+    """A row key as the tool writes it: a cell "(a)" or "(b_out)" matches the tool's "a" or "b_out"."""
+    return tuple(re.sub(r"^\((.*)\)$", lambda m: m.group(1), x.strip()) for x in k)
+
+
 def reading_tables(prereg):
-    """{table number: {(word, word): reading}} for the markdown tables that follow a "Table N" line."""
-    lines, out, cur = prereg.splitlines(), {}, None
+    """{table label: {key: reading}} for the markdown tables that follow a "Table N" / "Table A" line (the label an int
+    when it is a number). Three columns: key (cell 1, cell 2). Wider: key (cell 1, column word) for every cell that is
+    not "-"."""
+    lines, out, cur, header = prereg.splitlines(), {}, None, None
     for ln in lines:
-        m = re.match(r"^\s*Table (\d+)\b", ln)
+        m = re.match(r"^\s*Table ([0-9]+|[A-Z])\b", ln)
         if m:
-            cur = int(m.group(1))
-            out[cur] = {}
+            cur = int(m.group(1)) if m.group(1).isdigit() else m.group(1)
+            out[cur], header = {}, None
             continue
         if cur is None:
             continue
         if ln.startswith("|"):
-            cells = [c.strip() for c in ln.strip().strip("|").split("|")]
-            if len(cells) == 3 and not set(cells[0]) <= set("-: ") and cells[2] != "reading":
+            cells = _cells(ln)
+            if set("".join(cells)) <= set("-:| "):
+                continue
+            if header is None:
+                header = cells
+                continue
+            if len(header) == 3:
                 out[cur][(cells[0], cells[1])] = cells[2]
+            else:
+                for word, text in zip(header[1:], cells[1:]):
+                    if text != "-":
+                        out[cur][(cells[0], word)] = text
         elif out[cur]:
             cur = None
     return out
@@ -135,12 +183,13 @@ def compare_tables(prereg, tables_by_name):
     same row keys."""
     decl, out = reading_tables(prereg), []
     for name, tdict in tables_by_name.items():
-        num = next((n for n, rows in decl.items() if set(rows) == set(tdict)), None)
+        tkeys = {_key(k): k for k in tdict}
+        num = next((n for n, rows in decl.items() if {_key(k) for k in rows} == set(tkeys)), None)
         if num is None:
             out.append(dict(table=None, name=name, row=None, declaration=None, tool=None, status="NO TABLE"))
             continue
         for row, dtext in decl[num].items():
-            ttext = tdict[row]
+            ttext = tdict[tkeys[_key(row)]]
             st = "SAME" if _norm(dtext) == _norm(ttext) else \
                 "PREFIX" if _norm(dtext).startswith(_norm(ttext) + ":") else "DIFFERENT"
             out.append(dict(table=num, name=name, row=row, declaration=dtext, tool=ttext, status=st))
