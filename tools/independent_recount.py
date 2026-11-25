@@ -12,8 +12,10 @@ The common part (any night with job folders):
 A night's scoring formula is a small function registered in SCORERS under the night's folder name:
 ohm-window-night-2026-11-23 (the same formulas as ow_independent_check.py), qpe-parked-night-2026-11-21 and
 qpe-n78-night-2026-11-22 (the hit shares, 2 SE, the ceiling words and margins, parking's difference with 2 SE; the
-ceilings are the declared values; each value is also looked up in the README's results row). Past nights'
-reproduce.py is not changed.
+ceilings are the declared values; each value is also looked up in the README's results row) and
+ohm-ruler-night-2026-11-24 (the raw words, rulers (a) and (b), the one-factor test, the order and W(t) / W(1), from the
+declaration's formulas). sentinel_overlap(job) counts the qubits the ring sentinel shares with the other circuits.
+Past nights' reproduce.py is not changed.
 
   python tools/independent_recount.py results/NIGHT [--json OUT.json] [--compare REF.json] [--simulate]
   python tools/independent_recount.py --selftest
@@ -25,6 +27,7 @@ import gzip
 import hashlib
 import io
 import json
+import math
 import os
 import sys
 
@@ -409,8 +412,161 @@ def readme_rows(night, score):
     return out
 
 
-# name -> (job folders under the night, the scoring function, the keys --compare reads, per-key tolerances).
-# A function given one job folder takes (night, job, simulate); given a list, (night, [(job_dir, job)], simulate).
+# ------------------------------------------------------------------- the Ohm ruler night (11-24) and the sentinel
+def sentinel_overlap(job):
+    """The qubits the ring sentinel's circuits touch against those of every other circuit of the job (users, mirrors,
+    floors), from the circuits as sent (every operation but barriers); the word NOT ON USER QUBITS when they share
+    none."""
+    role = {c["cell"]: c.get("role") for c in job["manifest"]["cells"]}
+    roles = [role[pb["cell"]] for pb in job["manifest"]["pubs"]]
+
+    def active(qc):
+        return {qc.find_bit(q).index for ins in qc.data if ins.operation.name != "barrier" for q in ins.qubits}
+    sent, other = set(), set()
+    for p, r in zip(job["pubs"], roles):
+        (sent if r == "sentinel" else other).update(active(p["circuit"]))
+    ov = sorted(sent & other)
+    return dict(sentinel_circuits=roles.count("sentinel"), sentinel_qubits=len(sent), other_qubits=len(other),
+                overlap=len(ov), overlap_qubits=ov,
+                word=("NO SENTINEL" if not sent else "NOT ON USER QUBITS" if not ov else "ON USER QUBITS"))
+
+
+def _chi2_sf(x, k):
+    """Chi-square survival function (closed forms: even k by the Poisson sum, odd k by erfc and its series)."""
+    if x <= 0:
+        return 1.0
+    if k % 2 == 0:
+        s, term = 0.0, 1.0
+        for i in range(k // 2):
+            if i:
+                term *= (x / 2) / i
+            s += term
+        return math.exp(-x / 2) * s
+    s = math.erfc(math.sqrt(x / 2))
+    term = math.sqrt(2 * x / math.pi) * math.exp(-x / 2)
+    for i in range(1, (k - 1) // 2 + 1):
+        s += term
+        term *= x / (2 * i + 1)
+    return s
+
+
+def score_ohm_ruler(night, job, simulate=False):
+    """ohm-ruler-night-2026-11-24, from prereg/ohm_ruler_night_2026-11-24.md's formulas: per cell (arm, t, L) the raw
+    M and W words with their ratios, W device / exact / excess (2 SE), S, ruler (a) rho_a = T_device / T0 per pair and
+    W_a, ruler (b) rho_b = sqrt(mean <Z> of the mirror) and W_b with the mirror's shot noise through the square root,
+    their words (|d| < 2 SE); at t >= 3 the window's r per position (shot-noise SE), the weighted pool, chi2 and p; the
+    order of W, W_a, W_b at t = 3, 4; W(t) / W(1) raw, exact and by ruler (b). The qubit -> clbit map comes from the
+    sent circuits' measure instructions; build.json gives the strings and each item's chain positions and labels; the
+    exact <Z> by label from answers/ohm_ruler_answers_by_label.json. The sentinel's word is psf-os's and is not
+    re-counted here (sentinel_overlap is given instead)."""
+    arms, K = ("A0", "A1", "A2"), None
+    b = json.load(open(os.path.join(night, "or", "build.json")))
+    ans = json.load(open(os.path.join(night, "answers", "ohm_ruler_answers_by_label.json")))["z"]
+    strs, ts, forms, shots = b["strings"], b["cycles"], b["forms"], job["manifest"]["shots"]
+    ks = sorted({n[1:] for n in strs})
+    K = len(ks)
+    window = lambda t: list(range(20, 20 + 2 * t - 1))
+    pubs = {p["name"]: p for p in job["pubs"]}
+
+    def zdev(tg):
+        p, labels = pubs["p2d_" + tg], b["items"][tg]["given_labels"]
+        return z_from_counts(p["counts"], [p["meas"][q] for q in labels])
+
+    out = dict(cells={}, uniform={}, tables={}, order={}, beside={}, sentinel_overlap=sentinel_overlap(job))
+    se_k = lambda x: float(np.std(x, ddof=1) / math.sqrt(K))
+    for arm in arms:
+        for t in ts:
+            for form in forms:
+                key = f"{arm}_t{t}_{form}"
+                it = b["items"][f"{key}_s00"]
+                pos, labels = it["positions"], it["given_labels"]
+                wi = [i for i, q in enumerate(pos) if q in window(t)]
+                zd = {n: zdev(f"{key}_{n}") for n in (p + k for k in ks for p in "sc")}
+                ze = {n: np.array([ans[f"{key}_{n}"][str(lb)] for lb in labels]) for n in zd}
+                Od = np.array([(zd["s" + k] - zd["c" + k]) / 2 for k in ks])
+                Oe = np.array([(ze["s" + k] - ze["c" + k]) / 2 for k in ks])
+                T0 = np.array([sum(1 - 2 * int(strs["s" + k][q]) for q in pos) for k in ks], dtype=float)
+                m0 = {n: sum(int(strs[n][q]) for q in window(t)) for n in zd}
+                const = np.array([-(m0["s" + k] - m0["c" + k]) / 2 for k in ks])
+                w_d = -Od[:, wi].sum(axis=1) / 2 + const
+                w_e = -Oe[:, wi].sum(axis=1) / 2 + const
+                md = np.array([((1 - zd[n][wi]) / 2).sum() - m0[n] for k in ks for n in ("s" + k, "c" + k)])
+                me = np.array([((1 - ze[n][wi]) / 2).sum() - m0[n] for k in ks for n in ("s" + k, "c" + k)])
+                rM = float(np.mean((md - me) ** 2) / np.mean(me ** 2))
+                rW = float(np.mean((w_d - w_e) ** 2) / np.mean(w_e ** 2))
+                c = dict(M_ratio=rM, M="READS" if rM <= 0.5 else "DOES NOT READ", W_ratio=rW,
+                         W="READS" if rW <= 0.5 else "DOES NOT READ", W_device=float(w_d.mean()),
+                         W_exact=float(w_e.mean()), S_device=float(np.mean(md.reshape(K, 2).sum(axis=1))),
+                         W_excess=float((w_d - w_e).mean()), W_excess_2se=2 * se_k(w_d - w_e),
+                         errors_M=(md - me).tolist())
+                if form == "F" or t >= 3:
+                    rho_a = Od.sum(axis=1) / T0
+                    da = -(Od[:, wi].sum(axis=1) / rho_a) / 2 + const - w_e
+                    c.update(rho_a=rho_a.tolist(), W_a=float((da + w_e).mean()), d_a=float(da.mean()),
+                             d_a_2se=2 * se_k(da), ruler_a="AGREES" if abs(da.mean()) < 2 * se_k(da) else "DIFFERS")
+                else:
+                    c["ruler_a"] = "NOT READ"
+                mn = f"p2d_{key}_s00_mirror"
+                if mn in pubs:
+                    mp = pubs[mn]
+                    mq = sorted(mp["meas"])
+                    zm = z_from_counts(mp["counts"], [mp["meas"][q] for q in mq])
+                    m = float(zm.mean())
+                    tot = sum(mp["counts"].values())
+                    per = [(np.mean([1 - 2 * int(s.replace(" ", "")[-1 - mp["meas"][q]]) for q in mq]), n)
+                           for s, n in mp["counts"].items()]
+                    mu = sum(v * n for v, n in per) / tot
+                    m_se = math.sqrt(sum(n * (v - mu) ** 2 for v, n in per) / (tot - 1) / tot)
+                    c["mirror"] = m
+                    if m > 0:
+                        rb = math.sqrt(m)
+                        db = -(Od[:, wi].sum(axis=1) / rb) / 2 + const - w_e
+                        slope = float(np.mean(Od[:, wi].sum(axis=1)) / (4 * m ** 1.5))
+                        se_b = math.sqrt(se_k(db) ** 2 + (slope * m_se) ** 2)
+                        c.update(rho_b=rb, W_b=float((db + w_e).mean()), d_b=float(db.mean()), d_b_2se=2 * se_b,
+                                 ruler_b="AGREES" if abs(db.mean()) < 2 * se_b else "DIFFERS")
+                out["cells"][key] = c
+                if t >= 3:
+                    use = [i for i in wi if np.sum(Oe[:, i] ** 2) >= 0.05 * K]
+                    var = np.array([[(1 - zd[p + k] ** 2) / shots for p in "sc"] for k in ks])
+                    r, se = [], []
+                    for i in use:
+                        den = float(np.sum(Oe[:, i] ** 2))
+                        r.append(float(np.sum(Od[:, i] * Oe[:, i]) / den))
+                        se.append(math.sqrt(float(np.sum(Oe[:, i] ** 2 * (var[:, 0, i] + var[:, 1, i]) / 4))) / den)
+                    u = dict(positions=[pos[i] for i in use], r=r, se=se)
+                    if len(use) >= 2:
+                        w = 1 / np.array(se) ** 2
+                        pool = float(np.sum(w * np.array(r)) / w.sum())
+                        chi = float(np.sum(((np.array(r) - pool) / np.array(se)) ** 2))
+                        p = _chi2_sf(chi, len(use) - 1)
+                        u.update(r_pool=pool, chi2=chi, dof=len(use) - 1, p=p, word="UNIFORM" if p >= 0.05 else "NOT UNIFORM")
+                    else:
+                        u.update(word="NOT READ")
+                    out["uniform"][key] = u
+                    out["tables"][key] = dict(table1=[u["word"], c["ruler_a"]],
+                                              table2=[c["ruler_a"], c.get("ruler_b")])
+    for form in forms:
+        for t in (x for x in ts if x >= 3):
+            for q in ("W_device", "W_a", "W_b"):
+                v = [out["cells"][f"{a}_t{t}_{form}"].get(q) for a in arms]
+                if None not in v:
+                    out["order"][f"{q}_t{t}_{form}"] = "yes" if v[0] > v[1] > v[2] else "no"
+        for a in arms:
+            c1 = out["cells"][f"{a}_t1_{form}"]
+            for t in (x for x in ts if x >= 3):
+                ct = out["cells"][f"{a}_t{t}_{form}"]
+                g = dict(raw=ct["W_device"] / c1["W_device"], exact=ct["W_exact"] / c1["W_exact"])
+                for q in ("W_a", "W_b"):
+                    if q in ct and q in c1:
+                        g[q] = ct[q] / c1[q]
+                out["beside"][f"{a}_{form}_W{t}_over_W1"] = g
+    return out
+
+
+# name -> (job folders under the night, the scoring function, the keys --compare reads, per-key tolerances, keys
+# --compare skips). A function given one job folder takes (night, job, simulate); given a list,
+# (night, [(job_dir, job)], simulate).
 SCORERS = {
     "ohm-window-night-2026-11-23": (os.path.join("ow", "job"), score_ohm_window,
                                     ("cells", "twins", "order", "beside", "chain_is_device_path"), {}),
@@ -419,19 +575,26 @@ SCORERS = {
     # the record JSON holds the exact ceiling; the declaration writes it to 4 decimals
     "qpe-n78-night-2026-11-22": ([os.path.join("qn", "job0", "job")], score_qpe_n78, ("per_n", "shape"),
                                  {"ceiling": 5e-5}),
+    # the sentinel's word is psf-os's own (not re-counted); no floors were sent
+    "ohm-ruler-night-2026-11-24": (os.path.join("or", "job"), score_ohm_ruler,
+                                   ("cells", "uniform", "order", "beside"), {}, ("sentinel", "floor_mean")),
 }
 
 
 # ------------------------------------------------------------------------------------------------ comparing
-def compare(mine, ref, keys=("cells", "twins", "order", "beside", "chain_is_device_path"), tol=None):
+def compare(mine, ref, keys=("cells", "twins", "order", "beside", "chain_is_device_path"), tol=None, skip=()):
     """[(path, mine, ref)] for every value under the given keys that differs (floats within 1e-12, or within tol[k]
-    for a value whose own key is k)."""
+    for a value whose own key is k; lists element by element). Keys named in skip (and "err") are not compared."""
     diffs, tol = [], tol or {}
 
     def walk(a, b, p):
+        if isinstance(b, list) and isinstance(a, list) and len(a) == len(b) and any(isinstance(x, float) for x in b):
+            for i, (x, y) in enumerate(zip(a, b)):
+                walk(x, y, f"{p}/{i}")
+            return
         if isinstance(b, dict):
             for k in b:
-                if k == "err":
+                if k == "err" or k in skip:
                     continue
                 walk(a.get(k) if isinstance(a, dict) else None, b[k], f"{p}/{k}")
         elif isinstance(b, float) and isinstance(a, (int, float)):
@@ -519,9 +682,10 @@ def main():
     if "score" in out and "cells" in out["score"]:
         for k, c in out["score"]["cells"].items():
             print(k, c)
-        print("twins", out["score"]["twins"])
-        print("order", out["score"]["order"], "| chain", out["score"]["chain_from_records"],
-              "| on the declared positions", out["score"]["measured_on_the_declared_positions"])
+        for k in ("twins", "order", "chain_from_records", "measured_on_the_declared_positions", "uniform",
+                  "sentinel_overlap"):
+            if k in out["score"]:
+                print(k, out["score"][k])
     elif "score" in out:
         for n, c in out["score"]["per_n"].items():
             print(f"n {n}:", {k: (round(v, 6) if isinstance(v, float) else v) for k, v in c.items()})
@@ -536,7 +700,7 @@ def main():
         print(f"(no scoring formula registered for {name}; the common part only)")
     if a.compare:
         ref = json.load(open(a.compare))
-        diffs = compare(out.get("score", {}), ref, *(spec[2:4] if spec else ()))
+        diffs = compare(out.get("score", {}), ref, *(spec[2:5] if spec else ()))
         print(f"compared with {a.compare}: {len(diffs)} values differ" + "".join(f"\n   {d}" for d in diffs[:20]))
         ok &= not diffs
     if a.json:

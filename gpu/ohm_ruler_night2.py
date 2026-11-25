@@ -13,6 +13,12 @@ For each ruler (a), (b), (c) the words are given at two widths, side by side:
 (a) and (b) are recomputed here with the declared formulas; `score2` stops if they differ from the declared tool's
 scores.json in the same folder by more than 1e-12 (when that file is there).
 
+The one-factor test on the window (the declared tool's `score`, read from its scores.json, not recomputed here): per
+window position q, r_q = sum_k O_device,kq O_exact,kq / sum_k O_exact,kq^2, and its SE is the shot noise of the counts,
+SE_q = sqrt(sum_k O_exact,kq^2 (var Z_s + var Z_c) / 4) / sum_k O_exact,kq^2 with var Z = (1 - Z^2) / shots; the pool
+is weighted by 1 / SE_q^2 and chi2 has n - 1 degrees of freedom. No bootstrap over pairs is used (the declared tool's
+comment "bootstrap SEs over pairs" does not match its computation; that tool is declared and is not changed).
+
   PYTHONPATH=<psf-os 0.3.3>:<TOQB> python gpu/ohm_ruler_night2.py score2 OUT ANS_BY_LABEL.json
 """
 import argparse
