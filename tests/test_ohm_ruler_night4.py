@@ -134,10 +134,11 @@ def test_qubits_csv_mirror_low_and_r_low_apart(tmp_path, monkeypatch):
     a = _job4(tmp_path, monkeypatch, mirror=one_low, K=5, eta=0.002)
     _s4(a)
     rows = list(csv.DictReader(open(os.path.join(a.out, "qubits.csv"), encoding="utf-8")))
-    assert {"MIRROR_LOW", "R_LOW", "mirror_z", "m_q", "r_q", "e_q", "calibration_time", "copy_drow"} <= set(rows[0])
+    assert {"MIRROR_LOW", "R_LOW", "R_HIGH", "mirror_z", "m_q", "r_q", "e_q", "calibration_time", "copy_drow"} <= set(rows[0])
     low = [r for r in rows if r["MIRROR_LOW"] == "True"]
     assert len(low) == len(ORN.ARMS) and all(r["position"] == str(ORN.window(3)[1]) for r in low)
     assert all(r["R_LOW"] == "False" for r in low)     # its mirror is low, its r is not: two columns, two facts
+    assert not any(r["R_LOW"] == "True" and r["R_HIGH"] == "True" for r in rows)
     assert {r["calibration_time"] for r in rows} == {"2026-11-26T00:00:00Z"}
 
 

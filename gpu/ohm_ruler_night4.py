@@ -22,7 +22,8 @@ changed. This file adds, on the owner's decisions of 2026-11-25 and home's adden
   qubits.csv (beside, never judged): one row per (arm, t, chain position) with the device, its calibration time
           (the device record's time only), the copy, the physical qubit, the |0> mirror's <Z>, m_q, r_q (outside the
           window too), e_q (values to 3 decimals), left out at tau, MIRROR LOW (|0> mirror below tau) and R LOW (r_q
-          below the window's pooled r by more than 2 shot-noise SE) as two separate columns.
+          below the window's pooled r by more than 2 shot-noise SE) as two separate columns, and R HIGH (above it by more
+          than 2 shot-noise SE).
 
   PYTHONPATH=<psf-os 0.3.3>:<TOQB> python gpu/ohm_ruler_night4.py build4 DEV OUT ANS_IN ANS_OUT --pairs-t 1:7 3:7 4:9
   python gpu/ohm_ruler_night4.py check4 OUT ANS_BY_LABEL
@@ -299,12 +300,14 @@ def cmd_score4(a):
                 # R LOW: r_q below the window's pooled r by more than 2 shot-noise SE (the lower side only; score3's
                 # outlying positions, two-sided, stay in scores3.json)
                 r_low = (pool is not None and math.isfinite(rq_) and se_ > 0 and rq_ - pool < -2 * se_)
+                # R HIGH: the upper side, the same test (owner, 2026-11-26)
+                r_high = (pool is not None and math.isfinite(rq_) and se_ > 0 and rq_ - pool > 2 * se_)
                 rows.append(dict(device=b["device"], calibration_time=calib, copy_drow=drow, arm=arm, t=t,
                                  position=p, physical=phys[i], in_window=p in win, mirror_z=round(float(zm[i]), 3),
                                  m_q=round(float(m[i]), 3), r_q="" if not math.isfinite(rq_) else round(rq_, 3),
                                  e_q="" if p not in e_of else round(e_of[p], 3),
                                  left_out_at_tau=(p not in win and zm[i] < a.tau),
-                                 MIRROR_LOW=bool(zm[i] < a.tau), R_LOW=bool(r_low)))
+                                 MIRROR_LOW=bool(zm[i] < a.tau), R_LOW=bool(r_low), R_HIGH=bool(r_high)))
             res["cells"][key] = cell
             if t >= 3:
                 res["tables"][key] = {r: READ_TABLE_C[(r, cell[r]["words"]["t"])] for r in ("e", "de", "a_prime")
