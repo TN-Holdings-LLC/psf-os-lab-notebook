@@ -1,0 +1,1985 @@
+{
+ "strings_draws_for_9": 31,
+ "strings_equal_answers": true,
+ "strings_equal_build": true,
+ "first7_equal_11_24": true,
+ "answers_sha256": "e581df9d4fbb99ca219f3beb1e3efbf6b2d34be0477d32fc7bf51071207497ac",
+ "qpy_sha256_matches_manifest": true,
+ "n_circuits": 173,
+ "shots": [
+  1000,
+  [
+   1000
+  ]
+ ],
+ "F_copy": {
+  "drow": 4,
+  "dcol": 0,
+  "passed_over": [
+   {
+    "drow": 0,
+    "dcol": 0,
+    "why": [
+     "qubit 32 suspect",
+     "qubit 33 suspect",
+     "coupler (32, 33) not working"
+    ]
+   },
+   {
+    "drow": 2,
+    "dcol": 0,
+    "why": [
+     "qubit 72 failed"
+    ]
+   }
+  ]
+ },
+ "F_is_device_path": true,
+ "pubs": {
+  "users": true,
+  "readout": true,
+  "zero_mirrors": true,
+  "string_mirrors": true,
+  "floors": [],
+  "sentinel": 4,
+  "others": [
+   "p2d_readout_c00",
+   "p2d_readout_c01",
+   "p2d_readout_s00",
+   "p2d_readout_s01"
+  ]
+ },
+ "L_on_F_physical": true,
+ "noise_free_vs_answers_worst": 9.870954054136405e-11,
+ "answers_vs_by_label_worst": 0.0,
+ "structure": {
+  "after": 0,
+  "delays": 0,
+  "ops": [
+   "cz",
+   "rz",
+   "sx",
+   "x"
+  ]
+ },
+ "cz": {
+  "A0_t1": [
+   [
+    6,
+    4
+   ]
+  ],
+  "A0_t3": [
+   [
+    66,
+    12
+   ]
+  ],
+  "A0_t4": [
+   [
+    120,
+    16
+   ]
+  ],
+  "A1_t1": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A1_t3": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A1_t4": [
+   [
+    180,
+    24
+   ]
+  ],
+  "A2_t1": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A2_t3": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A2_t4": [
+   [
+    180,
+    24
+   ]
+  ]
+ },
+ "mirrors_noise_free_worst": 3.8413716652030416e-14,
+ "mirror_cz": {
+  "A0_t1": [
+   12,
+   12
+  ],
+  "A0_t3": [
+   132,
+   132
+  ],
+  "A0_t4": [
+   240,
+   240
+  ],
+  "A1_t1": [
+   18,
+   18
+  ],
+  "A1_t3": [
+   198,
+   198
+  ],
+  "A1_t4": [
+   360,
+   360
+  ],
+  "A2_t1": [
+   18,
+   18
+  ],
+  "A2_t3": [
+   198,
+   198
+  ],
+  "A2_t4": [
+   360,
+   360
+  ]
+ },
+ "readout_circuits": {
+  "s00": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "clbit_order_is_position_order": false,
+   "noise_free_worst": 0.0
+  },
+  "c00": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "clbit_order_is_position_order": false,
+   "noise_free_worst": 0.0
+  },
+  "s01": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "clbit_order_is_position_order": false,
+   "noise_free_worst": 0.0
+  },
+  "c01": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "clbit_order_is_position_order": false,
+   "noise_free_worst": 0.0
+  }
+ },
+ "readout_build": true,
+ "readout_pairs": {
+  "12": {
+   "e_s00c00": 0.964,
+   "e_s01c01": 0.974,
+   "difference": 0.01
+  },
+  "13": {
+   "e_s00c00": 0.786,
+   "e_s01c01": 0.795,
+   "difference": 0.009
+  },
+  "14": {
+   "e_s00c00": 0.989,
+   "e_s01c01": 0.992,
+   "difference": 0.003
+  },
+  "15": {
+   "e_s00c00": 0.955,
+   "e_s01c01": 0.956,
+   "difference": 0.001
+  },
+  "16": {
+   "e_s00c00": 0.943,
+   "e_s01c01": 0.951,
+   "difference": 0.008
+  },
+  "17": {
+   "e_s00c00": 0.985,
+   "e_s01c01": 0.989,
+   "difference": 0.004
+  },
+  "18": {
+   "e_s00c00": 0.996,
+   "e_s01c01": 0.992,
+   "difference": -0.004
+  },
+  "19": {
+   "e_s00c00": 0.797,
+   "e_s01c01": 0.809,
+   "difference": 0.012
+  },
+  "20": {
+   "e_s00c00": 0.931,
+   "e_s01c01": 0.937,
+   "difference": 0.006
+  },
+  "21": {
+   "e_s00c00": 0.983,
+   "e_s01c01": 0.974,
+   "difference": -0.009
+  },
+  "22": {
+   "e_s00c00": 0.991,
+   "e_s01c01": 0.992,
+   "difference": 0.001
+  },
+  "23": {
+   "e_s00c00": 0.949,
+   "e_s01c01": 0.969,
+   "difference": 0.02
+  },
+  "24": {
+   "e_s00c00": 0.991,
+   "e_s01c01": 0.988,
+   "difference": -0.003
+  },
+  "25": {
+   "e_s00c00": 0.958,
+   "e_s01c01": 0.965,
+   "difference": 0.007
+  },
+  "26": {
+   "e_s00c00": 0.984,
+   "e_s01c01": 0.982,
+   "difference": -0.002
+  },
+  "27": {
+   "e_s00c00": 0.951,
+   "e_s01c01": 0.943,
+   "difference": -0.008
+  },
+  "28": {
+   "e_s00c00": 0.989,
+   "e_s01c01": 0.981,
+   "difference": -0.008
+  },
+  "29": {
+   "e_s00c00": 0.976,
+   "e_s01c01": 0.982,
+   "difference": 0.006
+  },
+  "30": {
+   "e_s00c00": 0.847,
+   "e_s01c01": 0.82,
+   "difference": -0.027
+  },
+  "31": {
+   "e_s00c00": 0.92,
+   "e_s01c01": 0.911,
+   "difference": -0.009
+  },
+  "32": {
+   "e_s00c00": 0.954,
+   "e_s01c01": 0.951,
+   "difference": -0.003
+  },
+  "33": {
+   "e_s00c00": 0.984,
+   "e_s01c01": 0.981,
+   "difference": -0.003
+  }
+ },
+ "sentinel_overlap": {
+  "sentinel_qubits": 40,
+  "user_qubits": 22,
+  "overlap": []
+ },
+ "queue": {
+  "read": "2026-11-26T10:29:35.950426+00:00",
+  "pending": {
+   "ibm_marrakesh": 0,
+   "ibm_fez": 0,
+   "ibm_kingston": 0
+  },
+  "pick": "ibm_fez"
+ },
+ "charge_formula_s": 49.14,
+ "usage": [
+  48,
+  0.785327,
+  "dc40l0ls2omc738edlcg"
+ ],
+ "direction": {
+  "A0_t3": {
+   "r_minus_rho_a": -0.04209297706397904,
+   "se": 0.01403385139302249,
+   "t_se": 0.034340834358726036,
+   "word": "WINDOW SHRINKS MORE",
+   "ruler_a": "AGREES"
+  },
+  "A0_t4": {
+   "r_minus_rho_a": 0.03626259321773092,
+   "se": 0.018571810645764956,
+   "t_se": 0.04282659534913399,
+   "word": "NOT SEEN",
+   "ruler_a": "DIFFERS"
+  },
+  "A1_t3": {
+   "r_minus_rho_a": -0.04342987135024553,
+   "se": 0.013789318491579711,
+   "t_se": 0.03374246234889555,
+   "word": "WINDOW SHRINKS MORE",
+   "ruler_a": "DIFFERS"
+  },
+  "A1_t4": {
+   "r_minus_rho_a": 0.038994160400797284,
+   "se": 0.014496402238772443,
+   "t_se": 0.033428703562609255,
+   "word": "WINDOW SHRINKS LESS",
+   "ruler_a": "DIFFERS"
+  },
+  "A2_t3": {
+   "r_minus_rho_a": -0.05115120267101452,
+   "se": 0.01258032083258408,
+   "t_se": 0.030784045077333247,
+   "word": "WINDOW SHRINKS MORE",
+   "ruler_a": "DIFFERS"
+  },
+  "A2_t4": {
+   "r_minus_rho_a": 0.05527306596305918,
+   "se": 0.016170985316195315,
+   "t_se": 0.0372902921391464,
+   "word": "WINDOW SHRINKS LESS",
+   "ruler_a": "DIFFERS"
+  }
+ },
+ "tableB": {
+  "A0_t3": "the window loses more than the total, within ruler (a)'s word",
+  "A0_t4": "no lean seen, yet the total does not carry it: read with the one-factor word",
+  "A1_t3": "the total understates the window's shrink",
+  "A1_t4": "the total overstates the window's shrink",
+  "A2_t3": "the total understates the window's shrink",
+  "A2_t4": "the total overstates the window's shrink"
+ },
+ "order": {
+  "W_dev_t3": "yes",
+  "W_ex_t3": "yes",
+  "W_a_t3": "yes",
+  "W_b_t3": "yes",
+  "W_b_out_t3": "yes",
+  "W_c_t3": "yes",
+  "W_d_t3": "yes",
+  "W_dev_t4": "yes",
+  "W_ex_t4": "yes",
+  "W_a_t4": "yes",
+  "W_b_t4": "yes",
+  "W_b_out_t4": "yes",
+  "W_c_t4": "yes",
+  "W_d_t4": "yes"
+ },
+ "growth": {
+  "A0_W3/W1": {
+   "raw": 2.3908460471567268,
+   "exact": 1.74107142857143
+  },
+  "A0_W4/W1": {
+   "raw": 2.9939590075512403,
+   "exact": 2.105902777846899
+  },
+  "A1_W3/W1": {
+   "raw": 2.2520261437908498,
+   "exact": 1.4733537946428572
+  },
+  "A1_W4/W1": {
+   "raw": 2.7572984749455345,
+   "exact": 1.5517663955688465
+  },
+  "A2_W3/W1": {
+   "raw": 2.0536768652710684,
+   "exact": 1.1148734351374596
+  },
+  "A2_W4/W1": {
+   "raw": 2.5713007693684027,
+   "exact": 1.2492566005471315
+  }
+ },
+ "vs_declared": {
+  "worst_abs_difference": 5.551115123125783e-17,
+  "words_equal": true,
+  "differences": []
+ },
+ "or4_2": {
+  "mirror_z": {
+   "A0": {
+    "104": 0.05,
+    "102": 0.166
+   },
+   "A1": {
+    "104": -0.102,
+    "102": 0.12
+   },
+   "A2": {
+    "104": -0.118,
+    "102": -0.01
+   }
+  },
+  "word": "HELD",
+  "copy_drow": {
+   "drow": 4,
+   "dcol": 0,
+   "passed_over": [
+    {
+     "drow": 0,
+     "dcol": 0,
+     "why": [
+      "qubit 32 suspect",
+      "qubit 33 suspect",
+      "coupler (32, 33) not working"
+     ]
+    },
+    {
+     "drow": 2,
+     "dcol": 0,
+     "why": [
+      "qubit 72 failed"
+     ]
+    }
+   ]
+  }
+ },
+ "tau_beside_raw": {
+  "A0_t3 0.2": {
+   "mine": [
+    "AGREES",
+    "AGREES",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A0_t3 0.3": {
+   "mine": [
+    "AGREES",
+    "AGREES",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A0_t3 0.4": {
+   "mine": [
+    "AGREES",
+    "AGREES",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A0_t4 0.2": {
+   "mine": [
+    "AGREES",
+    "AGREES",
+    [
+     28,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     30,
+     31
+    ]
+   }
+  },
+  "A0_t4 0.3": {
+   "mine": [
+    "AGREES",
+    "AGREES",
+    [
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ]
+   }
+  },
+  "A0_t4 0.4": {
+   "mine": [
+    "AGREES",
+    "AGREES",
+    [
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ]
+   }
+  },
+  "A1_t3 0.2": {
+   "mine": [
+    "DIFFERS",
+    "DIFFERS",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A1_t3 0.3": {
+   "mine": [
+    "DIFFERS",
+    "DIFFERS",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A1_t3 0.4": {
+   "mine": [
+    "DIFFERS",
+    "DIFFERS",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A1_t4 0.2": {
+   "mine": [
+    "DIFFERS",
+    "AGREES",
+    [
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ]
+   }
+  },
+  "A1_t4 0.3": {
+   "mine": [
+    "DIFFERS",
+    "AGREES",
+    [
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ]
+   }
+  },
+  "A1_t4 0.4": {
+   "mine": [
+    "DIFFERS",
+    "AGREES",
+    [
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ]
+   }
+  },
+  "A2_t3 0.2": {
+   "mine": [
+    "DIFFERS",
+    "DIFFERS",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A2_t3 0.3": {
+   "mine": [
+    "DIFFERS",
+    "DIFFERS",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A2_t3 0.4": {
+   "mine": [
+    "DIFFERS",
+    "DIFFERS",
+    []
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "left_out": []
+   }
+  },
+  "A2_t4 0.2": {
+   "mine": [
+    "DIFFERS",
+    "AGREES",
+    [
+     28,
+     30
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     30
+    ]
+   }
+  },
+  "A2_t4 0.3": {
+   "mine": [
+    "DIFFERS",
+    "AGREES",
+    [
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ]
+   }
+  },
+  "A2_t4 0.4": {
+   "mine": [
+    "DIFFERS",
+    "AGREES",
+    [
+     28,
+     29,
+     30,
+     31
+    ]
+   ],
+   "declared": {
+    "a_prime": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "b_prime": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ]
+   }
+  }
+ },
+ "qubits_csv": {
+  "rows_declared": 126,
+  "rows_mine": 126,
+  "matched": 126,
+  "differences": [
+   "('A0', '1', '18') R_HIGH declared False mine True",
+   "('A0', '1', '19') R_LOW declared False mine True",
+   "('A0', '1', '21') R_HIGH declared False mine True",
+   "('A1', '1', '18') R_HIGH declared False mine True",
+   "('A1', '1', '21') R_HIGH declared False mine True",
+   "('A2', '1', '19') R_LOW declared False mine True",
+   "('A2', '1', '21') R_HIGH declared False mine True"
+  ],
+  "calibration_time": [
+   "2026-11-26 11:11:49+01:00"
+  ],
+  "flags": {
+   "MIRROR_LOW": [
+    [
+     "A0",
+     4,
+     101
+    ],
+    [
+     "A0",
+     4,
+     102
+    ],
+    [
+     "A0",
+     4,
+     103
+    ],
+    [
+     "A0",
+     4,
+     104
+    ],
+    [
+     "A1",
+     4,
+     101
+    ],
+    [
+     "A1",
+     4,
+     102
+    ],
+    [
+     "A1",
+     4,
+     103
+    ],
+    [
+     "A1",
+     4,
+     104
+    ],
+    [
+     "A2",
+     4,
+     101
+    ],
+    [
+     "A2",
+     4,
+     102
+    ],
+    [
+     "A2",
+     4,
+     103
+    ],
+    [
+     "A2",
+     4,
+     104
+    ]
+   ],
+   "R_LOW": [
+    [
+     "A0",
+     3,
+     110
+    ],
+    [
+     "A0",
+     3,
+     111
+    ],
+    [
+     "A0",
+     3,
+     113
+    ],
+    [
+     "A0",
+     3,
+     115
+    ],
+    [
+     "A0",
+     4,
+     92
+    ],
+    [
+     "A0",
+     4,
+     99
+    ],
+    [
+     "A0",
+     4,
+     101
+    ],
+    [
+     "A0",
+     4,
+     102
+    ],
+    [
+     "A0",
+     4,
+     103
+    ],
+    [
+     "A0",
+     4,
+     107
+    ],
+    [
+     "A0",
+     4,
+     112
+    ],
+    [
+     "A0",
+     4,
+     113
+    ],
+    [
+     "A1",
+     3,
+     109
+    ],
+    [
+     "A1",
+     3,
+     113
+    ],
+    [
+     "A1",
+     3,
+     114
+    ],
+    [
+     "A1",
+     4,
+     92
+    ],
+    [
+     "A1",
+     4,
+     99
+    ],
+    [
+     "A1",
+     4,
+     101
+    ],
+    [
+     "A1",
+     4,
+     102
+    ],
+    [
+     "A1",
+     4,
+     103
+    ],
+    [
+     "A1",
+     4,
+     104
+    ],
+    [
+     "A1",
+     4,
+     107
+    ],
+    [
+     "A1",
+     4,
+     113
+    ],
+    [
+     "A1",
+     4,
+     114
+    ],
+    [
+     "A2",
+     3,
+     109
+    ],
+    [
+     "A2",
+     3,
+     113
+    ],
+    [
+     "A2",
+     3,
+     114
+    ],
+    [
+     "A2",
+     3,
+     115
+    ],
+    [
+     "A2",
+     4,
+     92
+    ],
+    [
+     "A2",
+     4,
+     101
+    ],
+    [
+     "A2",
+     4,
+     102
+    ],
+    [
+     "A2",
+     4,
+     103
+    ],
+    [
+     "A2",
+     4,
+     104
+    ],
+    [
+     "A2",
+     4,
+     109
+    ],
+    [
+     "A2",
+     4,
+     112
+    ],
+    [
+     "A2",
+     4,
+     113
+    ],
+    [
+     "A2",
+     4,
+     114
+    ]
+   ],
+   "R_HIGH": [
+    [
+     "A0",
+     3,
+     94
+    ],
+    [
+     "A0",
+     3,
+     103
+    ],
+    [
+     "A0",
+     3,
+     104
+    ],
+    [
+     "A0",
+     3,
+     105
+    ],
+    [
+     "A0",
+     3,
+     106
+    ],
+    [
+     "A0",
+     3,
+     107
+    ],
+    [
+     "A0",
+     3,
+     108
+    ],
+    [
+     "A0",
+     4,
+     93
+    ],
+    [
+     "A0",
+     4,
+     95
+    ],
+    [
+     "A0",
+     4,
+     104
+    ],
+    [
+     "A0",
+     4,
+     105
+    ],
+    [
+     "A0",
+     4,
+     106
+    ],
+    [
+     "A0",
+     4,
+     108
+    ],
+    [
+     "A0",
+     4,
+     110
+    ],
+    [
+     "A0",
+     4,
+     115
+    ],
+    [
+     "A0",
+     4,
+     116
+    ],
+    [
+     "A0",
+     4,
+     121
+    ],
+    [
+     "A1",
+     3,
+     94
+    ],
+    [
+     "A1",
+     3,
+     95
+    ],
+    [
+     "A1",
+     3,
+     103
+    ],
+    [
+     "A1",
+     3,
+     104
+    ],
+    [
+     "A1",
+     3,
+     105
+    ],
+    [
+     "A1",
+     3,
+     106
+    ],
+    [
+     "A1",
+     3,
+     107
+    ],
+    [
+     "A1",
+     3,
+     108
+    ],
+    [
+     "A1",
+     4,
+     95
+    ],
+    [
+     "A1",
+     4,
+     106
+    ],
+    [
+     "A1",
+     4,
+     108
+    ],
+    [
+     "A1",
+     4,
+     110
+    ],
+    [
+     "A1",
+     4,
+     116
+    ],
+    [
+     "A1",
+     4,
+     121
+    ],
+    [
+     "A2",
+     3,
+     94
+    ],
+    [
+     "A2",
+     3,
+     95
+    ],
+    [
+     "A2",
+     3,
+     103
+    ],
+    [
+     "A2",
+     3,
+     104
+    ],
+    [
+     "A2",
+     3,
+     105
+    ],
+    [
+     "A2",
+     3,
+     106
+    ],
+    [
+     "A2",
+     3,
+     107
+    ],
+    [
+     "A2",
+     3,
+     108
+    ],
+    [
+     "A2",
+     4,
+     94
+    ],
+    [
+     "A2",
+     4,
+     95
+    ],
+    [
+     "A2",
+     4,
+     106
+    ],
+    [
+     "A2",
+     4,
+     108
+    ],
+    [
+     "A2",
+     4,
+     116
+    ],
+    [
+     "A2",
+     4,
+     121
+    ]
+   ]
+  }
+ },
+ "vs_declared4": {
+  "worst_abs_difference": 1.1102230246251565e-16,
+  "differences": []
+ },
+ "night4": {
+  "A0_t1": {
+   "e": {
+    "rho": 0.931,
+    "d": 0.00011508362743598408,
+    "se": 0.01257369682821096,
+    "t_se": 0.03076783613863222,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.8901016795849787
+    ],
+    "d": -0.004802619905694068,
+    "se": 0.010757881288777367,
+    "t_se": 0.02632453551363822,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de_vs_d": "NOT SMALLER",
+   "tau": {},
+   "r_pool_window": 0.8412000000000001
+  },
+  "A0_t3": {
+   "e": {
+    "rho": 0.969,
+    "d": 0.14294237431814802,
+    "se": 0.02955946439927209,
+    "t_se": 0.07233200938501881,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.8433765469824259,
+     0.8767588037767285,
+     0.8948340628295282,
+     0.8559369135631434,
+     0.9237158654045085
+    ],
+    "d": 0.02175869762644719,
+    "se": 0.017175792630857254,
+    "t_se": 0.0420291645677077,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": []
+    }
+   },
+   "a_prime": {
+    "kept": 16,
+    "of": 16,
+    "left_out": [],
+    "rho_mean": 0.8882392857142857,
+    "d": 0.02061987888238483,
+    "se": 0.010876116618342344,
+    "t_se": 0.026613857365083718,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "direction": {
+     "r_minus_rho": -0.042092977063979,
+     "se": 0.014033851393022488,
+     "t_se": 0.03434083435872603,
+     "word": "WINDOW SHRINKS MORE"
+    }
+   },
+   "r_pool_window": 0.8537532521365326
+  },
+  "A0_t4": {
+   "e": {
+    "rho": 0.9695714285714285,
+    "d": 0.2041531220666057,
+    "se": 0.07802492818447063,
+    "t_se": 0.17992548439338926,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.8078558039650393,
+     0.8626302800157203,
+     0.8603935146199092,
+     0.8208471234036213,
+     0.9036503748685107,
+     0.8527144891462792,
+     0.8209993909863759
+    ],
+    "d": 0.010785794861104092,
+    "se": 0.04162462314844219,
+    "t_se": 0.09598638098030769,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      30,
+      31
+     ]
+    },
+    "0.3": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      29,
+      30,
+      31
+     ]
+    },
+    "0.4": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      29,
+      30,
+      31
+     ]
+    }
+   },
+   "a_prime": {
+    "kept": 18,
+    "of": 22,
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "rho_mean": 0.8405187244549374,
+    "d": 0.008606896370634227,
+    "se": 0.024011802830982643,
+    "t_se": 0.05537121732824597,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "direction": {
+     "r_minus_rho": -0.0381542793853547,
+     "se": 0.013713470296674253,
+     "t_se": 0.03162326250413083,
+     "word": "WINDOW SHRINKS MORE"
+    }
+   },
+   "r_pool_window": 0.8099830934431426
+  },
+  "A1_t1": {
+   "e": {
+    "rho": 0.931,
+    "d": 0.01699401565137339,
+    "se": 0.011344606257647565,
+    "t_se": 0.027760251512463592,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.8651728151069011
+    ],
+    "d": 0.010134987774930762,
+    "se": 0.007394037029875071,
+    "t_se": 0.0180932086121043,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {},
+   "r_pool_window": 0.7964
+  },
+  "A1_t3": {
+   "e": {
+    "rho": 0.969,
+    "d": 0.20950321432026756,
+    "se": 0.033353614212306114,
+    "t_se": 0.08161629397751306,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.8095826085088538,
+     0.8412847318238932,
+     0.8540351280831486,
+     0.8277547946100947,
+     0.8892794836270541
+    ],
+    "d": 0.03828434731528972,
+    "se": 0.015592115850336473,
+    "t_se": 0.03815390748577335,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    }
+   },
+   "a_prime": {
+    "kept": 16,
+    "of": 16,
+    "left_out": [],
+    "rho_mean": 0.8608630952380951,
+    "d": 0.04316671516265239,
+    "se": 0.014524824033316463,
+    "t_se": 0.035542244409525386,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "direction": {
+     "r_minus_rho": -0.043429871350245515,
+     "se": 0.013789318491579718,
+     "t_se": 0.03374246234889557,
+     "word": "WINDOW SHRINKS MORE"
+    }
+   },
+   "r_pool_window": 0.8216337649284461
+  },
+  "A1_t4": {
+   "e": {
+    "rho": 0.9695714285714285,
+    "d": 0.32452340773811117,
+    "se": 0.07800802019874181,
+    "t_se": 0.1798864945782986,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.7423961206795197,
+     0.8127582666451323,
+     0.826316525309763,
+     0.7781143874778309,
+     0.8632682086119007,
+     0.8189017035029296,
+     0.7416576029408719
+    ],
+    "d": 0.030771289700297536,
+    "se": 0.03975273064814563,
+    "t_se": 0.09166979687462382,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      29,
+      30,
+      31
+     ]
+    },
+    "0.3": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      29,
+      30,
+      31
+     ]
+    },
+    "0.4": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      29,
+      30,
+      31
+     ]
+    }
+   },
+   "a_prime": {
+    "kept": 18,
+    "of": 22,
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "rho_mean": 0.807065719413255,
+    "d": 0.07956240376396734,
+    "se": 0.0275507447466522,
+    "t_se": 0.06353201738577997,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "direction": {
+     "r_minus_rho": -0.04203544790134661,
+     "se": 0.021981119544396226,
+     "t_se": 0.050688461669377696,
+     "word": "NOT SEEN"
+    }
+   },
+   "r_pool_window": 0.7766330305523013
+  },
+  "A2_t1": {
+   "e": {
+    "rho": 0.931,
+    "d": 0.009398496240601557,
+    "se": 0.010603577479185153,
+    "t_se": 0.02594695409156607,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.8832768535402703
+    ],
+    "d": 0.00411740183372955,
+    "se": 0.008034051165890442,
+    "t_se": 0.019659323202933912,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {},
+   "r_pool_window": 0.826
+  },
+  "A2_t3": {
+   "e": {
+    "rho": 0.969,
+    "d": 0.22821072864007858,
+    "se": 0.04138997284336782,
+    "t_se": 0.10128126354772105,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.7991658150847044,
+     0.8523127360306192,
+     0.867847912943276,
+     0.81212991571546,
+     0.8975984625655282
+    ],
+    "d": 0.04787254136759535,
+    "se": 0.018241264268392357,
+    "t_se": 0.0446363736647561,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    }
+   },
+   "a_prime": {
+    "kept": 16,
+    "of": 16,
+    "left_out": [],
+    "rho_mean": 0.8675666666666666,
+    "d": 0.06107392047293498,
+    "se": 0.007790475661281569,
+    "t_se": 0.019063293943156,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "direction": {
+     "r_minus_rho": -0.05115120267101451,
+     "se": 0.012580320832584087,
+     "t_se": 0.030784045077333264,
+     "word": "WINDOW SHRINKS MORE"
+    }
+   },
+   "r_pool_window": 0.8183749342300465
+  },
+  "A2_t4": {
+   "e": {
+    "rho": 0.9695714285714285,
+    "d": 0.328985393107655,
+    "se": 0.08698332789583238,
+    "t_se": 0.20058355412778947,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    }
+   },
+   "de": {
+    "rho_q": [
+     0.764635861047597,
+     0.8091217460926383,
+     0.826316525309763,
+     0.78720835869546,
+     0.8352628328855535,
+     0.8282077034174459,
+     0.725561851257355
+    ],
+    "d": 0.015975933603175136,
+    "se": 0.022428204783066567,
+    "t_se": 0.0517194402297515,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    }
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      30
+     ]
+    },
+    "0.3": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      29,
+      30,
+      31
+     ]
+    },
+    "0.4": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": [
+      28,
+      29,
+      30,
+      31
+     ]
+    }
+   },
+   "a_prime": {
+    "kept": 18,
+    "of": 22,
+    "left_out": [
+     28,
+     29,
+     30,
+     31
+    ],
+    "rho_mean": 0.8064143084301311,
+    "d": 0.05086320014015841,
+    "se": 0.020665015168801027,
+    "t_se": 0.04765352497925517,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "direction": {
+     "r_minus_rho": -0.02804309431892376,
+     "se": 0.01679746930976703,
+     "t_se": 0.038734964228322774,
+     "word": "NOT SEEN"
+    }
+   },
+   "r_pool_window": 0.7908760290020236
+  }
+ }
+}
+A0_t1 M 0.014 W 0.008 Wdev 0.258 Wex 0.250 exc +0.008 (2SE 0.032)
+   b     rho 0.917 d -0.0015 tSE 0.0291 2SE 0.0238 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.917 d -0.0015 tSE 0.0291 2SE 0.0238 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.957 d +0.0030 tSE 0.0338 2SE 0.0277 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.922 d -0.0009 tSE 0.0298 2SE 0.0243 {'t': 'AGREES', '2se': 'AGREES'}
+A0_t3 M 0.074 W 0.071 Wdev 0.616 Wex 0.435 exc +0.180 (2SE 0.068)
+   a     rho nan d +0.0206 tSE 0.0266 2SE 0.0218 {'t': 'AGREES', '2se': 'AGREES'}
+   b     rho 0.896 d +0.0452 tSE 0.0486 2SE 0.0397 {'t': 'AGREES', '2se': 'DIFFERS'}
+   b_out rho 0.896 d +0.0452 tSE 0.0486 2SE 0.0397 {'t': 'AGREES', '2se': 'DIFFERS'} left []
+   c     rho 0.902 d +0.0536 tSE 0.0524 2SE 0.0428 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.893 d +0.0401 tSE 0.0480 2SE 0.0392 {'t': 'AGREES', '2se': 'DIFFERS'}
+A0_t4 M 0.120 W 0.118 Wdev 0.771 Wex 0.526 exc +0.244 (2SE 0.175)
+   a     rho nan d -0.1791 tSE 0.0664 2SE 0.0576 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.770 d -0.1386 tSE 0.0872 2SE 0.0756 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.833 d -0.0131 tSE 0.0869 2SE 0.0754 {'t': 'AGREES', '2se': 'AGREES'} left [28, 29, 30, 31]
+   c     rho 0.861 d +0.0369 tSE 0.1034 2SE 0.0897 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.860 d +0.0362 tSE 0.1018 2SE 0.0883 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t1 M 0.015 W 0.010 Wdev 0.273 Wex 0.250 exc +0.023 (2SE 0.031)
+   b     rho 0.900 d +0.0139 tSE 0.0231 2SE 0.0189 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.900 d +0.0139 tSE 0.0231 2SE 0.0189 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.939 d +0.0178 tSE 0.0290 2SE 0.0237 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.897 d +0.0135 tSE 0.0226 2SE 0.0185 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t3 M 0.167 W 0.158 Wdev 0.615 Wex 0.368 exc +0.247 (2SE 0.076)
+   a     rho nan d +0.0432 tSE 0.0355 2SE 0.0290 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.856 d +0.0504 tSE 0.0440 2SE 0.0359 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.856 d +0.0504 tSE 0.0440 2SE 0.0359 {'t': 'DIFFERS', '2se': 'DIFFERS'} left []
+   c     rho 0.895 d +0.1098 tSE 0.0571 2SE 0.0467 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.858 d +0.0531 tSE 0.0445 2SE 0.0363 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+A1_t4 M 0.260 W 0.250 Wdev 0.753 Wex 0.388 exc +0.365 (2SE 0.175)
+   a     rho nan d -0.1420 tSE 0.0961 2SE 0.0834 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.709 d -0.1680 tSE 0.1644 2SE 0.1426 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.773 d -0.0181 tSE 0.1027 2SE 0.0891 {'t': 'AGREES', '2se': 'AGREES'} left [28, 29, 30, 31]
+   c     rho 0.841 d +0.1197 tSE 0.0978 2SE 0.0848 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.811 d +0.0616 tSE 0.0896 2SE 0.0777 {'t': 'AGREES', '2se': 'AGREES'}
+A2_t1 M 0.013 W 0.008 Wdev 0.266 Wex 0.250 exc +0.016 (2SE 0.029)
+   b     rho 0.920 d +0.0082 tSE 0.0244 2SE 0.0199 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.920 d +0.0082 tSE 0.0244 2SE 0.0199 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.958 d +0.0122 tSE 0.0297 2SE 0.0243 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.915 d +0.0077 tSE 0.0238 2SE 0.0194 {'t': 'AGREES', '2se': 'AGREES'}
+A2_t3 M 0.297 W 0.313 Wdev 0.547 Wex 0.279 exc +0.268 (2SE 0.094)
+   a     rho nan d +0.0611 tSE 0.0191 2SE 0.0156 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.857 d +0.0613 tSE 0.0517 2SE 0.0423 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.857 d +0.0613 tSE 0.0517 2SE 0.0423 {'t': 'DIFFERS', '2se': 'DIFFERS'} left []
+   c     rho 0.880 d +0.0985 tSE 0.0635 2SE 0.0519 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.859 d +0.0652 tSE 0.0525 2SE 0.0429 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+A2_t4 M 0.529 W 0.526 Wdev 0.684 Wex 0.312 exc +0.372 (2SE 0.197)
+   a     rho nan d -0.1964 tSE 0.1048 2SE 0.0909 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.720 d -0.1618 tSE 0.1367 2SE 0.1186 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.782 d -0.0094 tSE 0.0624 2SE 0.0541 {'t': 'AGREES', '2se': 'AGREES'} left [28, 29, 30, 31]
+   c     rho 0.836 d +0.1023 tSE 0.0748 2SE 0.0649 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.810 d +0.0501 tSE 0.0566 2SE 0.0491 {'t': 'AGREES', '2se': 'DIFFERS'}
+uniform A0_t3 NOT UNIFORM p 5.917e-07 outlying [21, 22, 24] r_pool 0.854
+uniform A0_t4 NOT UNIFORM p 5.191e-26 outlying [20, 22, 24, 25, 26] r_pool 0.810
+uniform A1_t3 NOT UNIFORM p 4.136e-05 outlying [23, 24] r_pool 0.822
+uniform A1_t4 NOT UNIFORM p 3.347e-13 outlying [22, 24, 25, 26] r_pool 0.777
+uniform A2_t3 NOT UNIFORM p 0.001516 outlying [23, 24] r_pool 0.818
+uniform A2_t4 NOT UNIFORM p 4.643e-16 outlying [20, 23, 24, 26] r_pool 0.791

@@ -78,11 +78,20 @@ Beside, never judged:
   d is positive at t = 3 for every ruler and arm (+0.021 to +0.110).
 - tau 0.2 / 0.3 / 0.4: (a')'s and (b')'s words are the same at the three values in every cell; the qubits left out at
   t = 4 are 28 to 31 at 0.3 and 0.4, and three or two of them at 0.2 (A0: 28, 30, 31; A2: 28, 30).
-- Readout (`or4/scores4.json` readout_pairs): e_q of the 22 cone qubits from s00/c00 and from s01/c01 differ by at most
-  0.020. The three lowest e_q: physical 93 (0.786), 113 (0.797), 102 (0.847).
+- Readout (`or4/scores4.json` readout_pairs): e_q of the 22 cone qubits from s00/c00 and from s01/c01 differ by
+  0.027 at the largest (physical 102: 0.847 and 0.820). (Corrected after the home VS's check: the first text gave the
+  largest signed difference, 0.020.) The three lowest e_q: physical 93 (0.786), 113 (0.797), 102 (0.847).
 - qubits.csv (beside): MIRROR LOW on 104, 103, 102, 101 at t = 4 in every arm; R LOW and R HIGH are two further
-  columns (R HIGH added by the owner's choice of 2026-11-26). On 104 the mirror is low (0.05 in A0) while its r_q is
-  not (0.846, R HIGH at A0 t = 4): two facts in two columns.
+  columns (R HIGH added by the owner's choice of 2026-11-26). At t = 4, 104's mirror is low in every arm, while its
+  r_q is high in A0 (0.846, R HIGH) and low in A1 and A2 (0.757, 0.669, R LOW): two facts in two columns, which go
+  their own ways by arm. R LOW and R HIGH are written at t >= 3 only: the tool tests r_q against the window's pooled
+  r, which score3 gives at t >= 3 (at t = 1 the window is one position), so every t = 1 row reads False in both; the
+  declaration's text names no such limit (the home VS's check counts 7 flags at t = 1 with its own reading).
+- One factor on the window (as 11-25): NOT UNIFORM in all six cells at t >= 3 (p ≤ 0.002; at A2 t = 3 p 0.0015,
+  where 11-24 and 11-25 read UNIFORM). Pooled r: 0.854 / 0.822 / 0.818 at t = 3, 0.810 / 0.777 / 0.791 at t = 4.
+  Outlying positions: A0 t = 3 21, 22, 24; A0 t = 4 20, 22, 24, 25, 26; A1 t = 3 23, 24; A1 t = 4 22, 24, 25, 26;
+  A2 t = 3 23, 24; A2 t = 4 20, 23, 24, 26. (Added after the home VS's check: the declaration names them beside, as
+  11-25, and the first text left them out.)
 - order: A0 > A1 > A2 by every measure at t = 3 and t = 4. growth W(t) / W(1): raw 2.39 / 2.25 / 2.05 at t = 3 and
   2.99 / 2.76 / 2.57 at t = 4, against exact 1.74 / 1.47 / 1.11 and 2.11 / 1.55 / 1.25.
 - sentinel: DEAD; NOT ON USER QUBITS (overlap 0), as 11-24 and 11-25.
@@ -101,7 +110,8 @@ Beside, never judged:
   smaller than (d)'s in all six.
 - Essence: the raw W is 0.18 to 0.37 above the exact value at 3 and 4 cycles, and A2 t = 4 no longer reads by the
   ratio rule. Putting the readout's half back ((de)) brought the window to the exact value within the t width in four
-  of six cells, but at t = 3 every ruler stays on the positive side (+0.02 to +0.11), so a shrink no ruler here
+  of six cells, but at t = 3 every ruler stays on the positive side (+0.02 to +0.11 for (de), (a') and the rulers of 11-25;
+  +0.14 to +0.23 for (e), beside), so a shrink no ruler here
   carries remains at t = 3 in A1 and A2. (a') read two of six cells. 48 s charged.
 
 ## Limits
@@ -110,6 +120,16 @@ Beside, never judged:
 - The rulers' readings of the kind of shrink are readings of their directions; nothing here measures the noise. Values
   on other nights are set beside, not compared.
 - OR4-2 rests on two earlier nights and the same placement; it says nothing about another device or copy.
+
+## Independent check (home VS, 2026-11-26)
+
+Re-counted from the raw counts, the sent circuits and the sealed answers with qiskit, Aer and numpy only (the home VS's
+tool of 11-25, widened): every value and word of `or4/scores3.json` and `or4/scores4.json` agrees (largest difference
+1.1e-16; no word differs); the sent circuits, the sealed answers (e581df9d...), OR4-1 and OR4-2 agree; reproduce SAME.
+Corrected here: the readout pairs' largest difference; the uniformity words and outlying positions added; 104's R
+columns by arm; the essence's range. Noted, not changed: qubits.csv's R LOW and R HIGH are written at t >= 3 only
+(above); `tools/declaration_check.py beside` read no item from this declaration, whose heading has no colon. Its tool
+and output: `notes/verify_2026-11-26/`.
 
 ## Reproduce
 
