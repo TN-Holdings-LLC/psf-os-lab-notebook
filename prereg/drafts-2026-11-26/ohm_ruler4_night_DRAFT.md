@@ -223,7 +223,65 @@ AGREES with (e) DIFFERS points to a shrink in the gates that the string mirrors 
 
 All noise ILLUSTRATIVE, written by hand, at chain positions chosen by hand (not where any device's qubits failed).
 
-DRY_RUN_TABLES
+**Readout faults** (workplace; the job above on the 11-25 ibm_fez record; `dry3.py` on every circuit, readout
+circuits included; t >= 3, 6 cells per seed; seeds per case in the heading of `tables4.py`'s output: no noise
+64, the others 16; AGREES at the t quantile, 2 SE in brackets; the last column counts the cells where (de)'s
+|d| is below (d)'s):
+
+| case | (a) | (a') | (b) | (b') | (c) | (d) | (e) | (de) | (de) \|d\| < (d) \|d\| |
+|---|---|---|---|---|---|---|---|---|---|
+| no noise | 367 (351) | 367 (351) | 367 (351) | 367 (351) | 367 (351) | 367 (351) | 367 (351) | 367 (351) | 0 |
+| every position: 1 read as 0 with 0.02 (one-sided) | 91 (88) | 91 (88) | 5 (2) | 5 (2) | 5 (2) | 43 (32) | 94 (91) | 93 (87) | 88 |
+| every bit flips with 0.02 (two-sided) | 91 (89) | 91 (89) | 11 (2) | 11 (2) | 11 (8) | 10 (3) | 91 (86) | 93 (86) | 96 |
+| positions 14, 17, 18 (outside the window): both ways 0.4 | 96 (96) | 94 (88) | 0 (0) | 93 (88) | 93 (88) | 93 (88) | 93 (88) | 93 (88) | 0 |
+
+The direction at t >= 3 on the same runs (L: WINDOW SHRINKS LESS, M: MORE, N: NOT SEEN):
+
+| case | with rho_a' (judged) | with rho_a (beside) |
+|---|---|---|
+| no noise | L7 M9 N368 | L7 M9 N368 |
+| one-sided readout 0.02 | L3 M3 N90 | L3 M3 N90 |
+| two-sided readout 0.02 | M5 N91 | M5 N91 |
+| outside positions both ways 0.4 | L4 M4 N88 | L17 N79 |
+
+**Gate noise, amplitude damping, and a one-sided readout fault with gate noise** (the workplace VS; the same job built
+by the VS's rule-6 run; Aer MPS or GPU statevector; t = 3: 10 seeds x 3 arms = 30 cells per row, t = 4: 3 seeds, 9
+cells; % AGREES at the t quantile / 2 SE; printed by the VS's `vs_ruler_table4.py`, `notes/ohm_ruler4_2026-11-26/
+vs_2026-11-26/`; the t = 1 rows are there too). dep: two-qubit depolarizing per CZ, p2; damp: amplitude damping per CZ
+on both qubits, gamma; rop2: a 1 read as 0 with 0.02 on every qubit, with p2 0.01. t = 4 with damping was not run
+(its GPU time was not measured first and would not fit the pod's limit).
+
+| setting | t | seeds | cells | (a) | (b) | (c) | (d) | (e) | (de) | (a') | (de) smaller than (d) | direction with rho_a' | direction with rho_a | d of (d) | d of (de) | d of (e) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| damp0.005 | 3 | 10 | 30 | 3 / 0 | 80 / 73 | 60 / 43 | 100 / 100 | 0 / 0 | 100 / 100 | 3 / 0 | 60 | NOT SEEN 3, WINDOW SHRINKS MORE 97 | NOT SEEN 3, WINDOW SHRINKS MORE 97 | -0.003 | -0.000 | +0.111 |
+| damp0.01 | 3 | 10 | 30 | 0 / 0 | 57 / 47 | 37 / 37 | 93 / 93 | 0 / 0 | 93 / 93 | 0 / 0 | 57 | WINDOW SHRINKS MORE 100 | WINDOW SHRINKS MORE 100 | -0.004 | -0.001 | +0.213 |
+| dep0.01 | 3 | 10 | 30 | 0 / 0 | 93 / 87 | 100 / 100 | 97 / 97 | 0 / 0 | 97 / 93 | 0 / 0 | 53 | WINDOW SHRINKS MORE 100 | WINDOW SHRINKS MORE 100 | -0.004 | -0.001 | +0.209 |
+| dep0.02 | 3 | 10 | 30 | 0 / 0 | 77 / 60 | 97 / 87 | 93 / 87 | 0 / 0 | 93 / 80 | 0 / 0 | 53 | WINDOW SHRINKS MORE 100 | WINDOW SHRINKS MORE 100 | -0.001 | +0.006 | +0.391 |
+| rop2 | 3 | 10 | 30 | 0 / 0 | 33 / 23 | 60 / 47 | 90 / 83 | 0 / 0 | 100 / 97 | 0 / 0 | 80 | WINDOW SHRINKS MORE 100 | WINDOW SHRINKS MORE 100 | +0.012 | +0.001 | +0.211 |
+
+| setting | t | seeds | cells | (a) | (b) | (c) | (d) | (e) | (de) | (a') | (de) smaller than (d) | direction with rho_a' | direction with rho_a | d of (d) | d of (de) | d of (e) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| t4dep0.01 | 4 | 3 | 9 | 56 / 44 | 56 / 33 | 100 / 78 | 89 / 56 | 0 / 0 | 89 / 78 | 56 / 44 | 67 | NOT SEEN 22, WINDOW SHRINKS MORE 78 | NOT SEEN 33, WINDOW SHRINKS MORE 67 | -0.037 | -0.034 | +0.315 |
+| t4dep0.02 | 4 | 3 | 9 | 89 / 56 | 89 / 89 | 89 / 89 | 89 / 67 | 0 / 0 | 100 / 78 | 100 / 67 | 56 | NOT SEEN 78, WINDOW SHRINKS MORE 22 | NOT SEEN 44, WINDOW SHRINKS MORE 56 | -0.056 | -0.050 | +0.572 |
+| t4rop2 | 4 | 3 | 9 | 67 / 56 | 89 / 78 | 89 / 89 | 89 / 89 | 0 / 0 | 89 / 89 | 67 / 56 | 11 | NOT SEEN 44, WINDOW SHRINKS MORE 56 | NOT SEEN 56, WINDOW SHRINKS MORE 44 | -0.019 | -0.032 | +0.318 |
+
+- (de) takes out the readout's half that (d) leaves: a one-sided readout fault alone, (d) 43 of 96 AGREES, (de) 93,
+  and (de)'s |d| below (d)'s in 88 of 96 cells (mean d: (d) +0.016, (de) +0.001); two-sided, (d) 10, (de) 93, 96 of
+  96. With gate noise p2 0.01 on top (rop2, t = 3), (d) 90 %, (de) 100 %, mean d +0.012 against +0.001 (the VS).
+- Under gate noise or damping alone, (d) and (de) both sit near d = 0 (-0.004 to +0.006 at t = 3) and AGREE in 89 to
+  100 %; (de)'s |d| is below (d)'s in about half of the cells (53 to 60 %). The reading row "(de) against (d)" says
+  something only where a readout share is present.
+- (e) carries the readout's shrink alone: it AGREES under readout faults (94 and 91 of 96) and DIFFERS in every cell
+  at t = 3 and 4 once gates shrink the signal (0 % in every VS row; mean d +0.11 to +0.57). So (e) is beside.
+- (a') leaves out positions 14, 17 and 18 in all 96 cells of the outside-window case and AGREES in 94 of 96; on this
+  job (a) also AGREES there (96 of 96), so the case does not show (a') bringing (a) back (on 11-25's job, plan B + d
+  on the 11-23 record, (a) fell to 67 of 96 in the same case). Its direction does change: with rho_a 17 of 96 cells
+  read WINDOW SHRINKS LESS, with rho_a' 4 (no noise: 7 of 384). Under uniform gate noise (a') equals (a) (nothing is left
+  out) and DIFFERS at t = 3 as (a) does.
+- Without noise: 17 of 384 (4.4 %) words DIFFER at the t quantile for each ruler (rule 4); the direction reads LESS
+  or MORE in 16 of 384 (4.2 %).
+- The mirror rulers (b), (b'), (c) miss every readout fault (5 to 11 of 96), as on 11-25; (b') comes back when the
+  faults sit outside the window (93 of 96 against (b)'s 0).
 
 ## Device procedure (home)
 
