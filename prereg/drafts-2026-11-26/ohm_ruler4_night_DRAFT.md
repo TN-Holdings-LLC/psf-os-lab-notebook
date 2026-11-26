@@ -69,15 +69,17 @@ first and kept).
   (every window qubit; a qubit outside the window when its |0> mirror <Z_q> >= tau), per pair rho_a',k = sum over the
   kept qubits of O_device,kq / sum over the same qubits of O_exact,kq (the sealed answers, qubit by qubit). Read at
   t >= 3 (as (a)). **NOT READ when fewer than half of the circuit's qubits are kept**, or an exact sum is 0.
-- SEs: (e) adds the readout circuits' shot noise through the mean (delta method); (de) adds the string mirrors' and
+- SEs: (e) adds the readout circuits' shot noise through the mean (delta method, the sum of the per-qubit shot
+  variances over the window, the qubits taken as independent); (de) adds the string mirrors' and
   the readout's shot noise per qubit through the square root; (a') takes the pairs' scatter only (as (a)).
 - Words per cell: d_x = mean_k (W_x,k - W_exact,k); **AGREES when |d_x| < t_{0.975,K-1} SE** (rule 4: K = 7, 2.447;
   K = 9 at t = 4, 2.306), DIFFERS otherwise; **NOT READ when SE = 0** (rule 5) or as written above. The 2 SE word is
   written beside.
-- **Judged tonight: (a), (b), (c), (d) as 11-25, and (e), (de), (a').** (b') stays beside. Which of (e) and (de) to
-  judge was to be settled by the dry runs; both are judged, each on its own rows of table C, because the dry runs
-  below part them by the kind of fault (see there): (e) alone carries a readout-only shrink and no gate shrink, (de)
-  both.
+- **Judged tonight: (a), (b), (c), (d) as 11-25, and (de), (a').** (b') and (e) stay beside. Which of (e) and (de)
+  to judge was settled by the dry runs below: (e) carries the readout's shrink only, so with any gate noise or damping
+  it DIFFERS in every cell at t = 3 and 4 (the workplace VS: 0 of 30 and 0 of 9 in every row), while (de) AGREES in
+  89 to 100 % of the cells in every row, readout faults included. (e) is still computed and written beside (its e_q
+  is in (de) and in qubits.csv), with its rows of table C read beside.
 
 ## The direction r - rho_a' (judged) and r - rho_a (beside)
 
@@ -89,6 +91,7 @@ first and kept).
 
 ## Beside, never judged
 
+- **(e)**, the readout ruler, its words and d per cell (table C's (e) rows, read beside).
 - **tau 0.2, 0.3, 0.4**: (a')'s and (b')'s words at each tau, with the qubits left out (judged at 0.3).
 - **(de) against (d)**, a reading row, not a prediction (it rests on two nights' arithmetic after the records): per
   cell, whether |d| of (de) is below |d| of (d).
@@ -107,7 +110,9 @@ first and kept).
   - e_q: the readout ruler's value (empty off the t = 4 cone)
   - left_out_at_tau: outside the window and mirror_z below tau
   - MIRROR_LOW: mirror_z below tau (0.3)
-  - R_LOW: r_q beyond 2 shot-noise SE of the window's pooled r (score3's outlying positions; outside the window too)
+  - R_LOW: r_q below the window's pooled r by more than 2 shot-noise SE (the lower side only; outside the window
+    too; score3's outlying positions, both sides, stay in scores3.json)
+  The values are written to 3 decimals.
   MIRROR LOW and R LOW are two columns because they are two facts (the 11-25 README first read one for the other).
   A tool that sets nights side by side reads these files only and is not part of any verdict; it sets a row beside
   another night's only when the physical qubit and the copy are the same, and compares nothing.
@@ -158,8 +163,8 @@ draft proposes 9 (home's addendum): (a') is already narrower than (d) at A0 and 
 
 Per cell, over its K pairs:
 - raw M, W as 11-24 (READS at a ratio of 0.5 or below);
-- rulers (a), (b), (c), (d) as 11-25 (scores3.json); (e), (de), (a') (scores4.json): AGREES / DIFFERS / NOT READ
-  (t quantile; 2 SE beside);
+- rulers (a), (b), (c), (d) as 11-25 (scores3.json); (de), (a') (scores4.json): AGREES / DIFFERS / NOT READ
+  (t quantile; 2 SE beside); (e) beside;
 - one factor on the window (t >= 3), as 11-24;
 - the direction with rho_a' (t >= 3);
 - OR4-2;
@@ -179,7 +184,7 @@ read with (a') in the place of (a) for the judged direction:
 | NOT SEEN | DIFFERS | no lean between the window and the kept qubits' total is seen, yet that total does not carry the window's shrink: read with the one-factor word |
 | NOT SEEN | AGREES | the window and the kept qubits' total shrink alike |
 
-Table C, the readout rulers and (a') (per cell; each ruler on its own rows):
+Table C, the readout rulers and (a') (per cell; each ruler on its own rows; the (e) rows are read beside):
 
 | ruler | word | reading |
 |---|---|---|
@@ -212,7 +217,7 @@ AGREES with (e) DIFFERS points to a shrink in the gates that the string mirrors 
   (2 qubits x 3 arms) are below 0.3; NOT HELD otherwise; NOT READ on another device or copy, or if either qubit is not
   on the t = 4 cone. Grounds: two nights (11-24 and 11-25, both near 0). It is closed inside the job and is not tied
   to the placement (the placement rule does not read it).
-- No other prediction: (e), (de), (a') judged and the direction with rho_a' rest on at most one record each.
+- No other prediction: (de), (a') and the direction with rho_a' rest on at most one record each, and (e) on none.
 
 ## Dry runs (no device; `notes/ohm_ruler4_2026-11-26/`)
 
