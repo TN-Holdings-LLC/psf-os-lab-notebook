@@ -1,0 +1,38 @@
+{
+ "kind": "psfos",
+ "psfos_role": "floor",
+ "psfos_job": {
+  "kind": "user2d_floor"
+ },
+ "arm": "patch:copy",
+ "version": "psf-os rule compiler (TOQB fold:rule at 8d44f05, map-free Target)",
+ "device": "ibm_fez",
+ "masked": [],
+ "labels": [
+  111,
+  112,
+  113,
+  114
+ ],
+ "mapping": {
+  "111": 111,
+  "112": 112,
+  "113": 113,
+  "114": 114
+ },
+ "points": [
+  {
+   "input": "f",
+   "setting": "z"
+  }
+ ],
+ "valid": true,
+ "shots": 1000,
+ "export": {
+  "qpy": "p2d_A0_t1_L_c00_floor.qpy",
+  "circuits": 1,
+  "sha256": "f6224d3824fd0ef103f3edfa01aadb526a828f7bc284b74b26d9fc389c243aa3"
+ },
+ "cz": 6,
+ "tag": "A0_t1_L_c00"
+}

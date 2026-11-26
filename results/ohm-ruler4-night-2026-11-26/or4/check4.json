@@ -1,0 +1,26 @@
+{
+ "check3": "PASS",
+ "readout": {
+  "s00": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "c00": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "s01": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "c01": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "ALL": "PASS"
+ }
+}

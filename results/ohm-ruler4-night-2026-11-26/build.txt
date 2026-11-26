@@ -1,0 +1,8 @@
+U = 0 ruler against statevector, L 2-5, steps 1-4: worst 1.8e-15
+U = 4, L 3-5, steps 1/3/5: per-site charge check |Z_up + Z_dn| worst 3.3e-16
+L 20 (40 qubits): CZ / CZ layers per step U=0 (152, 10), U=4 (192, 12); ruler at 8 steps in 0.01 s
+L 30 (60 qubits): CZ / CZ layers per step U=0 (232, 10), U=4 (292, 12); ruler at 8 steps in 0.03 s
+L 45 (90 qubits): CZ / CZ layers per step U=0 (352, 10), U=4 (442, 12); ruler at 8 steps in 0.08 s
+device ibm_fez; pairs by t {1: 7, 3: 7, 4: 9}; |0> mirrors 9; string mirrors 18 (s00+c00); circuits 169; 1000 shots; charge 48.1 s (2.6 + 0.000269 x circuits x shots); psf-os model 54.7 s
+answers by label sha256 7e232f4cca75f7bf19c533f4b72254900d5aa2397736a20aaf815f7be35e3459
+build4: + 4 readout circuits on the t = 4 cone (22 qubits); circuits 173; charge 49.1 s (2.6 + 0.000269 x circuits x shots); psf-os model 55.9 s
