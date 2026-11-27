@@ -1,0 +1,1 @@
+ibm_kingston  (pending: ibm_fez 1, ibm_kingston 0; ibm_marrakesh not used)

@@ -1,0 +1,36 @@
+{
+ "check3": "PASS",
+ "readout": {
+  "a_readout_s00_head": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "a_readout_c00_head": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "z_readout_c00_tail": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "z_readout_c01_tail": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "z_readout_s00_tail": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "z_readout_s01_tail": {
+   "method": "matrix_product_state",
+   "worst": 0.0,
+   "ok": true
+  },
+  "ALL": "PASS"
+ }
+}

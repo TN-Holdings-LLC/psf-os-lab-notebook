@@ -1,0 +1,16 @@
+A0_t1_L: K 7; (e) d +0.007 tSE 0.009 AGREES; (de) d +0.005 tSE 0.010 AGREES; (de) against (d): SMALLER
+A0_t3_L: K 7; (e) d +0.095 tSE 0.026 DIFFERS; (de) d +0.023 tSE 0.015 DIFFERS; (a_prime) d +0.022 tSE 0.010 DIFFERS; (de) against (d): SMALLER
+A0_t4_L: K 9; (e) d +0.109 tSE 0.081 DIFFERS; (de) d -0.005 tSE 0.033 AGREES; (a_prime) d -0.005 tSE 0.018 AGREES; (de) against (d): SMALLER
+A1_t1_L: K 7; (e) d +0.002 tSE 0.008 AGREES; (de) d -0.001 tSE 0.007 AGREES; (de) against (d): NOT SMALLER
+A1_t3_L: K 7; (e) d +0.127 tSE 0.046 DIFFERS; (de) d -0.004 tSE 0.029 AGREES; (a_prime) d +0.034 tSE 0.026 DIFFERS; (de) against (d): SMALLER
+A1_t4_L: K 9; (e) d +0.179 tSE 0.091 DIFFERS; (de) d -0.021 tSE 0.048 AGREES; (a_prime) d +0.020 tSE 0.038 AGREES; (de) against (d): NOT SMALLER
+A2_t1_L: K 7; (e) d +0.007 tSE 0.009 AGREES; (de) d +0.003 tSE 0.010 AGREES; (de) against (d): SMALLER
+A2_t3_L: K 7; (e) d +0.131 tSE 0.045 DIFFERS; (de) d +0.003 tSE 0.024 AGREES; (a_prime) d +0.037 tSE 0.016 DIFFERS; (de) against (d): SMALLER
+A2_t4_L: K 9; (e) d +0.183 tSE 0.111 DIFFERS; (de) d -0.013 tSE 0.031 AGREES; (a_prime) d +0.015 tSE 0.031 AGREES; (de) against (d): NOT SMALLER
+direction A0_t3_L: with rho_a' WINDOW SHRINKS MORE; with rho_a (beside) WINDOW SHRINKS MORE
+direction A0_t4_L: with rho_a' NOT SEEN; with rho_a (beside) NOT SEEN
+direction A1_t3_L: with rho_a' WINDOW SHRINKS MORE; with rho_a (beside) WINDOW SHRINKS MORE
+direction A1_t4_L: with rho_a' NOT SEEN; with rho_a (beside) NOT SEEN
+direction A2_t3_L: with rho_a' WINDOW SHRINKS MORE; with rho_a (beside) WINDOW SHRINKS MORE
+direction A2_t4_L: with rho_a' NOT SEEN; with rho_a (beside) NOT SEEN
+OR5-2: NOT READ

@@ -278,6 +278,10 @@ RESULTS = {
         ["gpu/ohm_ruler_night4.py", "score4", "{T}/or4", "{T}/answers/ohm_ruler4_answers_by_label.json",
          "--tau", "0.3"],
         "or4/scores4.json"),
+    "ohm-ruler5-night-2026-11-27": ("results/ohm-ruler5-night-2026-11-27", ["or5", "answers"],
+        ["gpu/ohm_ruler_night5.py", "score5", "{T}/or5", "{T}/answers/ohm_ruler5_answers_by_label.json",
+         "--tau", "0.3"],
+        "or5/scores5.json"),
 }
 
 
@@ -340,7 +344,7 @@ def _ignore(folder, names):
     """Leave out the committed scores, and raw_counts.json where the committed raw_counts.json.gz is beside it (older
     records commit the .gz only; the plain file there is a local, untracked copy). Records from 2026-11-06 on commit
     raw_counts.json itself, which is then the input."""
-    out = {"scores.json", "scores3.json", "scores4.json", "qubits.csv"} & set(names)
+    out = {"scores.json", "scores3.json", "scores4.json", "scores5.json", "qubits.csv"} & set(names)
     if "raw_counts.json.gz" in names:
         out.add("raw_counts.json")
     return out
