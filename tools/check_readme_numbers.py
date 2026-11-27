@@ -13,6 +13,12 @@ What is checked, per night folder holding a README.md and at least one job recor
      looked for among the numbers of the night's score files (*.json and score*.txt outside the job folders),
      rounded to 4 places (and twice each number: a 2 SE from a stored SE); a value found nowhere is listed as "not found" (it may be quoted from another night: the
      line is shown so that a reader can tell).
+  5. ranges (2026-11-27, workplace VS, tools6): a README unit (a bullet with its continuation lines, or a paragraph)
+     that says "at most X", "最大 X" (a largest value) or "A to B" (a range) and names its record in backticks with a
+     key after it (e.g. "`or4/scores4.json` readout_pairs") is checked against that record: every number under the
+     key (the field whose name begins like a word of the sentence, e.g. "difference" for "differ", when the key holds
+     records) gives the largest |value| and the signed range, compared at the README's precision. A range sentence
+     naming no record is listed apart as unchecked (not a mismatch).
 
   python tools/check_readme_numbers.py [RESULTS_DIR | NIGHT_DIR | NIGHT_NAME ...] [--json OUT.json] [--night NAME ...]
 
@@ -215,7 +221,100 @@ def check_night(night):
             v = round(fnum(m.group(1)), 4)
             if v not in vals and -v not in vals and not any(abs(v - x) <= 0.00011 for x in vals):
                 notfound.append(dict(line=i + 1, value=m.group(1), text=ln.strip()[:160]))
-    return dict(jobs=len(jobs), mismatches=found, not_found=notfound, delays_us=dl)
+    # 5. ranges against the record they name
+    unchecked = []
+    for ln, unit in units(lines):
+        for kind, claim, text in range_claims(unit):
+            src = re.search(r"`([^`]+\.json)`\s*([A-Za-z_][\w.]*)?", unit)
+            if not src or not src.group(2):
+                unchecked.append(dict(line=ln, what=kind, readme=claim, text=unit[:160]))
+                continue
+            path = os.path.join(night, src.group(1))
+            if not os.path.exists(path):
+                unchecked.append(dict(line=ln, what=kind, readme=claim, text=f"record {src.group(1)} not found"))
+                continue
+            vals = values_under(json.load(open(path)), src.group(2), unit)
+            if not vals:
+                unchecked.append(dict(line=ln, what=kind, readme=claim, text=f"no number under {src.group(2)}"))
+                continue
+            dec = lambda x: len(x.split(".")[1]) if "." in x else 0
+            if kind == "largest":
+                rec = max(abs(v) for v in vals)
+                if abs(round(rec, dec(claim)) - abs(fnum(claim))) > 0.5 * 10 ** -dec(claim) + 1e-12:
+                    found.append(dict(line=ln, what=f"largest ({src.group(1)} {src.group(2)})", readme=claim,
+                                      record=round(rec, 6), text=text))
+            else:
+                a, b = claim
+                lo, hi = min(vals), max(vals)
+                alo, ahi = min(abs(v) for v in vals), max(abs(v) for v in vals)
+                ok = lambda x, y: abs(round(y, dec(x)) - fnum(x)) <= 0.5 * 10 ** -dec(x) + 1e-12
+                if not ((ok(a, lo) and ok(b, hi)) or (ok(a, alo) and ok(b, ahi))):
+                    found.append(dict(line=ln, what=f"range ({src.group(1)} {src.group(2)})", readme=f"{a} to {b}",
+                                      record=[round(lo, 6), round(hi, 6)], text=text))
+    return dict(jobs=len(jobs), mismatches=found, not_found=notfound, delays_us=dl, ranges_unchecked=unchecked)
+
+
+def units(lines):
+    """[(first line number, text)]: each bullet with its indented continuation lines, or each paragraph."""
+    out, cur, start = [], [], 0
+    for i, ln in enumerate(lines):
+        bullet = re.match(r"^\s*[-*]\s", ln)
+        if not ln.strip() or bullet or ln.lstrip().startswith(("#", "|")):
+            if cur:
+                out.append((start + 1, " ".join(x.strip() for x in cur)))
+            cur = [ln] if (bullet and ln.strip()) else []
+            start = i
+        else:
+            if not cur:
+                start = i
+            cur.append(ln)
+    if cur:
+        out.append((start + 1, " ".join(x.strip() for x in cur)))
+    return out
+
+
+RANGE_NUM = r"([+\-−]?\d+\.\d+|[+\-−]?\d+)"
+
+
+def range_claims(unit):
+    """[(kind, claim, text)]: ("largest", "0.020", ...) for "at most 0.020" / "最大 0.020"; ("range", ("0.14",
+    "0.47"), ...) for "0.14 to 0.47" (also "range 0.14 to 0.47")."""
+    out = []
+    for m in re.finditer(r"(?:at most|最大(?:で|は)?)\s*" + RANGE_NUM, unit):
+        out.append(("largest", m.group(1).replace("−", "-"), unit[max(0, m.start() - 60):m.end() + 20]))
+    for m in re.finditer(RANGE_NUM + r"\s+to\s+" + RANGE_NUM + r"(?![\d.])", unit):
+        a, b = m.group(1).replace("−", "-"), m.group(2).replace("−", "-")
+        if "." in a or "." in b:                       # "t = 1 to 3" (counts, cycles) are not values
+            out.append(("range", (a, b), unit[max(0, m.start() - 60):m.end() + 20]))
+    return out
+
+
+def values_under(doc, key, sentence):
+    """The numbers under doc[key] (a dotted key walks deeper); when the key holds records (dicts), only their fields
+    whose name begins like a word of the sentence (first 4 letters), else every number."""
+    v = doc
+    for part in key.split("."):
+        if not isinstance(v, dict) or part not in v:
+            return []
+        v = v[part]
+    words = {w[:4].lower() for w in re.findall(r"[A-Za-z]{4,}", sentence)}
+    out = []
+
+    def walk(x, field=None):
+        if isinstance(x, bool):
+            return
+        if isinstance(x, (int, float)):
+            if math.isfinite(x) and (field is None or field[:4].lower() in words):
+                out.append(float(x))
+        elif isinstance(x, dict):
+            recs = all(isinstance(y, dict) for y in x.values()) and x
+            for k, y in x.items():
+                walk(y, None if recs else (k if field is None and isinstance(y, (int, float)) else field))
+        elif isinstance(x, list):
+            for y in x:
+                walk(y, field)
+    walk(v)
+    return out
 
 
 def is_night(path):
@@ -274,11 +373,12 @@ def main():
         for x in r["mismatches"]:
             print(f"MISMATCH {os.path.basename(n)}/README.md:{x['line']}: {x['what']}: README {x['readme']}, record "
                   f"{x['record']}" + (f"  | {x['text'][:120]}" if "text" in x else ""))
+    nu = sum(len(r.get("ranges_unchecked", [])) for r in res.values())
     for n, r in res.items():
         for x in r["not_found"]:
             print(f"not found {n}/README.md:{x['line']}: {x['value']}  | {x['text'][:120]}")
     print(f"{checked} nights checked (README and a job record); {nm} mismatches; {nn} values not found in the "
-          "night's score files")
+          f"night's score files; {nu} range sentences naming no record (unchecked)")
     if a.json:
         json.dump(res, open(a.json, "w"), indent=1, ensure_ascii=False)
     if checked == 0:
