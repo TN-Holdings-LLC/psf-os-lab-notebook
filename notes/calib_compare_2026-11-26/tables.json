@@ -1,0 +1,1520 @@
+{
+ "counts": [
+  {
+   "kind": "mirror_low",
+   "device": "all",
+   "column": "T1",
+   "sets": 409,
+   "findings": 721,
+   "hit": 149,
+   "our_miss": 1545,
+   "normal": 12835,
+   "chance": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "all",
+   "column": "T2",
+   "sets": 409,
+   "findings": 721,
+   "hit": 65,
+   "our_miss": 1629,
+   "normal": 12835,
+   "chance": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "all",
+   "column": "any",
+   "sets": 409,
+   "findings": 721,
+   "hit": 430,
+   "our_miss": 5380,
+   "normal": 12835,
+   "chance": 0.441
+  },
+  {
+   "kind": "mirror_low",
+   "device": "all",
+   "column": "cz",
+   "sets": 409,
+   "findings": 721,
+   "hit": 352,
+   "our_miss": 2416,
+   "normal": 12835,
+   "chance": 0.214
+  },
+  {
+   "kind": "mirror_low",
+   "device": "all",
+   "column": "readout_error",
+   "sets": 409,
+   "findings": 721,
+   "hit": 201,
+   "our_miss": 1502,
+   "normal": 12835,
+   "chance": 0.128
+  },
+  {
+   "kind": "r_low",
+   "device": "all",
+   "column": "T1",
+   "sets": 12,
+   "findings": 14,
+   "hit": 0,
+   "our_miss": 12,
+   "normal": 58,
+   "chance": 0.171
+  },
+  {
+   "kind": "r_low",
+   "device": "all",
+   "column": "T2",
+   "sets": 12,
+   "findings": 14,
+   "hit": 6,
+   "our_miss": 6,
+   "normal": 58,
+   "chance": 0.171
+  },
+  {
+   "kind": "r_low",
+   "device": "all",
+   "column": "any",
+   "sets": 12,
+   "findings": 14,
+   "hit": 7,
+   "our_miss": 23,
+   "normal": 58,
+   "chance": 0.443
+  },
+  {
+   "kind": "r_low",
+   "device": "all",
+   "column": "cz",
+   "sets": 12,
+   "findings": 14,
+   "hit": 7,
+   "our_miss": 17,
+   "normal": 58,
+   "chance": 0.343
+  },
+  {
+   "kind": "r_low",
+   "device": "all",
+   "column": "readout_error",
+   "sets": 12,
+   "findings": 14,
+   "hit": 6,
+   "our_miss": 6,
+   "normal": 58,
+   "chance": 0.171
+  },
+  {
+   "kind": "scan_listed",
+   "device": "all",
+   "column": "T1",
+   "sets": 62,
+   "findings": 539,
+   "hit": 65,
+   "our_miss": 273,
+   "normal": 2237,
+   "chance": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "all",
+   "column": "T2",
+   "sets": 62,
+   "findings": 539,
+   "hit": 85,
+   "our_miss": 253,
+   "normal": 2237,
+   "chance": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "all",
+   "column": "any",
+   "sets": 62,
+   "findings": 539,
+   "hit": 314,
+   "our_miss": 968,
+   "normal": 2237,
+   "chance": 0.458
+  },
+  {
+   "kind": "scan_listed",
+   "device": "all",
+   "column": "cz",
+   "sets": 62,
+   "findings": 539,
+   "hit": 181,
+   "our_miss": 381,
+   "normal": 2237,
+   "chance": 0.194
+  },
+  {
+   "kind": "scan_listed",
+   "device": "all",
+   "column": "readout_error",
+   "sets": 62,
+   "findings": 539,
+   "hit": 70,
+   "our_miss": 269,
+   "normal": 2237,
+   "chance": 0.119
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "all",
+   "column": "T1",
+   "sets": 109,
+   "findings": 794,
+   "hit": 66,
+   "our_miss": 479,
+   "normal": 3566,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "all",
+   "column": "T2",
+   "sets": 109,
+   "findings": 794,
+   "hit": 95,
+   "our_miss": 450,
+   "normal": 3566,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "all",
+   "column": "any",
+   "sets": 109,
+   "findings": 794,
+   "hit": 430,
+   "our_miss": 1576,
+   "normal": 3566,
+   "chance": 0.46
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "all",
+   "column": "cz",
+   "sets": 109,
+   "findings": 794,
+   "hit": 222,
+   "our_miss": 721,
+   "normal": 3566,
+   "chance": 0.216
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "all",
+   "column": "readout_error",
+   "sets": 109,
+   "findings": 794,
+   "hit": 161,
+   "our_miss": 391,
+   "normal": 3566,
+   "chance": 0.127
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "all",
+   "column": "T1",
+   "sets": 109,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 545,
+   "normal": 4360,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "all",
+   "column": "T2",
+   "sets": 109,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 545,
+   "normal": 4360,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "all",
+   "column": "any",
+   "sets": 109,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 2006,
+   "normal": 4360,
+   "chance": 0.46
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "all",
+   "column": "cz",
+   "sets": 109,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 943,
+   "normal": 4360,
+   "chance": 0.216
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "all",
+   "column": "readout_error",
+   "sets": 109,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 552,
+   "normal": 4360,
+   "chance": 0.127
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "T1",
+   "sets": 211,
+   "findings": 530,
+   "hit": 114,
+   "our_miss": 744,
+   "normal": 6327,
+   "chance": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "T2",
+   "sets": 211,
+   "findings": 530,
+   "hit": 26,
+   "our_miss": 832,
+   "normal": 6327,
+   "chance": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "any",
+   "sets": 211,
+   "findings": 530,
+   "hit": 337,
+   "our_miss": 2491,
+   "normal": 6327,
+   "chance": 0.443
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "cz",
+   "sets": 211,
+   "findings": 530,
+   "hit": 279,
+   "our_miss": 1125,
+   "normal": 6327,
+   "chance": 0.215
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "sets": 211,
+   "findings": 530,
+   "hit": 169,
+   "our_miss": 689,
+   "normal": 6327,
+   "chance": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "sets": 138,
+   "findings": 160,
+   "hit": 33,
+   "our_miss": 627,
+   "normal": 5129,
+   "chance": 0.126
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "sets": 138,
+   "findings": 160,
+   "hit": 38,
+   "our_miss": 622,
+   "normal": 5129,
+   "chance": 0.126
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "any",
+   "sets": 138,
+   "findings": 160,
+   "hit": 79,
+   "our_miss": 2322,
+   "normal": 5129,
+   "chance": 0.458
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "sets": 138,
+   "findings": 160,
+   "hit": 59,
+   "our_miss": 1000,
+   "normal": 5129,
+   "chance": 0.203
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "sets": 138,
+   "findings": 160,
+   "hit": 24,
+   "our_miss": 644,
+   "normal": 5129,
+   "chance": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "sets": 60,
+   "findings": 31,
+   "hit": 2,
+   "our_miss": 174,
+   "normal": 1379,
+   "chance": 0.129
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "sets": 60,
+   "findings": 31,
+   "hit": 1,
+   "our_miss": 175,
+   "normal": 1379,
+   "chance": 0.129
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "sets": 60,
+   "findings": 31,
+   "hit": 14,
+   "our_miss": 567,
+   "normal": 1379,
+   "chance": 0.395
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "sets": 60,
+   "findings": 31,
+   "hit": 14,
+   "our_miss": 291,
+   "normal": 1379,
+   "chance": 0.232
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "sets": 60,
+   "findings": 31,
+   "hit": 8,
+   "our_miss": 169,
+   "normal": 1379,
+   "chance": 0.13
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "T1",
+   "sets": 12,
+   "findings": 14,
+   "hit": 0,
+   "our_miss": 12,
+   "normal": 58,
+   "chance": 0.171
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "T2",
+   "sets": 12,
+   "findings": 14,
+   "hit": 6,
+   "our_miss": 6,
+   "normal": 58,
+   "chance": 0.171
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "any",
+   "sets": 12,
+   "findings": 14,
+   "hit": 7,
+   "our_miss": 23,
+   "normal": 58,
+   "chance": 0.443
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "cz",
+   "sets": 12,
+   "findings": 14,
+   "hit": 7,
+   "our_miss": 17,
+   "normal": 58,
+   "chance": 0.343
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "sets": 12,
+   "findings": 14,
+   "hit": 6,
+   "our_miss": 6,
+   "normal": 58,
+   "chance": 0.171
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "T1",
+   "sets": 9,
+   "findings": 121,
+   "hit": 11,
+   "our_miss": 39,
+   "normal": 291,
+   "chance": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "T2",
+   "sets": 9,
+   "findings": 121,
+   "hit": 17,
+   "our_miss": 33,
+   "normal": 291,
+   "chance": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "any",
+   "sets": 9,
+   "findings": 121,
+   "hit": 70,
+   "our_miss": 120,
+   "normal": 291,
+   "chance": 0.448
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "cz",
+   "sets": 9,
+   "findings": 121,
+   "hit": 38,
+   "our_miss": 43,
+   "normal": 291,
+   "chance": 0.189
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "sets": 9,
+   "findings": 121,
+   "hit": 22,
+   "our_miss": 28,
+   "normal": 291,
+   "chance": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "sets": 44,
+   "findings": 385,
+   "hit": 44,
+   "our_miss": 194,
+   "normal": 1567,
+   "chance": 0.119
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "sets": 44,
+   "findings": 385,
+   "hit": 61,
+   "our_miss": 177,
+   "normal": 1567,
+   "chance": 0.119
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "any",
+   "sets": 44,
+   "findings": 385,
+   "hit": 221,
+   "our_miss": 710,
+   "normal": 1567,
+   "chance": 0.478
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "sets": 44,
+   "findings": 385,
+   "hit": 128,
+   "our_miss": 270,
+   "normal": 1567,
+   "chance": 0.196
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "sets": 44,
+   "findings": 385,
+   "hit": 42,
+   "our_miss": 196,
+   "normal": 1567,
+   "chance": 0.119
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "sets": 9,
+   "findings": 33,
+   "hit": 10,
+   "our_miss": 40,
+   "normal": 379,
+   "chance": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "sets": 9,
+   "findings": 33,
+   "hit": 7,
+   "our_miss": 43,
+   "normal": 379,
+   "chance": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "sets": 9,
+   "findings": 33,
+   "hit": 23,
+   "our_miss": 138,
+   "normal": 379,
+   "chance": 0.369
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "sets": 9,
+   "findings": 33,
+   "hit": 15,
+   "our_miss": 68,
+   "normal": 379,
+   "chance": 0.192
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "sets": 9,
+   "findings": 33,
+   "hit": 6,
+   "our_miss": 45,
+   "normal": 379,
+   "chance": 0.119
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "T1",
+   "sets": 32,
+   "findings": 426,
+   "hit": 31,
+   "our_miss": 129,
+   "normal": 854,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "T2",
+   "sets": 32,
+   "findings": 426,
+   "hit": 62,
+   "our_miss": 98,
+   "normal": 854,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "any",
+   "sets": 32,
+   "findings": 426,
+   "hit": 236,
+   "our_miss": 322,
+   "normal": 854,
+   "chance": 0.436
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "cz",
+   "sets": 32,
+   "findings": 426,
+   "hit": 122,
+   "our_miss": 157,
+   "normal": 854,
+   "chance": 0.218
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "sets": 32,
+   "findings": 426,
+   "hit": 107,
+   "our_miss": 53,
+   "normal": 854,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 70,
+   "normal": 560,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 70,
+   "normal": 560,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "any",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 277,
+   "normal": 560,
+   "chance": 0.495
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 126,
+   "normal": 560,
+   "chance": 0.225
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 77,
+   "normal": 560,
+   "chance": 0.138
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "sets": 63,
+   "findings": 368,
+   "hit": 35,
+   "our_miss": 280,
+   "normal": 2152,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "sets": 63,
+   "findings": 368,
+   "hit": 33,
+   "our_miss": 282,
+   "normal": 2152,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "sets": 63,
+   "findings": 368,
+   "hit": 194,
+   "our_miss": 977,
+   "normal": 2152,
+   "chance": 0.465
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "sets": 63,
+   "findings": 368,
+   "hit": 100,
+   "our_miss": 438,
+   "normal": 2152,
+   "chance": 0.213
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "sets": 63,
+   "findings": 368,
+   "hit": 54,
+   "our_miss": 261,
+   "normal": 2152,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "T1",
+   "sets": 32,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 160,
+   "normal": 1280,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "T2",
+   "sets": 32,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 160,
+   "normal": 1280,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "any",
+   "sets": 32,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 558,
+   "normal": 1280,
+   "chance": 0.436
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "cz",
+   "sets": 32,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 279,
+   "normal": 1280,
+   "chance": 0.218
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "sets": 32,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 160,
+   "normal": 1280,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 70,
+   "normal": 560,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 70,
+   "normal": 560,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "any",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 277,
+   "normal": 560,
+   "chance": 0.495
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 126,
+   "normal": 560,
+   "chance": 0.225
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "sets": 14,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 77,
+   "normal": 560,
+   "chance": 0.138
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "sets": 63,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 315,
+   "normal": 2520,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "sets": 63,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 315,
+   "normal": 2520,
+   "chance": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "sets": 63,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 1171,
+   "normal": 2520,
+   "chance": 0.465
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "sets": 63,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 538,
+   "normal": 2520,
+   "chance": 0.213
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "sets": 63,
+   "findings": 0,
+   "hit": 0,
+   "our_miss": 315,
+   "normal": 2520,
+   "chance": 0.125
+  }
+ ],
+ "our_miss_by_column": {
+  "scan_listed": {
+   "T2": 130,
+   "readout_error": 215,
+   "several": 186,
+   "cz": 277,
+   "T1": 160
+  },
+  "mirror_low": {
+   "several": 1409,
+   "cz": 1489,
+   "readout_error": 879,
+   "T1": 823,
+   "T2": 780
+  },
+  "sentinel_dead": {
+   "T2": 237,
+   "T1": 229,
+   "several": 384,
+   "cz": 481,
+   "readout_error": 245
+  },
+  "sentinel_weak": {
+   "T2": 268,
+   "T1": 258,
+   "several": 468,
+   "cz": 648,
+   "readout_error": 364
+  },
+  "r_low": {
+   "T2": 3,
+   "T1": 3,
+   "several": 15,
+   "cz": 2
+  }
+ },
+ "ibm_miss_top": {
+  "scan_listed|ibm_marrakesh": [
+   [
+    37,
+    2
+   ],
+   [
+    38,
+    1
+   ],
+   [
+    27,
+    1
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    18,
+    1
+   ],
+   [
+    11,
+    1
+   ],
+   [
+    46,
+    1
+   ],
+   [
+    31,
+    1
+   ]
+  ],
+  "scan_listed|ibm_kingston": [
+   [
+    4,
+    18
+   ],
+   [
+    3,
+    15
+   ],
+   [
+    27,
+    14
+   ],
+   [
+    49,
+    13
+   ],
+   [
+    50,
+    13
+   ],
+   [
+    59,
+    12
+   ],
+   [
+    55,
+    9
+   ],
+   [
+    28,
+    7
+   ],
+   [
+    54,
+    6
+   ],
+   [
+    23,
+    5
+   ]
+  ],
+  "scan_listed|ibm_fez": [
+   [
+    45,
+    4
+   ],
+   [
+    25,
+    4
+   ],
+   [
+    42,
+    4
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    37,
+    2
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    56,
+    2
+   ],
+   [
+    68,
+    2
+   ]
+  ],
+  "sentinel_dead|ibm_fez": [
+   [
+    56,
+    32
+   ],
+   [
+    42,
+    31
+   ],
+   [
+    36,
+    24
+   ],
+   [
+    21,
+    21
+   ],
+   [
+    47,
+    19
+   ],
+   [
+    43,
+    19
+   ],
+   [
+    22,
+    16
+   ],
+   [
+    57,
+    9
+   ],
+   [
+    67,
+    9
+   ],
+   [
+    23,
+    5
+   ]
+  ],
+  "sentinel_dead|ibm_marrakesh": [
+   [
+    36,
+    20
+   ],
+   [
+    41,
+    20
+   ],
+   [
+    22,
+    18
+   ],
+   [
+    65,
+    17
+   ],
+   [
+    63,
+    17
+   ],
+   [
+    56,
+    16
+   ],
+   [
+    16,
+    16
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    6,
+    6
+   ],
+   [
+    21,
+    3
+   ]
+  ],
+  "mirror_low|ibm_fez": [
+   [
+    104,
+    68
+   ],
+   [
+    106,
+    33
+   ],
+   [
+    121,
+    20
+   ],
+   [
+    105,
+    14
+   ],
+   [
+    116,
+    12
+   ],
+   [
+    29,
+    5
+   ],
+   [
+    25,
+    4
+   ],
+   [
+    80,
+    4
+   ],
+   [
+    30,
+    4
+   ],
+   [
+    100,
+    3
+   ]
+  ],
+  "mirror_low|ibm_marrakesh": [
+   [
+    24,
+    7
+   ],
+   [
+    85,
+    2
+   ],
+   [
+    103,
+    2
+   ],
+   [
+    55,
+    2
+   ],
+   [
+    30,
+    1
+   ],
+   [
+    101,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    50,
+    1
+   ]
+  ],
+  "mirror_low|ibm_kingston": [
+   [
+    45,
+    26
+   ],
+   [
+    44,
+    24
+   ],
+   [
+    47,
+    14
+   ],
+   [
+    42,
+    13
+   ],
+   [
+    84,
+    2
+   ],
+   [
+    4,
+    2
+   ]
+  ],
+  "r_low|ibm_fez": [
+   [
+    109,
+    3
+   ],
+   [
+    111,
+    3
+   ],
+   [
+    110,
+    1
+   ]
+  ]
+ },
+ "age_hours": {
+  "ibm_marrakesh": {
+   "n": 67,
+   "median": 0.631,
+   "min": 0.09,
+   "max": 93.013
+  },
+  "ibm_kingston": {
+   "n": 34,
+   "median": 0.412,
+   "min": 0.121,
+   "max": 69.456
+  },
+  "ibm_fez": {
+   "n": 35,
+   "median": 0.557,
+   "min": 0.189,
+   "max": 89.852
+  }
+ },
+ "day_to_day": [
+  {
+   "device": "ibm_fez",
+   "days": 15,
+   "column": "readout_error",
+   "median_ratio": 3.3,
+   "turnover": 0.203
+  },
+  {
+   "device": "ibm_fez",
+   "days": 15,
+   "column": "T1",
+   "median_ratio": 2.181,
+   "turnover": 0.364
+  },
+  {
+   "device": "ibm_fez",
+   "days": 15,
+   "column": "T2",
+   "median_ratio": 1.971,
+   "turnover": 0.107
+  },
+  {
+   "device": "ibm_kingston",
+   "days": 13,
+   "column": "readout_error",
+   "median_ratio": 3.538,
+   "turnover": 0.268
+  },
+  {
+   "device": "ibm_kingston",
+   "days": 13,
+   "column": "T1",
+   "median_ratio": 2.285,
+   "turnover": 0.425
+  },
+  {
+   "device": "ibm_kingston",
+   "days": 13,
+   "column": "T2",
+   "median_ratio": 2.275,
+   "turnover": 0.183
+  },
+  {
+   "device": "ibm_marrakesh",
+   "days": 16,
+   "column": "readout_error",
+   "median_ratio": 7.815,
+   "turnover": 0.357
+  },
+  {
+   "device": "ibm_marrakesh",
+   "days": 16,
+   "column": "T1",
+   "median_ratio": 2.364,
+   "turnover": 0.333
+  },
+  {
+   "device": "ibm_marrakesh",
+   "days": 16,
+   "column": "T2",
+   "median_ratio": 3.552,
+   "turnover": 0.33
+  }
+ ],
+ "headline_ratio": {
+  "mirror_low|ibm_fez": {
+   "readout_error": 0.842,
+   "T1": 1.02,
+   "T2": 0.889,
+   "cz": 1.019
+  },
+  "mirror_low|ibm_kingston": {
+   "readout_error": 0.952,
+   "T1": 0.945,
+   "T2": 0.894,
+   "cz": 0.991
+  },
+  "mirror_low|ibm_marrakesh": {
+   "readout_error": 0.95,
+   "T1": 0.962,
+   "T2": 1.035,
+   "cz": 0.945
+  },
+  "r_low|ibm_fez": {
+   "readout_error": 0.736,
+   "T1": 0.91,
+   "T2": 0.71,
+   "cz": 0.983
+  },
+  "scan_listed|ibm_fez": {
+   "readout_error": 1.167,
+   "T1": 1.078,
+   "T2": 0.941,
+   "cz": 0.982
+  },
+  "scan_listed|ibm_kingston": {
+   "readout_error": 0.975,
+   "T1": 1.024,
+   "T2": 1.021,
+   "cz": 0.928
+  },
+  "scan_listed|ibm_marrakesh": {
+   "readout_error": 0.985,
+   "T1": 1.008,
+   "T2": 1.048,
+   "cz": 0.967
+  },
+  "sentinel_dead|ibm_fez": {
+   "readout_error": 1.56,
+   "T1": 1.093,
+   "T2": 0.889,
+   "cz": 0.929
+  },
+  "sentinel_dead|ibm_kingston": {
+   "readout_error": 0.871,
+   "T1": 1.108,
+   "T2": 0.861,
+   "cz": 0.996
+  },
+  "sentinel_dead|ibm_marrakesh": {
+   "readout_error": 0.929,
+   "T1": 0.965,
+   "T2": 0.945,
+   "cz": 0.993
+  },
+  "sentinel_weak|ibm_fez": {
+   "readout_error": 1.56,
+   "T1": 1.093,
+   "T2": 0.889,
+   "cz": 0.929
+  },
+  "sentinel_weak|ibm_kingston": {
+   "readout_error": 0.871,
+   "T1": 1.108,
+   "T2": 0.861,
+   "cz": 0.996
+  },
+  "sentinel_weak|ibm_marrakesh": {
+   "readout_error": 0.929,
+   "T1": 0.965,
+   "T2": 0.945,
+   "cz": 0.993
+  }
+ },
+ "note": "floats rounded to 3 decimals"
+}
