@@ -1,0 +1,7 @@
+SKIPPED     python gpu/daily_fetch.py OUT/fetch_in   (reads IBM: the recorded device folder is copied instead)
+PASS        DEV=$(python gpu/ohm_ruler_night.py pick OUT/fetch_in/queue.json | cut -d' ' -f1)
+PASS        python gpu/ohm_ruler_night5.py build5 OUT/fetch_in/$DEV/dev OUT/or5 ANSWERS_SEALED OUT/or5_answers --pairs-t 1:7 3:7 4:9
+PASS        python gpu/ohm_ruler_night5.py check5 OUT/or5 OUT/or5_answers
+SKIPPED     python -m psf_os submit --job OUT/or5/job ; python -m psf_os collect --job OUT/or5/job --wait-min 20   (reaches IBM: not run)
+SKIPPED     python gpu/ohm_ruler_night5.py score5 OUT/or5 OUT/or5_answers --tau 0.3   (needs the device's counts: not run)
+procedure_dry: 6 lines, PASS 3, FAIL 0, SKIPPED 3, NOT REACHED 0
