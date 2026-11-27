@@ -17,7 +17,9 @@
 
   python tools/declaration_check.py beside PREREG.md README.md [--forms L F | --build build.json]
   python tools/declaration_check.py tables PREREG.md TOOL.py NAME [NAME ...]
-Exit code: 0 when every item is found / every row is SAME or PREFIX; 1 otherwise.
+Exit code: 0 when every item is found / every row is SAME or PREFIX; 1 otherwise; 2 when beside reads no item at all
+(2026-11-27: a heading "## Beside, never judged" without a colon is read too, its top-level bullets up to the next
+heading, and "X's beside values (a, b, c)" stands for a, b and c).
 """
 import argparse
 import ast
@@ -27,6 +29,9 @@ import sys
 
 BESIDE_HEAD = re.compile(r"^\s*(?:[-*]\s*)?(?:\*\*)?Beside, never judged[^:]*:\s*(.*)$", re.I)
 BULLET = re.compile(r"^\s*[-*]\s+(.*)$")
+# 2026-11-27 (tools6): the heading form "## Beside, never judged" (no colon), read up to the next heading
+BESIDE_HEADING = re.compile(r"^\s*#{1,6}\s+Beside, never judged[^:]*:?\s*$", re.I)
+VALUES_LIST = re.compile(r"beside values\s*\((.*)\)", re.I)
 
 
 def _norm(s):
@@ -47,6 +52,9 @@ def beside_lists(prereg):
     (else commas)."""
     lines, lists = prereg.splitlines(), []
     for i, ln in enumerate(lines):
+        if BESIDE_HEADING.match(ln):
+            lists.append((i + 1, _heading_items(lines, i)))
+            continue
         m = BESIDE_HEAD.match(ln)
         if not m:
             continue
@@ -77,12 +85,46 @@ def beside_lists(prereg):
     return lists
 
 
+def _heading_items(lines, i):
+    """The top-level bullets under a "## Beside, never judged" heading, up to the next heading: deeper bullets and
+    indented lines continue the item above. An item "X's beside values (a, b, c) ..." stands for its listed names, one
+    item each (the fourth night's last item lists the third night's beside values so)."""
+    out, j, top = [], i + 1, None
+    while j < len(lines) and not re.match(r"^\s*#{1,6}\s", lines[j]):
+        b = BULLET.match(lines[j])
+        ind = len(lines[j]) - len(lines[j].lstrip())
+        if b and (top is None or ind <= top):
+            top = ind if top is None else top
+            text, k = b.group(1), j + 1
+            while k < len(lines) and lines[k].strip() and not re.match(r"^\s*#{1,6}\s", lines[k]) and                     (len(lines[k]) - len(lines[k].lstrip()) > top):
+                text += " " + lines[k].strip()
+                k += 1
+            text = text.strip().rstrip(";.")
+            v = VALUES_LIST.search(text)
+            if v:
+                names = re.split(r",\s*(?![^()]*\))", v.group(1))
+                out += [(j + 1, n.strip()) for n in names if n.strip()]
+            else:
+                out.append((j + 1, text))
+            j = k
+        else:
+            j += 1
+    return out
+
+
 def head_of(item):
     """(condition or None, head): "with F, the 11-23 twins' word (...)" -> ("F", "11-23 twins' word")."""
     cond = None
     m = re.match(r"with ([A-Za-z0-9]+),\s*(.*)$", item)
     if m:
         cond, item = m.group(1), m.group(2)
+    bold = re.match(r"^\*\*(.+?)\*\*", item.strip())
+    if bold:                                   # 2026-11-27: "**name**, ..." -> the bold name
+        h = bold.group(1).replace("`", "").strip()
+        h = re.sub(r"^(the|a|an)\s+", "", h, flags=re.I)
+        if "/" in h and "." in h.rsplit("/", 1)[-1]:
+            h = h.rsplit("/", 1)[-1]           # a file's path -> its name (results/<night>/qubits.csv -> qubits.csv)
+        return cond, h
     item = re.sub(r"^(the|a|an)\s+", "", item.strip(), flags=re.I)
     h = re.split(r"\s+of\s+|\s+per\s+|,|\s+\(|:|;", item, maxsplit=1)[0].strip()
     return cond, h
@@ -217,6 +259,10 @@ def main():
     if a.cmd == "beside":
         forms = a.forms if a.forms is not None else (json.load(open(a.build)).get("forms") if a.build else None)
         rows = beside_coverage(prereg, open(a.readme, encoding="utf-8").read(), forms)
+        if not rows:                           # 2026-11-27: reading no item is a failure, not a pass
+            print(f"declaration_check beside: no 'Beside, never judged' item read from {a.prereg}: nothing checked "
+                  "(FAIL)")
+            return 2
         for r in rows:
             st = "not checked (condition " + r["condition"] + ")" if not r["checked"] else \
                 ("found (" + r["found"] + ")") if r["found"] else "MISSING"

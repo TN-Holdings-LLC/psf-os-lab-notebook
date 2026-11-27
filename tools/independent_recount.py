@@ -698,7 +698,8 @@ def score_ohm_ruler4(out_dir, job, answers_by_label, tau=0.3, keep_fraction=0.5)
            const_k; NOT READ when any m_q e_q <= 0; SE adds the string mirrors' and the readout's shot noise per qubit
            through the square root;
     and per qubit the columns of the draft's qubits.csv (|0> mirror <Z>, m_q, e_q, r_q, MIRROR_LOW = mirror below tau,
-    R_LOW = r_q beyond 2 SE of the cell's pooled r). The third night's record (no readout circuits) gives (a') and the
+    R_LOW / R_HIGH = r_q below / above the cell's pooled r by more than 2 SE, as the declared tool of 2026-11-26). A
+    record without string mirrors (2026-11-24) leaves m_q empty and gives no (de). The third night's record (no readout circuits) gives (a') and the
     per-qubit columns without e_q. The qubit -> clbit map comes from the sent circuits."""
     b = json.load(open(os.path.join(out_dir, "build.json")))
     ans = json.load(open(answers_by_label))["z"]
@@ -745,10 +746,14 @@ def score_ohm_ruler4(out_dir, job, answers_by_label, tau=0.3, keep_fraction=0.5)
             cell = {}
             zm = z_of(f"p2d_{key}_s00_mirror", labels)[0]
             sig = np.array([1 - 2 * int(strs["s00"][q]) for q in pos], float)
-            zsm = z_of(f"p2d_{key}_s00_smirror", labels, sig)[0]
-            zcm = z_of(f"p2d_{key}_c00_smirror", labels, sig)[0]
-            m = (zsm - zcm) / 2 * sig
-            var_m = ((1 - zsm ** 2) + (1 - zcm ** 2)) / shots / 4
+            if f"p2d_{key}_s00_smirror" in pubs and f"p2d_{key}_c00_smirror" in pubs:
+                zsm = z_of(f"p2d_{key}_s00_smirror", labels, sig)[0]
+                zcm = z_of(f"p2d_{key}_c00_smirror", labels, sig)[0]
+                m = (zsm - zcm) / 2 * sig
+                var_m = ((1 - zsm ** 2) + (1 - zcm ** 2)) / shots / 4
+            else:                                  # 2026-11-24's record: no string mirrors (m_q left empty)
+                m = np.full(len(pos), float("nan"))
+                var_m = np.full(len(pos), float("nan"))
             if t >= 3:                                                   # (a')
                 keep = [i for i in range(len(pos)) if i in wi or zm[i] >= tau]
                 ca = dict(kept=len(keep), of=len(pos), left_out=[pos[i] for i in range(len(pos)) if i not in keep])
@@ -769,7 +774,7 @@ def score_ohm_ruler4(out_dir, job, answers_by_label, tau=0.3, keep_fraction=0.5)
                 else:
                     cell["e"] = dict(words={"t": "NOT READ", "2se": "NOT READ"})
                 me = m[wi] * e[wi]                                       # (de)
-                if np.all(me > 0):
+                if np.all(np.isfinite(me)) and np.all(me > 0):
                     rq = np.sqrt(me)
                     om = Od[:, wi].mean(axis=0)
                     xv = float(np.sum((om * e[wi] / (4 * rq ** 3)) ** 2 * var_m[wi])
@@ -791,10 +796,13 @@ def score_ohm_ruler4(out_dir, job, answers_by_label, tau=0.3, keep_fraction=0.5)
                 wts = np.array([1 / se_all[i] ** 2 for i in use])
                 pool = float(np.sum(wts * np.array([rq_all[i] for i in use])) / wts.sum())
             for i, q in enumerate(pos):
-                r_low = (pool is not None and i in rq_all and se_all[i] > 0 and abs(rq_all[i] - pool) > 2 * se_all[i])
+                # as the declared tool of 2026-11-26 (346934e9): R_LOW below, R_HIGH above the pooled r by 2 SE
+                # (one-sided each; the pool exists at t >= 3 only)
+                dv = (rq_all[i] - pool) / se_all[i] if (pool is not None and i in rq_all and se_all[i] > 0) else None
                 rows.append(dict(arm=arm, t=t, position=q, physical=labels[i], in_window=q in window(t),
-                                 mirror_z=float(zm[i]), m_q=float(m[i]), r_q=rq_all.get(i),
-                                 e_q=e_of.get(q), MIRROR_LOW=bool(zm[i] < tau), R_LOW=bool(r_low)))
+                                 mirror_z=float(zm[i]), m_q=None if not np.isfinite(m[i]) else float(m[i]),
+                                 r_q=rq_all.get(i), e_q=e_of.get(q), MIRROR_LOW=bool(zm[i] < tau),
+                                 R_LOW=bool(dv is not None and dv < -2), R_HIGH=bool(dv is not None and dv > 2)))
             out[key] = dict(K=K, rulers=cell)
     return dict(cells=out, qubits=rows)
 
