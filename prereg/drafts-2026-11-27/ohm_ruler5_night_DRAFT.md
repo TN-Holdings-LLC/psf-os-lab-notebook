@@ -213,7 +213,35 @@ All noise ILLUSTRATIVE, written by hand, at chain positions chosen by hand (not 
 fourth night's dry runs (above, and `notes/ohm_ruler4_2026-11-26/`) carry over; these runs check the fifth night's job
 and tool.
 
-DRY5_TABLES
+**Readout faults on the fifth night's job** (workplace; `dry3.py` on every circuit of the 175-circuit job, the readout
+circuits at the head and the tail included; t >= 3, 6 cells per seed: no noise 16 seeds, the others 8; AGREES at the t
+quantile, 2 SE in brackets):
+
+| case | (a) | (a') | (b) | (b') | (c) | (d) | (e) | (de) | (de) \|d\| < (d) \|d\| |
+|---|---|---|---|---|---|---|---|---|---|
+| no noise | 93 (90) | 93 (90) | 93 (90) | 93 (90) | 93 (90) | 93 (90) | 93 (90) | 93 (90) | 0 |
+| every position: 1 read as 0 with 0.02 (one-sided) | 46 (45) | 46 (45) | 5 (2) | 5 (2) | 5 (2) | 26 (16) | 46 (44) | 46 (43) | 42 |
+| positions 14, 17, 18 (outside the window): both ways 0.4 | 48 (48) | 46 (45) | 0 (0) | 45 (44) | 46 (45) | 46 (45) | 46 (45) | 46 (45) | 0 |
+
+The direction at t >= 3 on the same runs (L: WINDOW SHRINKS LESS, M: MORE, N: NOT SEEN):
+
+| case | with rho_a' (judged) | with rho_a (beside) |
+|---|---|---|
+| no noise | L1 M2 N93 | L1 M2 N93 |
+| one-sided readout 0.02 | M2 N46 | M2 N46 |
+| outside positions both ways 0.4 | L2 N46 | L8 N40 |
+
+- The fifth night's job and tool read as the fourth night's: without noise 93 of 96 cells AGREE for every ruler (the
+  fourth night: 367 of 384); one-sided readout, (d) 26 of 48 and (de) 46 of 48 (the fourth night: 43 and 93 of 96).
+- The head and tail pairs: without noise their difference is 0 on every qubit; with the one-sided readout fault (the
+  same at the head and the tail) the difference lies beyond 2 SE on 7 % of the qubit readings (176), about the share
+  2 SE leaves by chance. The neighbours' states (s01 / c01 against s00 / c00 at the tail) moved e_q by at most 0.015
+  under the uniform readout fault and 0.077 under the outside positions' fault, which reads each qubit's own flips
+  through different strings (beside only).
+- Table D on these runs: (de) (EXPECTED TO AGREE) read DIFFERS in 12 of 288 cells over the three cases, the share the
+  t quantile leaves without noise; (a') at t = 3 (EXPECTED TO DIFFER) read AGREES in 93 of 96, as expected when no
+  gate noise is present: its class is set by the gate-noise cases.
+- OR5-2 reads NOT HELD in every dry run (no qubit's mirror is low without a fault there), as it should.
 
 ## Device procedure (home)
 
