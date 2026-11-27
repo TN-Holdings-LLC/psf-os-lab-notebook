@@ -1,0 +1,1523 @@
+{
+ "strings_draws_for_9": 31,
+ "strings_equal_answers": true,
+ "strings_equal_build": true,
+ "first7_equal_11_24": true,
+ "answers_sha256": "e581df9d4fbb99ca219f3beb1e3efbf6b2d34be0477d32fc7bf51071207497ac",
+ "qpy_sha256_matches_manifest": true,
+ "n_circuits": 175,
+ "shots": [
+  1000,
+  [
+   1000
+  ]
+ ],
+ "F_offset": 0,
+ "F_copy": {
+  "drow": 0,
+  "dcol": 0,
+  "passed_over": []
+ },
+ "F_is_device_path": true,
+ "pubs": {
+  "users": true,
+  "readout": true,
+  "readout_pub_index": {
+   "a_readout_s00_head": 1,
+   "a_readout_c00_head": 0,
+   "z_readout_s00_tail": 173,
+   "z_readout_c00_tail": 171,
+   "z_readout_s01_tail": 174,
+   "z_readout_c01_tail": 172
+  },
+  "n_pubs": 175,
+  "zero_mirrors": true,
+  "string_mirrors": true,
+  "floors": [],
+  "sentinel": 4,
+  "others": [
+   "a_readout_c00_head",
+   "a_readout_s00_head",
+   "z_readout_c00_tail",
+   "z_readout_c01_tail",
+   "z_readout_s00_tail",
+   "z_readout_s01_tail"
+  ]
+ },
+ "L_on_F_physical": true,
+ "noise_free_vs_answers_worst": 9.870954054136405e-11,
+ "answers_vs_by_label_worst": 0.0,
+ "structure": {
+  "after": 0,
+  "delays": 0,
+  "ops": [
+   "cz",
+   "rz",
+   "sx",
+   "x"
+  ]
+ },
+ "cz": {
+  "A0_t1": [
+   [
+    6,
+    4
+   ]
+  ],
+  "A0_t3": [
+   [
+    66,
+    12
+   ]
+  ],
+  "A0_t4": [
+   [
+    120,
+    16
+   ]
+  ],
+  "A1_t1": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A1_t3": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A1_t4": [
+   [
+    180,
+    24
+   ]
+  ],
+  "A2_t1": [
+   [
+    9,
+    6
+   ]
+  ],
+  "A2_t3": [
+   [
+    99,
+    18
+   ]
+  ],
+  "A2_t4": [
+   [
+    180,
+    24
+   ]
+  ]
+ },
+ "mirrors_noise_free_worst": 3.8413716652030416e-14,
+ "mirror_cz": {
+  "A0_t1": [
+   12,
+   12
+  ],
+  "A0_t3": [
+   132,
+   132
+  ],
+  "A0_t4": [
+   240,
+   240
+  ],
+  "A1_t1": [
+   18,
+   18
+  ],
+  "A1_t3": [
+   198,
+   198
+  ],
+  "A1_t4": [
+   360,
+   360
+  ],
+  "A2_t1": [
+   18,
+   18
+  ],
+  "A2_t3": [
+   198,
+   198
+  ],
+  "A2_t4": [
+   360,
+   360
+  ]
+ },
+ "readout_circuits": {
+  "a_readout_s00_head": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "map_as_user_t4": true,
+   "barriers": 1,
+   "noise_free_worst": 0.0
+  },
+  "a_readout_c00_head": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "map_as_user_t4": true,
+   "barriers": 1,
+   "noise_free_worst": 0.0
+  },
+  "z_readout_s00_tail": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "map_as_user_t4": true,
+   "barriers": 1,
+   "noise_free_worst": 0.0
+  },
+  "z_readout_c00_tail": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "map_as_user_t4": true,
+   "barriers": 1,
+   "noise_free_worst": 0.0
+  },
+  "z_readout_s01_tail": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "map_as_user_t4": true,
+   "barriers": 1,
+   "noise_free_worst": 0.0
+  },
+  "z_readout_c01_tail": {
+   "measured_is_cone": true,
+   "ops": [
+    "x"
+   ],
+   "after": 0,
+   "delays": 0,
+   "x_on": true,
+   "map_as_user_t4": true,
+   "barriers": 1,
+   "noise_free_worst": 0.0
+  }
+ },
+ "readout_build": true,
+ "readout_beside": {
+  "12": {
+   "e_head": 0.9299999999999999,
+   "e_tail": 0.935,
+   "tail_minus_head": 0.0050000000000001155,
+   "tail_minus_head_se": 0.011414771132177814,
+   "e_s01c01_tail": 0.927,
+   "s01_minus_s00_tail": -0.008000000000000007
+  },
+  "13": {
+   "e_head": 0.99,
+   "e_tail": 0.996,
+   "tail_minus_head": 0.006000000000000005,
+   "tail_minus_head_se": 0.003733363095119467,
+   "e_s01c01_tail": 0.986,
+   "s01_minus_s00_tail": -0.010000000000000009
+  },
+  "14": {
+   "e_head": 0.97,
+   "e_tail": 0.961,
+   "tail_minus_head": -0.009000000000000008,
+   "tail_minus_head_se": 0.008228669394258105,
+   "e_s01c01_tail": 0.968,
+   "s01_minus_s00_tail": 0.007000000000000006
+  },
+  "15": {
+   "e_head": 0.987,
+   "e_tail": 0.987,
+   "tail_minus_head": 0.0,
+   "tail_minus_head_se": 0.005077597857254947,
+   "e_s01c01_tail": 0.99,
+   "s01_minus_s00_tail": 0.0030000000000000027
+  },
+  "16": {
+   "e_head": 0.971,
+   "e_tail": 0.976,
+   "tail_minus_head": 0.0050000000000000044,
+   "tail_minus_head_se": 0.007223503305183715,
+   "e_s01c01_tail": 0.976,
+   "s01_minus_s00_tail": 0.0
+  },
+  "17": {
+   "e_head": 0.976,
+   "e_tail": 0.977,
+   "tail_minus_head": 0.0010000000000000009,
+   "tail_minus_head_se": 0.006815203591969943,
+   "e_s01c01_tail": 0.96,
+   "s01_minus_s00_tail": -0.017000000000000015
+  },
+  "18": {
+   "e_head": 0.971,
+   "e_tail": 0.976,
+   "tail_minus_head": 0.0050000000000000044,
+   "tail_minus_head_se": 0.007229730285425594,
+   "e_s01c01_tail": 0.97,
+   "s01_minus_s00_tail": -0.006000000000000005
+  },
+  "19": {
+   "e_head": 0.984,
+   "e_tail": 0.98,
+   "tail_minus_head": -0.0040000000000000036,
+   "tail_minus_head_se": 0.0059692545598257095,
+   "e_s01c01_tail": 0.987,
+   "s01_minus_s00_tail": 0.007000000000000006
+  },
+  "20": {
+   "e_head": 0.954,
+   "e_tail": 0.952,
+   "tail_minus_head": -0.0020000000000000018,
+   "tail_minus_head_se": 0.009575176238586947,
+   "e_s01c01_tail": 0.963,
+   "s01_minus_s00_tail": 0.01100000000000001
+  },
+  "21": {
+   "e_head": 0.96,
+   "e_tail": 0.956,
+   "tail_minus_head": -0.0040000000000000036,
+   "tail_minus_head_se": 0.009065318527222309,
+   "e_s01c01_tail": 0.969,
+   "s01_minus_s00_tail": 0.013000000000000012
+  },
+  "22": {
+   "e_head": 0.987,
+   "e_tail": 0.984,
+   "tail_minus_head": -0.0030000000000000027,
+   "tail_minus_head_se": 0.005364606229724603,
+   "e_s01c01_tail": 0.978,
+   "s01_minus_s00_tail": -0.006000000000000005
+  },
+  "23": {
+   "e_head": 0.976,
+   "e_tail": 0.979,
+   "tail_minus_head": 0.0030000000000000027,
+   "tail_minus_head_se": 0.006668208155119337,
+   "e_s01c01_tail": 0.976,
+   "s01_minus_s00_tail": -0.0030000000000000027
+  },
+  "24": {
+   "e_head": 0.984,
+   "e_tail": 0.99,
+   "tail_minus_head": 0.006000000000000005,
+   "tail_minus_head_se": 0.00506872765099882,
+   "e_s01c01_tail": 0.98,
+   "s01_minus_s00_tail": -0.010000000000000009
+  },
+  "25": {
+   "e_head": 0.968,
+   "e_tail": 0.968,
+   "tail_minus_head": 0.0,
+   "tail_minus_head_se": 0.007932591001684131,
+   "e_s01c01_tail": 0.955,
+   "s01_minus_s00_tail": -0.013000000000000012
+  },
+  "26": {
+   "e_head": 0.985,
+   "e_tail": 0.99,
+   "tail_minus_head": 0.0050000000000000044,
+   "tail_minus_head_se": 0.004974434641243165,
+   "e_s01c01_tail": 0.984,
+   "s01_minus_s00_tail": -0.006000000000000005
+  },
+  "27": {
+   "e_head": 0.965,
+   "e_tail": 0.968,
+   "tail_minus_head": 0.0030000000000000027,
+   "tail_minus_head_se": 0.008106972307834786,
+   "e_s01c01_tail": 0.96,
+   "s01_minus_s00_tail": -0.008000000000000007
+  },
+  "28": {
+   "e_head": 0.972,
+   "e_tail": 0.979,
+   "tail_minus_head": 0.007000000000000006,
+   "tail_minus_head_se": 0.006954638739718981,
+   "e_s01c01_tail": 0.969,
+   "s01_minus_s00_tail": -0.010000000000000009
+  },
+  "29": {
+   "e_head": 0.993,
+   "e_tail": 0.991,
+   "tail_minus_head": -0.0020000000000000018,
+   "tail_minus_head_se": 0.003988734135035827,
+   "e_s01c01_tail": 0.989,
+   "s01_minus_s00_tail": -0.0020000000000000018
+  },
+  "30": {
+   "e_head": 0.96,
+   "e_tail": 0.952,
+   "tail_minus_head": -0.008000000000000007,
+   "tail_minus_head_se": 0.009271353730712688,
+   "e_s01c01_tail": 0.954,
+   "s01_minus_s00_tail": 0.0020000000000000018
+  },
+  "31": {
+   "e_head": 0.992,
+   "e_tail": 0.992,
+   "tail_minus_head": 0.0,
+   "tail_minus_head_se": 0.0039899874686519995,
+   "e_s01c01_tail": 0.986,
+   "s01_minus_s00_tail": -0.006000000000000005
+  },
+  "32": {
+   "e_head": 0.981,
+   "e_tail": 0.979,
+   "tail_minus_head": -0.0020000000000000018,
+   "tail_minus_head_se": 0.0062888790734120514,
+   "e_s01c01_tail": 0.99,
+   "s01_minus_s00_tail": 0.01100000000000001
+  },
+  "33": {
+   "e_head": 0.99,
+   "e_tail": 0.984,
+   "tail_minus_head": -0.006000000000000005,
+   "tail_minus_head_se": 0.00507661304414666,
+   "e_s01c01_tail": 0.987,
+   "s01_minus_s00_tail": 0.0030000000000000027
+  }
+ },
+ "sentinel_overlap": {
+  "sentinel_qubits": 40,
+  "user_qubits": 22,
+  "overlap": [
+   21,
+   22,
+   23,
+   27,
+   28,
+   29,
+   36,
+   41
+  ]
+ },
+ "queue": {
+  "read": "2026-11-27T10:48:02.499925+00:00",
+  "pending": {
+   "ibm_marrakesh": 0,
+   "ibm_fez": 1,
+   "ibm_kingston": 0
+  },
+  "pick": "ibm_kingston"
+ },
+ "charge_formula_s": 49.67,
+ "usage": [
+  49,
+  0.803086,
+  "dc4m0jds2omc738fkhf0"
+ ],
+ "direction": {
+  "A0_t3": {
+   "r_minus_rho_a": -0.012685754855020421,
+   "se": 0.0028842758972863003,
+   "t_se": 0.007057823120659577,
+   "word": "WINDOW SHRINKS MORE",
+   "ruler_a": "DIFFERS"
+  },
+  "A0_t4": {
+   "r_minus_rho_a": -0.005543805730354092,
+   "se": 0.003676796565917741,
+   "t_se": 0.00847869288100631,
+   "word": "NOT SEEN",
+   "ruler_a": "AGREES"
+  },
+  "A1_t3": {
+   "r_minus_rho_a": -0.025893925914874716,
+   "se": 0.008309069339960753,
+   "t_se": 0.020332292674883963,
+   "word": "WINDOW SHRINKS MORE",
+   "ruler_a": "DIFFERS"
+  },
+  "A1_t4": {
+   "r_minus_rho_a": -0.007082423353631567,
+   "se": 0.0067188372265306285,
+   "t_se": 0.01549363864437963,
+   "word": "NOT SEEN",
+   "ruler_a": "AGREES"
+  },
+  "A2_t3": {
+   "r_minus_rho_a": -0.0251501928402939,
+   "se": 0.008131442800743866,
+   "t_se": 0.01989764053342024,
+   "word": "WINDOW SHRINKS MORE",
+   "ruler_a": "DIFFERS"
+  },
+  "A2_t4": {
+   "r_minus_rho_a": -0.010688815300718758,
+   "se": 0.006161613384006618,
+   "t_se": 0.01420868046351926,
+   "word": "NOT SEEN",
+   "ruler_a": "AGREES"
+  }
+ },
+ "tableB": {
+  "A0_t3": "the total understates the window's shrink",
+  "A0_t4": "the window and the total shrink alike",
+  "A1_t3": "the total understates the window's shrink",
+  "A1_t4": "the window and the total shrink alike",
+  "A2_t3": "the total understates the window's shrink",
+  "A2_t4": "the window and the total shrink alike"
+ },
+ "order": {
+  "W_dev_t3": "yes",
+  "W_ex_t3": "yes",
+  "W_a_t3": "yes",
+  "W_b_t3": "yes",
+  "W_b_out_t3": "yes",
+  "W_c_t3": "yes",
+  "W_d_t3": "yes",
+  "W_dev_t4": "yes",
+  "W_ex_t4": "yes",
+  "W_a_t4": "yes",
+  "W_b_t4": "yes",
+  "W_b_out_t4": "yes",
+  "W_c_t4": "yes",
+  "W_d_t4": "yes"
+ },
+ "growth": {
+  "A0_W3/W1": {
+   "raw": 2.1579809004092767,
+   "exact": 1.74107142857143
+  },
+  "A0_W4/W1": {
+   "raw": 2.5708049113233287,
+   "exact": 2.105902777846899
+  },
+  "A1_W3/W1": {
+   "raw": 2.063020544142143,
+   "exact": 1.4733537946428572
+  },
+  "A1_W4/W1": {
+   "raw": 2.3540625578382386,
+   "exact": 1.5517663955688465
+  },
+  "A2_W3/W1": {
+   "raw": 1.7109716157205241,
+   "exact": 1.1148734351374596
+  },
+  "A2_W4/W1": {
+   "raw": 2.050369966035905,
+   "exact": 1.2492566005471315
+  }
+ },
+ "vs_declared": {
+  "worst_abs_difference": 7.105427357601002e-15,
+  "words_equal": true,
+  "differences": []
+ },
+ "or5_2": {
+  "word": "NOT READ",
+  "device": "ibm_kingston",
+  "copy_drow": 0,
+  "on_cone": []
+ },
+ "raw_t3_W": {
+  "A0": [
+   0.0327,
+   "READS"
+  ],
+  "A1": [
+   0.0672,
+   "READS"
+  ],
+  "A2": [
+   0.1178,
+   "READS"
+  ]
+ },
+ "or5_1": "HELD",
+ "tau_beside": {
+  "A0_t3 0.2": [
+   "DIFFERS",
+   "DIFFERS",
+   []
+  ],
+  "A0_t3 0.3": [
+   "DIFFERS",
+   "DIFFERS",
+   []
+  ],
+  "A0_t3 0.4": [
+   "DIFFERS",
+   "DIFFERS",
+   []
+  ],
+  "A0_t4 0.2": [
+   "AGREES",
+   "AGREES",
+   []
+  ],
+  "A0_t4 0.3": [
+   "AGREES",
+   "AGREES",
+   []
+  ],
+  "A0_t4 0.4": [
+   "AGREES",
+   "AGREES",
+   []
+  ],
+  "A1_t3 0.2": [
+   "DIFFERS",
+   "AGREES",
+   []
+  ],
+  "A1_t3 0.3": [
+   "DIFFERS",
+   "AGREES",
+   []
+  ],
+  "A1_t3 0.4": [
+   "DIFFERS",
+   "AGREES",
+   []
+  ],
+  "A1_t4 0.2": [
+   "AGREES",
+   "DIFFERS",
+   []
+  ],
+  "A1_t4 0.3": [
+   "AGREES",
+   "DIFFERS",
+   []
+  ],
+  "A1_t4 0.4": [
+   "AGREES",
+   "AGREES",
+   [
+    18
+   ]
+  ],
+  "A2_t3 0.2": [
+   "DIFFERS",
+   "AGREES",
+   []
+  ],
+  "A2_t3 0.3": [
+   "DIFFERS",
+   "AGREES",
+   []
+  ],
+  "A2_t3 0.4": [
+   "DIFFERS",
+   "AGREES",
+   []
+  ],
+  "A2_t4 0.2": [
+   "AGREES",
+   "DIFFERS",
+   []
+  ],
+  "A2_t4 0.3": [
+   "AGREES",
+   "DIFFERS",
+   []
+  ],
+  "A2_t4 0.4": [
+   "AGREES",
+   "DIFFERS",
+   [
+    18
+   ]
+  ]
+ },
+ "qubits_csv_path": "results/ohm-ruler5-night-2026-11-27/or5/qubits.csv",
+ "qubits_csv": {
+  "rows_declared": 126,
+  "rows_mine": 126,
+  "matched": 126,
+  "differences": [],
+  "calibration_time": [
+   "2026-11-27 11:31:58+01:00"
+  ],
+  "flags": {
+   "MIRROR_LOW": [],
+   "R_LOW": [
+    [
+     "A1",
+     3,
+     29
+    ],
+    [
+     "A1",
+     4,
+     31
+    ],
+    [
+     "A1",
+     4,
+     32
+    ],
+    [
+     "A1",
+     4,
+     33
+    ],
+    [
+     "A1",
+     4,
+     34
+    ],
+    [
+     "A2",
+     3,
+     32
+    ],
+    [
+     "A2",
+     4,
+     29
+    ],
+    [
+     "A2",
+     4,
+     32
+    ],
+    [
+     "A2",
+     4,
+     34
+    ]
+   ],
+   "R_HIGH": [
+    [
+     "A0",
+     3,
+     14
+    ],
+    [
+     "A0",
+     3,
+     19
+    ],
+    [
+     "A0",
+     3,
+     23
+    ],
+    [
+     "A0",
+     3,
+     24
+    ],
+    [
+     "A0",
+     3,
+     26
+    ],
+    [
+     "A0",
+     4,
+     12
+    ],
+    [
+     "A0",
+     4,
+     13
+    ],
+    [
+     "A0",
+     4,
+     14
+    ],
+    [
+     "A0",
+     4,
+     15
+    ],
+    [
+     "A0",
+     4,
+     19
+    ],
+    [
+     "A0",
+     4,
+     22
+    ],
+    [
+     "A0",
+     4,
+     23
+    ],
+    [
+     "A0",
+     4,
+     36
+    ],
+    [
+     "A1",
+     3,
+     14
+    ],
+    [
+     "A1",
+     3,
+     23
+    ],
+    [
+     "A1",
+     3,
+     24
+    ],
+    [
+     "A1",
+     3,
+     25
+    ],
+    [
+     "A1",
+     3,
+     26
+    ],
+    [
+     "A1",
+     3,
+     27
+    ],
+    [
+     "A1",
+     4,
+     12
+    ],
+    [
+     "A1",
+     4,
+     13
+    ],
+    [
+     "A1",
+     4,
+     15
+    ],
+    [
+     "A1",
+     4,
+     23
+    ],
+    [
+     "A1",
+     4,
+     24
+    ],
+    [
+     "A1",
+     4,
+     30
+    ],
+    [
+     "A1",
+     4,
+     36
+    ],
+    [
+     "A1",
+     4,
+     41
+    ],
+    [
+     "A2",
+     3,
+     14
+    ],
+    [
+     "A2",
+     3,
+     23
+    ],
+    [
+     "A2",
+     3,
+     24
+    ],
+    [
+     "A2",
+     3,
+     25
+    ],
+    [
+     "A2",
+     3,
+     26
+    ],
+    [
+     "A2",
+     3,
+     35
+    ],
+    [
+     "A2",
+     4,
+     12
+    ],
+    [
+     "A2",
+     4,
+     13
+    ],
+    [
+     "A2",
+     4,
+     14
+    ],
+    [
+     "A2",
+     4,
+     21
+    ],
+    [
+     "A2",
+     4,
+     22
+    ],
+    [
+     "A2",
+     4,
+     23
+    ],
+    [
+     "A2",
+     4,
+     24
+    ],
+    [
+     "A2",
+     4,
+     36
+    ],
+    [
+     "A2",
+     4,
+     41
+    ]
+   ]
+  }
+ },
+ "vs_declared5": {
+  "worst_abs_difference": 3.469446951953614e-18,
+  "differences": []
+ },
+ "night4": {
+  "A0_t1": {
+   "e": {
+    "rho": 0.953,
+    "d": 0.007082896117523655,
+    "se": 0.0038520844387855964,
+    "t_se": 0.009426050621708355,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de": {
+    "rho_q": [
+     0.9373718579091224
+    ],
+    "d": 0.0054146667213482,
+    "se": 0.003940745298229454,
+    "t_se": 0.009643003744767474,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {},
+   "r_pool_window": 0.9316000000000002
+  },
+  "A0_t3": {
+   "e": {
+    "rho": 0.9722,
+    "d": 0.09475242087166033,
+    "se": 0.010612221480990475,
+    "t_se": 0.025968105963983693,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "de": {
+    "rho_q": [
+     0.8957823396339091,
+     0.9002599624552899,
+     0.9312572147371531,
+     0.9279964978382192,
+     0.932495040201287
+    ],
+    "d": 0.02276212094203995,
+    "se": 0.006272677310177439,
+    "t_se": 0.015349241378004193,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "against the dry runs: the device holds a fault that none of the dry runs' illustrative noises holds"
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "DIFFERS",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    }
+   },
+   "a_prime": {
+    "kept": 16,
+    "of": 16,
+    "left_out": [],
+    "rho_mean": 0.9192916666666667,
+    "d": 0.02189920820615789,
+    "se": 0.004136670301919815,
+    "t_se": 0.010122432228797787,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "direction": {
+     "r_minus_rho": -0.012685754855020406,
+     "se": 0.0028842758972862912,
+     "t_se": 0.007057823120659555,
+     "word": "WINDOW SHRINKS MORE"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "r_pool_window": 0.9063583692162649
+  },
+  "A0_t4": {
+   "e": {
+    "rho": 0.9737857142857143,
+    "d": 0.10930594649119191,
+    "se": 0.03514334425447617,
+    "t_se": 0.08104055185082205,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "de": {
+    "rho_q": [
+     0.8731551981177229,
+     0.8873984448938369,
+     0.8984010796965908,
+     0.898018652367533,
+     0.9218497708412147,
+     0.9028045192620604,
+     0.9172513286989559
+    ],
+    "d": -0.004852404043586074,
+    "se": 0.014097602393755246,
+    "t_se": 0.0325090711199996,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": []
+    }
+   },
+   "a_prime": {
+    "kept": 22,
+    "of": 22,
+    "left_out": [],
+    "rho_mean": 0.9018259259259261,
+    "d": -0.005177990290938152,
+    "se": 0.007700455701331075,
+    "t_se": 0.017757250847269458,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "direction": {
+     "r_minus_rho": -0.005543805730354179,
+     "se": 0.0036767965659177493,
+     "t_se": 0.00847869288100633,
+     "word": "NOT SEEN"
+    },
+    "expected": "MIXED",
+    "against_expectation": "within what the dry runs allow"
+   },
+   "r_pool_window": 0.8981819726900995
+  },
+  "A1_t1": {
+   "e": {
+    "rho": 0.953,
+    "d": 0.00236096537250793,
+    "se": 0.0033011830348747555,
+    "t_se": 0.008077994886338527,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de": {
+    "rho_q": [
+     0.9199260839871864
+    ],
+    "d": -0.0014062367412268073,
+    "se": 0.0029622674614980383,
+    "t_se": 0.0072486684782857,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "NOT SMALLER",
+   "tau": {},
+   "r_pool_window": 0.93
+  },
+  "A1_t3": {
+   "e": {
+    "rho": 0.9722,
+    "d": 0.1265626592829774,
+    "se": 0.018802445511867064,
+    "t_se": 0.046009584167538704,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "de": {
+    "rho_q": [
+     0.8660317546141134,
+     0.8328217096113669,
+     0.9016859209281245,
+     0.8832015624986179,
+     0.9271876832659071
+    ],
+    "d": -0.004152849009450931,
+    "se": 0.011791925435513433,
+    "t_se": 0.02885484154070137,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": []
+    }
+   },
+   "a_prime": {
+    "kept": 16,
+    "of": 16,
+    "left_out": [],
+    "rho_mean": 0.9088309523809522,
+    "d": 0.03426541157869797,
+    "se": 0.010577993975884962,
+    "t_se": 0.025884351258990503,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "direction": {
+     "r_minus_rho": -0.025893925914874636,
+     "se": 0.008309069339960779,
+     "t_se": 0.020332292674884025,
+     "word": "WINDOW SHRINKS MORE"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "r_pool_window": 0.8814261065460999
+  },
+  "A1_t4": {
+   "e": {
+    "rho": 0.9737857142857143,
+    "d": 0.1786940971720769,
+    "se": 0.03937352034853215,
+    "t_se": 0.09079533792371514,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "de": {
+    "rho_q": [
+     0.8335088481833891,
+     0.8264708101318521,
+     0.8642968240136024,
+     0.8516484016306259,
+     0.8813449948799845,
+     0.8694872051962582,
+     0.877638877899105
+    ],
+    "d": -0.02072121481467369,
+    "se": 0.020744965606860573,
+    "t_se": 0.04783789068942048,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "NOT SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "AGREES",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "AGREES",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "AGREES",
+     "b_prime": "AGREES",
+     "left_out": [
+      18
+     ]
+    }
+   },
+   "a_prime": {
+    "kept": 22,
+    "of": 22,
+    "left_out": [],
+    "rho_mean": 0.8797805555555556,
+    "d": 0.019918019199749497,
+    "se": 0.01662200701625317,
+    "t_se": 0.03833034817947981,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "direction": {
+     "r_minus_rho": -0.007082423353631517,
+     "se": 0.006718837226530632,
+     "t_se": 0.015493638644379637,
+     "word": "NOT SEEN"
+    },
+    "expected": "MIXED",
+    "against_expectation": "within what the dry runs allow"
+   },
+   "r_pool_window": 0.8717631551031333
+  },
+  "A2_t1": {
+   "e": {
+    "rho": 0.953,
+    "d": 0.007007944835856729,
+    "se": 0.003598673579814512,
+    "t_se": 0.008805954249806111,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de": {
+    "rho_q": [
+     0.9147316546397637
+    ],
+    "d": 0.002818740944918479,
+    "se": 0.00398964519610256,
+    "t_se": 0.009762661794862966,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {},
+   "r_pool_window": 0.9252
+  },
+  "A2_t3": {
+   "e": {
+    "rho": 0.9722,
+    "d": 0.13080936919635622,
+    "se": 0.018218363537257476,
+    "t_se": 0.044580335575669046,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "de": {
+    "rho_q": [
+     0.8638281079011032,
+     0.8499011707251615,
+     0.9114694180278349,
+     0.8903664975727692,
+     0.9159421379104686
+    ],
+    "d": 0.0026813944351575325,
+    "se": 0.009919905615224645,
+    "t_se": 0.024274009040454708,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "DIFFERS",
+     "b_prime": "AGREES",
+     "left_out": []
+    }
+   },
+   "a_prime": {
+    "kept": 16,
+    "of": 16,
+    "left_out": [],
+    "rho_mean": 0.9109916666666666,
+    "d": 0.036768093036034406,
+    "se": 0.006676749594398393,
+    "t_se": 0.01633800625749287,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "direction": {
+     "r_minus_rho": -0.02515019284029382,
+     "se": 0.008131442800743858,
+     "t_se": 0.01989764053342022,
+     "word": "WINDOW SHRINKS MORE"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "r_pool_window": 0.8946932137901811
+  },
+  "A2_t4": {
+   "e": {
+    "rho": 0.9737857142857143,
+    "d": 0.1834070166399109,
+    "se": 0.04832075872922239,
+    "t_se": 0.11142766962958683,
+    "words": {
+     "t": "DIFFERS",
+     "2se": "DIFFERS"
+    },
+    "expected": "EXPECTED TO DIFFER",
+    "against_expectation": "as the dry runs expect under gate noise or damping"
+   },
+   "de": {
+    "rho_q": [
+     0.8323647037206707,
+     0.8282077034174459,
+     0.8716768323180328,
+     0.8619164692706597,
+     0.869506756730504,
+     0.8750359992594591,
+     0.8804473294865515
+    ],
+    "d": -0.0131857463503778,
+    "se": 0.01338153369124948,
+    "t_se": 0.0308578166920213,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "expected": "EXPECTED TO AGREE",
+    "against_expectation": "as the dry runs expect"
+   },
+   "de_vs_d": "NOT SMALLER",
+   "tau": {
+    "0.2": {
+     "a_prime": "AGREES",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.3": {
+     "a_prime": "AGREES",
+     "b_prime": "DIFFERS",
+     "left_out": []
+    },
+    "0.4": {
+     "a_prime": "AGREES",
+     "b_prime": "DIFFERS",
+     "left_out": [
+      18
+     ]
+    }
+   },
+   "a_prime": {
+    "kept": 22,
+    "of": 22,
+    "left_out": [],
+    "rho_mean": 0.881425925925926,
+    "d": 0.014881694437146549,
+    "se": 0.013644565534237462,
+    "t_se": 0.03146436812195159,
+    "words": {
+     "t": "AGREES",
+     "2se": "AGREES"
+    },
+    "direction": {
+     "r_minus_rho": -0.010688815300718758,
+     "se": 0.006161613384006605,
+     "t_se": 0.014208680463519231,
+     "word": "NOT SEEN"
+    },
+    "expected": "MIXED",
+    "against_expectation": "within what the dry runs allow"
+   },
+   "r_pool_window": 0.8744042195516691
+  }
+ }
+}
+A0_t1 M 0.002 W 0.002 Wdev 0.262 Wex 0.250 exc +0.012 (2SE 0.011)
+   b     rho 0.962 d +0.0080 tSE 0.0097 2SE 0.0079 {'t': 'AGREES', '2se': 'DIFFERS'}
+   b_out rho 0.962 d +0.0080 tSE 0.0097 2SE 0.0079 {'t': 'AGREES', '2se': 'DIFFERS'} left []
+   c     rho 0.961 d +0.0079 tSE 0.0097 2SE 0.0080 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.960 d +0.0078 tSE 0.0096 2SE 0.0079 {'t': 'AGREES', '2se': 'AGREES'}
+A0_t3 M 0.033 W 0.033 Wdev 0.565 Wex 0.435 exc +0.130 (2SE 0.030)
+   a     rho nan d +0.0219 tSE 0.0101 2SE 0.0083 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.933 d +0.0424 tSE 0.0143 2SE 0.0117 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.933 d +0.0424 tSE 0.0143 2SE 0.0117 {'t': 'DIFFERS', '2se': 'DIFFERS'} left []
+   c     rho 0.939 d +0.0497 tSE 0.0187 2SE 0.0153 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.931 d +0.0386 tSE 0.0146 2SE 0.0120 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+A0_t4 M 0.037 W 0.037 Wdev 0.673 Wex 0.526 exc +0.147 (2SE 0.089)
+   a     rho nan d -0.0052 tSE 0.0178 2SE 0.0154 {'t': 'AGREES', '2se': 'AGREES'}
+   b     rho 0.917 d +0.0220 tSE 0.0373 2SE 0.0323 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.917 d +0.0220 tSE 0.0373 2SE 0.0323 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.927 d +0.0370 tSE 0.0450 2SE 0.0390 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.912 d +0.0130 tSE 0.0345 2SE 0.0299 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t1 M 0.003 W 0.001 Wdev 0.257 Wex 0.250 exc +0.007 (2SE 0.012)
+   b     rho 0.915 d -0.0020 tSE 0.0076 2SE 0.0062 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.915 d -0.0020 tSE 0.0076 2SE 0.0062 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.955 d +0.0026 tSE 0.0084 2SE 0.0068 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.942 d +0.0012 tSE 0.0073 2SE 0.0059 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t3 M 0.068 W 0.067 Wdev 0.531 Wex 0.368 exc +0.162 (2SE 0.046)
+   a     rho nan d +0.0343 tSE 0.0259 2SE 0.0212 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.866 d -0.0317 tSE 0.0331 2SE 0.0271 {'t': 'AGREES', '2se': 'DIFFERS'}
+   b_out rho 0.866 d -0.0317 tSE 0.0331 2SE 0.0271 {'t': 'AGREES', '2se': 'DIFFERS'} left []
+   c     rho 0.906 d +0.0329 tSE 0.0312 2SE 0.0255 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.895 d +0.0152 tSE 0.0281 2SE 0.0230 {'t': 'AGREES', '2se': 'AGREES'}
+A1_t4 M 0.087 W 0.085 Wdev 0.606 Wex 0.388 exc +0.218 (2SE 0.098)
+   a     rho nan d +0.0199 tSE 0.0383 2SE 0.0332 {'t': 'AGREES', '2se': 'AGREES'}
+   b     rho 0.825 d -0.0899 tSE 0.0816 2SE 0.0708 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.825 d -0.0899 tSE 0.0816 2SE 0.0708 {'t': 'DIFFERS', '2se': 'DIFFERS'} left []
+   c     rho 0.879 d +0.0187 tSE 0.0391 2SE 0.0339 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.869 d -0.0002 tSE 0.0405 2SE 0.0351 {'t': 'AGREES', '2se': 'AGREES'}
+A2_t1 M 0.002 W 0.002 Wdev 0.262 Wex 0.250 exc +0.012 (2SE 0.011)
+   b     rho 0.921 d +0.0035 tSE 0.0092 2SE 0.0075 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.921 d +0.0035 tSE 0.0092 2SE 0.0075 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.947 d +0.0063 tSE 0.0086 2SE 0.0071 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.937 d +0.0053 tSE 0.0085 2SE 0.0069 {'t': 'AGREES', '2se': 'AGREES'}
+A2_t3 M 0.109 W 0.118 Wdev 0.448 Wex 0.279 exc +0.169 (2SE 0.048)
+   a     rho nan d +0.0368 tSE 0.0163 2SE 0.0134 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b     rho 0.891 d +0.0060 tSE 0.0242 2SE 0.0198 {'t': 'AGREES', '2se': 'AGREES'}
+   b_out rho 0.891 d +0.0060 tSE 0.0242 2SE 0.0198 {'t': 'AGREES', '2se': 'AGREES'} left []
+   c     rho 0.910 d +0.0367 tSE 0.0266 2SE 0.0218 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   d     rho 0.899 d +0.0188 tSE 0.0227 2SE 0.0186 {'t': 'AGREES', '2se': 'DIFFERS'}
+A2_t4 M 0.193 W 0.191 Wdev 0.537 Wex 0.312 exc +0.224 (2SE 0.119)
+   a     rho nan d +0.0149 tSE 0.0315 2SE 0.0273 {'t': 'AGREES', '2se': 'AGREES'}
+   b     rho 0.830 d -0.0875 tSE 0.0680 2SE 0.0589 {'t': 'DIFFERS', '2se': 'DIFFERS'}
+   b_out rho 0.830 d -0.0875 tSE 0.0680 2SE 0.0589 {'t': 'DIFFERS', '2se': 'DIFFERS'} left []
+   c     rho 0.882 d +0.0218 tSE 0.0277 2SE 0.0240 {'t': 'AGREES', '2se': 'AGREES'}
+   d     rho 0.871 d +0.0002 tSE 0.0229 2SE 0.0198 {'t': 'AGREES', '2se': 'AGREES'}
+uniform A0_t3 UNIFORM p 0.7393 outlying [] r_pool 0.906
+uniform A0_t4 UNIFORM p 0.5809 outlying [] r_pool 0.898
+uniform A1_t3 NOT UNIFORM p 0.01186 outlying [23] r_pool 0.881
+uniform A1_t4 NOT UNIFORM p 4.42e-06 outlying [20, 21, 22] r_pool 0.872
+uniform A2_t3 NOT UNIFORM p 0.002884 outlying [20] r_pool 0.895
+uniform A2_t4 NOT UNIFORM p 0.009688 outlying [20, 23] r_pool 0.874

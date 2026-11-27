@@ -14,7 +14,8 @@
   s00, c00, s01, c01); 175 circuits; nothing parked.
 - Pre-run check (`check.txt`): **ALL PASS** (declared check, string mirrors, readout).
 - Scored by the declared tool on the owner's machine (`score.txt`, `or5/scores3.json`, `or5/scores5.json`,
-  `or5/qubits.csv`); re-scored at home with the tool of 75787d8c: the same text and the same three files. The sent
+  `or5/qubits.csv`, copied to `qubits.csv` as the declaration's procedure says); re-scored at home with the tool of
+  75787d8c: the same text and the same three files. The sent
   circuits (`or5/job/circuits.qpy`, 12 MB) are kept unzipped (the sentinel's overlap is read from them); the other
   circuit files are gzipped (`*.qpy.gz`), as 11-26.
 
@@ -133,6 +134,17 @@ Beside, never judged:
 - The head and tail readout pairs are under two minutes apart (created to finished, 1 min 45 s); a slower drift is not
   in them.
 - The rulers' readings of the kind of shrink are readings of their directions; nothing here measures the noise.
+
+## Independent check (home VS, 2026-11-27)
+
+Re-counted from the raw counts, the sent circuits and the sealed answers with qiskit, Aer and numpy only (the home VS's
+tool of 11-26, widened to the head and tail readout pairs, r / e and table D): every value and word of
+`or5/scores3.json` and `or5/scores5.json` agrees (largest difference 7.1e-15 and 3.5e-18; no word differs), and all 126
+rows of `or5/qubits.csv`; the sent circuits (175, the readout pubs at 0, 1 and 171 to 174), both sealed answers'
+sha256, OR5-1 and OR5-2 agree; reproduce SAME for the three nights. Corrected here: `qubits.csv` was not copied to the
+night's folder as the declared procedure says (only `or5/qubits.csv` was committed, and line 11 pointed at the missing
+file); it is copied now, unchanged. Noted, not changed: position 12's e_q is 0.9325 (head 0.930, tail 0.935), written
+0.933 here and 0.932 by the VS's rounding. Its tool and output: `notes/verify_2026-11-27/`.
 
 ## Reproduce
 
