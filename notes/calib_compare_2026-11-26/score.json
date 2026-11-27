@@ -1,0 +1,1340 @@
+{
+ "table": [
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "T1",
+   "findings": 530,
+   "ibm_hit": 114,
+   "ibm_miss": 416,
+   "our_miss": 744,
+   "chance_rate": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "T2",
+   "findings": 530,
+   "ibm_hit": 26,
+   "ibm_miss": 504,
+   "our_miss": 832,
+   "chance_rate": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "any",
+   "findings": 530,
+   "ibm_hit": 337,
+   "ibm_miss": 193,
+   "our_miss": 2491,
+   "chance_rate": null
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "cz",
+   "findings": 530,
+   "ibm_hit": 279,
+   "ibm_miss": 251,
+   "our_miss": 1125,
+   "chance_rate": 0.215
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "findings": 530,
+   "ibm_hit": 169,
+   "ibm_miss": 361,
+   "our_miss": 689,
+   "chance_rate": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "findings": 160,
+   "ibm_hit": 33,
+   "ibm_miss": 127,
+   "our_miss": 627,
+   "chance_rate": 0.126
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "findings": 160,
+   "ibm_hit": 38,
+   "ibm_miss": 122,
+   "our_miss": 622,
+   "chance_rate": 0.126
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "any",
+   "findings": 160,
+   "ibm_hit": 79,
+   "ibm_miss": 81,
+   "our_miss": 2322,
+   "chance_rate": null
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "findings": 160,
+   "ibm_hit": 59,
+   "ibm_miss": 101,
+   "our_miss": 1000,
+   "chance_rate": 0.203
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "findings": 160,
+   "ibm_hit": 24,
+   "ibm_miss": 136,
+   "our_miss": 644,
+   "chance_rate": 0.128
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "findings": 31,
+   "ibm_hit": 2,
+   "ibm_miss": 29,
+   "our_miss": 174,
+   "chance_rate": 0.129
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "findings": 31,
+   "ibm_hit": 1,
+   "ibm_miss": 30,
+   "our_miss": 175,
+   "chance_rate": 0.129
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "findings": 31,
+   "ibm_hit": 14,
+   "ibm_miss": 17,
+   "our_miss": 567,
+   "chance_rate": null
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "findings": 31,
+   "ibm_hit": 14,
+   "ibm_miss": 17,
+   "our_miss": 291,
+   "chance_rate": 0.232
+  },
+  {
+   "kind": "mirror_low",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "findings": 31,
+   "ibm_hit": 8,
+   "ibm_miss": 23,
+   "our_miss": 169,
+   "chance_rate": 0.13
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "T1",
+   "findings": 14,
+   "ibm_hit": 0,
+   "ibm_miss": 14,
+   "our_miss": 12,
+   "chance_rate": 0.171
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "T2",
+   "findings": 14,
+   "ibm_hit": 6,
+   "ibm_miss": 8,
+   "our_miss": 6,
+   "chance_rate": 0.171
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "any",
+   "findings": 14,
+   "ibm_hit": 7,
+   "ibm_miss": 7,
+   "our_miss": 23,
+   "chance_rate": null
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "cz",
+   "findings": 14,
+   "ibm_hit": 7,
+   "ibm_miss": 7,
+   "our_miss": 17,
+   "chance_rate": 0.343
+  },
+  {
+   "kind": "r_low",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "findings": 14,
+   "ibm_hit": 6,
+   "ibm_miss": 8,
+   "our_miss": 6,
+   "chance_rate": 0.171
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "T1",
+   "findings": 121,
+   "ibm_hit": 11,
+   "ibm_miss": 110,
+   "our_miss": 39,
+   "chance_rate": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "T2",
+   "findings": 121,
+   "ibm_hit": 17,
+   "ibm_miss": 104,
+   "our_miss": 33,
+   "chance_rate": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "any",
+   "findings": 121,
+   "ibm_hit": 70,
+   "ibm_miss": 51,
+   "our_miss": 120,
+   "chance_rate": null
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "cz",
+   "findings": 121,
+   "ibm_hit": 38,
+   "ibm_miss": 83,
+   "our_miss": 43,
+   "chance_rate": 0.189
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "findings": 121,
+   "ibm_hit": 22,
+   "ibm_miss": 99,
+   "our_miss": 28,
+   "chance_rate": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "findings": 385,
+   "ibm_hit": 44,
+   "ibm_miss": 341,
+   "our_miss": 194,
+   "chance_rate": 0.119
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "findings": 385,
+   "ibm_hit": 61,
+   "ibm_miss": 324,
+   "our_miss": 177,
+   "chance_rate": 0.119
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "any",
+   "findings": 385,
+   "ibm_hit": 221,
+   "ibm_miss": 164,
+   "our_miss": 710,
+   "chance_rate": null
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "findings": 385,
+   "ibm_hit": 128,
+   "ibm_miss": 257,
+   "our_miss": 270,
+   "chance_rate": 0.196
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "findings": 385,
+   "ibm_hit": 42,
+   "ibm_miss": 343,
+   "our_miss": 196,
+   "chance_rate": 0.119
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "findings": 33,
+   "ibm_hit": 10,
+   "ibm_miss": 23,
+   "our_miss": 40,
+   "chance_rate": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "findings": 33,
+   "ibm_hit": 7,
+   "ibm_miss": 26,
+   "our_miss": 43,
+   "chance_rate": 0.118
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "findings": 33,
+   "ibm_hit": 23,
+   "ibm_miss": 10,
+   "our_miss": 138,
+   "chance_rate": null
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "findings": 33,
+   "ibm_hit": 15,
+   "ibm_miss": 18,
+   "our_miss": 68,
+   "chance_rate": 0.192
+  },
+  {
+   "kind": "scan_listed",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "findings": 33,
+   "ibm_hit": 6,
+   "ibm_miss": 27,
+   "our_miss": 45,
+   "chance_rate": 0.119
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "T1",
+   "findings": 426,
+   "ibm_hit": 31,
+   "ibm_miss": 395,
+   "our_miss": 129,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "T2",
+   "findings": 426,
+   "ibm_hit": 62,
+   "ibm_miss": 364,
+   "our_miss": 98,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "any",
+   "findings": 426,
+   "ibm_hit": 236,
+   "ibm_miss": 190,
+   "our_miss": 322,
+   "chance_rate": null
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "cz",
+   "findings": 426,
+   "ibm_hit": 122,
+   "ibm_miss": 304,
+   "our_miss": 157,
+   "chance_rate": 0.218
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "findings": 426,
+   "ibm_hit": 107,
+   "ibm_miss": 319,
+   "our_miss": 53,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 70,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 70,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "any",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 277,
+   "chance_rate": null
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 126,
+   "chance_rate": 0.225
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 77,
+   "chance_rate": 0.138
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "findings": 368,
+   "ibm_hit": 35,
+   "ibm_miss": 333,
+   "our_miss": 280,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "findings": 368,
+   "ibm_hit": 33,
+   "ibm_miss": 335,
+   "our_miss": 282,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "findings": 368,
+   "ibm_hit": 194,
+   "ibm_miss": 174,
+   "our_miss": 977,
+   "chance_rate": null
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "findings": 368,
+   "ibm_hit": 100,
+   "ibm_miss": 268,
+   "our_miss": 438,
+   "chance_rate": 0.213
+  },
+  {
+   "kind": "sentinel_dead",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "findings": 368,
+   "ibm_hit": 54,
+   "ibm_miss": 314,
+   "our_miss": 261,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "T1",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 160,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "T2",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 160,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "any",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 558,
+   "chance_rate": null
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "cz",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 279,
+   "chance_rate": 0.218
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_fez",
+   "column": "readout_error",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 160,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "T1",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 70,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "T2",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 70,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "any",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 277,
+   "chance_rate": null
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "cz",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 126,
+   "chance_rate": 0.225
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_kingston",
+   "column": "readout_error",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 77,
+   "chance_rate": 0.138
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "T1",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 315,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "T2",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 315,
+   "chance_rate": 0.125
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "any",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 1171,
+   "chance_rate": null
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "cz",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 538,
+   "chance_rate": 0.213
+  },
+  {
+   "kind": "sentinel_weak",
+   "device": "ibm_marrakesh",
+   "column": "readout_error",
+   "findings": 0,
+   "ibm_hit": 0,
+   "ibm_miss": 0,
+   "our_miss": 315,
+   "chance_rate": 0.125
+  }
+ ],
+ "snapshot_age_hours": [
+  {
+   "job_id": "dbi7pmg1h92s7382ubkg",
+   "device": "ibm_marrakesh",
+   "hours": 0.143
+  },
+  {
+   "job_id": "dbi7qg6ne4hc73be2nf0",
+   "device": "ibm_marrakesh",
+   "hours": 0.166
+  },
+  {
+   "job_id": "dbi7r45ep8hs73anb5q0",
+   "device": "ibm_kingston",
+   "hours": 0.426
+  },
+  {
+   "job_id": "dbi7rtene4hc73be2p8g",
+   "device": "ibm_kingston",
+   "hours": 0.449
+  },
+  {
+   "job_id": "dbi9fhene4hc73be4u50",
+   "device": "ibm_kingston",
+   "hours": 0.584
+  },
+  {
+   "job_id": "dbiah1ghoj4c73b5qkrg",
+   "device": "ibm_kingston",
+   "hours": 0.457
+  },
+  {
+   "job_id": "dbilc0ghoj4c73b6fkq0",
+   "device": "ibm_fez",
+   "hours": 0.322
+  },
+  {
+   "job_id": "dbisb18hoj4c73b6rqu0",
+   "device": "ibm_kingston",
+   "hours": 0.731
+  },
+  {
+   "job_id": "dbisb3g1h92s73843qk0",
+   "device": "ibm_kingston",
+   "hours": 0.733
+  },
+  {
+   "job_id": "dbisog8hoj4c73b6sda0",
+   "device": "ibm_kingston",
+   "hours": 0.488
+  },
+  {
+   "job_id": "dbit85o1h92s73845bt0",
+   "device": "ibm_kingston",
+   "hours": 0.356
+  },
+  {
+   "job_id": "dbitn9o1h92s73845ung",
+   "device": "ibm_kingston",
+   "hours": 0.349
+  },
+  {
+   "job_id": "dbitu9mne4hc73bfab6g",
+   "device": "ibm_kingston",
+   "hours": 0.265
+  },
+  {
+   "job_id": "dbiu78nbipls73bdqi70",
+   "device": "ibm_kingston",
+   "hours": 0.169
+  },
+  {
+   "job_id": "dbiv7p8nceqs73aitbo0",
+   "device": "ibm_kingston",
+   "hours": 0.964
+  },
+  {
+   "job_id": "dbivgc1ffo6c73b8j69g",
+   "device": "ibm_kingston",
+   "hours": 0.292
+  },
+  {
+   "job_id": "dbivjthkdqps738vhcbg",
+   "device": "ibm_kingston",
+   "hours": 0.418
+  },
+  {
+   "job_id": "dbivq656p51s73cjp9d0",
+   "device": "ibm_kingston",
+   "hours": 0.641
+  },
+  {
+   "job_id": "dbj8p3hkdqps739039f0",
+   "device": "ibm_kingston",
+   "hours": 1.364
+  },
+  {
+   "job_id": "dbj8p7hffo6c73b95ang",
+   "device": "ibm_kingston",
+   "hours": 1.368
+  },
+  {
+   "job_id": "dbj9v2onceqs73ajj0e0",
+   "device": "ibm_kingston",
+   "hours": 0.277
+  },
+  {
+   "job_id": "dbjhcahffo6c73b9lldg",
+   "device": "ibm_fez",
+   "hours": 0.426
+  },
+  {
+   "job_id": "dbjhvd9kdqps7390knsg",
+   "device": "ibm_fez",
+   "hours": 0.739
+  },
+  {
+   "job_id": "dbji2qpffo6c73b9n4cg",
+   "device": "ibm_marrakesh",
+   "hours": 0.205
+  },
+  {
+   "job_id": "dbji4t1kdqps7390l4pg",
+   "device": "ibm_marrakesh",
+   "hours": 0.09
+  },
+  {
+   "job_id": "dbk6cq56p51s73cm1n8g",
+   "device": "ibm_kingston",
+   "hours": 0.188
+  },
+  {
+   "job_id": "dbk6d0onceqs73al975g",
+   "device": "ibm_kingston",
+   "hours": 0.195
+  },
+  {
+   "job_id": "dbm5hgd8mdtc73d7bang",
+   "device": "ibm_marrakesh",
+   "hours": 0.168
+  },
+  {
+   "job_id": "dbm5hid8ft8s738u88g0",
+   "device": "ibm_fez",
+   "hours": 0.259
+  },
+  {
+   "job_id": "dbmqhbu74qds73dsrde0",
+   "device": "ibm_marrakesh",
+   "hours": 0.145
+  },
+  {
+   "job_id": "dbmqhed8ft8s738vd70g",
+   "device": "ibm_marrakesh",
+   "hours": 0.148
+  },
+  {
+   "job_id": "dbn5ludt7fqc73aivq60",
+   "device": "ibm_fez",
+   "hours": 0.554
+  },
+  {
+   "job_id": "dbn5m0lt7fqc73aivqa0",
+   "device": "ibm_fez",
+   "hours": 0.557
+  },
+  {
+   "job_id": "dbn8ploou4as73b42g2g",
+   "device": "ibm_marrakesh",
+   "hours": 0.421
+  },
+  {
+   "job_id": "dbn9500ou4as73b434q0",
+   "device": "ibm_fez",
+   "hours": 0.538
+  },
+  {
+   "job_id": "dbn99soqtr0c73acj9t0",
+   "device": "ibm_kingston",
+   "hours": 0.226
+  },
+  {
+   "job_id": "dbn9hdoqtr0c73acjkgg",
+   "device": "ibm_fez",
+   "hours": 0.507
+  },
+  {
+   "job_id": "dbn9p2s4148s7390ik2g",
+   "device": "ibm_kingston",
+   "hours": 0.275
+  },
+  {
+   "job_id": "dbn9p6oqtr0c73ack3f0",
+   "device": "ibm_kingston",
+   "hours": 0.28
+  },
+  {
+   "job_id": "dbnfljdt7fqc73ajisig",
+   "device": "ibm_kingston",
+   "hours": 0.253
+  },
+  {
+   "job_id": "dbnflnk4148s7390vi20",
+   "device": "ibm_kingston",
+   "hours": 0.257
+  },
+  {
+   "job_id": "dbngdb0ou4as73b4icfg",
+   "device": "ibm_fez",
+   "hours": 0.869
+  },
+  {
+   "job_id": "dbngdlgqtr0c73ad2ab0",
+   "device": "ibm_fez",
+   "hours": 0.88
+  },
+  {
+   "job_id": "dbnij8c4148s73913t50",
+   "device": "ibm_kingston",
+   "hours": 0.989
+  },
+  {
+   "job_id": "dbnijck4148s73913t90",
+   "device": "ibm_kingston",
+   "hours": 0.994
+  },
+  {
+   "job_id": "dbnjqbgqtr0c73ad6rk0",
+   "device": "ibm_fez",
+   "hours": 0.189
+  },
+  {
+   "job_id": "dbo4smlt7fqc73akilo0",
+   "device": "ibm_marrakesh",
+   "hours": 1.227
+  },
+  {
+   "job_id": "dbo5megou4as73b5ib30",
+   "device": "ibm_kingston",
+   "hours": 0.16
+  },
+  {
+   "job_id": "dbopknc4148s739tdie0",
+   "device": "ibm_marrakesh",
+   "hours": 0.337
+  },
+  {
+   "job_id": "dbopkps4148s739tdii0",
+   "device": "ibm_marrakesh",
+   "hours": 0.34
+  },
+  {
+   "job_id": "dbopkrs4148s739tdik0",
+   "device": "ibm_marrakesh",
+   "hours": 0.342
+  },
+  {
+   "job_id": "dboq53gou4as73csglog",
+   "device": "ibm_marrakesh",
+   "hours": 0.593
+  },
+  {
+   "job_id": "dbpfafgou4as73ctiokg",
+   "device": "ibm_fez",
+   "hours": 0.261
+  },
+  {
+   "job_id": "dbpfailt7fqc7389b7bg",
+   "device": "ibm_fez",
+   "hours": 0.264
+  },
+  {
+   "job_id": "dbpfo8gqtr0c738ebfjg",
+   "device": "ibm_fez",
+   "hours": 0.301
+  },
+  {
+   "job_id": "dbpg1b0ou4as73ctjt2g",
+   "device": "ibm_kingston",
+   "hours": 0.406
+  },
+  {
+   "job_id": "dbpgh1oqtr0c738ecqkg",
+   "device": "ibm_fez",
+   "hours": 0.639
+  },
+  {
+   "job_id": "dbph4f0ou4as73ctllq0",
+   "device": "ibm_fez",
+   "hours": 0.449
+  },
+  {
+   "job_id": "dbq43nc4148s739vgktg",
+   "device": "ibm_fez",
+   "hours": 1.412
+  },
+  {
+   "job_id": "dbq49goou4as73cuibvg",
+   "device": "ibm_fez",
+   "hours": 1.618
+  },
+  {
+   "job_id": "dbq5gs0qtr0c738fc0e0",
+   "device": "ibm_fez",
+   "hours": 1.509
+  },
+  {
+   "job_id": "dbq619tt7fqc738ad67g",
+   "device": "ibm_fez",
+   "hours": 0.763
+  },
+  {
+   "job_id": "dbqp8vgk09pc73atljf0",
+   "device": "ibm_fez",
+   "hours": 0.48
+  },
+  {
+   "job_id": "dbqp919abdes73folrpg",
+   "device": "ibm_fez",
+   "hours": 0.482
+  },
+  {
+   "job_id": "dbqqeh8k09pc73atn36g",
+   "device": "ibm_kingston",
+   "hours": 0.121
+  },
+  {
+   "job_id": "dbqstapabdes73fos5rg",
+   "device": "ibm_fez",
+   "hours": 0.438
+  },
+  {
+   "job_id": "dbreon8k09pc73autk1g",
+   "device": "ibm_marrakesh",
+   "hours": 0.729
+  },
+  {
+   "job_id": "dbreonujjaos73aiuob0",
+   "device": "ibm_marrakesh",
+   "hours": 0.73
+  },
+  {
+   "job_id": "dbs3c7vv5hds73dignng",
+   "device": "ibm_marrakesh",
+   "hours": 16.973
+  },
+  {
+   "job_id": "dbs3c9ejjaos73ajnvu0",
+   "device": "ibm_fez",
+   "hours": 17.891
+  },
+  {
+   "job_id": "dbs4ccmjjaos73ajovrg",
+   "device": "ibm_marrakesh",
+   "hours": 18.116
+  },
+  {
+   "job_id": "dbs4cevv5hds73dihon0",
+   "device": "ibm_marrakesh",
+   "hours": 18.119
+  },
+  {
+   "job_id": "dbs4chfv5hds73dihoq0",
+   "device": "ibm_fez",
+   "hours": 19.037
+  },
+  {
+   "job_id": "dbs4ck1abdes73fqo1fg",
+   "device": "ibm_fez",
+   "hours": 19.04
+  },
+  {
+   "job_id": "dbs4sh9abdes73fqoh80",
+   "device": "ibm_marrakesh",
+   "hours": 18.69
+  },
+  {
+   "job_id": "dbs4sjok09pc73avon0g",
+   "device": "ibm_marrakesh",
+   "hours": 18.693
+  },
+  {
+   "job_id": "dbsqfm8k09pc73b0glq0",
+   "device": "ibm_marrakesh",
+   "hours": 43.265
+  },
+  {
+   "job_id": "dbtddunq0h0s73bkkok0",
+   "device": "ibm_marrakesh",
+   "hours": 64.821
+  },
+  {
+   "job_id": "dbtde0nq0h0s73bkkomg",
+   "device": "ibm_kingston",
+   "hours": 67.253
+  },
+  {
+   "job_id": "dbtde3req3sc73evm62g",
+   "device": "ibm_marrakesh",
+   "hours": 64.826
+  },
+  {
+   "job_id": "dbtdra3eq3sc73evmjng",
+   "device": "ibm_marrakesh",
+   "hours": 65.296
+  },
+  {
+   "job_id": "dbtei9fq0h0s73bkm4k0",
+   "device": "ibm_marrakesh",
+   "hours": 66.113
+  },
+  {
+   "job_id": "dbten1hvvpic738mss1g",
+   "device": "ibm_marrakesh",
+   "hours": 66.282
+  },
+  {
+   "job_id": "dbtevhjeq3sc73evnv3g",
+   "device": "ibm_marrakesh",
+   "hours": 66.584
+  },
+  {
+   "job_id": "dbtf7ihvvpic738mtee0",
+   "device": "ibm_marrakesh",
+   "hours": 66.87
+  },
+  {
+   "job_id": "dbtfc07asvbs73b9m6cg",
+   "device": "ibm_kingston",
+   "hours": 69.456
+  },
+  {
+   "job_id": "dbu2k1ie8crs738avoqg",
+   "device": "ibm_fez",
+   "hours": 89.847
+  },
+  {
+   "job_id": "dbu2k38vv3fc73c0n4p0",
+   "device": "ibm_fez",
+   "hours": 89.848
+  },
+  {
+   "job_id": "dbu2k51jbrss73a7668g",
+   "device": "ibm_fez",
+   "hours": 89.851
+  },
+  {
+   "job_id": "dbu2k6qe8crs738avovg",
+   "device": "ibm_fez",
+   "hours": 89.852
+  },
+  {
+   "job_id": "dbu2r38vv3fc73c0nfjg",
+   "device": "ibm_marrakesh",
+   "hours": 89.182
+  },
+  {
+   "job_id": "dbu2r4ovv3fc73c0nfo0",
+   "device": "ibm_marrakesh",
+   "hours": 89.183
+  },
+  {
+   "job_id": "dbu2r6k9po4c73cefjr0",
+   "device": "ibm_marrakesh",
+   "hours": 89.185
+  },
+  {
+   "job_id": "dbu38a0vv3fc73c0o1f0",
+   "device": "ibm_marrakesh",
+   "hours": 89.651
+  },
+  {
+   "job_id": "dbu38cc9po4c73ceg5ug",
+   "device": "ibm_marrakesh",
+   "hours": 89.654
+  },
+  {
+   "job_id": "dbu3acae8crs738b0p6g",
+   "device": "ibm_marrakesh",
+   "hours": 89.725
+  },
+  {
+   "job_id": "dbu40l49po4c73ceh8h0",
+   "device": "ibm_marrakesh",
+   "hours": 90.517
+  },
+  {
+   "job_id": "dbu66povv3fc73c0rtc0",
+   "device": "ibm_marrakesh",
+   "hours": 93.011
+  },
+  {
+   "job_id": "dbu66rae8crs738b4i5g",
+   "device": "ibm_marrakesh",
+   "hours": 93.013
+  },
+  {
+   "job_id": "dbunml7f8rhs73bmk5eg",
+   "device": "ibm_marrakesh",
+   "hours": 0.628
+  },
+  {
+   "job_id": "dbunmmvf8rhs73bmk5i0",
+   "device": "ibm_marrakesh",
+   "hours": 0.63
+  },
+  {
+   "job_id": "dbunmon82tmc73dto28g",
+   "device": "ibm_marrakesh",
+   "hours": 0.631
+  },
+  {
+   "job_id": "dbunp0nf8rhs73bmk81g",
+   "device": "ibm_marrakesh",
+   "hours": 0.294
+  },
+  {
+   "job_id": "dbunp2darooc73fk9f00",
+   "device": "ibm_marrakesh",
+   "hours": 0.296
+  },
+  {
+   "job_id": "dbunqff82tmc73dto6eg",
+   "device": "ibm_marrakesh",
+   "hours": 0.346
+  },
+  {
+   "job_id": "dbunr2v82tmc73dto75g",
+   "device": "ibm_marrakesh",
+   "hours": 0.329
+  },
+  {
+   "job_id": "dbunrf782tmc73dto7kg",
+   "device": "ibm_marrakesh",
+   "hours": 0.342
+  },
+  {
+   "job_id": "dbvcps7f8rhs73bnn0m0",
+   "device": "ibm_marrakesh",
+   "hours": 0.31
+  },
+  {
+   "job_id": "dbvcq86ps3fc73bk8rlg",
+   "device": "ibm_marrakesh",
+   "hours": 0.323
+  },
+  {
+   "job_id": "dbvcqklarooc73flbu7g",
+   "device": "ibm_marrakesh",
+   "hours": 0.337
+  },
+  {
+   "job_id": "dbvcr17f8rhs73bnn2fg",
+   "device": "ibm_marrakesh",
+   "hours": 0.351
+  },
+  {
+   "job_id": "dbvcrd782tmc73dur2lg",
+   "device": "ibm_marrakesh",
+   "hours": 0.364
+  },
+  {
+   "job_id": "dbvct3ff8rhs73bnn73g",
+   "device": "ibm_marrakesh",
+   "hours": 0.425
+  },
+  {
+   "job_id": "dbvct57f8rhs73bnn760",
+   "device": "ibm_marrakesh",
+   "hours": 0.427
+  },
+  {
+   "job_id": "dbvct6tarooc73flc3cg",
+   "device": "ibm_marrakesh",
+   "hours": 0.428
+  },
+  {
+   "job_id": "dbvct8v82tmc73dur6tg",
+   "device": "ibm_marrakesh",
+   "hours": 0.431
+  },
+  {
+   "job_id": "dc026jinj2vs73ddbbdg",
+   "device": "ibm_marrakesh",
+   "hours": 12.496
+  },
+  {
+   "job_id": "dc026l2nj2vs73ddbbig",
+   "device": "ibm_marrakesh",
+   "hours": 12.497
+  },
+  {
+   "job_id": "dc026n5hdvas73birfi0",
+   "device": "ibm_marrakesh",
+   "hours": 12.5
+  },
+  {
+   "job_id": "dc026panj2vs73ddbbpg",
+   "device": "ibm_marrakesh",
+   "hours": 12.502
+  },
+  {
+   "job_id": "dc04ebmq4uuc73a21j3g",
+   "device": "ibm_marrakesh",
+   "hours": 15.047
+  },
+  {
+   "job_id": "dc04enqnj2vs73ddeen0",
+   "device": "ibm_marrakesh",
+   "hours": 15.06
+  },
+  {
+   "job_id": "dc04f4eq4uuc73a21k90",
+   "device": "ibm_marrakesh",
+   "hours": 15.074
+  },
+  {
+   "job_id": "dc04fh2nj2vs73ddefog",
+   "device": "ibm_marrakesh",
+   "hours": 15.089
+  },
+  {
+   "job_id": "dc0emu5s2omc73896pgg",
+   "device": "ibm_marrakesh",
+   "hours": 0.319
+  },
+  {
+   "job_id": "dc0emvuq4uuc73a2gmjg",
+   "device": "ibm_marrakesh",
+   "hours": 0.321
+  },
+  {
+   "job_id": "dc0en1ls2omc73896pl0",
+   "device": "ibm_marrakesh",
+   "hours": 0.323
+  },
+  {
+   "job_id": "dc0mngqnj2vs73de7trg",
+   "device": "ibm_marrakesh",
+   "hours": 0.358
+  },
+  {
+   "job_id": "dc0mnkts2omc7389grg0",
+   "device": "ibm_marrakesh",
+   "hours": 0.362
+  },
+  {
+   "job_id": "dc0pq2eq4uuc73a2vcl0",
+   "device": "ibm_fez",
+   "hours": 0.314
+  },
+  {
+   "job_id": "dc15fjdhdvas73bkdmag",
+   "device": "ibm_kingston",
+   "hours": 0.355
+  },
+  {
+   "job_id": "dc1clr6q4uuc73a3opi0",
+   "device": "ibm_fez",
+   "hours": 0.738
+  },
+  {
+   "job_id": "dc1dh1lhdvas73bkmnn0",
+   "device": "ibm_fez",
+   "hours": 0.476
+  },
+  {
+   "job_id": "dc24b7uq4uuc73a4mv60",
+   "device": "ibm_kingston",
+   "hours": 0.55
+  },
+  {
+   "job_id": "dc2n50ts2omc738c8od0",
+   "device": "ibm_fez",
+   "hours": 0.654
+  },
+  {
+   "job_id": "dc3bju5hdvas73bni4og",
+   "device": "ibm_fez",
+   "hours": 0.475
+  }
+ ],
+ "jobs_without_snapshot": [],
+ "memo_sha256_at_fetch": "a11c510bb077c5505c66077c96e61f8d4a6aa49ec9299ffc41b209c15e0f44a5",
+ "snapshots": 191,
+ "note": "floats rounded to 3 decimals"
+}

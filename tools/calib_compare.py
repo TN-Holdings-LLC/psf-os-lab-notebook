@@ -42,9 +42,15 @@ def _couplers(manifest):
     return [tuple(sorted(int(x) for x in c)) for c in manifest.get("device", {}).get("couplers", [])]
 
 
-def _edges_in(qubits, couplers):
+def _edges_in(qubits, couplers, ring=None):
+    """The set's edges: the device's couplers with both ends in the set; when the record holds no couplers (the
+    records before 2026-11-03) and the set is a ring, the ring's neighbouring pairs, cyclic (memo addendum A3)."""
     s = set(qubits)
-    return sorted({c for c in couplers if c[0] in s and c[1] in s})
+    if couplers:
+        return sorted({c for c in couplers if c[0] in s and c[1] in s})
+    if ring:
+        return sorted({tuple(sorted((int(ring[i]), int(ring[(i + 1) % len(ring)])))) for i in range(len(ring))})
+    return []
 
 
 def mirror_findings(job, job_meta, couplers, record, job_dir=None):
@@ -118,7 +124,8 @@ def sentinel_findings(job_dir, job_meta, couplers, record):
                      source=f"{record} ({type(e).__name__})")]
     out = []
     for name, c in sorted(v["cells"].items()):
-        ring = sorted(int(q) for q in c["ring"])
+        ring_order = [int(q) for q in c["ring"]]
+        ring = sorted(ring_order)
         dead = sorted({int(q) for r in c["dead"] for q in r["qubits"]})
         weak = sorted({int(q) for r in c["weak"] for q in r["qubits"]} - set(dead))
         src = f"{record} (psf_os.sentinel.verdict, cell {name})"
@@ -127,8 +134,33 @@ def sentinel_findings(job_dir, job_meta, couplers, record):
                             source=src))
             dead = []
         for kind, found in (("sentinel_dead", dead), ("sentinel_weak", weak)):
-            out.append(dict(job_meta, kind=kind, context=name, set=ring, edges=_edges_in(ring, couplers),
+            out.append(dict(job_meta, kind=kind, context=name, set=ring, edges=_edges_in(ring, couplers, ring_order),
                             found=found, source=src))
+    return out
+
+
+def scan_observe_findings(job_dir, job_meta, couplers, record):
+    """scan_listed read from the job itself (memo addendum A2): psf-os's own scan reading (psf_os.scan.observe, the
+    reading that wrote the coverage days' observations) on the job's echo-scan rings; a job without such a ring gives
+    nothing. The runs folder is the job folder's sibling named with "runs" for "job" (job -> runs,
+    job_fold_rule -> runs_fold_rule)."""
+    from psf_os import scan as SC
+    base = os.path.basename(os.path.normpath(job_dir))
+    runs = os.path.join(os.path.dirname(os.path.normpath(job_dir)), base.replace("job", "runs", 1))
+    if not os.path.isdir(runs):
+        return []
+    try:
+        obs = SC.observe([(job_meta["device"], job_dir, runs, "calib_compare")])
+    except Exception as e:                                # recorded, not hidden
+        return [dict(job_meta, kind="scan_error", context="", set=[], edges=[], found=[],
+                     source=f"{record} (psf_os.scan.observe: {type(e).__name__})")]
+    out = []
+    for o in obs:
+        ring_order = [int(q) for q in o["ring"]]
+        found = sorted({int(q) for r in o.get("dead", []) for q in r["qubits"]})
+        out.append(dict(job_meta, kind="scan_listed", context=f"n{o['n']}", set=sorted(ring_order),
+                        edges=_edges_in(ring_order, couplers, ring_order), found=found,
+                        source=f"{record} (psf_os.scan.observe, ring n {o['n']})"))
     return out
 
 
@@ -141,14 +173,15 @@ def scan_findings(root, by_job):
             meta = by_job.get(o.get("job"))
             if meta is None:
                 continue
-            ring = sorted(int(q) for q in o.get("ring", []))
+            ring_order = [int(q) for q in o.get("ring", [])]
+            ring = sorted(ring_order)
             found = sorted({int(q) for r in o.get("dead", []) for q in r["qubits"]})
             key = (o["job"], tuple(ring), tuple(found))
             if key in seen:
                 continue
             seen.add(key)
-            out.append(dict(meta["meta"], kind="scan_listed", context=o.get("label", ""), set=ring,
-                            edges=_edges_in(ring, meta["couplers"]), found=found,
+            out.append(dict(meta["meta"], kind="scan_listed", context=f"n{o.get('n', len(ring))}", set=ring,
+                            edges=_edges_in(ring, meta["couplers"], ring_order), found=found,
                             source=os.path.relpath(f).replace("\\", "/") + f" (observation {o['label']})"))
     return out
 
@@ -165,10 +198,15 @@ def findings(targets, root="."):
         man = json.load(open(os.path.join(job_dir, "manifest.json")))
         couplers = _couplers(man)
         by_job[t["job_id"]] = dict(meta=meta, couplers=couplers)
+        rows += scan_observe_findings(job_dir, meta, couplers, t["record"])       # addendum A2: every job
         try:
             job = IR.load_job(job_dir)
         except Exception as e:
-            skipped.append(dict(meta, why=f"load_job {type(e).__name__}: {e}"[:200]))
+            # addendum A1: a record in the layout before 2026-11-03 (raw_counts.json.gz, no circuits in the job
+            # folder, no cell roles) holds no |0> mirror, sentinel or Ohm cell: it is read for the scan alone
+            old = os.path.exists(os.path.join(job_dir, "raw_counts.json.gz"))
+            skipped.append(dict(meta, why=("old layout: read for the scan only" if old else
+                                           f"load_job {type(e).__name__}: {e}"[:200]), read_scan=old))
             continue
         rows += mirror_findings(job, meta, couplers, t["record"], job_dir)
         rows += sentinel_findings(job_dir, meta, couplers, t["record"])
@@ -179,7 +217,7 @@ def findings(targets, root="."):
     # r_findings reads a night's scores once per job of that night: keep one row per (job, kind, context)
     uniq, out = set(), []
     for r in rows:
-        key = (r["job_id"], r["kind"], r["context"], r["source"])
+        key = (r["job_id"], r["kind"], r["context"]) if r["kind"] == "scan_listed" else             (r["job_id"], r["kind"], r["context"], r["source"])
         if key not in uniq:
             uniq.add(key)
             out.append(r)
