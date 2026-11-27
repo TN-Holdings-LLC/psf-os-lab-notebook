@@ -26,6 +26,14 @@ what has been shown from the second layer into the first.
    carries it. The workplace VS's twirl dry runs (2026-11-27) test this. If twirled mirrors carry it, a twirled mirror
    is a candidate for a declared night ([OWNER]); if not, the blind spot is written as a limit of every mirror ruler,
    and of any claim to audit with them.
+   Result the same day (the workplace VS, illustrative RZZ(theta) after every CZ, t = 1 and 3, 10 seeds; the mixed
+   case with gate and readout noise did not finish): without twirl the fixed-direction error left (d) and (de) on the
+   negative side (theta 0.05: -0.008; 0.10: -0.034), not the positive side seen on the device; twirling the mirrors
+   alone did not bring them to 0 (-0.009, -0.039); twirling every circuit but the readout brought (d) and (de) to about
+   0 but broke (e) (+0.083 at 0.10, 0 % AGREES) and adds about 507 circuits (+33 % of the seconds with the shots split).
+   So this model does not explain the positive t = 3 gap, and a mirror-only twirl is not proposed for a sixth night.
+   The blind spot for fixed-direction errors stays a limit of the mirror rulers; a full twirl with a twirled readout is
+   a later candidate, after its own dry runs.
 3. **Leave qubits out by the test, not by the mirror.** On 11-26 (A0, t = 4) physical 104 had |0> mirror 0.05 while
    its own r on the test was 0.846 and its readout e 0.989: the mirror passes the gates twice and waits otherwise, so it
    overstates a qubit's fault, and (a') left 104 out of its mean (not out of the circuit or the placement). The fifth
