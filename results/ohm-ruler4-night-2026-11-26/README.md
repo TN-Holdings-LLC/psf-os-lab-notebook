@@ -92,6 +92,9 @@ Beside, never judged:
   Outlying positions: A0 t = 3 21, 22, 24; A0 t = 4 20, 22, 24, 25, 26; A1 t = 3 23, 24; A1 t = 4 22, 24, 25, 26;
   A2 t = 3 23, 24; A2 t = 4 20, 23, 24, 26. (Added after the home VS's check: the declaration names them beside, as
   11-25, and the first text left them out.)
+- smallest difference: the t widths in the judged ruler table; at t = 4, 0.05 to 0.10 for (de) and 0.05 to 0.06 for
+  (a'). (Added 2026-11-27 after the workplace VS's new beside check.)
+- second readout pair (s01 / c01): see readout above (its largest difference from s00 / c00, 0.027).
 - order: A0 > A1 > A2 by every measure at t = 3 and t = 4. growth W(t) / W(1): raw 2.39 / 2.25 / 2.05 at t = 3 and
   2.99 / 2.76 / 2.57 at t = 4, against exact 1.74 / 1.47 / 1.11 and 2.11 / 1.55 / 1.25.
 - sentinel: DEAD; NOT ON USER QUBITS (overlap 0), as 11-24 and 11-25.

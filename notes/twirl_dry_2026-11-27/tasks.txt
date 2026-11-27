@@ -1,0 +1,120 @@
+mix_twnone 100000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 200000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 300000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 400000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 500000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 600000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 700000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 800000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 900000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twnone 1000000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl none --nt 4
+mix_twmirror 100000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 200000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 300000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 400000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 500000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 600000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 700000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 800000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 900000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twmirror 1000000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl mirror --nt 4
+mix_twall 100000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 200000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 300000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 400000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 500000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 600000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 700000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 800000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 900000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+mix_twall 1000000001 --coh 0.05 --p2 0.005 --q10 0.02 --twirl all --nt 4
+nf_twnone 100000001 --twirl none --nt 4
+nf_twnone 200000001 --twirl none --nt 4
+nf_twnone 300000001 --twirl none --nt 4
+nf_twnone 400000001 --twirl none --nt 4
+nf_twnone 500000001 --twirl none --nt 4
+nf_twnone 600000001 --twirl none --nt 4
+nf_twnone 700000001 --twirl none --nt 4
+nf_twnone 800000001 --twirl none --nt 4
+nf_twnone 900000001 --twirl none --nt 4
+nf_twnone 1000000001 --twirl none --nt 4
+nf_twmirror 100000001 --twirl mirror --nt 4
+nf_twmirror 200000001 --twirl mirror --nt 4
+nf_twmirror 300000001 --twirl mirror --nt 4
+nf_twmirror 400000001 --twirl mirror --nt 4
+nf_twmirror 500000001 --twirl mirror --nt 4
+nf_twmirror 600000001 --twirl mirror --nt 4
+nf_twmirror 700000001 --twirl mirror --nt 4
+nf_twmirror 800000001 --twirl mirror --nt 4
+nf_twmirror 900000001 --twirl mirror --nt 4
+nf_twmirror 1000000001 --twirl mirror --nt 4
+nf_twall 100000001 --twirl all --nt 4
+nf_twall 200000001 --twirl all --nt 4
+nf_twall 300000001 --twirl all --nt 4
+nf_twall 400000001 --twirl all --nt 4
+nf_twall 500000001 --twirl all --nt 4
+nf_twall 600000001 --twirl all --nt 4
+nf_twall 700000001 --twirl all --nt 4
+nf_twall 800000001 --twirl all --nt 4
+nf_twall 900000001 --twirl all --nt 4
+nf_twall 1000000001 --twirl all --nt 4
+coh0.05_twnone 100000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 200000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 300000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 400000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 500000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 600000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 700000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 800000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 900000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twnone 1000000001 --coh 0.05 --twirl none --nt 4
+coh0.05_twmirror 100000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 200000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 300000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 400000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 500000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 600000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 700000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 800000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 900000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twmirror 1000000001 --coh 0.05 --twirl mirror --nt 4
+coh0.05_twall 100000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 200000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 300000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 400000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 500000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 600000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 700000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 800000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 900000001 --coh 0.05 --twirl all --nt 4
+coh0.05_twall 1000000001 --coh 0.05 --twirl all --nt 4
+coh0.10_twnone 100000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 200000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 300000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 400000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 500000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 600000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 700000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 800000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 900000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twnone 1000000001 --coh 0.10 --twirl none --nt 4
+coh0.10_twmirror 100000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 200000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 300000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 400000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 500000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 600000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 700000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 800000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 900000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twmirror 1000000001 --coh 0.10 --twirl mirror --nt 4
+coh0.10_twall 100000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 200000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 300000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 400000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 500000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 600000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 700000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 800000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 900000001 --coh 0.10 --twirl all --nt 4
+coh0.10_twall 1000000001 --coh 0.10 --twirl all --nt 4
