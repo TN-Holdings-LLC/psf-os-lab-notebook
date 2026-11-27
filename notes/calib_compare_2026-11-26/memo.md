@@ -92,3 +92,30 @@ edge column when an edge of the set touching it is among the worst k edges. Ties
 - It reads no calibration number, and `tools/calib_compare.py findings` reads none (it opens no `fetch_in/*/dev`
   file and no `calib_history` file). `score` reads the snapshots only after home has fetched them.
 - It changes no declaration, no `results/`, no psf-os.
+
+## Addendum A (2026-11-27, workplace VS; written before the sealed bundle is opened)
+
+Home fetched the 191 snapshots on 2026-11-26 evening after this memo (sha256 a11c510b...) was fixed, and sealed them
+(`封印_校正の束_2026-11-26.zip`, sha256 d5bccf2e...9827). This addendum is committed before the seal is opened. **The
+definitions (sections 1 to 3) and the expectation (section 4) above are unchanged**; only what is read and how it is
+read are added.
+
+- **A1. Records in the layout before 2026-11-03.** Of the 191 jobs, 73 were not read on 2026-11-26. Their records keep
+  the counts as `raw_counts.json.gz`, the circuits outside the job folder and cells without roles. None of them holds a
+  |0> mirror, a sentinel cell or an Ohm ruler cell, so `mirror_low`, `sentinel_*` and `r_low` do not apply to them;
+  each is read for the scan (A2) and listed with the reason "old layout: read for the scan only". A job with no
+  manifest at all stays unread and listed.
+- **A2. The scan, read from every job.** `scan_listed` is read from each job of the list by psf-os's own scan reading
+  (`psf_os.scan.observe`, psf-os 0.3.3), the reading that wrote the coverage days' `observations` used on 2026-11-26.
+  It gives, per echo-scan ring of the job, the ring and its dead runs; the definition (the qubits of the runs the scan
+  lists on that job, the ring as the set) is section 1's. A job's ring read both ways (`list_after.json` and the job
+  itself) is counted once, per (job, ring size). A job whose scan cannot be read is kept as `scan_error`.
+- **A3. Edges without couplers.** The records before 2026-11-03 hold no coupler list. For a ring (scan, sentinel) the
+  set's edges are then the ring's neighbouring pairs, cyclic: a ring is built on couplers, so these are couplers. A set
+  that is not a ring and has no coupler list gets no edge column (NOT AVAILABLE, as section 2).
+- **A4. The list.** `calib_targets_2026-11-26_v2.json`, all 191 jobs; the snapshot of each job is the one home fetched
+  for its job id (the fetch's `index.json`). Nothing else is chosen after the snapshots exist.
+- **A5. Still not counted:** "a place that did not read on a readable-depth night" (section 1): no definition was fixed
+  before the data, and none is added here.
+- **A6. Findings file.** `findings.json` is written again by `tools/calib_compare.py findings` with A1 to A3, before
+  the seal is opened; its counts per kind and device are in the report of 2026-11-27.
