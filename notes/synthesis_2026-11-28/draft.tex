@@ -61,6 +61,14 @@ preprints: compiler work that showed where search-based layout fails and where f
 \cite{p5,p6}); an operating layer, psf-os, that carries user-written circuits to the device (papers 7 to 9,
 \cite{p7,p8,p9}); and real-time control (papers 10 and 11, \cite{p10,p11}).
 
+The checks build on known tools. Mirror circuits, a circuit followed by its inverse, are an established benchmark of
+error rates and of a device's capability on circuits of a user's shape~\cite{proctor2022prl,proctor2022natphys}; a
+full-stack form of them has been run on an IBM heavy-hex device~\cite{hines2023}. Drift between calibrations has been
+detected and tracked in the device's own data~\cite{proctor2020drift}, and twirling turns a coherent error into a
+stochastic one~\cite{wallman2016,hashim2021}, which is how paper 5 told a device defect from a circuit property. What
+the series adds is where these run: inside the user's own job, beside the user's circuit, with the verdict words and
+predictions fixed before the data, and read against no calibration number.
+
 This paper does not review them. It asks one question of all their records at once, and answers it with five analyses
 (A to E) declared in the record (\texttt{notes/synthesis\_2026-11-28/outline.md}, commit 423b8f3d) before each was run:
 how often the series' own predictions held (A); whether the line of paper 9 holds on results that came after it (B);
@@ -96,7 +104,7 @@ Table~\ref{tab:reads} gathers the device results with an exact answer, each with
 the number a user of the device needs.
 
 \begin{table}[H]\centering\footnotesize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.25}
 \begin{tabular}{R{2.9cm}R{1.6cm}R{5.2cm}R{5.6cm}}
 \toprule
 problem & paper, devices & benchmark number & user's number \\
@@ -247,8 +255,7 @@ different days did not, and a ruler carried in the same job took up most of the 
 nights where both were measured (D; the ruler's wider error is part of that). Read a result by the share it keeps and by
 its shape, not by a fixed absolute width (paper 7's bias in both directions). Declare predictions only where an earlier
 record grounds them, and expect about a third of the rest to fail (A): the ledger gives readers of declared hardware tests
-a base rate for how often a stated expectation about a cloud device holds, which we did not find elsewhere.
-\pending{check the last clause against the literature before release, or drop it.}
+a base rate for how often a stated expectation about a cloud device holds.
 
 \section{Limits}\label{sec:limits}
 \begin{itemize}
@@ -270,9 +277,8 @@ Records, declarations, raw counts and the analyses of this paper: \url{https://g
 (0.3.3, doi:10.5281/zenodo.24496267); the compiler: \url{https://github.com/TN-Holdings-LLC/psf-zero}.
 
 \section*{Acknowledgments}
-We acknowledge the use of IBM Quantum services for this work. The views expressed are those of the authors, and do not
-reflect the official policy or position of IBM or the IBM Quantum team. The device runs used the IBM Quantum Open Plan
-and a Pay-As-You-Go account. \pending{confirm the plan wording against paper 11.}
+We acknowledge the use of IBM Quantum services for this work. The views expressed are those of the authors and do not
+reflect the official policy or position of IBM or the IBM Quantum team.
 
 \begin{thebibliography}{99}\footnotesize
 \bibitem{p1} TN Holdings, Ordering Sensitivity in Subgraph-Isomorphism Layout Search, v2 (2026), doi:10.5281/zenodo.22977930.
@@ -285,6 +291,12 @@ and a Pay-As-You-Go account. \pending{confirm the plan wording against paper 11.
 \bibitem{p8} TN Holdings, Readable Quantum Dynamics Without Error Mitigation: Dual-Unitary Chains up to 91 Qubits and 3D Lattice Tests on IBM Heron Devices, v1.0 (2026), doi:10.5281/zenodo.24136512.
 \bibitem{p9} TN Holdings, What Makes Raw Quantum Dynamics Readable? The Share of Signal Kept, Across 179 Results on IBM Heron, v1 (2026), doi:10.5281/zenodo.24278888.
 \bibitem{p10} TN Holdings, Decisions No Correction of the Uncontrolled Circuit Can Reach: Real-Time Control on IBM Heron, Declared Before the Data, v1 (2026), doi:10.5281/zenodo.24367001.
+\bibitem{proctor2022prl} T. Proctor et al., Scalable randomized benchmarking of quantum computers using mirror circuits, Phys. Rev. Lett. 129, 150502 (2022), arXiv:2112.09853.
+\bibitem{proctor2022natphys} T. Proctor et al., Measuring the capabilities of quantum computers, Nature Physics 18, 75 (2022), arXiv:2008.11294.
+\bibitem{hines2023} J. Hines and T. Proctor, Scalable full-stack benchmarks for quantum computers, arXiv:2312.14107 (2023).
+\bibitem{proctor2020drift} T. Proctor et al., Detecting and tracking drift in quantum information processors, Nature Communications 11, 5396 (2020), arXiv:1907.13608.
+\bibitem{wallman2016} J. J. Wallman and J. Emerson, Noise tailoring for scalable quantum computation via randomized compiling, Phys. Rev. A 94, 052325 (2016), arXiv:1512.01098.
+\bibitem{hashim2021} A. Hashim et al., Randomized compiling for scalable quantum computing on a noisy superconducting quantum processor, Phys. Rev. X 11, 041039 (2021), arXiv:2010.00215.
 \bibitem{p11} TN Holdings, Where a Qubit Waits: Rules for Real-Time Control from Declared Device Tests on IBM Heron, v1 (2026), doi:10.5281/zenodo.24496368.
 \end{thebibliography}
 \end{document}
