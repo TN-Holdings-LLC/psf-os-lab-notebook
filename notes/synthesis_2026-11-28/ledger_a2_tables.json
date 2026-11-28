@@ -1,0 +1,324 @@
+{
+ "rows": 1419,
+ "cites_found": {
+  "declared_in": 1419,
+  "verdict_source": 1393
+ },
+ "missing_cites": [
+  [
+   "2026-09-14",
+   "spare-qubit-cliff addendum 16 P10",
+   "verdict_source",
+   ""
+  ],
+  [
+   "2026-09-14",
+   "spare-qubit-cliff addendum 16 P11",
+   "verdict_source",
+   ""
+  ],
+  [
+   "2026-09-14",
+   "spare-qubit-cliff addendum 16 P9",
+   "verdict_source",
+   ""
+  ],
+  [
+   "2026-09-14",
+   "verify_vf2_steps_to_first_match P3",
+   "verdict_source",
+   ""
+  ],
+  [
+   "2026-10-13",
+   "HW3 D1",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "HW3 D2",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "HW3 D3",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft V0",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft V1",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft V2",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft V3",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft V4",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft V5",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft V6",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-13",
+   "T2-placement draft hardware follow-up",
+   "verdict_source",
+   "none found"
+  ],
+  [
+   "2026-10-19",
+   "S2RB H1",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-19",
+   "TF",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-21",
+   "W13",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-28",
+   "D5 B",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-28",
+   "D5 C",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-29",
+   "P3D A1",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-29",
+   "P3D A2",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-29",
+   "P3D A3",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-29",
+   "P3D A4",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-29",
+   "P3D C1",
+   "verdict_source",
+   "none"
+  ],
+  [
+   "2026-10-29",
+   "P3D C2",
+   "verdict_source",
+   "none"
+  ]
+ ],
+ "kind_agreement_with_ledger_a_rules": 260,
+ "by_paper": {
+  "1": {
+   "held": 103,
+   "failed": 24,
+   "not read": 8,
+   "unclear": 23
+  },
+  "2": {
+   "held": 59,
+   "failed": 6,
+   "not read": 0,
+   "unclear": 10
+  },
+  "none": {
+   "held": 840,
+   "failed": 89,
+   "not read": 55,
+   "unclear": 86
+  },
+  "3": {
+   "held": 12,
+   "failed": 10,
+   "not read": 1,
+   "unclear": 3
+  },
+  "4": {
+   "held": 10,
+   "failed": 0,
+   "not read": 0,
+   "unclear": 1
+  },
+  "5": {
+   "held": 4,
+   "failed": 19,
+   "not read": 2,
+   "unclear": 2
+  },
+  "6": {
+   "held": 3,
+   "failed": 0,
+   "not read": 0,
+   "unclear": 0
+  },
+  "7": {
+   "held": 2,
+   "failed": 2,
+   "not read": 1,
+   "unclear": 8
+  },
+  "8": {
+   "held": 8,
+   "failed": 2,
+   "not read": 0,
+   "unclear": 4
+  },
+  "9": {
+   "held": 11,
+   "failed": 11,
+   "not read": 0,
+   "unclear": 0
+  }
+ },
+ "by_kind": {
+  "timing": {
+   "held": 118,
+   "failed": 19,
+   "not read": 4,
+   "unclear": 13
+  },
+  "other": {
+   "held": 175,
+   "failed": 19,
+   "not read": 8,
+   "unclear": 30
+  },
+  "cost": {
+   "held": 124,
+   "failed": 17,
+   "not read": 17,
+   "unclear": 15
+  },
+  "null (no difference)": {
+   "held": 175,
+   "failed": 23,
+   "not read": 9,
+   "unclear": 9
+  },
+  "direction between arms": {
+   "held": 68,
+   "failed": 19,
+   "not read": 10,
+   "unclear": 23
+  },
+  "beyond a bound": {
+   "held": 270,
+   "failed": 33,
+   "not read": 13,
+   "unclear": 31
+  },
+  "trend over size": {
+   "held": 9,
+   "failed": 1,
+   "not read": 1,
+   "unclear": 1
+  },
+  "loop behaviour": {
+   "held": 79,
+   "failed": 5,
+   "not read": 1,
+   "unclear": 3
+  },
+  "declared model": {
+   "held": 34,
+   "failed": 27,
+   "not read": 2,
+   "unclear": 12
+  },
+  "per-qubit record": {
+   "held": 0,
+   "failed": 0,
+   "not read": 2,
+   "unclear": 0
+  }
+ },
+ "by_period": {
+  "up to 10-31": {
+   "held": 1018,
+   "failed": 143,
+   "not read": 62,
+   "unclear": 123
+  },
+  "11-01 to 11-15": {
+   "held": 34,
+   "failed": 20,
+   "not read": 5,
+   "unclear": 14
+  }
+ },
+ "by_source": {
+  "psf-zero (papers 1, 2 and their period)": {
+   "held": 948,
+   "failed": 105,
+   "not read": 53,
+   "unclear": 101
+  },
+  "notebook 10-08 to 10-31": {
+   "held": 70,
+   "failed": 38,
+   "not read": 9,
+   "unclear": 22
+  },
+  "notebook 11-01 to 11-15": {
+   "held": 34,
+   "failed": 20,
+   "not read": 5,
+   "unclear": 14
+  }
+ }
+}
