@@ -1,0 +1,290 @@
+% Comprehensive paper over the series (TN Holdings), first draft, home, 2026-11-28 (owner 12:47 JST "進めて").
+% Built from notes/synthesis_2026-11-28/outline.md, papers_read.md, results_ab.md and results_a2_d.md; every number is
+% quoted from the paper or record named beside it and is to be checked one by one before release. A try, kept apart
+% from paper 12 (notes/paper12/, unchanged).
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\sloppy
+\newcommand{\pending}[1]{\textbf{[PENDING: #1]}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{What a User-Side Layer Can Know Without the Calibration Map:\\ Declared Tests on IBM Heron Devices, 2026}
+\author{TN Holdings\\ \small contact: \texttt{love.os.architect@proton.me}}
+\date{Draft 1, 28 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A user of a cloud quantum computer sees the device through two numbers it is given: a calibration map that is hours
+old when it is read, and results that error mitigation has already changed. We ask what a layer on the user's side can
+find out and do with neither: it places circuits from the coupling graph and the failed elements only, applies no
+mitigation, puts its checks into the user's own job, and declares every test in git before the data exist. Eleven
+preprints (September to November 2026) and the records after them report its pieces; here we test the whole on the
+committed records with five analyses declared before they were run. (A) Of 287 predictions declared from 8 October to
+27 November, 158 held and 78 failed (15 not read, 36 unclear); about a third of the decided ones failed in every period
+until the series declared only predictions an earlier device record grounded, after which none of 17 decided did; the
+declared noise models and expected numbers failed most often (20 of 35). (B) Paper 9's line, that a raw result reads
+when the share of the exact pattern it keeps is at least $1-1/\sqrt2$, held on 94 of 96 later units, all far above the
+line, so the region near it was not tested. (C) Against IBM's own calibration over 191 jobs of the record, the
+qubits our in-job mirrors found weak sat on IBM's two-qubit-gate column at 2.29 times chance, while IBM marked no
+column for 291 of 721 of them; the map behind a job was more than a day old for 17 of 67 jobs on one device. (D) The
+same circuit moved beyond shot noise from day to day in 14 of 16 units, and copies inside one job in none of 9. (E) All
+98 re-scoring entries of the record give the committed numbers again. With these, the series' device results read as
+follows: raw, unmitigated circuits of up to 153 qubits came within 0.05 of sealed exact answers, and a 91-site
+dual-unitary chain kept its decay rates within 0.0037 of theory to 2,205 CZ; where results did not read, the record
+says so. No quantum advantage is claimed: every answer here is computed exactly on a classical machine.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+Two habits stand between a user of today's quantum processors and what the device did. Placement reads the day's
+calibration (error rates per qubit and coupler), which ages as soon as it is read and selects in its own favour; and
+results are error-mitigated, which changes the number the user sees by a model the user cannot audit. Both help a
+benchmark. Neither tells the user how far a given result can be trusted on a given day.
+
+This series took the other position from the start: a layer that sees only the coupling graph, the basis and the
+elements the device marks as failed; that puts its own checks, made of the user's circuit, into the same job; that
+corrects nothing; and that writes down what it expects before the device runs. Its pieces are reported in eleven
+preprints: compiler work that showed where search-based layout fails and where formula-built schedules suffice
+(papers 1 to 4, \cite{p1,p2,p3,p4}); placement without the map and the readable depth it gives (papers 5 and 6,
+\cite{p5,p6}); an operating layer, psf-os, that carries user-written circuits to the device (papers 7 to 9,
+\cite{p7,p8,p9}); and real-time control (papers 10 and 11, \cite{p10,p11}).
+
+This paper does not review them. It asks one question of all their records at once, and answers it with five analyses
+(A to E) declared in the record (\texttt{notes/synthesis\_2026-11-28/outline.md}, commit 423b8f3d) before each was run:
+how often the series' own predictions held (A); whether the line of paper 9 holds on results that came after it (B);
+what IBM's calibration saw of what our checks found (C); how far the same circuit moves from day to day (D); and
+whether every recorded number can still be reproduced (E). Sections~\ref{sec:reads} and~\ref{sec:checks} set the
+series' device results beside these analyses.
+
+\section{Method common to the series}\label{sec:method}
+\textbf{Placement.} A ring by a formula on a lattice cycle (papers 4 to 6), a two-dimensional pattern by translation
+of its own edges onto the device's couplers (papers 7 to 9; a pattern that does not fit is refused, not routed), a
+chain by a fixed rule round the failed elements (paper 8). No error rate is read. Where this is weaker than search, the
+record says so: on a trained classifier formula placement could not be told apart from Qiskit's search
+(paper 3)~\cite{p3}, and the three-dimensional prototype needs several times what a search-based router needs
+(paper 8)~\cite{p8}.
+
+\textbf{Checks in the same job.} A floor (the user's circuit with its non-diagonal one-qubit gates removed: the same CZ,
+ideal $\langle Z\rangle = 1$), a mirror (the compiled circuit and its inverse), a ring sentinel, and, from 23 November,
+rulers built from the job's own circuits (string mirrors and readout pairs). They are reported beside a result and never
+used to correct it.
+
+\textbf{Verdicts.} A result READS when its mean squared error is at most half the mean square of the exact answer
+(papers 7 to 9); AGREES when its difference from a reference is inside a stated width (two standard errors, or the
+Student $t$ quantile for $K$ pairs); a real-time result is judged against a correction ceiling (paper 10). Every
+answer is computed exactly and sealed by hash before the run.
+
+\textbf{Declarations and records.} Each test's question, circuits, verdict words and predictions are committed before
+the device record of its run is fetched; raw counts, job identifiers and the scorers are committed after. From
+18 November an independent re-count of each night was made by a separate assistant with separately written code
+(Section~\ref{sec:limits} says what kind of independence this is).
+
+\section{What reads (the series' results)}\label{sec:reads}
+Table~\ref{tab:reads} gathers the device results with an exact answer, each with the number a benchmark would quote and
+the number a user of the device needs.
+
+\begin{table}[H]\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{R{2.9cm}R{1.6cm}R{5.2cm}R{5.6cm}}
+\toprule
+problem & paper, devices & benchmark number & user's number \\
+\midrule
+22 practice circuits written in plain Qiskit (33 to 153 qubits) & 7; marrakesh, fez & 22 / 22 READ on both; 19 and 18 AGREE; 2D kicked Ising at $\theta = 0.8, 1.0$ within 0.05 to $t = 8$ (worst on fez 0.023) & $\theta = 0.4$ misses by $-0.04$ to $-0.07$ on both; the 33-qubit chain's signal site falls behind with depth (0.30 against 0.41 at $t = 16$); one day \\
+dual-unitary kicked-Ising chain, $N = 51, 71, 91$ & 7, 8; marrakesh, fez & decay rates within 0.0045, 0.0017, 0.0037 of $\cos 2h$; every depth to $t = 24$ readable (2,205 CZ at $N = 91$) & $h = 0.15$ sat $+0.0037$ above $\cos 2h$ on both devices \\
+3D lattices (kicked Ising $4\times4\times3$; Heisenberg $4\times2\times2$) & 8; marrakesh, fez & Ising read at every angle and depth; Heisenberg read & a light-cone test failed as predicted (every front late); a layout with 46\% fewer CZ came farther from the answer on $4\times3\times2$ \\
+IBM's 2023 utility observables; Fermi--Hubbard $U = 4$ & 9; fez & $\langle Z_{106}\rangle$ read raw to 8 steps; Hubbard read at every size from 40 to 120 qubits at 4 Trotter steps & Hubbard read at neither size run at 6 steps \\
+kicked Ising ring, conserved charge & 5; marrakesh, kingston & readable depth $L^* = 56$--57 (marrakesh) and 81--90 steps (kingston) against 15--26 for the folded ring and blind search; 71 wins, 11 ties, no loss in 144 comparisons & the declared noise model did not hold; a run of 18 sites on kingston's $n = 40$ ring was dead while the calibration showed nothing \\
+\bottomrule
+\end{tabular}
+\caption{The series' device results with an exact answer, as published~\cite{p5,p7,p8,p9}. Raw: no mitigation, no
+post-selection, every shot counted.}\label{tab:reads}
+\end{table}
+
+\textbf{B: paper 9's line, after paper 9.} Paper 9 split the error exactly as $\mathrm{MSE}/\overline{e^2} = (1-r)^2 +
+\text{rest}$, with $r = \sum ze/\sum e^2$ the share of the exact pattern kept; $r < 0.293$ means ``does not read'' by
+construction, and the measured statement was the converse: 160 of the 166 results with $r \ge 0.293$ read, on a table
+assembled after the results~\cite{p9}. The results recorded after 16 November that are judged by the same reading are
+the Ohm window and ruler nights (23 to 27 November), raw $M$ and raw $W$ per cell: 48 cells, 96 units, each scored by
+its own declared scorer (the ratios equal the recorded ones exactly). Declared reading: the line holds if the share that
+reads above it is at least $0.964$ minus its binomial 2 SE, $0.935$. It holds: 94 of 96 (0.979). The two that do not
+are one cell (A2 $t = 4$, 26 November, ratio 0.529 and 0.526), where, as in paper 9's six, the error that is not a
+shrink decided. But every unit sits at $r = 0.94$ to $1.58$; at $t = 3$ and 4 all 60 have $r > 1$ (the device's error
+adds to the quantity rather than shrinking it). The test therefore says nothing about the region near 0.293, where
+paper 9's misses sat.
+
+\section{What the checks see}\label{sec:checks}
+\textbf{Defects the calibration does not show.} On ibm\_kingston a run of 18 sites on the rule's $n = 40$ ring was near
+random or inverted in three runs of the byte-identical circuit over three hours, while the calibration showed nothing
+there; gate twirling turned the inverted part random, so the cause is on the device~\cite{p5}. A layer that scanned the
+rings it would use, listed the dead paths and placed around them restored the ring from 22 to 40 usable sites on three
+days (6 of 6 declared comparisons WIDER) and widened rings on two more devices~\cite{p6}.
+
+\textbf{C: against IBM's own calibration.} For the 191 jobs of the record whose submissions name their device and
+time, the calibration snapshot that applied when each job ran was fetched and sealed; a scoring memo was committed before the seal was opened, and the calibration
+numbers enter no verdict, placement or correction (\texttt{notes/calib\_compare\_2026-11-26/}). Table~\ref{tab:calib}
+gives the hit rates. Our mirror findings sat on IBM's two-qubit-gate (CZ) column at 2.29 times chance, against 0.71 to
+2.17 on the per-qubit columns; IBM marked no column at all for 291 of 721 of them, and one fez qubit we found 68 times
+carried no IBM mark on any. The map behind a job was a median 0.41 to 0.63 hours old, but more than a day old for 17
+of 67 jobs on ibm\_marrakesh (largest 93 hours); a qubit's readout error moved by a median factor of 3.30 to 7.81
+between its best and worst day.
+
+\begin{table}[H]\centering\footnotesize
+\begin{tabular}{lrrrrr}
+\toprule
+our finding (sets) & readout error & $T_1$ & $T_2$ & CZ & any column \\
+\midrule
+mirror low, 721 (409) & 0.279 / 0.128 & 0.207 / 0.128 & 0.090 / 0.128 & \textbf{0.488 / 0.214} & 0.596 / 0.441 \\
+scan listed, 539 (62) & 0.130 / 0.119 & 0.121 / 0.118 & 0.158 / 0.118 & \textbf{0.336 / 0.194} & 0.583 / 0.458 \\
+sentinel dead, 794 (109) & 0.203 / 0.127 & 0.083 / 0.125 & 0.120 / 0.125 & 0.280 / 0.216 & 0.542 / 0.460 \\
+\bottomrule
+\end{tabular}
+\caption{IBM's marks on what our in-job checks found, as hit rate / chance (the share of the set IBM marks on that
+column), over 191 jobs on ibm\_fez, ibm\_marrakesh and ibm\_kingston (\texttt{notes/calib\_compare\_2026-11-26/result\_2026-11-27.md}).
+IBM misses (no column): 291 of 721, 225 of 539, 364 of 794.}\label{tab:calib}
+\end{table}
+
+\textbf{Rulers inside the circuit.} From 23 November the window of an Ohm-type circuit was divided by rulers carried in
+the same job: the circuit's own total, mirrors of the circuit and of its strings, and readout pairs (full account in
+paper 12, in preparation). Putting the readout's half back into the string mirror's ruler brought the window to the
+exact value within the $t$ width in four of six cells at three and four cycles on ibm\_fez (26 November) and five of six
+on ibm\_kingston (27 November); the readout alone did not in any of the six on either night. On ibm\_fez every ruler
+left a positive residue at three cycles on three nights; on ibm\_kingston the readout-corrected ruler left a residue beyond
+its width in one arm of three. A per-qubit record predicted the next night: two named qubits stayed below the declared mirror threshold for a
+third night (held), while the next such prediction could not be read when the device rule chose another device.
+
+\textbf{D: the same circuit from day to day.} Table~\ref{tab:spread} compares how far one circuit's raw value moves
+between days with its shot error (the counting fixed before the run). Across days the raw value moved beyond shot
+noise in 14 of 16 units; copies of a circuit inside one job in none of 9. On the two fez ruler nights the raw window
+moved in eight of nine cells, while the window divided by the in-job string mirror moved within its error in all nine
+(that error also carries the mirrors' shot noise, so it is the wider of the two).
+
+\begin{table}[H]\centering\footnotesize
+\begin{tabular}{R{6.4cm}lrl}
+\toprule
+unit & days & SD / median shot SE & beyond shot noise ($p < 0.05$) \\
+\midrule
+fixed daily problem FX-A, ibm\_marrakesh & 5 & 2.71 & yes \\
+fixed daily problem FX-A, ibm\_fez & 3 & 1.03 & no \\
+Ohm ruler nights, raw $W$ per cell (25, 26 Nov.) & 2 & 1.1--4.4 & 8 of 9 \\
+Ohm ruler nights, $W$ divided by the string-mirror ruler & 2 & 0.05--1.7 & 0 of 9 \\
+balanced RUS chain per length (17, 18 Nov.; a recalibration between) & 2 & 12--24 & 5 of 5 \\
+\midrule
+copies inside one job (20 Nov.) & 2 copies & 0.13--1.8 & 0 of 9 \\
+\bottomrule
+\end{tabular}
+\caption{The same circuit, as sent gate for gate, from day to day (\texttt{notes/synthesis\_2026-11-28/results\_a2\_d.md}).}\label{tab:spread}
+\end{table}
+
+\section{Control during the run}\label{sec:control}
+Papers 10 and 11 asked whether circuits that measure in the middle and act at once get closer to the exact answer than
+any correction of the same circuit without the actions can (the correction ceiling). Chains of repeat-until-success
+neurons crossed it with a margin growing per neuron, and iterative phase estimation crossed it (0.903 against 0.471 at
+$n = 4$)~\cite{p10}. What decided the margin was where qubits wait: a waiting qubit in $\ket{1}$ turned to $\ket{0}$ for
+the wait kept $+0.029$ to $+0.052$ more on three devices, and phase estimation built that way stayed beyond its ceiling
+to eight bits (0.424 against 0.201)~\cite{p11}. Rule 4 of paper 11, that the same circuits drift between jobs while
+copies inside one job agree, is what D finds over days.
+
+\section{The record}\label{sec:record}
+\textbf{A: the predictions.} Every prediction with a stated expected outcome declared in the notebook from 8 October to
+27 November is one row of a ledger (\texttt{ledger\_a.json}, \texttt{ledger\_a2.json}), with its verdict copied from the
+record and its place cited (Table~\ref{tab:ledger}). The count for 16 to 27 November equals the running total the
+nights' records keep (75: 54 held, 20 failed, 1 not read). About a third of the decided predictions failed in each
+period until 19 November; from 20 November a prediction was declared only where an earlier device record grounded it,
+and none of the 17 decided failed. That second number is a change in what was predicted, not evidence of a better model
+of the device: the declared noise models, volumes and expected numbers failed in 20 of 35 decided cases. The compiler
+work of papers 1 and 2 kept another ledger, which counts correctness checks as hypotheses (1,207 rows, 105 failed); it is
+on another unit and is not added here.
+
+\begin{table}[H]\centering\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+period & declared & held & failed & not read & unclear & failed / decided \\
+\midrule
+8 to 31 October & 139 & 70 & 38 & 9 & 22 & 0.35 \\
+1 to 15 November & 73 & 34 & 20 & 5 & 14 & 0.37 \\
+16 to 19 November (paper 10's nights) & 57 & 37 & 20 & 0 & 0 & 0.35 \\
+20 to 27 November (grounded predictions only) & 18 & 17 & 0 & 1 & 0 & 0.00 \\
+\midrule
+all & 287 & 158 & 78 & 15 & 36 & 0.33 \\
+\bottomrule
+\end{tabular}
+\caption{Declared predictions and their recorded verdicts (\texttt{notes/synthesis\_2026-11-28/results\_a2\_d.md}).
+``Unclear'': the record says ambiguous or gives no verdict for that prediction; each has its reason in the ledger.}\label{tab:ledger}
+\end{table}
+
+\textbf{E: re-scoring.} The record's script \texttt{reproduce.py} re-scores each committed device result from its raw
+counts with its own scorer; run over all 98 entries on 28 November with psf-os 0.3.3, it returned the committed numbers
+in 98 of 98 (to $10^{-9}$). The census covers the scorers; rebuilding the circuits and comparing their gates was not
+part of it.
+
+\section{Discussion}\label{sec:discussion}
+\textbf{What the layer can say.} For each result it can say whether the result reads and how much of the exact pattern
+the device kept, from checks in the same job, without a calibration map (Section~\ref{sec:reads}; B). It can find
+defects the calibration does not show and place around them (papers 5 and 6), and its in-job mirrors point at the
+same couplers IBM's CZ column marks, at about twice chance, while IBM marks no column at all for about two in five of
+the qubits those mirrors find weak (291 of 721; C). Its records can be re-scored by anyone (E), failures included (A).
+
+\textbf{What it cannot do.} It does not make a device better: where the shape of a result is wrong, dividing by a measured
+share does not undo it (paper 9), and the rulers of November leave a residue at three cycles on one device that none of
+them carries. It does not beat search everywhere: on a trained classifier it could not be told apart from Qiskit's
+search, and the three-dimensional prototype costs several times a router (paper 3, paper 8). It does not hold a device
+still: the same circuit moved beyond shot noise from day to day in 14 of 16 units (D).
+
+\textbf{What follows for a user.} Compare inside one job: copies there agreed in 9 of 9 units while the same circuit on
+different days did not, and a ruler carried in the same job took up most of the day-to-day movement on the one pair of
+nights where both were measured (D; the ruler's wider error is part of that). Read a result by the share it keeps and by
+its shape, not by a fixed absolute width (paper 7's bias in both directions). Declare predictions only where an earlier
+record grounds them, and expect about a third of the rest to fail (A): the ledger gives readers of declared hardware tests
+a base rate for how often a stated expectation about a cloud device holds, which we did not find elsewhere.
+\pending{check the last clause against the literature before release, or drop it.}
+
+\section{Limits}\label{sec:limits}
+\begin{itemize}
+\item One device family (IBM heavy-hex; Heron r2 for every device result here), three devices, two months; most single
+results are one device and one night.
+\item Every answer is classically computable; no claim about what a device can do beyond such problems is made.
+\item Tables assembled after their data are named as such: paper 9's line (tested out of sample in B, but far from the
+line), the kinds in A (by hand up to 15 November, by fixed rules after).
+\item The analyses of this paper were declared before they were run, but by the same team that made the records.
+\item The work was done by one person with AI assistants (Claude, by Anthropic): drafting code, declarations and
+papers, and the independent re-counts of 18 to 27 November, which were made by a separate assistant instance with
+separately written code reading only the raw counts, not by another human team.
+\item The calibration comparison is beside the record: it was read after every verdict and changes none.
+\end{itemize}
+
+\section*{Data and code}
+Records, declarations, raw counts and the analyses of this paper: \url{https://github.com/TN-Holdings-LLC/psf-os-lab-notebook}
+(\texttt{notes/synthesis\_2026-11-28/}); the operating layer: \url{https://github.com/TN-Holdings-LLC/psf-os}
+(0.3.3, doi:10.5281/zenodo.24496267); the compiler: \url{https://github.com/TN-Holdings-LLC/psf-zero}.
+
+\section*{Acknowledgments}
+We acknowledge the use of IBM Quantum services for this work. The views expressed are those of the authors, and do not
+reflect the official policy or position of IBM or the IBM Quantum team. The device runs used the IBM Quantum Open Plan
+and a Pay-As-You-Go account. \pending{confirm the plan wording against paper 11.}
+
+\begin{thebibliography}{99}\footnotesize
+\bibitem{p1} TN Holdings, Ordering Sensitivity in Subgraph-Isomorphism Layout Search, v2 (2026), doi:10.5281/zenodo.22977930.
+\bibitem{p2} TN Holdings, PSF-Zero: An Analytic Two-Qubit Gate Synthesizer Combined with a Verified, Ordering-Aware Layout Search, v2 (2026), doi:10.5281/zenodo.22978090.
+\bibitem{p3} TN Holdings, When a Quantum Compiler Looks Like a Better Learner: Confounds in Quantum Machine Learning Comparisons, v1.3 (2026), doi:10.5281/zenodo.23826596.
+\bibitem{p4} TN Holdings, Folding a Ring onto Heavy-Hex: Formula-Built Schedules with Provable Gate Counts, and What Their Signal Shows on Twins and Devices, v1.3 (2026), doi:10.5281/zenodo.23826764.
+\bibitem{p5} TN Holdings, Readable Depth Without the Calibration Map: Formula Placement on Heavy-Hex Devices, and a Defect the Calibration Does Not Show, v1.1 (2026), doi:10.5281/zenodo.23827536.
+\bibitem{p6} TN Holdings, What Sets the Readable Depth of a Placed Ring, and How Far a Self-Checking Layer Pushes It, v1.0 (2026), doi:10.5281/zenodo.23883938.
+\bibitem{p7} TN Holdings, Exact Answers, No Map, No Mitigation: User-Written Circuits through a Placement-Only OS on IBM Heron r2 Devices, v1 (2026), doi:10.5281/zenodo.24046673.
+\bibitem{p8} TN Holdings, Readable Quantum Dynamics Without Error Mitigation: Dual-Unitary Chains up to 91 Qubits and 3D Lattice Tests on IBM Heron Devices, v1.0 (2026), doi:10.5281/zenodo.24136512.
+\bibitem{p9} TN Holdings, What Makes Raw Quantum Dynamics Readable? The Share of Signal Kept, Across 179 Results on IBM Heron, v1 (2026), doi:10.5281/zenodo.24278888.
+\bibitem{p10} TN Holdings, Decisions No Correction of the Uncontrolled Circuit Can Reach: Real-Time Control on IBM Heron, Declared Before the Data, v1 (2026), doi:10.5281/zenodo.24367001.
+\bibitem{p11} TN Holdings, Where a Qubit Waits: Rules for Real-Time Control from Declared Device Tests on IBM Heron, v1 (2026), doi:10.5281/zenodo.24496368.
+\end{thebibliography}
+\end{document}
