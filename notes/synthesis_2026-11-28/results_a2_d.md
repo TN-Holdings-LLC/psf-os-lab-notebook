@@ -85,3 +85,32 @@ correlations included); the circuits as sent checked equal gate by gate.
   larger than raw W's (SD / median s still at most 1.7); FX-A's SE from the per-shot mean agrees with psf-os's two_se
   (0.0056 against 0.0054 at 2 SE on 11-14 marrakesh); the balanced values and SEs are the record's, the others
   re-counted (each equal to the record's value).
+
+## A, all periods on the notebook's unit (home, 2026-11-28, after the merge)
+
+The notebook's rows only (one row per declared prediction with a stated expected outcome): `ledger_a2.json` parts
+"notebook 10-08 to 10-31" and "notebook 11-01 to 11-15" with `ledger_a.json` (11-16 to 11-27). psf-zero's 1,207 rows
+count hypotheses and correctness checks on another unit and are reported apart, never added to these. Kinds: by hand
+up to 11-15 (the VS), by `ledger_a.py`'s rules from 11-16.
+
+| period | declared | held | failed | not read | unclear | failed / (held + failed) |
+|---|---|---|---|---|---|---|
+| 10-08 to 10-31 | 139 | 70 | 38 | 9 | 22 | 0.35 |
+| 11-01 to 11-15 | 73 | 34 | 20 | 5 | 14 | 0.37 |
+| 11-16 to 11-19 (paper 10's nights) | 57 | 37 | 20 | 0 | 0 | 0.35 |
+| 11-20 to 11-27 (grounded predictions only) | 18 | 17 | 0 | 1 | 0 | 0.00 |
+| all | 287 | 158 | 78 | 15 | 36 | 0.33 |
+
+| kind | declared | held | failed | failed / (held + failed) |
+|---|---|---|---|---|
+| declared model (a noise model, a volume, an expected number) | 43 | 15 | 20 | 0.57 |
+| direction between arms | 78 | 40 | 17 | 0.30 |
+| beyond a bound | 62 | 40 | 18 | 0.31 |
+| null (no difference) | 40 | 23 | 13 | 0.36 |
+| other kinds (trend, timing, loop, cost, per-qubit, other) | 64 | 40 | 10 | 0.20 |
+
+- For six weeks about a third of the decided predictions failed, period after period (0.35, 0.37, 0.35); then, once
+  only grounded predictions were declared, none of 17 decided did. The second number is a change in what was
+  predicted (said in `results_ab.md`), not a better model of the device: the declared models themselves failed most
+  often (20 of 35 decided).
+- Unclear (36) and not read (15) stay out of the rates and are listed with their reasons in the ledgers.
