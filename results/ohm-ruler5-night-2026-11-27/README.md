@@ -89,8 +89,9 @@ Beside, never judged:
 - The rulers of 11-25, scored again by score3 (`or5/scores3.json`), at t >= 3: (d) AGREES in five of six (all but
   A0 t = 3), (a) in three (t = 4), (b) and (b') in three (A0 t = 4, A1 t = 3, A2 t = 3), (c) in three (t = 4). At
   t = 3, d is positive for (a), (c), (d), (a') and (e) in every arm (+0.015 to +0.131); (de) is +0.023 / −0.004 /
-  +0.003 and (b) +0.042 / −0.032 / +0.006 (A0 / A1 / A2). (On ibm_fez, 11-24 to 11-26, every ruler's d was positive at
-  t = 3; tonight's is another device, set beside.)
+  +0.003 and (b) +0.042 / −0.032 / +0.006 (A0 / A1 / A2). (On ibm_fez on 11-26 every ruler's d was positive at t = 3;
+  on 11-24 ruler (a) and on 11-25 rulers (a) and (b) were negative in some arms there. Tonight's is another device, set
+  beside. Corrected 2026-11-28 after the home VS's number check: the first text said 11-24 to 11-26.)
 - tau 0.2 / 0.3 / 0.4: (a')'s words are the same at the three values in every cell; (b')'s are the same except at
   A1 t = 4 (DIFFERS at 0.2 and 0.3, AGREES at 0.4). The qubits left out: none at 0.2 and 0.3; position 18 at 0.4 in
   A1 t = 4 and A2 t = 4.
