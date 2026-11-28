@@ -1,0 +1,752 @@
+[
+ {
+  "id": "B-1",
+  "text": "B-1 no L overshoots (the pool)",
+  "verdict": "held",
+  "numbers": "the pool is 0.105-0.148 below its noiseless value at every L",
+  "night": "balanced-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "B-2",
+  "text": "B-2 BEYOND at every L = 1 .. 5",
+  "verdict": "failed",
+  "numbers": "L = 1 NOT BEYOND (g -0.019); L = 2 .. 5 BEYOND",
+  "night": "balanced-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "B-3",
+  "text": "B-3 COMPOUNDS",
+  "verdict": "held",
+  "numbers": "slope +0.0311 (2 SE 0.0032), no overshoot",
+  "night": "balanced-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "trend over size",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "R-1",
+  "text": "R-1 no L overshoots",
+  "verdict": "held",
+  "numbers": "the pool 0.22-0.28 below its noiseless value at every L",
+  "night": "balanced-repeat-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "R-2",
+  "text": "R-2 BEYOND at L = 2, 3, 4, 5",
+  "verdict": "failed",
+  "numbers": "beyond only at L = 5 (g +0.024); L = 2, 3, 4 not beyond (g -0.121, -0.067, -0.011)",
+  "night": "balanced-repeat-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "R-3",
+  "text": "R-3 COMPOUNDS",
+  "verdict": "held",
+  "numbers": "slope +0.053 per step (2 SE 0.003), no overshoot",
+  "night": "balanced-repeat-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "trend over size",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "1",
+  "text": "1. A: D_late_nb positive and >= 2 SE",
+  "verdict": "held",
+  "numbers": "+0.535, 2 SE 0.016",
+  "night": "ctrl-diag-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "DC-1",
+  "text": "DC-1 D0: A PACKED KEEPS LESS (the control repeats)",
+  "verdict": "held",
+  "numbers": "-0.0565 (2 SE 0.0200)",
+  "night": "decoy-night-2026-11-20",
+  "date": "2026-11-20",
+  "kind": "direction between arms",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "1",
+  "text": "1. k = 1 ABOVE THE BOUND",
+  "verdict": "held",
+  "numbers": "ff 0.9517, threshold 0.7637",
+  "night": "feedforward-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "2",
+  "text": "2. k = 2 ABOVE THE BOUND",
+  "verdict": "held",
+  "numbers": "ff 0.8898, threshold 0.7637",
+  "night": "feedforward-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "3",
+  "text": "3. off arm at or under its circuit value + 2 SE",
+  "verdict": "failed",
+  "numbers": "k = 1: 0.7935 against 0.7637; k = 2: 0.5175 against 0.5158",
+  "night": "feedforward-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T1-1",
+  "text": "T1",
+  "verdict": "held",
+  "numbers": "coh1 CLOSER WITH CONTROL (d 0.0787, 2 SE_d 0.0178); rd1 CLOSER WITH CONTROL (d 0.0900, 2 SE_d 0.0168)",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T1-2",
+  "text": "T1",
+  "verdict": "held",
+  "numbers": "coh1 CLOSER WITH CONTROL (d 0.0787, 2 SE_d 0.0178); rd1 CLOSER WITH CONTROL (d 0.0900, 2 SE_d 0.0168)",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T2-1",
+  "text": "T2",
+  "verdict": "held",
+  "numbers": "BEYOND THE CORRECTION CEILING at L = 1 .. 5 (g +0.075 / +0.107 / +0.152 / +0.164 / +0.158, 2 SE 0.011-0.016), no overshoot; slope +0.0240 (2 SE 0.0042) COMPOUNDS",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T2-2",
+  "text": "T2",
+  "verdict": "held",
+  "numbers": "BEYOND THE CORRECTION CEILING at L = 1 .. 5 (g +0.075 / +0.107 / +0.152 / +0.164 / +0.158, 2 SE 0.011-0.016), no overshoot; slope +0.0240 (2 SE 0.0042) COMPOUNDS",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "trend over size",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T3-1",
+  "text": "T3",
+  "verdict": "held",
+  "numbers": "A n = 2: ff 0.8609 against the ceiling 0.7500, BEYOND; A n = 3: 0.7722 against 0.5884, BEYOND; A margin growth +0.0730 (2 SE 0.0072) GROWS; B k = 2: 0.8488 against 0.7500, BEYOND; B k = 4: 0.7335 agai",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T3-2",
+  "text": "T3",
+  "verdict": "held",
+  "numbers": "A n = 2: ff 0.8609 against the ceiling 0.7500, BEYOND; A n = 3: 0.7722 against 0.5884, BEYOND; A margin growth +0.0730 (2 SE 0.0072) GROWS; B k = 2: 0.8488 against 0.7500, BEYOND; B k = 4: 0.7335 agai",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "trend over size",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T3-3",
+  "text": "T3",
+  "verdict": "failed",
+  "numbers": "A n = 2: ff 0.8609 against the ceiling 0.7500, BEYOND; A n = 3: 0.7722 against 0.5884, BEYOND; A margin growth +0.0730 (2 SE 0.0072) GROWS; B k = 2: 0.8488 against 0.7500, BEYOND; B k = 4: 0.7335 agai",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T4-1",
+  "text": "T4",
+  "verdict": "held",
+  "numbers": "BEYOND at L = 1 .. 5 (g +0.072 / +0.118 / +0.142 / +0.160 / +0.163), no overshoot; slope +0.0241 (2 SE 0.0042) COMPOUNDS; against T2's third design: NOT SHOWN at every L (d between -0.010 and +0.011, ",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T4-2",
+  "text": "T4",
+  "verdict": "held",
+  "numbers": "BEYOND at L = 1 .. 5 (g +0.072 / +0.118 / +0.142 / +0.160 / +0.163), no overshoot; slope +0.0241 (2 SE 0.0042) COMPOUNDS; against T2's third design: NOT SHOWN at every L (d between -0.010 and +0.011, ",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "trend over size",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T4-3",
+  "text": "T4",
+  "verdict": "failed",
+  "numbers": "BEYOND at L = 1 .. 5 (g +0.072 / +0.118 / +0.142 / +0.160 / +0.163), no overshoot; slope +0.0241 (2 SE 0.0042) COMPOUNDS; against T2's third design: NOT SHOWN at every L (d between -0.010 and +0.011, ",
+  "night": "ff-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "N1-1",
+  "text": "N1",
+  "verdict": "held",
+  "numbers": "coh2 CLOSER WITH CONTROL (d 0.1345, 2 SE_d 0.0207); rd2 CLOSER (0.1175, 0.0203); coh3 CLOSER (0.1542, 0.0219); rd3 CLOSER (0.1217, 0.0218)",
+  "night": "ff-night2-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "N1-2",
+  "text": "N1",
+  "verdict": "held",
+  "numbers": "coh2 CLOSER WITH CONTROL (d 0.1345, 2 SE_d 0.0207); rd2 CLOSER (0.1175, 0.0203); coh3 CLOSER (0.1542, 0.0219); rd3 CLOSER (0.1217, 0.0218)",
+  "night": "ff-night2-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "N2-1",
+  "text": "N2",
+  "verdict": "failed",
+  "numbers": "L = 1 OVERSHOOT (ff 0.903, noiseless 0.890, +0.013 against 2 SE 0.009); L = 2 .. 6 BEYOND THE CORRECTION CEILING (g +0.146 / +0.194 / +0.210 / +0.196 / +0.229); L = 7 OVERSHOOT (ff 0.487, noiseless 0.",
+  "night": "ff-night2-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "N2-2",
+  "text": "N2",
+  "verdict": "failed",
+  "numbers": "L = 1 OVERSHOOT (ff 0.903, noiseless 0.890, +0.013 against 2 SE 0.009); L = 2 .. 6 BEYOND THE CORRECTION CEILING (g +0.146 / +0.194 / +0.210 / +0.196 / +0.229); L = 7 OVERSHOOT (ff 0.487, noiseless 0.",
+  "night": "ff-night2-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "trend over size",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "N3-1",
+  "text": "N3",
+  "verdict": "held",
+  "numbers": "n = 4, the 16 phases pooled: ff 0.9029 (2 SE 0.0023, 64000 shots) against the ceiling 0.4706: BEYOND THE CEILING (margin +0.432)",
+  "night": "ff-night2-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "IF-1",
+  "text": "IF-1 E3: A loses and B does not (the loss follows the place)",
+  "verdict": "failed",
+  "numbers": "A (qubits 0-3, bits now after B) d +0.014 SAME; B (bits now first) d -0.037 (2 SE 0.020) PACKED KEEPS LESS",
+  "night": "interfere-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "IF-2",
+  "text": "IF-2 E2: A's loss remains with three sites between",
+  "verdict": "failed",
+  "numbers": "A d -0.018 (2 SE 0.020) SAME WITHIN ERROR",
+  "night": "interfere-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "IF-3",
+  "text": "IF-3 E1: SAME WITHIN ERROR for B",
+  "verdict": "held",
+  "numbers": "B d -0.010 (2 SE 0.020)",
+  "night": "interfere-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "LP-1",
+  "text": "LP-1 the IPE control KEEPS MORE",
+  "verdict": "held",
+  "numbers": "+0.0523 (2 SE 0.0098)",
+  "night": "likely-park-night-2026-11-22",
+  "date": "2026-11-22",
+  "kind": "direction between arms",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "LP-2",
+  "text": "LP-2 NF's L - D KEEPS MORE",
+  "verdict": "held",
+  "numbers": "+0.0972 (2 SE 0.0155)",
+  "night": "likely-park-night-2026-11-22",
+  "date": "2026-11-22",
+  "kind": "direction between arms",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "LOOP-1",
+  "text": "LOOP-1 the rule changes at least one stack between round 1 and round 2",
+  "verdict": "failed",
+  "numbers": "RULE2 = RULE1 (R4 keep everywhere: every L NOT SHOWN for the first time)",
+  "night": "loop-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "loop behaviour",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "LOOP-2",
+  "text": "LOOP-2 no L overshoots in the last round run",
+  "verdict": "held",
+  "numbers": "r3: none",
+  "night": "loop-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "LP-2",
+  "text": "LP-2 no adopted candidate overshoots in the next round, where it runs as the incumbent",
+  "verdict": "held",
+  "numbers": "one row testable: L = 3, P2 adopted in r1, as the incumbent in r2 P 0.6562 against noiseless 0.7060 + 2 SE (SE 0.0075): no overshoot. The two steps adopted in r2 (the last round) are not counted, as d",
+  "night": "loop-paired-night-2026-11-20",
+  "date": "2026-11-20",
+  "kind": "null (no difference)",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "LV-1",
+  "text": "LV-1 copies within a job: SAME WITHIN ERROR (pooled chi-square, 9 df)",
+  "verdict": "held",
+  "numbers": "p 0.625",
+  "night": "loopvar-night-2026-11-20",
+  "date": "2026-11-20",
+  "kind": "null (no difference)",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OR-1",
+  "text": "OR-1 (the raw W READS at t = 3 in every arm): held",
+  "verdict": "held",
+  "numbers": " (0.050 / 0.119 / 0.261).",
+  "night": "ohm-ruler-night-2026-11-24",
+  "date": "2026-11-24",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OR3-1",
+  "text": "OR3-1 (the raw W READS at t = 3 in every arm): held",
+  "verdict": "held",
+  "numbers": " (0.059 / 0.109 / 0.243).",
+  "night": "ohm-ruler3-night-2026-11-25",
+  "date": "2026-11-25",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OR4-1",
+  "text": "OR4-1 (the raw W READS at t = 3 in every arm): held",
+  "verdict": "held",
+  "numbers": " (0.071 / 0.158 / 0.313).",
+  "night": "ohm-ruler4-night-2026-11-26",
+  "date": "2026-11-26",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OR4-2",
+  "text": "OR4-2 (on ibm_fez at copy drow 4, physical 104 and 102 below tau 0.3 on the t = 4 |0> mirror in every arm): held",
+  "verdict": "held",
+  "numbers": " (104: 0.050 / \u22120.102 / \u22120.118; 102: 0.166 / 0.120 / \u22120.010).",
+  "night": "ohm-ruler4-night-2026-11-26",
+  "date": "2026-11-26",
+  "kind": "per-qubit record",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OR5-1",
+  "text": "OR5-1 (the raw W READS at t = 3 in every arm): held",
+  "verdict": "held",
+  "numbers": " (0.033 / 0.067 / 0.118).",
+  "night": "ohm-ruler5-night-2026-11-27",
+  "date": "2026-11-27",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OR5-2",
+  "text": "OR5-2 (on ibm_fez at copy drow 4, physical 101 to 104 below tau 0.3 on the t = 4 |0> mirror in every arm): NOT READ",
+  "verdict": "not read",
+  "numbers": " (`or5/scores5.json` or5_2: another device or copy). The declared device rule chose ibm_kingston (fez had one pending job); the per-qubit record of 101 to 104 on fez is not tested tonight.",
+  "night": "ohm-ruler5-night-2026-11-27",
+  "date": "2026-11-27",
+  "kind": "per-qubit record",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OW-1",
+  "text": "OW-1 (at t = 3, the window's M READS on F in all three arms): held",
+  "verdict": "held",
+  "numbers": " (0.011 / 0.028 / 0.048).",
+  "night": "ohm-window-night-2026-11-23",
+  "date": "2026-11-23",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "OS-1",
+  "text": "OS-1 a prescription picked for every L",
+  "verdict": "held",
+  "numbers": "P2, P2, P2",
+  "night": "os-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "loop behaviour",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "OS-2",
+  "text": "OS-2 PRESCRIPTION HELPS at L = 1, 2, 3",
+  "verdict": "failed",
+  "numbers": "L = 1 OVERSHOOT (P2 0.9025 against the line 0.8915 + 2 SE 0.0094 = 0.9009); L = 2, 3 HELPS",
+  "night": "os-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "OS2-1",
+  "text": "OS2-1 the rule changes at least one stack between round 1 and round 2",
+  "verdict": "failed",
+  "numbers": "no change (R4 keep at every L; fixed point)",
+  "night": "os2-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "loop behaviour",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "OS2-2",
+  "text": "OS2-2 no L overshoots in the last round run",
+  "verdict": "held",
+  "numbers": "none (round 1: 0.840 / 0.729 / 0.640 against 0.890 / 0.793 / 0.706)",
+  "night": "os2-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "PK-1",
+  "text": "PK-1 the verdict is not PACKING KEEPS LESS",
+  "verdict": "failed",
+  "numbers": "mean d -0.197 (2 SE 0.007): PACKING KEEPS LESS",
+  "night": "packing-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "PK-2",
+  "text": "PK-2 packed charged below a third of single",
+  "verdict": "held",
+  "numbers": "11 s against 41 s (0.27)",
+  "night": "packing-night-2026-11-17",
+  "date": "2026-11-17",
+  "kind": "cost",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "PA-1",
+  "text": "PA-1 P-A not PACKING KEEPS LESS",
+  "verdict": "held",
+  "numbers": "SAME WITHIN ERROR (mean d +0.0012)",
+  "night": "parallel-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "PB-1",
+  "text": "PB-1 B2 PACKED KEEPS LESS",
+  "verdict": "held",
+  "numbers": "mean d -0.024 (2 SE 0.015)",
+  "night": "parallel-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "PB-2",
+  "text": "PB-2 B1 SAME WITHIN ERROR",
+  "verdict": "held",
+  "numbers": "mean d -0.015 (2 SE 0.022)",
+  "night": "parallel-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "PB-3",
+  "text": "PB-3 B3 SAME WITHIN ERROR",
+  "verdict": "failed",
+  "numbers": "PACKED KEEPS LESS, mean d -0.029 (2 SE 0.015)",
+  "night": "parallel-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "QN-1",
+  "text": "QN-1 the parked IPE BEYOND THE CEILING at n = 6",
+  "verdict": "held",
+  "numbers": "0.5785 against 0.3065 + 2 SE",
+  "night": "qpe-n78-night-2026-11-22",
+  "date": "2026-11-22",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "QP-1",
+  "text": "QP-1 parking KEEPS MORE at n = 4",
+  "verdict": "held",
+  "numbers": "+0.0349 (2 SE 0.0072) on the 8 paired phases",
+  "night": "qpe-parked-night-2026-11-21",
+  "date": "2026-11-21",
+  "kind": "direction between arms",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "QP-3",
+  "text": "QP-3 the parked IPE BEYOND THE CEILING at n = 4, 5 and 6",
+  "verdict": "held",
+  "numbers": "+0.404, +0.460, +0.494 beyond",
+  "night": "qpe-parked-night-2026-11-21",
+  "date": "2026-11-21",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "Q-1",
+  "text": "Q-1 BEYOND THE CEILING at each n = 2, 3, 4",
+  "verdict": "held",
+  "numbers": "margins +0.205, +0.327, +0.409",
+  "night": "qpe-repro-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "RC-1",
+  "text": "RC-1 lut3 is BEYOND THE CEILING",
+  "verdict": "failed",
+  "numbers": "0.8121 against C 0.875 + 2 SE: NOT BEYOND (margin -0.063)",
+  "night": "repcode-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "RC-2",
+  "text": "RC-2 (b0), the added tests never fire: SAME WITHIN ERROR",
+  "verdict": "held",
+  "numbers": "+0.0021 (2 SE 0.0097)",
+  "night": "repcode-night-2026-11-19",
+  "date": "2026-11-19",
+  "kind": "null (no difference)",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "RF-1",
+  "text": "RF-1 the IPE control KEEPS MORE",
+  "verdict": "held",
+  "numbers": "+0.0291 (2 SE 0.0146)",
+  "night": "rus-fence-night-2026-11-21",
+  "date": "2026-11-21",
+  "kind": "direction between arms",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "1",
+  "text": "1. L = 1 CLOSER WITH CONTROL",
+  "verdict": "failed",
+  "numbers": "d 0.0010, 2 SE_d 0.0219",
+  "night": "rus-neuron-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "2",
+  "text": "2. L = 2 CLOSER WITH CONTROL",
+  "verdict": "failed",
+  "numbers": "d 0.0140, 2 SE_d 0.0217",
+  "night": "rus-neuron-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "3",
+  "text": "3. L = 3 CLOSER WITH CONTROL",
+  "verdict": "held",
+  "numbers": "d 0.0425, 2 SE_d 0.0223",
+  "night": "rus-neuron-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "prediction",
+  "text": "prediction 1: L = 2 CLOSER",
+  "verdict": "held",
+  "numbers": "",
+  "night": "rus-neuron2-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "prediction",
+  "text": "prediction 2: L = 3 CLOSER",
+  "verdict": "held",
+  "numbers": "",
+  "night": "rus-neuron2-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "prediction",
+  "text": "prediction 3: flip gain >= 2 SE at L = 2 and 3",
+  "verdict": "held",
+  "numbers": "+0.179 and +0.182 (2 SE 0.021, 0.022)",
+  "night": "rus-neuron2-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "prediction",
+  "text": "prediction 1: read gain at L = 1 >= 2 SE",
+  "verdict": "held",
+  "numbers": "+0.217, 2 SE 0.018",
+  "night": "rus-neuron3-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "prediction",
+  "text": "prediction 2: CLOSER at L = 1, 2, 3",
+  "verdict": "held",
+  "numbers": "",
+  "night": "rus-neuron3-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "prediction",
+  "text": "prediction 1: CLOSER at L = 1, 2, 3",
+  "verdict": "held",
+  "numbers": "",
+  "night": "rus-neuron3-kingston-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "beyond a bound",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T-1",
+  "text": "T-1 the fast-path latency RESOLVED",
+  "verdict": "failed",
+  "numbers": "+0.32 us, 2 SE 0.42",
+  "night": "timing-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "timing",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T-2",
+  "text": "T-2 two fast-path actors IN PARALLEL",
+  "verdict": "held",
+  "numbers": "ratio 0.96, 2 SE 0.19",
+  "night": "timing-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "timing",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "T-3",
+  "text": "T-3 two actors with a CZ WAIT FOR EACH OTHER",
+  "verdict": "failed",
+  "numbers": "ratio 1.00, 2 SE 0.22: IN PARALLEL",
+  "night": "timing-night-2026-11-18",
+  "date": "2026-11-18",
+  "kind": "timing",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "1",
+  "text": "1. A: D_cond >= 2 SE",
+  "verdict": "failed",
+  "numbers": "+0.0060, 2 SE 0.0223",
+  "night": "wait-diag-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "2",
+  "text": "2. ref at A below ref at B by >= 2 SE",
+  "verdict": "held",
+  "numbers": "0.7728 against 0.9942",
+  "night": "wait-diag-2026-11-16",
+  "date": "2026-11-16",
+  "kind": "direction between arms",
+  "period": "paper 10 nights (11-16..11-19)"
+ },
+ {
+  "id": "RC4-1",
+  "text": "RC4-1 F16 NOT BEYOND THE CEILING",
+  "verdict": "held",
+  "numbers": "0.7511 against 0.875 + 2 SE",
+  "night": "weekend-shared-night-2026-11-21",
+  "date": "2026-11-21",
+  "kind": "null (no difference)",
+  "period": "after (11-20..11-27)"
+ },
+ {
+  "id": "QL-1",
+  "text": "QL-1 IPE BEYOND THE CEILING at n = 4",
+  "verdict": "held",
+  "numbers": "0.8957 against 0.4706 + 2 SE",
+  "night": "weekend-shared-night-2026-11-21",
+  "date": "2026-11-21",
+  "kind": "beyond a bound",
+  "period": "after (11-20..11-27)"
+ }
+]
