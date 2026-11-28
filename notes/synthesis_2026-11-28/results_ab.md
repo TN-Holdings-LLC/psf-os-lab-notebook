@@ -66,3 +66,11 @@ r >= 0.293 and all READ; they are not after 11-16 and are set beside.)
 - A, second part: papers 1 to 6's declared predictions; then the label rule for "first night of a design or repeat".
 - C: already in `notes/calib_compare_2026-11-26/`; to be summarised for the paper.
 - D and E: next.
+
+## E. The re-score census (2026-11-28)
+
+`python reproduce.py --psf-os <psf-os 0.3.3 at e652257>` over every entry, on home's cloud workspace (Python 3.13.18,
+qiskit 2.5.2, qiskit-aer 0.17.2, numpy 2.5.3), notebook at e26595a4 plus this folder: **98 of 98 SAME** (every number
+equal to 1e-9 against the committed scores). Output: `reproduce_all_2026-11-28.txt`. Entries whose comments name
+psf-os's feedforward branch also re-scored the same with 0.3.3. The census covers the scorers only; `--gate-hash`
+(rebuilding the run2d circuits and comparing gates) was not run.
